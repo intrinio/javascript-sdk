@@ -14,36 +14,11 @@ Welcome to the Intrinio API! Through our Marketplace, we offer a wide selection 
 
 ### For [Node.js](https://nodejs.org/)
 
-#### Option 1: git
-
 Install the library using:
 
 ```shell
 npm install intrinio/javascript-sdk --save
 ```
-
-##### Option 2: Local install
-
-To use the library locally, first install the dependencies by changing into the directory containing `package.json` (and this README). Let's call this `JAVASCRIPT_CLIENT_DIR`. Then run:
-
-```shell
-npm install
-```
-
-Next, [link](https://docs.npmjs.com/cli/link) it globally in npm with the following, also from `JAVASCRIPT_CLIENT_DIR`:
-
-```shell
-npm link
-```
-
-Finally, switch to the directory you want to use your intrinio from, and run:
-
-```shell
-npm link /path/to/<JAVASCRIPT_CLIENT_DIR>
-```
-
-You should now be able to `require('intrinio')` in javascript files from the directory you ran the last 
-command above from.
 
 ### For browser
 
@@ -54,6 +29,8 @@ browserify main.js > bundle.js
 ```
 
 Then include *bundle.js* in the HTML pages.
+
+**NOTE:** For optimal security, make sure to use a _Public_ API key from Intrinio when calling the API from a browser. You can configure a Public API Key to be accessible from the domains of your choosing [by visiting your Account page.](https://intrinio.com/account)
 
 ### Webpack Configuration
 
@@ -187,4 +164,3 @@ Class | Method | HTTP request | Description
  - [intrinio.StockMarketIndexSummary](docs/StockMarketIndexSummary.md)
  - [intrinio.StockPrice](docs/StockPrice.md)
  - [intrinio.StockPriceSummary](docs/StockPriceSummary.md)
-
