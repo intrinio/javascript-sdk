@@ -16,7 +16,7 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['invoker/ApiClient', 'invoker/model/Company', 'invoker/model/CompanyNews', 'invoker/model/CompanySummary', 'invoker/model/DataPointNumber', 'invoker/model/DataPointText', 'invoker/model/EconomicIndex', 'invoker/model/EconomicIndexSummary', 'invoker/model/Filing', 'invoker/model/FilingSummary', 'invoker/model/Fundamental', 'invoker/model/FundamentalSummary', 'invoker/model/HistoricalData', 'invoker/model/ReportedFinancial', 'invoker/model/ReportedTag', 'invoker/model/SICIndex', 'invoker/model/Security', 'invoker/model/SecurityScreenClause', 'invoker/model/SecurityScreenGroup', 'invoker/model/SecurityScreenResult', 'invoker/model/SecurityScreenResultData', 'invoker/model/SecuritySummary', 'invoker/model/StandardizedFinancial', 'invoker/model/StandardizedTag', 'invoker/model/StockExchange', 'invoker/model/StockMarketIndex', 'invoker/model/StockMarketIndexSummary', 'invoker/model/StockPrice', 'invoker/model/StockPriceSummary', 'invoker/api/CompanyApi', 'invoker/api/DataPointApi', 'invoker/api/FilingApi', 'invoker/api/FundamentalsApi', 'invoker/api/HistoricalDataApi', 'invoker/api/IndexApi', 'invoker/api/SecurityApi', 'invoker/api/StandardizedTagApi', 'invoker/api/StockExchangeApi'], factory);
+    define(['ApiClient', 'model/Company', 'model/CompanyNews', 'model/CompanySummary', 'model/DataPointNumber', 'model/DataPointText', 'model/EconomicIndex', 'model/EconomicIndexSummary', 'model/Filing', 'model/FilingSummary', 'model/Fundamental', 'model/FundamentalSummary', 'model/HistoricalData', 'model/ReportedFinancial', 'model/ReportedTag', 'model/SICIndex', 'model/Security', 'model/SecurityScreenClause', 'model/SecurityScreenGroup', 'model/SecurityScreenResult', 'model/SecurityScreenResultData', 'model/SecuritySummary', 'model/StandardizedFinancial', 'model/StandardizedTag', 'model/StockExchange', 'model/StockMarketIndex', 'model/StockMarketIndexSummary', 'model/StockPrice', 'model/StockPriceSummary', 'api/CompanyApi', 'api/DataPointApi', 'api/FilingApi', 'api/FundamentalsApi', 'api/HistoricalDataApi', 'api/IndexApi', 'api/SecurityApi', 'api/StandardizedTagApi', 'api/StockExchangeApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
     module.exports = factory(require('./ApiClient'), require('./model/Company'), require('./model/CompanyNews'), require('./model/CompanySummary'), require('./model/DataPointNumber'), require('./model/DataPointText'), require('./model/EconomicIndex'), require('./model/EconomicIndexSummary'), require('./model/Filing'), require('./model/FilingSummary'), require('./model/Fundamental'), require('./model/FundamentalSummary'), require('./model/HistoricalData'), require('./model/ReportedFinancial'), require('./model/ReportedTag'), require('./model/SICIndex'), require('./model/Security'), require('./model/SecurityScreenClause'), require('./model/SecurityScreenGroup'), require('./model/SecurityScreenResult'), require('./model/SecurityScreenResultData'), require('./model/SecuritySummary'), require('./model/StandardizedFinancial'), require('./model/StandardizedTag'), require('./model/StockExchange'), require('./model/StockMarketIndex'), require('./model/StockMarketIndexSummary'), require('./model/StockPrice'), require('./model/StockPriceSummary'), require('./api/CompanyApi'), require('./api/DataPointApi'), require('./api/FilingApi'), require('./api/FundamentalsApi'), require('./api/HistoricalDataApi'), require('./api/IndexApi'), require('./api/SecurityApi'), require('./api/StandardizedTagApi'), require('./api/StockExchangeApi'));
@@ -30,7 +30,7 @@
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
    * <pre>
-   * var intrinio = require('invoker/index'); // See note below*.
+   * var intrinio = require('index'); // See note below*.
    * var xxxSvc = new intrinio.XxxApi(); // Allocate the API class we're going to use.
    * var yyyModel = new intrinio.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
@@ -38,7 +38,7 @@
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
    * ...
    * </pre>
-   * <em>*NOTE: For a top-level AMD script, use require(['invoker/index'], function(){...})
+   * <em>*NOTE: For a top-level AMD script, use require(['index'], function(){...})
    * and put the application logic within the callback function.</em>
    * </p>
    * <p>
@@ -52,198 +52,198 @@
    * ...
    * </pre>
    * </p>
-   * @module invoker/index
+   * @module index
    * @version 0.0.1
    */
   var exports = {
     /**
      * The ApiClient constructor.
-     * @property {module:invoker/ApiClient}
+     * @property {module:ApiClient}
      */
     ApiClient: ApiClient,
     /**
      * The Company model constructor.
-     * @property {module:invoker/model/Company}
+     * @property {module:model/Company}
      */
     Company: Company,
     /**
      * The CompanyNews model constructor.
-     * @property {module:invoker/model/CompanyNews}
+     * @property {module:model/CompanyNews}
      */
     CompanyNews: CompanyNews,
     /**
      * The CompanySummary model constructor.
-     * @property {module:invoker/model/CompanySummary}
+     * @property {module:model/CompanySummary}
      */
     CompanySummary: CompanySummary,
     /**
      * The DataPointNumber model constructor.
-     * @property {module:invoker/model/DataPointNumber}
+     * @property {module:model/DataPointNumber}
      */
     DataPointNumber: DataPointNumber,
     /**
      * The DataPointText model constructor.
-     * @property {module:invoker/model/DataPointText}
+     * @property {module:model/DataPointText}
      */
     DataPointText: DataPointText,
     /**
      * The EconomicIndex model constructor.
-     * @property {module:invoker/model/EconomicIndex}
+     * @property {module:model/EconomicIndex}
      */
     EconomicIndex: EconomicIndex,
     /**
      * The EconomicIndexSummary model constructor.
-     * @property {module:invoker/model/EconomicIndexSummary}
+     * @property {module:model/EconomicIndexSummary}
      */
     EconomicIndexSummary: EconomicIndexSummary,
     /**
      * The Filing model constructor.
-     * @property {module:invoker/model/Filing}
+     * @property {module:model/Filing}
      */
     Filing: Filing,
     /**
      * The FilingSummary model constructor.
-     * @property {module:invoker/model/FilingSummary}
+     * @property {module:model/FilingSummary}
      */
     FilingSummary: FilingSummary,
     /**
      * The Fundamental model constructor.
-     * @property {module:invoker/model/Fundamental}
+     * @property {module:model/Fundamental}
      */
     Fundamental: Fundamental,
     /**
      * The FundamentalSummary model constructor.
-     * @property {module:invoker/model/FundamentalSummary}
+     * @property {module:model/FundamentalSummary}
      */
     FundamentalSummary: FundamentalSummary,
     /**
      * The HistoricalData model constructor.
-     * @property {module:invoker/model/HistoricalData}
+     * @property {module:model/HistoricalData}
      */
     HistoricalData: HistoricalData,
     /**
      * The ReportedFinancial model constructor.
-     * @property {module:invoker/model/ReportedFinancial}
+     * @property {module:model/ReportedFinancial}
      */
     ReportedFinancial: ReportedFinancial,
     /**
      * The ReportedTag model constructor.
-     * @property {module:invoker/model/ReportedTag}
+     * @property {module:model/ReportedTag}
      */
     ReportedTag: ReportedTag,
     /**
      * The SICIndex model constructor.
-     * @property {module:invoker/model/SICIndex}
+     * @property {module:model/SICIndex}
      */
     SICIndex: SICIndex,
     /**
      * The Security model constructor.
-     * @property {module:invoker/model/Security}
+     * @property {module:model/Security}
      */
     Security: Security,
     /**
      * The SecurityScreenClause model constructor.
-     * @property {module:invoker/model/SecurityScreenClause}
+     * @property {module:model/SecurityScreenClause}
      */
     SecurityScreenClause: SecurityScreenClause,
     /**
      * The SecurityScreenGroup model constructor.
-     * @property {module:invoker/model/SecurityScreenGroup}
+     * @property {module:model/SecurityScreenGroup}
      */
     SecurityScreenGroup: SecurityScreenGroup,
     /**
      * The SecurityScreenResult model constructor.
-     * @property {module:invoker/model/SecurityScreenResult}
+     * @property {module:model/SecurityScreenResult}
      */
     SecurityScreenResult: SecurityScreenResult,
     /**
      * The SecurityScreenResultData model constructor.
-     * @property {module:invoker/model/SecurityScreenResultData}
+     * @property {module:model/SecurityScreenResultData}
      */
     SecurityScreenResultData: SecurityScreenResultData,
     /**
      * The SecuritySummary model constructor.
-     * @property {module:invoker/model/SecuritySummary}
+     * @property {module:model/SecuritySummary}
      */
     SecuritySummary: SecuritySummary,
     /**
      * The StandardizedFinancial model constructor.
-     * @property {module:invoker/model/StandardizedFinancial}
+     * @property {module:model/StandardizedFinancial}
      */
     StandardizedFinancial: StandardizedFinancial,
     /**
      * The StandardizedTag model constructor.
-     * @property {module:invoker/model/StandardizedTag}
+     * @property {module:model/StandardizedTag}
      */
     StandardizedTag: StandardizedTag,
     /**
      * The StockExchange model constructor.
-     * @property {module:invoker/model/StockExchange}
+     * @property {module:model/StockExchange}
      */
     StockExchange: StockExchange,
     /**
      * The StockMarketIndex model constructor.
-     * @property {module:invoker/model/StockMarketIndex}
+     * @property {module:model/StockMarketIndex}
      */
     StockMarketIndex: StockMarketIndex,
     /**
      * The StockMarketIndexSummary model constructor.
-     * @property {module:invoker/model/StockMarketIndexSummary}
+     * @property {module:model/StockMarketIndexSummary}
      */
     StockMarketIndexSummary: StockMarketIndexSummary,
     /**
      * The StockPrice model constructor.
-     * @property {module:invoker/model/StockPrice}
+     * @property {module:model/StockPrice}
      */
     StockPrice: StockPrice,
     /**
      * The StockPriceSummary model constructor.
-     * @property {module:invoker/model/StockPriceSummary}
+     * @property {module:model/StockPriceSummary}
      */
     StockPriceSummary: StockPriceSummary,
     /**
      * The CompanyApi service constructor.
-     * @property {module:invoker/api/CompanyApi}
+     * @property {module:api/CompanyApi}
      */
     CompanyApi: CompanyApi,
     /**
      * The DataPointApi service constructor.
-     * @property {module:invoker/api/DataPointApi}
+     * @property {module:api/DataPointApi}
      */
     DataPointApi: DataPointApi,
     /**
      * The FilingApi service constructor.
-     * @property {module:invoker/api/FilingApi}
+     * @property {module:api/FilingApi}
      */
     FilingApi: FilingApi,
     /**
      * The FundamentalsApi service constructor.
-     * @property {module:invoker/api/FundamentalsApi}
+     * @property {module:api/FundamentalsApi}
      */
     FundamentalsApi: FundamentalsApi,
     /**
      * The HistoricalDataApi service constructor.
-     * @property {module:invoker/api/HistoricalDataApi}
+     * @property {module:api/HistoricalDataApi}
      */
     HistoricalDataApi: HistoricalDataApi,
     /**
      * The IndexApi service constructor.
-     * @property {module:invoker/api/IndexApi}
+     * @property {module:api/IndexApi}
      */
     IndexApi: IndexApi,
     /**
      * The SecurityApi service constructor.
-     * @property {module:invoker/api/SecurityApi}
+     * @property {module:api/SecurityApi}
      */
     SecurityApi: SecurityApi,
     /**
      * The StandardizedTagApi service constructor.
-     * @property {module:invoker/api/StandardizedTagApi}
+     * @property {module:api/StandardizedTagApi}
      */
     StandardizedTagApi: StandardizedTagApi,
     /**
      * The StockExchangeApi service constructor.
-     * @property {module:invoker/api/StockExchangeApi}
+     * @property {module:api/StockExchangeApi}
      */
     StockExchangeApi: StockExchangeApi
   };
