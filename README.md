@@ -164,3 +164,4 @@ Class | Method | HTTP request | Description
  - [intrinio.StockMarketIndexSummary](docs/StockMarketIndexSummary.md)
  - [intrinio.StockPrice](docs/StockPrice.md)
  - [intrinio.StockPriceSummary](docs/StockPriceSummary.md)
+
