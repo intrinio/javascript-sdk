@@ -76,7 +76,7 @@ module: {
 Please follow the [installation](#installation) instructions and execute the following JS code:
 
 ```javascript
-var IntrinioClient = require('IntrinioClient');
+var IntrinioClient = require('intrinio');
  
 IntrinioClient.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
  
