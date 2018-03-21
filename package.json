@@ -1,0 +1,21 @@
+{
+  "name": "intrinio",
+  "version": "0.0.1",
+  "description": "Access the Intrinio API",
+  "license": "GPLv3",
+  "main": "src/invoker/index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --recursive"
+  },
+  "browser": {
+    "fs": false
+  },
+  "dependencies": {
+    "superagent": "3.5.2"
+  },
+  "devDependencies": {
+    "mocha": "~2.3.4",
+    "sinon": "1.17.3",
+    "expect.js": "~0.3.1"
+  }
+}
