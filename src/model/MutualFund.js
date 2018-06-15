@@ -25,7 +25,7 @@
     if (!root.intrinio) {
       root.intrinio = {};
     }
-    root.intrinio.DataPointText = factory(root.intrinio.ApiClient);
+    root.intrinio.MutualFund = factory(root.intrinio.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,37 +34,73 @@
 
 
   /**
-   * The DataPointText model module.
-   * @module model/DataPointText
+   * The MutualFund model module.
+   * @module model/MutualFund
    * @version 0.0.1
    */
 
   /**
-   * Constructs a new <code>DataPointText</code>.
-   * The latest text value for an identifier/item combination
-   * @alias module:model/DataPointText
+   * Constructs a new <code>MutualFund</code>.
+   * An investment program funded by shareholders that trades in diversified holdings and is professionally managed
+   * @alias module:model/MutualFund
    * @class
    */
   var exports = function() {
     var _this = this;
 
+
+
+
+
   };
 
   /**
-   * Constructs a <code>DataPointText</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>MutualFund</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/DataPointText} obj Optional instance to populate.
-   * @return {module:model/DataPointText} The populated <code>DataPointText</code> instance.
+   * @param {module:model/MutualFund} obj Optional instance to populate.
+   * @return {module:model/MutualFund} The populated <code>MutualFund</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
+      if (data.hasOwnProperty('id')) {
+        obj['id'] = ApiClient.convertToType(data['id'], 'String');
+      }
+      if (data.hasOwnProperty('name')) {
+        obj['name'] = ApiClient.convertToType(data['name'], 'String');
+      }
+      if (data.hasOwnProperty('cusip')) {
+        obj['cusip'] = ApiClient.convertToType(data['cusip'], 'String');
+      }
+      if (data.hasOwnProperty('vendor_id')) {
+        obj['vendor_id'] = ApiClient.convertToType(data['vendor_id'], 'String');
+      }
     }
     return obj;
   }
 
+  /**
+   * The Intrinio ID of the mutual fund
+   * @member {String} id
+   */
+  exports.prototype['id'] = undefined;
+  /**
+   * The mutual fund's common name
+   * @member {String} name
+   */
+  exports.prototype['name'] = undefined;
+  /**
+   * The nine-character CUSIP identifier
+   * @member {String} cusip
+   */
+  exports.prototype['cusip'] = undefined;
+  /**
+   * The vendor-provided id of the mutual fund
+   * @member {String} vendor_id
+   */
+  exports.prototype['vendor_id'] = undefined;
 
 
 

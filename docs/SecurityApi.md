@@ -226,7 +226,7 @@ var identifier = "identifier_example"; // String | A Security identifier (Ticker
 
 var opts = { 
   'startDate': new Date("2013-10-20"), // Date | Return prices on or after the date
-  'endDate': new Date("2013-10-20"), // Date | Return prices on or beore the date
+  'endDate': new Date("2013-10-20"), // Date | Return prices on or before the date
   'frequency': "daily", // String | Return stock prices in the given frequency
   'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
 };
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
  **startDate** | **Date**| Return prices on or after the date | [optional] 
- **endDate** | **Date**| Return prices on or beore the date | [optional] 
+ **endDate** | **Date**| Return prices on or before the date | [optional] 
  **frequency** | **String**| Return stock prices in the given frequency | [optional] [default to daily]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
