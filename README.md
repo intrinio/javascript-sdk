@@ -55,11 +55,11 @@ Please follow the [installation](#installation) instructions and execute the fol
 ```javascript
 var IntrinioClient = require('intrinio');
  
-IntrinioClient.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
  
 var company_api = new IntrinioClient.CompanyApi()
  
-company_api.filterCompanies().then(function(data) {
+company_api.getAllCompanies().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
