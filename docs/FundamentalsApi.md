@@ -21,7 +21,7 @@ Retrieves detailed fundamental data for the given &#x60;fundamental_id&#x60;.
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var fundamentals_api = new intrinio.FundamentalsApi();
 
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 <a name="getFundamentalReportedFinancials"></a>
 # **getFundamentalReportedFinancials**
-> [ReportedFinancial] getFundamentalReportedFinancials(id)
+> ApiResponseReportedFinancials getFundamentalReportedFinancials(id)
 
 Get Reported Financials for a Fundamental
 
@@ -56,7 +56,7 @@ Returns the As-Reported Financials directly from the financial statements of the
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var fundamentals_api = new intrinio.FundamentalsApi();
 
@@ -78,11 +78,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[ReportedFinancial]**](ReportedFinancial.md)
+[**ApiResponseReportedFinancials**](ApiResponseReportedFinancials.md)
 
 <a name="getFundamentalStandardizedFinancials"></a>
 # **getFundamentalStandardizedFinancials**
-> [StandardizedFinancial] getFundamentalStandardizedFinancials(id)
+> ApiResponseStandardizedFinancials getFundamentalStandardizedFinancials(id)
 
 Get Standardized Financials for a Fundamental
 
@@ -91,7 +91,7 @@ Returns professional-grade historical financial data. This data is standardized,
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var fundamentals_api = new intrinio.FundamentalsApi();
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[StandardizedFinancial]**](StandardizedFinancial.md)
+[**ApiResponseStandardizedFinancials**](ApiResponseStandardizedFinancials.md)
 
 <a name="lookupFundamental"></a>
 # **lookupFundamental**
@@ -126,7 +126,7 @@ Returns the Fundamental for the Company with the given &#x60;identifier&#x60; an
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var fundamentals_api = new intrinio.FundamentalsApi();
 

@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **startDate** | **Date** | The period start date | [optional] 
 **endDate** | **Date** | The period start date | [optional] 
 **filingDate** | **Date** | The date and time when the Fundamental was filed with the SEC | [optional] 
-**calculated** | **Boolean** | If true, this Fundamental was calculated by Intrinio and not actually reported by the Company | [optional] 
 
 
 <a name="TypeEnum"></a>
