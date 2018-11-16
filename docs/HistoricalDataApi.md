@@ -4,27 +4,27 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getHistoricalData**](HistoricalDataApi.md#getHistoricalData) | **GET** /historical_data/{identifier}/{tag} | Get Historical Data
+[**getHistoricalData**](HistoricalDataApi.md#getHistoricalData) | **GET** /historical_data/{identifier}/{item} | Get Historical Data
 
 
 <a name="getHistoricalData"></a>
 # **getHistoricalData**
-> ApiResponseHistoricalData getHistoricalData(identifier, tag, opts)
+> [HistoricalData] getHistoricalData(identifier, item, opts)
 
 Get Historical Data
 
-Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+Returns historical values for the given &#x60;item&#x60; and the entity represented by the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
 
 var historicalData_api = new intrinio.HistoricalDataApi();
 
 var identifier = "identifier_example"; // String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag ID or code-name
+var item = "item_example"; // String | An Intrinio data tag or other item
 
 var opts = { 
   'type': "type_example", // String | Filter by type, when applicable
@@ -34,7 +34,7 @@ var opts = {
   'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
 };
 
-historicalData_api.getHistoricalData(identifier, tag, opts).then(function(data) {
+historicalData_api.getHistoricalData(identifier, item, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -46,7 +46,7 @@ historicalData_api.getHistoricalData(identifier, tag, opts).then(function(data) 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) | 
- **tag** | **String**| An Intrinio data tag ID or code-name | 
+ **item** | **String**| An Intrinio data tag or other item | 
  **type** | **String**| Filter by type, when applicable | [optional] 
  **startDate** | **Date**| Get historical data on or after this date | [optional] 
  **endDate** | **Date**| Get historical date on or before this date | [optional] 
@@ -55,5 +55,5 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApiResponseHistoricalData**](ApiResponseHistoricalData.md)
+[**[HistoricalData]**](HistoricalData.md)
 

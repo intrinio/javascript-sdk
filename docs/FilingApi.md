@@ -11,16 +11,14 @@ Method | HTTP request | Description
 
 <a name="filterFilings"></a>
 # **filterFilings**
-> ApiResponseFilings filterFilings(company, opts)
+> [Filing] filterFilings(company, opts)
 
 Filter Filings
-
-Returns filings that match the specified filters
 
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
 
 var filing_api = new intrinio.FilingApi();
 
@@ -52,20 +50,18 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApiResponseFilings**](ApiResponseFilings.md)
+[**[Filing]**](Filing.md)
 
 <a name="getAllFilings"></a>
 # **getAllFilings**
-> ApiResponseFilings getAllFilings(opts)
+> [Filing] getAllFilings(opts)
 
 Get All Filings
-
-Returns all filings
 
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
 
 var filing_api = new intrinio.FilingApi();
 
@@ -88,7 +84,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApiResponseFilings**](ApiResponseFilings.md)
+[**[Filing]**](Filing.md)
 
 <a name="getFilingById"></a>
 # **getFilingById**
@@ -96,12 +92,10 @@ Name | Type | Description  | Notes
 
 Get a Filing by ID
 
-Return the filing with the given ID
-
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
 
 var filing_api = new intrinio.FilingApi();
 

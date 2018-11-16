@@ -25,7 +25,7 @@
     if (!root.intrinio) {
       root.intrinio = {};
     }
-    root.intrinio.CompanySummary = factory(root.intrinio.ApiClient);
+    root.intrinio.MutualFund = factory(root.intrinio.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The CompanySummary model module.
-   * @module model/CompanySummary
+   * The MutualFund model module.
+   * @module model/MutualFund
    * @version 0.9.1
    */
 
   /**
-   * Constructs a new <code>CompanySummary</code>.
-   * The summary of a company that submits filings to the SEC and has a security traded primarily on a US exchange
-   * @alias module:model/CompanySummary
+   * Constructs a new <code>MutualFund</code>.
+   * An investment program funded by shareholders that trades in diversified holdings and is professionally managed
+   * @alias module:model/MutualFund
    * @class
    */
   var exports = function() {
@@ -52,15 +52,14 @@
 
 
 
-
   };
 
   /**
-   * Constructs a <code>CompanySummary</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>MutualFund</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/CompanySummary} obj Optional instance to populate.
-   * @return {module:model/CompanySummary} The populated <code>CompanySummary</code> instance.
+   * @param {module:model/MutualFund} obj Optional instance to populate.
+   * @return {module:model/MutualFund} The populated <code>MutualFund</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -69,47 +68,39 @@
       if (data.hasOwnProperty('id')) {
         obj['id'] = ApiClient.convertToType(data['id'], 'String');
       }
-      if (data.hasOwnProperty('ticker')) {
-        obj['ticker'] = ApiClient.convertToType(data['ticker'], 'String');
-      }
       if (data.hasOwnProperty('name')) {
         obj['name'] = ApiClient.convertToType(data['name'], 'String');
       }
-      if (data.hasOwnProperty('lei')) {
-        obj['lei'] = ApiClient.convertToType(data['lei'], 'String');
+      if (data.hasOwnProperty('cusip')) {
+        obj['cusip'] = ApiClient.convertToType(data['cusip'], 'String');
       }
-      if (data.hasOwnProperty('cik')) {
-        obj['cik'] = ApiClient.convertToType(data['cik'], 'String');
+      if (data.hasOwnProperty('vendor_id')) {
+        obj['vendor_id'] = ApiClient.convertToType(data['vendor_id'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * The Intrinio ID of the company
+   * The Intrinio ID of the mutual fund
    * @member {String} id
    */
   exports.prototype['id'] = undefined;
   /**
-   * The stock market ticker symbol associated with the company's common stock securities
-   * @member {String} ticker
-   */
-  exports.prototype['ticker'] = undefined;
-  /**
-   * The company's common name
+   * The mutual fund's common name
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
   /**
-   * The Legal Entity Identifier (LEI) assigned to the company
-   * @member {String} lei
+   * The nine-character CUSIP identifier
+   * @member {String} cusip
    */
-  exports.prototype['lei'] = undefined;
+  exports.prototype['cusip'] = undefined;
   /**
-   * The Central Index Key (CIK) assigned to the company
-   * @member {String} cik
+   * The vendor-provided id of the mutual fund
+   * @member {String} vendor_id
    */
-  exports.prototype['cik'] = undefined;
+  exports.prototype['vendor_id'] = undefined;
 
 
 

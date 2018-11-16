@@ -25,7 +25,7 @@
     if (!root.intrinio) {
       root.intrinio = {};
     }
-    root.intrinio.CompanySummary = factory(root.intrinio.ApiClient);
+    root.intrinio.MutualFundStat = factory(root.intrinio.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The CompanySummary model module.
-   * @module model/CompanySummary
+   * The MutualFundStat model module.
+   * @module model/MutualFundStat
    * @version 0.9.1
    */
 
   /**
-   * Constructs a new <code>CompanySummary</code>.
-   * The summary of a company that submits filings to the SEC and has a security traded primarily on a US exchange
-   * @alias module:model/CompanySummary
+   * Constructs a new <code>MutualFundStat</code>.
+   * The stats collection of a mutual fund on a given date.
+   * @alias module:model/MutualFundStat
    * @class
    */
   var exports = function() {
@@ -51,65 +51,47 @@
 
 
 
-
-
   };
 
   /**
-   * Constructs a <code>CompanySummary</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>MutualFundStat</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/CompanySummary} obj Optional instance to populate.
-   * @return {module:model/CompanySummary} The populated <code>CompanySummary</code> instance.
+   * @param {module:model/MutualFundStat} obj Optional instance to populate.
+   * @return {module:model/MutualFundStat} The populated <code>MutualFundStat</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'String');
+      if (data.hasOwnProperty('date')) {
+        obj['date'] = ApiClient.convertToType(data['date'], 'Date');
       }
-      if (data.hasOwnProperty('ticker')) {
-        obj['ticker'] = ApiClient.convertToType(data['ticker'], 'String');
+      if (data.hasOwnProperty('net_assets')) {
+        obj['net_assets'] = ApiClient.convertToType(data['net_assets'], 'Number');
       }
-      if (data.hasOwnProperty('name')) {
-        obj['name'] = ApiClient.convertToType(data['name'], 'String');
-      }
-      if (data.hasOwnProperty('lei')) {
-        obj['lei'] = ApiClient.convertToType(data['lei'], 'String');
-      }
-      if (data.hasOwnProperty('cik')) {
-        obj['cik'] = ApiClient.convertToType(data['cik'], 'String');
+      if (data.hasOwnProperty('net_asset_value')) {
+        obj['net_asset_value'] = ApiClient.convertToType(data['net_asset_value'], 'Number');
       }
     }
     return obj;
   }
 
   /**
-   * The Intrinio ID of the company
-   * @member {String} id
+   * The calendar date that the stats collection represents
+   * @member {Date} date
    */
-  exports.prototype['id'] = undefined;
+  exports.prototype['date'] = undefined;
   /**
-   * The stock market ticker symbol associated with the company's common stock securities
-   * @member {String} ticker
+   * The dollar amount of net assets managed by the fund
+   * @member {Number} net_assets
    */
-  exports.prototype['ticker'] = undefined;
+  exports.prototype['net_assets'] = undefined;
   /**
-   * The company's common name
-   * @member {String} name
+   * The value of the mutual fund that is reached by deducting the fund's liabilities from the market value of all of its shares and then dividing by the number of issued shares
+   * @member {Number} net_asset_value
    */
-  exports.prototype['name'] = undefined;
-  /**
-   * The Legal Entity Identifier (LEI) assigned to the company
-   * @member {String} lei
-   */
-  exports.prototype['lei'] = undefined;
-  /**
-   * The Central Index Key (CIK) assigned to the company
-   * @member {String} cik
-   */
-  exports.prototype['cik'] = undefined;
+  exports.prototype['net_asset_value'] = undefined;
 
 
 

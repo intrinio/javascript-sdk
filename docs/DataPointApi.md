@@ -4,31 +4,31 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getDataPointNumber**](DataPointApi.md#getDataPointNumber) | **GET** /data_point/{identifier}/{tag}/number | Get a Data Point (Number)
-[**getDataPointText**](DataPointApi.md#getDataPointText) | **GET** /data_point/{identifier}/{tag}/text | Get a Data Point (Text)
+[**getDataPointNumber**](DataPointApi.md#getDataPointNumber) | **GET** /data_point/{identifier}/{item}/number | Get a Data Point (Number)
+[**getDataPointText**](DataPointApi.md#getDataPointText) | **GET** /data_point/{identifier}/{item}/text | Get a Data Point (Text)
 
 
 <a name="getDataPointNumber"></a>
 # **getDataPointNumber**
-> DataPointNumber getDataPointNumber(identifier, tag)
+> DataPointNumber getDataPointNumber(identifier, item)
 
 Get a Data Point (Number)
 
-Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
+Returns a numeric value for the given &#x60;item&#x60; and the entity with the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
 
 var dataPoint_api = new intrinio.DataPointApi();
 
 var identifier = "identifier_example"; // String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag ID or code-name
+var item = "item_example"; // String | An Intrinio data tag or other item
 
 
-dataPoint_api.getDataPointNumber(identifier, tag).then(function(data) {
+dataPoint_api.getDataPointNumber(identifier, item).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -40,7 +40,7 @@ dataPoint_api.getDataPointNumber(identifier, tag).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) | 
- **tag** | **String**| An Intrinio data tag ID or code-name | 
+ **item** | **String**| An Intrinio data tag or other item | 
 
 ### Return type
 
@@ -48,25 +48,25 @@ Name | Type | Description  | Notes
 
 <a name="getDataPointText"></a>
 # **getDataPointText**
-> DataPointText getDataPointText(identifier, tag)
+> DataPointText getDataPointText(identifier, item)
 
 Get a Data Point (Text)
 
-Returns a text value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
+Returns a text value for the given &#x60;item&#x60; and the entity with the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
 
 var dataPoint_api = new intrinio.DataPointApi();
 
 var identifier = "identifier_example"; // String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag ID or code-name
+var item = "item_example"; // String | An Intrinio data tag or other item
 
 
-dataPoint_api.getDataPointText(identifier, tag).then(function(data) {
+dataPoint_api.getDataPointText(identifier, item).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -78,7 +78,7 @@ dataPoint_api.getDataPointText(identifier, tag).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) | 
- **tag** | **String**| An Intrinio data tag ID or code-name | 
+ **item** | **String**| An Intrinio data tag or other item | 
 
 ### Return type
 
