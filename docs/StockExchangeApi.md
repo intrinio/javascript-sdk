@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**filterStockExchanges**](StockExchangeApi.md#filterStockExchanges) | **GET** /stock_exchanges/filter | Filter Stock Exchanges
 [**getAllStockExchanges**](StockExchangeApi.md#getAllStockExchanges) | **GET** /stock_exchanges | Get All Stock Exchanges
 [**getStockExchangeById**](StockExchangeApi.md#getStockExchangeById) | **GET** /stock_exchanges/{identifier} | Get Stock Exchange by ID
+[**getStockExchangePriceAdjustments**](StockExchangeApi.md#getStockExchangePriceAdjustments) | **GET** /stock_exchanges/{identifier}/prices/adjustments | Get Stock Price Adjustments by Exchange
 [**getStockExchangePrices**](StockExchangeApi.md#getStockExchangePrices) | **GET** /stock_exchanges/{identifier}/prices | Get Stock Prices by Exchange
 [**getStockExchangeSecurities**](StockExchangeApi.md#getStockExchangeSecurities) | **GET** /stock_exchanges/{identifier}/securities | Get Securities by Exchange
 
@@ -17,18 +18,19 @@ Method | HTTP request | Description
 
 Filter Stock Exchanges
 
+Return Stock Exchanges matching the given filters
+
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var stockExchange_api = new intrinio.StockExchangeApi();
 
 var opts = { 
   'city': "city_example", // String | Filter by city
   'country': "country_example", // String | Filter by country
-  'countryCode': "countryCode_example", // String | Filter by ISO country code
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'countryCode': "countryCode_example" // String | Filter by ISO country code
 };
 
 stockExchange_api.filterStockExchanges(opts).then(function(data) {
@@ -45,7 +47,6 @@ Name | Type | Description  | Notes
  **city** | **String**| Filter by city | [optional] 
  **country** | **String**| Filter by country | [optional] 
  **countryCode** | **String**| Filter by ISO country code | [optional] 
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
@@ -53,22 +54,20 @@ Name | Type | Description  | Notes
 
 <a name="getAllStockExchanges"></a>
 # **getAllStockExchanges**
-> [StockExchange] getAllStockExchanges(opts)
+> [StockExchange] getAllStockExchanges()
 
 Get All Stock Exchanges
+
+Return All Stock Exchanges
 
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var stockExchange_api = new intrinio.StockExchangeApi();
 
-var opts = { 
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
-};
-
-stockExchange_api.getAllStockExchanges(opts).then(function(data) {
+stockExchange_api.getAllStockExchanges().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -76,10 +75,7 @@ stockExchange_api.getAllStockExchanges(opts).then(function(data) {
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -94,7 +90,7 @@ Get Stock Exchange by ID
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var stockExchange_api = new intrinio.StockExchangeApi();
 
@@ -118,9 +114,50 @@ Name | Type | Description  | Notes
 
 [**StockExchange**](StockExchange.md)
 
+<a name="getStockExchangePriceAdjustments"></a>
+# **getStockExchangePriceAdjustments**
+> ApiResponseStockExchangeStockPriceAdjustments getStockExchangePriceAdjustments(identifier, opts)
+
+Get Stock Price Adjustments by Exchange
+
+Return stock price adjustments for the Stock Exchange with the given &#x60;identifier&#x60;
+
+### Example
+```javascript
+var intrinio = require('intrinio');
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+
+var stockExchange_api = new intrinio.StockExchangeApi();
+
+var identifier = "identifier_example"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
+
+var opts = { 
+  '_date': new Date("2013-10-20"), // Date | The date for which to return price adjustments
+  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+};
+
+stockExchange_api.getStockExchangePriceAdjustments(identifier, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **String**| A Stock Exchange identifier (MIC or Intrinio ID) | 
+ **_date** | **Date**| The date for which to return price adjustments | [optional] 
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+
+### Return type
+
+[**ApiResponseStockExchangeStockPriceAdjustments**](ApiResponseStockExchangeStockPriceAdjustments.md)
+
 <a name="getStockExchangePrices"></a>
 # **getStockExchangePrices**
-> [StockPrice] getStockExchangePrices(identifier, opts)
+> ApiResponseStockExchangeStockPrices getStockExchangePrices(identifier, opts)
 
 Get Stock Prices by Exchange
 
@@ -129,7 +166,7 @@ Return daily Stock Prices for Securities on the Stock Exchange with &#x60;identi
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var stockExchange_api = new intrinio.StockExchangeApi();
 
@@ -157,20 +194,20 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[StockPrice]**](StockPrice.md)
+[**ApiResponseStockExchangeStockPrices**](ApiResponseStockExchangeStockPrices.md)
 
 <a name="getStockExchangeSecurities"></a>
 # **getStockExchangeSecurities**
-> [Security] getStockExchangeSecurities(identifier, opts)
+> ApiResponseStockExchangeSecurities getStockExchangeSecurities(identifier, opts)
 
 Get Securities by Exchange
 
-Return Securities on the Stock Exchange with &#x60;identifier&#x60;
+Return Securities traded on the Stock Exchange with &#x60;identifier&#x60;
 
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var stockExchange_api = new intrinio.StockExchangeApi();
 
@@ -196,5 +233,5 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[Security]**](Security.md)
+[**ApiResponseStockExchangeSecurities**](ApiResponseStockExchangeSecurities.md)
 

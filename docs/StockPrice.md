@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**security** | [**SecuritySummary**](SecuritySummary.md) | The Security of the stock price | [optional] 
 **_date** | **Date** | The calendar date that the stock price represents. For non-daily stock prices, this represents the last day in the period (end of the week, month, quarter, year, etc) | [optional] 
 **intraperiod** | **Boolean** | If true, the stock price represents an unfinished period (be it day, week, quarter, month, or year), meaning that the close price is the latest price available, not the official close price for the period | [optional] 
 **frequency** | **String** | The type of period that the stock price represents | [optional] 
@@ -17,6 +16,7 @@ Name | Type | Description | Notes
 **adjLow** | **Number** | The lowest price over the span of the period, adjusted for splits and dividends | [optional] 
 **adjClose** | **Number** | The price at the end of the period, adjusted for splits and dividends | [optional] 
 **adjVolume** | **Number** | The number of shares exchanged during the period, adjusted for splits and dividends | [optional] 
+**security** | [**SecuritySummary**](SecuritySummary.md) | The Security of the stock price | [optional] 
 
 
 <a name="FrequencyEnum"></a>

@@ -19,9 +19,6 @@ Name | Type | Description | Notes
 **compositeFigi** | **String** | The country-composite OpenFIGI identifier | [optional] 
 **shareClassFigi** | **String** | The global-composite OpenFIGI identifier | [optional] 
 **figiUniqueid** | **String** | The OpenFIGI unique ID | [optional] 
-**isin** | **String** | The International Securities Identification Number | [optional] 
-**cusip** | **String** | An identifier provided by the Committee on Uniform Security Identification Procedures (U.S.) | [optional] 
-**sedol** | **String** | An identifier provided by the Stock Exchange Daily Official List (U.K.) | [optional] 
 **active** | **Boolean** | If true, the Security is active and has been recently traded | [optional] 
 **etf** | **Boolean** | If true, this Security is an ETF | [optional] 
 **delisted** | **Boolean** | If true, the Security is no longer traded on the exchange | [optional] 
@@ -31,5 +28,6 @@ Name | Type | Description | Notes
 **lastStockPrice** | **Date** | The date of the last recorded stock price (or the most recent trading day) | [optional] 
 **lastStockPriceAdjustment** | **Date** | The date of the last stock price adjustment (dividend, split, etc) | [optional] 
 **lastCorporateAction** | **Date** | The date of the last corporate action | [optional] 
+**previousTickers** | **[String]** | Previous tickers used by this security | [optional] 
 
 

@@ -7,20 +7,22 @@ Method | HTTP request | Description
 [**filterCompanies**](CompanyApi.md#filterCompanies) | **GET** /companies/filter | Filter Companies
 [**filterCompanyFundamentals**](CompanyApi.md#filterCompanyFundamentals) | **GET** /companies/{identifier}/fundamentals/filter | Filter Fundamentals for a Company
 [**getAllCompanies**](CompanyApi.md#getAllCompanies) | **GET** /companies | Get All Companies
-[**getAllCompanyFilings**](CompanyApi.md#getAllCompanyFilings) | **GET** /companies/{identifier}/filings | Filings
-[**getAllCompanyFundamentals**](CompanyApi.md#getAllCompanyFundamentals) | **GET** /companies/{identifier}/fundamentals | Get All Fundamentals for a Company
+[**getAllCompanyNews**](CompanyApi.md#getAllCompanyNews) | **GET** /companies/news | Get All Company News
 [**getCompany**](CompanyApi.md#getCompany) | **GET** /companies/{identifier} | Get a Company by ID
-[**getCompanyDataPointNumber**](CompanyApi.md#getCompanyDataPointNumber) | **GET** /companies/{identifier}/data_point/{item}/number | Get Company Data Point (Number)
-[**getCompanyDataPointText**](CompanyApi.md#getCompanyDataPointText) | **GET** /companies/{identifier}/data_point/{item}/text | Get Company Data Point (Text)
-[**getCompanyHistoricalData**](CompanyApi.md#getCompanyHistoricalData) | **GET** /companies/{identifier}/historical_data/{item} | Get Company Historical Data
-[**getNews**](CompanyApi.md#getNews) | **GET** /companies/{identifier}/news | News
+[**getCompanyDataPointNumber**](CompanyApi.md#getCompanyDataPointNumber) | **GET** /companies/{identifier}/data_point/{tag}/number | Get Company Data Point (Number)
+[**getCompanyDataPointText**](CompanyApi.md#getCompanyDataPointText) | **GET** /companies/{identifier}/data_point/{tag}/text | Get Company Data Point (Text)
+[**getCompanyFilings**](CompanyApi.md#getCompanyFilings) | **GET** /companies/{identifier}/filings | Get Filings for a Company
+[**getCompanyFundamentals**](CompanyApi.md#getCompanyFundamentals) | **GET** /companies/{identifier}/fundamentals | Get All Fundamentals for a Company
+[**getCompanyHistoricalData**](CompanyApi.md#getCompanyHistoricalData) | **GET** /companies/{identifier}/historical_data/{tag} | Get Company Historical Data
+[**getCompanyNews**](CompanyApi.md#getCompanyNews) | **GET** /companies/{identifier}/news | Get News for a Company
+[**getCompanySecurities**](CompanyApi.md#getCompanySecurities) | **GET** /companies/{identifier}/securities | Get Securities by Company
 [**lookupCompanyFundamental**](CompanyApi.md#lookupCompanyFundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup a Fundamental for a Company
 [**searchCompanies**](CompanyApi.md#searchCompanies) | **GET** /companies/search | Search Companies
 
 
 <a name="filterCompanies"></a>
 # **filterCompanies**
-> [CompanySummary] filterCompanies(opts)
+> ApiResponseCompanies filterCompanies(opts)
 
 Filter Companies
 
@@ -29,7 +31,7 @@ Returns Companies matching the specified filters
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var company_api = new intrinio.CompanyApi();
 
@@ -64,11 +66,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[CompanySummary]**](CompanySummary.md)
+[**ApiResponseCompanies**](ApiResponseCompanies.md)
 
 <a name="filterCompanyFundamentals"></a>
 # **filterCompanyFundamentals**
-> [Fundamental] filterCompanyFundamentals(identifier, opts)
+> ApiResponseCompanyFundamentals filterCompanyFundamentals(identifier, opts)
 
 Filter Fundamentals for a Company
 
@@ -77,7 +79,7 @@ Returns Fundamentals for the Company with the given &#x60;identifier&#x60; and m
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var company_api = new intrinio.CompanyApi();
 
@@ -119,18 +121,18 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[Fundamental]**](Fundamental.md)
+[**ApiResponseCompanyFundamentals**](ApiResponseCompanyFundamentals.md)
 
 <a name="getAllCompanies"></a>
 # **getAllCompanies**
-> [CompanySummary] getAllCompanies(opts)
+> ApiResponseCompanies getAllCompanies(opts)
 
 Get All Companies
 
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var company_api = new intrinio.CompanyApi();
 
@@ -153,30 +155,28 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[CompanySummary]**](CompanySummary.md)
+[**ApiResponseCompanies**](ApiResponseCompanies.md)
 
-<a name="getAllCompanyFilings"></a>
-# **getAllCompanyFilings**
-> [FilingSummary] getAllCompanyFilings(identifier, opts)
+<a name="getAllCompanyNews"></a>
+# **getAllCompanyNews**
+> ApiResponseNews getAllCompanyNews(opts)
 
-Filings
+Get All Company News
 
-Returns a complete list of SEC filings for the Company with the given &#x60;identifier&#x60;
+Returns all news for all companies
 
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var company_api = new intrinio.CompanyApi();
-
-var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
   'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
 };
 
-company_api.getAllCompanyFilings(identifier, opts).then(function(data) {
+company_api.getAllCompanyNews(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -187,51 +187,11 @@ company_api.getAllCompanyFilings(identifier, opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
-[**[FilingSummary]**](FilingSummary.md)
-
-<a name="getAllCompanyFundamentals"></a>
-# **getAllCompanyFundamentals**
-> [Fundamental] getAllCompanyFundamentals(identifier, opts)
-
-Get All Fundamentals for a Company
-
-Returns all Fundamentals for the Company with the given &#x60;identifier&#x60;
-
-### Example
-```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
-
-var company_api = new intrinio.CompanyApi();
-
-var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-
-var opts = { 
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
-};
-
-company_api.getAllCompanyFundamentals(identifier, opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
-
-### Return type
-
-[**[Fundamental]**](Fundamental.md)
+[**ApiResponseNews**](ApiResponseNews.md)
 
 <a name="getCompany"></a>
 # **getCompany**
@@ -242,7 +202,7 @@ Get a Company by ID
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var company_api = new intrinio.CompanyApi();
 
@@ -268,25 +228,25 @@ Name | Type | Description  | Notes
 
 <a name="getCompanyDataPointNumber"></a>
 # **getCompanyDataPointNumber**
-> DataPointNumber getCompanyDataPointNumber(identifier, item)
+> DataPointNumber getCompanyDataPointNumber(identifier, tag)
 
 Get Company Data Point (Number)
 
-Returns a numeric value for the given &#x60;item&#x60; for the Company with the given &#x60;identifier&#x60;
+Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var company_api = new intrinio.CompanyApi();
 
 var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
-var item = "item_example"; // String | An Intrinio data tag
+var tag = "tag_example"; // String | An Intrinio data tag
 
 
-company_api.getCompanyDataPointNumber(identifier, item).then(function(data) {
+company_api.getCompanyDataPointNumber(identifier, tag).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -298,7 +258,7 @@ company_api.getCompanyDataPointNumber(identifier, item).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
- **item** | **String**| An Intrinio data tag | 
+ **tag** | **String**| An Intrinio data tag | 
 
 ### Return type
 
@@ -306,25 +266,25 @@ Name | Type | Description  | Notes
 
 <a name="getCompanyDataPointText"></a>
 # **getCompanyDataPointText**
-> DataPointText getCompanyDataPointText(identifier, item)
+> DataPointText getCompanyDataPointText(identifier, tag)
 
 Get Company Data Point (Text)
 
-Returns a text value for the given &#x60;item&#x60; for the Company with the given &#x60;identifier&#x60;
+Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var company_api = new intrinio.CompanyApi();
 
 var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
-var item = "item_example"; // String | An Intrinio data tag
+var tag = "tag_example"; // String | An Intrinio data tag
 
 
-company_api.getCompanyDataPointText(identifier, item).then(function(data) {
+company_api.getCompanyDataPointText(identifier, tag).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -336,30 +296,108 @@ company_api.getCompanyDataPointText(identifier, item).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
- **item** | **String**| An Intrinio data tag | 
+ **tag** | **String**| An Intrinio data tag | 
 
 ### Return type
 
 [**DataPointText**](DataPointText.md)
 
-<a name="getCompanyHistoricalData"></a>
-# **getCompanyHistoricalData**
-> [HistoricalData] getCompanyHistoricalData(identifier, item, opts)
+<a name="getCompanyFilings"></a>
+# **getCompanyFilings**
+> ApiResponseCompanyFilings getCompanyFilings(identifier, opts)
 
-Get Company Historical Data
+Get Filings for a Company
 
-Returns historical values for the given &#x60;item&#x60; and the Company with the given &#x60;identifier&#x60;
+Returns a complete list of SEC filings for the Company with the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var company_api = new intrinio.CompanyApi();
 
 var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
-var item = "item_example"; // String | Item
+var opts = { 
+  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+};
+
+company_api.getCompanyFilings(identifier, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+
+### Return type
+
+[**ApiResponseCompanyFilings**](ApiResponseCompanyFilings.md)
+
+<a name="getCompanyFundamentals"></a>
+# **getCompanyFundamentals**
+> ApiResponseCompanyFundamentals getCompanyFundamentals(identifier, opts)
+
+Get All Fundamentals for a Company
+
+Returns all Fundamentals for the Company with the given &#x60;identifier&#x60;
+
+### Example
+```javascript
+var intrinio = require('intrinio');
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+
+var company_api = new intrinio.CompanyApi();
+
+var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+
+var opts = { 
+  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+};
+
+company_api.getCompanyFundamentals(identifier, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+
+### Return type
+
+[**ApiResponseCompanyFundamentals**](ApiResponseCompanyFundamentals.md)
+
+<a name="getCompanyHistoricalData"></a>
+# **getCompanyHistoricalData**
+> ApiResponseCompanyHistoricalData getCompanyHistoricalData(identifier, tag, opts)
+
+Get Company Historical Data
+
+Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+
+### Example
+```javascript
+var intrinio = require('intrinio');
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+
+var company_api = new intrinio.CompanyApi();
+
+var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+
+var tag = "tag_example"; // String | Item
 
 var opts = { 
   'type': "type_example", // String | Filter by type, when applicable
@@ -369,7 +407,7 @@ var opts = {
   'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
 };
 
-company_api.getCompanyHistoricalData(identifier, item, opts).then(function(data) {
+company_api.getCompanyHistoricalData(identifier, tag, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -381,7 +419,7 @@ company_api.getCompanyHistoricalData(identifier, item, opts).then(function(data)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
- **item** | **String**| Item | 
+ **tag** | **String**| Item | 
  **type** | **String**| Filter by type, when applicable | [optional] 
  **startDate** | **Date**| Get historical data on or after this date | [optional] 
  **endDate** | **Date**| Get historical data on or before this date | [optional] 
@@ -390,20 +428,20 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[HistoricalData]**](HistoricalData.md)
+[**ApiResponseCompanyHistoricalData**](ApiResponseCompanyHistoricalData.md)
 
-<a name="getNews"></a>
-# **getNews**
-> [CompanyNews] getNews(identifier, opts)
+<a name="getCompanyNews"></a>
+# **getCompanyNews**
+> ApiResponseCompanyNews getCompanyNews(identifier, opts)
 
-News
+Get News for a Company
 
 Returns news for the Company with the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var company_api = new intrinio.CompanyApi();
 
@@ -413,7 +451,7 @@ var opts = {
   'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
 };
 
-company_api.getNews(identifier, opts).then(function(data) {
+company_api.getCompanyNews(identifier, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -429,7 +467,46 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[CompanyNews]**](CompanyNews.md)
+[**ApiResponseCompanyNews**](ApiResponseCompanyNews.md)
+
+<a name="getCompanySecurities"></a>
+# **getCompanySecurities**
+> ApiResponseCompanySecurities getCompanySecurities(identifier, opts)
+
+Get Securities by Company
+
+Return Securities for the Company with &#x60;identifier&#x60;
+
+### Example
+```javascript
+var intrinio = require('intrinio');
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+
+var company_api = new intrinio.CompanyApi();
+
+var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+
+var opts = { 
+  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+};
+
+company_api.getCompanySecurities(identifier, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+
+### Return type
+
+[**ApiResponseCompanySecurities**](ApiResponseCompanySecurities.md)
 
 <a name="lookupCompanyFundamental"></a>
 # **lookupCompanyFundamental**
@@ -442,7 +519,7 @@ Returns the Fundamental for the Company with the given &#x60;identifier&#x60; an
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var company_api = new intrinio.CompanyApi();
 
@@ -477,7 +554,7 @@ Name | Type | Description  | Notes
 
 <a name="searchCompanies"></a>
 # **searchCompanies**
-> [CompanySummary] searchCompanies(query, opts)
+> ApiResponseCompanies searchCompanies(query)
 
 Search Companies
 
@@ -486,17 +563,14 @@ Searches for Companies matching the text &#x60;query&#x60;
 ### Example
 ```javascript
 var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['HttpHeaderApiKey'].apiKey = "YOUR API KEY";
+intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
 var company_api = new intrinio.CompanyApi();
 
 var query = "query_example"; // String | Search parameters
 
-var opts = { 
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
-};
 
-company_api.searchCompanies(query, opts).then(function(data) {
+company_api.searchCompanies(query).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -508,9 +582,8 @@ company_api.searchCompanies(query, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **String**| Search parameters | 
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
-[**[CompanySummary]**](CompanySummary.md)
+[**ApiResponseCompanies**](ApiResponseCompanies.md)
 
