@@ -24,12 +24,12 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var filing_api = new intrinio.FilingApi();
 
-var company = "company_example"; // String | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
+var company = "AAPL"; // String | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
-  'reportType': "reportType_example", // String | Filter by report type
-  'startDate': new Date("2013-10-20"), // Date | Filed on or after the given date
-  'endDate': new Date("2013-10-20"), // Date | Filed before or after the given date
+  'reportType': "", // String | Filter by report type
+  'startDate': new Date("2015-01-01"), // Date | Filed on or after the given date
+  'endDate': new Date("2019-01-01"), // Date | Filed before or after the given date
   'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
@@ -105,7 +105,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var filing_api = new intrinio.FilingApi();
 
-var id = "id_example"; // String | The Intrinio ID of the Filing
+var id = "fil_7Kn2P6"; // String | The Intrinio ID of the Filing
 
 
 filing_api.getFilingById(id).then(function(data) {

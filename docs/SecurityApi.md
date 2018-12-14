@@ -179,8 +179,8 @@ var tag = "volume"; // String | An Intrinio data tag ID or code-name
 
 var opts = { 
   'type': "", // String | Filter by type, when applicable
-  'startDate': new Date(""), // Date | Get historical data on or after this date
-  'endDate': new Date(""), // Date | Get historical date on or before this date
+  'startDate': new Date("2018-01-01"), // Date | Get historical data on or after this date
+  'endDate': new Date("2019-01-01"), // Date | Get historical date on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
   'nextPage': "" // String | Gets the next page of data from a previous API call
 };

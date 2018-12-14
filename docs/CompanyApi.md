@@ -36,12 +36,12 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var company_api = new intrinio.CompanyApi();
 
 var opts = { 
-  'lastFilingDate': new Date("2013-10-20"), // Date | Last filing date
-  'sic': "sic_example", // String | Standard Industrial Classification code
-  'template': "template_example", // String | Template
-  'sector': "sector_example", // String | Industry sector
-  'industryCategory': "industryCategory_example", // String | Industry category
-  'industryGroup': "industryGroup_example", // String | Industry group
+  'lastFilingDate': new Date("2011-07-15"), // Date | Last filing date
+  'sic': "3350", // String | Standard Industrial Classification code
+  'template': "industrial", // String | Template
+  'sector': "Basic Materials", // String | Industry sector
+  'industryCategory': "Metals & Mining", // String | Industry category
+  'industryGroup': "Aluminum", // String | Industry group
   'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
@@ -83,17 +83,17 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var company_api = new intrinio.CompanyApi();
 
-var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
-  'filedAfter': new Date("2013-10-20"), // Date | Filed on or after this date
-  'filedBefore': new Date("2013-10-20"), // Date | Filed on or before this date
-  'reportedOnly': true, // Boolean | Only as-reported fundamentals
-  'fiscalYear': 56, // Number | Only for the given fiscal year
-  'statementCode': "statementCode_example", // String | Only of the given statement code
-  'type': "type_example", // String | Only of the given type
-  'startDate': new Date("2013-10-20"), // Date | Only on or after the given date
-  'endDate': new Date("2013-10-20"), // Date | Only on or after the given date
+  'filedAfter': new Date("2017-01-01"), // Date | Filed on or after this date
+  'filedBefore': new Date("2018-01-01"), // Date | Filed on or before this date
+  'reportedOnly': false, // Boolean | Only as-reported fundamentals
+  'fiscalYear': 2017, // Number | Only for the given fiscal year
+  'statementCode': "", // String | Only of the given statement code
+  'type': "", // String | Only of the given type
+  'startDate': new Date("2017-01-01"), // Date | Only on or after the given date
+  'endDate': new Date("2018-01-01"), // Date | Only on or before the given date
   'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
  **statementCode** | **String**| Only of the given statement code | [optional] 
  **type** | **String**| Only of the given type | [optional] 
  **startDate** | **Date**| Only on or after the given date | [optional] 
- **endDate** | **Date**| Only on or after the given date | [optional] 
+ **endDate** | **Date**| Only on or before the given date | [optional] 
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -206,7 +206,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var company_api = new intrinio.CompanyApi();
 
-var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 
 company_api.getCompany(identifier).then(function(data) {
@@ -241,9 +241,9 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var company_api = new intrinio.CompanyApi();
 
-var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag
+var tag = "marketcap"; // String | An Intrinio data tag
 
 
 company_api.getCompanyDataPointNumber(identifier, tag).then(function(data) {
@@ -279,9 +279,9 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var company_api = new intrinio.CompanyApi();
 
-var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag
+var tag = "marketcap"; // String | An Intrinio data tag
 
 
 company_api.getCompanyDataPointText(identifier, tag).then(function(data) {
@@ -317,7 +317,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var company_api = new intrinio.CompanyApi();
 
-var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
   'nextPage': "" // String | Gets the next page of data from a previous API call
@@ -356,7 +356,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var company_api = new intrinio.CompanyApi();
 
-var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
   'nextPage': "" // String | Gets the next page of data from a previous API call
@@ -395,14 +395,14 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var company_api = new intrinio.CompanyApi();
 
-var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
-var tag = "tag_example"; // String | Item
+var tag = "marketcap"; // String | Item
 
 var opts = { 
-  'type': "type_example", // String | Filter by type, when applicable
-  'startDate': new Date("2013-10-20"), // Date | Get historical data on or after this date
-  'endDate': new Date("2013-10-20"), // Date | Get historical data on or before this date
+  'type': "", // String | Filter by type, when applicable
+  'startDate': new Date("2018-01-01"), // Date | Get historical data on or after this date
+  'endDate': new Date("2019-01-01"), // Date | Get historical data on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
   'nextPage': "" // String | Gets the next page of data from a previous API call
 };
@@ -445,7 +445,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var company_api = new intrinio.CompanyApi();
 
-var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
   'nextPage': "" // String | Gets the next page of data from a previous API call
@@ -484,7 +484,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var company_api = new intrinio.CompanyApi();
 
-var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
   'nextPage': "" // String | Gets the next page of data from a previous API call
@@ -523,13 +523,13 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var company_api = new intrinio.CompanyApi();
 
-var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
-var statementCode = "statementCode_example"; // String | The statement code
+var statementCode = "income_statement"; // String | The statement code
 
-var fiscalPeriod = "fiscalPeriod_example"; // String | The fiscal period
+var fiscalPeriod = "FY"; // String | The fiscal period
 
-var fiscalYear = 56; // Number | The fiscal year
+var fiscalYear = 2017; // Number | The fiscal year
 
 
 company_api.lookupCompanyFundamental(identifier, statementCode, fiscalPeriod, fiscalYear).then(function(data) {
@@ -567,7 +567,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var company_api = new intrinio.CompanyApi();
 
-var query = "query_example"; // String | Search parameters
+var query = "Apple"; // String | Search parameters
 
 
 company_api.searchCompanies(query).then(function(data) {

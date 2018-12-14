@@ -25,7 +25,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var fundamentals_api = new intrinio.FundamentalsApi();
 
-var id = "id_example"; // String | The Intrinio ID for the Fundamental
+var id = "fun_ge9LlE"; // String | The Intrinio ID for the Fundamental
 
 
 fundamentals_api.getFundamentalById(id).then(function(data) {
@@ -60,7 +60,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var fundamentals_api = new intrinio.FundamentalsApi();
 
-var id = "id_example"; // String | The Intrinio ID for the Fundamental
+var id = "fun_ge9LlE"; // String | The Intrinio ID for the Fundamental
 
 
 fundamentals_api.getFundamentalReportedFinancials(id).then(function(data) {
@@ -95,7 +95,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var fundamentals_api = new intrinio.FundamentalsApi();
 
-var id = "id_example"; // String | The Intrinio ID for the Fundamental
+var id = "fun_ge9LlE"; // String | The Intrinio ID for the Fundamental
 
 
 fundamentals_api.getFundamentalStandardizedFinancials(id).then(function(data) {
@@ -130,13 +130,13 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var fundamentals_api = new intrinio.FundamentalsApi();
 
-var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
-var statementCode = "statementCode_example"; // String | The statement code
+var statementCode = "income_statement"; // String | The statement code
 
-var fiscalYear = 56; // Number | The fiscal year
+var fiscalYear = 2017; // Number | The fiscal year
 
-var fiscalPeriod = "fiscalPeriod_example"; // String | The fiscal period
+var fiscalPeriod = "FY"; // String | The fiscal period
 
 
 fundamentals_api.lookupFundamental(identifier, statementCode, fiscalYear, fiscalPeriod).then(function(data) {

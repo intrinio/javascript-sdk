@@ -26,10 +26,10 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var dataTag_api = new intrinio.DataTagApi();
 
 var opts = { 
-  'tag': "tag_example", // String | Tag
-  'type': "type_example", // String | Type
-  'parent': "parent_example", // String | ID of tag parent
-  'statementCode': "statementCode_example", // String | Statement Code
+  'tag': "", // String | Tag
+  'type': "", // String | Type
+  'parent': "", // String | ID of tag parent
+  'statementCode': "income_statement", // String | Statement Code
   'fsTemplate': "industrial", // String | Template
   'nextPage': "" // String | Gets the next page of data from a previous API call
 };
@@ -107,7 +107,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var dataTag_api = new intrinio.DataTagApi();
 
-var identifier = "identifier_example"; // String | The Intrinio ID or the code-name of the Data Tag
+var identifier = "marketcap"; // String | The Intrinio ID or the code-name of the Data Tag
 
 
 dataTag_api.getDataTagById(identifier).then(function(data) {
@@ -142,7 +142,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var dataTag_api = new intrinio.DataTagApi();
 
-var query = "query_example"; // String | 
+var query = "revenue"; // String | 
 
 
 dataTag_api.searchDataTags(query).then(function(data) {

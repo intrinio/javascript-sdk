@@ -23,9 +23,9 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var dataPoint_api = new intrinio.DataPointApi();
 
-var identifier = "identifier_example"; // String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+var identifier = "AAPL"; // String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag ID or code-name
+var tag = "marketcap"; // String | An Intrinio data tag ID or code-name
 
 
 dataPoint_api.getDataPointNumber(identifier, tag).then(function(data) {
@@ -61,9 +61,9 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var dataPoint_api = new intrinio.DataPointApi();
 
-var identifier = "identifier_example"; // String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+var identifier = "AAPL"; // String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag ID or code-name
+var tag = "marketcap"; // String | An Intrinio data tag ID or code-name
 
 
 dataPoint_api.getDataPointText(identifier, tag).then(function(data) {

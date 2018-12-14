@@ -29,7 +29,7 @@ var stockExchange_api = new intrinio.StockExchangeApi();
 
 var opts = { 
   'city': "city_example", // String | Filter by city
-  'country': "country_example", // String | Filter by country
+  'country': "CHINA", // String | Filter by country
   'countryCode': "countryCode_example" // String | Filter by ISO country code
 };
 
@@ -94,7 +94,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var stockExchange_api = new intrinio.StockExchangeApi();
 
-var identifier = "identifier_example"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
+var identifier = "XSHG"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 
 stockExchange_api.getStockExchangeById(identifier).then(function(data) {
@@ -129,10 +129,10 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var stockExchange_api = new intrinio.StockExchangeApi();
 
-var identifier = "identifier_example"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
+var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 var opts = { 
-  '_date': new Date("2013-10-20"), // Date | The date for which to return price adjustments
+  '_date': new Date("2018-08-14"), // Date | The date for which to return price adjustments
   'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
@@ -170,10 +170,10 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var stockExchange_api = new intrinio.StockExchangeApi();
 
-var identifier = "identifier_example"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
+var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 var opts = { 
-  '_date': new Date("2013-10-20"), // Date | The date for which to return prices
+  '_date': new Date("2018-08-14"), // Date | The date for which to return prices
   'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
@@ -211,7 +211,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var stockExchange_api = new intrinio.StockExchangeApi();
 
-var identifier = "identifier_example"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
+var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 var opts = { 
   'nextPage': "" // String | Gets the next page of data from a previous API call

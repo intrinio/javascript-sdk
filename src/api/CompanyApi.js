@@ -129,7 +129,7 @@
      * @param {module:model/String} opts.statementCode Only of the given statement code
      * @param {module:model/String} opts.type Only of the given type
      * @param {Date} opts.startDate Only on or after the given date
-     * @param {Date} opts.endDate Only on or after the given date
+     * @param {Date} opts.endDate Only on or before the given date
      * @param {String} opts.nextPage Gets the next page of data from a previous API call
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ApiResponseCompanyFundamentals} and HTTP response
      */
@@ -188,7 +188,7 @@
      * @param {module:model/String} opts.statementCode Only of the given statement code
      * @param {module:model/String} opts.type Only of the given type
      * @param {Date} opts.startDate Only on or after the given date
-     * @param {Date} opts.endDate Only on or after the given date
+     * @param {Date} opts.endDate Only on or before the given date
      * @param {String} opts.nextPage Gets the next page of data from a previous API call
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ApiResponseCompanyFundamentals}
      */
