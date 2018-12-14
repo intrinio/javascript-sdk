@@ -29,7 +29,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var security_api = new intrinio.SecurityApi();
 
 var opts = { 
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 security_api.getAllSecurities(opts).then(function(data) {
@@ -178,11 +178,11 @@ var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, 
 var tag = "volume"; // String | An Intrinio data tag ID or code-name
 
 var opts = { 
-  'type': "", // String | Filter by type, when applicable
+  'type': null, // String | Filter by type, when applicable
   'startDate': new Date("2018-01-01"), // Date | Get historical data on or after this date
   'endDate': new Date("2019-01-01"), // Date | Get historical date on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 security_api.getSecurityHistoricalData(identifier, tag, opts).then(function(data) {
@@ -228,7 +228,7 @@ var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, 
 var opts = { 
   'startDate': new Date("2018-01-01"), // Date | Return price adjustments on or after the date
   'endDate': new Date("2019-01-01"), // Date | Return price adjustments on or before the date
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 security_api.getSecurityStockPriceAdjustments(identifier, opts).then(function(data) {
@@ -272,7 +272,7 @@ var opts = {
   'startDate': new Date("2018-01-01"), // Date | Return prices on or after the date
   'endDate': new Date("2019-01-01"), // Date | Return prices on or before the date
   'frequency': "daily", // String | Return stock prices in the given frequency
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 security_api.getSecurityStockPrices(identifier, opts).then(function(data) {

@@ -36,13 +36,13 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var company_api = new intrinio.CompanyApi();
 
 var opts = { 
-  'lastFilingDate': new Date("2011-07-15"), // Date | Last filing date
+  'lastFilingDate': null, // Date | Last filing date
   'sic': "3350", // String | Standard Industrial Classification code
   'template': "industrial", // String | Template
   'sector': "Basic Materials", // String | Industry sector
   'industryCategory': "Metals & Mining", // String | Industry category
   'industryGroup': "Aluminum", // String | Industry group
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 company_api.filterCompanies(opts).then(function(data) {
@@ -86,15 +86,15 @@ var company_api = new intrinio.CompanyApi();
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
-  'filedAfter': new Date("2017-01-01"), // Date | Filed on or after this date
-  'filedBefore': new Date("2018-01-01"), // Date | Filed on or before this date
+  'filedAfter': null, // Date | Filed on or after this date
+  'filedBefore': null, // Date | Filed on or before this date
   'reportedOnly': false, // Boolean | Only as-reported fundamentals
   'fiscalYear': 2017, // Number | Only for the given fiscal year
-  'statementCode': "", // String | Only of the given statement code
-  'type': "", // String | Only of the given type
-  'startDate': new Date("2017-01-01"), // Date | Only on or after the given date
-  'endDate': new Date("2018-01-01"), // Date | Only on or before the given date
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'statementCode': null, // String | Only of the given statement code
+  'type': null, // String | Only of the given type
+  'startDate': null, // Date | Only on or after the given date
+  'endDate': null, // Date | Only on or before the given date
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 company_api.filterCompanyFundamentals(identifier, opts).then(function(data) {
@@ -137,7 +137,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var company_api = new intrinio.CompanyApi();
 
 var opts = { 
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 company_api.getAllCompanies(opts).then(function(data) {
@@ -173,7 +173,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var company_api = new intrinio.CompanyApi();
 
 var opts = { 
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 company_api.getAllCompanyNews(opts).then(function(data) {
@@ -320,7 +320,7 @@ var company_api = new intrinio.CompanyApi();
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 company_api.getCompanyFilings(identifier, opts).then(function(data) {
@@ -359,7 +359,7 @@ var company_api = new intrinio.CompanyApi();
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 company_api.getCompanyFundamentals(identifier, opts).then(function(data) {
@@ -400,11 +400,11 @@ var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Int
 var tag = "marketcap"; // String | Item
 
 var opts = { 
-  'type': "", // String | Filter by type, when applicable
+  'type': null, // String | Filter by type, when applicable
   'startDate': new Date("2018-01-01"), // Date | Get historical data on or after this date
   'endDate': new Date("2019-01-01"), // Date | Get historical data on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 company_api.getCompanyHistoricalData(identifier, tag, opts).then(function(data) {
@@ -448,7 +448,7 @@ var company_api = new intrinio.CompanyApi();
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 company_api.getCompanyNews(identifier, opts).then(function(data) {
@@ -487,7 +487,7 @@ var company_api = new intrinio.CompanyApi();
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 company_api.getCompanySecurities(identifier, opts).then(function(data) {

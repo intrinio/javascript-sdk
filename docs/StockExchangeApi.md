@@ -133,7 +133,7 @@ var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intri
 
 var opts = { 
   '_date': new Date("2018-08-14"), // Date | The date for which to return price adjustments
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 stockExchange_api.getStockExchangePriceAdjustments(identifier, opts).then(function(data) {
@@ -174,7 +174,7 @@ var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intri
 
 var opts = { 
   '_date': new Date("2018-08-14"), // Date | The date for which to return prices
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 stockExchange_api.getStockExchangePrices(identifier, opts).then(function(data) {
@@ -214,7 +214,7 @@ var stockExchange_api = new intrinio.StockExchangeApi();
 var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 var opts = { 
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 stockExchange_api.getStockExchangeSecurities(identifier, opts).then(function(data) {

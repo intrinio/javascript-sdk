@@ -38,7 +38,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var index_api = new intrinio.IndexApi();
 
 var opts = { 
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 index_api.getAllEconomicIndices(opts).then(function(data) {
@@ -72,7 +72,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var index_api = new intrinio.IndexApi();
 
 var opts = { 
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 index_api.getAllSicIndices(opts).then(function(data) {
@@ -106,7 +106,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var index_api = new intrinio.IndexApi();
 
 var opts = { 
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 index_api.getAllStockMarketIndices(opts).then(function(data) {
@@ -139,7 +139,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var index_api = new intrinio.IndexApi();
 
-var identifier = "identifier_example"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$GDP"; // String | An Index Identifier (symbol, Intrinio ID)
 
 
 index_api.getEconomicIndexById(identifier).then(function(data) {
@@ -174,9 +174,9 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var index_api = new intrinio.IndexApi();
 
-var identifier = "identifier_example"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$GDP"; // String | An Index Identifier (symbol, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag ID or code-name
+var tag = "level"; // String | An Intrinio data tag ID or code-name
 
 
 index_api.getEconomicIndexDataPointNumber(identifier, tag).then(function(data) {
@@ -212,9 +212,9 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var index_api = new intrinio.IndexApi();
 
-var identifier = "identifier_example"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$GDP"; // String | An Index Identifier (symbol, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag ID or code-name
+var tag = "level"; // String | An Intrinio data tag ID or code-name
 
 
 index_api.getEconomicIndexDataPointText(identifier, tag).then(function(data) {
@@ -250,16 +250,16 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var index_api = new intrinio.IndexApi();
 
-var identifier = "identifier_example"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$GDP"; // String | An Index Identifier (symbol, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag ID or code-name
+var tag = "level"; // String | An Intrinio data tag ID or code-name
 
 var opts = { 
-  'type': "type_example", // String | Filter by type, when applicable
-  'startDate': new Date("2013-10-20"), // Date | Get historical data on or after this date
-  'endDate': new Date("2013-10-20"), // Date | Get historical data on or before this date
+  'type': null, // String | Filter by type, when applicable
+  'startDate': new Date("2018-01-01"), // Date | Get historical data on or after this date
+  'endDate': new Date("2019-01-01"), // Date | Get historical data on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 index_api.getEconomicIndexHistoricalData(identifier, tag, opts).then(function(data) {
@@ -298,7 +298,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var index_api = new intrinio.IndexApi();
 
-var identifier = "identifier_example"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$SIC.1"; // String | An Index Identifier (symbol, Intrinio ID)
 
 
 index_api.getSicIndexById(identifier).then(function(data) {
@@ -333,9 +333,9 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var index_api = new intrinio.IndexApi();
 
-var identifier = "identifier_example"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$SIC.1"; // String | An Index Identifier (symbol, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag ID or code-name
+var tag = "level"; // String | An Intrinio data tag ID or code-name
 
 
 index_api.getSicIndexDataPointNumber(identifier, tag).then(function(data) {
@@ -371,9 +371,9 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var index_api = new intrinio.IndexApi();
 
-var identifier = "identifier_example"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$SIC.1"; // String | An Index Identifier (symbol, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag ID or code-name
+var tag = "level"; // String | An Intrinio data tag ID or code-name
 
 
 index_api.getSicIndexDataPointText(identifier, tag).then(function(data) {
@@ -409,16 +409,16 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var index_api = new intrinio.IndexApi();
 
-var identifier = "identifier_example"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$SIC.1"; // String | An Index Identifier (symbol, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag ID or code-name
+var tag = "marketcap"; // String | An Intrinio data tag ID or code-name
 
 var opts = { 
-  'type': "type_example", // String | Filter by type, when applicable
-  'startDate': new Date("2013-10-20"), // Date | Get historical data on or after this date
-  'endDate': new Date("2013-10-20"), // Date | Get historical data on or before this date
+  'type': null, // String | Filter by type, when applicable
+  'startDate': new Date("2018-01-01"), // Date | Get historical data on or after this date
+  'endDate': new Date("2019-01-01"), // Date | Get historical data on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 index_api.getSicIndexHistoricalData(identifier, tag, opts).then(function(data) {
@@ -457,7 +457,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var index_api = new intrinio.IndexApi();
 
-var identifier = "identifier_example"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$DJI"; // String | An Index Identifier (symbol, Intrinio ID)
 
 
 index_api.getStockMarketIndexById(identifier).then(function(data) {
@@ -492,9 +492,9 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var index_api = new intrinio.IndexApi();
 
-var identifier = "identifier_example"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$DJI"; // String | An Index Identifier (symbol, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag ID or code-name
+var tag = "level"; // String | An Intrinio data tag ID or code-name
 
 
 index_api.getStockMarketIndexDataPointNumber(identifier, tag).then(function(data) {
@@ -530,9 +530,9 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var index_api = new intrinio.IndexApi();
 
-var identifier = "identifier_example"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$DJI"; // String | An Index Identifier (symbol, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag ID or code-name
+var tag = "level"; // String | An Intrinio data tag ID or code-name
 
 
 index_api.getStockMarketIndexDataPointText(identifier, tag).then(function(data) {
@@ -568,16 +568,16 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var index_api = new intrinio.IndexApi();
 
-var identifier = "identifier_example"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$DJI"; // String | An Index Identifier (symbol, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag ID or code-name
+var tag = "level"; // String | An Intrinio data tag ID or code-name
 
 var opts = { 
-  'type': "type_example", // String | Filter by type, when applicable
-  'startDate': new Date("2013-10-20"), // Date | Get historical data on or after this date
-  'endDate': new Date("2013-10-20"), // Date | Get historical data on or before this date
+  'type': null, // String | Filter by type, when applicable
+  'startDate': new Date("2018-01-01"), // Date | Get historical data on or after this date
+  'endDate': new Date("2019-01-01"), // Date | Get historical data on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 index_api.getStockMarketIndexHistoricalData(identifier, tag, opts).then(function(data) {
@@ -618,7 +618,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var index_api = new intrinio.IndexApi();
 
-var query = "query_example"; // String | Search query
+var query = "GDP"; // String | Search query
 
 
 index_api.searchEconomicIndices(query).then(function(data) {
@@ -653,7 +653,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var index_api = new intrinio.IndexApi();
 
-var query = "query_example"; // String | Search query
+var query = "agriculture"; // String | Search query
 
 
 index_api.searchSicIndices(query).then(function(data) {
@@ -688,7 +688,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var index_api = new intrinio.IndexApi();
 
-var query = "query_example"; // String | Search query
+var query = "dow"; // String | Search query
 
 
 index_api.searchStockMarketsIndices(query).then(function(data) {

@@ -22,16 +22,16 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var historicalData_api = new intrinio.HistoricalDataApi();
 
-var identifier = "identifier_example"; // String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+var identifier = "AAPL"; // String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag ID or code-name
+var tag = "marketcap"; // String | An Intrinio data tag ID or code-name
 
 var opts = { 
-  'type': "type_example", // String | Filter by type, when applicable
-  'startDate': new Date("2013-10-20"), // Date | Get historical data on or after this date
-  'endDate': new Date("2013-10-20"), // Date | Get historical date on or before this date
+  'type': null, // String | Filter by type, when applicable
+  'startDate': new Date("2015-01-01"), // Date | Get historical data on or after this date
+  'endDate': new Date("2019-01-01"), // Date | Get historical date on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 historicalData_api.getHistoricalData(identifier, tag, opts).then(function(data) {

@@ -26,12 +26,12 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var dataTag_api = new intrinio.DataTagApi();
 
 var opts = { 
-  'tag': "", // String | Tag
-  'type': "", // String | Type
-  'parent': "", // String | ID of tag parent
+  'tag': null, // String | Tag
+  'type': null, // String | Type
+  'parent': null, // String | ID of tag parent
   'statementCode': "income_statement", // String | Statement Code
   'fsTemplate': "industrial", // String | Template
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 dataTag_api.filterDataTags(opts).then(function(data) {
@@ -72,7 +72,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var dataTag_api = new intrinio.DataTagApi();
 
 var opts = { 
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 dataTag_api.getAllDataTags(opts).then(function(data) {

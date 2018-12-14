@@ -27,10 +27,10 @@ var filing_api = new intrinio.FilingApi();
 var company = "AAPL"; // String | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
-  'reportType': "", // String | Filter by report type
+  'reportType': null, // String | Filter by report type
   'startDate': new Date("2015-01-01"), // Date | Filed on or after the given date
   'endDate': new Date("2019-01-01"), // Date | Filed before or after the given date
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 filing_api.filterFilings(company, opts).then(function(data) {
@@ -70,7 +70,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var filing_api = new intrinio.FilingApi();
 
 var opts = { 
-  'nextPage': "" // String | Gets the next page of data from a previous API call
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 filing_api.getAllFilings(opts).then(function(data) {
