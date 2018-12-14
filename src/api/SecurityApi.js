@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ApiResponseSecurities', 'model/ApiResponseSecurityHistoricalData', 'model/ApiResponseSecurityStockPriceAdjustments', 'model/ApiResponseSecurityStockPrices', 'model/DataPointNumber', 'model/DataPointText', 'model/Security', 'model/SecurityScreenGroup', 'model/SecurityScreenResult'], factory);
+    define(['ApiClient', 'model/ApiResponseSecurities', 'model/ApiResponseSecurityHistoricalData', 'model/ApiResponseSecurityStockPriceAdjustments', 'model/ApiResponseSecurityStockPrices', 'model/Security', 'model/SecurityScreenGroup', 'model/SecurityScreenResult'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ApiResponseSecurities'), require('../model/ApiResponseSecurityHistoricalData'), require('../model/ApiResponseSecurityStockPriceAdjustments'), require('../model/ApiResponseSecurityStockPrices'), require('../model/DataPointNumber'), require('../model/DataPointText'), require('../model/Security'), require('../model/SecurityScreenGroup'), require('../model/SecurityScreenResult'));
+    module.exports = factory(require('../ApiClient'), require('../model/ApiResponseSecurities'), require('../model/ApiResponseSecurityHistoricalData'), require('../model/ApiResponseSecurityStockPriceAdjustments'), require('../model/ApiResponseSecurityStockPrices'), require('../model/Security'), require('../model/SecurityScreenGroup'), require('../model/SecurityScreenResult'));
   } else {
     // Browser globals (root is window)
     if (!root.intrinio) {
       root.intrinio = {};
     }
-    root.intrinio.SecurityApi = factory(root.intrinio.ApiClient, root.intrinio.ApiResponseSecurities, root.intrinio.ApiResponseSecurityHistoricalData, root.intrinio.ApiResponseSecurityStockPriceAdjustments, root.intrinio.ApiResponseSecurityStockPrices, root.intrinio.DataPointNumber, root.intrinio.DataPointText, root.intrinio.Security, root.intrinio.SecurityScreenGroup, root.intrinio.SecurityScreenResult);
+    root.intrinio.SecurityApi = factory(root.intrinio.ApiClient, root.intrinio.ApiResponseSecurities, root.intrinio.ApiResponseSecurityHistoricalData, root.intrinio.ApiResponseSecurityStockPriceAdjustments, root.intrinio.ApiResponseSecurityStockPrices, root.intrinio.Security, root.intrinio.SecurityScreenGroup, root.intrinio.SecurityScreenResult);
   }
-}(this, function(ApiClient, ApiResponseSecurities, ApiResponseSecurityHistoricalData, ApiResponseSecurityStockPriceAdjustments, ApiResponseSecurityStockPrices, DataPointNumber, DataPointText, Security, SecurityScreenGroup, SecurityScreenResult) {
+}(this, function(ApiClient, ApiResponseSecurities, ApiResponseSecurityHistoricalData, ApiResponseSecurityStockPriceAdjustments, ApiResponseSecurityStockPrices, Security, SecurityScreenGroup, SecurityScreenResult) {
   'use strict';
 
   /**
@@ -153,7 +153,7 @@
      * Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
      * @param {String} identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DataPointNumber} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
      */
     this.getSecurityDataPointNumberWithHttpInfo = function(identifier, tag) {
       var postBody = null;
@@ -184,8 +184,8 @@
 
       var authNames = ['ApiKeyAuth'];
       var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = DataPointNumber;
+      var accepts = ['text/plain; charset=utf-8'];
+      var returnType = 'Number';
 
       return this.apiClient.callApi(
         '/securities/{identifier}/data_point/{tag}/number', 'GET',
@@ -199,7 +199,7 @@
      * Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
      * @param {String} identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DataPointNumber}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
     this.getSecurityDataPointNumber = function(identifier, tag) {
       return this.getSecurityDataPointNumberWithHttpInfo(identifier, tag)
@@ -214,7 +214,7 @@
      * Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
      * @param {String} identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DataPointText} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     this.getSecurityDataPointTextWithHttpInfo = function(identifier, tag) {
       var postBody = null;
@@ -245,8 +245,8 @@
 
       var authNames = ['ApiKeyAuth'];
       var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = DataPointText;
+      var accepts = ['text/plain; charset=utf-8'];
+      var returnType = 'String';
 
       return this.apiClient.callApi(
         '/securities/{identifier}/data_point/{tag}/text', 'GET',
@@ -260,7 +260,7 @@
      * Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
      * @param {String} identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DataPointText}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     this.getSecurityDataPointText = function(identifier, tag) {
       return this.getSecurityDataPointTextWithHttpInfo(identifier, tag)
@@ -486,7 +486,7 @@
      * Screen Securities
      * Screen securities using complex logic
      * @param {Object} opts Optional parameters
-     * @param {module:model/SecurityScreenGroup} opts.logic The logic to screen with, consisting of operators, clauses, and nested groups
+     * @param {module:model/SecurityScreenGroup} opts.logic The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions.
      * @param {String} opts.orderColumn Results returned sorted by this column
      * @param {module:model/String} opts.orderDirection Sort order to use with the order_column (default to asc)
      * @param {Boolean} opts.primaryOnly Return only primary securities (default to false)
@@ -527,7 +527,7 @@
      * Screen Securities
      * Screen securities using complex logic
      * @param {Object} opts Optional parameters
-     * @param {module:model/SecurityScreenGroup} opts.logic The logic to screen with, consisting of operators, clauses, and nested groups
+     * @param {module:model/SecurityScreenGroup} opts.logic The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions.
      * @param {String} opts.orderColumn Results returned sorted by this column
      * @param {module:model/String} opts.orderDirection Sort order to use with the order_column (default to asc)
      * @param {Boolean} opts.primaryOnly Return only primary securities (default to false)

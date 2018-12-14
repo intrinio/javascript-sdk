@@ -92,7 +92,7 @@
         obj['factor'] = ApiClient.convertToType(data['factor'], 'String');
       }
       if (data.hasOwnProperty('balance')) {
-        obj['balance'] = ApiClient.convertToType(data['balance'], 'Number');
+        obj['balance'] = ApiClient.convertToType(data['balance'], 'String');
       }
       if (data.hasOwnProperty('type')) {
         obj['type'] = ApiClient.convertToType(data['type'], 'String');
@@ -141,7 +141,7 @@
   exports.prototype['factor'] = undefined;
   /**
    * Whether the Data Tag represents a credit or debit
-   * @member {Number} balance
+   * @member {String} balance
    */
   exports.prototype['balance'] = undefined;
   /**

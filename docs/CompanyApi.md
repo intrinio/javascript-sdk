@@ -42,7 +42,7 @@ var opts = {
   'sector': "sector_example", // String | Industry sector
   'industryCategory': "industryCategory_example", // String | Industry category
   'industryGroup': "industryGroup_example", // String | Industry group
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 company_api.filterCompanies(opts).then(function(data) {
@@ -94,7 +94,7 @@ var opts = {
   'type': "type_example", // String | Only of the given type
   'startDate': new Date("2013-10-20"), // Date | Only on or after the given date
   'endDate': new Date("2013-10-20"), // Date | Only on or after the given date
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 company_api.filterCompanyFundamentals(identifier, opts).then(function(data) {
@@ -137,7 +137,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var company_api = new intrinio.CompanyApi();
 
 var opts = { 
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 company_api.getAllCompanies(opts).then(function(data) {
@@ -173,7 +173,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var company_api = new intrinio.CompanyApi();
 
 var opts = { 
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 company_api.getAllCompanyNews(opts).then(function(data) {
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 <a name="getCompanyDataPointNumber"></a>
 # **getCompanyDataPointNumber**
-> DataPointNumber getCompanyDataPointNumber(identifier, tag)
+> &#39;Number&#39; getCompanyDataPointNumber(identifier, tag)
 
 Get Company Data Point (Number)
 
@@ -262,11 +262,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointNumber**](DataPointNumber.md)
+**&#39;Number&#39;**
 
 <a name="getCompanyDataPointText"></a>
 # **getCompanyDataPointText**
-> DataPointText getCompanyDataPointText(identifier, tag)
+> &#39;String&#39; getCompanyDataPointText(identifier, tag)
 
 Get Company Data Point (Text)
 
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointText**](DataPointText.md)
+**&#39;String&#39;**
 
 <a name="getCompanyFilings"></a>
 # **getCompanyFilings**
@@ -320,7 +320,7 @@ var company_api = new intrinio.CompanyApi();
 var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 company_api.getCompanyFilings(identifier, opts).then(function(data) {
@@ -359,7 +359,7 @@ var company_api = new intrinio.CompanyApi();
 var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 company_api.getCompanyFundamentals(identifier, opts).then(function(data) {
@@ -404,7 +404,7 @@ var opts = {
   'startDate': new Date("2013-10-20"), // Date | Get historical data on or after this date
   'endDate': new Date("2013-10-20"), // Date | Get historical data on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 company_api.getCompanyHistoricalData(identifier, tag, opts).then(function(data) {
@@ -448,7 +448,7 @@ var company_api = new intrinio.CompanyApi();
 var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 company_api.getCompanyNews(identifier, opts).then(function(data) {
@@ -487,7 +487,7 @@ var company_api = new intrinio.CompanyApi();
 var identifier = "identifier_example"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 company_api.getCompanySecurities(identifier, opts).then(function(data) {
@@ -510,7 +510,7 @@ Name | Type | Description  | Notes
 
 <a name="lookupCompanyFundamental"></a>
 # **lookupCompanyFundamental**
-> [Fundamental] lookupCompanyFundamental(identifier, statementCode, fiscalPeriod, fiscalYear)
+> Fundamental lookupCompanyFundamental(identifier, statementCode, fiscalPeriod, fiscalYear)
 
 Lookup a Fundamental for a Company
 
@@ -550,7 +550,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[Fundamental]**](Fundamental.md)
+[**Fundamental**](Fundamental.md)
 
 <a name="searchCompanies"></a>
 # **searchCompanies**

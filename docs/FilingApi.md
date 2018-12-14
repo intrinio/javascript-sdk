@@ -30,7 +30,7 @@ var opts = {
   'reportType': "reportType_example", // String | Filter by report type
   'startDate': new Date("2013-10-20"), // Date | Filed on or after the given date
   'endDate': new Date("2013-10-20"), // Date | Filed before or after the given date
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 filing_api.filterFilings(company, opts).then(function(data) {
@@ -70,7 +70,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var filing_api = new intrinio.FilingApi();
 
 var opts = { 
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 filing_api.getAllFilings(opts).then(function(data) {

@@ -212,11 +212,11 @@
      * Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
      * @param {String} identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
      * @param {module:model/String} statementCode The statement code
-     * @param {module:model/String} fiscalPeriod The fiscal period
      * @param {Number} fiscalYear The fiscal year
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Fundamental>} and HTTP response
+     * @param {module:model/String} fiscalPeriod The fiscal period
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Fundamental} and HTTP response
      */
-    this.lookupFundamentalWithHttpInfo = function(identifier, statementCode, fiscalPeriod, fiscalYear) {
+    this.lookupFundamentalWithHttpInfo = function(identifier, statementCode, fiscalYear, fiscalPeriod) {
       var postBody = null;
 
       // verify the required parameter 'identifier' is set
@@ -229,22 +229,22 @@
         throw new Error("Missing the required parameter 'statementCode' when calling lookupFundamental");
       }
 
-      // verify the required parameter 'fiscalPeriod' is set
-      if (fiscalPeriod === undefined || fiscalPeriod === null) {
-        throw new Error("Missing the required parameter 'fiscalPeriod' when calling lookupFundamental");
-      }
-
       // verify the required parameter 'fiscalYear' is set
       if (fiscalYear === undefined || fiscalYear === null) {
         throw new Error("Missing the required parameter 'fiscalYear' when calling lookupFundamental");
+      }
+
+      // verify the required parameter 'fiscalPeriod' is set
+      if (fiscalPeriod === undefined || fiscalPeriod === null) {
+        throw new Error("Missing the required parameter 'fiscalPeriod' when calling lookupFundamental");
       }
 
 
       var pathParams = {
         'identifier': identifier,
         'statement_code': statementCode,
-        'fiscal_period': fiscalPeriod,
-        'fiscal_year': fiscalYear
+        'fiscal_year': fiscalYear,
+        'fiscal_period': fiscalPeriod
       };
       var queryParams = {
       };
@@ -258,7 +258,7 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = [Fundamental];
+      var returnType = Fundamental;
 
       return this.apiClient.callApi(
         '/fundamentals/lookup/{identifier}/{statement_code}/{fiscal_year}/{fiscal_period}', 'GET',
@@ -272,12 +272,12 @@
      * Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
      * @param {String} identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
      * @param {module:model/String} statementCode The statement code
-     * @param {module:model/String} fiscalPeriod The fiscal period
      * @param {Number} fiscalYear The fiscal year
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Fundamental>}
+     * @param {module:model/String} fiscalPeriod The fiscal period
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Fundamental}
      */
-    this.lookupFundamental = function(identifier, statementCode, fiscalPeriod, fiscalYear) {
-      return this.lookupFundamentalWithHttpInfo(identifier, statementCode, fiscalPeriod, fiscalYear)
+    this.lookupFundamental = function(identifier, statementCode, fiscalYear, fiscalPeriod) {
+      return this.lookupFundamentalWithHttpInfo(identifier, statementCode, fiscalYear, fiscalPeriod)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

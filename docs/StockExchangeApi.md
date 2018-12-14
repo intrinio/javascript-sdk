@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="filterStockExchanges"></a>
 # **filterStockExchanges**
-> [StockExchange] filterStockExchanges(opts)
+> ApiResponseStockExchanges filterStockExchanges(opts)
 
 Filter Stock Exchanges
 
@@ -50,11 +50,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[StockExchange]**](StockExchange.md)
+[**ApiResponseStockExchanges**](ApiResponseStockExchanges.md)
 
 <a name="getAllStockExchanges"></a>
 # **getAllStockExchanges**
-> [StockExchange] getAllStockExchanges()
+> ApiResponseStockExchanges getAllStockExchanges()
 
 Get All Stock Exchanges
 
@@ -79,7 +79,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[StockExchange]**](StockExchange.md)
+[**ApiResponseStockExchanges**](ApiResponseStockExchanges.md)
 
 <a name="getStockExchangeById"></a>
 # **getStockExchangeById**
@@ -133,7 +133,7 @@ var identifier = "identifier_example"; // String | A Stock Exchange identifier (
 
 var opts = { 
   '_date': new Date("2013-10-20"), // Date | The date for which to return price adjustments
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 stockExchange_api.getStockExchangePriceAdjustments(identifier, opts).then(function(data) {
@@ -174,7 +174,7 @@ var identifier = "identifier_example"; // String | A Stock Exchange identifier (
 
 var opts = { 
   '_date': new Date("2013-10-20"), // Date | The date for which to return prices
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 stockExchange_api.getStockExchangePrices(identifier, opts).then(function(data) {
@@ -214,7 +214,7 @@ var stockExchange_api = new intrinio.StockExchangeApi();
 var identifier = "identifier_example"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 var opts = { 
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 stockExchange_api.getStockExchangeSecurities(identifier, opts).then(function(data) {

@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DataPointNumber', 'model/DataPointText'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/DataPointNumber'), require('../model/DataPointText'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.intrinio) {
       root.intrinio = {};
     }
-    root.intrinio.DataPointApi = factory(root.intrinio.ApiClient, root.intrinio.DataPointNumber, root.intrinio.DataPointText);
+    root.intrinio.DataPointApi = factory(root.intrinio.ApiClient);
   }
-}(this, function(ApiClient, DataPointNumber, DataPointText) {
+}(this, function(ApiClient) {
   'use strict';
 
   /**
@@ -53,7 +53,7 @@
      * Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
      * @param {String} identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DataPointNumber} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
      */
     this.getDataPointNumberWithHttpInfo = function(identifier, tag) {
       var postBody = null;
@@ -84,8 +84,8 @@
 
       var authNames = ['ApiKeyAuth'];
       var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = DataPointNumber;
+      var accepts = ['text/plain; charset=utf-8'];
+      var returnType = 'Number';
 
       return this.apiClient.callApi(
         '/data_point/{identifier}/{tag}/number', 'GET',
@@ -99,7 +99,7 @@
      * Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
      * @param {String} identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DataPointNumber}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
     this.getDataPointNumber = function(identifier, tag) {
       return this.getDataPointNumberWithHttpInfo(identifier, tag)
@@ -114,7 +114,7 @@
      * Returns a text value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
      * @param {String} identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DataPointText} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     this.getDataPointTextWithHttpInfo = function(identifier, tag) {
       var postBody = null;
@@ -145,8 +145,8 @@
 
       var authNames = ['ApiKeyAuth'];
       var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = DataPointText;
+      var accepts = ['text/plain; charset=utf-8'];
+      var returnType = 'String';
 
       return this.apiClient.callApi(
         '/data_point/{identifier}/{tag}/text', 'GET',
@@ -160,7 +160,7 @@
      * Returns a text value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
      * @param {String} identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DataPointText}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     this.getDataPointText = function(identifier, tag) {
       return this.getDataPointTextWithHttpInfo(identifier, tag)

@@ -74,6 +74,7 @@
 
 
 
+
   };
 
   /**
@@ -125,6 +126,9 @@
       }
       if (data.hasOwnProperty('figi')) {
         obj['figi'] = ApiClient.convertToType(data['figi'], 'String');
+      }
+      if (data.hasOwnProperty('cik')) {
+        obj['cik'] = ApiClient.convertToType(data['cik'], 'String');
       }
       if (data.hasOwnProperty('composite_figi')) {
         obj['composite_figi'] = ApiClient.convertToType(data['composite_figi'], 'String');
@@ -234,6 +238,11 @@
    * @member {String} figi
    */
   exports.prototype['figi'] = undefined;
+  /**
+   * Central Index Key issued by the SEC, which is the unique identifier for all owner filings
+   * @member {String} cik
+   */
+  exports.prototype['cik'] = undefined;
   /**
    * The country-composite OpenFIGI identifier
    * @member {String} composite_figi

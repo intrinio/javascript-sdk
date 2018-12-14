@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ApiResponseStockExchangeSecurities', 'model/ApiResponseStockExchangeStockPriceAdjustments', 'model/ApiResponseStockExchangeStockPrices', 'model/StockExchange'], factory);
+    define(['ApiClient', 'model/ApiResponseStockExchangeSecurities', 'model/ApiResponseStockExchangeStockPriceAdjustments', 'model/ApiResponseStockExchangeStockPrices', 'model/ApiResponseStockExchanges', 'model/StockExchange'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ApiResponseStockExchangeSecurities'), require('../model/ApiResponseStockExchangeStockPriceAdjustments'), require('../model/ApiResponseStockExchangeStockPrices'), require('../model/StockExchange'));
+    module.exports = factory(require('../ApiClient'), require('../model/ApiResponseStockExchangeSecurities'), require('../model/ApiResponseStockExchangeStockPriceAdjustments'), require('../model/ApiResponseStockExchangeStockPrices'), require('../model/ApiResponseStockExchanges'), require('../model/StockExchange'));
   } else {
     // Browser globals (root is window)
     if (!root.intrinio) {
       root.intrinio = {};
     }
-    root.intrinio.StockExchangeApi = factory(root.intrinio.ApiClient, root.intrinio.ApiResponseStockExchangeSecurities, root.intrinio.ApiResponseStockExchangeStockPriceAdjustments, root.intrinio.ApiResponseStockExchangeStockPrices, root.intrinio.StockExchange);
+    root.intrinio.StockExchangeApi = factory(root.intrinio.ApiClient, root.intrinio.ApiResponseStockExchangeSecurities, root.intrinio.ApiResponseStockExchangeStockPriceAdjustments, root.intrinio.ApiResponseStockExchangeStockPrices, root.intrinio.ApiResponseStockExchanges, root.intrinio.StockExchange);
   }
-}(this, function(ApiClient, ApiResponseStockExchangeSecurities, ApiResponseStockExchangeStockPriceAdjustments, ApiResponseStockExchangeStockPrices, StockExchange) {
+}(this, function(ApiClient, ApiResponseStockExchangeSecurities, ApiResponseStockExchangeStockPriceAdjustments, ApiResponseStockExchangeStockPrices, ApiResponseStockExchanges, StockExchange) {
   'use strict';
 
   /**
@@ -55,7 +55,7 @@
      * @param {String} opts.city Filter by city
      * @param {String} opts.country Filter by country
      * @param {String} opts.countryCode Filter by ISO country code
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/StockExchange>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ApiResponseStockExchanges} and HTTP response
      */
     this.filterStockExchangesWithHttpInfo = function(opts) {
       opts = opts || {};
@@ -79,7 +79,7 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = [StockExchange];
+      var returnType = ApiResponseStockExchanges;
 
       return this.apiClient.callApi(
         '/stock_exchanges/filter', 'GET',
@@ -95,7 +95,7 @@
      * @param {String} opts.city Filter by city
      * @param {String} opts.country Filter by country
      * @param {String} opts.countryCode Filter by ISO country code
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/StockExchange>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ApiResponseStockExchanges}
      */
     this.filterStockExchanges = function(opts) {
       return this.filterStockExchangesWithHttpInfo(opts)
@@ -108,7 +108,7 @@
     /**
      * Get All Stock Exchanges
      * Return All Stock Exchanges
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/StockExchange>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ApiResponseStockExchanges} and HTTP response
      */
     this.getAllStockExchangesWithHttpInfo = function() {
       var postBody = null;
@@ -128,7 +128,7 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = [StockExchange];
+      var returnType = ApiResponseStockExchanges;
 
       return this.apiClient.callApi(
         '/stock_exchanges', 'GET',
@@ -140,7 +140,7 @@
     /**
      * Get All Stock Exchanges
      * Return All Stock Exchanges
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/StockExchange>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ApiResponseStockExchanges}
      */
     this.getAllStockExchanges = function() {
       return this.getAllStockExchangesWithHttpInfo()

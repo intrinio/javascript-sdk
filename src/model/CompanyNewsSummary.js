@@ -73,7 +73,7 @@
         obj['title'] = ApiClient.convertToType(data['title'], 'String');
       }
       if (data.hasOwnProperty('publication_date')) {
-        obj['publication_date'] = ApiClient.convertToType(data['publication_date'], 'Date');
+        obj['publication_date'] = ApiClient.convertToType(data['publication_date'], 'String');
       }
       if (data.hasOwnProperty('url')) {
         obj['url'] = ApiClient.convertToType(data['url'], 'String');
@@ -97,7 +97,7 @@
   exports.prototype['title'] = undefined;
   /**
    * The publication date of the news article
-   * @member {Date} publication_date
+   * @member {String} publication_date
    */
   exports.prototype['publication_date'] = undefined;
   /**

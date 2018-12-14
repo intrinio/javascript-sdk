@@ -38,7 +38,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var index_api = new intrinio.IndexApi();
 
 var opts = { 
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 index_api.getAllEconomicIndices(opts).then(function(data) {
@@ -72,7 +72,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var index_api = new intrinio.IndexApi();
 
 var opts = { 
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 index_api.getAllSicIndices(opts).then(function(data) {
@@ -106,7 +106,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var index_api = new intrinio.IndexApi();
 
 var opts = { 
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 index_api.getAllStockMarketIndices(opts).then(function(data) {
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 <a name="getEconomicIndexDataPointNumber"></a>
 # **getEconomicIndexDataPointNumber**
-> DataPointNumber getEconomicIndexDataPointNumber(identifier, tag)
+> &#39;Number&#39; getEconomicIndexDataPointNumber(identifier, tag)
 
 Get Economic Index Data Point (Number)
 
@@ -195,11 +195,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointNumber**](DataPointNumber.md)
+**&#39;Number&#39;**
 
 <a name="getEconomicIndexDataPointText"></a>
 # **getEconomicIndexDataPointText**
-> DataPointText getEconomicIndexDataPointText(identifier, tag)
+> &#39;String&#39; getEconomicIndexDataPointText(identifier, tag)
 
 Get Economic Index Data Point (Text)
 
@@ -233,11 +233,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointText**](DataPointText.md)
+**&#39;String&#39;**
 
 <a name="getEconomicIndexHistoricalData"></a>
 # **getEconomicIndexHistoricalData**
-> Object getEconomicIndexHistoricalData(identifier, tag, opts)
+> ApiResponseEconomicIndexHistoricalData getEconomicIndexHistoricalData(identifier, tag, opts)
 
 Get Economic Index Historical Data
 
@@ -259,7 +259,7 @@ var opts = {
   'startDate': new Date("2013-10-20"), // Date | Get historical data on or after this date
   'endDate': new Date("2013-10-20"), // Date | Get historical data on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 index_api.getEconomicIndexHistoricalData(identifier, tag, opts).then(function(data) {
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**ApiResponseEconomicIndexHistoricalData**](ApiResponseEconomicIndexHistoricalData.md)
 
 <a name="getSicIndexById"></a>
 # **getSicIndexById**
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 <a name="getSicIndexDataPointNumber"></a>
 # **getSicIndexDataPointNumber**
-> DataPointNumber getSicIndexDataPointNumber(identifier, tag)
+> &#39;Number&#39; getSicIndexDataPointNumber(identifier, tag)
 
 Get SIC Index Data Point (Number)
 
@@ -354,11 +354,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointNumber**](DataPointNumber.md)
+**&#39;Number&#39;**
 
 <a name="getSicIndexDataPointText"></a>
 # **getSicIndexDataPointText**
-> DataPointText getSicIndexDataPointText(identifier, tag)
+> &#39;String&#39; getSicIndexDataPointText(identifier, tag)
 
 Get SIC Index Data Point (Text)
 
@@ -392,7 +392,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointText**](DataPointText.md)
+**&#39;String&#39;**
 
 <a name="getSicIndexHistoricalData"></a>
 # **getSicIndexHistoricalData**
@@ -418,7 +418,7 @@ var opts = {
   'startDate': new Date("2013-10-20"), // Date | Get historical data on or after this date
   'endDate': new Date("2013-10-20"), // Date | Get historical data on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 index_api.getSicIndexHistoricalData(identifier, tag, opts).then(function(data) {
@@ -479,7 +479,7 @@ Name | Type | Description  | Notes
 
 <a name="getStockMarketIndexDataPointNumber"></a>
 # **getStockMarketIndexDataPointNumber**
-> DataPointNumber getStockMarketIndexDataPointNumber(identifier, tag)
+> &#39;Number&#39; getStockMarketIndexDataPointNumber(identifier, tag)
 
 Get Stock Market Index Data Point (Number)
 
@@ -513,11 +513,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointNumber**](DataPointNumber.md)
+**&#39;Number&#39;**
 
 <a name="getStockMarketIndexDataPointText"></a>
 # **getStockMarketIndexDataPointText**
-> DataPointText getStockMarketIndexDataPointText(identifier, tag)
+> &#39;String&#39; getStockMarketIndexDataPointText(identifier, tag)
 
 Get Stock Market Index Data Point (Text)
 
@@ -551,7 +551,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointText**](DataPointText.md)
+**&#39;String&#39;**
 
 <a name="getStockMarketIndexHistoricalData"></a>
 # **getStockMarketIndexHistoricalData**
@@ -577,7 +577,7 @@ var opts = {
   'startDate': new Date("2013-10-20"), // Date | Get historical data on or after this date
   'endDate': new Date("2013-10-20"), // Date | Get historical data on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 index_api.getStockMarketIndexHistoricalData(identifier, tag, opts).then(function(data) {

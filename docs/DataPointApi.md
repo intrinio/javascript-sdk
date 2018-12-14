@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="getDataPointNumber"></a>
 # **getDataPointNumber**
-> DataPointNumber getDataPointNumber(identifier, tag)
+> &#39;Number&#39; getDataPointNumber(identifier, tag)
 
 Get a Data Point (Number)
 
@@ -44,11 +44,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointNumber**](DataPointNumber.md)
+**&#39;Number&#39;**
 
 <a name="getDataPointText"></a>
 # **getDataPointText**
-> DataPointText getDataPointText(identifier, tag)
+> &#39;String&#39; getDataPointText(identifier, tag)
 
 Get a Data Point (Text)
 
@@ -82,5 +82,5 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointText**](DataPointText.md)
+**&#39;String&#39;**
 

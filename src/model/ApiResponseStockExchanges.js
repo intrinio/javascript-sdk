@@ -16,32 +16,32 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DataTag'], factory);
+    define(['ApiClient', 'model/StockExchange'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./DataTag'));
+    module.exports = factory(require('../ApiClient'), require('./StockExchange'));
   } else {
     // Browser globals (root is window)
     if (!root.intrinio) {
       root.intrinio = {};
     }
-    root.intrinio.ApiResponseDataTags = factory(root.intrinio.ApiClient, root.intrinio.DataTag);
+    root.intrinio.ApiResponseStockExchanges = factory(root.intrinio.ApiClient, root.intrinio.StockExchange);
   }
-}(this, function(ApiClient, DataTag) {
+}(this, function(ApiClient, StockExchange) {
   'use strict';
 
 
 
 
   /**
-   * The ApiResponseDataTags model module.
-   * @module model/ApiResponseDataTags
+   * The ApiResponseStockExchanges model module.
+   * @module model/ApiResponseStockExchanges
    * @version 0.9.1
    */
 
   /**
-   * Constructs a new <code>ApiResponseDataTags</code>.
-   * @alias module:model/ApiResponseDataTags
+   * Constructs a new <code>ApiResponseStockExchanges</code>.
+   * @alias module:model/ApiResponseStockExchanges
    * @class
    */
   var exports = function() {
@@ -52,18 +52,18 @@
   };
 
   /**
-   * Constructs a <code>ApiResponseDataTags</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ApiResponseStockExchanges</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ApiResponseDataTags} obj Optional instance to populate.
-   * @return {module:model/ApiResponseDataTags} The populated <code>ApiResponseDataTags</code> instance.
+   * @param {module:model/ApiResponseStockExchanges} obj Optional instance to populate.
+   * @return {module:model/ApiResponseStockExchanges} The populated <code>ApiResponseStockExchanges</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('tags')) {
-        obj['tags'] = ApiClient.convertToType(data['tags'], [DataTag]);
+      if (data.hasOwnProperty('stock_exchanges')) {
+        obj['stock_exchanges'] = ApiClient.convertToType(data['stock_exchanges'], [StockExchange]);
       }
       if (data.hasOwnProperty('next_page')) {
         obj['next_page'] = ApiClient.convertToType(data['next_page'], 'String');
@@ -73,9 +73,9 @@
   }
 
   /**
-   * @member {Array.<module:model/DataTag>} tags
+   * @member {Array.<module:model/StockExchange>} stock_exchanges
    */
-  exports.prototype['tags'] = undefined;
+  exports.prototype['stock_exchanges'] = undefined;
   /**
    * The token required to request the next page of the data
    * @member {String} next_page

@@ -77,7 +77,7 @@
         obj['filing_date'] = ApiClient.convertToType(data['filing_date'], 'Date');
       }
       if (data.hasOwnProperty('accepted_date')) {
-        obj['accepted_date'] = ApiClient.convertToType(data['accepted_date'], 'String');
+        obj['accepted_date'] = ApiClient.convertToType(data['accepted_date'], 'Date');
       }
       if (data.hasOwnProperty('period_end_date')) {
         obj['period_end_date'] = ApiClient.convertToType(data['period_end_date'], 'Date');
@@ -113,7 +113,7 @@
   exports.prototype['filing_date'] = undefined;
   /**
    * The date and time when the filing was accepted by SEC
-   * @member {String} accepted_date
+   * @member {Date} accepted_date
    */
   exports.prototype['accepted_date'] = undefined;
   /**

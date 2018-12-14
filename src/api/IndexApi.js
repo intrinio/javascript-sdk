@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ApiResponseEconomicIndices', 'model/ApiResponseSICIndexHistoricalData', 'model/ApiResponseSICIndices', 'model/ApiResponseStockMarketIndexHistoricalData', 'model/ApiResponseStockMarketIndices', 'model/DataPointNumber', 'model/DataPointText', 'model/EconomicIndex', 'model/SICIndex', 'model/StockMarketIndex'], factory);
+    define(['ApiClient', 'model/ApiResponseEconomicIndexHistoricalData', 'model/ApiResponseEconomicIndices', 'model/ApiResponseSICIndexHistoricalData', 'model/ApiResponseSICIndices', 'model/ApiResponseStockMarketIndexHistoricalData', 'model/ApiResponseStockMarketIndices', 'model/EconomicIndex', 'model/SICIndex', 'model/StockMarketIndex'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ApiResponseEconomicIndices'), require('../model/ApiResponseSICIndexHistoricalData'), require('../model/ApiResponseSICIndices'), require('../model/ApiResponseStockMarketIndexHistoricalData'), require('../model/ApiResponseStockMarketIndices'), require('../model/DataPointNumber'), require('../model/DataPointText'), require('../model/EconomicIndex'), require('../model/SICIndex'), require('../model/StockMarketIndex'));
+    module.exports = factory(require('../ApiClient'), require('../model/ApiResponseEconomicIndexHistoricalData'), require('../model/ApiResponseEconomicIndices'), require('../model/ApiResponseSICIndexHistoricalData'), require('../model/ApiResponseSICIndices'), require('../model/ApiResponseStockMarketIndexHistoricalData'), require('../model/ApiResponseStockMarketIndices'), require('../model/EconomicIndex'), require('../model/SICIndex'), require('../model/StockMarketIndex'));
   } else {
     // Browser globals (root is window)
     if (!root.intrinio) {
       root.intrinio = {};
     }
-    root.intrinio.IndexApi = factory(root.intrinio.ApiClient, root.intrinio.ApiResponseEconomicIndices, root.intrinio.ApiResponseSICIndexHistoricalData, root.intrinio.ApiResponseSICIndices, root.intrinio.ApiResponseStockMarketIndexHistoricalData, root.intrinio.ApiResponseStockMarketIndices, root.intrinio.DataPointNumber, root.intrinio.DataPointText, root.intrinio.EconomicIndex, root.intrinio.SICIndex, root.intrinio.StockMarketIndex);
+    root.intrinio.IndexApi = factory(root.intrinio.ApiClient, root.intrinio.ApiResponseEconomicIndexHistoricalData, root.intrinio.ApiResponseEconomicIndices, root.intrinio.ApiResponseSICIndexHistoricalData, root.intrinio.ApiResponseSICIndices, root.intrinio.ApiResponseStockMarketIndexHistoricalData, root.intrinio.ApiResponseStockMarketIndices, root.intrinio.EconomicIndex, root.intrinio.SICIndex, root.intrinio.StockMarketIndex);
   }
-}(this, function(ApiClient, ApiResponseEconomicIndices, ApiResponseSICIndexHistoricalData, ApiResponseSICIndices, ApiResponseStockMarketIndexHistoricalData, ApiResponseStockMarketIndices, DataPointNumber, DataPointText, EconomicIndex, SICIndex, StockMarketIndex) {
+}(this, function(ApiClient, ApiResponseEconomicIndexHistoricalData, ApiResponseEconomicIndices, ApiResponseSICIndexHistoricalData, ApiResponseSICIndices, ApiResponseStockMarketIndexHistoricalData, ApiResponseStockMarketIndices, EconomicIndex, SICIndex, StockMarketIndex) {
   'use strict';
 
   /**
@@ -251,7 +251,7 @@
      * Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
      * @param {String} identifier An Index Identifier (symbol, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DataPointNumber} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
      */
     this.getEconomicIndexDataPointNumberWithHttpInfo = function(identifier, tag) {
       var postBody = null;
@@ -282,8 +282,8 @@
 
       var authNames = ['ApiKeyAuth'];
       var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = DataPointNumber;
+      var accepts = ['text/plain; charset=utf-8'];
+      var returnType = 'Number';
 
       return this.apiClient.callApi(
         '/indices/economic/{identifier}/data_point/{tag}/number', 'GET',
@@ -297,7 +297,7 @@
      * Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
      * @param {String} identifier An Index Identifier (symbol, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DataPointNumber}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
     this.getEconomicIndexDataPointNumber = function(identifier, tag) {
       return this.getEconomicIndexDataPointNumberWithHttpInfo(identifier, tag)
@@ -312,7 +312,7 @@
      * Returns a text value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
      * @param {String} identifier An Index Identifier (symbol, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DataPointText} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     this.getEconomicIndexDataPointTextWithHttpInfo = function(identifier, tag) {
       var postBody = null;
@@ -343,8 +343,8 @@
 
       var authNames = ['ApiKeyAuth'];
       var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = DataPointText;
+      var accepts = ['text/plain; charset=utf-8'];
+      var returnType = 'String';
 
       return this.apiClient.callApi(
         '/indices/economic/{identifier}/data_point/{tag}/text', 'GET',
@@ -358,7 +358,7 @@
      * Returns a text value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
      * @param {String} identifier An Index Identifier (symbol, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DataPointText}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     this.getEconomicIndexDataPointText = function(identifier, tag) {
       return this.getEconomicIndexDataPointTextWithHttpInfo(identifier, tag)
@@ -379,7 +379,7 @@
      * @param {Date} opts.endDate Get historical data on or before this date
      * @param {module:model/String} opts.sortOrder Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (default to desc)
      * @param {String} opts.nextPage Gets the next page of data from a previous API call
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ApiResponseEconomicIndexHistoricalData} and HTTP response
      */
     this.getEconomicIndexHistoricalDataWithHttpInfo = function(identifier, tag, opts) {
       opts = opts || {};
@@ -417,7 +417,7 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = Object;
+      var returnType = ApiResponseEconomicIndexHistoricalData;
 
       return this.apiClient.callApi(
         '/indices/economic/{identifier}/historical_data/{tag}', 'GET',
@@ -437,7 +437,7 @@
      * @param {Date} opts.endDate Get historical data on or before this date
      * @param {module:model/String} opts.sortOrder Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (default to desc)
      * @param {String} opts.nextPage Gets the next page of data from a previous API call
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ApiResponseEconomicIndexHistoricalData}
      */
     this.getEconomicIndexHistoricalData = function(identifier, tag, opts) {
       return this.getEconomicIndexHistoricalDataWithHttpInfo(identifier, tag, opts)
@@ -503,7 +503,7 @@
      * Returns a numeric value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
      * @param {String} identifier An Index Identifier (symbol, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DataPointNumber} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
      */
     this.getSicIndexDataPointNumberWithHttpInfo = function(identifier, tag) {
       var postBody = null;
@@ -534,8 +534,8 @@
 
       var authNames = ['ApiKeyAuth'];
       var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = DataPointNumber;
+      var accepts = ['text/plain; charset=utf-8'];
+      var returnType = 'Number';
 
       return this.apiClient.callApi(
         '/indices/sic/{identifier}/data_point/{tag}/number', 'GET',
@@ -549,7 +549,7 @@
      * Returns a numeric value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
      * @param {String} identifier An Index Identifier (symbol, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DataPointNumber}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
     this.getSicIndexDataPointNumber = function(identifier, tag) {
       return this.getSicIndexDataPointNumberWithHttpInfo(identifier, tag)
@@ -564,7 +564,7 @@
      * Returns a text value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
      * @param {String} identifier An Index Identifier (symbol, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DataPointText} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     this.getSicIndexDataPointTextWithHttpInfo = function(identifier, tag) {
       var postBody = null;
@@ -595,8 +595,8 @@
 
       var authNames = ['ApiKeyAuth'];
       var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = DataPointText;
+      var accepts = ['text/plain; charset=utf-8'];
+      var returnType = 'String';
 
       return this.apiClient.callApi(
         '/indices/sic/{identifier}/data_point/{tag}/text', 'GET',
@@ -610,7 +610,7 @@
      * Returns a text value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
      * @param {String} identifier An Index Identifier (symbol, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DataPointText}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     this.getSicIndexDataPointText = function(identifier, tag) {
       return this.getSicIndexDataPointTextWithHttpInfo(identifier, tag)
@@ -755,7 +755,7 @@
      * Returns a numeric value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
      * @param {String} identifier An Index Identifier (symbol, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DataPointNumber} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
      */
     this.getStockMarketIndexDataPointNumberWithHttpInfo = function(identifier, tag) {
       var postBody = null;
@@ -786,8 +786,8 @@
 
       var authNames = ['ApiKeyAuth'];
       var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = DataPointNumber;
+      var accepts = ['text/plain; charset=utf-8'];
+      var returnType = 'Number';
 
       return this.apiClient.callApi(
         '/indices/stock_market/{identifier}/data_point/{tag}/number', 'GET',
@@ -801,7 +801,7 @@
      * Returns a numeric value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
      * @param {String} identifier An Index Identifier (symbol, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DataPointNumber}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
     this.getStockMarketIndexDataPointNumber = function(identifier, tag) {
       return this.getStockMarketIndexDataPointNumberWithHttpInfo(identifier, tag)
@@ -816,7 +816,7 @@
      * Returns a text value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
      * @param {String} identifier An Index Identifier (symbol, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DataPointText} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     this.getStockMarketIndexDataPointTextWithHttpInfo = function(identifier, tag) {
       var postBody = null;
@@ -847,8 +847,8 @@
 
       var authNames = ['ApiKeyAuth'];
       var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = DataPointText;
+      var accepts = ['text/plain; charset=utf-8'];
+      var returnType = 'String';
 
       return this.apiClient.callApi(
         '/indices/stock_market/{identifier}/data_point/{tag}/text', 'GET',
@@ -862,7 +862,7 @@
      * Returns a text value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
      * @param {String} identifier An Index Identifier (symbol, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DataPointText}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     this.getStockMarketIndexDataPointText = function(identifier, tag) {
       return this.getStockMarketIndexDataPointTextWithHttpInfo(identifier, tag)

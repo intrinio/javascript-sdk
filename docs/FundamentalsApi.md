@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 <a name="lookupFundamental"></a>
 # **lookupFundamental**
-> [Fundamental] lookupFundamental(identifier, statementCode, fiscalPeriod, fiscalYear)
+> Fundamental lookupFundamental(identifier, statementCode, fiscalYear, fiscalPeriod)
 
 Lookup a Fundamental
 
@@ -134,12 +134,12 @@ var identifier = "identifier_example"; // String | A Company identifier (Ticker,
 
 var statementCode = "statementCode_example"; // String | The statement code
 
-var fiscalPeriod = "fiscalPeriod_example"; // String | The fiscal period
-
 var fiscalYear = 56; // Number | The fiscal year
 
+var fiscalPeriod = "fiscalPeriod_example"; // String | The fiscal period
 
-fundamentals_api.lookupFundamental(identifier, statementCode, fiscalPeriod, fiscalYear).then(function(data) {
+
+fundamentals_api.lookupFundamental(identifier, statementCode, fiscalYear, fiscalPeriod).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -152,10 +152,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
  **statementCode** | **String**| The statement code | 
- **fiscalPeriod** | **String**| The fiscal period | 
  **fiscalYear** | **Number**| The fiscal year | 
+ **fiscalPeriod** | **String**| The fiscal period | 
 
 ### Return type
 
-[**[Fundamental]**](Fundamental.md)
+[**Fundamental**](Fundamental.md)
 

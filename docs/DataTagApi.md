@@ -31,7 +31,7 @@ var opts = {
   'parent': "parent_example", // String | ID of tag parent
   'statementCode': "statementCode_example", // String | Statement Code
   'fsTemplate': "industrial", // String | Template
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 dataTag_api.filterDataTags(opts).then(function(data) {
@@ -72,7 +72,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var dataTag_api = new intrinio.DataTagApi();
 
 var opts = { 
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 dataTag_api.getAllDataTags(opts).then(function(data) {

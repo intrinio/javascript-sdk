@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ApiResponseCompanies', 'model/ApiResponseCompanyFilings', 'model/ApiResponseCompanyFundamentals', 'model/ApiResponseCompanyHistoricalData', 'model/ApiResponseCompanyNews', 'model/ApiResponseCompanySecurities', 'model/ApiResponseNews', 'model/Company', 'model/DataPointNumber', 'model/DataPointText', 'model/Fundamental'], factory);
+    define(['ApiClient', 'model/ApiResponseCompanies', 'model/ApiResponseCompanyFilings', 'model/ApiResponseCompanyFundamentals', 'model/ApiResponseCompanyHistoricalData', 'model/ApiResponseCompanyNews', 'model/ApiResponseCompanySecurities', 'model/ApiResponseNews', 'model/Company', 'model/Fundamental'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ApiResponseCompanies'), require('../model/ApiResponseCompanyFilings'), require('../model/ApiResponseCompanyFundamentals'), require('../model/ApiResponseCompanyHistoricalData'), require('../model/ApiResponseCompanyNews'), require('../model/ApiResponseCompanySecurities'), require('../model/ApiResponseNews'), require('../model/Company'), require('../model/DataPointNumber'), require('../model/DataPointText'), require('../model/Fundamental'));
+    module.exports = factory(require('../ApiClient'), require('../model/ApiResponseCompanies'), require('../model/ApiResponseCompanyFilings'), require('../model/ApiResponseCompanyFundamentals'), require('../model/ApiResponseCompanyHistoricalData'), require('../model/ApiResponseCompanyNews'), require('../model/ApiResponseCompanySecurities'), require('../model/ApiResponseNews'), require('../model/Company'), require('../model/Fundamental'));
   } else {
     // Browser globals (root is window)
     if (!root.intrinio) {
       root.intrinio = {};
     }
-    root.intrinio.CompanyApi = factory(root.intrinio.ApiClient, root.intrinio.ApiResponseCompanies, root.intrinio.ApiResponseCompanyFilings, root.intrinio.ApiResponseCompanyFundamentals, root.intrinio.ApiResponseCompanyHistoricalData, root.intrinio.ApiResponseCompanyNews, root.intrinio.ApiResponseCompanySecurities, root.intrinio.ApiResponseNews, root.intrinio.Company, root.intrinio.DataPointNumber, root.intrinio.DataPointText, root.intrinio.Fundamental);
+    root.intrinio.CompanyApi = factory(root.intrinio.ApiClient, root.intrinio.ApiResponseCompanies, root.intrinio.ApiResponseCompanyFilings, root.intrinio.ApiResponseCompanyFundamentals, root.intrinio.ApiResponseCompanyHistoricalData, root.intrinio.ApiResponseCompanyNews, root.intrinio.ApiResponseCompanySecurities, root.intrinio.ApiResponseNews, root.intrinio.Company, root.intrinio.Fundamental);
   }
-}(this, function(ApiClient, ApiResponseCompanies, ApiResponseCompanyFilings, ApiResponseCompanyFundamentals, ApiResponseCompanyHistoricalData, ApiResponseCompanyNews, ApiResponseCompanySecurities, ApiResponseNews, Company, DataPointNumber, DataPointText, Fundamental) {
+}(this, function(ApiClient, ApiResponseCompanies, ApiResponseCompanyFilings, ApiResponseCompanyFundamentals, ApiResponseCompanyHistoricalData, ApiResponseCompanyNews, ApiResponseCompanySecurities, ApiResponseNews, Company, Fundamental) {
   'use strict';
 
   /**
@@ -356,7 +356,7 @@
      * Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
      * @param {String} identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
      * @param {String} tag An Intrinio data tag
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DataPointNumber} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
      */
     this.getCompanyDataPointNumberWithHttpInfo = function(identifier, tag) {
       var postBody = null;
@@ -387,8 +387,8 @@
 
       var authNames = ['ApiKeyAuth'];
       var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = DataPointNumber;
+      var accepts = ['text/plain; charset=utf-8'];
+      var returnType = 'Number';
 
       return this.apiClient.callApi(
         '/companies/{identifier}/data_point/{tag}/number', 'GET',
@@ -402,7 +402,7 @@
      * Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
      * @param {String} identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
      * @param {String} tag An Intrinio data tag
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DataPointNumber}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
     this.getCompanyDataPointNumber = function(identifier, tag) {
       return this.getCompanyDataPointNumberWithHttpInfo(identifier, tag)
@@ -417,7 +417,7 @@
      * Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
      * @param {String} identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
      * @param {String} tag An Intrinio data tag
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/DataPointText} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     this.getCompanyDataPointTextWithHttpInfo = function(identifier, tag) {
       var postBody = null;
@@ -448,8 +448,8 @@
 
       var authNames = ['ApiKeyAuth'];
       var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = DataPointText;
+      var accepts = ['text/plain; charset=utf-8'];
+      var returnType = 'String';
 
       return this.apiClient.callApi(
         '/companies/{identifier}/data_point/{tag}/text', 'GET',
@@ -463,7 +463,7 @@
      * Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
      * @param {String} identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
      * @param {String} tag An Intrinio data tag
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/DataPointText}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     this.getCompanyDataPointText = function(identifier, tag) {
       return this.getCompanyDataPointTextWithHttpInfo(identifier, tag)
@@ -795,7 +795,7 @@
      * @param {module:model/String} statementCode The statement code
      * @param {module:model/String} fiscalPeriod The fiscal period
      * @param {Number} fiscalYear The fiscal year
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/Fundamental>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Fundamental} and HTTP response
      */
     this.lookupCompanyFundamentalWithHttpInfo = function(identifier, statementCode, fiscalPeriod, fiscalYear) {
       var postBody = null;
@@ -839,7 +839,7 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = [Fundamental];
+      var returnType = Fundamental;
 
       return this.apiClient.callApi(
         '/companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period}', 'GET',
@@ -855,7 +855,7 @@
      * @param {module:model/String} statementCode The statement code
      * @param {module:model/String} fiscalPeriod The fiscal period
      * @param {Number} fiscalYear The fiscal year
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/Fundamental>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Fundamental}
      */
     this.lookupCompanyFundamental = function(identifier, statementCode, fiscalPeriod, fiscalYear) {
       return this.lookupCompanyFundamentalWithHttpInfo(identifier, statementCode, fiscalPeriod, fiscalYear)

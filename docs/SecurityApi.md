@@ -29,7 +29,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var security_api = new intrinio.SecurityApi();
 
 var opts = { 
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 security_api.getAllSecurities(opts).then(function(data) {
@@ -62,7 +62,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var security_api = new intrinio.SecurityApi();
 
-var identifier = "identifier_example"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 
 security_api.getSecurityById(identifier).then(function(data) {
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 <a name="getSecurityDataPointNumber"></a>
 # **getSecurityDataPointNumber**
-> DataPointNumber getSecurityDataPointNumber(identifier, tag)
+> &#39;Number&#39; getSecurityDataPointNumber(identifier, tag)
 
 Get Security Data Point (Number)
 
@@ -97,9 +97,9 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var security_api = new intrinio.SecurityApi();
 
-var identifier = "identifier_example"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag ID or code-name
+var tag = "52_week_high"; // String | An Intrinio data tag ID or code-name
 
 
 security_api.getSecurityDataPointNumber(identifier, tag).then(function(data) {
@@ -118,11 +118,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointNumber**](DataPointNumber.md)
+**&#39;Number&#39;**
 
 <a name="getSecurityDataPointText"></a>
 # **getSecurityDataPointText**
-> DataPointText getSecurityDataPointText(identifier, tag)
+> &#39;String&#39; getSecurityDataPointText(identifier, tag)
 
 Get Security Data Point (Text)
 
@@ -135,9 +135,9 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var security_api = new intrinio.SecurityApi();
 
-var identifier = "identifier_example"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag ID or code-name
+var tag = "figi"; // String | An Intrinio data tag ID or code-name
 
 
 security_api.getSecurityDataPointText(identifier, tag).then(function(data) {
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DataPointText**](DataPointText.md)
+**&#39;String&#39;**
 
 <a name="getSecurityHistoricalData"></a>
 # **getSecurityHistoricalData**
@@ -173,16 +173,16 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var security_api = new intrinio.SecurityApi();
 
-var identifier = "identifier_example"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
-var tag = "tag_example"; // String | An Intrinio data tag ID or code-name
+var tag = "volume"; // String | An Intrinio data tag ID or code-name
 
 var opts = { 
-  'type': "type_example", // String | Filter by type, when applicable
-  'startDate': new Date("2013-10-20"), // Date | Get historical data on or after this date
-  'endDate': new Date("2013-10-20"), // Date | Get historical date on or before this date
+  'type': "", // String | Filter by type, when applicable
+  'startDate': new Date(""), // Date | Get historical data on or after this date
+  'endDate': new Date(""), // Date | Get historical date on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 security_api.getSecurityHistoricalData(identifier, tag, opts).then(function(data) {
@@ -223,12 +223,12 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var security_api = new intrinio.SecurityApi();
 
-var identifier = "identifier_example"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
-  'startDate': new Date("2013-10-20"), // Date | Return price adjustments on or after the date
-  'endDate': new Date("2013-10-20"), // Date | Return price adjustments on or before the date
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'startDate': new Date("2018-01-01"), // Date | Return price adjustments on or after the date
+  'endDate': new Date("2019-01-01"), // Date | Return price adjustments on or before the date
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 security_api.getSecurityStockPriceAdjustments(identifier, opts).then(function(data) {
@@ -266,13 +266,13 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var security_api = new intrinio.SecurityApi();
 
-var identifier = "identifier_example"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
-  'startDate': new Date("2013-10-20"), // Date | Return prices on or after the date
-  'endDate': new Date("2013-10-20"), // Date | Return prices on or before the date
+  'startDate': new Date("2018-01-01"), // Date | Return prices on or after the date
+  'endDate': new Date("2019-01-01"), // Date | Return prices on or before the date
   'frequency': "daily", // String | Return stock prices in the given frequency
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 security_api.getSecurityStockPrices(identifier, opts).then(function(data) {
@@ -312,7 +312,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 var security_api = new intrinio.SecurityApi();
 
 var opts = { 
-  'logic': new intrinio.SecurityScreenGroup(), // SecurityScreenGroup | The logic to screen with, consisting of operators, clauses, and nested groups
+  'logic': new intrinio.SecurityScreenGroup(), // SecurityScreenGroup | The logic to screen with, consisting of operators, clauses, and nested groups.<br/> See <a href=\"/documentation/screener_v2\" target=\"_blank\">screener documentation</a> for details on how to construct conditions.
   'orderColumn': "orderColumn_example", // String | Results returned sorted by this column
   'orderDirection': "asc", // String | Sort order to use with the order_column
   'primaryOnly': false // Boolean | Return only primary securities
@@ -329,7 +329,7 @@ security_api.screenSecurities(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **logic** | [**SecurityScreenGroup**](SecurityScreenGroup.md)| The logic to screen with, consisting of operators, clauses, and nested groups | [optional] 
+ **logic** | [**SecurityScreenGroup**](SecurityScreenGroup.md)| The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. | [optional] 
  **orderColumn** | **String**| Results returned sorted by this column | [optional] 
  **orderDirection** | **String**| Sort order to use with the order_column | [optional] [default to asc]
  **primaryOnly** | **Boolean**| Return only primary securities | [optional] [default to false]
@@ -353,7 +353,7 @@ intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY
 
 var security_api = new intrinio.SecurityApi();
 
-var query = "query_example"; // String | 
+var query = "Apple"; // String | 
 
 
 security_api.searchSecurities(query).then(function(data) {

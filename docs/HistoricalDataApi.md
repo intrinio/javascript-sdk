@@ -31,7 +31,7 @@ var opts = {
   'startDate': new Date("2013-10-20"), // Date | Get historical data on or after this date
   'endDate': new Date("2013-10-20"), // Date | Get historical date on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
-  'nextPage': "nextPage_example" // String | Gets the next page of data from a previous API call
+  'nextPage': "" // String | Gets the next page of data from a previous API call
 };
 
 historicalData_api.getHistoricalData(identifier, tag, opts).then(function(data) {
