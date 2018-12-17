@@ -1,6 +1,6 @@
 {
   "name": "intrinio",
-  "version": "0.9.1",
+  "version": "1.0.0",
   "description": "Access the Intrinio API",
   "license": "GPLv3",
   "main": "src/index.js",
