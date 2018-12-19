@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.SecurityScreenClause();
+    instance = new intrinio-sdk.SecurityScreenClause();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('SecurityScreenClause', function() {
     it('should create an instance of SecurityScreenClause', function() {
       // uncomment below and update the code to test SecurityScreenClause
-      //var instane = new intrinio.SecurityScreenClause();
-      //expect(instance).to.be.a(intrinio.SecurityScreenClause);
+      //var instane = new intrinio-sdk.SecurityScreenClause();
+      //expect(instance).to.be.a(intrinio-sdk.SecurityScreenClause);
     });
 
     it('should have the property field (base name: "field")', function() {
       // uncomment below and update the code to test the property field
-      //var instane = new intrinio.SecurityScreenClause();
+      //var instane = new intrinio-sdk.SecurityScreenClause();
       //expect(instance).to.be();
     });
 
     it('should have the property operator (base name: "operator")', function() {
       // uncomment below and update the code to test the property operator
-      //var instane = new intrinio.SecurityScreenClause();
+      //var instane = new intrinio-sdk.SecurityScreenClause();
       //expect(instance).to.be();
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instane = new intrinio.SecurityScreenClause();
+      //var instane = new intrinio-sdk.SecurityScreenClause();
       //expect(instance).to.be();
     });
 

@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.ApiResponseSecurityHistoricalData();
+    instance = new intrinio-sdk.ApiResponseSecurityHistoricalData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('ApiResponseSecurityHistoricalData', function() {
     it('should create an instance of ApiResponseSecurityHistoricalData', function() {
       // uncomment below and update the code to test ApiResponseSecurityHistoricalData
-      //var instane = new intrinio.ApiResponseSecurityHistoricalData();
-      //expect(instance).to.be.a(intrinio.ApiResponseSecurityHistoricalData);
+      //var instane = new intrinio-sdk.ApiResponseSecurityHistoricalData();
+      //expect(instance).to.be.a(intrinio-sdk.ApiResponseSecurityHistoricalData);
     });
 
     it('should have the property historicalData (base name: "historical_data")', function() {
       // uncomment below and update the code to test the property historicalData
-      //var instane = new intrinio.ApiResponseSecurityHistoricalData();
+      //var instane = new intrinio-sdk.ApiResponseSecurityHistoricalData();
       //expect(instance).to.be();
     });
 
     it('should have the property security (base name: "security")', function() {
       // uncomment below and update the code to test the property security
-      //var instane = new intrinio.ApiResponseSecurityHistoricalData();
+      //var instane = new intrinio-sdk.ApiResponseSecurityHistoricalData();
       //expect(instance).to.be();
     });
 
     it('should have the property nextPage (base name: "next_page")', function() {
       // uncomment below and update the code to test the property nextPage
-      //var instane = new intrinio.ApiResponseSecurityHistoricalData();
+      //var instane = new intrinio-sdk.ApiResponseSecurityHistoricalData();
       //expect(instance).to.be();
     });
 

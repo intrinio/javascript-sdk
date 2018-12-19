@@ -1,4 +1,4 @@
-# intrinio.ApiResponseNews
+# intrinio-sdk.ApiResponseNews
 
 ## Properties
 Name | Type | Description | Notes

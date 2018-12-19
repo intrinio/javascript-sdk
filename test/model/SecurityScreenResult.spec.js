@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.SecurityScreenResult();
+    instance = new intrinio-sdk.SecurityScreenResult();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('SecurityScreenResult', function() {
     it('should create an instance of SecurityScreenResult', function() {
       // uncomment below and update the code to test SecurityScreenResult
-      //var instane = new intrinio.SecurityScreenResult();
-      //expect(instance).to.be.a(intrinio.SecurityScreenResult);
+      //var instane = new intrinio-sdk.SecurityScreenResult();
+      //expect(instance).to.be.a(intrinio-sdk.SecurityScreenResult);
     });
 
     it('should have the property security (base name: "security")', function() {
       // uncomment below and update the code to test the property security
-      //var instane = new intrinio.SecurityScreenResult();
+      //var instane = new intrinio-sdk.SecurityScreenResult();
       //expect(instance).to.be();
     });
 
     it('should have the property data (base name: "data")', function() {
       // uncomment below and update the code to test the property data
-      //var instane = new intrinio.SecurityScreenResult();
+      //var instane = new intrinio-sdk.SecurityScreenResult();
       //expect(instance).to.be();
     });
 

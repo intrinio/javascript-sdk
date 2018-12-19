@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.ApiResponseSICIndexHistoricalData();
+    instance = new intrinio-sdk.ApiResponseSICIndexHistoricalData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('ApiResponseSICIndexHistoricalData', function() {
     it('should create an instance of ApiResponseSICIndexHistoricalData', function() {
       // uncomment below and update the code to test ApiResponseSICIndexHistoricalData
-      //var instane = new intrinio.ApiResponseSICIndexHistoricalData();
-      //expect(instance).to.be.a(intrinio.ApiResponseSICIndexHistoricalData);
+      //var instane = new intrinio-sdk.ApiResponseSICIndexHistoricalData();
+      //expect(instance).to.be.a(intrinio-sdk.ApiResponseSICIndexHistoricalData);
     });
 
     it('should have the property historicalData (base name: "historical_data")', function() {
       // uncomment below and update the code to test the property historicalData
-      //var instane = new intrinio.ApiResponseSICIndexHistoricalData();
+      //var instane = new intrinio-sdk.ApiResponseSICIndexHistoricalData();
       //expect(instance).to.be();
     });
 
     it('should have the property index (base name: "index")', function() {
       // uncomment below and update the code to test the property index
-      //var instane = new intrinio.ApiResponseSICIndexHistoricalData();
+      //var instane = new intrinio-sdk.ApiResponseSICIndexHistoricalData();
       //expect(instance).to.be();
     });
 
     it('should have the property nextPage (base name: "next_page")', function() {
       // uncomment below and update the code to test the property nextPage
-      //var instane = new intrinio.ApiResponseSICIndexHistoricalData();
+      //var instane = new intrinio-sdk.ApiResponseSICIndexHistoricalData();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# intrinio.Security
+# intrinio-sdk.Security
 
 ## Properties
 Name | Type | Description | Notes

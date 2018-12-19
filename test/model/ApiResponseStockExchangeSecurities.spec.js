@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.ApiResponseStockExchangeSecurities();
+    instance = new intrinio-sdk.ApiResponseStockExchangeSecurities();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('ApiResponseStockExchangeSecurities', function() {
     it('should create an instance of ApiResponseStockExchangeSecurities', function() {
       // uncomment below and update the code to test ApiResponseStockExchangeSecurities
-      //var instane = new intrinio.ApiResponseStockExchangeSecurities();
-      //expect(instance).to.be.a(intrinio.ApiResponseStockExchangeSecurities);
+      //var instane = new intrinio-sdk.ApiResponseStockExchangeSecurities();
+      //expect(instance).to.be.a(intrinio-sdk.ApiResponseStockExchangeSecurities);
     });
 
     it('should have the property securities (base name: "securities")', function() {
       // uncomment below and update the code to test the property securities
-      //var instane = new intrinio.ApiResponseStockExchangeSecurities();
+      //var instane = new intrinio-sdk.ApiResponseStockExchangeSecurities();
       //expect(instance).to.be();
     });
 
     it('should have the property stockExchange (base name: "stock_exchange")', function() {
       // uncomment below and update the code to test the property stockExchange
-      //var instane = new intrinio.ApiResponseStockExchangeSecurities();
+      //var instane = new intrinio-sdk.ApiResponseStockExchangeSecurities();
       //expect(instance).to.be();
     });
 
     it('should have the property nextPage (base name: "next_page")', function() {
       // uncomment below and update the code to test the property nextPage
-      //var instane = new intrinio.ApiResponseStockExchangeSecurities();
+      //var instane = new intrinio-sdk.ApiResponseStockExchangeSecurities();
       //expect(instance).to.be();
     });
 

@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.EconomicIndex();
+    instance = new intrinio-sdk.EconomicIndex();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,79 +52,79 @@
   describe('EconomicIndex', function() {
     it('should create an instance of EconomicIndex', function() {
       // uncomment below and update the code to test EconomicIndex
-      //var instane = new intrinio.EconomicIndex();
-      //expect(instance).to.be.a(intrinio.EconomicIndex);
+      //var instane = new intrinio-sdk.EconomicIndex();
+      //expect(instance).to.be.a(intrinio-sdk.EconomicIndex);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new intrinio.EconomicIndex();
+      //var instane = new intrinio-sdk.EconomicIndex();
       //expect(instance).to.be();
     });
 
     it('should have the property symbol (base name: "symbol")', function() {
       // uncomment below and update the code to test the property symbol
-      //var instane = new intrinio.EconomicIndex();
+      //var instane = new intrinio-sdk.EconomicIndex();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new intrinio.EconomicIndex();
+      //var instane = new intrinio-sdk.EconomicIndex();
       //expect(instance).to.be();
     });
 
     it('should have the property continent (base name: "continent")', function() {
       // uncomment below and update the code to test the property continent
-      //var instane = new intrinio.EconomicIndex();
+      //var instane = new intrinio-sdk.EconomicIndex();
       //expect(instance).to.be();
     });
 
     it('should have the property country (base name: "country")', function() {
       // uncomment below and update the code to test the property country
-      //var instane = new intrinio.EconomicIndex();
+      //var instane = new intrinio-sdk.EconomicIndex();
       //expect(instance).to.be();
     });
 
     it('should have the property updateFrequency (base name: "update_frequency")', function() {
       // uncomment below and update the code to test the property updateFrequency
-      //var instane = new intrinio.EconomicIndex();
+      //var instane = new intrinio-sdk.EconomicIndex();
       //expect(instance).to.be();
     });
 
     it('should have the property lastUpdated (base name: "last_updated")', function() {
       // uncomment below and update the code to test the property lastUpdated
-      //var instane = new intrinio.EconomicIndex();
+      //var instane = new intrinio-sdk.EconomicIndex();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instane = new intrinio.EconomicIndex();
+      //var instane = new intrinio-sdk.EconomicIndex();
       //expect(instance).to.be();
     });
 
     it('should have the property observationStart (base name: "observation_start")', function() {
       // uncomment below and update the code to test the property observationStart
-      //var instane = new intrinio.EconomicIndex();
+      //var instane = new intrinio-sdk.EconomicIndex();
       //expect(instance).to.be();
     });
 
     it('should have the property observationEnd (base name: "observation_end")', function() {
       // uncomment below and update the code to test the property observationEnd
-      //var instane = new intrinio.EconomicIndex();
+      //var instane = new intrinio-sdk.EconomicIndex();
       //expect(instance).to.be();
     });
 
     it('should have the property seasonalAdjustment (base name: "seasonal_adjustment")', function() {
       // uncomment below and update the code to test the property seasonalAdjustment
-      //var instane = new intrinio.EconomicIndex();
+      //var instane = new intrinio-sdk.EconomicIndex();
       //expect(instance).to.be();
     });
 
     it('should have the property units (base name: "units")', function() {
       // uncomment below and update the code to test the property units
-      //var instane = new intrinio.EconomicIndex();
+      //var instane = new intrinio-sdk.EconomicIndex();
       //expect(instance).to.be();
     });
 

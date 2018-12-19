@@ -1,4 +1,4 @@
-# intrinio.ApiResponseCompanyHistoricalData
+# intrinio-sdk.ApiResponseCompanyHistoricalData
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# intrinio.FilingApi
+# intrinio-sdk.FilingApi
 
 All URIs are relative to *https://api-v2.intrinio.com*
 
@@ -19,10 +19,10 @@ Returns filings that match the specified filters
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var filing_api = new intrinio.FilingApi();
+var filing_api = new intrinio-sdk.FilingApi();
 
 var company = "AAPL"; // String | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
 
@@ -64,10 +64,10 @@ Returns all filings
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var filing_api = new intrinio.FilingApi();
+var filing_api = new intrinio-sdk.FilingApi();
 
 var opts = { 
   'nextPage': null // String | Gets the next page of data from a previous API call
@@ -100,10 +100,10 @@ Return the filing with the given ID
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var filing_api = new intrinio.FilingApi();
+var filing_api = new intrinio-sdk.FilingApi();
 
 var id = "fil_7Kn2P6"; // String | The Intrinio ID of the Filing
 

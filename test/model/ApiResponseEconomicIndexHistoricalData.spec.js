@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.ApiResponseEconomicIndexHistoricalData();
+    instance = new intrinio-sdk.ApiResponseEconomicIndexHistoricalData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('ApiResponseEconomicIndexHistoricalData', function() {
     it('should create an instance of ApiResponseEconomicIndexHistoricalData', function() {
       // uncomment below and update the code to test ApiResponseEconomicIndexHistoricalData
-      //var instane = new intrinio.ApiResponseEconomicIndexHistoricalData();
-      //expect(instance).to.be.a(intrinio.ApiResponseEconomicIndexHistoricalData);
+      //var instane = new intrinio-sdk.ApiResponseEconomicIndexHistoricalData();
+      //expect(instance).to.be.a(intrinio-sdk.ApiResponseEconomicIndexHistoricalData);
     });
 
     it('should have the property historicalData (base name: "historical_data")', function() {
       // uncomment below and update the code to test the property historicalData
-      //var instane = new intrinio.ApiResponseEconomicIndexHistoricalData();
+      //var instane = new intrinio-sdk.ApiResponseEconomicIndexHistoricalData();
       //expect(instance).to.be();
     });
 
     it('should have the property index (base name: "index")', function() {
       // uncomment below and update the code to test the property index
-      //var instane = new intrinio.ApiResponseEconomicIndexHistoricalData();
+      //var instane = new intrinio-sdk.ApiResponseEconomicIndexHistoricalData();
       //expect(instance).to.be();
     });
 
     it('should have the property nextPage (base name: "next_page")', function() {
       // uncomment below and update the code to test the property nextPage
-      //var instane = new intrinio.ApiResponseEconomicIndexHistoricalData();
+      //var instane = new intrinio-sdk.ApiResponseEconomicIndexHistoricalData();
       //expect(instance).to.be();
     });
 

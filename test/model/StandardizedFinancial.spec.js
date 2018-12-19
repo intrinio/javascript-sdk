@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.StandardizedFinancial();
+    instance = new intrinio-sdk.StandardizedFinancial();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('StandardizedFinancial', function() {
     it('should create an instance of StandardizedFinancial', function() {
       // uncomment below and update the code to test StandardizedFinancial
-      //var instane = new intrinio.StandardizedFinancial();
-      //expect(instance).to.be.a(intrinio.StandardizedFinancial);
+      //var instane = new intrinio-sdk.StandardizedFinancial();
+      //expect(instance).to.be.a(intrinio-sdk.StandardizedFinancial);
     });
 
     it('should have the property dataTag (base name: "data_tag")', function() {
       // uncomment below and update the code to test the property dataTag
-      //var instane = new intrinio.StandardizedFinancial();
+      //var instane = new intrinio-sdk.StandardizedFinancial();
       //expect(instance).to.be();
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instane = new intrinio.StandardizedFinancial();
+      //var instane = new intrinio-sdk.StandardizedFinancial();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# intrinio.HistoricalDataApi
+# intrinio-sdk.HistoricalDataApi
 
 All URIs are relative to *https://api-v2.intrinio.com*
 
@@ -17,10 +17,10 @@ Returns historical values for the given &#x60;tag&#x60; and the entity represent
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var historicalData_api = new intrinio.HistoricalDataApi();
+var historicalData_api = new intrinio-sdk.HistoricalDataApi();
 
 var identifier = "AAPL"; // String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
 

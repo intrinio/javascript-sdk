@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.DataTagSummary();
+    instance = new intrinio-sdk.DataTagSummary();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,31 +52,31 @@
   describe('DataTagSummary', function() {
     it('should create an instance of DataTagSummary', function() {
       // uncomment below and update the code to test DataTagSummary
-      //var instane = new intrinio.DataTagSummary();
-      //expect(instance).to.be.a(intrinio.DataTagSummary);
+      //var instane = new intrinio-sdk.DataTagSummary();
+      //expect(instance).to.be.a(intrinio-sdk.DataTagSummary);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new intrinio.DataTagSummary();
+      //var instane = new intrinio-sdk.DataTagSummary();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new intrinio.DataTagSummary();
+      //var instane = new intrinio-sdk.DataTagSummary();
       //expect(instance).to.be();
     });
 
     it('should have the property tag (base name: "tag")', function() {
       // uncomment below and update the code to test the property tag
-      //var instane = new intrinio.DataTagSummary();
+      //var instane = new intrinio-sdk.DataTagSummary();
       //expect(instance).to.be();
     });
 
     it('should have the property unit (base name: "unit")', function() {
       // uncomment below and update the code to test the property unit
-      //var instane = new intrinio.DataTagSummary();
+      //var instane = new intrinio-sdk.DataTagSummary();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# intrinio.IndexApi
+# intrinio-sdk.IndexApi
 
 All URIs are relative to *https://api-v2.intrinio.com*
 
@@ -32,10 +32,10 @@ Get All Economic Indices
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var index_api = new intrinio.IndexApi();
+var index_api = new intrinio-sdk.IndexApi();
 
 var opts = { 
   'nextPage': null // String | Gets the next page of data from a previous API call
@@ -66,10 +66,10 @@ Get All SIC Indices
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var index_api = new intrinio.IndexApi();
+var index_api = new intrinio-sdk.IndexApi();
 
 var opts = { 
   'nextPage': null // String | Gets the next page of data from a previous API call
@@ -100,10 +100,10 @@ Get All Stock Market Indices
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var index_api = new intrinio.IndexApi();
+var index_api = new intrinio-sdk.IndexApi();
 
 var opts = { 
   'nextPage': null // String | Gets the next page of data from a previous API call
@@ -134,10 +134,10 @@ Get an Economic Index by ID
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var index_api = new intrinio.IndexApi();
+var index_api = new intrinio-sdk.IndexApi();
 
 var identifier = "$GDP"; // String | An Index Identifier (symbol, Intrinio ID)
 
@@ -169,10 +169,10 @@ Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index wit
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var index_api = new intrinio.IndexApi();
+var index_api = new intrinio-sdk.IndexApi();
 
 var identifier = "$GDP"; // String | An Index Identifier (symbol, Intrinio ID)
 
@@ -207,10 +207,10 @@ Returns a text value for the given &#x60;tag&#x60; for the Economic Index with t
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var index_api = new intrinio.IndexApi();
+var index_api = new intrinio-sdk.IndexApi();
 
 var identifier = "$GDP"; // String | An Index Identifier (symbol, Intrinio ID)
 
@@ -245,10 +245,10 @@ Returns historical values for the given &#x60;tag&#x60; and the Economic Index w
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var index_api = new intrinio.IndexApi();
+var index_api = new intrinio-sdk.IndexApi();
 
 var identifier = "$GDP"; // String | An Index Identifier (symbol, Intrinio ID)
 
@@ -293,10 +293,10 @@ Get an SIC Index by ID
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var index_api = new intrinio.IndexApi();
+var index_api = new intrinio-sdk.IndexApi();
 
 var identifier = "$SIC.1"; // String | An Index Identifier (symbol, Intrinio ID)
 
@@ -328,10 +328,10 @@ Returns a numeric value for the given &#x60;tag&#x60; for the SIC Index with the
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var index_api = new intrinio.IndexApi();
+var index_api = new intrinio-sdk.IndexApi();
 
 var identifier = "$SIC.1"; // String | An Index Identifier (symbol, Intrinio ID)
 
@@ -366,10 +366,10 @@ Returns a text value for the given &#x60;tag&#x60; for the SIC Index with the gi
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var index_api = new intrinio.IndexApi();
+var index_api = new intrinio-sdk.IndexApi();
 
 var identifier = "$SIC.1"; // String | An Index Identifier (symbol, Intrinio ID)
 
@@ -404,10 +404,10 @@ Returns historical values for the given &#x60;tag&#x60; and the SIC Index with t
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var index_api = new intrinio.IndexApi();
+var index_api = new intrinio-sdk.IndexApi();
 
 var identifier = "$SIC.1"; // String | An Index Identifier (symbol, Intrinio ID)
 
@@ -452,10 +452,10 @@ Get a Stock Market Index by ID
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var index_api = new intrinio.IndexApi();
+var index_api = new intrinio-sdk.IndexApi();
 
 var identifier = "$DJI"; // String | An Index Identifier (symbol, Intrinio ID)
 
@@ -487,10 +487,10 @@ Returns a numeric value for the given &#x60;tag&#x60; for the Stock Market Index
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var index_api = new intrinio.IndexApi();
+var index_api = new intrinio-sdk.IndexApi();
 
 var identifier = "$DJI"; // String | An Index Identifier (symbol, Intrinio ID)
 
@@ -525,10 +525,10 @@ Returns a text value for the given &#x60;tag&#x60; for the Stock Market Index wi
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var index_api = new intrinio.IndexApi();
+var index_api = new intrinio-sdk.IndexApi();
 
 var identifier = "$DJI"; // String | An Index Identifier (symbol, Intrinio ID)
 
@@ -563,10 +563,10 @@ Returns historical values for the given &#x60;tag&#x60; and the Stock Market Ind
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var index_api = new intrinio.IndexApi();
+var index_api = new intrinio-sdk.IndexApi();
 
 var identifier = "$DJI"; // String | An Index Identifier (symbol, Intrinio ID)
 
@@ -613,10 +613,10 @@ Searches for indices using the text in &#x60;query&#x60;
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var index_api = new intrinio.IndexApi();
+var index_api = new intrinio-sdk.IndexApi();
 
 var query = "GDP"; // String | Search query
 
@@ -648,10 +648,10 @@ Searches for indices using the text in &#x60;query&#x60;
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var index_api = new intrinio.IndexApi();
+var index_api = new intrinio-sdk.IndexApi();
 
 var query = "agriculture"; // String | Search query
 
@@ -683,10 +683,10 @@ Searches for indices using the text in &#x60;query&#x60;
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var index_api = new intrinio.IndexApi();
+var index_api = new intrinio-sdk.IndexApi();
 
 var query = "dow"; // String | Search query
 

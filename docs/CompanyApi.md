@@ -1,4 +1,4 @@
-# intrinio.CompanyApi
+# intrinio-sdk.CompanyApi
 
 All URIs are relative to *https://api-v2.intrinio.com*
 
@@ -30,10 +30,10 @@ Returns Companies matching the specified filters
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinio.CompanyApi();
+var company_api = new intrinio-sdk.CompanyApi();
 
 var opts = { 
   'lastFilingDate': null, // Date | Last filing date
@@ -78,10 +78,10 @@ Returns Fundamentals for the Company with the given &#x60;identifier&#x60; and m
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinio.CompanyApi();
+var company_api = new intrinio-sdk.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
@@ -131,10 +131,10 @@ Get All Companies
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinio.CompanyApi();
+var company_api = new intrinio-sdk.CompanyApi();
 
 var opts = { 
   'nextPage': null // String | Gets the next page of data from a previous API call
@@ -167,10 +167,10 @@ Returns all news for all companies
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinio.CompanyApi();
+var company_api = new intrinio-sdk.CompanyApi();
 
 var opts = { 
   'nextPage': null // String | Gets the next page of data from a previous API call
@@ -201,10 +201,10 @@ Get a Company by ID
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinio.CompanyApi();
+var company_api = new intrinio-sdk.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
@@ -236,10 +236,10 @@ Returns a numeric value for the given &#x60;tag&#x60; for the Company with the g
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinio.CompanyApi();
+var company_api = new intrinio-sdk.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
@@ -274,10 +274,10 @@ Returns a text value for the given &#x60;tag&#x60; for the Company with the give
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinio.CompanyApi();
+var company_api = new intrinio-sdk.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
@@ -312,10 +312,10 @@ Returns a complete list of SEC filings for the Company with the given &#x60;iden
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinio.CompanyApi();
+var company_api = new intrinio-sdk.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
@@ -351,10 +351,10 @@ Returns all Fundamentals for the Company with the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinio.CompanyApi();
+var company_api = new intrinio-sdk.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
@@ -390,10 +390,10 @@ Returns historical values for the given &#x60;tag&#x60; and the Company with the
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinio.CompanyApi();
+var company_api = new intrinio-sdk.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
@@ -440,10 +440,10 @@ Returns news for the Company with the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinio.CompanyApi();
+var company_api = new intrinio-sdk.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
@@ -479,10 +479,10 @@ Return Securities for the Company with &#x60;identifier&#x60;
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinio.CompanyApi();
+var company_api = new intrinio-sdk.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
@@ -518,10 +518,10 @@ Returns the Fundamental for the Company with the given &#x60;identifier&#x60; an
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinio.CompanyApi();
+var company_api = new intrinio-sdk.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
@@ -562,10 +562,10 @@ Searches for Companies matching the text &#x60;query&#x60;
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinio.CompanyApi();
+var company_api = new intrinio-sdk.CompanyApi();
 
 var query = "Apple"; // String | Search parameters
 

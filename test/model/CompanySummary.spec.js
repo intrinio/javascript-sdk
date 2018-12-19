@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.CompanySummary();
+    instance = new intrinio-sdk.CompanySummary();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,37 +52,37 @@
   describe('CompanySummary', function() {
     it('should create an instance of CompanySummary', function() {
       // uncomment below and update the code to test CompanySummary
-      //var instane = new intrinio.CompanySummary();
-      //expect(instance).to.be.a(intrinio.CompanySummary);
+      //var instane = new intrinio-sdk.CompanySummary();
+      //expect(instance).to.be.a(intrinio-sdk.CompanySummary);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new intrinio.CompanySummary();
+      //var instane = new intrinio-sdk.CompanySummary();
       //expect(instance).to.be();
     });
 
     it('should have the property ticker (base name: "ticker")', function() {
       // uncomment below and update the code to test the property ticker
-      //var instane = new intrinio.CompanySummary();
+      //var instane = new intrinio-sdk.CompanySummary();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new intrinio.CompanySummary();
+      //var instane = new intrinio-sdk.CompanySummary();
       //expect(instance).to.be();
     });
 
     it('should have the property lei (base name: "lei")', function() {
       // uncomment below and update the code to test the property lei
-      //var instane = new intrinio.CompanySummary();
+      //var instane = new intrinio-sdk.CompanySummary();
       //expect(instance).to.be();
     });
 
     it('should have the property cik (base name: "cik")', function() {
       // uncomment below and update the code to test the property cik
-      //var instane = new intrinio.CompanySummary();
+      //var instane = new intrinio-sdk.CompanySummary();
       //expect(instance).to.be();
     });
 

@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.ApiResponseStockMarketIndices();
+    instance = new intrinio-sdk.ApiResponseStockMarketIndices();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('ApiResponseStockMarketIndices', function() {
     it('should create an instance of ApiResponseStockMarketIndices', function() {
       // uncomment below and update the code to test ApiResponseStockMarketIndices
-      //var instane = new intrinio.ApiResponseStockMarketIndices();
-      //expect(instance).to.be.a(intrinio.ApiResponseStockMarketIndices);
+      //var instane = new intrinio-sdk.ApiResponseStockMarketIndices();
+      //expect(instance).to.be.a(intrinio-sdk.ApiResponseStockMarketIndices);
     });
 
     it('should have the property indices (base name: "indices")', function() {
       // uncomment below and update the code to test the property indices
-      //var instane = new intrinio.ApiResponseStockMarketIndices();
+      //var instane = new intrinio-sdk.ApiResponseStockMarketIndices();
       //expect(instance).to.be();
     });
 
     it('should have the property nextPage (base name: "next_page")', function() {
       // uncomment below and update the code to test the property nextPage
-      //var instane = new intrinio.ApiResponseStockMarketIndices();
+      //var instane = new intrinio-sdk.ApiResponseStockMarketIndices();
       //expect(instance).to.be();
     });
 

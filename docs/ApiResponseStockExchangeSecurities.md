@@ -1,4 +1,4 @@
-# intrinio.ApiResponseStockExchangeSecurities
+# intrinio-sdk.ApiResponseStockExchangeSecurities
 
 ## Properties
 Name | Type | Description | Notes

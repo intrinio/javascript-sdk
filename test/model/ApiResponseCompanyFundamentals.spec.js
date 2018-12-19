@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.ApiResponseCompanyFundamentals();
+    instance = new intrinio-sdk.ApiResponseCompanyFundamentals();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('ApiResponseCompanyFundamentals', function() {
     it('should create an instance of ApiResponseCompanyFundamentals', function() {
       // uncomment below and update the code to test ApiResponseCompanyFundamentals
-      //var instane = new intrinio.ApiResponseCompanyFundamentals();
-      //expect(instance).to.be.a(intrinio.ApiResponseCompanyFundamentals);
+      //var instane = new intrinio-sdk.ApiResponseCompanyFundamentals();
+      //expect(instance).to.be.a(intrinio-sdk.ApiResponseCompanyFundamentals);
     });
 
     it('should have the property fundamentals (base name: "fundamentals")', function() {
       // uncomment below and update the code to test the property fundamentals
-      //var instane = new intrinio.ApiResponseCompanyFundamentals();
+      //var instane = new intrinio-sdk.ApiResponseCompanyFundamentals();
       //expect(instance).to.be();
     });
 
     it('should have the property company (base name: "company")', function() {
       // uncomment below and update the code to test the property company
-      //var instane = new intrinio.ApiResponseCompanyFundamentals();
+      //var instane = new intrinio-sdk.ApiResponseCompanyFundamentals();
       //expect(instance).to.be();
     });
 
     it('should have the property nextPage (base name: "next_page")', function() {
       // uncomment below and update the code to test the property nextPage
-      //var instane = new intrinio.ApiResponseCompanyFundamentals();
+      //var instane = new intrinio-sdk.ApiResponseCompanyFundamentals();
       //expect(instance).to.be();
     });
 

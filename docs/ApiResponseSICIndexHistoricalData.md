@@ -1,4 +1,4 @@
-# intrinio.ApiResponseSICIndexHistoricalData
+# intrinio-sdk.ApiResponseSICIndexHistoricalData
 
 ## Properties
 Name | Type | Description | Notes

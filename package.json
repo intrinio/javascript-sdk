@@ -1,5 +1,5 @@
 {
-  "name": "intrinio",
+  "name": "intrinio-sdk",
   "version": "1.0.0",
   "description": "Access the Intrinio API",
   "license": "GPLv3",

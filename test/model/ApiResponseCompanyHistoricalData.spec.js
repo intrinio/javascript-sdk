@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.ApiResponseCompanyHistoricalData();
+    instance = new intrinio-sdk.ApiResponseCompanyHistoricalData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('ApiResponseCompanyHistoricalData', function() {
     it('should create an instance of ApiResponseCompanyHistoricalData', function() {
       // uncomment below and update the code to test ApiResponseCompanyHistoricalData
-      //var instane = new intrinio.ApiResponseCompanyHistoricalData();
-      //expect(instance).to.be.a(intrinio.ApiResponseCompanyHistoricalData);
+      //var instane = new intrinio-sdk.ApiResponseCompanyHistoricalData();
+      //expect(instance).to.be.a(intrinio-sdk.ApiResponseCompanyHistoricalData);
     });
 
     it('should have the property historicalData (base name: "historical_data")', function() {
       // uncomment below and update the code to test the property historicalData
-      //var instane = new intrinio.ApiResponseCompanyHistoricalData();
+      //var instane = new intrinio-sdk.ApiResponseCompanyHistoricalData();
       //expect(instance).to.be();
     });
 
     it('should have the property company (base name: "company")', function() {
       // uncomment below and update the code to test the property company
-      //var instane = new intrinio.ApiResponseCompanyHistoricalData();
+      //var instane = new intrinio-sdk.ApiResponseCompanyHistoricalData();
       //expect(instance).to.be();
     });
 
     it('should have the property nextPage (base name: "next_page")', function() {
       // uncomment below and update the code to test the property nextPage
-      //var instane = new intrinio.ApiResponseCompanyHistoricalData();
+      //var instane = new intrinio-sdk.ApiResponseCompanyHistoricalData();
       //expect(instance).to.be();
     });
 

@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/ApiResponseEconomicIndexHistoricalData'), require('../model/ApiResponseEconomicIndices'), require('../model/ApiResponseSICIndexHistoricalData'), require('../model/ApiResponseSICIndices'), require('../model/ApiResponseStockMarketIndexHistoricalData'), require('../model/ApiResponseStockMarketIndices'), require('../model/EconomicIndex'), require('../model/SICIndex'), require('../model/StockMarketIndex'));
   } else {
     // Browser globals (root is window)
-    if (!root.intrinio) {
-      root.intrinio = {};
+    if (!root.intrinio-sdk) {
+      root.intrinio-sdk = {};
     }
-    root.intrinio.IndexApi = factory(root.intrinio.ApiClient, root.intrinio.ApiResponseEconomicIndexHistoricalData, root.intrinio.ApiResponseEconomicIndices, root.intrinio.ApiResponseSICIndexHistoricalData, root.intrinio.ApiResponseSICIndices, root.intrinio.ApiResponseStockMarketIndexHistoricalData, root.intrinio.ApiResponseStockMarketIndices, root.intrinio.EconomicIndex, root.intrinio.SICIndex, root.intrinio.StockMarketIndex);
+    root.intrinio-sdk.IndexApi = factory(root.intrinio-sdk.ApiClient, root.intrinio-sdk.ApiResponseEconomicIndexHistoricalData, root.intrinio-sdk.ApiResponseEconomicIndices, root.intrinio-sdk.ApiResponseSICIndexHistoricalData, root.intrinio-sdk.ApiResponseSICIndices, root.intrinio-sdk.ApiResponseStockMarketIndexHistoricalData, root.intrinio-sdk.ApiResponseStockMarketIndices, root.intrinio-sdk.EconomicIndex, root.intrinio-sdk.SICIndex, root.intrinio-sdk.StockMarketIndex);
   }
 }(this, function(ApiClient, ApiResponseEconomicIndexHistoricalData, ApiResponseEconomicIndices, ApiResponseSICIndexHistoricalData, ApiResponseSICIndices, ApiResponseStockMarketIndexHistoricalData, ApiResponseStockMarketIndices, EconomicIndex, SICIndex, StockMarketIndex) {
   'use strict';

@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.SecurityScreenGroup();
+    instance = new intrinio-sdk.SecurityScreenGroup();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('SecurityScreenGroup', function() {
     it('should create an instance of SecurityScreenGroup', function() {
       // uncomment below and update the code to test SecurityScreenGroup
-      //var instane = new intrinio.SecurityScreenGroup();
-      //expect(instance).to.be.a(intrinio.SecurityScreenGroup);
+      //var instane = new intrinio-sdk.SecurityScreenGroup();
+      //expect(instance).to.be.a(intrinio-sdk.SecurityScreenGroup);
     });
 
     it('should have the property operator (base name: "operator")', function() {
       // uncomment below and update the code to test the property operator
-      //var instane = new intrinio.SecurityScreenGroup();
+      //var instane = new intrinio-sdk.SecurityScreenGroup();
       //expect(instance).to.be();
     });
 
     it('should have the property clauses (base name: "clauses")', function() {
       // uncomment below and update the code to test the property clauses
-      //var instane = new intrinio.SecurityScreenGroup();
+      //var instane = new intrinio-sdk.SecurityScreenGroup();
       //expect(instance).to.be();
     });
 
     it('should have the property groups (base name: "groups")', function() {
       // uncomment below and update the code to test the property groups
-      //var instane = new intrinio.SecurityScreenGroup();
+      //var instane = new intrinio-sdk.SecurityScreenGroup();
       //expect(instance).to.be();
     });
 

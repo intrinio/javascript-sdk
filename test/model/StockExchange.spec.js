@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.StockExchange();
+    instance = new intrinio-sdk.StockExchange();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,67 +52,67 @@
   describe('StockExchange', function() {
     it('should create an instance of StockExchange', function() {
       // uncomment below and update the code to test StockExchange
-      //var instane = new intrinio.StockExchange();
-      //expect(instance).to.be.a(intrinio.StockExchange);
+      //var instane = new intrinio-sdk.StockExchange();
+      //expect(instance).to.be.a(intrinio-sdk.StockExchange);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new intrinio.StockExchange();
+      //var instane = new intrinio-sdk.StockExchange();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new intrinio.StockExchange();
+      //var instane = new intrinio-sdk.StockExchange();
       //expect(instance).to.be();
     });
 
     it('should have the property mic (base name: "mic")', function() {
       // uncomment below and update the code to test the property mic
-      //var instane = new intrinio.StockExchange();
+      //var instane = new intrinio-sdk.StockExchange();
       //expect(instance).to.be();
     });
 
     it('should have the property acronym (base name: "acronym")', function() {
       // uncomment below and update the code to test the property acronym
-      //var instane = new intrinio.StockExchange();
+      //var instane = new intrinio-sdk.StockExchange();
       //expect(instance).to.be();
     });
 
     it('should have the property city (base name: "city")', function() {
       // uncomment below and update the code to test the property city
-      //var instane = new intrinio.StockExchange();
+      //var instane = new intrinio-sdk.StockExchange();
       //expect(instance).to.be();
     });
 
     it('should have the property country (base name: "country")', function() {
       // uncomment below and update the code to test the property country
-      //var instane = new intrinio.StockExchange();
+      //var instane = new intrinio-sdk.StockExchange();
       //expect(instance).to.be();
     });
 
     it('should have the property countryCode (base name: "country_code")', function() {
       // uncomment below and update the code to test the property countryCode
-      //var instane = new intrinio.StockExchange();
+      //var instane = new intrinio-sdk.StockExchange();
       //expect(instance).to.be();
     });
 
     it('should have the property website (base name: "website")', function() {
       // uncomment below and update the code to test the property website
-      //var instane = new intrinio.StockExchange();
+      //var instane = new intrinio-sdk.StockExchange();
       //expect(instance).to.be();
     });
 
     it('should have the property firstStockPriceDate (base name: "first_stock_price_date")', function() {
       // uncomment below and update the code to test the property firstStockPriceDate
-      //var instane = new intrinio.StockExchange();
+      //var instane = new intrinio-sdk.StockExchange();
       //expect(instance).to.be();
     });
 
     it('should have the property lastStockPriceDate (base name: "last_stock_price_date")', function() {
       // uncomment below and update the code to test the property lastStockPriceDate
-      //var instane = new intrinio.StockExchange();
+      //var instane = new intrinio-sdk.StockExchange();
       //expect(instance).to.be();
     });
 

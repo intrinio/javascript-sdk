@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.SecurityScreenResultData();
+    instance = new intrinio-sdk.SecurityScreenResultData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('SecurityScreenResultData', function() {
     it('should create an instance of SecurityScreenResultData', function() {
       // uncomment below and update the code to test SecurityScreenResultData
-      //var instane = new intrinio.SecurityScreenResultData();
-      //expect(instance).to.be.a(intrinio.SecurityScreenResultData);
+      //var instane = new intrinio-sdk.SecurityScreenResultData();
+      //expect(instance).to.be.a(intrinio-sdk.SecurityScreenResultData);
     });
 
     it('should have the property tag (base name: "tag")', function() {
       // uncomment below and update the code to test the property tag
-      //var instane = new intrinio.SecurityScreenResultData();
+      //var instane = new intrinio-sdk.SecurityScreenResultData();
       //expect(instance).to.be();
     });
 
     it('should have the property numberValue (base name: "number_value")', function() {
       // uncomment below and update the code to test the property numberValue
-      //var instane = new intrinio.SecurityScreenResultData();
+      //var instane = new intrinio-sdk.SecurityScreenResultData();
       //expect(instance).to.be();
     });
 
     it('should have the property textValue (base name: "text_value")', function() {
       // uncomment below and update the code to test the property textValue
-      //var instane = new intrinio.SecurityScreenResultData();
+      //var instane = new intrinio-sdk.SecurityScreenResultData();
       //expect(instance).to.be();
     });
 

@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.SICIndex();
+    instance = new intrinio-sdk.SICIndex();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,37 +52,37 @@
   describe('SICIndex', function() {
     it('should create an instance of SICIndex', function() {
       // uncomment below and update the code to test SICIndex
-      //var instane = new intrinio.SICIndex();
-      //expect(instance).to.be.a(intrinio.SICIndex);
+      //var instane = new intrinio-sdk.SICIndex();
+      //expect(instance).to.be.a(intrinio-sdk.SICIndex);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new intrinio.SICIndex();
+      //var instane = new intrinio-sdk.SICIndex();
       //expect(instance).to.be();
     });
 
     it('should have the property symbol (base name: "symbol")', function() {
       // uncomment below and update the code to test the property symbol
-      //var instane = new intrinio.SICIndex();
+      //var instane = new intrinio-sdk.SICIndex();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new intrinio.SICIndex();
+      //var instane = new intrinio-sdk.SICIndex();
       //expect(instance).to.be();
     });
 
     it('should have the property continent (base name: "continent")', function() {
       // uncomment below and update the code to test the property continent
-      //var instane = new intrinio.SICIndex();
+      //var instane = new intrinio-sdk.SICIndex();
       //expect(instance).to.be();
     });
 
     it('should have the property country (base name: "country")', function() {
       // uncomment below and update the code to test the property country
-      //var instane = new intrinio.SICIndex();
+      //var instane = new intrinio-sdk.SICIndex();
       //expect(instance).to.be();
     });
 

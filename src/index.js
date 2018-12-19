@@ -30,9 +30,9 @@
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
    * <pre>
-   * var intrinio = require('index'); // See note below*.
-   * var xxxSvc = new intrinio.XxxApi(); // Allocate the API class we're going to use.
-   * var yyyModel = new intrinio.Yyy(); // Construct a model instance.
+   * var intrinio-sdk = require('index'); // See note below*.
+   * var xxxSvc = new intrinio-sdk.XxxApi(); // Allocate the API class we're going to use.
+   * var yyyModel = new intrinio-sdk.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
    * ...
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -44,8 +44,8 @@
    * <p>
    * A non-AMD browser application (discouraged) might do something like this:
    * <pre>
-   * var xxxSvc = new intrinio.XxxApi(); // Allocate the API class we're going to use.
-   * var yyy = new intrinio.Yyy(); // Construct a model instance.
+   * var xxxSvc = new intrinio-sdk.XxxApi(); // Allocate the API class we're going to use.
+   * var yyy = new intrinio-sdk.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
    * ...
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.

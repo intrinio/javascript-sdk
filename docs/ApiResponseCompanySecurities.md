@@ -1,4 +1,4 @@
-# intrinio.ApiResponseCompanySecurities
+# intrinio-sdk.ApiResponseCompanySecurities
 
 ## Properties
 Name | Type | Description | Notes

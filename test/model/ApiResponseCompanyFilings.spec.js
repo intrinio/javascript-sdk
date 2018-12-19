@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.ApiResponseCompanyFilings();
+    instance = new intrinio-sdk.ApiResponseCompanyFilings();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('ApiResponseCompanyFilings', function() {
     it('should create an instance of ApiResponseCompanyFilings', function() {
       // uncomment below and update the code to test ApiResponseCompanyFilings
-      //var instane = new intrinio.ApiResponseCompanyFilings();
-      //expect(instance).to.be.a(intrinio.ApiResponseCompanyFilings);
+      //var instane = new intrinio-sdk.ApiResponseCompanyFilings();
+      //expect(instance).to.be.a(intrinio-sdk.ApiResponseCompanyFilings);
     });
 
     it('should have the property filings (base name: "filings")', function() {
       // uncomment below and update the code to test the property filings
-      //var instane = new intrinio.ApiResponseCompanyFilings();
+      //var instane = new intrinio-sdk.ApiResponseCompanyFilings();
       //expect(instance).to.be();
     });
 
     it('should have the property company (base name: "company")', function() {
       // uncomment below and update the code to test the property company
-      //var instane = new intrinio.ApiResponseCompanyFilings();
+      //var instane = new intrinio-sdk.ApiResponseCompanyFilings();
       //expect(instance).to.be();
     });
 
     it('should have the property nextPage (base name: "next_page")', function() {
       // uncomment below and update the code to test the property nextPage
-      //var instane = new intrinio.ApiResponseCompanyFilings();
+      //var instane = new intrinio-sdk.ApiResponseCompanyFilings();
       //expect(instance).to.be();
     });
 

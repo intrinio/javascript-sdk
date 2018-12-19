@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.ApiResponseNews();
+    instance = new intrinio-sdk.ApiResponseNews();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('ApiResponseNews', function() {
     it('should create an instance of ApiResponseNews', function() {
       // uncomment below and update the code to test ApiResponseNews
-      //var instane = new intrinio.ApiResponseNews();
-      //expect(instance).to.be.a(intrinio.ApiResponseNews);
+      //var instane = new intrinio-sdk.ApiResponseNews();
+      //expect(instance).to.be.a(intrinio-sdk.ApiResponseNews);
     });
 
     it('should have the property news (base name: "news")', function() {
       // uncomment below and update the code to test the property news
-      //var instane = new intrinio.ApiResponseNews();
+      //var instane = new intrinio-sdk.ApiResponseNews();
       //expect(instance).to.be();
     });
 
     it('should have the property nextPage (base name: "next_page")', function() {
       // uncomment below and update the code to test the property nextPage
-      //var instane = new intrinio.ApiResponseNews();
+      //var instane = new intrinio-sdk.ApiResponseNews();
       //expect(instance).to.be();
     });
 

@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.StockPriceAdjustment();
+    instance = new intrinio-sdk.StockPriceAdjustment();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,37 +52,37 @@
   describe('StockPriceAdjustment', function() {
     it('should create an instance of StockPriceAdjustment', function() {
       // uncomment below and update the code to test StockPriceAdjustment
-      //var instane = new intrinio.StockPriceAdjustment();
-      //expect(instance).to.be.a(intrinio.StockPriceAdjustment);
+      //var instane = new intrinio-sdk.StockPriceAdjustment();
+      //expect(instance).to.be.a(intrinio-sdk.StockPriceAdjustment);
     });
 
     it('should have the property _date (base name: "date")', function() {
       // uncomment below and update the code to test the property _date
-      //var instane = new intrinio.StockPriceAdjustment();
+      //var instane = new intrinio-sdk.StockPriceAdjustment();
       //expect(instance).to.be();
     });
 
     it('should have the property factor (base name: "factor")', function() {
       // uncomment below and update the code to test the property factor
-      //var instane = new intrinio.StockPriceAdjustment();
+      //var instane = new intrinio-sdk.StockPriceAdjustment();
       //expect(instance).to.be();
     });
 
     it('should have the property dividend (base name: "dividend")', function() {
       // uncomment below and update the code to test the property dividend
-      //var instane = new intrinio.StockPriceAdjustment();
+      //var instane = new intrinio-sdk.StockPriceAdjustment();
       //expect(instance).to.be();
     });
 
     it('should have the property dividendCurrency (base name: "dividend_currency")', function() {
       // uncomment below and update the code to test the property dividendCurrency
-      //var instane = new intrinio.StockPriceAdjustment();
+      //var instane = new intrinio-sdk.StockPriceAdjustment();
       //expect(instance).to.be();
     });
 
     it('should have the property splitRatio (base name: "split_ratio")', function() {
       // uncomment below and update the code to test the property splitRatio
-      //var instane = new intrinio.StockPriceAdjustment();
+      //var instane = new intrinio-sdk.StockPriceAdjustment();
       //expect(instance).to.be();
     });
 

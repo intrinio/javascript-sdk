@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.ApiResponseStandardizedFinancials();
+    instance = new intrinio-sdk.ApiResponseStandardizedFinancials();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('ApiResponseStandardizedFinancials', function() {
     it('should create an instance of ApiResponseStandardizedFinancials', function() {
       // uncomment below and update the code to test ApiResponseStandardizedFinancials
-      //var instane = new intrinio.ApiResponseStandardizedFinancials();
-      //expect(instance).to.be.a(intrinio.ApiResponseStandardizedFinancials);
+      //var instane = new intrinio-sdk.ApiResponseStandardizedFinancials();
+      //expect(instance).to.be.a(intrinio-sdk.ApiResponseStandardizedFinancials);
     });
 
     it('should have the property standardizedFinancials (base name: "standardized_financials")', function() {
       // uncomment below and update the code to test the property standardizedFinancials
-      //var instane = new intrinio.ApiResponseStandardizedFinancials();
+      //var instane = new intrinio-sdk.ApiResponseStandardizedFinancials();
       //expect(instance).to.be();
     });
 
     it('should have the property fundamental (base name: "fundamental")', function() {
       // uncomment below and update the code to test the property fundamental
-      //var instane = new intrinio.ApiResponseStandardizedFinancials();
+      //var instane = new intrinio-sdk.ApiResponseStandardizedFinancials();
       //expect(instance).to.be();
     });
 
     it('should have the property nextPage (base name: "next_page")', function() {
       // uncomment below and update the code to test the property nextPage
-      //var instane = new intrinio.ApiResponseStandardizedFinancials();
+      //var instane = new intrinio-sdk.ApiResponseStandardizedFinancials();
       //expect(instance).to.be();
     });
 

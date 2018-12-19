@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.DataTag();
+    instance = new intrinio-sdk.DataTag();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,67 +52,67 @@
   describe('DataTag', function() {
     it('should create an instance of DataTag', function() {
       // uncomment below and update the code to test DataTag
-      //var instane = new intrinio.DataTag();
-      //expect(instance).to.be.a(intrinio.DataTag);
+      //var instane = new intrinio-sdk.DataTag();
+      //expect(instance).to.be.a(intrinio-sdk.DataTag);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new intrinio.DataTag();
+      //var instane = new intrinio-sdk.DataTag();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new intrinio.DataTag();
+      //var instane = new intrinio-sdk.DataTag();
       //expect(instance).to.be();
     });
 
     it('should have the property tag (base name: "tag")', function() {
       // uncomment below and update the code to test the property tag
-      //var instane = new intrinio.DataTag();
+      //var instane = new intrinio-sdk.DataTag();
       //expect(instance).to.be();
     });
 
     it('should have the property statementCode (base name: "statement_code")', function() {
       // uncomment below and update the code to test the property statementCode
-      //var instane = new intrinio.DataTag();
+      //var instane = new intrinio-sdk.DataTag();
       //expect(instance).to.be();
     });
 
     it('should have the property statementType (base name: "statement_type")', function() {
       // uncomment below and update the code to test the property statementType
-      //var instane = new intrinio.DataTag();
+      //var instane = new intrinio-sdk.DataTag();
       //expect(instance).to.be();
     });
 
     it('should have the property parent (base name: "parent")', function() {
       // uncomment below and update the code to test the property parent
-      //var instane = new intrinio.DataTag();
+      //var instane = new intrinio-sdk.DataTag();
       //expect(instance).to.be();
     });
 
     it('should have the property factor (base name: "factor")', function() {
       // uncomment below and update the code to test the property factor
-      //var instane = new intrinio.DataTag();
+      //var instane = new intrinio-sdk.DataTag();
       //expect(instance).to.be();
     });
 
     it('should have the property balance (base name: "balance")', function() {
       // uncomment below and update the code to test the property balance
-      //var instane = new intrinio.DataTag();
+      //var instane = new intrinio-sdk.DataTag();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new intrinio.DataTag();
+      //var instane = new intrinio-sdk.DataTag();
       //expect(instance).to.be();
     });
 
     it('should have the property unit (base name: "unit")', function() {
       // uncomment below and update the code to test the property unit
-      //var instane = new intrinio.DataTag();
+      //var instane = new intrinio-sdk.DataTag();
       //expect(instance).to.be();
     });
 

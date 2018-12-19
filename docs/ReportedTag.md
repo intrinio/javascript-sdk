@@ -1,4 +1,4 @@
-# intrinio.ReportedTag
+# intrinio-sdk.ReportedTag
 
 ## Properties
 Name | Type | Description | Notes

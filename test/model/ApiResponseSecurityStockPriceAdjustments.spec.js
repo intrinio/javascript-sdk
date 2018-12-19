@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.ApiResponseSecurityStockPriceAdjustments();
+    instance = new intrinio-sdk.ApiResponseSecurityStockPriceAdjustments();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('ApiResponseSecurityStockPriceAdjustments', function() {
     it('should create an instance of ApiResponseSecurityStockPriceAdjustments', function() {
       // uncomment below and update the code to test ApiResponseSecurityStockPriceAdjustments
-      //var instane = new intrinio.ApiResponseSecurityStockPriceAdjustments();
-      //expect(instance).to.be.a(intrinio.ApiResponseSecurityStockPriceAdjustments);
+      //var instane = new intrinio-sdk.ApiResponseSecurityStockPriceAdjustments();
+      //expect(instance).to.be.a(intrinio-sdk.ApiResponseSecurityStockPriceAdjustments);
     });
 
     it('should have the property stockPriceAdjustments (base name: "stock_price_adjustments")', function() {
       // uncomment below and update the code to test the property stockPriceAdjustments
-      //var instane = new intrinio.ApiResponseSecurityStockPriceAdjustments();
+      //var instane = new intrinio-sdk.ApiResponseSecurityStockPriceAdjustments();
       //expect(instance).to.be();
     });
 
     it('should have the property security (base name: "security")', function() {
       // uncomment below and update the code to test the property security
-      //var instane = new intrinio.ApiResponseSecurityStockPriceAdjustments();
+      //var instane = new intrinio-sdk.ApiResponseSecurityStockPriceAdjustments();
       //expect(instance).to.be();
     });
 
     it('should have the property nextPage (base name: "next_page")', function() {
       // uncomment below and update the code to test the property nextPage
-      //var instane = new intrinio.ApiResponseSecurityStockPriceAdjustments();
+      //var instane = new intrinio-sdk.ApiResponseSecurityStockPriceAdjustments();
       //expect(instance).to.be();
     });
 

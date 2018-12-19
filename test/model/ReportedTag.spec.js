@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.ReportedTag();
+    instance = new intrinio-sdk.ReportedTag();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,49 +52,49 @@
   describe('ReportedTag', function() {
     it('should create an instance of ReportedTag', function() {
       // uncomment below and update the code to test ReportedTag
-      //var instane = new intrinio.ReportedTag();
-      //expect(instance).to.be.a(intrinio.ReportedTag);
+      //var instane = new intrinio-sdk.ReportedTag();
+      //expect(instance).to.be.a(intrinio-sdk.ReportedTag);
     });
 
     it('should have the property tag (base name: "tag")', function() {
       // uncomment below and update the code to test the property tag
-      //var instane = new intrinio.ReportedTag();
+      //var instane = new intrinio-sdk.ReportedTag();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new intrinio.ReportedTag();
+      //var instane = new intrinio-sdk.ReportedTag();
       //expect(instance).to.be();
     });
 
     it('should have the property balance (base name: "balance")', function() {
       // uncomment below and update the code to test the property balance
-      //var instane = new intrinio.ReportedTag();
+      //var instane = new intrinio-sdk.ReportedTag();
       //expect(instance).to.be();
     });
 
     it('should have the property unit (base name: "unit")', function() {
       // uncomment below and update the code to test the property unit
-      //var instane = new intrinio.ReportedTag();
+      //var instane = new intrinio-sdk.ReportedTag();
       //expect(instance).to.be();
     });
 
     it('should have the property _abstract (base name: "abstract")', function() {
       // uncomment below and update the code to test the property _abstract
-      //var instane = new intrinio.ReportedTag();
+      //var instane = new intrinio-sdk.ReportedTag();
       //expect(instance).to.be();
     });
 
     it('should have the property sequence (base name: "sequence")', function() {
       // uncomment below and update the code to test the property sequence
-      //var instane = new intrinio.ReportedTag();
+      //var instane = new intrinio-sdk.ReportedTag();
       //expect(instance).to.be();
     });
 
     it('should have the property depth (base name: "depth")', function() {
       // uncomment below and update the code to test the property depth
-      //var instane = new intrinio.ReportedTag();
+      //var instane = new intrinio-sdk.ReportedTag();
       //expect(instance).to.be();
     });
 

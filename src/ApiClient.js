@@ -22,10 +22,10 @@
     module.exports = factory(require('superagent'), require('querystring'));
   } else {
     // Browser globals (root is window)
-    if (!root.intrinio) {
-      root.intrinio = {};
+    if (!root.intrinio-sdk) {
+      root.intrinio-sdk = {};
     }
-    root.intrinio.ApiClient = factory(root.superagent, root.querystring);
+    root.intrinio-sdk.ApiClient = factory(root.superagent, root.querystring);
   }
 }(this, function(superagent, querystring) {
   'use strict';

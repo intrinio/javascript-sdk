@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.HistoricalData();
+    instance = new intrinio-sdk.HistoricalData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('HistoricalData', function() {
     it('should create an instance of HistoricalData', function() {
       // uncomment below and update the code to test HistoricalData
-      //var instane = new intrinio.HistoricalData();
-      //expect(instance).to.be.a(intrinio.HistoricalData);
+      //var instane = new intrinio-sdk.HistoricalData();
+      //expect(instance).to.be.a(intrinio-sdk.HistoricalData);
     });
 
     it('should have the property _date (base name: "date")', function() {
       // uncomment below and update the code to test the property _date
-      //var instane = new intrinio.HistoricalData();
+      //var instane = new intrinio-sdk.HistoricalData();
       //expect(instance).to.be();
     });
 
     it('should have the property value (base name: "value")', function() {
       // uncomment below and update the code to test the property value
-      //var instane = new intrinio.HistoricalData();
+      //var instane = new intrinio-sdk.HistoricalData();
       //expect(instance).to.be();
     });
 

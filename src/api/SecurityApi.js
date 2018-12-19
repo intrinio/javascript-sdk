@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/ApiResponseSecurities'), require('../model/ApiResponseSecurityHistoricalData'), require('../model/ApiResponseSecurityStockPriceAdjustments'), require('../model/ApiResponseSecurityStockPrices'), require('../model/Security'), require('../model/SecurityScreenGroup'), require('../model/SecurityScreenResult'));
   } else {
     // Browser globals (root is window)
-    if (!root.intrinio) {
-      root.intrinio = {};
+    if (!root.intrinio-sdk) {
+      root.intrinio-sdk = {};
     }
-    root.intrinio.SecurityApi = factory(root.intrinio.ApiClient, root.intrinio.ApiResponseSecurities, root.intrinio.ApiResponseSecurityHistoricalData, root.intrinio.ApiResponseSecurityStockPriceAdjustments, root.intrinio.ApiResponseSecurityStockPrices, root.intrinio.Security, root.intrinio.SecurityScreenGroup, root.intrinio.SecurityScreenResult);
+    root.intrinio-sdk.SecurityApi = factory(root.intrinio-sdk.ApiClient, root.intrinio-sdk.ApiResponseSecurities, root.intrinio-sdk.ApiResponseSecurityHistoricalData, root.intrinio-sdk.ApiResponseSecurityStockPriceAdjustments, root.intrinio-sdk.ApiResponseSecurityStockPrices, root.intrinio-sdk.Security, root.intrinio-sdk.SecurityScreenGroup, root.intrinio-sdk.SecurityScreenResult);
   }
 }(this, function(ApiClient, ApiResponseSecurities, ApiResponseSecurityHistoricalData, ApiResponseSecurityStockPriceAdjustments, ApiResponseSecurityStockPrices, Security, SecurityScreenGroup, SecurityScreenResult) {
   'use strict';

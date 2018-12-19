@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/ApiResponseReportedFinancials'), require('../model/ApiResponseStandardizedFinancials'), require('../model/Fundamental'));
   } else {
     // Browser globals (root is window)
-    if (!root.intrinio) {
-      root.intrinio = {};
+    if (!root.intrinio-sdk) {
+      root.intrinio-sdk = {};
     }
-    root.intrinio.FundamentalsApi = factory(root.intrinio.ApiClient, root.intrinio.ApiResponseReportedFinancials, root.intrinio.ApiResponseStandardizedFinancials, root.intrinio.Fundamental);
+    root.intrinio-sdk.FundamentalsApi = factory(root.intrinio-sdk.ApiClient, root.intrinio-sdk.ApiResponseReportedFinancials, root.intrinio-sdk.ApiResponseStandardizedFinancials, root.intrinio-sdk.Fundamental);
   }
 }(this, function(ApiClient, ApiResponseReportedFinancials, ApiResponseStandardizedFinancials, Fundamental) {
   'use strict';

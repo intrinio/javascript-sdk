@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.FilingSummary();
+    instance = new intrinio-sdk.FilingSummary();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,61 +52,61 @@
   describe('FilingSummary', function() {
     it('should create an instance of FilingSummary', function() {
       // uncomment below and update the code to test FilingSummary
-      //var instane = new intrinio.FilingSummary();
-      //expect(instance).to.be.a(intrinio.FilingSummary);
+      //var instane = new intrinio-sdk.FilingSummary();
+      //expect(instance).to.be.a(intrinio-sdk.FilingSummary);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new intrinio.FilingSummary();
+      //var instane = new intrinio-sdk.FilingSummary();
       //expect(instance).to.be();
     });
 
     it('should have the property filingDate (base name: "filing_date")', function() {
       // uncomment below and update the code to test the property filingDate
-      //var instane = new intrinio.FilingSummary();
+      //var instane = new intrinio-sdk.FilingSummary();
       //expect(instance).to.be();
     });
 
     it('should have the property acceptedDate (base name: "accepted_date")', function() {
       // uncomment below and update the code to test the property acceptedDate
-      //var instane = new intrinio.FilingSummary();
+      //var instane = new intrinio-sdk.FilingSummary();
       //expect(instance).to.be();
     });
 
     it('should have the property periodEndDate (base name: "period_end_date")', function() {
       // uncomment below and update the code to test the property periodEndDate
-      //var instane = new intrinio.FilingSummary();
+      //var instane = new intrinio-sdk.FilingSummary();
       //expect(instance).to.be();
     });
 
     it('should have the property reportType (base name: "report_type")', function() {
       // uncomment below and update the code to test the property reportType
-      //var instane = new intrinio.FilingSummary();
+      //var instane = new intrinio-sdk.FilingSummary();
       //expect(instance).to.be();
     });
 
     it('should have the property secUniqueId (base name: "sec_unique_id")', function() {
       // uncomment below and update the code to test the property secUniqueId
-      //var instane = new intrinio.FilingSummary();
+      //var instane = new intrinio-sdk.FilingSummary();
       //expect(instance).to.be();
     });
 
     it('should have the property filingUrl (base name: "filing_url")', function() {
       // uncomment below and update the code to test the property filingUrl
-      //var instane = new intrinio.FilingSummary();
+      //var instane = new intrinio-sdk.FilingSummary();
       //expect(instance).to.be();
     });
 
     it('should have the property reportUrl (base name: "report_url")', function() {
       // uncomment below and update the code to test the property reportUrl
-      //var instane = new intrinio.FilingSummary();
+      //var instane = new intrinio-sdk.FilingSummary();
       //expect(instance).to.be();
     });
 
     it('should have the property instanceUrl (base name: "instance_url")', function() {
       // uncomment below and update the code to test the property instanceUrl
-      //var instane = new intrinio.FilingSummary();
+      //var instane = new intrinio-sdk.FilingSummary();
       //expect(instance).to.be();
     });
 

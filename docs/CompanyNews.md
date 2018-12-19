@@ -1,4 +1,4 @@
-# intrinio.CompanyNews
+# intrinio-sdk.CompanyNews
 
 ## Properties
 Name | Type | Description | Notes

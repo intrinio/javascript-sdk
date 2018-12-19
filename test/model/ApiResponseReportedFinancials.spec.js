@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.ApiResponseReportedFinancials();
+    instance = new intrinio-sdk.ApiResponseReportedFinancials();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('ApiResponseReportedFinancials', function() {
     it('should create an instance of ApiResponseReportedFinancials', function() {
       // uncomment below and update the code to test ApiResponseReportedFinancials
-      //var instane = new intrinio.ApiResponseReportedFinancials();
-      //expect(instance).to.be.a(intrinio.ApiResponseReportedFinancials);
+      //var instane = new intrinio-sdk.ApiResponseReportedFinancials();
+      //expect(instance).to.be.a(intrinio-sdk.ApiResponseReportedFinancials);
     });
 
     it('should have the property reportedFinancials (base name: "reported_financials")', function() {
       // uncomment below and update the code to test the property reportedFinancials
-      //var instane = new intrinio.ApiResponseReportedFinancials();
+      //var instane = new intrinio-sdk.ApiResponseReportedFinancials();
       //expect(instance).to.be();
     });
 
     it('should have the property fundamental (base name: "fundamental")', function() {
       // uncomment below and update the code to test the property fundamental
-      //var instane = new intrinio.ApiResponseReportedFinancials();
+      //var instane = new intrinio-sdk.ApiResponseReportedFinancials();
       //expect(instance).to.be();
     });
 
     it('should have the property nextPage (base name: "next_page")', function() {
       // uncomment below and update the code to test the property nextPage
-      //var instane = new intrinio.ApiResponseReportedFinancials();
+      //var instane = new intrinio-sdk.ApiResponseReportedFinancials();
       //expect(instance).to.be();
     });
 

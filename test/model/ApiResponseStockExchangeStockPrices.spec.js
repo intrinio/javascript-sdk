@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.ApiResponseStockExchangeStockPrices();
+    instance = new intrinio-sdk.ApiResponseStockExchangeStockPrices();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('ApiResponseStockExchangeStockPrices', function() {
     it('should create an instance of ApiResponseStockExchangeStockPrices', function() {
       // uncomment below and update the code to test ApiResponseStockExchangeStockPrices
-      //var instane = new intrinio.ApiResponseStockExchangeStockPrices();
-      //expect(instance).to.be.a(intrinio.ApiResponseStockExchangeStockPrices);
+      //var instane = new intrinio-sdk.ApiResponseStockExchangeStockPrices();
+      //expect(instance).to.be.a(intrinio-sdk.ApiResponseStockExchangeStockPrices);
     });
 
     it('should have the property stockPrices (base name: "stock_prices")', function() {
       // uncomment below and update the code to test the property stockPrices
-      //var instane = new intrinio.ApiResponseStockExchangeStockPrices();
+      //var instane = new intrinio-sdk.ApiResponseStockExchangeStockPrices();
       //expect(instance).to.be();
     });
 
     it('should have the property stockExchange (base name: "stock_exchange")', function() {
       // uncomment below and update the code to test the property stockExchange
-      //var instane = new intrinio.ApiResponseStockExchangeStockPrices();
+      //var instane = new intrinio-sdk.ApiResponseStockExchangeStockPrices();
       //expect(instance).to.be();
     });
 
     it('should have the property nextPage (base name: "next_page")', function() {
       // uncomment below and update the code to test the property nextPage
-      //var instane = new intrinio.ApiResponseStockExchangeStockPrices();
+      //var instane = new intrinio-sdk.ApiResponseStockExchangeStockPrices();
       //expect(instance).to.be();
     });
 

@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.FundamentalSummary();
+    instance = new intrinio-sdk.FundamentalSummary();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,55 +52,55 @@
   describe('FundamentalSummary', function() {
     it('should create an instance of FundamentalSummary', function() {
       // uncomment below and update the code to test FundamentalSummary
-      //var instane = new intrinio.FundamentalSummary();
-      //expect(instance).to.be.a(intrinio.FundamentalSummary);
+      //var instane = new intrinio-sdk.FundamentalSummary();
+      //expect(instance).to.be.a(intrinio-sdk.FundamentalSummary);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new intrinio.FundamentalSummary();
+      //var instane = new intrinio-sdk.FundamentalSummary();
       //expect(instance).to.be();
     });
 
     it('should have the property statementCode (base name: "statement_code")', function() {
       // uncomment below and update the code to test the property statementCode
-      //var instane = new intrinio.FundamentalSummary();
+      //var instane = new intrinio-sdk.FundamentalSummary();
       //expect(instance).to.be();
     });
 
     it('should have the property fiscalYear (base name: "fiscal_year")', function() {
       // uncomment below and update the code to test the property fiscalYear
-      //var instane = new intrinio.FundamentalSummary();
+      //var instane = new intrinio-sdk.FundamentalSummary();
       //expect(instance).to.be();
     });
 
     it('should have the property fiscalPeriod (base name: "fiscal_period")', function() {
       // uncomment below and update the code to test the property fiscalPeriod
-      //var instane = new intrinio.FundamentalSummary();
+      //var instane = new intrinio-sdk.FundamentalSummary();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new intrinio.FundamentalSummary();
+      //var instane = new intrinio-sdk.FundamentalSummary();
       //expect(instance).to.be();
     });
 
     it('should have the property startDate (base name: "start_date")', function() {
       // uncomment below and update the code to test the property startDate
-      //var instane = new intrinio.FundamentalSummary();
+      //var instane = new intrinio-sdk.FundamentalSummary();
       //expect(instance).to.be();
     });
 
     it('should have the property endDate (base name: "end_date")', function() {
       // uncomment below and update the code to test the property endDate
-      //var instane = new intrinio.FundamentalSummary();
+      //var instane = new intrinio-sdk.FundamentalSummary();
       //expect(instance).to.be();
     });
 
     it('should have the property filingDate (base name: "filing_date")', function() {
       // uncomment below and update the code to test the property filingDate
-      //var instane = new intrinio.FundamentalSummary();
+      //var instane = new intrinio-sdk.FundamentalSummary();
       //expect(instance).to.be();
     });
 

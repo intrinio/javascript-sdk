@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.ApiResponseSecurityStockPrices();
+    instance = new intrinio-sdk.ApiResponseSecurityStockPrices();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('ApiResponseSecurityStockPrices', function() {
     it('should create an instance of ApiResponseSecurityStockPrices', function() {
       // uncomment below and update the code to test ApiResponseSecurityStockPrices
-      //var instane = new intrinio.ApiResponseSecurityStockPrices();
-      //expect(instance).to.be.a(intrinio.ApiResponseSecurityStockPrices);
+      //var instane = new intrinio-sdk.ApiResponseSecurityStockPrices();
+      //expect(instance).to.be.a(intrinio-sdk.ApiResponseSecurityStockPrices);
     });
 
     it('should have the property stockPrices (base name: "stock_prices")', function() {
       // uncomment below and update the code to test the property stockPrices
-      //var instane = new intrinio.ApiResponseSecurityStockPrices();
+      //var instane = new intrinio-sdk.ApiResponseSecurityStockPrices();
       //expect(instance).to.be();
     });
 
     it('should have the property security (base name: "security")', function() {
       // uncomment below and update the code to test the property security
-      //var instane = new intrinio.ApiResponseSecurityStockPrices();
+      //var instane = new intrinio-sdk.ApiResponseSecurityStockPrices();
       //expect(instance).to.be();
     });
 
     it('should have the property nextPage (base name: "next_page")', function() {
       // uncomment below and update the code to test the property nextPage
-      //var instane = new intrinio.ApiResponseSecurityStockPrices();
+      //var instane = new intrinio-sdk.ApiResponseSecurityStockPrices();
       //expect(instance).to.be();
     });
 

@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./HistoricalData'), require('./SecuritySummary'));
   } else {
     // Browser globals (root is window)
-    if (!root.intrinio) {
-      root.intrinio = {};
+    if (!root.intrinio-sdk) {
+      root.intrinio-sdk = {};
     }
-    root.intrinio.ApiResponseSecurityHistoricalData = factory(root.intrinio.ApiClient, root.intrinio.HistoricalData, root.intrinio.SecuritySummary);
+    root.intrinio-sdk.ApiResponseSecurityHistoricalData = factory(root.intrinio-sdk.ApiClient, root.intrinio-sdk.HistoricalData, root.intrinio-sdk.SecuritySummary);
   }
 }(this, function(ApiClient, HistoricalData, SecuritySummary) {
   'use strict';

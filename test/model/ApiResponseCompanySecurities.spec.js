@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.ApiResponseCompanySecurities();
+    instance = new intrinio-sdk.ApiResponseCompanySecurities();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('ApiResponseCompanySecurities', function() {
     it('should create an instance of ApiResponseCompanySecurities', function() {
       // uncomment below and update the code to test ApiResponseCompanySecurities
-      //var instane = new intrinio.ApiResponseCompanySecurities();
-      //expect(instance).to.be.a(intrinio.ApiResponseCompanySecurities);
+      //var instane = new intrinio-sdk.ApiResponseCompanySecurities();
+      //expect(instance).to.be.a(intrinio-sdk.ApiResponseCompanySecurities);
     });
 
     it('should have the property securities (base name: "securities")', function() {
       // uncomment below and update the code to test the property securities
-      //var instane = new intrinio.ApiResponseCompanySecurities();
+      //var instane = new intrinio-sdk.ApiResponseCompanySecurities();
       //expect(instance).to.be();
     });
 
     it('should have the property company (base name: "company")', function() {
       // uncomment below and update the code to test the property company
-      //var instane = new intrinio.ApiResponseCompanySecurities();
+      //var instane = new intrinio-sdk.ApiResponseCompanySecurities();
       //expect(instance).to.be();
     });
 
     it('should have the property nextPage (base name: "next_page")', function() {
       // uncomment below and update the code to test the property nextPage
-      //var instane = new intrinio.ApiResponseCompanySecurities();
+      //var instane = new intrinio-sdk.ApiResponseCompanySecurities();
       //expect(instance).to.be();
     });
 

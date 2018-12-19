@@ -1,4 +1,4 @@
-# intrinio.StockExchange
+# intrinio-sdk.StockExchange
 
 ## Properties
 Name | Type | Description | Notes

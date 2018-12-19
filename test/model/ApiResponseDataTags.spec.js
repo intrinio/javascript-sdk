@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.ApiResponseDataTags();
+    instance = new intrinio-sdk.ApiResponseDataTags();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('ApiResponseDataTags', function() {
     it('should create an instance of ApiResponseDataTags', function() {
       // uncomment below and update the code to test ApiResponseDataTags
-      //var instane = new intrinio.ApiResponseDataTags();
-      //expect(instance).to.be.a(intrinio.ApiResponseDataTags);
+      //var instane = new intrinio-sdk.ApiResponseDataTags();
+      //expect(instance).to.be.a(intrinio-sdk.ApiResponseDataTags);
     });
 
     it('should have the property tags (base name: "tags")', function() {
       // uncomment below and update the code to test the property tags
-      //var instane = new intrinio.ApiResponseDataTags();
+      //var instane = new intrinio-sdk.ApiResponseDataTags();
       //expect(instance).to.be();
     });
 
     it('should have the property nextPage (base name: "next_page")', function() {
       // uncomment below and update the code to test the property nextPage
-      //var instane = new intrinio.ApiResponseDataTags();
+      //var instane = new intrinio-sdk.ApiResponseDataTags();
       //expect(instance).to.be();
     });
 

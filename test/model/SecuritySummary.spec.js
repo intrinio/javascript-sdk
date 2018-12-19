@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.SecuritySummary();
+    instance = new intrinio-sdk.SecuritySummary();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,67 +52,67 @@
   describe('SecuritySummary', function() {
     it('should create an instance of SecuritySummary', function() {
       // uncomment below and update the code to test SecuritySummary
-      //var instane = new intrinio.SecuritySummary();
-      //expect(instance).to.be.a(intrinio.SecuritySummary);
+      //var instane = new intrinio-sdk.SecuritySummary();
+      //expect(instance).to.be.a(intrinio-sdk.SecuritySummary);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new intrinio.SecuritySummary();
+      //var instane = new intrinio-sdk.SecuritySummary();
       //expect(instance).to.be();
     });
 
     it('should have the property companyId (base name: "company_id")', function() {
       // uncomment below and update the code to test the property companyId
-      //var instane = new intrinio.SecuritySummary();
+      //var instane = new intrinio-sdk.SecuritySummary();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new intrinio.SecuritySummary();
+      //var instane = new intrinio-sdk.SecuritySummary();
       //expect(instance).to.be();
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instane = new intrinio.SecuritySummary();
+      //var instane = new intrinio-sdk.SecuritySummary();
       //expect(instance).to.be();
     });
 
     it('should have the property currency (base name: "currency")', function() {
       // uncomment below and update the code to test the property currency
-      //var instane = new intrinio.SecuritySummary();
+      //var instane = new intrinio-sdk.SecuritySummary();
       //expect(instance).to.be();
     });
 
     it('should have the property ticker (base name: "ticker")', function() {
       // uncomment below and update the code to test the property ticker
-      //var instane = new intrinio.SecuritySummary();
+      //var instane = new intrinio-sdk.SecuritySummary();
       //expect(instance).to.be();
     });
 
     it('should have the property compositeTicker (base name: "composite_ticker")', function() {
       // uncomment below and update the code to test the property compositeTicker
-      //var instane = new intrinio.SecuritySummary();
+      //var instane = new intrinio-sdk.SecuritySummary();
       //expect(instance).to.be();
     });
 
     it('should have the property figi (base name: "figi")', function() {
       // uncomment below and update the code to test the property figi
-      //var instane = new intrinio.SecuritySummary();
+      //var instane = new intrinio-sdk.SecuritySummary();
       //expect(instance).to.be();
     });
 
     it('should have the property compositeFigi (base name: "composite_figi")', function() {
       // uncomment below and update the code to test the property compositeFigi
-      //var instane = new intrinio.SecuritySummary();
+      //var instane = new intrinio-sdk.SecuritySummary();
       //expect(instance).to.be();
     });
 
     it('should have the property shareClassFigi (base name: "share_class_figi")', function() {
       // uncomment below and update the code to test the property shareClassFigi
-      //var instane = new intrinio.SecuritySummary();
+      //var instane = new intrinio-sdk.SecuritySummary();
       //expect(instance).to.be();
     });
 

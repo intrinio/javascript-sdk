@@ -1,4 +1,4 @@
-# intrinio.SecurityScreenGroup
+# intrinio-sdk.SecurityScreenGroup
 
 ## Properties
 Name | Type | Description | Notes

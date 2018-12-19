@@ -1,4 +1,4 @@
-# intrinio.SecurityApi
+# intrinio-sdk.SecurityApi
 
 All URIs are relative to *https://api-v2.intrinio.com*
 
@@ -23,10 +23,10 @@ Get All Securiites
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var security_api = new intrinio.SecurityApi();
+var security_api = new intrinio-sdk.SecurityApi();
 
 var opts = { 
   'nextPage': null // String | Gets the next page of data from a previous API call
@@ -57,10 +57,10 @@ Get a Security by ID
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var security_api = new intrinio.SecurityApi();
+var security_api = new intrinio-sdk.SecurityApi();
 
 var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
@@ -92,10 +92,10 @@ Returns a numeric value for the given &#x60;tag&#x60; for the Security with the 
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var security_api = new intrinio.SecurityApi();
+var security_api = new intrinio-sdk.SecurityApi();
 
 var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
@@ -130,10 +130,10 @@ Returns a text value for the given &#x60;tag&#x60; for the Security with the giv
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var security_api = new intrinio.SecurityApi();
+var security_api = new intrinio-sdk.SecurityApi();
 
 var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
@@ -168,10 +168,10 @@ Returns historical values for the given &#x60;tag&#x60; and the Security with th
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var security_api = new intrinio.SecurityApi();
+var security_api = new intrinio-sdk.SecurityApi();
 
 var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
@@ -218,10 +218,10 @@ Return stock price adjustments for the Security with the given &#x60;identifier&
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var security_api = new intrinio.SecurityApi();
+var security_api = new intrinio-sdk.SecurityApi();
 
 var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
@@ -261,10 +261,10 @@ Return stock prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var security_api = new intrinio.SecurityApi();
+var security_api = new intrinio-sdk.SecurityApi();
 
 var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
@@ -306,13 +306,13 @@ Screen securities using complex logic
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var security_api = new intrinio.SecurityApi();
+var security_api = new intrinio-sdk.SecurityApi();
 
 var opts = { 
-  'logic': new intrinio.SecurityScreenGroup(), // SecurityScreenGroup | The logic to screen with, consisting of operators, clauses, and nested groups.<br/> See <a href=\"/documentation/screener_v2\" target=\"_blank\">screener documentation</a> for details on how to construct conditions.
+  'logic': new intrinio-sdk.SecurityScreenGroup(), // SecurityScreenGroup | The logic to screen with, consisting of operators, clauses, and nested groups.<br/> See <a href=\"/documentation/screener_v2\" target=\"_blank\">screener documentation</a> for details on how to construct conditions.
   'orderColumn': "orderColumn_example", // String | Results returned sorted by this column
   'orderDirection': "asc", // String | Sort order to use with the order_column
   'primaryOnly': false // Boolean | Return only primary securities
@@ -348,10 +348,10 @@ Searches for Securities matching the text &#x60;query&#x60;
 
 ### Example
 ```javascript
-var intrinio = require('intrinio');
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinio-sdk = require('intrinio-sdk');
+intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var security_api = new intrinio.SecurityApi();
+var security_api = new intrinio-sdk.SecurityApi();
 
 var query = "Apple"; // String | 
 

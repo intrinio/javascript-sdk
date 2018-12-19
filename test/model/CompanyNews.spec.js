@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.CompanyNews();
+    instance = new intrinio-sdk.CompanyNews();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,43 +52,43 @@
   describe('CompanyNews', function() {
     it('should create an instance of CompanyNews', function() {
       // uncomment below and update the code to test CompanyNews
-      //var instane = new intrinio.CompanyNews();
-      //expect(instance).to.be.a(intrinio.CompanyNews);
+      //var instane = new intrinio-sdk.CompanyNews();
+      //expect(instance).to.be.a(intrinio-sdk.CompanyNews);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new intrinio.CompanyNews();
+      //var instane = new intrinio-sdk.CompanyNews();
       //expect(instance).to.be();
     });
 
     it('should have the property title (base name: "title")', function() {
       // uncomment below and update the code to test the property title
-      //var instane = new intrinio.CompanyNews();
+      //var instane = new intrinio-sdk.CompanyNews();
       //expect(instance).to.be();
     });
 
     it('should have the property publicationDate (base name: "publication_date")', function() {
       // uncomment below and update the code to test the property publicationDate
-      //var instane = new intrinio.CompanyNews();
+      //var instane = new intrinio-sdk.CompanyNews();
       //expect(instance).to.be();
     });
 
     it('should have the property url (base name: "url")', function() {
       // uncomment below and update the code to test the property url
-      //var instane = new intrinio.CompanyNews();
+      //var instane = new intrinio-sdk.CompanyNews();
       //expect(instance).to.be();
     });
 
     it('should have the property summary (base name: "summary")', function() {
       // uncomment below and update the code to test the property summary
-      //var instane = new intrinio.CompanyNews();
+      //var instane = new intrinio-sdk.CompanyNews();
       //expect(instance).to.be();
     });
 
     it('should have the property company (base name: "company")', function() {
       // uncomment below and update the code to test the property company
-      //var instane = new intrinio.CompanyNews();
+      //var instane = new intrinio-sdk.CompanyNews();
       //expect(instance).to.be();
     });
 

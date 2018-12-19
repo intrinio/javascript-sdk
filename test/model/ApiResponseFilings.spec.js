@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.ApiResponseFilings();
+    instance = new intrinio-sdk.ApiResponseFilings();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('ApiResponseFilings', function() {
     it('should create an instance of ApiResponseFilings', function() {
       // uncomment below and update the code to test ApiResponseFilings
-      //var instane = new intrinio.ApiResponseFilings();
-      //expect(instance).to.be.a(intrinio.ApiResponseFilings);
+      //var instane = new intrinio-sdk.ApiResponseFilings();
+      //expect(instance).to.be.a(intrinio-sdk.ApiResponseFilings);
     });
 
     it('should have the property filings (base name: "filings")', function() {
       // uncomment below and update the code to test the property filings
-      //var instane = new intrinio.ApiResponseFilings();
+      //var instane = new intrinio-sdk.ApiResponseFilings();
       //expect(instance).to.be();
     });
 
     it('should have the property nextPage (base name: "next_page")', function() {
       // uncomment below and update the code to test the property nextPage
-      //var instane = new intrinio.ApiResponseFilings();
+      //var instane = new intrinio-sdk.ApiResponseFilings();
       //expect(instance).to.be();
     });
 

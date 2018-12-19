@@ -1,4 +1,4 @@
-# intrinio.StockMarketIndex
+# intrinio-sdk.StockMarketIndex
 
 ## Properties
 Name | Type | Description | Notes

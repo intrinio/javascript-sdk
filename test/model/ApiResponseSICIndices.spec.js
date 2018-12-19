@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.intrinio);
+    factory(root.expect, root.intrinio-sdk);
   }
-}(this, function(expect, intrinio) {
+}(this, function(expect, intrinio-sdk) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new intrinio.ApiResponseSICIndices();
+    instance = new intrinio-sdk.ApiResponseSICIndices();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('ApiResponseSICIndices', function() {
     it('should create an instance of ApiResponseSICIndices', function() {
       // uncomment below and update the code to test ApiResponseSICIndices
-      //var instane = new intrinio.ApiResponseSICIndices();
-      //expect(instance).to.be.a(intrinio.ApiResponseSICIndices);
+      //var instane = new intrinio-sdk.ApiResponseSICIndices();
+      //expect(instance).to.be.a(intrinio-sdk.ApiResponseSICIndices);
     });
 
     it('should have the property indices (base name: "indices")', function() {
       // uncomment below and update the code to test the property indices
-      //var instane = new intrinio.ApiResponseSICIndices();
+      //var instane = new intrinio-sdk.ApiResponseSICIndices();
       //expect(instance).to.be();
     });
 
     it('should have the property nextPage (base name: "next_page")', function() {
       // uncomment below and update the code to test the property nextPage
-      //var instane = new intrinio.ApiResponseSICIndices();
+      //var instane = new intrinio-sdk.ApiResponseSICIndices();
       //expect(instance).to.be();
     });
 

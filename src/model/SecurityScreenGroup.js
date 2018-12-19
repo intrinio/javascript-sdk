@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./SecurityScreenClause'), require('./SecurityScreenGroup'));
   } else {
     // Browser globals (root is window)
-    if (!root.intrinio) {
-      root.intrinio = {};
+    if (!root.intrinio-sdk) {
+      root.intrinio-sdk = {};
     }
-    root.intrinio.SecurityScreenGroup = factory(root.intrinio.ApiClient, root.intrinio.SecurityScreenClause, root.intrinio.SecurityScreenGroup);
+    root.intrinio-sdk.SecurityScreenGroup = factory(root.intrinio-sdk.ApiClient, root.intrinio-sdk.SecurityScreenClause, root.intrinio-sdk.SecurityScreenGroup);
   }
 }(this, function(ApiClient, SecurityScreenClause, SecurityScreenGroup) {
   'use strict';

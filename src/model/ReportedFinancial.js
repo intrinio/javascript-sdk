@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./ReportedTag'));
   } else {
     // Browser globals (root is window)
-    if (!root.intrinio) {
-      root.intrinio = {};
+    if (!root.intrinio-sdk) {
+      root.intrinio-sdk = {};
     }
-    root.intrinio.ReportedFinancial = factory(root.intrinio.ApiClient, root.intrinio.ReportedTag);
+    root.intrinio-sdk.ReportedFinancial = factory(root.intrinio-sdk.ApiClient, root.intrinio-sdk.ReportedTag);
   }
 }(this, function(ApiClient, ReportedTag) {
   'use strict';
