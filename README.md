@@ -45,10 +45,10 @@ Code examples for Intrinio SDKs are available at https://github.com/intrinio/sdk
 Please follow the [installation](#installation) instructions and execute the following JS code:
 
 ```javascript
-var IntrinioClient = require('intrinio-sdk');
+var intrinioSDK = require('intrinio-sdk');
 const util = require('util')
  
-intrinio.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
  
 var company_api = new IntrinioClient.CompanyApi()
  
