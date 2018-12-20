@@ -1,4 +1,4 @@
-# intrinio-sdk.DataTagSummary
+# intrinioSDK.DataTagSummary
 
 ## Properties
 Name | Type | Description | Notes

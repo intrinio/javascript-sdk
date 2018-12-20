@@ -1,4 +1,4 @@
-# intrinio-sdk.CompanyFiling
+# intrinioSDK.CompanyFiling
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# intrinio-sdk.SICIndex
+# intrinioSDK.SICIndex
 
 ## Properties
 Name | Type | Description | Notes

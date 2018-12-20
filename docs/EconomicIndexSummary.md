@@ -1,4 +1,4 @@
-# intrinio-sdk.EconomicIndexSummary
+# intrinioSDK.EconomicIndexSummary
 
 ## Properties
 Name | Type | Description | Notes

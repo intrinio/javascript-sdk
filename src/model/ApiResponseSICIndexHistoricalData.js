@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./HistoricalData'), require('./SICIndex'));
   } else {
     // Browser globals (root is window)
-    if (!root.intrinio-sdk) {
-      root.intrinio-sdk = {};
+    if (!root.intrinioSDK) {
+      root.intrinioSDK = {};
     }
-    root.intrinio-sdk.ApiResponseSICIndexHistoricalData = factory(root.intrinio-sdk.ApiClient, root.intrinio-sdk.HistoricalData, root.intrinio-sdk.SICIndex);
+    root.intrinioSDK.ApiResponseSICIndexHistoricalData = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.HistoricalData, root.intrinioSDK.SICIndex);
   }
 }(this, function(ApiClient, HistoricalData, SICIndex) {
   'use strict';

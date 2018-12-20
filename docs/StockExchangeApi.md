@@ -1,4 +1,4 @@
-# intrinio-sdk.StockExchangeApi
+# intrinioSDK.StockExchangeApi
 
 All URIs are relative to *https://api-v2.intrinio.com*
 
@@ -22,10 +22,10 @@ Return Stock Exchanges matching the given filters
 
 ### Example
 ```javascript
-var intrinio-sdk = require('intrinio-sdk');
-intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var stockExchange_api = new intrinio-sdk.StockExchangeApi();
+var stockExchange_api = new intrinioSDK.StockExchangeApi();
 
 var opts = { 
   'city': "city_example", // String | Filter by city
@@ -62,10 +62,10 @@ Return All Stock Exchanges
 
 ### Example
 ```javascript
-var intrinio-sdk = require('intrinio-sdk');
-intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var stockExchange_api = new intrinio-sdk.StockExchangeApi();
+var stockExchange_api = new intrinioSDK.StockExchangeApi();
 
 stockExchange_api.getAllStockExchanges().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -89,10 +89,10 @@ Get Stock Exchange by ID
 
 ### Example
 ```javascript
-var intrinio-sdk = require('intrinio-sdk');
-intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var stockExchange_api = new intrinio-sdk.StockExchangeApi();
+var stockExchange_api = new intrinioSDK.StockExchangeApi();
 
 var identifier = "XSHG"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
@@ -124,10 +124,10 @@ Return stock price adjustments for the Stock Exchange with the given &#x60;ident
 
 ### Example
 ```javascript
-var intrinio-sdk = require('intrinio-sdk');
-intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var stockExchange_api = new intrinio-sdk.StockExchangeApi();
+var stockExchange_api = new intrinioSDK.StockExchangeApi();
 
 var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
@@ -165,10 +165,10 @@ Return daily Stock Prices for Securities on the Stock Exchange with &#x60;identi
 
 ### Example
 ```javascript
-var intrinio-sdk = require('intrinio-sdk');
-intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var stockExchange_api = new intrinio-sdk.StockExchangeApi();
+var stockExchange_api = new intrinioSDK.StockExchangeApi();
 
 var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
@@ -206,10 +206,10 @@ Return Securities traded on the Stock Exchange with &#x60;identifier&#x60;
 
 ### Example
 ```javascript
-var intrinio-sdk = require('intrinio-sdk');
-intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var stockExchange_api = new intrinio-sdk.StockExchangeApi();
+var stockExchange_api = new intrinioSDK.StockExchangeApi();
 
 var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 

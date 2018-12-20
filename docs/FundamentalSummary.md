@@ -1,4 +1,4 @@
-# intrinio-sdk.FundamentalSummary
+# intrinioSDK.FundamentalSummary
 
 ## Properties
 Name | Type | Description | Notes

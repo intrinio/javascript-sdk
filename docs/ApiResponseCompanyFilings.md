@@ -1,4 +1,4 @@
-# intrinio-sdk.ApiResponseCompanyFilings
+# intrinioSDK.ApiResponseCompanyFilings
 
 ## Properties
 Name | Type | Description | Notes

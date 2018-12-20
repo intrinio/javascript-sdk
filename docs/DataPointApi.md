@@ -1,4 +1,4 @@
-# intrinio-sdk.DataPointApi
+# intrinioSDK.DataPointApi
 
 All URIs are relative to *https://api-v2.intrinio.com*
 
@@ -18,10 +18,10 @@ Returns a numeric value for the given &#x60;tag&#x60; and the entity with the gi
 
 ### Example
 ```javascript
-var intrinio-sdk = require('intrinio-sdk');
-intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var dataPoint_api = new intrinio-sdk.DataPointApi();
+var dataPoint_api = new intrinioSDK.DataPointApi();
 
 var identifier = "AAPL"; // String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
 
@@ -56,10 +56,10 @@ Returns a text value for the given &#x60;tag&#x60; and the entity with the given
 
 ### Example
 ```javascript
-var intrinio-sdk = require('intrinio-sdk');
-intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var dataPoint_api = new intrinio-sdk.DataPointApi();
+var dataPoint_api = new intrinioSDK.DataPointApi();
 
 var identifier = "AAPL"; // String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
 

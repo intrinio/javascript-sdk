@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./StockMarketIndexSummary'));
   } else {
     // Browser globals (root is window)
-    if (!root.intrinio-sdk) {
-      root.intrinio-sdk = {};
+    if (!root.intrinioSDK) {
+      root.intrinioSDK = {};
     }
-    root.intrinio-sdk.ApiResponseStockMarketIndices = factory(root.intrinio-sdk.ApiClient, root.intrinio-sdk.StockMarketIndexSummary);
+    root.intrinioSDK.ApiResponseStockMarketIndices = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.StockMarketIndexSummary);
   }
 }(this, function(ApiClient, StockMarketIndexSummary) {
   'use strict';

@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/ApiResponseCompanies'), require('../model/ApiResponseCompanyFilings'), require('../model/ApiResponseCompanyFundamentals'), require('../model/ApiResponseCompanyHistoricalData'), require('../model/ApiResponseCompanyNews'), require('../model/ApiResponseCompanySecurities'), require('../model/ApiResponseNews'), require('../model/Company'), require('../model/Fundamental'));
   } else {
     // Browser globals (root is window)
-    if (!root.intrinio-sdk) {
-      root.intrinio-sdk = {};
+    if (!root.intrinioSDK) {
+      root.intrinioSDK = {};
     }
-    root.intrinio-sdk.CompanyApi = factory(root.intrinio-sdk.ApiClient, root.intrinio-sdk.ApiResponseCompanies, root.intrinio-sdk.ApiResponseCompanyFilings, root.intrinio-sdk.ApiResponseCompanyFundamentals, root.intrinio-sdk.ApiResponseCompanyHistoricalData, root.intrinio-sdk.ApiResponseCompanyNews, root.intrinio-sdk.ApiResponseCompanySecurities, root.intrinio-sdk.ApiResponseNews, root.intrinio-sdk.Company, root.intrinio-sdk.Fundamental);
+    root.intrinioSDK.CompanyApi = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.ApiResponseCompanies, root.intrinioSDK.ApiResponseCompanyFilings, root.intrinioSDK.ApiResponseCompanyFundamentals, root.intrinioSDK.ApiResponseCompanyHistoricalData, root.intrinioSDK.ApiResponseCompanyNews, root.intrinioSDK.ApiResponseCompanySecurities, root.intrinioSDK.ApiResponseNews, root.intrinioSDK.Company, root.intrinioSDK.Fundamental);
   }
 }(this, function(ApiClient, ApiResponseCompanies, ApiResponseCompanyFilings, ApiResponseCompanyFundamentals, ApiResponseCompanyHistoricalData, ApiResponseCompanyNews, ApiResponseCompanySecurities, ApiResponseNews, Company, Fundamental) {
   'use strict';

@@ -1,4 +1,4 @@
-# intrinio-sdk.ApiResponseSICIndices
+# intrinioSDK.ApiResponseSICIndices
 
 ## Properties
 Name | Type | Description | Notes

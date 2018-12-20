@@ -1,4 +1,4 @@
-# intrinio-sdk.ApiResponseSecurities
+# intrinioSDK.ApiResponseSecurities
 
 ## Properties
 Name | Type | Description | Notes

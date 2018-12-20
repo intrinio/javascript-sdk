@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./StockExchange'));
   } else {
     // Browser globals (root is window)
-    if (!root.intrinio-sdk) {
-      root.intrinio-sdk = {};
+    if (!root.intrinioSDK) {
+      root.intrinioSDK = {};
     }
-    root.intrinio-sdk.ApiResponseStockExchanges = factory(root.intrinio-sdk.ApiClient, root.intrinio-sdk.StockExchange);
+    root.intrinioSDK.ApiResponseStockExchanges = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.StockExchange);
   }
 }(this, function(ApiClient, StockExchange) {
   'use strict';

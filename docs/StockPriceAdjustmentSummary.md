@@ -1,4 +1,4 @@
-# intrinio-sdk.StockPriceAdjustmentSummary
+# intrinioSDK.StockPriceAdjustmentSummary
 
 ## Properties
 Name | Type | Description | Notes

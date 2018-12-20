@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Fundamental'), require('./ReportedFinancial'));
   } else {
     // Browser globals (root is window)
-    if (!root.intrinio-sdk) {
-      root.intrinio-sdk = {};
+    if (!root.intrinioSDK) {
+      root.intrinioSDK = {};
     }
-    root.intrinio-sdk.ApiResponseReportedFinancials = factory(root.intrinio-sdk.ApiClient, root.intrinio-sdk.Fundamental, root.intrinio-sdk.ReportedFinancial);
+    root.intrinioSDK.ApiResponseReportedFinancials = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.Fundamental, root.intrinioSDK.ReportedFinancial);
   }
 }(this, function(ApiClient, Fundamental, ReportedFinancial) {
   'use strict';

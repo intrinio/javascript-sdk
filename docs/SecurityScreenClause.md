@@ -1,4 +1,4 @@
-# intrinio-sdk.SecurityScreenClause
+# intrinioSDK.SecurityScreenClause
 
 ## Properties
 Name | Type | Description | Notes

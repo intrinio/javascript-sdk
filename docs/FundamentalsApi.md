@@ -1,4 +1,4 @@
-# intrinio-sdk.FundamentalsApi
+# intrinioSDK.FundamentalsApi
 
 All URIs are relative to *https://api-v2.intrinio.com*
 
@@ -20,10 +20,10 @@ Retrieves detailed fundamental data for the given &#x60;fundamental_id&#x60;.
 
 ### Example
 ```javascript
-var intrinio-sdk = require('intrinio-sdk');
-intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var fundamentals_api = new intrinio-sdk.FundamentalsApi();
+var fundamentals_api = new intrinioSDK.FundamentalsApi();
 
 var id = "fun_ge9LlE"; // String | The Intrinio ID for the Fundamental
 
@@ -55,10 +55,10 @@ Returns the As-Reported Financials directly from the financial statements of the
 
 ### Example
 ```javascript
-var intrinio-sdk = require('intrinio-sdk');
-intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var fundamentals_api = new intrinio-sdk.FundamentalsApi();
+var fundamentals_api = new intrinioSDK.FundamentalsApi();
 
 var id = "fun_ge9LlE"; // String | The Intrinio ID for the Fundamental
 
@@ -90,10 +90,10 @@ Returns professional-grade historical financial data. This data is standardized,
 
 ### Example
 ```javascript
-var intrinio-sdk = require('intrinio-sdk');
-intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var fundamentals_api = new intrinio-sdk.FundamentalsApi();
+var fundamentals_api = new intrinioSDK.FundamentalsApi();
 
 var id = "fun_ge9LlE"; // String | The Intrinio ID for the Fundamental
 
@@ -125,10 +125,10 @@ Returns the Fundamental for the Company with the given &#x60;identifier&#x60; an
 
 ### Example
 ```javascript
-var intrinio-sdk = require('intrinio-sdk');
-intrinio-sdk.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var fundamentals_api = new intrinio-sdk.FundamentalsApi();
+var fundamentals_api = new intrinioSDK.FundamentalsApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 

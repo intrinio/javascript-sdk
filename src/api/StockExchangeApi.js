@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/ApiResponseStockExchangeSecurities'), require('../model/ApiResponseStockExchangeStockPriceAdjustments'), require('../model/ApiResponseStockExchangeStockPrices'), require('../model/ApiResponseStockExchanges'), require('../model/StockExchange'));
   } else {
     // Browser globals (root is window)
-    if (!root.intrinio-sdk) {
-      root.intrinio-sdk = {};
+    if (!root.intrinioSDK) {
+      root.intrinioSDK = {};
     }
-    root.intrinio-sdk.StockExchangeApi = factory(root.intrinio-sdk.ApiClient, root.intrinio-sdk.ApiResponseStockExchangeSecurities, root.intrinio-sdk.ApiResponseStockExchangeStockPriceAdjustments, root.intrinio-sdk.ApiResponseStockExchangeStockPrices, root.intrinio-sdk.ApiResponseStockExchanges, root.intrinio-sdk.StockExchange);
+    root.intrinioSDK.StockExchangeApi = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.ApiResponseStockExchangeSecurities, root.intrinioSDK.ApiResponseStockExchangeStockPriceAdjustments, root.intrinioSDK.ApiResponseStockExchangeStockPrices, root.intrinioSDK.ApiResponseStockExchanges, root.intrinioSDK.StockExchange);
   }
 }(this, function(ApiClient, ApiResponseStockExchangeSecurities, ApiResponseStockExchangeStockPriceAdjustments, ApiResponseStockExchangeStockPrices, ApiResponseStockExchanges, StockExchange) {
   'use strict';

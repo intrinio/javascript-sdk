@@ -1,4 +1,4 @@
-# intrinio-sdk.HistoricalData
+# intrinioSDK.HistoricalData
 
 ## Properties
 Name | Type | Description | Notes

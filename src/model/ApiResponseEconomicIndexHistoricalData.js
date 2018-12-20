@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./EconomicIndexSummary'), require('./HistoricalData'));
   } else {
     // Browser globals (root is window)
-    if (!root.intrinio-sdk) {
-      root.intrinio-sdk = {};
+    if (!root.intrinioSDK) {
+      root.intrinioSDK = {};
     }
-    root.intrinio-sdk.ApiResponseEconomicIndexHistoricalData = factory(root.intrinio-sdk.ApiClient, root.intrinio-sdk.EconomicIndexSummary, root.intrinio-sdk.HistoricalData);
+    root.intrinioSDK.ApiResponseEconomicIndexHistoricalData = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.EconomicIndexSummary, root.intrinioSDK.HistoricalData);
   }
 }(this, function(ApiClient, EconomicIndexSummary, HistoricalData) {
   'use strict';

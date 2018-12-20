@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./EconomicIndexSummary'));
   } else {
     // Browser globals (root is window)
-    if (!root.intrinio-sdk) {
-      root.intrinio-sdk = {};
+    if (!root.intrinioSDK) {
+      root.intrinioSDK = {};
     }
-    root.intrinio-sdk.ApiResponseEconomicIndices = factory(root.intrinio-sdk.ApiClient, root.intrinio-sdk.EconomicIndexSummary);
+    root.intrinioSDK.ApiResponseEconomicIndices = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.EconomicIndexSummary);
   }
 }(this, function(ApiClient, EconomicIndexSummary) {
   'use strict';

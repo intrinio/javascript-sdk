@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./CompanyNews'));
   } else {
     // Browser globals (root is window)
-    if (!root.intrinio-sdk) {
-      root.intrinio-sdk = {};
+    if (!root.intrinioSDK) {
+      root.intrinioSDK = {};
     }
-    root.intrinio-sdk.ApiResponseNews = factory(root.intrinio-sdk.ApiClient, root.intrinio-sdk.CompanyNews);
+    root.intrinioSDK.ApiResponseNews = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.CompanyNews);
   }
 }(this, function(ApiClient, CompanyNews) {
   'use strict';

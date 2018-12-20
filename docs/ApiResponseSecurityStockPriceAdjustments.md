@@ -1,4 +1,4 @@
-# intrinio-sdk.ApiResponseSecurityStockPriceAdjustments
+# intrinioSDK.ApiResponseSecurityStockPriceAdjustments
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# intrinio-sdk.Company
+# intrinioSDK.Company
 
 ## Properties
 Name | Type | Description | Notes

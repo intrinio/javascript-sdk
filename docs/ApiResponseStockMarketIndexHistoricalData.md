@@ -1,4 +1,4 @@
-# intrinio-sdk.ApiResponseStockMarketIndexHistoricalData
+# intrinioSDK.ApiResponseStockMarketIndexHistoricalData
 
 ## Properties
 Name | Type | Description | Notes

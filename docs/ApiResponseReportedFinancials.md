@@ -1,4 +1,4 @@
-# intrinio-sdk.ApiResponseReportedFinancials
+# intrinioSDK.ApiResponseReportedFinancials
 
 ## Properties
 Name | Type | Description | Notes

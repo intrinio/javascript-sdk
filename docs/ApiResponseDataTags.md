@@ -1,4 +1,4 @@
-# intrinio-sdk.ApiResponseDataTags
+# intrinioSDK.ApiResponseDataTags
 
 ## Properties
 Name | Type | Description | Notes

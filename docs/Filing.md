@@ -1,4 +1,4 @@
-# intrinio-sdk.Filing
+# intrinioSDK.Filing
 
 ## Properties
 Name | Type | Description | Notes

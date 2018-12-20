@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./DataTag'));
   } else {
     // Browser globals (root is window)
-    if (!root.intrinio-sdk) {
-      root.intrinio-sdk = {};
+    if (!root.intrinioSDK) {
+      root.intrinioSDK = {};
     }
-    root.intrinio-sdk.ApiResponseDataTags = factory(root.intrinio-sdk.ApiClient, root.intrinio-sdk.DataTag);
+    root.intrinioSDK.ApiResponseDataTags = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.DataTag);
   }
 }(this, function(ApiClient, DataTag) {
   'use strict';
