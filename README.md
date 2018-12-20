@@ -10,27 +10,17 @@ Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a 
 
 ## Installation
 
-### For [Node.js](https://nodejs.org/)
+```shell
+npm install intrinio-sdk --save
+```
 
-Install the library using:
+## Installation from Github
 
 ```shell
 npm install intrinio/javascript-sdk --save
 ```
 
-### For browser
-
-The library also works in the browser environment via npm and [browserify](http://browserify.org/). After following the above steps with Node.js and installing browserify with `npm install -g browserify`, perform the following (assuming *main.js* is your entry file, that's to say your javascript file where you actually use this library):
-
-```shell
-browserify main.js > bundle.js
-```
-
-Then include *bundle.js* in the HTML pages.
-
-**NOTE:** For optimal security, make sure to use a _Public_ API key from Intrinio when calling the API from a browser. You can configure a Public API Key to be accessible from the domains of your choosing [by visiting your Account page.](https://intrinio.com/account)
-
-### Webpack Configuration
+## Webpack Configuration
 
 Using Webpack you may encounter the following error: "Module not found: Error: Cannot resolve module", most certainly you should disable AMD loader. Add/merge the following section to your webpack config:
 
