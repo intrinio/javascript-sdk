@@ -33,7 +33,7 @@ Returns Companies matching the specified filters
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinioSDK.CompanyApi();
+var companyAPI = new intrinioSDK.CompanyApi();
 
 var opts = { 
   'lastFilingDate': null, // Date | Last filing date
@@ -45,7 +45,7 @@ var opts = {
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-company_api.filterCompanies(opts).then(function(data) {
+companyAPI.filterCompanies(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -81,7 +81,7 @@ Returns Fundamentals for the Company with the given &#x60;identifier&#x60; and m
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinioSDK.CompanyApi();
+var companyAPI = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
@@ -97,7 +97,7 @@ var opts = {
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-company_api.filterCompanyFundamentals(identifier, opts).then(function(data) {
+companyAPI.filterCompanyFundamentals(identifier, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -134,13 +134,13 @@ Get All Companies
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinioSDK.CompanyApi();
+var companyAPI = new intrinioSDK.CompanyApi();
 
 var opts = { 
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-company_api.getAllCompanies(opts).then(function(data) {
+companyAPI.getAllCompanies(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -170,13 +170,13 @@ Returns all news for all companies
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinioSDK.CompanyApi();
+var companyAPI = new intrinioSDK.CompanyApi();
 
 var opts = { 
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-company_api.getAllCompanyNews(opts).then(function(data) {
+companyAPI.getAllCompanyNews(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -204,12 +204,12 @@ Get a Company by ID
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinioSDK.CompanyApi();
+var companyAPI = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 
-company_api.getCompany(identifier).then(function(data) {
+companyAPI.getCompany(identifier).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -239,14 +239,14 @@ Returns a numeric value for the given &#x60;tag&#x60; for the Company with the g
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinioSDK.CompanyApi();
+var companyAPI = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 var tag = "marketcap"; // String | An Intrinio data tag
 
 
-company_api.getCompanyDataPointNumber(identifier, tag).then(function(data) {
+companyAPI.getCompanyDataPointNumber(identifier, tag).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -277,14 +277,14 @@ Returns a text value for the given &#x60;tag&#x60; for the Company with the give
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinioSDK.CompanyApi();
+var companyAPI = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 var tag = "marketcap"; // String | An Intrinio data tag
 
 
-company_api.getCompanyDataPointText(identifier, tag).then(function(data) {
+companyAPI.getCompanyDataPointText(identifier, tag).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -315,7 +315,7 @@ Returns a complete list of SEC filings for the Company with the given &#x60;iden
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinioSDK.CompanyApi();
+var companyAPI = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
@@ -323,7 +323,7 @@ var opts = {
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-company_api.getCompanyFilings(identifier, opts).then(function(data) {
+companyAPI.getCompanyFilings(identifier, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -354,7 +354,7 @@ Returns all Fundamentals for the Company with the given &#x60;identifier&#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinioSDK.CompanyApi();
+var companyAPI = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
@@ -362,7 +362,7 @@ var opts = {
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-company_api.getCompanyFundamentals(identifier, opts).then(function(data) {
+companyAPI.getCompanyFundamentals(identifier, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -393,7 +393,7 @@ Returns historical values for the given &#x60;tag&#x60; and the Company with the
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinioSDK.CompanyApi();
+var companyAPI = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
@@ -407,7 +407,7 @@ var opts = {
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-company_api.getCompanyHistoricalData(identifier, tag, opts).then(function(data) {
+companyAPI.getCompanyHistoricalData(identifier, tag, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -443,7 +443,7 @@ Returns news for the Company with the given &#x60;identifier&#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinioSDK.CompanyApi();
+var companyAPI = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
@@ -451,7 +451,7 @@ var opts = {
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-company_api.getCompanyNews(identifier, opts).then(function(data) {
+companyAPI.getCompanyNews(identifier, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -482,7 +482,7 @@ Return Securities for the Company with &#x60;identifier&#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinioSDK.CompanyApi();
+var companyAPI = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
@@ -490,7 +490,7 @@ var opts = {
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-company_api.getCompanySecurities(identifier, opts).then(function(data) {
+companyAPI.getCompanySecurities(identifier, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -521,7 +521,7 @@ Returns the Fundamental for the Company with the given &#x60;identifier&#x60; an
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinioSDK.CompanyApi();
+var companyAPI = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
@@ -532,7 +532,7 @@ var fiscalPeriod = "FY"; // String | The fiscal period
 var fiscalYear = 2017; // Number | The fiscal year
 
 
-company_api.lookupCompanyFundamental(identifier, statementCode, fiscalPeriod, fiscalYear).then(function(data) {
+companyAPI.lookupCompanyFundamental(identifier, statementCode, fiscalPeriod, fiscalYear).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -565,12 +565,12 @@ Searches for Companies matching the text &#x60;query&#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var company_api = new intrinioSDK.CompanyApi();
+var companyAPI = new intrinioSDK.CompanyApi();
 
 var query = "Apple"; // String | Search parameters
 
 
-company_api.searchCompanies(query).then(function(data) {
+companyAPI.searchCompanies(query).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);

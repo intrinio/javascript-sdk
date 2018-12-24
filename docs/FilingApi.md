@@ -22,7 +22,7 @@ Returns filings that match the specified filters
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var filing_api = new intrinioSDK.FilingApi();
+var filingAPI = new intrinioSDK.FilingApi();
 
 var company = "AAPL"; // String | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
 
@@ -33,7 +33,7 @@ var opts = {
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-filing_api.filterFilings(company, opts).then(function(data) {
+filingAPI.filterFilings(company, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -67,13 +67,13 @@ Returns all filings
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var filing_api = new intrinioSDK.FilingApi();
+var filingAPI = new intrinioSDK.FilingApi();
 
 var opts = { 
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-filing_api.getAllFilings(opts).then(function(data) {
+filingAPI.getAllFilings(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -103,12 +103,12 @@ Return the filing with the given ID
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var filing_api = new intrinioSDK.FilingApi();
+var filingAPI = new intrinioSDK.FilingApi();
 
 var id = "fil_7Kn2P6"; // String | The Intrinio ID of the Filing
 
 
-filing_api.getFilingById(id).then(function(data) {
+filingAPI.getFilingById(id).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);

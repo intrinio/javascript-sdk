@@ -23,12 +23,12 @@ Retrieves detailed fundamental data for the given &#x60;fundamental_id&#x60;.
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var fundamentals_api = new intrinioSDK.FundamentalsApi();
+var fundamentalsAPI = new intrinioSDK.FundamentalsApi();
 
 var id = "fun_ge9LlE"; // String | The Intrinio ID for the Fundamental
 
 
-fundamentals_api.getFundamentalById(id).then(function(data) {
+fundamentalsAPI.getFundamentalById(id).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -58,12 +58,12 @@ Returns the As-Reported Financials directly from the financial statements of the
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var fundamentals_api = new intrinioSDK.FundamentalsApi();
+var fundamentalsAPI = new intrinioSDK.FundamentalsApi();
 
 var id = "fun_ge9LlE"; // String | The Intrinio ID for the Fundamental
 
 
-fundamentals_api.getFundamentalReportedFinancials(id).then(function(data) {
+fundamentalsAPI.getFundamentalReportedFinancials(id).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -93,12 +93,12 @@ Returns professional-grade historical financial data. This data is standardized,
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var fundamentals_api = new intrinioSDK.FundamentalsApi();
+var fundamentalsAPI = new intrinioSDK.FundamentalsApi();
 
 var id = "fun_ge9LlE"; // String | The Intrinio ID for the Fundamental
 
 
-fundamentals_api.getFundamentalStandardizedFinancials(id).then(function(data) {
+fundamentalsAPI.getFundamentalStandardizedFinancials(id).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -128,7 +128,7 @@ Returns the Fundamental for the Company with the given &#x60;identifier&#x60; an
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var fundamentals_api = new intrinioSDK.FundamentalsApi();
+var fundamentalsAPI = new intrinioSDK.FundamentalsApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
@@ -139,7 +139,7 @@ var fiscalYear = 2017; // Number | The fiscal year
 var fiscalPeriod = "FY"; // String | The fiscal period
 
 
-fundamentals_api.lookupFundamental(identifier, statementCode, fiscalYear, fiscalPeriod).then(function(data) {
+fundamentalsAPI.lookupFundamental(identifier, statementCode, fiscalYear, fiscalPeriod).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);

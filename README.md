@@ -50,9 +50,9 @@ const util = require('util')
  
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
  
-var company_api = new IntrinioClient.CompanyApi()
+var companyAPI = new intrinioSDK.CompanyApi()
  
-company_api.getAllCompanies().then(function(data) {
+companyAPI.getAllCompanies().then(function(data) {
   console.log(util.inspect(data, false, null, true));
 }, function(error) {
   console.error(error);

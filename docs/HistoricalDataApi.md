@@ -20,7 +20,7 @@ Returns historical values for the given &#x60;tag&#x60; and the entity represent
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var historicalData_api = new intrinioSDK.HistoricalDataApi();
+var historicalDataAPI = new intrinioSDK.HistoricalDataApi();
 
 var identifier = "AAPL"; // String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
 
@@ -34,7 +34,7 @@ var opts = {
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-historicalData_api.getHistoricalData(identifier, tag, opts).then(function(data) {
+historicalDataAPI.getHistoricalData(identifier, tag, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);

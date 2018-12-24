@@ -25,7 +25,7 @@ Return Stock Exchanges matching the given filters
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var stockExchange_api = new intrinioSDK.StockExchangeApi();
+var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
 
 var opts = { 
   'city': "city_example", // String | Filter by city
@@ -33,7 +33,7 @@ var opts = {
   'countryCode': "countryCode_example" // String | Filter by ISO country code
 };
 
-stockExchange_api.filterStockExchanges(opts).then(function(data) {
+stockExchangeAPI.filterStockExchanges(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -65,9 +65,9 @@ Return All Stock Exchanges
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var stockExchange_api = new intrinioSDK.StockExchangeApi();
+var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
 
-stockExchange_api.getAllStockExchanges().then(function(data) {
+stockExchangeAPI.getAllStockExchanges().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -92,12 +92,12 @@ Get Stock Exchange by ID
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var stockExchange_api = new intrinioSDK.StockExchangeApi();
+var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
 
 var identifier = "XSHG"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 
-stockExchange_api.getStockExchangeById(identifier).then(function(data) {
+stockExchangeAPI.getStockExchangeById(identifier).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -127,7 +127,7 @@ Return stock price adjustments for the Stock Exchange with the given &#x60;ident
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var stockExchange_api = new intrinioSDK.StockExchangeApi();
+var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
 
 var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
@@ -136,7 +136,7 @@ var opts = {
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-stockExchange_api.getStockExchangePriceAdjustments(identifier, opts).then(function(data) {
+stockExchangeAPI.getStockExchangePriceAdjustments(identifier, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -168,7 +168,7 @@ Return daily Stock Prices for Securities on the Stock Exchange with &#x60;identi
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var stockExchange_api = new intrinioSDK.StockExchangeApi();
+var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
 
 var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
@@ -177,7 +177,7 @@ var opts = {
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-stockExchange_api.getStockExchangePrices(identifier, opts).then(function(data) {
+stockExchangeAPI.getStockExchangePrices(identifier, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -209,7 +209,7 @@ Return Securities traded on the Stock Exchange with &#x60;identifier&#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var stockExchange_api = new intrinioSDK.StockExchangeApi();
+var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
 
 var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
@@ -217,7 +217,7 @@ var opts = {
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-stockExchange_api.getStockExchangeSecurities(identifier, opts).then(function(data) {
+stockExchangeAPI.getStockExchangeSecurities(identifier, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);

@@ -23,7 +23,7 @@ Returns Data Tags that match the given filters
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var dataTag_api = new intrinioSDK.DataTagApi();
+var dataTagAPI = new intrinioSDK.DataTagApi();
 
 var opts = { 
   'tag': null, // String | Tag
@@ -34,7 +34,7 @@ var opts = {
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-dataTag_api.filterDataTags(opts).then(function(data) {
+dataTagAPI.filterDataTags(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -69,13 +69,13 @@ Returns All Data Tags
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var dataTag_api = new intrinioSDK.DataTagApi();
+var dataTagAPI = new intrinioSDK.DataTagApi();
 
 var opts = { 
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-dataTag_api.getAllDataTags(opts).then(function(data) {
+dataTagAPI.getAllDataTags(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -105,12 +105,12 @@ Returns a Data Tag with the specified &#x60;identifier&#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var dataTag_api = new intrinioSDK.DataTagApi();
+var dataTagAPI = new intrinioSDK.DataTagApi();
 
 var identifier = "marketcap"; // String | The Intrinio ID or the code-name of the Data Tag
 
 
-dataTag_api.getDataTagById(identifier).then(function(data) {
+dataTagAPI.getDataTagById(identifier).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -140,12 +140,12 @@ Searches for Data Tags matching the text &#x60;query&#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var dataTag_api = new intrinioSDK.DataTagApi();
+var dataTagAPI = new intrinioSDK.DataTagApi();
 
 var query = "revenue"; // String | 
 
 
-dataTag_api.searchDataTags(query).then(function(data) {
+dataTagAPI.searchDataTags(query).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);

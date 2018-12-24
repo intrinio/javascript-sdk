@@ -21,14 +21,14 @@ Returns a numeric value for the given &#x60;tag&#x60; and the entity with the gi
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var dataPoint_api = new intrinioSDK.DataPointApi();
+var dataPointAPI = new intrinioSDK.DataPointApi();
 
 var identifier = "AAPL"; // String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
 
 var tag = "marketcap"; // String | An Intrinio data tag ID or code-name
 
 
-dataPoint_api.getDataPointNumber(identifier, tag).then(function(data) {
+dataPointAPI.getDataPointNumber(identifier, tag).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -59,14 +59,14 @@ Returns a text value for the given &#x60;tag&#x60; and the entity with the given
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var dataPoint_api = new intrinioSDK.DataPointApi();
+var dataPointAPI = new intrinioSDK.DataPointApi();
 
 var identifier = "AAPL"; // String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
 
 var tag = "marketcap"; // String | An Intrinio data tag ID or code-name
 
 
-dataPoint_api.getDataPointText(identifier, tag).then(function(data) {
+dataPointAPI.getDataPointText(identifier, tag).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);

@@ -26,13 +26,13 @@ Get All Securiites
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var security_api = new intrinioSDK.SecurityApi();
+var securityAPI = new intrinioSDK.SecurityApi();
 
 var opts = { 
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-security_api.getAllSecurities(opts).then(function(data) {
+securityAPI.getAllSecurities(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -60,12 +60,12 @@ Get a Security by ID
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var security_api = new intrinioSDK.SecurityApi();
+var securityAPI = new intrinioSDK.SecurityApi();
 
 var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 
-security_api.getSecurityById(identifier).then(function(data) {
+securityAPI.getSecurityById(identifier).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -95,14 +95,14 @@ Returns a numeric value for the given &#x60;tag&#x60; for the Security with the 
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var security_api = new intrinioSDK.SecurityApi();
+var securityAPI = new intrinioSDK.SecurityApi();
 
 var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var tag = "52_week_high"; // String | An Intrinio data tag ID or code-name
 
 
-security_api.getSecurityDataPointNumber(identifier, tag).then(function(data) {
+securityAPI.getSecurityDataPointNumber(identifier, tag).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -133,14 +133,14 @@ Returns a text value for the given &#x60;tag&#x60; for the Security with the giv
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var security_api = new intrinioSDK.SecurityApi();
+var securityAPI = new intrinioSDK.SecurityApi();
 
 var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var tag = "figi"; // String | An Intrinio data tag ID or code-name
 
 
-security_api.getSecurityDataPointText(identifier, tag).then(function(data) {
+securityAPI.getSecurityDataPointText(identifier, tag).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -171,7 +171,7 @@ Returns historical values for the given &#x60;tag&#x60; and the Security with th
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var security_api = new intrinioSDK.SecurityApi();
+var securityAPI = new intrinioSDK.SecurityApi();
 
 var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
@@ -185,7 +185,7 @@ var opts = {
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-security_api.getSecurityHistoricalData(identifier, tag, opts).then(function(data) {
+securityAPI.getSecurityHistoricalData(identifier, tag, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -221,7 +221,7 @@ Return stock price adjustments for the Security with the given &#x60;identifier&
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var security_api = new intrinioSDK.SecurityApi();
+var securityAPI = new intrinioSDK.SecurityApi();
 
 var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
@@ -231,7 +231,7 @@ var opts = {
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-security_api.getSecurityStockPriceAdjustments(identifier, opts).then(function(data) {
+securityAPI.getSecurityStockPriceAdjustments(identifier, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -264,7 +264,7 @@ Return stock prices for the Security with the given &#x60;identifier&#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var security_api = new intrinioSDK.SecurityApi();
+var securityAPI = new intrinioSDK.SecurityApi();
 
 var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
@@ -275,7 +275,7 @@ var opts = {
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-security_api.getSecurityStockPrices(identifier, opts).then(function(data) {
+securityAPI.getSecurityStockPrices(identifier, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -309,7 +309,7 @@ Screen securities using complex logic
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var security_api = new intrinioSDK.SecurityApi();
+var securityAPI = new intrinioSDK.SecurityApi();
 
 var opts = { 
   'logic': new intrinioSDK.SecurityScreenGroup(), // SecurityScreenGroup | The logic to screen with, consisting of operators, clauses, and nested groups.<br/> See <a href=\"/documentation/screener_v2\" target=\"_blank\">screener documentation</a> for details on how to construct conditions.
@@ -318,7 +318,7 @@ var opts = {
   'primaryOnly': false // Boolean | Return only primary securities
 };
 
-security_api.screenSecurities(opts).then(function(data) {
+securityAPI.screenSecurities(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -351,12 +351,12 @@ Searches for Securities matching the text &#x60;query&#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
 
-var security_api = new intrinioSDK.SecurityApi();
+var securityAPI = new intrinioSDK.SecurityApi();
 
 var query = "Apple"; // String | 
 
 
-security_api.searchSecurities(query).then(function(data) {
+securityAPI.searchSecurities(query).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
