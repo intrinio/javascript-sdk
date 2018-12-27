@@ -4,19 +4,19 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getFundamentalById**](FundamentalsApi.md#getFundamentalById) | **GET** /fundamentals/{id} | Get a Fundamental by ID
-[**getFundamentalReportedFinancials**](FundamentalsApi.md#getFundamentalReportedFinancials) | **GET** /fundamentals/{id}/reported_financials | Get Reported Financials for a Fundamental
-[**getFundamentalStandardizedFinancials**](FundamentalsApi.md#getFundamentalStandardizedFinancials) | **GET** /fundamentals/{id}/standardized_financials | Get Standardized Financials for a Fundamental
-[**lookupFundamental**](FundamentalsApi.md#lookupFundamental) | **GET** /fundamentals/lookup/{identifier}/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup a Fundamental
+[**getFundamentalById**](FundamentalsApi.md#getFundamentalById) | **GET** /fundamentals/{id} | Fundamental by ID
+[**getFundamentalReportedFinancials**](FundamentalsApi.md#getFundamentalReportedFinancials) | **GET** /fundamentals/{id}/reported_financials | Reported Financials
+[**getFundamentalStandardizedFinancials**](FundamentalsApi.md#getFundamentalStandardizedFinancials) | **GET** /fundamentals/{id}/standardized_financials | Standardized Financials
+[**lookupFundamental**](FundamentalsApi.md#lookupFundamental) | **GET** /fundamentals/lookup/{identifier}/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental
 
 
 <a name="getFundamentalById"></a>
 # **getFundamentalById**
 > Fundamental getFundamentalById(id)
 
-Get a Fundamental by ID
+Fundamental by ID
 
-Retrieves detailed fundamental data for the given &#x60;fundamental_id&#x60;.
+Returns detailed fundamental data for the given &#x60;id&#x60;.
 
 ### Example
 ```javascript
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 # **getFundamentalReportedFinancials**
 > ApiResponseReportedFinancials getFundamentalReportedFinancials(id)
 
-Get Reported Financials for a Fundamental
+Reported Financials
 
 Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 # **getFundamentalStandardizedFinancials**
 > ApiResponseStandardizedFinancials getFundamentalStandardizedFinancials(id)
 
-Get Standardized Financials for a Fundamental
+Standardized Financials
 
 Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 # **lookupFundamental**
 > Fundamental lookupFundamental(identifier, statementCode, fiscalYear, fiscalPeriod)
 
-Lookup a Fundamental
+Lookup Fundamental
 
 Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
 

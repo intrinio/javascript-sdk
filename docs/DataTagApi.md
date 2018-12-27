@@ -5,8 +5,8 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**filterDataTags**](DataTagApi.md#filterDataTags) | **GET** /data_tags/filter | Filter Data Tags
-[**getAllDataTags**](DataTagApi.md#getAllDataTags) | **GET** /data_tags | Get All Data Tags
-[**getDataTagById**](DataTagApi.md#getDataTagById) | **GET** /data_tags/{identifier} | Get a Data Tag by ID
+[**getAllDataTags**](DataTagApi.md#getAllDataTags) | **GET** /data_tags | All Data Tags
+[**getDataTagById**](DataTagApi.md#getDataTagById) | **GET** /data_tags/{identifier} | Lookup Data Tag
 [**searchDataTags**](DataTagApi.md#searchDataTags) | **GET** /data_tags/search | Search Data Tags
 
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 # **getAllDataTags**
 > ApiResponseDataTags getAllDataTags(opts)
 
-Get All Data Tags
+All Data Tags
 
 Returns All Data Tags
 
@@ -96,9 +96,9 @@ Name | Type | Description  | Notes
 # **getDataTagById**
 > DataTag getDataTagById(identifier)
 
-Get a Data Tag by ID
+Lookup Data Tag
 
-Returns a Data Tag with the specified &#x60;identifier&#x60;
+Returns the Data Tag with the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript

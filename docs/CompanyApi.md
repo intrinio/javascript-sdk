@@ -5,18 +5,18 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**filterCompanies**](CompanyApi.md#filterCompanies) | **GET** /companies/filter | Filter Companies
-[**filterCompanyFundamentals**](CompanyApi.md#filterCompanyFundamentals) | **GET** /companies/{identifier}/fundamentals/filter | Filter Fundamentals for a Company
-[**getAllCompanies**](CompanyApi.md#getAllCompanies) | **GET** /companies | Get All Companies
-[**getAllCompanyNews**](CompanyApi.md#getAllCompanyNews) | **GET** /companies/news | Get All Company News
-[**getCompany**](CompanyApi.md#getCompany) | **GET** /companies/{identifier} | Get a Company by ID
-[**getCompanyDataPointNumber**](CompanyApi.md#getCompanyDataPointNumber) | **GET** /companies/{identifier}/data_point/{tag}/number | Get Company Data Point (Number)
-[**getCompanyDataPointText**](CompanyApi.md#getCompanyDataPointText) | **GET** /companies/{identifier}/data_point/{tag}/text | Get Company Data Point (Text)
-[**getCompanyFilings**](CompanyApi.md#getCompanyFilings) | **GET** /companies/{identifier}/filings | Get Filings for a Company
-[**getCompanyFundamentals**](CompanyApi.md#getCompanyFundamentals) | **GET** /companies/{identifier}/fundamentals | Get All Fundamentals for a Company
-[**getCompanyHistoricalData**](CompanyApi.md#getCompanyHistoricalData) | **GET** /companies/{identifier}/historical_data/{tag} | Get Company Historical Data
-[**getCompanyNews**](CompanyApi.md#getCompanyNews) | **GET** /companies/{identifier}/news | Get News for a Company
-[**getCompanySecurities**](CompanyApi.md#getCompanySecurities) | **GET** /companies/{identifier}/securities | Get Securities by Company
-[**lookupCompanyFundamental**](CompanyApi.md#lookupCompanyFundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup a Fundamental for a Company
+[**filterCompanyFundamentals**](CompanyApi.md#filterCompanyFundamentals) | **GET** /companies/{identifier}/fundamentals/filter | Filter Fundamentals by Company
+[**getAllCompanies**](CompanyApi.md#getAllCompanies) | **GET** /companies | All Companies
+[**getAllCompanyNews**](CompanyApi.md#getAllCompanyNews) | **GET** /companies/news | All News
+[**getCompany**](CompanyApi.md#getCompany) | **GET** /companies/{identifier} | Lookup Company
+[**getCompanyDataPointNumber**](CompanyApi.md#getCompanyDataPointNumber) | **GET** /companies/{identifier}/data_point/{tag}/number | Data Point (Number) for Company
+[**getCompanyDataPointText**](CompanyApi.md#getCompanyDataPointText) | **GET** /companies/{identifier}/data_point/{tag}/text | Data Point (Text) for Company
+[**getCompanyFilings**](CompanyApi.md#getCompanyFilings) | **GET** /companies/{identifier}/filings | All Filings by Company
+[**getCompanyFundamentals**](CompanyApi.md#getCompanyFundamentals) | **GET** /companies/{identifier}/fundamentals | All Fundamentals by Company
+[**getCompanyHistoricalData**](CompanyApi.md#getCompanyHistoricalData) | **GET** /companies/{identifier}/historical_data/{tag} | Historical Data for Company
+[**getCompanyNews**](CompanyApi.md#getCompanyNews) | **GET** /companies/{identifier}/news | All News by Company
+[**getCompanySecurities**](CompanyApi.md#getCompanySecurities) | **GET** /companies/{identifier}/securities | All Securities by Company
+[**lookupCompanyFundamental**](CompanyApi.md#lookupCompanyFundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental by Company
 [**searchCompanies**](CompanyApi.md#searchCompanies) | **GET** /companies/search | Search Companies
 
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 # **filterCompanyFundamentals**
 > ApiResponseCompanyFundamentals filterCompanyFundamentals(identifier, opts)
 
-Filter Fundamentals for a Company
+Filter Fundamentals by Company
 
 Returns Fundamentals for the Company with the given &#x60;identifier&#x60; and matching the specified filters
 
@@ -127,7 +127,9 @@ Name | Type | Description  | Notes
 # **getAllCompanies**
 > ApiResponseCompanies getAllCompanies(opts)
 
-Get All Companies
+All Companies
+
+Returns all Companies
 
 ### Example
 ```javascript
@@ -161,9 +163,9 @@ Name | Type | Description  | Notes
 # **getAllCompanyNews**
 > ApiResponseNews getAllCompanyNews(opts)
 
-Get All Company News
+All News
 
-Returns all news for all companies
+Returns all News for all Companies
 
 ### Example
 ```javascript
@@ -197,7 +199,9 @@ Name | Type | Description  | Notes
 # **getCompany**
 > Company getCompany(identifier)
 
-Get a Company by ID
+Lookup Company
+
+Returns the Company with the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript
@@ -230,7 +234,7 @@ Name | Type | Description  | Notes
 # **getCompanyDataPointNumber**
 > &#39;Number&#39; getCompanyDataPointNumber(identifier, tag)
 
-Get Company Data Point (Number)
+Data Point (Number) for Company
 
 Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
 
@@ -268,7 +272,7 @@ Name | Type | Description  | Notes
 # **getCompanyDataPointText**
 > &#39;String&#39; getCompanyDataPointText(identifier, tag)
 
-Get Company Data Point (Text)
+Data Point (Text) for Company
 
 Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
 
@@ -306,7 +310,7 @@ Name | Type | Description  | Notes
 # **getCompanyFilings**
 > ApiResponseCompanyFilings getCompanyFilings(identifier, opts)
 
-Get Filings for a Company
+All Filings by Company
 
 Returns a complete list of SEC filings for the Company with the given &#x60;identifier&#x60;
 
@@ -345,7 +349,7 @@ Name | Type | Description  | Notes
 # **getCompanyFundamentals**
 > ApiResponseCompanyFundamentals getCompanyFundamentals(identifier, opts)
 
-Get All Fundamentals for a Company
+All Fundamentals by Company
 
 Returns all Fundamentals for the Company with the given &#x60;identifier&#x60;
 
@@ -384,7 +388,7 @@ Name | Type | Description  | Notes
 # **getCompanyHistoricalData**
 > ApiResponseCompanyHistoricalData getCompanyHistoricalData(identifier, tag, opts)
 
-Get Company Historical Data
+Historical Data for Company
 
 Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
 
@@ -397,9 +401,10 @@ var companyAPI = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
-var tag = "marketcap"; // String | Item
+var tag = "marketcap"; // String | An Intrinio data-tag
 
 var opts = { 
+  'frequency': "daily", // String | Return historical data in the given frequency
   'type': null, // String | Filter by type, when applicable
   'startDate': new Date("2018-01-01"), // Date | Get historical data on or after this date
   'endDate': new Date("2019-01-01"), // Date | Get historical data on or before this date
@@ -419,7 +424,8 @@ companyAPI.getCompanyHistoricalData(identifier, tag, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
- **tag** | **String**| Item | 
+ **tag** | **String**| An Intrinio data-tag | 
+ **frequency** | **String**| Return historical data in the given frequency | [optional] [default to daily]
  **type** | **String**| Filter by type, when applicable | [optional] 
  **startDate** | **Date**| Get historical data on or after this date | [optional] 
  **endDate** | **Date**| Get historical data on or before this date | [optional] 
@@ -434,7 +440,7 @@ Name | Type | Description  | Notes
 # **getCompanyNews**
 > ApiResponseCompanyNews getCompanyNews(identifier, opts)
 
-Get News for a Company
+All News by Company
 
 Returns news for the Company with the given &#x60;identifier&#x60;
 
@@ -473,9 +479,9 @@ Name | Type | Description  | Notes
 # **getCompanySecurities**
 > ApiResponseCompanySecurities getCompanySecurities(identifier, opts)
 
-Get Securities by Company
+All Securities by Company
 
-Return Securities for the Company with &#x60;identifier&#x60;
+Returns Securities for the Company with the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript
@@ -512,7 +518,7 @@ Name | Type | Description  | Notes
 # **lookupCompanyFundamental**
 > Fundamental lookupCompanyFundamental(identifier, statementCode, fiscalPeriod, fiscalYear)
 
-Lookup a Fundamental for a Company
+Lookup Fundamental by Company
 
 Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
 

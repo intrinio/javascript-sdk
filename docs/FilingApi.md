@@ -5,8 +5,14 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**filterFilings**](FilingApi.md#filterFilings) | **GET** /filings/filter | Filter Filings
-[**getAllFilings**](FilingApi.md#getAllFilings) | **GET** /filings | Get All Filings
-[**getFilingById**](FilingApi.md#getFilingById) | **GET** /filings/{id} | Get a Filing by ID
+[**filterNotes**](FilingApi.md#filterNotes) | **GET** /filings/notes/filter | Filter SEC filing notes
+[**getAllFilings**](FilingApi.md#getAllFilings) | **GET** /filings | All Filings
+[**getAllNotes**](FilingApi.md#getAllNotes) | **GET** /filings/notes | Get All SEC filing notes
+[**getFilingById**](FilingApi.md#getFilingById) | **GET** /filings/{id} | Lookup Filing
+[**getNote**](FilingApi.md#getNote) | **GET** /filings/notes/{identifier} | Get an SEC filing note by ID
+[**getNoteHtml**](FilingApi.md#getNoteHtml) | **GET** /filings/notes/{identifier}/html | Returns the content of an SEC filing note as originally filed
+[**getNoteText**](FilingApi.md#getNoteText) | **GET** /filings/notes/{identifier}/text | Returns the content of an SEC filing note stripped of HTML
+[**searchNotes**](FilingApi.md#searchNotes) | **GET** /filings/notes/search | Search Filing Notes
 
 
 <a name="filterFilings"></a>
@@ -15,7 +21,7 @@ Method | HTTP request | Description
 
 Filter Filings
 
-Returns filings that match the specified filters
+Returns Filings that match the specified filters
 
 ### Example
 ```javascript
@@ -54,13 +60,61 @@ Name | Type | Description  | Notes
 
 [**ApiResponseFilings**](ApiResponseFilings.md)
 
+<a name="filterNotes"></a>
+# **filterNotes**
+> ApiResponseFilingNotes filterNotes(opts)
+
+Filter SEC filing notes
+
+Returns SEC filing notes matching the supplied criteria
+
+### Example
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+
+var filingAPI = new intrinioSDK.FilingApi();
+
+var opts = { 
+  'company': "AAPL", // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+  'reportType': "10-Q", // String | Notes contained in filings that match the given report type
+  'filingStartDate': new Date("2018-07-15"), // Date | Limit search to filings on or after this date
+  'filingEndDate': new Date("2018-11-15"), // Date | Limit search to filings on or before this date
+  'periodEndedStartDate': new Date("2018-07-15"), // Date | Limit search to filings with a period end date on or after this date
+  'periodEndedEndDate': new Date("2018-11-15"), // Date | Limit search to filings with a period end date on or before this date
+  'nextPage': null // String | Gets the next page of data from a previous API call
+};
+
+filingAPI.filterNotes(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | [optional] 
+ **reportType** | **String**| Notes contained in filings that match the given report type | [optional] 
+ **filingStartDate** | **Date**| Limit search to filings on or after this date | [optional] 
+ **filingEndDate** | **Date**| Limit search to filings on or before this date | [optional] 
+ **periodEndedStartDate** | **Date**| Limit search to filings with a period end date on or after this date | [optional] 
+ **periodEndedEndDate** | **Date**| Limit search to filings with a period end date on or before this date | [optional] 
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+
+### Return type
+
+[**ApiResponseFilingNotes**](ApiResponseFilingNotes.md)
+
 <a name="getAllFilings"></a>
 # **getAllFilings**
 > ApiResponseFilings getAllFilings(opts)
 
-Get All Filings
+All Filings
 
-Returns all filings
+Returns all Filings
 
 ### Example
 ```javascript
@@ -90,13 +144,49 @@ Name | Type | Description  | Notes
 
 [**ApiResponseFilings**](ApiResponseFilings.md)
 
+<a name="getAllNotes"></a>
+# **getAllNotes**
+> ApiResponseFilingNotes getAllNotes(opts)
+
+Get All SEC filing notes
+
+Return All notes from SEC Filings, most-recent first
+
+### Example
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+
+var filingAPI = new intrinioSDK.FilingApi();
+
+var opts = { 
+  'nextPage': null // String | Gets the next page of data from a previous API call
+};
+
+filingAPI.getAllNotes(opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+
+### Return type
+
+[**ApiResponseFilingNotes**](ApiResponseFilingNotes.md)
+
 <a name="getFilingById"></a>
 # **getFilingById**
 > Filing getFilingById(id)
 
-Get a Filing by ID
+Lookup Filing
 
-Return the filing with the given ID
+Returns the Filing with the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript
@@ -124,4 +214,150 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Filing**](Filing.md)
+
+<a name="getNote"></a>
+# **getNote**
+> FilingNote getNote(identifier, opts)
+
+Get an SEC filing note by ID
+
+### Example
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+
+var filingAPI = new intrinioSDK.FilingApi();
+
+var identifier = "xbn_3fghz"; // String | The Intrinio ID of the filing note
+
+var opts = { 
+  'contentFormat': "text" // String | Returns content in html (as filed) or plain text
+};
+
+filingAPI.getNote(identifier, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **String**| The Intrinio ID of the filing note | 
+ **contentFormat** | **String**| Returns content in html (as filed) or plain text | [optional] [default to text]
+
+### Return type
+
+[**FilingNote**](FilingNote.md)
+
+<a name="getNoteHtml"></a>
+# **getNoteHtml**
+> &#39;String&#39; getNoteHtml(identifier)
+
+Returns the content of an SEC filing note as originally filed
+
+### Example
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+
+var filingAPI = new intrinioSDK.FilingApi();
+
+var identifier = "xbn_3fghz"; // String | The Intrinio ID of the filing note
+
+
+filingAPI.getNoteHtml(identifier).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **String**| The Intrinio ID of the filing note | 
+
+### Return type
+
+**&#39;String&#39;**
+
+<a name="getNoteText"></a>
+# **getNoteText**
+> &#39;String&#39; getNoteText(identifier)
+
+Returns the content of an SEC filing note stripped of HTML
+
+### Example
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+
+var filingAPI = new intrinioSDK.FilingApi();
+
+var identifier = "xbn_3fghz"; // String | The Intrinio ID of the filing note
+
+
+filingAPI.getNoteText(identifier).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **String**| The Intrinio ID of the filing note | 
+
+### Return type
+
+**&#39;String&#39;**
+
+<a name="searchNotes"></a>
+# **searchNotes**
+> ApiResponseFilingNotesSearch searchNotes(query, opts)
+
+Search Filing Notes
+
+Searches SEC filing notes using the text in &#x60;query&#x60;
+
+### Example
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+
+var filingAPI = new intrinioSDK.FilingApi();
+
+var query = "inflation"; // String | Search for notes that contain all or parts of this text
+
+var opts = { 
+  'filingStartDate': new Date("2018-07-15"), // Date | Limit search to filings on or after this date
+  'filingEndDate': new Date("2018-11-30"), // Date | Limit search to filings on or before this date
+  'pageSize': 100 // Number | The number of results to return
+};
+
+filingAPI.searchNotes(query, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **query** | **String**| Search for notes that contain all or parts of this text | 
+ **filingStartDate** | **Date**| Limit search to filings on or after this date | [optional] 
+ **filingEndDate** | **Date**| Limit search to filings on or before this date | [optional] 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+
+### Return type
+
+[**ApiResponseFilingNotesSearch**](ApiResponseFilingNotesSearch.md)
 

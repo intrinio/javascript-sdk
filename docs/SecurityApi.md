@@ -4,13 +4,16 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAllSecurities**](SecurityApi.md#getAllSecurities) | **GET** /securities | Get All Securiites
-[**getSecurityById**](SecurityApi.md#getSecurityById) | **GET** /securities/{identifier} | Get a Security by ID
-[**getSecurityDataPointNumber**](SecurityApi.md#getSecurityDataPointNumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Get Security Data Point (Number)
-[**getSecurityDataPointText**](SecurityApi.md#getSecurityDataPointText) | **GET** /securities/{identifier}/data_point/{tag}/text | Get Security Data Point (Text)
-[**getSecurityHistoricalData**](SecurityApi.md#getSecurityHistoricalData) | **GET** /securities/{identifier}/historical_data/{tag} | Get Security Historical Data
-[**getSecurityStockPriceAdjustments**](SecurityApi.md#getSecurityStockPriceAdjustments) | **GET** /securities/{identifier}/prices/adjustments | Get Stock Price Adjustments for Security
-[**getSecurityStockPrices**](SecurityApi.md#getSecurityStockPrices) | **GET** /securities/{identifier}/prices | Get Stock Prices for Security
+[**getAllSecurities**](SecurityApi.md#getAllSecurities) | **GET** /securities | All Securities
+[**getSecurityById**](SecurityApi.md#getSecurityById) | **GET** /securities/{identifier} | Lookup Security
+[**getSecurityDataPointNumber**](SecurityApi.md#getSecurityDataPointNumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
+[**getSecurityDataPointText**](SecurityApi.md#getSecurityDataPointText) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
+[**getSecurityHistoricalData**](SecurityApi.md#getSecurityHistoricalData) | **GET** /securities/{identifier}/historical_data/{tag} | Historical Data for Security
+[**getSecurityLatestDividendRecord**](SecurityApi.md#getSecurityLatestDividendRecord) | **GET** /securities/{identifier}/dividends/latest | Lastest Dividend Record for Security
+[**getSecurityLatestEarningsRecord**](SecurityApi.md#getSecurityLatestEarningsRecord) | **GET** /securities/{identifier}/earnings/latest | Lastest Earnings Record for Security
+[**getSecurityRealtimePrice**](SecurityApi.md#getSecurityRealtimePrice) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
+[**getSecurityStockPriceAdjustments**](SecurityApi.md#getSecurityStockPriceAdjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
+[**getSecurityStockPrices**](SecurityApi.md#getSecurityStockPrices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
 [**screenSecurities**](SecurityApi.md#screenSecurities) | **POST** /securities/screen | Screen Securities
 [**searchSecurities**](SecurityApi.md#searchSecurities) | **GET** /securities/search | Search Securities
 
@@ -19,7 +22,7 @@ Method | HTTP request | Description
 # **getAllSecurities**
 > ApiResponseSecurities getAllSecurities(opts)
 
-Get All Securiites
+All Securities
 
 ### Example
 ```javascript
@@ -53,7 +56,9 @@ Name | Type | Description  | Notes
 # **getSecurityById**
 > Security getSecurityById(identifier)
 
-Get a Security by ID
+Lookup Security
+
+Returns the Security with the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript
@@ -86,7 +91,7 @@ Name | Type | Description  | Notes
 # **getSecurityDataPointNumber**
 > &#39;Number&#39; getSecurityDataPointNumber(identifier, tag)
 
-Get Security Data Point (Number)
+Data Point (Number) for Security
 
 Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
 
@@ -124,7 +129,7 @@ Name | Type | Description  | Notes
 # **getSecurityDataPointText**
 > &#39;String&#39; getSecurityDataPointText(identifier, tag)
 
-Get Security Data Point (Text)
+Data Point (Text) for Security
 
 Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
 
@@ -162,7 +167,7 @@ Name | Type | Description  | Notes
 # **getSecurityHistoricalData**
 > ApiResponseSecurityHistoricalData getSecurityHistoricalData(identifier, tag, opts)
 
-Get Security Historical Data
+Historical Data for Security
 
 Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
 
@@ -178,6 +183,7 @@ var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, 
 var tag = "volume"; // String | An Intrinio data tag ID or code-name
 
 var opts = { 
+  'frequency': "daily", // String | Return historical data in the given frequency
   'type': null, // String | Filter by type, when applicable
   'startDate': new Date("2018-01-01"), // Date | Get historical data on or after this date
   'endDate': new Date("2019-01-01"), // Date | Get historical date on or before this date
@@ -198,6 +204,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
  **tag** | **String**| An Intrinio data tag ID or code-name | 
+ **frequency** | **String**| Return historical data in the given frequency | [optional] [default to daily]
  **type** | **String**| Filter by type, when applicable | [optional] 
  **startDate** | **Date**| Get historical data on or after this date | [optional] 
  **endDate** | **Date**| Get historical date on or before this date | [optional] 
@@ -208,13 +215,122 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityHistoricalData**](ApiResponseSecurityHistoricalData.md)
 
+<a name="getSecurityLatestDividendRecord"></a>
+# **getSecurityLatestDividendRecord**
+> DividendRecord getSecurityLatestDividendRecord(identifier)
+
+Lastest Dividend Record for Security
+
+Returns the latest available dividend information for the Security with the given &#x60;identifier&#x60;
+
+### Example
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+
+var securityAPI = new intrinioSDK.SecurityApi();
+
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+
+
+securityAPI.getSecurityLatestDividendRecord(identifier).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+
+### Return type
+
+[**DividendRecord**](DividendRecord.md)
+
+<a name="getSecurityLatestEarningsRecord"></a>
+# **getSecurityLatestEarningsRecord**
+> EarningsRecord getSecurityLatestEarningsRecord(identifier)
+
+Lastest Earnings Record for Security
+
+Returns latest available earnings information for the Security with the given &#x60;identifier&#x60;
+
+### Example
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+
+var securityAPI = new intrinioSDK.SecurityApi();
+
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+
+
+securityAPI.getSecurityLatestEarningsRecord(identifier).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+
+### Return type
+
+[**EarningsRecord**](EarningsRecord.md)
+
+<a name="getSecurityRealtimePrice"></a>
+# **getSecurityRealtimePrice**
+> RealtimeStockPrice getSecurityRealtimePrice(identifier, opts)
+
+Realtime Stock Price for Security
+
+Return the realtime stock price for the Security with the given &#x60;identifier&#x60;
+
+### Example
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+
+var securityAPI = new intrinioSDK.SecurityApi();
+
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+
+var opts = { 
+  'source': null // String | Return the realtime price from the specified data source
+};
+
+securityAPI.getSecurityRealtimePrice(identifier, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **source** | **String**| Return the realtime price from the specified data source | [optional] 
+
+### Return type
+
+[**RealtimeStockPrice**](RealtimeStockPrice.md)
+
 <a name="getSecurityStockPriceAdjustments"></a>
 # **getSecurityStockPriceAdjustments**
 > ApiResponseSecurityStockPriceAdjustments getSecurityStockPriceAdjustments(identifier, opts)
 
-Get Stock Price Adjustments for Security
+Stock Price Adjustments by Security
 
-Return stock price adjustments for the Security with the given &#x60;identifier&#x60;
+Returns stock price adjustments for the Security with the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript
@@ -255,9 +371,9 @@ Name | Type | Description  | Notes
 # **getSecurityStockPrices**
 > ApiResponseSecurityStockPrices getSecurityStockPrices(identifier, opts)
 
-Get Stock Prices for Security
+Stock Prices by Security
 
-Return stock prices for the Security with the given &#x60;identifier&#x60;
+Return end-of-day stock prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript
@@ -302,7 +418,7 @@ Name | Type | Description  | Notes
 
 Screen Securities
 
-Screen securities using complex logic
+Screen Securities using complex logic
 
 ### Example
 ```javascript
