@@ -36,7 +36,7 @@
   /**
    * The CompanyFiling model module.
    * @module model/CompanyFiling
-   * @version 1.1.0
+   * @version 1.1.1
    */
 
   /**

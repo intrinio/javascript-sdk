@@ -33,7 +33,7 @@
   /**
    * StockExchange service.
    * @module api/StockExchangeApi
-   * @version 1.1.0
+   * @version 1.1.1
    */
 
   /**

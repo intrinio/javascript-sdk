@@ -36,7 +36,7 @@
   /**
    * The ReportedTag model module.
    * @module model/ReportedTag
-   * @version 1.1.0
+   * @version 1.1.1
    */
 
   /**

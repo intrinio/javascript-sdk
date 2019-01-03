@@ -5,13 +5,13 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**filterFilings**](FilingApi.md#filterFilings) | **GET** /filings/filter | Filter Filings
-[**filterNotes**](FilingApi.md#filterNotes) | **GET** /filings/notes/filter | Filter SEC filing notes
+[**filterNotes**](FilingApi.md#filterNotes) | **GET** /filings/notes/filter | Filter Filing Notes
 [**getAllFilings**](FilingApi.md#getAllFilings) | **GET** /filings | All Filings
-[**getAllNotes**](FilingApi.md#getAllNotes) | **GET** /filings/notes | Get All SEC filing notes
+[**getAllNotes**](FilingApi.md#getAllNotes) | **GET** /filings/notes | All Filing Notes
 [**getFilingById**](FilingApi.md#getFilingById) | **GET** /filings/{id} | Lookup Filing
-[**getNote**](FilingApi.md#getNote) | **GET** /filings/notes/{identifier} | Get an SEC filing note by ID
-[**getNoteHtml**](FilingApi.md#getNoteHtml) | **GET** /filings/notes/{identifier}/html | Returns the content of an SEC filing note as originally filed
-[**getNoteText**](FilingApi.md#getNoteText) | **GET** /filings/notes/{identifier}/text | Returns the content of an SEC filing note stripped of HTML
+[**getNote**](FilingApi.md#getNote) | **GET** /filings/notes/{identifier} | Filing Note by ID
+[**getNoteHtml**](FilingApi.md#getNoteHtml) | **GET** /filings/notes/{identifier}/html | Filing Note HTML
+[**getNoteText**](FilingApi.md#getNoteText) | **GET** /filings/notes/{identifier}/text | Filing Note Text
 [**searchNotes**](FilingApi.md#searchNotes) | **GET** /filings/notes/search | Search Filing Notes
 
 
@@ -64,9 +64,9 @@ Name | Type | Description  | Notes
 # **filterNotes**
 > ApiResponseFilingNotes filterNotes(opts)
 
-Filter SEC filing notes
+Filter Filing Notes
 
-Returns SEC filing notes matching the supplied criteria
+Returns Filing Notes that match the specified filters
 
 ### Example
 ```javascript
@@ -148,9 +148,9 @@ Name | Type | Description  | Notes
 # **getAllNotes**
 > ApiResponseFilingNotes getAllNotes(opts)
 
-Get All SEC filing notes
+All Filing Notes
 
-Return All notes from SEC Filings, most-recent first
+Return all Notes from all Filings, most-recent first
 
 ### Example
 ```javascript
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 # **getNote**
 > FilingNote getNote(identifier, opts)
 
-Get an SEC filing note by ID
+Filing Note by ID
 
 ### Example
 ```javascript
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 # **getNoteHtml**
 > &#39;String&#39; getNoteHtml(identifier)
 
-Returns the content of an SEC filing note as originally filed
+Filing Note HTML
 
 ### Example
 ```javascript
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 # **getNoteText**
 > &#39;String&#39; getNoteText(identifier)
 
-Returns the content of an SEC filing note stripped of HTML
+Filing Note Text
 
 ### Example
 ```javascript
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 
 Search Filing Notes
 
-Searches SEC filing notes using the text in &#x60;query&#x60;
+Searches for Filing Notes using the &#x60;query&#x60;
 
 ### Example
 ```javascript

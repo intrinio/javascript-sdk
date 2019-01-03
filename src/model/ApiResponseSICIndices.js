@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSICIndices model module.
    * @module model/ApiResponseSICIndices
-   * @version 1.1.0
+   * @version 1.1.1
    */
 
   /**

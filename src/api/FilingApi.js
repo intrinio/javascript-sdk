@@ -33,7 +33,7 @@
   /**
    * Filing service.
    * @module api/FilingApi
-   * @version 1.1.0
+   * @version 1.1.1
    */
 
   /**
@@ -117,8 +117,8 @@
 
 
     /**
-     * Filter SEC filing notes
-     * Returns SEC filing notes matching the supplied criteria
+     * Filter Filing Notes
+     * Returns Filing Notes that match the specified filters
      * @param {Object} opts Optional parameters
      * @param {String} opts.company A Company identifier (Ticker, CIK, LEI, Intrinio ID)
      * @param {module:model/String} opts.reportType Notes contained in filings that match the given report type
@@ -165,8 +165,8 @@
     }
 
     /**
-     * Filter SEC filing notes
-     * Returns SEC filing notes matching the supplied criteria
+     * Filter Filing Notes
+     * Returns Filing Notes that match the specified filters
      * @param {Object} opts Optional parameters
      * @param {String} opts.company A Company identifier (Ticker, CIK, LEI, Intrinio ID)
      * @param {module:model/String} opts.reportType Notes contained in filings that match the given report type
@@ -237,8 +237,8 @@
 
 
     /**
-     * Get All SEC filing notes
-     * Return All notes from SEC Filings, most-recent first
+     * All Filing Notes
+     * Return all Notes from all Filings, most-recent first
      * @param {Object} opts Optional parameters
      * @param {String} opts.nextPage Gets the next page of data from a previous API call
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ApiResponseFilingNotes} and HTTP response
@@ -273,8 +273,8 @@
     }
 
     /**
-     * Get All SEC filing notes
-     * Return All notes from SEC Filings, most-recent first
+     * All Filing Notes
+     * Return all Notes from all Filings, most-recent first
      * @param {Object} opts Optional parameters
      * @param {String} opts.nextPage Gets the next page of data from a previous API call
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ApiResponseFilingNotes}
@@ -341,7 +341,7 @@
 
 
     /**
-     * Get an SEC filing note by ID
+     * Filing Note by ID
      * @param {String} identifier The Intrinio ID of the filing note
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.contentFormat Returns content in html (as filed) or plain text (default to text)
@@ -383,7 +383,7 @@
     }
 
     /**
-     * Get an SEC filing note by ID
+     * Filing Note by ID
      * @param {String} identifier The Intrinio ID of the filing note
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.contentFormat Returns content in html (as filed) or plain text (default to text)
@@ -398,7 +398,7 @@
 
 
     /**
-     * Returns the content of an SEC filing note as originally filed
+     * Filing Note HTML
      * @param {String} identifier The Intrinio ID of the filing note
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
@@ -436,7 +436,7 @@
     }
 
     /**
-     * Returns the content of an SEC filing note as originally filed
+     * Filing Note HTML
      * @param {String} identifier The Intrinio ID of the filing note
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
@@ -449,7 +449,7 @@
 
 
     /**
-     * Returns the content of an SEC filing note stripped of HTML
+     * Filing Note Text
      * @param {String} identifier The Intrinio ID of the filing note
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
@@ -487,7 +487,7 @@
     }
 
     /**
-     * Returns the content of an SEC filing note stripped of HTML
+     * Filing Note Text
      * @param {String} identifier The Intrinio ID of the filing note
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
@@ -501,7 +501,7 @@
 
     /**
      * Search Filing Notes
-     * Searches SEC filing notes using the text in &#x60;query&#x60;
+     * Searches for Filing Notes using the &#x60;query&#x60;
      * @param {String} query Search for notes that contain all or parts of this text
      * @param {Object} opts Optional parameters
      * @param {Date} opts.filingStartDate Limit search to filings on or after this date
@@ -548,7 +548,7 @@
 
     /**
      * Search Filing Notes
-     * Searches SEC filing notes using the text in &#x60;query&#x60;
+     * Searches for Filing Notes using the &#x60;query&#x60;
      * @param {String} query Search for notes that contain all or parts of this text
      * @param {Object} opts Optional parameters
      * @param {Date} opts.filingStartDate Limit search to filings on or after this date

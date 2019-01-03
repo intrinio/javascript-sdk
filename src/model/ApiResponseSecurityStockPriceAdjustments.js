@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/SecuritySummary', 'model/StockPriceAdjustment'], factory);
+    define(['ApiClient', 'model/SecuritySummary', 'model/StockPriceAdjustmentSummary'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./SecuritySummary'), require('./StockPriceAdjustment'));
+    module.exports = factory(require('../ApiClient'), require('./SecuritySummary'), require('./StockPriceAdjustmentSummary'));
   } else {
     // Browser globals (root is window)
     if (!root.intrinioSDK) {
       root.intrinioSDK = {};
     }
-    root.intrinioSDK.ApiResponseSecurityStockPriceAdjustments = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.SecuritySummary, root.intrinioSDK.StockPriceAdjustment);
+    root.intrinioSDK.ApiResponseSecurityStockPriceAdjustments = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.SecuritySummary, root.intrinioSDK.StockPriceAdjustmentSummary);
   }
-}(this, function(ApiClient, SecuritySummary, StockPriceAdjustment) {
+}(this, function(ApiClient, SecuritySummary, StockPriceAdjustmentSummary) {
   'use strict';
 
 
@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityStockPriceAdjustments model module.
    * @module model/ApiResponseSecurityStockPriceAdjustments
-   * @version 1.1.0
+   * @version 1.1.1
    */
 
   /**
@@ -64,7 +64,7 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('stock_price_adjustments')) {
-        obj['stock_price_adjustments'] = ApiClient.convertToType(data['stock_price_adjustments'], [StockPriceAdjustment]);
+        obj['stock_price_adjustments'] = ApiClient.convertToType(data['stock_price_adjustments'], [StockPriceAdjustmentSummary]);
       }
       if (data.hasOwnProperty('security')) {
         obj['security'] = SecuritySummary.constructFromObject(data['security']);
@@ -78,7 +78,7 @@
 
   /**
    * The stock price adjustments for the Security
-   * @member {Array.<module:model/StockPriceAdjustment>} stock_price_adjustments
+   * @member {Array.<module:model/StockPriceAdjustmentSummary>} stock_price_adjustments
    */
   exports.prototype['stock_price_adjustments'] = undefined;
   /**

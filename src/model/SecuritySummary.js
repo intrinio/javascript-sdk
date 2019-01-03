@@ -36,7 +36,7 @@
   /**
    * The SecuritySummary model module.
    * @module model/SecuritySummary
-   * @version 1.1.0
+   * @version 1.1.1
    */
 
   /**
