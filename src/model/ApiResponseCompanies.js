@@ -36,7 +36,7 @@
   /**
    * The ApiResponseCompanies model module.
    * @module model/ApiResponseCompanies
-   * @version 1.1.2
+   * @version 1.1.1
    */
 
   /**

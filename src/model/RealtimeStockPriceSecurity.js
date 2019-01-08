@@ -36,7 +36,7 @@
   /**
    * The RealtimeStockPriceSecurity model module.
    * @module model/RealtimeStockPriceSecurity
-   * @version 1.1.2
+   * @version 1.1.1
    */
 
   /**

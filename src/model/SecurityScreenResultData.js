@@ -36,7 +36,7 @@
   /**
    * The SecurityScreenResultData model module.
    * @module model/SecurityScreenResultData
-   * @version 1.1.2
+   * @version 1.1.1
    */
 
   /**

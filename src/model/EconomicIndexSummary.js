@@ -36,7 +36,7 @@
   /**
    * The EconomicIndexSummary model module.
    * @module model/EconomicIndexSummary
-   * @version 1.1.2
+   * @version 1.1.1
    */
 
   /**

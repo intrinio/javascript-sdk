@@ -36,7 +36,7 @@
   /**
    * The DataTagSummary model module.
    * @module model/DataTagSummary
-   * @version 1.1.2
+   * @version 1.1.1
    */
 
   /**

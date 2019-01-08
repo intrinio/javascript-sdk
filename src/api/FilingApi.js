@@ -33,7 +33,7 @@
   /**
    * Filing service.
    * @module api/FilingApi
-   * @version 1.1.2
+   * @version 1.1.1
    */
 
   /**

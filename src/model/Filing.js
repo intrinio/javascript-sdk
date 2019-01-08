@@ -36,7 +36,7 @@
   /**
    * The Filing model module.
    * @module model/Filing
-   * @version 1.1.2
+   * @version 1.1.1
    */
 
   /**

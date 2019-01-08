@@ -36,7 +36,7 @@
   /**
    * The ReportedFinancial model module.
    * @module model/ReportedFinancial
-   * @version 1.1.2
+   * @version 1.1.1
    */
 
   /**
