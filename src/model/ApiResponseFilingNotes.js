@@ -36,7 +36,7 @@
   /**
    * The ApiResponseFilingNotes model module.
    * @module model/ApiResponseFilingNotes
-   * @version 1.1.1
+   * @version 1.1.2
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The ApiResponseStockMarketIndices model module.
    * @module model/ApiResponseStockMarketIndices
-   * @version 1.1.1
+   * @version 1.1.2
    */
 
   /**
