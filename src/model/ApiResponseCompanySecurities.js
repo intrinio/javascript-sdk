@@ -36,7 +36,7 @@
   /**
    * The ApiResponseCompanySecurities model module.
    * @module model/ApiResponseCompanySecurities
-   * @version 1.1.1
+   * @version 1.1.2
    */
 
   /**

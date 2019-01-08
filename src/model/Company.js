@@ -36,7 +36,7 @@
   /**
    * The Company model module.
    * @module model/Company
-   * @version 1.1.1
+   * @version 1.1.2
    */
 
   /**
