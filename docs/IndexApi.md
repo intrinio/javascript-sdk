@@ -38,6 +38,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API 
 var indexAPI = new intrinioSDK.IndexApi();
 
 var opts = { 
+  'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
@@ -52,6 +53,7 @@ indexAPI.getAllEconomicIndices(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -72,6 +74,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API 
 var indexAPI = new intrinioSDK.IndexApi();
 
 var opts = { 
+  'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
@@ -86,6 +89,7 @@ indexAPI.getAllSicIndices(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -106,6 +110,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API 
 var indexAPI = new intrinioSDK.IndexApi();
 
 var opts = { 
+  'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
@@ -120,6 +125,7 @@ indexAPI.getAllStockMarketIndices(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -259,6 +265,7 @@ var opts = {
   'startDate': new Date("2018-01-01"), // Date | Get historical data on or after this date
   'endDate': new Date("2019-01-01"), // Date | Get historical data on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
+  'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
@@ -279,6 +286,7 @@ Name | Type | Description  | Notes
  **startDate** | **Date**| Get historical data on or after this date | [optional] 
  **endDate** | **Date**| Get historical data on or before this date | [optional] 
  **sortOrder** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -418,6 +426,7 @@ var opts = {
   'startDate': new Date("2018-01-01"), // Date | Get historical data on or after this date
   'endDate': new Date("2019-01-01"), // Date | Get historical data on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
+  'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
@@ -438,6 +447,7 @@ Name | Type | Description  | Notes
  **startDate** | **Date**| Get historical data on or after this date | [optional] 
  **endDate** | **Date**| Get historical data on or before this date | [optional] 
  **sortOrder** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -577,6 +587,7 @@ var opts = {
   'startDate': new Date("2018-01-01"), // Date | Get historical data on or after this date
   'endDate': new Date("2019-01-01"), // Date | Get historical data on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
+  'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
@@ -597,6 +608,7 @@ Name | Type | Description  | Notes
  **startDate** | **Date**| Get historical data on or after this date | [optional] 
  **endDate** | **Date**| Get historical data on or before this date | [optional] 
  **sortOrder** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -605,7 +617,7 @@ Name | Type | Description  | Notes
 
 <a name="searchEconomicIndices"></a>
 # **searchEconomicIndices**
-> ApiResponseEconomicIndices searchEconomicIndices(query)
+> ApiResponseEconomicIndicesSearch searchEconomicIndices(query, opts)
 
 Search Economic Indices
 
@@ -620,8 +632,11 @@ var indexAPI = new intrinioSDK.IndexApi();
 
 var query = "GDP"; // String | Search query
 
+var opts = { 
+  'pageSize': 100 // Number | The number of results to return
+};
 
-indexAPI.searchEconomicIndices(query).then(function(data) {
+indexAPI.searchEconomicIndices(query, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -633,14 +648,15 @@ indexAPI.searchEconomicIndices(query).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **String**| Search query | 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
-[**ApiResponseEconomicIndices**](ApiResponseEconomicIndices.md)
+[**ApiResponseEconomicIndicesSearch**](ApiResponseEconomicIndicesSearch.md)
 
 <a name="searchSicIndices"></a>
 # **searchSicIndices**
-> ApiResponseSICIndices searchSicIndices(query)
+> ApiResponseSICIndicesSearch searchSicIndices(query, opts)
 
 Search SIC Indices
 
@@ -655,8 +671,11 @@ var indexAPI = new intrinioSDK.IndexApi();
 
 var query = "agriculture"; // String | Search query
 
+var opts = { 
+  'pageSize': 100 // Number | The number of results to return
+};
 
-indexAPI.searchSicIndices(query).then(function(data) {
+indexAPI.searchSicIndices(query, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -668,14 +687,15 @@ indexAPI.searchSicIndices(query).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **String**| Search query | 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
-[**ApiResponseSICIndices**](ApiResponseSICIndices.md)
+[**ApiResponseSICIndicesSearch**](ApiResponseSICIndicesSearch.md)
 
 <a name="searchStockMarketsIndices"></a>
 # **searchStockMarketsIndices**
-> ApiResponseStockMarketIndices searchStockMarketsIndices(query)
+> ApiResponseStockMarketIndicesSearch searchStockMarketsIndices(query, opts)
 
 Search Stock Market Indices
 
@@ -690,8 +710,11 @@ var indexAPI = new intrinioSDK.IndexApi();
 
 var query = "dow"; // String | Search query
 
+var opts = { 
+  'pageSize': 100 // Number | The number of results to return
+};
 
-indexAPI.searchStockMarketsIndices(query).then(function(data) {
+indexAPI.searchStockMarketsIndices(query, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -703,8 +726,9 @@ indexAPI.searchStockMarketsIndices(query).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **String**| Search query | 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
-[**ApiResponseStockMarketIndices**](ApiResponseStockMarketIndices.md)
+[**ApiResponseStockMarketIndicesSearch**](ApiResponseStockMarketIndicesSearch.md)
 

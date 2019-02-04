@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.1.0
-- Package version: 1.1.2
+- API version: 2.1.1
+- Package version: 2.0.0
 
 
 ## Installation
@@ -65,8 +65,6 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*intrinioSDK.CompanyApi* | [**filterCompanies**](docs/CompanyApi.md#filterCompanies) | **GET** /companies/filter | Filter Companies
-*intrinioSDK.CompanyApi* | [**filterCompanyFundamentals**](docs/CompanyApi.md#filterCompanyFundamentals) | **GET** /companies/{identifier}/fundamentals/filter | Filter Fundamentals by Company
 *intrinioSDK.CompanyApi* | [**getAllCompanies**](docs/CompanyApi.md#getAllCompanies) | **GET** /companies | All Companies
 *intrinioSDK.CompanyApi* | [**getAllCompanyNews**](docs/CompanyApi.md#getAllCompanyNews) | **GET** /companies/news | All News
 *intrinioSDK.CompanyApi* | [**getCompany**](docs/CompanyApi.md#getCompany) | **GET** /companies/{identifier} | Lookup Company
@@ -81,12 +79,9 @@ Class | Method | HTTP request | Description
 *intrinioSDK.CompanyApi* | [**searchCompanies**](docs/CompanyApi.md#searchCompanies) | **GET** /companies/search | Search Companies
 *intrinioSDK.DataPointApi* | [**getDataPointNumber**](docs/DataPointApi.md#getDataPointNumber) | **GET** /data_point/{identifier}/{tag}/number | Data Point (Number)
 *intrinioSDK.DataPointApi* | [**getDataPointText**](docs/DataPointApi.md#getDataPointText) | **GET** /data_point/{identifier}/{tag}/text | Data Point (Text)
-*intrinioSDK.DataTagApi* | [**filterDataTags**](docs/DataTagApi.md#filterDataTags) | **GET** /data_tags/filter | Filter Data Tags
 *intrinioSDK.DataTagApi* | [**getAllDataTags**](docs/DataTagApi.md#getAllDataTags) | **GET** /data_tags | All Data Tags
 *intrinioSDK.DataTagApi* | [**getDataTagById**](docs/DataTagApi.md#getDataTagById) | **GET** /data_tags/{identifier} | Lookup Data Tag
 *intrinioSDK.DataTagApi* | [**searchDataTags**](docs/DataTagApi.md#searchDataTags) | **GET** /data_tags/search | Search Data Tags
-*intrinioSDK.FilingApi* | [**filterFilings**](docs/FilingApi.md#filterFilings) | **GET** /filings/filter | Filter Filings
-*intrinioSDK.FilingApi* | [**filterNotes**](docs/FilingApi.md#filterNotes) | **GET** /filings/notes/filter | Filter Filing Notes
 *intrinioSDK.FilingApi* | [**getAllFilings**](docs/FilingApi.md#getAllFilings) | **GET** /filings | All Filings
 *intrinioSDK.FilingApi* | [**getAllNotes**](docs/FilingApi.md#getAllNotes) | **GET** /filings/notes | All Filing Notes
 *intrinioSDK.FilingApi* | [**getFilingById**](docs/FilingApi.md#getFilingById) | **GET** /filings/{id} | Lookup Filing
@@ -117,11 +112,15 @@ Class | Method | HTTP request | Description
 *intrinioSDK.IndexApi* | [**searchEconomicIndices**](docs/IndexApi.md#searchEconomicIndices) | **GET** /indices/economic/search | Search Economic Indices
 *intrinioSDK.IndexApi* | [**searchSicIndices**](docs/IndexApi.md#searchSicIndices) | **GET** /indices/sic/search | Search SIC Indices
 *intrinioSDK.IndexApi* | [**searchStockMarketsIndices**](docs/IndexApi.md#searchStockMarketsIndices) | **GET** /indices/stock_market/search | Search Stock Market Indices
+*intrinioSDK.MunicipalityApi* | [**getAllMunicipalities**](docs/MunicipalityApi.md#getAllMunicipalities) | **GET** /municipalities | All Municipalities
+*intrinioSDK.MunicipalityApi* | [**getMunicipalityById**](docs/MunicipalityApi.md#getMunicipalityById) | **GET** /municipalities/{id} | Municipality by ID
+*intrinioSDK.MunicipalityApi* | [**getMunicipalityFinancials**](docs/MunicipalityApi.md#getMunicipalityFinancials) | **GET** /municipalities/{id}/financials | Financials for a Municipality
 *intrinioSDK.SecurityApi* | [**getAllSecurities**](docs/SecurityApi.md#getAllSecurities) | **GET** /securities | All Securities
 *intrinioSDK.SecurityApi* | [**getSecurityById**](docs/SecurityApi.md#getSecurityById) | **GET** /securities/{identifier} | Lookup Security
 *intrinioSDK.SecurityApi* | [**getSecurityDataPointNumber**](docs/SecurityApi.md#getSecurityDataPointNumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
 *intrinioSDK.SecurityApi* | [**getSecurityDataPointText**](docs/SecurityApi.md#getSecurityDataPointText) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
 *intrinioSDK.SecurityApi* | [**getSecurityHistoricalData**](docs/SecurityApi.md#getSecurityHistoricalData) | **GET** /securities/{identifier}/historical_data/{tag} | Historical Data for Security
+*intrinioSDK.SecurityApi* | [**getSecurityIntradayPrices**](docs/SecurityApi.md#getSecurityIntradayPrices) | **GET** /securities/{identifier}/prices/intraday | Intraday Stock Prices for Security
 *intrinioSDK.SecurityApi* | [**getSecurityLatestDividendRecord**](docs/SecurityApi.md#getSecurityLatestDividendRecord) | **GET** /securities/{identifier}/dividends/latest | Lastest Dividend Record for Security
 *intrinioSDK.SecurityApi* | [**getSecurityLatestEarningsRecord**](docs/SecurityApi.md#getSecurityLatestEarningsRecord) | **GET** /securities/{identifier}/earnings/latest | Lastest Earnings Record for Security
 *intrinioSDK.SecurityApi* | [**getSecurityRealtimePrice**](docs/SecurityApi.md#getSecurityRealtimePrice) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
@@ -129,7 +128,6 @@ Class | Method | HTTP request | Description
 *intrinioSDK.SecurityApi* | [**getSecurityStockPrices**](docs/SecurityApi.md#getSecurityStockPrices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
 *intrinioSDK.SecurityApi* | [**screenSecurities**](docs/SecurityApi.md#screenSecurities) | **POST** /securities/screen | Screen Securities
 *intrinioSDK.SecurityApi* | [**searchSecurities**](docs/SecurityApi.md#searchSecurities) | **GET** /securities/search | Search Securities
-*intrinioSDK.StockExchangeApi* | [**filterStockExchanges**](docs/StockExchangeApi.md#filterStockExchanges) | **GET** /stock_exchanges/filter | Filter Stock Exchanges
 *intrinioSDK.StockExchangeApi* | [**getAllStockExchanges**](docs/StockExchangeApi.md#getAllStockExchanges) | **GET** /stock_exchanges | All Stock Exchanges
 *intrinioSDK.StockExchangeApi* | [**getStockExchangeById**](docs/StockExchangeApi.md#getStockExchangeById) | **GET** /stock_exchanges/{identifier} | Lookup Stock Exchange
 *intrinioSDK.StockExchangeApi* | [**getStockExchangePriceAdjustments**](docs/StockExchangeApi.md#getStockExchangePriceAdjustments) | **GET** /stock_exchanges/{identifier}/prices/adjustments | Stock Price Adjustments by Exchange
@@ -141,24 +139,32 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [intrinioSDK.ApiResponseCompanies](docs/ApiResponseCompanies.md)
+ - [intrinioSDK.ApiResponseCompaniesSearch](docs/ApiResponseCompaniesSearch.md)
  - [intrinioSDK.ApiResponseCompanyFilings](docs/ApiResponseCompanyFilings.md)
  - [intrinioSDK.ApiResponseCompanyFundamentals](docs/ApiResponseCompanyFundamentals.md)
  - [intrinioSDK.ApiResponseCompanyHistoricalData](docs/ApiResponseCompanyHistoricalData.md)
  - [intrinioSDK.ApiResponseCompanyNews](docs/ApiResponseCompanyNews.md)
  - [intrinioSDK.ApiResponseCompanySecurities](docs/ApiResponseCompanySecurities.md)
  - [intrinioSDK.ApiResponseDataTags](docs/ApiResponseDataTags.md)
+ - [intrinioSDK.ApiResponseDataTagsSearch](docs/ApiResponseDataTagsSearch.md)
  - [intrinioSDK.ApiResponseEconomicIndexHistoricalData](docs/ApiResponseEconomicIndexHistoricalData.md)
  - [intrinioSDK.ApiResponseEconomicIndices](docs/ApiResponseEconomicIndices.md)
+ - [intrinioSDK.ApiResponseEconomicIndicesSearch](docs/ApiResponseEconomicIndicesSearch.md)
  - [intrinioSDK.ApiResponseFilingNotes](docs/ApiResponseFilingNotes.md)
  - [intrinioSDK.ApiResponseFilingNotesSearch](docs/ApiResponseFilingNotesSearch.md)
  - [intrinioSDK.ApiResponseFilings](docs/ApiResponseFilings.md)
  - [intrinioSDK.ApiResponseHistoricalData](docs/ApiResponseHistoricalData.md)
+ - [intrinioSDK.ApiResponseMunicipalities](docs/ApiResponseMunicipalities.md)
+ - [intrinioSDK.ApiResponseMunicipalitiyFinancials](docs/ApiResponseMunicipalitiyFinancials.md)
  - [intrinioSDK.ApiResponseNews](docs/ApiResponseNews.md)
  - [intrinioSDK.ApiResponseReportedFinancials](docs/ApiResponseReportedFinancials.md)
  - [intrinioSDK.ApiResponseSICIndexHistoricalData](docs/ApiResponseSICIndexHistoricalData.md)
  - [intrinioSDK.ApiResponseSICIndices](docs/ApiResponseSICIndices.md)
+ - [intrinioSDK.ApiResponseSICIndicesSearch](docs/ApiResponseSICIndicesSearch.md)
  - [intrinioSDK.ApiResponseSecurities](docs/ApiResponseSecurities.md)
+ - [intrinioSDK.ApiResponseSecuritiesSearch](docs/ApiResponseSecuritiesSearch.md)
  - [intrinioSDK.ApiResponseSecurityHistoricalData](docs/ApiResponseSecurityHistoricalData.md)
+ - [intrinioSDK.ApiResponseSecurityIntradayPrices](docs/ApiResponseSecurityIntradayPrices.md)
  - [intrinioSDK.ApiResponseSecurityStockPriceAdjustments](docs/ApiResponseSecurityStockPriceAdjustments.md)
  - [intrinioSDK.ApiResponseSecurityStockPrices](docs/ApiResponseSecurityStockPrices.md)
  - [intrinioSDK.ApiResponseStandardizedFinancials](docs/ApiResponseStandardizedFinancials.md)
@@ -169,6 +175,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseStockExchanges](docs/ApiResponseStockExchanges.md)
  - [intrinioSDK.ApiResponseStockMarketIndexHistoricalData](docs/ApiResponseStockMarketIndexHistoricalData.md)
  - [intrinioSDK.ApiResponseStockMarketIndices](docs/ApiResponseStockMarketIndices.md)
+ - [intrinioSDK.ApiResponseStockMarketIndicesSearch](docs/ApiResponseStockMarketIndicesSearch.md)
  - [intrinioSDK.Company](docs/Company.md)
  - [intrinioSDK.CompanyFiling](docs/CompanyFiling.md)
  - [intrinioSDK.CompanyNews](docs/CompanyNews.md)
@@ -188,6 +195,9 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.Fundamental](docs/Fundamental.md)
  - [intrinioSDK.FundamentalSummary](docs/FundamentalSummary.md)
  - [intrinioSDK.HistoricalData](docs/HistoricalData.md)
+ - [intrinioSDK.IntradayStockPrice](docs/IntradayStockPrice.md)
+ - [intrinioSDK.Municipality](docs/Municipality.md)
+ - [intrinioSDK.MunicipalityFinancial](docs/MunicipalityFinancial.md)
  - [intrinioSDK.RealtimeStockPrice](docs/RealtimeStockPrice.md)
  - [intrinioSDK.RealtimeStockPriceSecurity](docs/RealtimeStockPriceSecurity.md)
  - [intrinioSDK.ReportedFinancial](docs/ReportedFinancial.md)

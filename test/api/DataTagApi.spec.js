@@ -50,16 +50,6 @@
   }
 
   describe('DataTagApi', function() {
-    describe('filterDataTags', function() {
-      it('should call filterDataTags successfully', function(done) {
-        //uncomment below and update the code to test filterDataTags
-        //instance.filterDataTags(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('getAllDataTags', function() {
       it('should call getAllDataTags successfully', function(done) {
         //uncomment below and update the code to test getAllDataTags

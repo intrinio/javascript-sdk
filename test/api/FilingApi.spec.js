@@ -50,26 +50,6 @@
   }
 
   describe('FilingApi', function() {
-    describe('filterFilings', function() {
-      it('should call filterFilings successfully', function(done) {
-        //uncomment below and update the code to test filterFilings
-        //instance.filterFilings(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('filterNotes', function() {
-      it('should call filterNotes successfully', function(done) {
-        //uncomment below and update the code to test filterNotes
-        //instance.filterNotes(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('getAllFilings', function() {
       it('should call getAllFilings successfully', function(done) {
         //uncomment below and update the code to test getAllFilings

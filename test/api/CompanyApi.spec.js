@@ -50,26 +50,6 @@
   }
 
   describe('CompanyApi', function() {
-    describe('filterCompanies', function() {
-      it('should call filterCompanies successfully', function(done) {
-        //uncomment below and update the code to test filterCompanies
-        //instance.filterCompanies(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('filterCompanyFundamentals', function() {
-      it('should call filterCompanyFundamentals successfully', function(done) {
-        //uncomment below and update the code to test filterCompanyFundamentals
-        //instance.filterCompanyFundamentals(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('getAllCompanies', function() {
       it('should call getAllCompanies successfully', function(done) {
         //uncomment below and update the code to test getAllCompanies

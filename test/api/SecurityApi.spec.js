@@ -100,6 +100,16 @@
         done();
       });
     });
+    describe('getSecurityIntradayPrices', function() {
+      it('should call getSecurityIntradayPrices successfully', function(done) {
+        //uncomment below and update the code to test getSecurityIntradayPrices
+        //instance.getSecurityIntradayPrices(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getSecurityLatestDividendRecord', function() {
       it('should call getSecurityLatestDividendRecord successfully', function(done) {
         //uncomment below and update the code to test getSecurityLatestDividendRecord

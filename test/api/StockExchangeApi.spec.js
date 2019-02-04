@@ -50,16 +50,6 @@
   }
 
   describe('StockExchangeApi', function() {
-    describe('filterStockExchanges', function() {
-      it('should call filterStockExchanges successfully', function(done) {
-        //uncomment below and update the code to test filterStockExchanges
-        //instance.filterStockExchanges(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('getAllStockExchanges', function() {
       it('should call getAllStockExchanges successfully', function(done) {
         //uncomment below and update the code to test getAllStockExchanges

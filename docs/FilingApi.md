@@ -4,8 +4,6 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**filterFilings**](FilingApi.md#filterFilings) | **GET** /filings/filter | Filter Filings
-[**filterNotes**](FilingApi.md#filterNotes) | **GET** /filings/notes/filter | Filter Filing Notes
 [**getAllFilings**](FilingApi.md#getAllFilings) | **GET** /filings | All Filings
 [**getAllNotes**](FilingApi.md#getAllNotes) | **GET** /filings/notes | All Filing Notes
 [**getFilingById**](FilingApi.md#getFilingById) | **GET** /filings/{id} | Lookup Filing
@@ -15,13 +13,13 @@ Method | HTTP request | Description
 [**searchNotes**](FilingApi.md#searchNotes) | **GET** /filings/notes/search | Search Filing Notes
 
 
-<a name="filterFilings"></a>
-# **filterFilings**
-> ApiResponseFilings filterFilings(company, opts)
+<a name="getAllFilings"></a>
+# **getAllFilings**
+> ApiResponseFilings getAllFilings(company, opts)
 
-Filter Filings
+All Filings
 
-Returns Filings that match the specified filters
+Returns all Filings. Returns Filings matching parameters when supplied.
 
 ### Example
 ```javascript
@@ -36,10 +34,11 @@ var opts = {
   'reportType': null, // String | Filter by report type
   'startDate': new Date("2015-01-01"), // Date | Filed on or after the given date
   'endDate': new Date("2019-01-01"), // Date | Filed before or after the given date
+  'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-filingAPI.filterFilings(company, opts).then(function(data) {
+filingAPI.getAllFilings(company, opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -54,19 +53,20 @@ Name | Type | Description  | Notes
  **reportType** | **String**| Filter by report type | [optional] 
  **startDate** | **Date**| Filed on or after the given date | [optional] 
  **endDate** | **Date**| Filed before or after the given date | [optional] 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseFilings**](ApiResponseFilings.md)
 
-<a name="filterNotes"></a>
-# **filterNotes**
-> ApiResponseFilingNotes filterNotes(opts)
+<a name="getAllNotes"></a>
+# **getAllNotes**
+> ApiResponseFilingNotes getAllNotes(opts)
 
-Filter Filing Notes
+All Filing Notes
 
-Returns Filing Notes that match the specified filters
+Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
 
 ### Example
 ```javascript
@@ -82,10 +82,11 @@ var opts = {
   'filingEndDate': new Date("2018-11-15"), // Date | Limit search to filings on or before this date
   'periodEndedStartDate': new Date("2018-07-15"), // Date | Limit search to filings with a period end date on or after this date
   'periodEndedEndDate': new Date("2018-11-15"), // Date | Limit search to filings with a period end date on or before this date
+  'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
-filingAPI.filterNotes(opts).then(function(data) {
+filingAPI.getAllNotes(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -102,78 +103,7 @@ Name | Type | Description  | Notes
  **filingEndDate** | **Date**| Limit search to filings on or before this date | [optional] 
  **periodEndedStartDate** | **Date**| Limit search to filings with a period end date on or after this date | [optional] 
  **periodEndedEndDate** | **Date**| Limit search to filings with a period end date on or before this date | [optional] 
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
-
-### Return type
-
-[**ApiResponseFilingNotes**](ApiResponseFilingNotes.md)
-
-<a name="getAllFilings"></a>
-# **getAllFilings**
-> ApiResponseFilings getAllFilings(opts)
-
-All Filings
-
-Returns all Filings
-
-### Example
-```javascript
-var intrinioSDK = require('intrinio-sdk');
-intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
-
-var filingAPI = new intrinioSDK.FilingApi();
-
-var opts = { 
-  'nextPage': null // String | Gets the next page of data from a previous API call
-};
-
-filingAPI.getAllFilings(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
-
-### Return type
-
-[**ApiResponseFilings**](ApiResponseFilings.md)
-
-<a name="getAllNotes"></a>
-# **getAllNotes**
-> ApiResponseFilingNotes getAllNotes(opts)
-
-All Filing Notes
-
-Return all Notes from all Filings, most-recent first
-
-### Example
-```javascript
-var intrinioSDK = require('intrinio-sdk');
-intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
-
-var filingAPI = new intrinioSDK.FilingApi();
-
-var opts = { 
-  'nextPage': null // String | Gets the next page of data from a previous API call
-};
-
-filingAPI.getAllNotes(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -338,7 +268,8 @@ var query = "inflation"; // String | Search for notes that contain all or parts 
 var opts = { 
   'filingStartDate': new Date("2018-07-15"), // Date | Limit search to filings on or after this date
   'filingEndDate': new Date("2018-11-30"), // Date | Limit search to filings on or before this date
-  'pageSize': 100 // Number | The number of results to return
+  'pageSize': 100, // Number | The number of results to return
+  'pageSize2': 100 // Number | The number of results to return
 };
 
 filingAPI.searchNotes(query, opts).then(function(data) {
@@ -356,6 +287,7 @@ Name | Type | Description  | Notes
  **filingStartDate** | **Date**| Limit search to filings on or after this date | [optional] 
  **filingEndDate** | **Date**| Limit search to filings on or before this date | [optional] 
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+ **pageSize2** | **Number**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 

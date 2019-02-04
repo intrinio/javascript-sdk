@@ -31,6 +31,7 @@ var opts = {
   'startDate': new Date("2015-01-01"), // Date | Get historical data on or after this date
   'endDate': new Date("2019-01-01"), // Date | Get historical date on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
+  'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
@@ -51,6 +52,7 @@ Name | Type | Description  | Notes
  **startDate** | **Date**| Get historical data on or after this date | [optional] 
  **endDate** | **Date**| Get historical date on or before this date | [optional] 
  **sortOrder** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type

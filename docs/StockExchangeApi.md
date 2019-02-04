@@ -4,7 +4,6 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**filterStockExchanges**](StockExchangeApi.md#filterStockExchanges) | **GET** /stock_exchanges/filter | Filter Stock Exchanges
 [**getAllStockExchanges**](StockExchangeApi.md#getAllStockExchanges) | **GET** /stock_exchanges | All Stock Exchanges
 [**getStockExchangeById**](StockExchangeApi.md#getStockExchangeById) | **GET** /stock_exchanges/{identifier} | Lookup Stock Exchange
 [**getStockExchangePriceAdjustments**](StockExchangeApi.md#getStockExchangePriceAdjustments) | **GET** /stock_exchanges/{identifier}/prices/adjustments | Stock Price Adjustments by Exchange
@@ -13,13 +12,13 @@ Method | HTTP request | Description
 [**getStockExchangeSecurities**](StockExchangeApi.md#getStockExchangeSecurities) | **GET** /stock_exchanges/{identifier}/securities | Securities by Exchange
 
 
-<a name="filterStockExchanges"></a>
-# **filterStockExchanges**
-> ApiResponseStockExchanges filterStockExchanges(opts)
+<a name="getAllStockExchanges"></a>
+# **getAllStockExchanges**
+> ApiResponseStockExchanges getAllStockExchanges(opts)
 
-Filter Stock Exchanges
+All Stock Exchanges
 
-Returns Stock Exchanges matching the given filters
+Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
 
 ### Example
 ```javascript
@@ -31,10 +30,11 @@ var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
 var opts = { 
   'city': "city_example", // String | Filter by city
   'country': "CHINA", // String | Filter by country
-  'countryCode': "countryCode_example" // String | Filter by ISO country code
+  'countryCode': "countryCode_example", // String | Filter by ISO country code
+  'pageSize': 100 // Number | The number of results to return
 };
 
-stockExchangeAPI.filterStockExchanges(opts).then(function(data) {
+stockExchangeAPI.getAllStockExchanges(opts).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -48,35 +48,7 @@ Name | Type | Description  | Notes
  **city** | **String**| Filter by city | [optional] 
  **country** | **String**| Filter by country | [optional] 
  **countryCode** | **String**| Filter by ISO country code | [optional] 
-
-### Return type
-
-[**ApiResponseStockExchanges**](ApiResponseStockExchanges.md)
-
-<a name="getAllStockExchanges"></a>
-# **getAllStockExchanges**
-> ApiResponseStockExchanges getAllStockExchanges()
-
-All Stock Exchanges
-
-Returns all Stock Exchanges
-
-### Example
-```javascript
-var intrinioSDK = require('intrinio-sdk');
-intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
-
-var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
-
-stockExchangeAPI.getAllStockExchanges().then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-```
-
-### Parameters
-This endpoint does not need any parameter.
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
@@ -136,6 +108,7 @@ var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intri
 
 var opts = { 
   '_date': new Date("2018-08-14"), // Date | The date for which to return price adjustments
+  'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
@@ -152,6 +125,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Stock Exchange identifier (MIC or Intrinio ID) | 
  **_date** | **Date**| The date for which to return price adjustments | [optional] 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -177,6 +151,7 @@ var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intri
 
 var opts = { 
   '_date': new Date("2018-08-14"), // Date | The date for which to return prices
+  'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
@@ -193,6 +168,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Stock Exchange identifier (MIC or Intrinio ID) | 
  **_date** | **Date**| The date for which to return prices | [optional] 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -218,6 +194,7 @@ var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intri
 
 var opts = { 
   'source': null, // String | Return realtime prices from the specified data source
+  'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
@@ -234,6 +211,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Stock Exchange identifier (MIC or Intrinio ID) | 
  **source** | **String**| Return realtime prices from the specified data source | [optional] 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
@@ -258,6 +236,7 @@ var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
 var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 var opts = { 
+  'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
@@ -273,6 +252,7 @@ stockExchangeAPI.getStockExchangeSecurities(identifier, opts).then(function(data
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Stock Exchange identifier (MIC or Intrinio ID) | 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
