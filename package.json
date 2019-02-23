@@ -1,6 +1,6 @@
 {
   "name": "intrinio-sdk",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Access the Intrinio API",
   "license": "GPLv3",
   "main": "src/index.js",

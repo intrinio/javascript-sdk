@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.1.1
-- Package version: 2.0.0
+- API version: 2.2.0
+- Package version: 2.0.1
 
 
 ## Installation
@@ -89,6 +89,9 @@ Class | Method | HTTP request | Description
 *intrinioSDK.FilingApi* | [**getNoteHtml**](docs/FilingApi.md#getNoteHtml) | **GET** /filings/notes/{identifier}/html | Filing Note HTML
 *intrinioSDK.FilingApi* | [**getNoteText**](docs/FilingApi.md#getNoteText) | **GET** /filings/notes/{identifier}/text | Filing Note Text
 *intrinioSDK.FilingApi* | [**searchNotes**](docs/FilingApi.md#searchNotes) | **GET** /filings/notes/search | Search Filing Notes
+*intrinioSDK.ForexApi* | [**getForexCurrencies**](docs/ForexApi.md#getForexCurrencies) | **GET** /forex/currencies | Forex Currencies
+*intrinioSDK.ForexApi* | [**getForexPairs**](docs/ForexApi.md#getForexPairs) | **GET** /forex/pairs | Forex Currency Pairs
+*intrinioSDK.ForexApi* | [**getForexPrices**](docs/ForexApi.md#getForexPrices) | **GET** /forex/prices/{pair}/{timeframe} | Forex Currency Prices
 *intrinioSDK.FundamentalsApi* | [**getFundamentalById**](docs/FundamentalsApi.md#getFundamentalById) | **GET** /fundamentals/{id} | Fundamental by ID
 *intrinioSDK.FundamentalsApi* | [**getFundamentalReportedFinancials**](docs/FundamentalsApi.md#getFundamentalReportedFinancials) | **GET** /fundamentals/{id}/reported_financials | Reported Financials
 *intrinioSDK.FundamentalsApi* | [**getFundamentalStandardizedFinancials**](docs/FundamentalsApi.md#getFundamentalStandardizedFinancials) | **GET** /fundamentals/{id}/standardized_financials | Standardized Financials
@@ -153,6 +156,9 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseFilingNotes](docs/ApiResponseFilingNotes.md)
  - [intrinioSDK.ApiResponseFilingNotesSearch](docs/ApiResponseFilingNotesSearch.md)
  - [intrinioSDK.ApiResponseFilings](docs/ApiResponseFilings.md)
+ - [intrinioSDK.ApiResponseForexCurrencies](docs/ApiResponseForexCurrencies.md)
+ - [intrinioSDK.ApiResponseForexPairs](docs/ApiResponseForexPairs.md)
+ - [intrinioSDK.ApiResponseForexPrices](docs/ApiResponseForexPrices.md)
  - [intrinioSDK.ApiResponseHistoricalData](docs/ApiResponseHistoricalData.md)
  - [intrinioSDK.ApiResponseMunicipalities](docs/ApiResponseMunicipalities.md)
  - [intrinioSDK.ApiResponseMunicipalitiyFinancials](docs/ApiResponseMunicipalitiyFinancials.md)
@@ -192,6 +198,9 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.FilingNoteFiling](docs/FilingNoteFiling.md)
  - [intrinioSDK.FilingNoteSummary](docs/FilingNoteSummary.md)
  - [intrinioSDK.FilingSummary](docs/FilingSummary.md)
+ - [intrinioSDK.ForexCurrency](docs/ForexCurrency.md)
+ - [intrinioSDK.ForexPair](docs/ForexPair.md)
+ - [intrinioSDK.ForexPrice](docs/ForexPrice.md)
  - [intrinioSDK.Fundamental](docs/Fundamental.md)
  - [intrinioSDK.FundamentalSummary](docs/FundamentalSummary.md)
  - [intrinioSDK.HistoricalData](docs/HistoricalData.md)
