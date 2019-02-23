@@ -36,7 +36,7 @@
   /**
    * The CompanyNewsSummary model module.
    * @module model/CompanyNewsSummary
-   * @version 2.0.1
+   * @version 2.1.0
    */
 
   /**

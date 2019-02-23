@@ -36,7 +36,7 @@
   /**
    * The SecurityScreenClause model module.
    * @module model/SecurityScreenClause
-   * @version 2.0.1
+   * @version 2.1.0
    */
 
   /**
