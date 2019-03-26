@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 Historical Data
 
-Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+$$v2_historical_data_description$$
 
 ### Example
 ```javascript
@@ -22,11 +22,12 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API 
 
 var historicalDataAPI = new intrinioSDK.HistoricalDataApi();
 
-var identifier = "AAPL"; // String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+var identifier = "$$v2_historical_data_identifier_default$$"; // String | $$v2_historical_data_identifier_description$$
 
-var tag = "marketcap"; // String | An Intrinio data tag ID or code-name
+var tag = "$$v2_historical_data_item_default$$"; // String | $$v2_historical_data_item_description$$
 
 var opts = { 
+  'frequency': "daily", // String | Return historical data in the given frequency
   'type': null, // String | Filter by type, when applicable
   'startDate': new Date("2015-01-01"), // Date | Get historical data on or after this date
   'endDate': new Date("2019-01-01"), // Date | Get historical date on or before this date
@@ -46,8 +47,9 @@ historicalDataAPI.getHistoricalData(identifier, tag, opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) | 
- **tag** | **String**| An Intrinio data tag ID or code-name | 
+ **identifier** | **String**| $$v2_historical_data_identifier_description$$ | 
+ **tag** | **String**| $$v2_historical_data_item_description$$ | 
+ **frequency** | **String**| Return historical data in the given frequency | [optional] [default to daily]
  **type** | **String**| Filter by type, when applicable | [optional] 
  **startDate** | **Date**| Get historical data on or after this date | [optional] 
  **endDate** | **Date**| Get historical date on or before this date | [optional] 

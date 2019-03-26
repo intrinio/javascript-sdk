@@ -60,7 +60,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API 
 
 var fundamentalsAPI = new intrinioSDK.FundamentalsApi();
 
-var id = "fun_ge9LlE"; // String | The Intrinio ID for the Fundamental
+var id = "AAPL-income_statement-2018-Q1"; // String | The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental
 
 
 fundamentalsAPI.getFundamentalReportedFinancials(id).then(function(data) {
@@ -74,7 +74,7 @@ fundamentalsAPI.getFundamentalReportedFinancials(id).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**| The Intrinio ID for the Fundamental | 
+ **id** | **String**| The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental | 
 
 ### Return type
 
@@ -95,7 +95,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API 
 
 var fundamentalsAPI = new intrinioSDK.FundamentalsApi();
 
-var id = "fun_ge9LlE"; // String | The Intrinio ID for the Fundamental
+var id = "AAPL-income_statement-2018-Q1"; // String | The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental
 
 
 fundamentalsAPI.getFundamentalStandardizedFinancials(id).then(function(data) {
@@ -109,7 +109,7 @@ fundamentalsAPI.getFundamentalStandardizedFinancials(id).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**| The Intrinio ID for the Fundamental | 
+ **id** | **String**| The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental | 
 
 ### Return type
 

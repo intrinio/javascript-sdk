@@ -218,6 +218,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property listingExchangeMic (base name: "listing_exchange_mic")', function() {
+      // uncomment below and update the code to test the property listingExchangeMic
+      //var instane = new intrinioSDK.Security();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

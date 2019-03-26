@@ -68,6 +68,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property dimensions (base name: "dimensions")', function() {
+      // uncomment below and update the code to test the property dimensions
+      //var instane = new intrinioSDK.ReportedFinancial();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

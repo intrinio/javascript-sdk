@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Data Point (Number)
 
-Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
+$$v2_data_point_number_description$$
 
 ### Example
 ```javascript
@@ -23,9 +23,9 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API 
 
 var dataPointAPI = new intrinioSDK.DataPointApi();
 
-var identifier = "AAPL"; // String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+var identifier = "$$v2_data_point_identifier_default$$"; // String | $$v2_data_point_identifier_description$$
 
-var tag = "marketcap"; // String | An Intrinio data tag ID or code-name
+var tag = "$$v2_data_point_item_number_default$$"; // String | $$v2_data_point_item_description$$
 
 
 dataPointAPI.getDataPointNumber(identifier, tag).then(function(data) {
@@ -39,8 +39,8 @@ dataPointAPI.getDataPointNumber(identifier, tag).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) | 
- **tag** | **String**| An Intrinio data tag ID or code-name | 
+ **identifier** | **String**| $$v2_data_point_identifier_description$$ | 
+ **tag** | **String**| $$v2_data_point_item_description$$ | 
 
 ### Return type
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 Data Point (Text)
 
-Returns a text value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
+$$v2_data_point_text_description$$
 
 ### Example
 ```javascript
@@ -61,9 +61,9 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API 
 
 var dataPointAPI = new intrinioSDK.DataPointApi();
 
-var identifier = "AAPL"; // String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+var identifier = "$$v2_data_point_identifier_default$$"; // String | $$v2_data_point_identifier_description$$
 
-var tag = "marketcap"; // String | An Intrinio data tag ID or code-name
+var tag = "$$v2_data_point_item_text_default$$"; // String | $$v2_data_point_item_description$$
 
 
 dataPointAPI.getDataPointText(identifier, tag).then(function(data) {
@@ -77,8 +77,8 @@ dataPointAPI.getDataPointText(identifier, tag).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) | 
- **tag** | **String**| An Intrinio data tag ID or code-name | 
+ **identifier** | **String**| $$v2_data_point_identifier_description$$ | 
+ **tag** | **String**| $$v2_data_point_item_description$$ | 
 
 ### Return type
 

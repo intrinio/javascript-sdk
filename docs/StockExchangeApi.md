@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 All Stock Exchanges
 
-Returns all Stock Exchanges. Returns Stock Exchanges matching parameters when specified.
+Returns all Stock Exchanges matching the specified parameters
 
 ### Example
 ```javascript
@@ -69,7 +69,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API 
 
 var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
 
-var identifier = "XSHG"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
+var identifier = "$$v2_mic_default$$"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 
 stockExchangeAPI.getStockExchangeById(identifier).then(function(data) {
@@ -104,7 +104,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API 
 
 var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
 
-var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
+var identifier = "$$v2_mic_default$$"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 var opts = { 
   '_date': new Date("2018-08-14"), // Date | The date for which to return price adjustments
@@ -147,7 +147,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API 
 
 var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
 
-var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
+var identifier = "$$v2_mic_default$$"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 var opts = { 
   '_date': new Date("2018-08-14"), // Date | The date for which to return prices
@@ -190,7 +190,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API 
 
 var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
 
-var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
+var identifier = "$$v2_mic_default$$"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 var opts = { 
   'source': null, // String | Return realtime prices from the specified data source
@@ -233,7 +233,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API 
 
 var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
 
-var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
+var identifier = "$$v2_mic_default$$"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 var opts = { 
   'pageSize': 100, // Number | The number of results to return
