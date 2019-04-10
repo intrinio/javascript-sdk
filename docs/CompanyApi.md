@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 Data Point (Number) for Company
 
-$$v2_company_data_point_number_description$$
+Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript
@@ -156,9 +156,9 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API 
 
 var companyAPI = new intrinioSDK.CompanyApi();
 
-var identifier = "$$v2_company_data_point_identifier_default$$"; // String | $$v2_company_data_point_identifier_description$$
+var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
-var tag = "$$v2_company_data_point_item_number_default$$"; // String | $$v2_company_data_point_item_description$$
+var tag = "marketcap"; // String | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
 
 
 companyAPI.getCompanyDataPointNumber(identifier, tag).then(function(data) {
@@ -172,8 +172,8 @@ companyAPI.getCompanyDataPointNumber(identifier, tag).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| $$v2_company_data_point_identifier_description$$ | 
- **tag** | **String**| $$v2_company_data_point_item_description$$ | 
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
 
 ### Return type
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 
 Data Point (Text) for Company
 
-$$v2_company_data_point_text_description$$
+Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript
@@ -194,9 +194,9 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API 
 
 var companyAPI = new intrinioSDK.CompanyApi();
 
-var identifier = "$$v2_company_data_point_identifier_default$$"; // String | $$v2_company_data_point_identifier_description$$
+var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
-var tag = "$$v2_company_data_point_item_text_default$$"; // String | $$v2_company_data_point_item_description$$
+var tag = "ceo"; // String | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
 
 
 companyAPI.getCompanyDataPointText(identifier, tag).then(function(data) {
@@ -210,8 +210,8 @@ companyAPI.getCompanyDataPointText(identifier, tag).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| $$v2_company_data_point_identifier_description$$ | 
- **tag** | **String**| $$v2_company_data_point_item_description$$ | 
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
 
 ### Return type
 
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 Historical Data for Company
 
-$$v2_company_historical_data_description$$
+Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
 
 ### Example
 ```javascript
@@ -330,9 +330,9 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API 
 
 var companyAPI = new intrinioSDK.CompanyApi();
 
-var identifier = "$$v2_company_historical_data_identifier_default$$"; // String | $$v2_company_historical_data_identifier_description$$
+var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
-var tag = "$$v2_company_historical_data_item_default$$"; // String | $$v2_company_historical_data_item_description$$
+var tag = "marketcap"; // String | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
 
 var opts = { 
   'frequency': "daily", // String | Return historical data in the given frequency
@@ -355,8 +355,8 @@ companyAPI.getCompanyHistoricalData(identifier, tag, opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| $$v2_company_historical_data_identifier_description$$ | 
- **tag** | **String**| $$v2_company_historical_data_item_description$$ | 
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
  **frequency** | **String**| Return historical data in the given frequency | [optional] [default to daily]
  **type** | **String**| Filter by type, when applicable | [optional] 
  **startDate** | **Date**| Get historical data on or after this date | [optional] 

@@ -1067,9 +1067,8 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.roc1 The number of observations, per period, to calculate the rate-of-change for RCMA1 (default to 10)
      * @param {Number} opts.roc2 The number of observations, per period, to calculate the rate-of-change for RCMA2 (default to 15)
-     * @param {Number} opts.roc3 The number of observations, per period, to calculate the rate-of-change for RCMA2 (default to 15)
-     * @param {Number} opts.roc4 The number of observations, per period, to calculate the rate-of-change for RCMA3 (default to 20)
-     * @param {Number} opts.roc5 The number of observations, per period, to calculate the rate-of-change for RCMA4 (default to 30)
+     * @param {Number} opts.roc3 The number of observations, per period, to calculate the rate-of-change for RCMA3 (default to 20)
+     * @param {Number} opts.roc4 The number of observations, per period, to calculate the rate-of-change for RCMA4 (default to 30)
      * @param {Number} opts.sma1 The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 (default to 10)
      * @param {Number} opts.sma2 The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 (default to 10)
      * @param {Number} opts.sma3 The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 (default to 10)
@@ -1097,9 +1096,8 @@
       var queryParams = {
         'roc1': opts['roc1'],
         'roc2': opts['roc2'],
-        'roc2': opts['roc3'],
-        'roc3': opts['roc4'],
-        'roc4': opts['roc5'],
+        'roc3': opts['roc3'],
+        'roc4': opts['roc4'],
         'sma1': opts['sma1'],
         'sma2': opts['sma2'],
         'sma3': opts['sma3'],
@@ -1136,9 +1134,8 @@
      * @param {Object} opts Optional parameters
      * @param {Number} opts.roc1 The number of observations, per period, to calculate the rate-of-change for RCMA1 (default to 10)
      * @param {Number} opts.roc2 The number of observations, per period, to calculate the rate-of-change for RCMA2 (default to 15)
-     * @param {Number} opts.roc3 The number of observations, per period, to calculate the rate-of-change for RCMA2 (default to 15)
-     * @param {Number} opts.roc4 The number of observations, per period, to calculate the rate-of-change for RCMA3 (default to 20)
-     * @param {Number} opts.roc5 The number of observations, per period, to calculate the rate-of-change for RCMA4 (default to 30)
+     * @param {Number} opts.roc3 The number of observations, per period, to calculate the rate-of-change for RCMA3 (default to 20)
+     * @param {Number} opts.roc4 The number of observations, per period, to calculate the rate-of-change for RCMA4 (default to 30)
      * @param {Number} opts.sma1 The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 (default to 10)
      * @param {Number} opts.sma2 The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 (default to 10)
      * @param {Number} opts.sma3 The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 (default to 10)

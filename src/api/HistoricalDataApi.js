@@ -50,9 +50,9 @@
 
     /**
      * Historical Data
-     * $$v2_historical_data_description$$
-     * @param {String} identifier $$v2_historical_data_identifier_description$$
-     * @param {String} tag $$v2_historical_data_item_description$$
+     * Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+     * @param {String} identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.frequency Return historical data in the given frequency (default to daily)
      * @param {String} opts.type Filter by type, when applicable
@@ -112,9 +112,9 @@
 
     /**
      * Historical Data
-     * $$v2_historical_data_description$$
-     * @param {String} identifier $$v2_historical_data_identifier_description$$
-     * @param {String} tag $$v2_historical_data_item_description$$
+     * Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+     * @param {String} identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.frequency Return historical data in the given frequency (default to daily)
      * @param {String} opts.type Filter by type, when applicable

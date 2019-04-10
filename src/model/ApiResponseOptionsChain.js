@@ -61,8 +61,8 @@
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('chains')) {
-        obj['chains'] = ApiClient.convertToType(data['chains'], [OptionChain]);
+      if (data.hasOwnProperty('chain')) {
+        obj['chain'] = ApiClient.convertToType(data['chain'], [OptionChain]);
       }
     }
     return obj;
@@ -70,9 +70,9 @@
 
   /**
    * A list of options for the provided expiration date their respective option prices.
-   * @member {Array.<module:model/OptionChain>} chains
+   * @member {Array.<module:model/OptionChain>} chain
    */
-  exports.prototype['chains'] = undefined;
+  exports.prototype['chain'] = undefined;
 
 
 
