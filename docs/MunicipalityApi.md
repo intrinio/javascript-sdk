@@ -9,13 +9,26 @@ Method | HTTP request | Description
 [**getMunicipalityFinancials**](MunicipalityApi.md#getMunicipalityFinancials) | **GET** /municipalities/{id}/financials | Financials for a Municipality
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/municipalities)
+
+[//]: # (DOC_LINK:MunicipalityApi.md#getAllMunicipalities)
+
 <a name="getAllMunicipalities"></a>
 # **getAllMunicipalities**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllMunicipalities_v2)
+
 > ApiResponseMunicipalities getAllMunicipalities(opts)
 
 All Municipalities
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -45,6 +58,8 @@ municipalityAPI.getAllMunicipalities(opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -67,8 +82,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseMunicipalities**](ApiResponseMunicipalities.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/municipalities/{id})
+
+[//]: # (DOC_LINK:MunicipalityApi.md#getMunicipalityById)
+
 <a name="getMunicipalityById"></a>
 # **getMunicipalityById**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getMunicipalityById_v2)
+
 > Municipality getMunicipalityById(id)
 
 Municipality by ID
@@ -76,6 +103,9 @@ Municipality by ID
 Returns the Municipality with the given ID
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -92,6 +122,8 @@ municipalityAPI.getMunicipalityById(id).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -102,8 +134,20 @@ Name | Type | Description  | Notes
 
 [**Municipality**](Municipality.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/municipalities/{id}/financials)
+
+[//]: # (DOC_LINK:MunicipalityApi.md#getMunicipalityFinancials)
+
 <a name="getMunicipalityFinancials"></a>
 # **getMunicipalityFinancials**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getMunicipalityFinancials_v2)
+
 > ApiResponseMunicipalitiyFinancials getMunicipalityFinancials(id, opts)
 
 Financials for a Municipality
@@ -111,6 +155,9 @@ Financials for a Municipality
 Returns financial statement data for the Municipality with the given ID
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -130,6 +177,8 @@ municipalityAPI.getMunicipalityFinancials(id, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -140,4 +189,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseMunicipalitiyFinancials**](ApiResponseMunicipalitiyFinancials.md)
+
+[//]: # (END_OPERATION)
 

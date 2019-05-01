@@ -46,12 +46,26 @@ Method | HTTP request | Description
 [**getSecurityRealtimePrice**](SecurityApi.md#getSecurityRealtimePrice) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
 [**getSecurityStockPriceAdjustments**](SecurityApi.md#getSecurityStockPriceAdjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
 [**getSecurityStockPrices**](SecurityApi.md#getSecurityStockPrices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
+[**getSecurityZacksAnalystRatings**](SecurityApi.md#getSecurityZacksAnalystRatings) | **GET** /securities/{identifier}/zacks/analyst_ratings | Zacks Analyst Ratings
+[**getSecurityZacksAnalystRatingsSnapshot**](SecurityApi.md#getSecurityZacksAnalystRatingsSnapshot) | **GET** /securities/{identifier}/zacks/analyst_ratings/snapshot | Zacks Analyst Ratings Snapshot
+[**getSecurityZacksEpsSurprises**](SecurityApi.md#getSecurityZacksEpsSurprises) | **GET** /securities/{identifier}/zacks/eps_surprises | Zacks EPS Surprises for Security
+[**getSecurityZacksSalesSurprises**](SecurityApi.md#getSecurityZacksSalesSurprises) | **GET** /securities/{identifier}/zacks/sales_surprises | Zacks Sales Surprises for Security
 [**screenSecurities**](SecurityApi.md#screenSecurities) | **POST** /securities/screen | Screen Securities
 [**searchSecurities**](SecurityApi.md#searchSecurities) | **GET** /securities/search | Search Securities
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities)
+
+[//]: # (DOC_LINK:SecurityApi.md#getAllSecurities)
+
 <a name="getAllSecurities"></a>
 # **getAllSecurities**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllSecurities_v2)
+
 > ApiResponseSecurities getAllSecurities(opts)
 
 All Securities
@@ -59,6 +73,9 @@ All Securities
 Returns all Securities to which you have access.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -77,6 +94,8 @@ securityAPI.getAllSecurities(opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -88,8 +107,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurities**](ApiResponseSecurities.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier})
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityById)
+
 <a name="getSecurityById"></a>
 # **getSecurityById**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityById_v2)
+
 > Security getSecurityById(identifier)
 
 Lookup Security
@@ -97,6 +128,9 @@ Lookup Security
 Returns the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -113,6 +147,8 @@ securityAPI.getSecurityById(identifier).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -123,8 +159,20 @@ Name | Type | Description  | Notes
 
 [**Security**](Security.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/data_point/{tag}/number)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityDataPointNumber)
+
 <a name="getSecurityDataPointNumber"></a>
 # **getSecurityDataPointNumber**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityDataPointNumber_v2)
+
 > &#39;Number&#39; getSecurityDataPointNumber(identifier, tag)
 
 Data Point (Number) for Security
@@ -132,6 +180,9 @@ Data Point (Number) for Security
 Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -150,6 +201,8 @@ securityAPI.getSecurityDataPointNumber(identifier, tag).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -161,8 +214,20 @@ Name | Type | Description  | Notes
 
 **&#39;Number&#39;**
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/data_point/{tag}/text)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityDataPointText)
+
 <a name="getSecurityDataPointText"></a>
 # **getSecurityDataPointText**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityDataPointText_v2)
+
 > &#39;String&#39; getSecurityDataPointText(identifier, tag)
 
 Data Point (Text) for Security
@@ -170,6 +235,9 @@ Data Point (Text) for Security
 Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -188,6 +256,8 @@ securityAPI.getSecurityDataPointText(identifier, tag).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -199,8 +269,20 @@ Name | Type | Description  | Notes
 
 **&#39;String&#39;**
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/historical_data/{tag})
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityHistoricalData)
+
 <a name="getSecurityHistoricalData"></a>
 # **getSecurityHistoricalData**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityHistoricalData_v2)
+
 > ApiResponseSecurityHistoricalData getSecurityHistoricalData(identifier, tag, opts)
 
 Historical Data for Security
@@ -208,6 +290,9 @@ Historical Data for Security
 Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -222,7 +307,7 @@ var opts = {
   'frequency': "daily", // String | Return historical data in the given frequency
   'type': null, // String | Filter by type, when applicable
   'startDate': new Date("2018-01-01"), // Date | Get historical data on or after this date
-  'endDate': new Date("2019-01-01"), // Date | Get historical date on or before this date
+  'endDate': null, // Date | Get historical date on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
   'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
@@ -234,6 +319,8 @@ securityAPI.getSecurityHistoricalData(identifier, tag, opts).then(function(data)
   console.error(error);
 });
 ```
+
+[//]: # (END_CODE_EXAMPLE)
 
 ### Parameters
 
@@ -253,8 +340,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityHistoricalData**](ApiResponseSecurityHistoricalData.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/intraday)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityIntradayPrices)
+
 <a name="getSecurityIntradayPrices"></a>
 # **getSecurityIntradayPrices**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityIntradayPrices_v2)
+
 > ApiResponseSecurityIntradayPrices getSecurityIntradayPrices(identifier, opts)
 
 Intraday Stock Prices for Security
@@ -262,6 +361,9 @@ Intraday Stock Prices for Security
 Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -285,6 +387,8 @@ securityAPI.getSecurityIntradayPrices(identifier, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -300,8 +404,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityIntradayPrices**](ApiResponseSecurityIntradayPrices.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/dividends/latest)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityLatestDividendRecord)
+
 <a name="getSecurityLatestDividendRecord"></a>
 # **getSecurityLatestDividendRecord**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityLatestDividendRecord_v2)
+
 > DividendRecord getSecurityLatestDividendRecord(identifier)
 
 Lastest Dividend Record for Security
@@ -309,6 +425,9 @@ Lastest Dividend Record for Security
 Returns the latest available dividend information for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -325,6 +444,8 @@ securityAPI.getSecurityLatestDividendRecord(identifier).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -335,8 +456,20 @@ Name | Type | Description  | Notes
 
 [**DividendRecord**](DividendRecord.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/earnings/latest)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityLatestEarningsRecord)
+
 <a name="getSecurityLatestEarningsRecord"></a>
 # **getSecurityLatestEarningsRecord**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityLatestEarningsRecord_v2)
+
 > EarningsRecord getSecurityLatestEarningsRecord(identifier)
 
 Lastest Earnings Record for Security
@@ -344,6 +477,9 @@ Lastest Earnings Record for Security
 Returns latest available earnings information for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -360,6 +496,8 @@ securityAPI.getSecurityLatestEarningsRecord(identifier).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -370,8 +508,20 @@ Name | Type | Description  | Notes
 
 [**EarningsRecord**](EarningsRecord.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/adi)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsAdi)
+
 <a name="getSecurityPriceTechnicalsAdi"></a>
 # **getSecurityPriceTechnicalsAdi**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsAdi_v2)
+
 > ApiResponseSecurityAccumulationDistributionIndex getSecurityPriceTechnicalsAdi(identifier, opts)
 
 Accumulation/Distribution Index
@@ -379,6 +529,9 @@ Accumulation/Distribution Index
 Returns the Accumulation/Distribution Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -401,6 +554,8 @@ securityAPI.getSecurityPriceTechnicalsAdi(identifier, opts).then(function(data) 
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -415,8 +570,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityAccumulationDistributionIndex**](ApiResponseSecurityAccumulationDistributionIndex.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/adtv)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsAdtv)
+
 <a name="getSecurityPriceTechnicalsAdtv"></a>
 # **getSecurityPriceTechnicalsAdtv**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsAdtv_v2)
+
 > ApiResponseSecurityAverageDailyTradingVolume getSecurityPriceTechnicalsAdtv(identifier, opts)
 
 Average Daily Trading Volume
@@ -424,6 +591,9 @@ Average Daily Trading Volume
 Returns the Average Daily Trading Volume values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -447,6 +617,8 @@ securityAPI.getSecurityPriceTechnicalsAdtv(identifier, opts).then(function(data)
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -462,8 +634,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityAverageDailyTradingVolume**](ApiResponseSecurityAverageDailyTradingVolume.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/adx)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsAdx)
+
 <a name="getSecurityPriceTechnicalsAdx"></a>
 # **getSecurityPriceTechnicalsAdx**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsAdx_v2)
+
 > ApiResponseSecurityAverageDirectionalIndex getSecurityPriceTechnicalsAdx(identifier, opts)
 
 Average Directional Index
@@ -471,6 +655,9 @@ Average Directional Index
 Returns the Average Directional Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -494,6 +681,8 @@ securityAPI.getSecurityPriceTechnicalsAdx(identifier, opts).then(function(data) 
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -509,8 +698,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityAverageDirectionalIndex**](ApiResponseSecurityAverageDirectionalIndex.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/ao)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsAo)
+
 <a name="getSecurityPriceTechnicalsAo"></a>
 # **getSecurityPriceTechnicalsAo**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsAo_v2)
+
 > ApiResponseSecurityAwesomeOscillator getSecurityPriceTechnicalsAo(identifier, opts)
 
 Awesome Oscillator
@@ -518,6 +719,9 @@ Awesome Oscillator
 Returns the Awesome Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -542,6 +746,8 @@ securityAPI.getSecurityPriceTechnicalsAo(identifier, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -558,8 +764,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityAwesomeOscillator**](ApiResponseSecurityAwesomeOscillator.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/atr)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsAtr)
+
 <a name="getSecurityPriceTechnicalsAtr"></a>
 # **getSecurityPriceTechnicalsAtr**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsAtr_v2)
+
 > ApiResponseSecurityAverageTrueRange getSecurityPriceTechnicalsAtr(identifier, opts)
 
 Average True Range
@@ -567,6 +785,9 @@ Average True Range
 Returns the Average True Range values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -590,6 +811,8 @@ securityAPI.getSecurityPriceTechnicalsAtr(identifier, opts).then(function(data) 
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -605,8 +828,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityAverageTrueRange**](ApiResponseSecurityAverageTrueRange.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/bb)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsBb)
+
 <a name="getSecurityPriceTechnicalsBb"></a>
 # **getSecurityPriceTechnicalsBb**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsBb_v2)
+
 > ApiResponseSecurityBollingerBands getSecurityPriceTechnicalsBb(identifier, opts)
 
 Bollinger Bands
@@ -614,6 +849,9 @@ Bollinger Bands
 Returns the Bollinger Bands values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -639,6 +877,8 @@ securityAPI.getSecurityPriceTechnicalsBb(identifier, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -656,8 +896,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityBollingerBands**](ApiResponseSecurityBollingerBands.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/cci)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsCci)
+
 <a name="getSecurityPriceTechnicalsCci"></a>
 # **getSecurityPriceTechnicalsCci**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsCci_v2)
+
 > ApiResponseSecurityCommodityChannelIndex getSecurityPriceTechnicalsCci(identifier, opts)
 
 Commodity Channel Index
@@ -665,6 +917,9 @@ Commodity Channel Index
 Returns the Commodity Channel Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -689,6 +944,8 @@ securityAPI.getSecurityPriceTechnicalsCci(identifier, opts).then(function(data) 
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -705,8 +962,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityCommodityChannelIndex**](ApiResponseSecurityCommodityChannelIndex.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/cmf)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsCmf)
+
 <a name="getSecurityPriceTechnicalsCmf"></a>
 # **getSecurityPriceTechnicalsCmf**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsCmf_v2)
+
 > ApiResponseSecurityChaikinMoneyFlow getSecurityPriceTechnicalsCmf(identifier, opts)
 
 Chaikin Money Flow
@@ -714,6 +983,9 @@ Chaikin Money Flow
 Returns the Chaikin Money Flow values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -737,6 +1009,8 @@ securityAPI.getSecurityPriceTechnicalsCmf(identifier, opts).then(function(data) 
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -752,8 +1026,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityChaikinMoneyFlow**](ApiResponseSecurityChaikinMoneyFlow.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/dc)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsDc)
+
 <a name="getSecurityPriceTechnicalsDc"></a>
 # **getSecurityPriceTechnicalsDc**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsDc_v2)
+
 > ApiResponseSecurityDonchianChannel getSecurityPriceTechnicalsDc(identifier, opts)
 
 Donchian Channel
@@ -761,6 +1047,9 @@ Donchian Channel
 Returns the Donchian Channel values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -785,6 +1074,8 @@ securityAPI.getSecurityPriceTechnicalsDc(identifier, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -801,8 +1092,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityDonchianChannel**](ApiResponseSecurityDonchianChannel.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/dpo)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsDpo)
+
 <a name="getSecurityPriceTechnicalsDpo"></a>
 # **getSecurityPriceTechnicalsDpo**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsDpo_v2)
+
 > ApiResponseSecurityDetrendedPriceOscillator getSecurityPriceTechnicalsDpo(identifier, opts)
 
 Detrended Price Oscillator
@@ -810,6 +1113,9 @@ Detrended Price Oscillator
 Returns the Detrended Price Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -834,6 +1140,8 @@ securityAPI.getSecurityPriceTechnicalsDpo(identifier, opts).then(function(data) 
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -850,8 +1158,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityDetrendedPriceOscillator**](ApiResponseSecurityDetrendedPriceOscillator.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/eom)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsEom)
+
 <a name="getSecurityPriceTechnicalsEom"></a>
 # **getSecurityPriceTechnicalsEom**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsEom_v2)
+
 > ApiResponseSecurityEaseOfMovement getSecurityPriceTechnicalsEom(identifier, opts)
 
 Ease of Movement
@@ -859,6 +1179,9 @@ Ease of Movement
 Returns the Ease of Movement values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -882,6 +1205,8 @@ securityAPI.getSecurityPriceTechnicalsEom(identifier, opts).then(function(data) 
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -897,8 +1222,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityEaseOfMovement**](ApiResponseSecurityEaseOfMovement.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/fi)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsFi)
+
 <a name="getSecurityPriceTechnicalsFi"></a>
 # **getSecurityPriceTechnicalsFi**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsFi_v2)
+
 > ApiResponseSecurityForceIndex getSecurityPriceTechnicalsFi(identifier, opts)
 
 Force Index
@@ -906,6 +1243,9 @@ Force Index
 Returns the Force Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -928,6 +1268,8 @@ securityAPI.getSecurityPriceTechnicalsFi(identifier, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -942,8 +1284,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityForceIndex**](ApiResponseSecurityForceIndex.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/ichimoku)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsIchimoku)
+
 <a name="getSecurityPriceTechnicalsIchimoku"></a>
 # **getSecurityPriceTechnicalsIchimoku**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsIchimoku_v2)
+
 > ApiResponseSecurityIchimokuKinkoHyo getSecurityPriceTechnicalsIchimoku(identifier, opts)
 
 Ichimoku Kinko Hyo
@@ -951,6 +1305,9 @@ Ichimoku Kinko Hyo
 Returns the Ichimoku Kinko Hyo values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -976,6 +1333,8 @@ securityAPI.getSecurityPriceTechnicalsIchimoku(identifier, opts).then(function(d
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -993,8 +1352,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityIchimokuKinkoHyo**](ApiResponseSecurityIchimokuKinkoHyo.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/kc)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsKc)
+
 <a name="getSecurityPriceTechnicalsKc"></a>
 # **getSecurityPriceTechnicalsKc**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsKc_v2)
+
 > ApiResponseSecurityKeltnerChannel getSecurityPriceTechnicalsKc(identifier, opts)
 
 Keltner Channel
@@ -1002,6 +1373,9 @@ Keltner Channel
 Returns the Keltner Channel values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1025,6 +1399,8 @@ securityAPI.getSecurityPriceTechnicalsKc(identifier, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1040,8 +1416,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityKeltnerChannel**](ApiResponseSecurityKeltnerChannel.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/kst)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsKst)
+
 <a name="getSecurityPriceTechnicalsKst"></a>
 # **getSecurityPriceTechnicalsKst**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsKst_v2)
+
 > ApiResponseSecurityKnowSureThing getSecurityPriceTechnicalsKst(identifier, opts)
 
 Know Sure Thing
@@ -1049,6 +1437,9 @@ Know Sure Thing
 Returns the Know Sure Thing values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1080,6 +1471,8 @@ securityAPI.getSecurityPriceTechnicalsKst(identifier, opts).then(function(data) 
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1103,8 +1496,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityKnowSureThing**](ApiResponseSecurityKnowSureThing.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/macd)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsMacd)
+
 <a name="getSecurityPriceTechnicalsMacd"></a>
 # **getSecurityPriceTechnicalsMacd**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsMacd_v2)
+
 > ApiResponseSecurityMovingAverageConvergenceDivergence getSecurityPriceTechnicalsMacd(identifier, opts)
 
 Moving Average Convergence Divergence
@@ -1112,6 +1517,9 @@ Moving Average Convergence Divergence
 Returns the Moving Average Convergence Divergence values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1138,6 +1546,8 @@ securityAPI.getSecurityPriceTechnicalsMacd(identifier, opts).then(function(data)
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1156,8 +1566,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityMovingAverageConvergenceDivergence**](ApiResponseSecurityMovingAverageConvergenceDivergence.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/mfi)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsMfi)
+
 <a name="getSecurityPriceTechnicalsMfi"></a>
 # **getSecurityPriceTechnicalsMfi**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsMfi_v2)
+
 > ApiResponseSecurityMoneyFlowIndex getSecurityPriceTechnicalsMfi(identifier, opts)
 
 Money Flow Index
@@ -1165,6 +1587,9 @@ Money Flow Index
 Returns the Money Flow Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1188,6 +1613,8 @@ securityAPI.getSecurityPriceTechnicalsMfi(identifier, opts).then(function(data) 
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1203,8 +1630,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityMoneyFlowIndex**](ApiResponseSecurityMoneyFlowIndex.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/mi)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsMi)
+
 <a name="getSecurityPriceTechnicalsMi"></a>
 # **getSecurityPriceTechnicalsMi**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsMi_v2)
+
 > ApiResponseSecurityMassIndex getSecurityPriceTechnicalsMi(identifier, opts)
 
 Mass Index
@@ -1212,6 +1651,9 @@ Mass Index
 Returns the Mass Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1236,6 +1678,8 @@ securityAPI.getSecurityPriceTechnicalsMi(identifier, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1252,8 +1696,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityMassIndex**](ApiResponseSecurityMassIndex.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/nvi)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsNvi)
+
 <a name="getSecurityPriceTechnicalsNvi"></a>
 # **getSecurityPriceTechnicalsNvi**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsNvi_v2)
+
 > ApiResponseSecurityNegativeVolumeIndex getSecurityPriceTechnicalsNvi(identifier, opts)
 
 Negative Volume Index
@@ -1261,6 +1717,9 @@ Negative Volume Index
 Returns the Negative Volume Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1283,6 +1742,8 @@ securityAPI.getSecurityPriceTechnicalsNvi(identifier, opts).then(function(data) 
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1297,8 +1758,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityNegativeVolumeIndex**](ApiResponseSecurityNegativeVolumeIndex.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/obv)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsObv)
+
 <a name="getSecurityPriceTechnicalsObv"></a>
 # **getSecurityPriceTechnicalsObv**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsObv_v2)
+
 > ApiResponseSecurityOnBalanceVolume getSecurityPriceTechnicalsObv(identifier, opts)
 
 On-balance Volume
@@ -1306,6 +1779,9 @@ On-balance Volume
 Returns the On-balance Volume values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1328,6 +1804,8 @@ securityAPI.getSecurityPriceTechnicalsObv(identifier, opts).then(function(data) 
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1342,8 +1820,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityOnBalanceVolume**](ApiResponseSecurityOnBalanceVolume.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/obv_mean)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsObvMean)
+
 <a name="getSecurityPriceTechnicalsObvMean"></a>
 # **getSecurityPriceTechnicalsObvMean**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsObvMean_v2)
+
 > ApiResponseSecurityOnBalanceVolumeMean getSecurityPriceTechnicalsObvMean(identifier, opts)
 
 On-balance Volume Mean
@@ -1351,6 +1841,9 @@ On-balance Volume Mean
 Returns the On-balance Volume Mean values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1374,6 +1867,8 @@ securityAPI.getSecurityPriceTechnicalsObvMean(identifier, opts).then(function(da
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1389,8 +1884,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityOnBalanceVolumeMean**](ApiResponseSecurityOnBalanceVolumeMean.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/rsi)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsRsi)
+
 <a name="getSecurityPriceTechnicalsRsi"></a>
 # **getSecurityPriceTechnicalsRsi**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsRsi_v2)
+
 > ApiResponseSecurityRelativeStrengthIndex getSecurityPriceTechnicalsRsi(identifier, opts)
 
 Relative Strength Index
@@ -1398,6 +1905,9 @@ Relative Strength Index
 Returns the Relative Strength Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1422,6 +1932,8 @@ securityAPI.getSecurityPriceTechnicalsRsi(identifier, opts).then(function(data) 
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1438,8 +1950,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityRelativeStrengthIndex**](ApiResponseSecurityRelativeStrengthIndex.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/sma)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsSma)
+
 <a name="getSecurityPriceTechnicalsSma"></a>
 # **getSecurityPriceTechnicalsSma**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsSma_v2)
+
 > ApiResponseSecuritySimpleMovingAverage getSecurityPriceTechnicalsSma(identifier, opts)
 
 Simple Moving Average
@@ -1447,6 +1971,9 @@ Simple Moving Average
 Returns the Simple Moving Average values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1471,6 +1998,8 @@ securityAPI.getSecurityPriceTechnicalsSma(identifier, opts).then(function(data) 
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1487,8 +2016,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecuritySimpleMovingAverage**](ApiResponseSecuritySimpleMovingAverage.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/sr)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsSr)
+
 <a name="getSecurityPriceTechnicalsSr"></a>
 # **getSecurityPriceTechnicalsSr**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsSr_v2)
+
 > ApiResponseSecurityStochasticOscillator getSecurityPriceTechnicalsSr(identifier, opts)
 
 Stochastic Oscillator
@@ -1496,6 +2037,9 @@ Stochastic Oscillator
 Returns the Stochastic Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1520,6 +2064,8 @@ securityAPI.getSecurityPriceTechnicalsSr(identifier, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1536,8 +2082,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityStochasticOscillator**](ApiResponseSecurityStochasticOscillator.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/trix)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsTrix)
+
 <a name="getSecurityPriceTechnicalsTrix"></a>
 # **getSecurityPriceTechnicalsTrix**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsTrix_v2)
+
 > ApiResponseSecurityTripleExponentialAverage getSecurityPriceTechnicalsTrix(identifier, opts)
 
 Triple Exponential Average
@@ -1545,6 +2103,9 @@ Triple Exponential Average
 Returns the Simple Moving Average values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1568,6 +2129,8 @@ securityAPI.getSecurityPriceTechnicalsTrix(identifier, opts).then(function(data)
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1583,8 +2146,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityTripleExponentialAverage**](ApiResponseSecurityTripleExponentialAverage.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/tsi)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsTsi)
+
 <a name="getSecurityPriceTechnicalsTsi"></a>
 # **getSecurityPriceTechnicalsTsi**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsTsi_v2)
+
 > ApiResponseSecurityTrueStrengthIndex getSecurityPriceTechnicalsTsi(identifier, opts)
 
 True Strength Index
@@ -1592,6 +2167,9 @@ True Strength Index
 Returns the True Strength Index values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1617,6 +2195,8 @@ securityAPI.getSecurityPriceTechnicalsTsi(identifier, opts).then(function(data) 
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1634,8 +2214,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityTrueStrengthIndex**](ApiResponseSecurityTrueStrengthIndex.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/uo)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsUo)
+
 <a name="getSecurityPriceTechnicalsUo"></a>
 # **getSecurityPriceTechnicalsUo**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsUo_v2)
+
 > ApiResponseSecurityUltimateOscillator getSecurityPriceTechnicalsUo(identifier, opts)
 
 Ultimate Oscillator
@@ -1643,6 +2235,9 @@ Ultimate Oscillator
 Returns the Ultimate Oscillator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1671,6 +2266,8 @@ securityAPI.getSecurityPriceTechnicalsUo(identifier, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1691,8 +2288,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityUltimateOscillator**](ApiResponseSecurityUltimateOscillator.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/vi)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsVi)
+
 <a name="getSecurityPriceTechnicalsVi"></a>
 # **getSecurityPriceTechnicalsVi**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsVi_v2)
+
 > ApiResponseSecurityVortexIndicator getSecurityPriceTechnicalsVi(identifier, opts)
 
 Vortex Indicator
@@ -1700,6 +2309,9 @@ Vortex Indicator
 Returns the Vortex Indicator values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1723,6 +2335,8 @@ securityAPI.getSecurityPriceTechnicalsVi(identifier, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1738,8 +2352,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityVortexIndicator**](ApiResponseSecurityVortexIndicator.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/vpt)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsVpt)
+
 <a name="getSecurityPriceTechnicalsVpt"></a>
 # **getSecurityPriceTechnicalsVpt**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsVpt_v2)
+
 > ApiResponseSecurityVolumePriceTrend getSecurityPriceTechnicalsVpt(identifier, opts)
 
 Volume-price Trend
@@ -1747,6 +2373,9 @@ Volume-price Trend
 Returns the Volume-price Trend values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1769,6 +2398,8 @@ securityAPI.getSecurityPriceTechnicalsVpt(identifier, opts).then(function(data) 
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1783,8 +2414,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityVolumePriceTrend**](ApiResponseSecurityVolumePriceTrend.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/vwap)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsVwap)
+
 <a name="getSecurityPriceTechnicalsVwap"></a>
 # **getSecurityPriceTechnicalsVwap**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsVwap_v2)
+
 > ApiResponseSecurityVolumeWeightedAveragePrice getSecurityPriceTechnicalsVwap(identifier, opts)
 
 Volume Weighted Average Price
@@ -1792,6 +2435,9 @@ Volume Weighted Average Price
 Returns the Volume Weighted Average Price values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1814,6 +2460,8 @@ securityAPI.getSecurityPriceTechnicalsVwap(identifier, opts).then(function(data)
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1828,8 +2476,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityVolumeWeightedAveragePrice**](ApiResponseSecurityVolumeWeightedAveragePrice.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/technicals/wr)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityPriceTechnicalsWr)
+
 <a name="getSecurityPriceTechnicalsWr"></a>
 # **getSecurityPriceTechnicalsWr**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsWr_v2)
+
 > ApiResponseSecurityWilliamsR getSecurityPriceTechnicalsWr(identifier, opts)
 
 Williams %R
@@ -1837,6 +2497,9 @@ Williams %R
 Returns the Williams %R values of Stock Prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1860,6 +2523,8 @@ securityAPI.getSecurityPriceTechnicalsWr(identifier, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1875,8 +2540,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityWilliamsR**](ApiResponseSecurityWilliamsR.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/realtime)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityRealtimePrice)
+
 <a name="getSecurityRealtimePrice"></a>
 # **getSecurityRealtimePrice**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityRealtimePrice_v2)
+
 > RealtimeStockPrice getSecurityRealtimePrice(identifier, opts)
 
 Realtime Stock Price for Security
@@ -1884,6 +2561,9 @@ Realtime Stock Price for Security
 Return the realtime stock price for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1903,6 +2583,8 @@ securityAPI.getSecurityRealtimePrice(identifier, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1914,8 +2596,20 @@ Name | Type | Description  | Notes
 
 [**RealtimeStockPrice**](RealtimeStockPrice.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices/adjustments)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityStockPriceAdjustments)
+
 <a name="getSecurityStockPriceAdjustments"></a>
 # **getSecurityStockPriceAdjustments**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityStockPriceAdjustments_v2)
+
 > ApiResponseSecurityStockPriceAdjustments getSecurityStockPriceAdjustments(identifier, opts)
 
 Stock Price Adjustments by Security
@@ -1923,6 +2617,9 @@ Stock Price Adjustments by Security
 Returns stock price adjustments for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1945,6 +2642,8 @@ securityAPI.getSecurityStockPriceAdjustments(identifier, opts).then(function(dat
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1959,8 +2658,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityStockPriceAdjustments**](ApiResponseSecurityStockPriceAdjustments.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/prices)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityStockPrices)
+
 <a name="getSecurityStockPrices"></a>
 # **getSecurityStockPrices**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityStockPrices_v2)
+
 > ApiResponseSecurityStockPrices getSecurityStockPrices(identifier, opts)
 
 Stock Prices by Security
@@ -1968,6 +2679,9 @@ Stock Prices by Security
 Return end-of-day stock prices for the Security with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1991,6 +2705,8 @@ securityAPI.getSecurityStockPrices(identifier, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2006,8 +2722,280 @@ Name | Type | Description  | Notes
 
 [**ApiResponseSecurityStockPrices**](ApiResponseSecurityStockPrices.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/zacks/analyst_ratings)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityZacksAnalystRatings)
+
+<a name="getSecurityZacksAnalystRatings"></a>
+# **getSecurityZacksAnalystRatings**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityZacksAnalystRatings_v2)
+
+> ApiResponseSecurityZacksAnalystRatings getSecurityZacksAnalystRatings(identifier, opts)
+
+Zacks Analyst Ratings
+
+Returns buy, sell, and hold recommendations from analysts at brokerages for the Security with the given &#x60;identifier&#x60;. Zack’s storied research team aggregates and validates the ratings from professional analysts.
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+
+var securityAPI = new intrinioSDK.SecurityApi();
+
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+
+var opts = { 
+  'startDate': null, // String | Limit ratings to those on or after this date
+  'endDate': null, // String | Limit ratings to those on or before this date
+  'meanGreater': null, // Number | Return only records with a mean (average) higher than this value
+  'meanLess': null, // Number | Return only records with a mean (average) lower than this value
+  'strongBuysGreater': null, // Number | Return only records with more than this many Strong Buy recommendations
+  'strongBuysLess': null, // Number | Return only records with fewer than this many Strong Buy recommendations
+  'buysGreater': null, // Number | Return only records with more than this many Buy recommendations
+  'buysLess': null, // Number | Return only records with fewer than this many Buy recommendations
+  'holdsGreater': null, // Number | Return only records with more than this many Hold recommendations
+  'holdsLess': null, // Number | Return only records with fewer than this many Hold recommendations
+  'sellsGreater': null, // Number | Return only records with more than this many Sell recommendations
+  'sellsLess': null, // Number | Return only records with fewer than this many Sell recommendations
+  'strongSellsGreater': null, // Number | Return only records with more than this many Strong Sell recommendations
+  'strongSellsLess': null, // Number | Return only records with fewer than this many Strong Sell recommendations
+  'totalGreater': null, // Number | Return only records with more than this many recommendations, regardless of type
+  'totalLess': null, // Number | Return only records with fewer than this many recommendations, regardless of type
+  'pageSize': 100 // Number | The number of results to return
+};
+
+securityAPI.getSecurityZacksAnalystRatings(identifier, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **startDate** | **String**| Limit ratings to those on or after this date | [optional] 
+ **endDate** | **String**| Limit ratings to those on or before this date | [optional] 
+ **meanGreater** | **Number**| Return only records with a mean (average) higher than this value | [optional] 
+ **meanLess** | **Number**| Return only records with a mean (average) lower than this value | [optional] 
+ **strongBuysGreater** | **Number**| Return only records with more than this many Strong Buy recommendations | [optional] 
+ **strongBuysLess** | **Number**| Return only records with fewer than this many Strong Buy recommendations | [optional] 
+ **buysGreater** | **Number**| Return only records with more than this many Buy recommendations | [optional] 
+ **buysLess** | **Number**| Return only records with fewer than this many Buy recommendations | [optional] 
+ **holdsGreater** | **Number**| Return only records with more than this many Hold recommendations | [optional] 
+ **holdsLess** | **Number**| Return only records with fewer than this many Hold recommendations | [optional] 
+ **sellsGreater** | **Number**| Return only records with more than this many Sell recommendations | [optional] 
+ **sellsLess** | **Number**| Return only records with fewer than this many Sell recommendations | [optional] 
+ **strongSellsGreater** | **Number**| Return only records with more than this many Strong Sell recommendations | [optional] 
+ **strongSellsLess** | **Number**| Return only records with fewer than this many Strong Sell recommendations | [optional] 
+ **totalGreater** | **Number**| Return only records with more than this many recommendations, regardless of type | [optional] 
+ **totalLess** | **Number**| Return only records with fewer than this many recommendations, regardless of type | [optional] 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+
+### Return type
+
+[**ApiResponseSecurityZacksAnalystRatings**](ApiResponseSecurityZacksAnalystRatings.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/zacks/analyst_ratings/snapshot)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityZacksAnalystRatingsSnapshot)
+
+<a name="getSecurityZacksAnalystRatingsSnapshot"></a>
+# **getSecurityZacksAnalystRatingsSnapshot**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityZacksAnalystRatingsSnapshot_v2)
+
+> ApiResponseSecurityZacksAnalystRatingsSnapshot getSecurityZacksAnalystRatingsSnapshot(identifier, opts)
+
+Zacks Analyst Ratings Snapshot
+
+Returns a snapshot of ratings data compared with previous timeframes for the Security with the given &#x60;identifier&#x60;. Also returns mean percentiles for comparing one security to the universe of securities covered by Zacks analyst ratings, at a specific point in time.
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+
+var securityAPI = new intrinioSDK.SecurityApi();
+
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+
+var opts = { 
+  '_date': null // String | Lookup a historical snapshot on the given date
+};
+
+securityAPI.getSecurityZacksAnalystRatingsSnapshot(identifier, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **_date** | **String**| Lookup a historical snapshot on the given date | [optional] 
+
+### Return type
+
+[**ApiResponseSecurityZacksAnalystRatingsSnapshot**](ApiResponseSecurityZacksAnalystRatingsSnapshot.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/zacks/eps_surprises)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityZacksEpsSurprises)
+
+<a name="getSecurityZacksEpsSurprises"></a>
+# **getSecurityZacksEpsSurprises**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityZacksEpsSurprises_v2)
+
+> ApiResponseSecurityZacksEPSSurprises getSecurityZacksEpsSurprises(identifier, opts)
+
+Zacks EPS Surprises for Security
+
+Return Zacks EPS surprises for the Security with the given &#x60;identifier&#x60;.
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+
+var securityAPI = new intrinioSDK.SecurityApi();
+
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+
+var opts = { 
+  'pageSize': 100, // Number | The number of results to return
+  'nextPage': null // String | Gets the next page of data from a previous API call
+};
+
+securityAPI.getSecurityZacksEpsSurprises(identifier, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+
+### Return type
+
+[**ApiResponseSecurityZacksEPSSurprises**](ApiResponseSecurityZacksEPSSurprises.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/{identifier}/zacks/sales_surprises)
+
+[//]: # (DOC_LINK:SecurityApi.md#getSecurityZacksSalesSurprises)
+
+<a name="getSecurityZacksSalesSurprises"></a>
+# **getSecurityZacksSalesSurprises**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityZacksSalesSurprises_v2)
+
+> ApiResponseSecurityZacksSalesSurprises getSecurityZacksSalesSurprises(identifier, opts)
+
+Zacks Sales Surprises for Security
+
+Return Zacks sales surprises for the Security with the given &#x60;identifier&#x60;.
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+
+var securityAPI = new intrinioSDK.SecurityApi();
+
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+
+var opts = { 
+  'pageSize': 100, // Number | The number of results to return
+  'nextPage': null // String | Gets the next page of data from a previous API call
+};
+
+securityAPI.getSecurityZacksSalesSurprises(identifier, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+
+### Return type
+
+[**ApiResponseSecurityZacksSalesSurprises**](ApiResponseSecurityZacksSalesSurprises.md)
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/screen)
+
+[//]: # (DOC_LINK:SecurityApi.md#screenSecurities)
+
 <a name="screenSecurities"></a>
 # **screenSecurities**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/screenSecurities_v2)
+
 > [SecurityScreenResult] screenSecurities(opts)
 
 Screen Securities
@@ -2015,6 +3003,9 @@ Screen Securities
 Screen Securities using complex logic
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -2036,6 +3027,8 @@ securityAPI.screenSecurities(opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2050,8 +3043,20 @@ Name | Type | Description  | Notes
 
 [**[SecurityScreenResult]**](SecurityScreenResult.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/securities/search)
+
+[//]: # (DOC_LINK:SecurityApi.md#searchSecurities)
+
 <a name="searchSecurities"></a>
 # **searchSecurities**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/searchSecurities_v2)
+
 > ApiResponseSecuritiesSearch searchSecurities(query, opts)
 
 Search Securities
@@ -2059,6 +3064,9 @@ Search Securities
 Searches for Securities matching the text &#x60;query&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -2078,6 +3086,8 @@ securityAPI.searchSecurities(query, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2088,4 +3098,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseSecuritiesSearch**](ApiResponseSecuritiesSearch.md)
+
+[//]: # (END_OPERATION)
 

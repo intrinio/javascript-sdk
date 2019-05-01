@@ -9,8 +9,18 @@ Method | HTTP request | Description
 [**searchDataTags**](DataTagApi.md#searchDataTags) | **GET** /data_tags/search | Search Data Tags
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/data_tags)
+
+[//]: # (DOC_LINK:DataTagApi.md#getAllDataTags)
+
 <a name="getAllDataTags"></a>
 # **getAllDataTags**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllDataTags_v2)
+
 > ApiResponseDataTags getAllDataTags(opts)
 
 All Data Tags
@@ -18,6 +28,9 @@ All Data Tags
 Returns all Data Tags. Returns Data Tags matching parameters when specified.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -41,6 +54,8 @@ dataTagAPI.getAllDataTags(opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -57,8 +72,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseDataTags**](ApiResponseDataTags.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/data_tags/{identifier})
+
+[//]: # (DOC_LINK:DataTagApi.md#getDataTagById)
+
 <a name="getDataTagById"></a>
 # **getDataTagById**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getDataTagById_v2)
+
 > DataTag getDataTagById(identifier)
 
 Lookup Data Tag
@@ -66,6 +93,9 @@ Lookup Data Tag
 Returns the Data Tag with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -82,6 +112,8 @@ dataTagAPI.getDataTagById(identifier).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -92,8 +124,20 @@ Name | Type | Description  | Notes
 
 [**DataTag**](DataTag.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/data_tags/search)
+
+[//]: # (DOC_LINK:DataTagApi.md#searchDataTags)
+
 <a name="searchDataTags"></a>
 # **searchDataTags**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/searchDataTags_v2)
+
 > ApiResponseDataTagsSearch searchDataTags(query, opts)
 
 Search Data Tags
@@ -101,6 +145,9 @@ Search Data Tags
 Searches for Data Tags matching the text &#x60;query&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -120,6 +167,8 @@ dataTagAPI.searchDataTags(query, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -130,4 +179,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseDataTagsSearch**](ApiResponseDataTagsSearch.md)
+
+[//]: # (END_OPERATION)
 

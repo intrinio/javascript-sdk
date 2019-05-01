@@ -12,8 +12,18 @@ Method | HTTP request | Description
 [**getStockExchangeSecurities**](StockExchangeApi.md#getStockExchangeSecurities) | **GET** /stock_exchanges/{identifier}/securities | Securities by Exchange
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/stock_exchanges)
+
+[//]: # (DOC_LINK:StockExchangeApi.md#getAllStockExchanges)
+
 <a name="getAllStockExchanges"></a>
 # **getAllStockExchanges**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllStockExchanges_v2)
+
 > ApiResponseStockExchanges getAllStockExchanges(opts)
 
 All Stock Exchanges
@@ -21,6 +31,9 @@ All Stock Exchanges
 Returns all Stock Exchanges matching the specified parameters
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -41,6 +54,8 @@ stockExchangeAPI.getAllStockExchanges(opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -54,8 +69,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseStockExchanges**](ApiResponseStockExchanges.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/stock_exchanges/{identifier})
+
+[//]: # (DOC_LINK:StockExchangeApi.md#getStockExchangeById)
+
 <a name="getStockExchangeById"></a>
 # **getStockExchangeById**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getStockExchangeById_v2)
+
 > StockExchange getStockExchangeById(identifier)
 
 Lookup Stock Exchange
@@ -63,6 +90,9 @@ Lookup Stock Exchange
 Returns the Stock Exchange with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -79,6 +109,8 @@ stockExchangeAPI.getStockExchangeById(identifier).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -89,8 +121,20 @@ Name | Type | Description  | Notes
 
 [**StockExchange**](StockExchange.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/stock_exchanges/{identifier}/prices/adjustments)
+
+[//]: # (DOC_LINK:StockExchangeApi.md#getStockExchangePriceAdjustments)
+
 <a name="getStockExchangePriceAdjustments"></a>
 # **getStockExchangePriceAdjustments**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getStockExchangePriceAdjustments_v2)
+
 > ApiResponseStockExchangeStockPriceAdjustments getStockExchangePriceAdjustments(identifier, opts)
 
 Stock Price Adjustments by Exchange
@@ -98,6 +142,9 @@ Stock Price Adjustments by Exchange
 Returns stock price adjustments for the Stock Exchange with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -119,6 +166,8 @@ stockExchangeAPI.getStockExchangePriceAdjustments(identifier, opts).then(functio
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -132,8 +181,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseStockExchangeStockPriceAdjustments**](ApiResponseStockExchangeStockPriceAdjustments.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/stock_exchanges/{identifier}/prices)
+
+[//]: # (DOC_LINK:StockExchangeApi.md#getStockExchangePrices)
+
 <a name="getStockExchangePrices"></a>
 # **getStockExchangePrices**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getStockExchangePrices_v2)
+
 > ApiResponseStockExchangeStockPrices getStockExchangePrices(identifier, opts)
 
 Stock Prices by Exchange
@@ -141,6 +202,9 @@ Stock Prices by Exchange
 Returns end-of-day stock prices for Securities on the Stock Exchange with &#x60;identifier&#x60; and on the &#x60;price_date&#x60; (or the latest date that prices are available)
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -162,6 +226,8 @@ stockExchangeAPI.getStockExchangePrices(identifier, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -175,8 +241,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseStockExchangeStockPrices**](ApiResponseStockExchangeStockPrices.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/stock_exchanges/{identifier}/prices/realtime)
+
+[//]: # (DOC_LINK:StockExchangeApi.md#getStockExchangeRealtimePrices)
+
 <a name="getStockExchangeRealtimePrices"></a>
 # **getStockExchangeRealtimePrices**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getStockExchangeRealtimePrices_v2)
+
 > ApiResponseStockExchangeRealtimeStockPrices getStockExchangeRealtimePrices(identifier, opts)
 
 Realtime Stock Prices by Exchange
@@ -184,6 +262,9 @@ Realtime Stock Prices by Exchange
 Returns realtime stock prices for the Stock Exchange with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -205,6 +286,8 @@ stockExchangeAPI.getStockExchangeRealtimePrices(identifier, opts).then(function(
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -218,8 +301,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseStockExchangeRealtimeStockPrices**](ApiResponseStockExchangeRealtimeStockPrices.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/stock_exchanges/{identifier}/securities)
+
+[//]: # (DOC_LINK:StockExchangeApi.md#getStockExchangeSecurities)
+
 <a name="getStockExchangeSecurities"></a>
 # **getStockExchangeSecurities**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getStockExchangeSecurities_v2)
+
 > ApiResponseStockExchangeSecurities getStockExchangeSecurities(identifier, opts)
 
 Securities by Exchange
@@ -227,6 +322,9 @@ Securities by Exchange
 Returns Securities traded on the Stock Exchange with &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -247,6 +345,8 @@ stockExchangeAPI.getStockExchangeSecurities(identifier, opts).then(function(data
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -258,4 +358,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseStockExchangeSecurities**](ApiResponseStockExchangeSecurities.md)
+
+[//]: # (END_OPERATION)
 

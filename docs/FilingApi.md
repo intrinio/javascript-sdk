@@ -13,8 +13,18 @@ Method | HTTP request | Description
 [**searchNotes**](FilingApi.md#searchNotes) | **GET** /filings/notes/search | Search Filing Notes
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings)
+
+[//]: # (DOC_LINK:FilingApi.md#getAllFilings)
+
 <a name="getAllFilings"></a>
 # **getAllFilings**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllFilings_v2)
+
 > ApiResponseFilings getAllFilings(company, opts)
 
 All Filings
@@ -22,6 +32,9 @@ All Filings
 Returns all Filings. Returns Filings matching parameters when supplied.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -33,7 +46,7 @@ var company = "AAPL"; // String | Filings for the given `company` identifier (ti
 var opts = { 
   'reportType': null, // String | Filter by report type
   'startDate': new Date("2015-01-01"), // Date | Filed on or after the given date
-  'endDate': new Date("2019-01-01"), // Date | Filed before or after the given date
+  'endDate': null, // Date | Filed before or after the given date
   'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
@@ -44,6 +57,8 @@ filingAPI.getAllFilings(company, opts).then(function(data) {
   console.error(error);
 });
 ```
+
+[//]: # (END_CODE_EXAMPLE)
 
 ### Parameters
 
@@ -60,8 +75,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseFilings**](ApiResponseFilings.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings/notes)
+
+[//]: # (DOC_LINK:FilingApi.md#getAllNotes)
+
 <a name="getAllNotes"></a>
 # **getAllNotes**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllNotes_v2)
+
 > ApiResponseFilingNotes getAllNotes(opts)
 
 All Filing Notes
@@ -69,6 +96,9 @@ All Filing Notes
 Return all Notes from all Filings, most-recent first. Returns notes matching parameters when supplied.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -93,6 +123,8 @@ filingAPI.getAllNotes(opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -110,8 +142,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseFilingNotes**](ApiResponseFilingNotes.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings/{id})
+
+[//]: # (DOC_LINK:FilingApi.md#getFilingById)
+
 <a name="getFilingById"></a>
 # **getFilingById**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getFilingById_v2)
+
 > Filing getFilingById(id)
 
 Lookup Filing
@@ -119,6 +163,9 @@ Lookup Filing
 Returns the Filing with the given &#x60;identifier&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -135,6 +182,8 @@ filingAPI.getFilingById(id).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -145,13 +194,28 @@ Name | Type | Description  | Notes
 
 [**Filing**](Filing.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings/notes/{identifier})
+
+[//]: # (DOC_LINK:FilingApi.md#getNote)
+
 <a name="getNote"></a>
 # **getNote**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getNote_v2)
+
 > FilingNote getNote(identifier, opts)
 
 Filing Note by ID
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -171,6 +235,8 @@ filingAPI.getNote(identifier, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -182,13 +248,28 @@ Name | Type | Description  | Notes
 
 [**FilingNote**](FilingNote.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings/notes/{identifier}/html)
+
+[//]: # (DOC_LINK:FilingApi.md#getNoteHtml)
+
 <a name="getNoteHtml"></a>
 # **getNoteHtml**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getNoteHtml_v2)
+
 > &#39;String&#39; getNoteHtml(identifier)
 
 Filing Note HTML
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -205,6 +286,8 @@ filingAPI.getNoteHtml(identifier).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -215,13 +298,28 @@ Name | Type | Description  | Notes
 
 **&#39;String&#39;**
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings/notes/{identifier}/text)
+
+[//]: # (DOC_LINK:FilingApi.md#getNoteText)
+
 <a name="getNoteText"></a>
 # **getNoteText**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getNoteText_v2)
+
 > &#39;String&#39; getNoteText(identifier)
 
 Filing Note Text
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -238,6 +336,8 @@ filingAPI.getNoteText(identifier).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -248,8 +348,20 @@ Name | Type | Description  | Notes
 
 **&#39;String&#39;**
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/filings/notes/search)
+
+[//]: # (DOC_LINK:FilingApi.md#searchNotes)
+
 <a name="searchNotes"></a>
 # **searchNotes**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/searchNotes_v2)
+
 > ApiResponseFilingNotesSearch searchNotes(query, opts)
 
 Search Filing Notes
@@ -257,6 +369,9 @@ Search Filing Notes
 Searches for Filing Notes using the &#x60;query&#x60;
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -279,6 +394,8 @@ filingAPI.searchNotes(query, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -292,4 +409,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseFilingNotesSearch**](ApiResponseFilingNotesSearch.md)
+
+[//]: # (END_OPERATION)
 

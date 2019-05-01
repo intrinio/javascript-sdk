@@ -10,8 +10,18 @@ Method | HTTP request | Description
 [**getOptionsPrices**](OptionsApi.md#getOptionsPrices) | **GET** /options/prices/{identifier} | Option Prices
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/options/{symbol})
+
+[//]: # (DOC_LINK:OptionsApi.md#getOptions)
+
 <a name="getOptions"></a>
 # **getOptions**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getOptions_v2)
+
 > ApiResponseOptions getOptions(symbol, opts)
 
 Options
@@ -19,6 +29,9 @@ Options
 Returns the master list of option contracts for a given symbol.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -46,6 +59,8 @@ optionsAPI.getOptions(symbol, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -65,8 +80,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseOptions**](ApiResponseOptions.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/options/chain/{symbol}/{expiration})
+
+[//]: # (DOC_LINK:OptionsApi.md#getOptionsChain)
+
 <a name="getOptionsChain"></a>
 # **getOptionsChain**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getOptionsChain_v2)
+
 > ApiResponseOptionsChain getOptionsChain(symbol, expiration, opts)
 
 Options Chain
@@ -74,6 +101,9 @@ Options Chain
 Returns all options contracts and their prices for the given symbol and expiration date.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -100,6 +130,8 @@ optionsAPI.getOptionsChain(symbol, expiration, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -117,8 +149,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseOptionsChain**](ApiResponseOptionsChain.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/options/expirations/{symbol})
+
+[//]: # (DOC_LINK:OptionsApi.md#getOptionsExpirations)
+
 <a name="getOptionsExpirations"></a>
 # **getOptionsExpirations**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getOptionsExpirations_v2)
+
 > ApiResponseOptionsExpirations getOptionsExpirations(symbol, opts)
 
 Options Expirations
@@ -126,6 +170,9 @@ Options Expirations
 Returns all option contract expiration dates for a given symbol.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -146,6 +193,8 @@ optionsAPI.getOptionsExpirations(symbol, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -158,8 +207,20 @@ Name | Type | Description  | Notes
 
 [**ApiResponseOptionsExpirations**](ApiResponseOptionsExpirations.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/options/prices/{identifier})
+
+[//]: # (DOC_LINK:OptionsApi.md#getOptionsPrices)
+
 <a name="getOptionsPrices"></a>
 # **getOptionsPrices**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getOptionsPrices_v2)
+
 > ApiResponseOptionPrices getOptionsPrices(identifier, opts)
 
 Option Prices
@@ -167,6 +228,9 @@ Option Prices
 Returns all option prices for a given option contract identifier.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -189,6 +253,8 @@ optionsAPI.getOptionsPrices(identifier, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -202,4 +268,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptionPrices**](ApiResponseOptionPrices.md)
+
+[//]: # (END_OPERATION)
 

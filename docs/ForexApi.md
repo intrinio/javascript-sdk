@@ -9,8 +9,18 @@ Method | HTTP request | Description
 [**getForexPrices**](ForexApi.md#getForexPrices) | **GET** /forex/prices/{pair}/{timeframe} | Forex Currency Prices
 
 
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/forex/currencies)
+
+[//]: # (DOC_LINK:ForexApi.md#getForexCurrencies)
+
 <a name="getForexCurrencies"></a>
 # **getForexCurrencies**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getForexCurrencies_v2)
+
 > ApiResponseForexCurrencies getForexCurrencies()
 
 Forex Currencies
@@ -18,6 +28,9 @@ Forex Currencies
 Returns a list of forex currencies for which prices are available.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -31,6 +44,8 @@ forexAPI.getForexCurrencies().then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 This endpoint does not need any parameter.
 
@@ -38,8 +53,20 @@ This endpoint does not need any parameter.
 
 [**ApiResponseForexCurrencies**](ApiResponseForexCurrencies.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/forex/pairs)
+
+[//]: # (DOC_LINK:ForexApi.md#getForexPairs)
+
 <a name="getForexPairs"></a>
 # **getForexPairs**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getForexPairs_v2)
+
 > ApiResponseForexPairs getForexPairs()
 
 Forex Currency Pairs
@@ -47,6 +74,9 @@ Forex Currency Pairs
 Returns a list of currency pairs used to request foreign exchange (forex) market price data. The currency that is used as the reference is called quote currency and the currency that is quoted in relation is called the base currency. For example, in the pair code “EURGBP” with a price of 0.88, one Euro (base currency) can be exchanged for 0.88 British Pounds (quote currency).
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -60,6 +90,8 @@ forexAPI.getForexPairs().then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 This endpoint does not need any parameter.
 
@@ -67,8 +99,20 @@ This endpoint does not need any parameter.
 
 [**ApiResponseForexPairs**](ApiResponseForexPairs.md)
 
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERTATION)
+
+[//]: # (ENDPOINT:/forex/prices/{pair}/{timeframe})
+
+[//]: # (DOC_LINK:ForexApi.md#getForexPrices)
+
 <a name="getForexPrices"></a>
 # **getForexPrices**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getForexPrices_v2)
+
 > ApiResponseForexPrices getForexPrices(pair, timeframe, opts)
 
 Forex Currency Prices
@@ -76,6 +120,9 @@ Forex Currency Prices
 Provides a list of forex price quotes for a given forex currency pair and timeframe.
 
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -88,10 +135,10 @@ var timeframe = "D1"; // String | The time interval for the quotes
 
 var opts = { 
   'timezone': "UTC", // String | Returns trading times in this timezone
-  'startDate': "2018-01-01", // String | Return Forex Prices on or after this date
-  'startTime': "14:20:00", // String | Return Forex Prices at or after this time (24-hour)
-  'endDate': "2019-01-01", // String | Return Forex Prices on or before this date
-  'endTime': "21:01:21", // String | Return Forex Prices at or before this time (24-hour)
+  'startDate': null, // Date | Return Forex Prices on or after this date
+  'startTime': null, // String | Return Forex Prices at or after this time (24-hour)
+  'endDate': null, // Date | Return Forex Prices on or before this date
+  'endTime': null, // String | Return Forex Prices at or before this time (24-hour)
   'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
@@ -103,6 +150,8 @@ forexAPI.getForexPrices(pair, timeframe, opts).then(function(data) {
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -110,9 +159,9 @@ Name | Type | Description  | Notes
  **pair** | **String**| The Forex Currency Pair code | 
  **timeframe** | **String**| The time interval for the quotes | 
  **timezone** | **String**| Returns trading times in this timezone | [optional] [default to UTC]
- **startDate** | **String**| Return Forex Prices on or after this date | [optional] 
+ **startDate** | **Date**| Return Forex Prices on or after this date | [optional] 
  **startTime** | **String**| Return Forex Prices at or after this time (24-hour) | [optional] 
- **endDate** | **String**| Return Forex Prices on or before this date | [optional] 
+ **endDate** | **Date**| Return Forex Prices on or before this date | [optional] 
  **endTime** | **String**| Return Forex Prices at or before this time (24-hour) | [optional] 
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
@@ -120,4 +169,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseForexPrices**](ApiResponseForexPrices.md)
+
+[//]: # (END_OPERATION)
 
