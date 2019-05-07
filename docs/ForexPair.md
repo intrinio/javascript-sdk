@@ -1,6 +1,6 @@
 # intrinioSDK.ForexPair
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **String** | The common code of the currency pair | [optional] 

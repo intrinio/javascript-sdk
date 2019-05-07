@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseSecurityTripleExponentialAverage
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[TripleExponentialAverageTechnicalValue]**](TripleExponentialAverageTechnicalValue.md) |  | [optional] 

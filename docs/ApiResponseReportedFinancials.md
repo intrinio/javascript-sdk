@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseReportedFinancials
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **reportedFinancials** | [**[ReportedFinancial]**](ReportedFinancial.md) |  | [optional] 

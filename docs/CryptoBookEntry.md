@@ -1,6 +1,6 @@
 # intrinioSDK.CryptoBookEntry
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **price** | **Number** | The price of the book entry. | [optional] 

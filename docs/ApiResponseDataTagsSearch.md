@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseDataTagsSearch
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tags** | [**[DataTag]**](DataTag.md) |  | [optional] 

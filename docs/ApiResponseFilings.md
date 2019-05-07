@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseFilings
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **filings** | [**[Filing]**](Filing.md) |  | [optional] 

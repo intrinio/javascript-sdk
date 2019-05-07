@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseSecurityStockPrices
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **stockPrices** | [**[StockPriceSummary]**](StockPriceSummary.md) | The stock prices for the Security | [optional] 

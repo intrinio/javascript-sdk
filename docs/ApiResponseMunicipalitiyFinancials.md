@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseMunicipalitiyFinancials
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **financials** | [**[MunicipalityFinancial]**](MunicipalityFinancial.md) |  | [optional] 

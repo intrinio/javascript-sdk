@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseSecurityZacksAnalystRatingsSnapshot
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **snapshots** | [**[ZacksAnalystRatingSnapshot]**](ZacksAnalystRatingSnapshot.md) |  | [optional] 

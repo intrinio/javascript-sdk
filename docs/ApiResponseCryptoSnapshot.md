@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseCryptoSnapshot
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **pair** | [**CryptoPairSummary**](CryptoPairSummary.md) |  | [optional] 

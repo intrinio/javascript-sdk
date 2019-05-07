@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseOptionPrices
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **prices** | [**[OptionPrice]**](OptionPrice.md) | A list of option prices in descending order by date | [optional] 

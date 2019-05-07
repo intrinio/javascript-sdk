@@ -1,6 +1,6 @@
 # intrinioSDK.FundamentalSummary
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The Intrinio ID of the Fundamental | [optional] 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 
 <a name="TypeEnum"></a>
-## Enum: TypeEnum
+### Enum: TypeEnum
 
 
 * `reported` (value: `"reported"`)

@@ -1,6 +1,6 @@
 # intrinioSDK.StockPriceSummary
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **_date** | **Date** | The calendar date that the stock price represents. For non-daily stock prices, this represents the last day in the period (end of the week, month, quarter, year, etc) | [optional] 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 
 
 <a name="FrequencyEnum"></a>
-## Enum: FrequencyEnum
+### Enum: FrequencyEnum
 
 
 * `daily` (value: `"daily"`)

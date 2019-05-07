@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseStockExchanges
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **stockExchanges** | [**[StockExchange]**](StockExchange.md) |  | [optional] 

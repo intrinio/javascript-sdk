@@ -8,20 +8,23 @@ Method | HTTP request | Description
 
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getHistoricalData_v2)
 
 [//]: # (ENDPOINT:/historical_data/{identifier}/{tag})
 
-[//]: # (DOC_LINK:HistoricalDataApi.md#getHistoricalData)
+[//]: # (DOCUMENT_LINK:HistoricalDataApi.md#getHistoricalData)
 
 <a name="getHistoricalData"></a>
-# **getHistoricalData**
+## **getHistoricalData**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getHistoricalData_v2)
 
 > ApiResponseHistoricalData getHistoricalData(identifier, tag, opts)
 
-Historical Data
+#### Historical Data
+
 
 Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
 
@@ -71,6 +74,7 @@ Name | Type | Description  | Notes
  **sortOrder** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 

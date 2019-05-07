@@ -9,20 +9,23 @@ Method | HTTP request | Description
 
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getDataPointNumber_v2)
 
 [//]: # (ENDPOINT:/data_point/{identifier}/{tag}/number)
 
-[//]: # (DOC_LINK:DataPointApi.md#getDataPointNumber)
+[//]: # (DOCUMENT_LINK:DataPointApi.md#getDataPointNumber)
 
 <a name="getDataPointNumber"></a>
-# **getDataPointNumber**
+## **getDataPointNumber**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getDataPointNumber_v2)
 
 > &#39;Number&#39; getDataPointNumber(identifier, tag)
 
-Data Point (Number)
+#### Data Point (Number)
+
 
 Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
 
@@ -56,6 +59,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) | 
  **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
+<br/>
 
 ### Return type
 
@@ -64,20 +68,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getDataPointText_v2)
 
 [//]: # (ENDPOINT:/data_point/{identifier}/{tag}/text)
 
-[//]: # (DOC_LINK:DataPointApi.md#getDataPointText)
+[//]: # (DOCUMENT_LINK:DataPointApi.md#getDataPointText)
 
 <a name="getDataPointText"></a>
-# **getDataPointText**
+## **getDataPointText**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getDataPointText_v2)
 
 > &#39;String&#39; getDataPointText(identifier, tag)
 
-Data Point (Text)
+#### Data Point (Text)
+
 
 Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
 
@@ -111,6 +118,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) | 
  **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
+<br/>
 
 ### Return type
 

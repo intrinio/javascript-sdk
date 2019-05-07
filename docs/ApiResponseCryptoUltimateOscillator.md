@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseCryptoUltimateOscillator
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[UltimateOscillatorTechnicalValue]**](UltimateOscillatorTechnicalValue.md) |  | [optional] 

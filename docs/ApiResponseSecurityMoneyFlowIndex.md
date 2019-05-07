@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseSecurityMoneyFlowIndex
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[MoneyFlowIndexTechnicalValue]**](MoneyFlowIndexTechnicalValue.md) |  | [optional] 

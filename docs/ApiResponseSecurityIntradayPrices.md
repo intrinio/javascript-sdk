@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseSecurityIntradayPrices
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **intradayPrices** | [**[IntradayStockPrice]**](IntradayStockPrice.md) | The intraday stock prices for the Security | [optional] 
@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 
 
 <a name="SourceEnum"></a>
-## Enum: SourceEnum
+### Enum: SourceEnum
 
 
 * `iex` (value: `"iex"`)

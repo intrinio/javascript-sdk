@@ -1,6 +1,6 @@
 # intrinioSDK.CryptoSnapshot
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **lastUpdated** | **String** | UTC timestamp of when the snapshot was last updated. | [optional] 

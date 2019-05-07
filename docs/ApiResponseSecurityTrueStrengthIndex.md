@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseSecurityTrueStrengthIndex
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[TrueStrengthIndexTechnicalValue]**](TrueStrengthIndexTechnicalValue.md) |  | [optional] 

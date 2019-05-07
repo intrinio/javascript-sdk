@@ -19,20 +19,23 @@ Method | HTTP request | Description
 
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getAllCompanies_v2)
 
 [//]: # (ENDPOINT:/companies)
 
-[//]: # (DOC_LINK:CompanyApi.md#getAllCompanies)
+[//]: # (DOCUMENT_LINK:CompanyApi.md#getAllCompanies)
 
 <a name="getAllCompanies"></a>
-# **getAllCompanies**
+## **getAllCompanies**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllCompanies_v2)
 
 > ApiResponseCompanies getAllCompanies(opts)
 
-All Companies
+#### All Companies
+
 
 Returns all Companies. When parameters are specified, returns matching companies.
 
@@ -78,6 +81,7 @@ Name | Type | Description  | Notes
  **industryGroup** | **String**| Industry group | [optional] 
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -86,20 +90,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getAllCompanyNews_v2)
 
 [//]: # (ENDPOINT:/companies/news)
 
-[//]: # (DOC_LINK:CompanyApi.md#getAllCompanyNews)
+[//]: # (DOCUMENT_LINK:CompanyApi.md#getAllCompanyNews)
 
 <a name="getAllCompanyNews"></a>
-# **getAllCompanyNews**
+## **getAllCompanyNews**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllCompanyNews_v2)
 
 > ApiResponseNews getAllCompanyNews(opts)
 
-All News
+#### All News
+
 
 Returns all News for all Companies
 
@@ -133,6 +140,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -141,20 +149,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getCompany_v2)
 
 [//]: # (ENDPOINT:/companies/{identifier})
 
-[//]: # (DOC_LINK:CompanyApi.md#getCompany)
+[//]: # (DOCUMENT_LINK:CompanyApi.md#getCompany)
 
 <a name="getCompany"></a>
-# **getCompany**
+## **getCompany**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompany_v2)
 
 > Company getCompany(identifier)
 
-Lookup Company
+#### Lookup Company
+
 
 Returns the Company with the given &#x60;identifier&#x60;
 
@@ -185,6 +196,7 @@ companyAPI.getCompany(identifier).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+<br/>
 
 ### Return type
 
@@ -193,20 +205,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getCompanyDataPointNumber_v2)
 
 [//]: # (ENDPOINT:/companies/{identifier}/data_point/{tag}/number)
 
-[//]: # (DOC_LINK:CompanyApi.md#getCompanyDataPointNumber)
+[//]: # (DOCUMENT_LINK:CompanyApi.md#getCompanyDataPointNumber)
 
 <a name="getCompanyDataPointNumber"></a>
-# **getCompanyDataPointNumber**
+## **getCompanyDataPointNumber**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanyDataPointNumber_v2)
 
 > &#39;Number&#39; getCompanyDataPointNumber(identifier, tag)
 
-Data Point (Number) for Company
+#### Data Point (Number) for Company
+
 
 Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
 
@@ -240,6 +255,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
  **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
+<br/>
 
 ### Return type
 
@@ -248,20 +264,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getCompanyDataPointText_v2)
 
 [//]: # (ENDPOINT:/companies/{identifier}/data_point/{tag}/text)
 
-[//]: # (DOC_LINK:CompanyApi.md#getCompanyDataPointText)
+[//]: # (DOCUMENT_LINK:CompanyApi.md#getCompanyDataPointText)
 
 <a name="getCompanyDataPointText"></a>
-# **getCompanyDataPointText**
+## **getCompanyDataPointText**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanyDataPointText_v2)
 
 > &#39;String&#39; getCompanyDataPointText(identifier, tag)
 
-Data Point (Text) for Company
+#### Data Point (Text) for Company
+
 
 Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
 
@@ -295,6 +314,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
  **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
+<br/>
 
 ### Return type
 
@@ -303,20 +323,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getCompanyFilings_v2)
 
 [//]: # (ENDPOINT:/companies/{identifier}/filings)
 
-[//]: # (DOC_LINK:CompanyApi.md#getCompanyFilings)
+[//]: # (DOCUMENT_LINK:CompanyApi.md#getCompanyFilings)
 
 <a name="getCompanyFilings"></a>
-# **getCompanyFilings**
+## **getCompanyFilings**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanyFilings_v2)
 
 > ApiResponseCompanyFilings getCompanyFilings(identifier, opts)
 
-All Filings by Company
+#### All Filings by Company
+
 
 Returns a complete list of SEC filings for the Company with the given &#x60;identifier&#x60;
 
@@ -353,6 +376,7 @@ Name | Type | Description  | Notes
  **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -361,20 +385,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getCompanyFundamentals_v2)
 
 [//]: # (ENDPOINT:/companies/{identifier}/fundamentals)
 
-[//]: # (DOC_LINK:CompanyApi.md#getCompanyFundamentals)
+[//]: # (DOCUMENT_LINK:CompanyApi.md#getCompanyFundamentals)
 
 <a name="getCompanyFundamentals"></a>
-# **getCompanyFundamentals**
+## **getCompanyFundamentals**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanyFundamentals_v2)
 
 > ApiResponseCompanyFundamentals getCompanyFundamentals(identifier, opts)
 
-All Fundamentals by Company
+#### All Fundamentals by Company
+
 
 Returns all Fundamentals for the Company with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
 
@@ -427,6 +454,7 @@ Name | Type | Description  | Notes
  **endDate** | **Date**| Only on or before the given date | [optional] 
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -435,20 +463,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getCompanyHistoricalData_v2)
 
 [//]: # (ENDPOINT:/companies/{identifier}/historical_data/{tag})
 
-[//]: # (DOC_LINK:CompanyApi.md#getCompanyHistoricalData)
+[//]: # (DOCUMENT_LINK:CompanyApi.md#getCompanyHistoricalData)
 
 <a name="getCompanyHistoricalData"></a>
-# **getCompanyHistoricalData**
+## **getCompanyHistoricalData**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanyHistoricalData_v2)
 
 > ApiResponseCompanyHistoricalData getCompanyHistoricalData(identifier, tag, opts)
 
-Historical Data for Company
+#### Historical Data for Company
+
 
 Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
 
@@ -498,6 +529,7 @@ Name | Type | Description  | Notes
  **sortOrder** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -506,20 +538,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getCompanyNews_v2)
 
 [//]: # (ENDPOINT:/companies/{identifier}/news)
 
-[//]: # (DOC_LINK:CompanyApi.md#getCompanyNews)
+[//]: # (DOCUMENT_LINK:CompanyApi.md#getCompanyNews)
 
 <a name="getCompanyNews"></a>
-# **getCompanyNews**
+## **getCompanyNews**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanyNews_v2)
 
 > ApiResponseCompanyNews getCompanyNews(identifier, opts)
 
-All News by Company
+#### All News by Company
+
 
 Returns news for the Company with the given &#x60;identifier&#x60;
 
@@ -556,6 +591,7 @@ Name | Type | Description  | Notes
  **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -564,20 +600,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getCompanySecurities_v2)
 
 [//]: # (ENDPOINT:/companies/{identifier}/securities)
 
-[//]: # (DOC_LINK:CompanyApi.md#getCompanySecurities)
+[//]: # (DOCUMENT_LINK:CompanyApi.md#getCompanySecurities)
 
 <a name="getCompanySecurities"></a>
-# **getCompanySecurities**
+## **getCompanySecurities**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanySecurities_v2)
 
 > ApiResponseCompanySecurities getCompanySecurities(identifier, opts)
 
-All Securities by Company
+#### All Securities by Company
+
 
 Returns Securities for the Company with the given &#x60;identifier&#x60;
 
@@ -612,6 +651,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -620,20 +660,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:lookupCompanyFundamental_v2)
 
 [//]: # (ENDPOINT:/companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period})
 
-[//]: # (DOC_LINK:CompanyApi.md#lookupCompanyFundamental)
+[//]: # (DOCUMENT_LINK:CompanyApi.md#lookupCompanyFundamental)
 
 <a name="lookupCompanyFundamental"></a>
-# **lookupCompanyFundamental**
+## **lookupCompanyFundamental**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/lookupCompanyFundamental_v2)
 
 > Fundamental lookupCompanyFundamental(identifier, statementCode, fiscalPeriod, fiscalYear)
 
-Lookup Fundamental by Company
+#### Lookup Fundamental by Company
+
 
 Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
 
@@ -673,6 +716,7 @@ Name | Type | Description  | Notes
  **statementCode** | **String**| The statement code | 
  **fiscalPeriod** | **String**| The fiscal period | 
  **fiscalYear** | **Number**| The fiscal year | 
+<br/>
 
 ### Return type
 
@@ -681,20 +725,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:searchCompanies_v2)
 
 [//]: # (ENDPOINT:/companies/search)
 
-[//]: # (DOC_LINK:CompanyApi.md#searchCompanies)
+[//]: # (DOCUMENT_LINK:CompanyApi.md#searchCompanies)
 
 <a name="searchCompanies"></a>
-# **searchCompanies**
+## **searchCompanies**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/searchCompanies_v2)
 
 > ApiResponseCompaniesSearch searchCompanies(query, opts)
 
-Search Companies
+#### Search Companies
+
 
 Searches for Companies matching the text &#x60;query&#x60;
 
@@ -729,6 +776,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **String**| Search parameters | 
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+<br/>
 
 ### Return type
 

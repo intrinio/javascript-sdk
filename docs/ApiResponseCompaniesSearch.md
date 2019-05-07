@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseCompaniesSearch
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **companies** | [**[CompanySummary]**](CompanySummary.md) |  | [optional] 

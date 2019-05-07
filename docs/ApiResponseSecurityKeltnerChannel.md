@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseSecurityKeltnerChannel
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[KeltnerChannelTechnicalValue]**](KeltnerChannelTechnicalValue.md) |  | [optional] 

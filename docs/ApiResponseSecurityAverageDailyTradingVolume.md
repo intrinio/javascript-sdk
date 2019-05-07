@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseSecurityAverageDailyTradingVolume
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[AverageDailyTradingVolumeTechnicalValue]**](AverageDailyTradingVolumeTechnicalValue.md) |  | [optional] 

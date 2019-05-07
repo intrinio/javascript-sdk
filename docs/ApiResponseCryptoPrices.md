@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseCryptoPrices
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **prices** | [**[CryptoPrice]**](CryptoPrice.md) | All the BAR prices, time, and volume. | [optional] 

@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseSecurityAverageTrueRange
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[AverageTrueRangeTechnicalValue]**](AverageTrueRangeTechnicalValue.md) |  | [optional] 

@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseCryptoOnBalanceVolumeMean
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[OnBalanceVolumeMeanTechnicalValue]**](OnBalanceVolumeMeanTechnicalValue.md) |  | [optional] 

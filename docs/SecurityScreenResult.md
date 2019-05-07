@@ -1,6 +1,6 @@
 # intrinioSDK.SecurityScreenResult
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **security** | [**SecuritySummary**](SecuritySummary.md) |  | [optional] 

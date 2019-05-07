@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseCryptoVolumeWeightedAveragePrice
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[VolumeWeightedAveragePriceValue]**](VolumeWeightedAveragePriceValue.md) |  | [optional] 

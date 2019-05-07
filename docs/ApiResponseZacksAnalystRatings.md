@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseZacksAnalystRatings
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **analystRatings** | [**[ZacksAnalystRating]**](ZacksAnalystRating.md) |  | [optional] 

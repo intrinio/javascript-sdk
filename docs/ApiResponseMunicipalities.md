@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseMunicipalities
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **municipalities** | [**[Municipality]**](Municipality.md) |  | [optional] 

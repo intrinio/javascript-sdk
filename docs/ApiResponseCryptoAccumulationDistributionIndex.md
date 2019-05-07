@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseCryptoAccumulationDistributionIndex
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[AccumulationDistributionIndexTechnicalValue]**](AccumulationDistributionIndexTechnicalValue.md) |  | [optional] 

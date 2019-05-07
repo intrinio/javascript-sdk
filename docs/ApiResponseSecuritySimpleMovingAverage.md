@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseSecuritySimpleMovingAverage
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[SimpleMovingAverageTechnicalValue]**](SimpleMovingAverageTechnicalValue.md) |  | [optional] 

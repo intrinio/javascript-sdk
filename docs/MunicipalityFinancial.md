@@ -1,6 +1,6 @@
 # intrinioSDK.MunicipalityFinancial
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fiscalYear** | **Number** | The fiscal year from which the financial data came from | [optional] 

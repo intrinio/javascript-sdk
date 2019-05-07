@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseCompanyFundamentals
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fundamentals** | [**[FundamentalSummary]**](FundamentalSummary.md) |  | [optional] 

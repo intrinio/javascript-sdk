@@ -11,20 +11,23 @@ Method | HTTP request | Description
 
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getFundamentalById_v2)
 
 [//]: # (ENDPOINT:/fundamentals/{id})
 
-[//]: # (DOC_LINK:FundamentalsApi.md#getFundamentalById)
+[//]: # (DOCUMENT_LINK:FundamentalsApi.md#getFundamentalById)
 
 <a name="getFundamentalById"></a>
-# **getFundamentalById**
+## **getFundamentalById**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getFundamentalById_v2)
 
 > Fundamental getFundamentalById(id)
 
-Fundamental by ID
+#### Fundamental by ID
+
 
 Returns detailed fundamental data for the given &#x60;id&#x60;.
 
@@ -55,6 +58,7 @@ fundamentalsAPI.getFundamentalById(id).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| The Intrinio ID for the Fundamental | 
+<br/>
 
 ### Return type
 
@@ -63,20 +67,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getFundamentalReportedFinancials_v2)
 
 [//]: # (ENDPOINT:/fundamentals/{id}/reported_financials)
 
-[//]: # (DOC_LINK:FundamentalsApi.md#getFundamentalReportedFinancials)
+[//]: # (DOCUMENT_LINK:FundamentalsApi.md#getFundamentalReportedFinancials)
 
 <a name="getFundamentalReportedFinancials"></a>
-# **getFundamentalReportedFinancials**
+## **getFundamentalReportedFinancials**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getFundamentalReportedFinancials_v2)
 
 > ApiResponseReportedFinancials getFundamentalReportedFinancials(id)
 
-Reported Financials
+#### Reported Financials
+
 
 Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
 
@@ -107,6 +114,7 @@ fundamentalsAPI.getFundamentalReportedFinancials(id).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental | 
+<br/>
 
 ### Return type
 
@@ -115,20 +123,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getFundamentalStandardizedFinancials_v2)
 
 [//]: # (ENDPOINT:/fundamentals/{id}/standardized_financials)
 
-[//]: # (DOC_LINK:FundamentalsApi.md#getFundamentalStandardizedFinancials)
+[//]: # (DOCUMENT_LINK:FundamentalsApi.md#getFundamentalStandardizedFinancials)
 
 <a name="getFundamentalStandardizedFinancials"></a>
-# **getFundamentalStandardizedFinancials**
+## **getFundamentalStandardizedFinancials**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getFundamentalStandardizedFinancials_v2)
 
 > ApiResponseStandardizedFinancials getFundamentalStandardizedFinancials(id)
 
-Standardized Financials
+#### Standardized Financials
+
 
 Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
 
@@ -159,6 +170,7 @@ fundamentalsAPI.getFundamentalStandardizedFinancials(id).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental | 
+<br/>
 
 ### Return type
 
@@ -167,20 +179,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:lookupFundamental_v2)
 
 [//]: # (ENDPOINT:/fundamentals/lookup/{identifier}/{statement_code}/{fiscal_year}/{fiscal_period})
 
-[//]: # (DOC_LINK:FundamentalsApi.md#lookupFundamental)
+[//]: # (DOCUMENT_LINK:FundamentalsApi.md#lookupFundamental)
 
 <a name="lookupFundamental"></a>
-# **lookupFundamental**
+## **lookupFundamental**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/lookupFundamental_v2)
 
 > Fundamental lookupFundamental(identifier, statementCode, fiscalYear, fiscalPeriod)
 
-Lookup Fundamental
+#### Lookup Fundamental
+
 
 Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
 
@@ -220,6 +235,7 @@ Name | Type | Description  | Notes
  **statementCode** | **String**| The statement code | 
  **fiscalYear** | **Number**| The fiscal year | 
  **fiscalPeriod** | **String**| The fiscal period | 
+<br/>
 
 ### Return type
 

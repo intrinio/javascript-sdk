@@ -25,20 +25,24 @@ Method | HTTP request | Description
 
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getAllEconomicIndices_v2)
 
 [//]: # (ENDPOINT:/indices/economic)
 
-[//]: # (DOC_LINK:IndexApi.md#getAllEconomicIndices)
+[//]: # (DOCUMENT_LINK:IndexApi.md#getAllEconomicIndices)
 
 <a name="getAllEconomicIndices"></a>
-# **getAllEconomicIndices**
+## **getAllEconomicIndices**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllEconomicIndices_v2)
 
 > ApiResponseEconomicIndices getAllEconomicIndices(opts)
 
-All Economic Indices
+#### All Economic Indices
+
+
 
 ### Example
 
@@ -70,6 +74,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -78,20 +83,24 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getAllSicIndices_v2)
 
 [//]: # (ENDPOINT:/indices/sic)
 
-[//]: # (DOC_LINK:IndexApi.md#getAllSicIndices)
+[//]: # (DOCUMENT_LINK:IndexApi.md#getAllSicIndices)
 
 <a name="getAllSicIndices"></a>
-# **getAllSicIndices**
+## **getAllSicIndices**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllSicIndices_v2)
 
 > ApiResponseSICIndices getAllSicIndices(opts)
 
-All SIC Indices
+#### All SIC Indices
+
+
 
 ### Example
 
@@ -123,6 +132,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -131,20 +141,24 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getAllStockMarketIndices_v2)
 
 [//]: # (ENDPOINT:/indices/stock_market)
 
-[//]: # (DOC_LINK:IndexApi.md#getAllStockMarketIndices)
+[//]: # (DOCUMENT_LINK:IndexApi.md#getAllStockMarketIndices)
 
 <a name="getAllStockMarketIndices"></a>
-# **getAllStockMarketIndices**
+## **getAllStockMarketIndices**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllStockMarketIndices_v2)
 
 > ApiResponseStockMarketIndices getAllStockMarketIndices(opts)
 
-All Stock Market Indices
+#### All Stock Market Indices
+
+
 
 ### Example
 
@@ -176,6 +190,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -184,20 +199,24 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getEconomicIndexById_v2)
 
 [//]: # (ENDPOINT:/indices/economic/{identifier})
 
-[//]: # (DOC_LINK:IndexApi.md#getEconomicIndexById)
+[//]: # (DOCUMENT_LINK:IndexApi.md#getEconomicIndexById)
 
 <a name="getEconomicIndexById"></a>
-# **getEconomicIndexById**
+## **getEconomicIndexById**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getEconomicIndexById_v2)
 
 > EconomicIndex getEconomicIndexById(identifier)
 
-Lookup Economic Index
+#### Lookup Economic Index
+
+
 
 ### Example
 
@@ -226,6 +245,7 @@ indexAPI.getEconomicIndexById(identifier).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+<br/>
 
 ### Return type
 
@@ -234,20 +254,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getEconomicIndexDataPointNumber_v2)
 
 [//]: # (ENDPOINT:/indices/economic/{identifier}/data_point/{tag}/number)
 
-[//]: # (DOC_LINK:IndexApi.md#getEconomicIndexDataPointNumber)
+[//]: # (DOCUMENT_LINK:IndexApi.md#getEconomicIndexDataPointNumber)
 
 <a name="getEconomicIndexDataPointNumber"></a>
-# **getEconomicIndexDataPointNumber**
+## **getEconomicIndexDataPointNumber**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getEconomicIndexDataPointNumber_v2)
 
 > &#39;Number&#39; getEconomicIndexDataPointNumber(identifier, tag)
 
-Data Point (Number) for an Economic Index
+#### Data Point (Number) for an Economic Index
+
 
 Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
 
@@ -281,6 +304,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
  **tag** | **String**| An Intrinio data tag &lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags/economic&#39;&gt;reference&lt;/a&gt; | 
+<br/>
 
 ### Return type
 
@@ -289,20 +313,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getEconomicIndexDataPointText_v2)
 
 [//]: # (ENDPOINT:/indices/economic/{identifier}/data_point/{tag}/text)
 
-[//]: # (DOC_LINK:IndexApi.md#getEconomicIndexDataPointText)
+[//]: # (DOCUMENT_LINK:IndexApi.md#getEconomicIndexDataPointText)
 
 <a name="getEconomicIndexDataPointText"></a>
-# **getEconomicIndexDataPointText**
+## **getEconomicIndexDataPointText**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getEconomicIndexDataPointText_v2)
 
 > &#39;String&#39; getEconomicIndexDataPointText(identifier, tag)
 
-Data Point (Text) for an Economic Index
+#### Data Point (Text) for an Economic Index
+
 
 Returns a text value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
 
@@ -336,6 +363,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
  **tag** | **String**| An Intrinio data tag ID or code-name | 
+<br/>
 
 ### Return type
 
@@ -344,20 +372,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getEconomicIndexHistoricalData_v2)
 
 [//]: # (ENDPOINT:/indices/economic/{identifier}/historical_data/{tag})
 
-[//]: # (DOC_LINK:IndexApi.md#getEconomicIndexHistoricalData)
+[//]: # (DOCUMENT_LINK:IndexApi.md#getEconomicIndexHistoricalData)
 
 <a name="getEconomicIndexHistoricalData"></a>
-# **getEconomicIndexHistoricalData**
+## **getEconomicIndexHistoricalData**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getEconomicIndexHistoricalData_v2)
 
 > ApiResponseEconomicIndexHistoricalData getEconomicIndexHistoricalData(identifier, tag, opts)
 
-Historical Data for an Economic Index
+#### Historical Data for an Economic Index
+
 
 Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
 
@@ -405,6 +436,7 @@ Name | Type | Description  | Notes
  **sortOrder** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -413,20 +445,24 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getSicIndexById_v2)
 
 [//]: # (ENDPOINT:/indices/sic/{identifier})
 
-[//]: # (DOC_LINK:IndexApi.md#getSicIndexById)
+[//]: # (DOCUMENT_LINK:IndexApi.md#getSicIndexById)
 
 <a name="getSicIndexById"></a>
-# **getSicIndexById**
+## **getSicIndexById**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSicIndexById_v2)
 
 > SICIndex getSicIndexById(identifier)
 
-Lookup SIC Index
+#### Lookup SIC Index
+
+
 
 ### Example
 
@@ -455,6 +491,7 @@ indexAPI.getSicIndexById(identifier).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+<br/>
 
 ### Return type
 
@@ -463,20 +500,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getSicIndexDataPointNumber_v2)
 
 [//]: # (ENDPOINT:/indices/sic/{identifier}/data_point/{tag}/number)
 
-[//]: # (DOC_LINK:IndexApi.md#getSicIndexDataPointNumber)
+[//]: # (DOCUMENT_LINK:IndexApi.md#getSicIndexDataPointNumber)
 
 <a name="getSicIndexDataPointNumber"></a>
-# **getSicIndexDataPointNumber**
+## **getSicIndexDataPointNumber**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSicIndexDataPointNumber_v2)
 
 > &#39;Number&#39; getSicIndexDataPointNumber(identifier, tag)
 
-Data Point (Number) for an SIC Index
+#### Data Point (Number) for an SIC Index
+
 
 Returns a numeric value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
 
@@ -510,6 +550,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
  **tag** | **String**| An Intrinio data tag ID or code-name | 
+<br/>
 
 ### Return type
 
@@ -518,20 +559,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getSicIndexDataPointText_v2)
 
 [//]: # (ENDPOINT:/indices/sic/{identifier}/data_point/{tag}/text)
 
-[//]: # (DOC_LINK:IndexApi.md#getSicIndexDataPointText)
+[//]: # (DOCUMENT_LINK:IndexApi.md#getSicIndexDataPointText)
 
 <a name="getSicIndexDataPointText"></a>
-# **getSicIndexDataPointText**
+## **getSicIndexDataPointText**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSicIndexDataPointText_v2)
 
 > &#39;String&#39; getSicIndexDataPointText(identifier, tag)
 
-Data Point (Text) for an SIC Index
+#### Data Point (Text) for an SIC Index
+
 
 Returns a text value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
 
@@ -565,6 +609,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
  **tag** | **String**| An Intrinio data tag ID or code-name | 
+<br/>
 
 ### Return type
 
@@ -573,20 +618,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getSicIndexHistoricalData_v2)
 
 [//]: # (ENDPOINT:/indices/sic/{identifier}/historical_data/{tag})
 
-[//]: # (DOC_LINK:IndexApi.md#getSicIndexHistoricalData)
+[//]: # (DOCUMENT_LINK:IndexApi.md#getSicIndexHistoricalData)
 
 <a name="getSicIndexHistoricalData"></a>
-# **getSicIndexHistoricalData**
+## **getSicIndexHistoricalData**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSicIndexHistoricalData_v2)
 
 > ApiResponseSICIndexHistoricalData getSicIndexHistoricalData(identifier, tag, opts)
 
-Historical Data for an SIC Index
+#### Historical Data for an SIC Index
+
 
 Returns historical values for the given &#x60;tag&#x60; and the SIC Index with the given &#x60;identifier&#x60;
 
@@ -634,6 +682,7 @@ Name | Type | Description  | Notes
  **sortOrder** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -642,20 +691,24 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getStockMarketIndexById_v2)
 
 [//]: # (ENDPOINT:/indices/stock_market/{identifier})
 
-[//]: # (DOC_LINK:IndexApi.md#getStockMarketIndexById)
+[//]: # (DOCUMENT_LINK:IndexApi.md#getStockMarketIndexById)
 
 <a name="getStockMarketIndexById"></a>
-# **getStockMarketIndexById**
+## **getStockMarketIndexById**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getStockMarketIndexById_v2)
 
 > StockMarketIndex getStockMarketIndexById(identifier)
 
-Lookup Stock Market Index
+#### Lookup Stock Market Index
+
+
 
 ### Example
 
@@ -684,6 +737,7 @@ indexAPI.getStockMarketIndexById(identifier).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+<br/>
 
 ### Return type
 
@@ -692,20 +746,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getStockMarketIndexDataPointNumber_v2)
 
 [//]: # (ENDPOINT:/indices/stock_market/{identifier}/data_point/{tag}/number)
 
-[//]: # (DOC_LINK:IndexApi.md#getStockMarketIndexDataPointNumber)
+[//]: # (DOCUMENT_LINK:IndexApi.md#getStockMarketIndexDataPointNumber)
 
 <a name="getStockMarketIndexDataPointNumber"></a>
-# **getStockMarketIndexDataPointNumber**
+## **getStockMarketIndexDataPointNumber**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getStockMarketIndexDataPointNumber_v2)
 
 > &#39;Number&#39; getStockMarketIndexDataPointNumber(identifier, tag)
 
-Data Point (Number) for Stock Market Index
+#### Data Point (Number) for Stock Market Index
+
 
 Returns a numeric value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
 
@@ -739,6 +796,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
  **tag** | **String**| An Intrinio data tag ID or code-name | 
+<br/>
 
 ### Return type
 
@@ -747,20 +805,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getStockMarketIndexDataPointText_v2)
 
 [//]: # (ENDPOINT:/indices/stock_market/{identifier}/data_point/{tag}/text)
 
-[//]: # (DOC_LINK:IndexApi.md#getStockMarketIndexDataPointText)
+[//]: # (DOCUMENT_LINK:IndexApi.md#getStockMarketIndexDataPointText)
 
 <a name="getStockMarketIndexDataPointText"></a>
-# **getStockMarketIndexDataPointText**
+## **getStockMarketIndexDataPointText**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getStockMarketIndexDataPointText_v2)
 
 > &#39;String&#39; getStockMarketIndexDataPointText(identifier, tag)
 
-Data Point (Text) for Stock Market Index
+#### Data Point (Text) for Stock Market Index
+
 
 Returns a text value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
 
@@ -794,6 +855,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
  **tag** | **String**| An Intrinio data tag ID or code-name | 
+<br/>
 
 ### Return type
 
@@ -802,20 +864,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getStockMarketIndexHistoricalData_v2)
 
 [//]: # (ENDPOINT:/indices/stock_market/{identifier}/historical_data/{tag})
 
-[//]: # (DOC_LINK:IndexApi.md#getStockMarketIndexHistoricalData)
+[//]: # (DOCUMENT_LINK:IndexApi.md#getStockMarketIndexHistoricalData)
 
 <a name="getStockMarketIndexHistoricalData"></a>
-# **getStockMarketIndexHistoricalData**
+## **getStockMarketIndexHistoricalData**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getStockMarketIndexHistoricalData_v2)
 
 > ApiResponseStockMarketIndexHistoricalData getStockMarketIndexHistoricalData(identifier, tag, opts)
 
-Historical Data for Stock Market Index
+#### Historical Data for Stock Market Index
+
 
 Returns historical values for the given &#x60;tag&#x60; and the Stock Market Index with the given &#x60;identifier&#x60;
 
@@ -863,6 +928,7 @@ Name | Type | Description  | Notes
  **sortOrder** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -871,20 +937,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:searchEconomicIndices_v2)
 
 [//]: # (ENDPOINT:/indices/economic/search)
 
-[//]: # (DOC_LINK:IndexApi.md#searchEconomicIndices)
+[//]: # (DOCUMENT_LINK:IndexApi.md#searchEconomicIndices)
 
 <a name="searchEconomicIndices"></a>
-# **searchEconomicIndices**
+## **searchEconomicIndices**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/searchEconomicIndices_v2)
 
 > ApiResponseEconomicIndicesSearch searchEconomicIndices(query, opts)
 
-Search Economic Indices
+#### Search Economic Indices
+
 
 Searches for indices using the text in &#x60;query&#x60;
 
@@ -919,6 +988,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **String**| Search query | 
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+<br/>
 
 ### Return type
 
@@ -927,20 +997,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:searchSicIndices_v2)
 
 [//]: # (ENDPOINT:/indices/sic/search)
 
-[//]: # (DOC_LINK:IndexApi.md#searchSicIndices)
+[//]: # (DOCUMENT_LINK:IndexApi.md#searchSicIndices)
 
 <a name="searchSicIndices"></a>
-# **searchSicIndices**
+## **searchSicIndices**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/searchSicIndices_v2)
 
 > ApiResponseSICIndicesSearch searchSicIndices(query, opts)
 
-Search SIC Indices
+#### Search SIC Indices
+
 
 Searches for indices using the text in &#x60;query&#x60;
 
@@ -975,6 +1048,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **String**| Search query | 
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+<br/>
 
 ### Return type
 
@@ -983,20 +1057,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:searchStockMarketsIndices_v2)
 
 [//]: # (ENDPOINT:/indices/stock_market/search)
 
-[//]: # (DOC_LINK:IndexApi.md#searchStockMarketsIndices)
+[//]: # (DOCUMENT_LINK:IndexApi.md#searchStockMarketsIndices)
 
 <a name="searchStockMarketsIndices"></a>
-# **searchStockMarketsIndices**
+## **searchStockMarketsIndices**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/searchStockMarketsIndices_v2)
 
 > ApiResponseStockMarketIndicesSearch searchStockMarketsIndices(query, opts)
 
-Search Stock Market Indices
+#### Search Stock Market Indices
+
 
 Searches for indices using the text in &#x60;query&#x60;
 
@@ -1031,6 +1108,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **String**| Search query | 
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+<br/>
 
 ### Return type
 

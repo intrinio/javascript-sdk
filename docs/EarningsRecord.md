@@ -1,6 +1,6 @@
 # intrinioSDK.EarningsRecord
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **quarter** | **String** | The letter “Q” followed by the quarter number the earnings information applies to | [optional] 
@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 
 
 <a name="TimeOfDayEnum"></a>
-## Enum: TimeOfDayEnum
+### Enum: TimeOfDayEnum
 
 
 * `Before Market` (value: `"Before Market"`)
@@ -44,7 +44,7 @@ Name | Type | Description | Notes
 
 
 <a name="BoardOfDirectorsMeetingTypeEnum"></a>
-## Enum: BoardOfDirectorsMeetingTypeEnum
+### Enum: BoardOfDirectorsMeetingTypeEnum
 
 
 * `B` (value: `"B"`)
@@ -55,7 +55,7 @@ Name | Type | Description | Notes
 
 
 <a name="TypeEnum"></a>
-## Enum: TypeEnum
+### Enum: TypeEnum
 
 
 * `V` (value: `"V"`)

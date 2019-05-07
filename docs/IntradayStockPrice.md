@@ -1,6 +1,6 @@
 # intrinioSDK.IntradayStockPrice
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **time** | **Date** | The timestamp that the &#x60;last_price&#x60; represents. | [optional] 

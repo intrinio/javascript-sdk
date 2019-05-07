@@ -1,6 +1,6 @@
 # intrinioSDK.ReportedFinancialDimension
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **axis** | **String** | The axis of the dimension | [optional] 

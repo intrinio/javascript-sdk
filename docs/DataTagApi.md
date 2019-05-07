@@ -10,20 +10,23 @@ Method | HTTP request | Description
 
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getAllDataTags_v2)
 
 [//]: # (ENDPOINT:/data_tags)
 
-[//]: # (DOC_LINK:DataTagApi.md#getAllDataTags)
+[//]: # (DOCUMENT_LINK:DataTagApi.md#getAllDataTags)
 
 <a name="getAllDataTags"></a>
-# **getAllDataTags**
+## **getAllDataTags**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllDataTags_v2)
 
 > ApiResponseDataTags getAllDataTags(opts)
 
-All Data Tags
+#### All Data Tags
+
 
 Returns all Data Tags. Returns Data Tags matching parameters when specified.
 
@@ -67,6 +70,7 @@ Name | Type | Description  | Notes
  **fsTemplate** | **String**| Template | [optional] [default to industrial]
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
  **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+<br/>
 
 ### Return type
 
@@ -75,20 +79,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:getDataTagById_v2)
 
 [//]: # (ENDPOINT:/data_tags/{identifier})
 
-[//]: # (DOC_LINK:DataTagApi.md#getDataTagById)
+[//]: # (DOCUMENT_LINK:DataTagApi.md#getDataTagById)
 
 <a name="getDataTagById"></a>
-# **getDataTagById**
+## **getDataTagById**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getDataTagById_v2)
 
 > DataTag getDataTagById(identifier)
 
-Lookup Data Tag
+#### Lookup Data Tag
+
 
 Returns the Data Tag with the given &#x60;identifier&#x60;
 
@@ -119,6 +126,7 @@ dataTagAPI.getDataTagById(identifier).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | **String**| The Intrinio ID or the code-name of the Data Tag | 
+<br/>
 
 ### Return type
 
@@ -127,20 +135,23 @@ Name | Type | Description  | Notes
 [//]: # (END_OPERATION)
 
 
-[//]: # (START_OPERTATION)
+[//]: # (START_OPERATION)
+
+[//]: # (OPERATION:searchDataTags_v2)
 
 [//]: # (ENDPOINT:/data_tags/search)
 
-[//]: # (DOC_LINK:DataTagApi.md#searchDataTags)
+[//]: # (DOCUMENT_LINK:DataTagApi.md#searchDataTags)
 
 <a name="searchDataTags"></a>
-# **searchDataTags**
+## **searchDataTags**
 
 [**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/searchDataTags_v2)
 
 > ApiResponseDataTagsSearch searchDataTags(query, opts)
 
-Search Data Tags
+#### Search Data Tags
+
 
 Searches for Data Tags matching the text &#x60;query&#x60;
 
@@ -175,6 +186,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | **String**|  | 
  **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+<br/>
 
 ### Return type
 

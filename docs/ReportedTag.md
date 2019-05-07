@@ -1,6 +1,6 @@
 # intrinioSDK.ReportedTag
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tag** | **String** | The tag code | [optional] 

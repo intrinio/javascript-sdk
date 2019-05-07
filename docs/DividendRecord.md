@@ -1,6 +1,6 @@
 # intrinioSDK.DividendRecord
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **exDividend** | **Number** | Amount of dividend in US dollars | [optional] 
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 
 
 <a name="StatusEnum"></a>
-## Enum: StatusEnum
+### Enum: StatusEnum
 
 
 * `P` (value: `"P"`)

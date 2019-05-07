@@ -1,6 +1,6 @@
 # intrinioSDK.ApiResponseZacksEPSSurprises
 
-## Properties
+### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **epsSurprises** | [**[ZacksEPSSurprise]**](ZacksEPSSurprise.md) | Zacks EPS Surprise data for a Security in descending order by actual reported date | [optional] 
