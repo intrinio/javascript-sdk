@@ -1,4 +1,4 @@
-# intrinioSDK.AverageDirectionalIndexTechnicalValue
+# AverageDirectionalIndexTechnicalValue
 
 ### Properties
 Name | Type | Description | Notes
@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **adx** | **Number** | The Average Directional Index value | [optional] 
 **diNeg** | **Number** | The Minus Directional Indicator value | [optional] 
 **diPos** | **Number** | The Plus Directional Indicator value | [optional] 
+
 
 

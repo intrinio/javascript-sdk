@@ -1,4 +1,4 @@
-# intrinioSDK.RealtimeStockPrice
+# RealtimeStockPrice
 
 ### Properties
 Name | Type | Description | Notes
@@ -17,5 +17,6 @@ Name | Type | Description | Notes
 **updatedOn** | **Date** | The date and time when the data was last updated. | [optional] 
 **source** | **String** | The source of the data. | [optional] 
 **security** | [**RealtimeStockPriceSecurity**](RealtimeStockPriceSecurity.md) |  | [optional] 
+
 
 

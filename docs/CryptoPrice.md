@@ -1,4 +1,4 @@
-# intrinioSDK.CryptoPrice
+# CryptoPrice
 
 ### Properties
 Name | Type | Description | Notes
@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **low** | **Number** | The low price of the timeframe. | [optional] 
 **close** | **Number** | The closing price of the timeframe. | [optional] 
 **volume** | **Number** | The volume during the timeframe. | [optional] 
+
 
 

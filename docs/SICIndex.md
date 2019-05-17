@@ -1,4 +1,4 @@
-# intrinioSDK.SICIndex
+# SICIndex
 
 ### Properties
 Name | Type | Description | Notes
@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **name** | **String** | The name of the Index | [optional] 
 **continent** | **String** | The continent of the country of focus for the Index | [optional] 
 **country** | **String** | The country of focus for the Index | [optional] 
+
 
 

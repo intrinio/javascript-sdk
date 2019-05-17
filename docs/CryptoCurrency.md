@@ -1,4 +1,4 @@
-# intrinioSDK.CryptoCurrency
+# CryptoCurrency
 
 ### Properties
 Name | Type | Description | Notes
@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **symbol** | **String** | The symbol of the Crypto Currency. | [optional] 
 **firstPriceDate** | **String** | The earliest date that daily historical pricing is available for. | [optional] 
 **lastPriceDate** | **String** | The most recent date that daily historical pricing is available for. | [optional] 
+
 
 

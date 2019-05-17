@@ -1,4 +1,4 @@
-# intrinioSDK.DividendRecord
+# DividendRecord
 
 ### Properties
 Name | Type | Description | Notes
@@ -15,18 +15,16 @@ Name | Type | Description | Notes
 **security** | [**SecuritySummary**](SecuritySummary.md) |  | [optional] 
 
 
-<a name="StatusEnum"></a>
-### Enum: StatusEnum
+<br/>
 
+**Enum: StatusEnum**
 
-* `P` (value: `"P"`)
-
-* `X` (value: `"X"`)
-
-* `S` (value: `"S"`)
-
-* `R` (value: `"R"`)
-
+Name | Value
+---- | -----
+P | &quot;P&quot;
+X | &quot;X&quot;
+S | &quot;S&quot;
+R | &quot;R&quot;
 
 
 

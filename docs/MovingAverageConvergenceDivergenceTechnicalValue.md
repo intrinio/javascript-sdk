@@ -1,4 +1,4 @@
-# intrinioSDK.MovingAverageConvergenceDivergenceTechnicalValue
+# MovingAverageConvergenceDivergenceTechnicalValue
 
 ### Properties
 Name | Type | Description | Notes
@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **macdHistogram** | **Number** | The histogram value of the Moving Average Convergence Divergence calculation | [optional] 
 **macdLine** | **Number** | The line value of the Moving Average Convergence Divergence calculation | [optional] 
 **signalLine** | **Number** | The signal line value of the Moving Average Convergence Divergence calculation | [optional] 
+
 
 

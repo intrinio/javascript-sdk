@@ -1,4 +1,4 @@
-# intrinioSDK.EarningsRecord
+# EarningsRecord
 
 ### Properties
 Name | Type | Description | Notes
@@ -28,42 +28,37 @@ Name | Type | Description | Notes
 **security** | [**SecuritySummary**](SecuritySummary.md) |  | [optional] 
 
 
-<a name="TimeOfDayEnum"></a>
-### Enum: TimeOfDayEnum
+<br/>
+
+**Enum: TimeOfDayEnum**
+
+Name | Value
+---- | -----
+Before Market | &quot;Before Market&quot;
+During Market | &quot;During Market&quot;
+After Market | &quot;After Market&quot;
+Unspecified | &quot;Unspecified&quot;
 
 
-* `Before Market` (value: `"Before Market"`)
+<br/>
 
-* `During Market` (value: `"During Market"`)
+**Enum: BoardOfDirectorsMeetingTypeEnum**
 
-* `After Market` (value: `"After Market"`)
-
-* `Unspecified` (value: `"Unspecified"`)
-
-
-
-
-<a name="BoardOfDirectorsMeetingTypeEnum"></a>
-### Enum: BoardOfDirectorsMeetingTypeEnum
+Name | Value
+---- | -----
+B | &quot;B&quot;
+S | &quot;S&quot;
 
 
-* `B` (value: `"B"`)
+<br/>
 
-* `S` (value: `"S"`)
+**Enum: TypeEnum**
 
-
-
-
-<a name="TypeEnum"></a>
-### Enum: TypeEnum
-
-
-* `V` (value: `"V"`)
-
-* `T` (value: `"T"`)
-
-* `I` (value: `"I"`)
-
+Name | Value
+---- | -----
+V | &quot;V&quot;
+T | &quot;T&quot;
+I | &quot;I&quot;
 
 
 

@@ -1,4 +1,4 @@
-# intrinioSDK.IntradayStockPrice
+# IntradayStockPrice
 
 ### Properties
 Name | Type | Description | Notes
@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **bidSize** | **Number** | The size of the top bid order. | [optional] 
 **volume** | **Number** | The number of shares exchanged during the trading day on the exchange. | [optional] 
 **source** | **String** | The source of the data. | [optional] 
+
 
 

@@ -1,4 +1,4 @@
-# intrinioSDK.Company
+# Company
 
 ### Properties
 Name | Type | Description | Notes
@@ -39,5 +39,6 @@ Name | Type | Description | Notes
 **lastFundamentalDate** | **Date** | The period end date of the company&#39;s last reported fundamental | [optional] 
 **firstStockPriceDate** | **Date** | The date of the company&#39;s first stock price, based on the company&#39;s primary security, which is typically traded on US exchages | [optional] 
 **lastStockPriceDate** | **Date** | The date of the company&#39;s last stock price, based on the company&#39;s primary security, which is typically traded on US exchages | [optional] 
+
 
 

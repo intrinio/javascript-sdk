@@ -1,4 +1,4 @@
-# intrinioSDK.ZacksAnalystRating
+# ZacksAnalystRating
 
 ### Properties
 Name | Type | Description | Notes
@@ -13,5 +13,6 @@ Name | Type | Description | Notes
 **strongSells** | **Number** | The number of analysts recommending Strong Sell. | [optional] 
 **total** | **Number** | The total number of analyst recommendations. | [optional] 
 **security** | [**SecuritySummary**](SecuritySummary.md) | The Security of the Zacks Analyst Rating | [optional] 
+
 
 

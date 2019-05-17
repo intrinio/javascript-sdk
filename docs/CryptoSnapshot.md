@@ -1,4 +1,4 @@
-# intrinioSDK.CryptoSnapshot
+# CryptoSnapshot
 
 ### Properties
 Name | Type | Description | Notes
@@ -18,5 +18,6 @@ Name | Type | Description | Notes
 **lastTradeTime** | **String** | UTC timestamp of the last trade for the Crypto Currency Pair on the exchange. | [optional] 
 **lastTradePrice** | **Number** | The price of the last trade for the Crypto Currency Pair on the exchange. | [optional] 
 **lastTradeSize** | **Number** | The size of the last trade for the Crypto Currency Pair on the exchange. | [optional] 
+
 
 

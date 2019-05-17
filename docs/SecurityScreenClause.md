@@ -1,4 +1,4 @@
-# intrinioSDK.SecurityScreenClause
+# SecurityScreenClause
 
 ### Properties
 Name | Type | Description | Notes
@@ -8,22 +8,18 @@ Name | Type | Description | Notes
 **value** | **String** | The value to screen by | [optional] 
 
 
-<a name="OperatorEnum"></a>
-### Enum: OperatorEnum
+<br/>
 
+**Enum: OperatorEnum**
 
-* `eq` (value: `"eq"`)
-
-* `gt` (value: `"gt"`)
-
-* `gte` (value: `"gte"`)
-
-* `lt` (value: `"lt"`)
-
-* `lte` (value: `"lte"`)
-
-* `contains` (value: `"contains"`)
-
+Name | Value
+---- | -----
+eq | &quot;eq&quot;
+gt | &quot;gt&quot;
+gte | &quot;gte&quot;
+lt | &quot;lt&quot;
+lte | &quot;lte&quot;
+contains | &quot;contains&quot;
 
 
 

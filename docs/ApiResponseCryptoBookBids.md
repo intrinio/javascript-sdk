@@ -1,4 +1,4 @@
-# intrinioSDK.ApiResponseCryptoBookBids
+# ApiResponseCryptoBookBids
 
 ### Properties
 Name | Type | Description | Notes
@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **pair** | [**CryptoPairSummary**](CryptoPairSummary.md) |  | [optional] 
 **exchange** | [**CryptoExchangeSummary**](CryptoExchangeSummary.md) |  | [optional] 
 **lastUpdated** | **String** | The UTC timestamp of when the order book was last updated. | [optional] 
+
 
 

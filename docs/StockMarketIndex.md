@@ -1,4 +1,4 @@
-# intrinioSDK.StockMarketIndex
+# StockMarketIndex
 
 ### Properties
 Name | Type | Description | Notes
@@ -13,5 +13,6 @@ Name | Type | Description | Notes
 **description** | **String** | A paragraph describing the index and its scope | [optional] 
 **observationStart** | **Date** | The earliest date for which data is available | [optional] 
 **observationEnd** | **Date** | The latest date for which data is available | [optional] 
+
 
 

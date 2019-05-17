@@ -1,4 +1,4 @@
-# intrinioSDK.ApiResponseSecurityIntradayPrices
+# ApiResponseSecurityIntradayPrices
 
 ### Properties
 Name | Type | Description | Notes
@@ -9,14 +9,14 @@ Name | Type | Description | Notes
 **nextPage** | **String** | The token required to request the next page of the data | [optional] 
 
 
-<a name="SourceEnum"></a>
-### Enum: SourceEnum
+<br/>
 
+**Enum: SourceEnum**
 
-* `iex` (value: `"iex"`)
-
-* `bats` (value: `"bats"`)
-
+Name | Value
+---- | -----
+iex | &quot;iex&quot;
+bats | &quot;bats&quot;
 
 
 

@@ -1,4 +1,4 @@
-# intrinioSDK.KeltnerChannelTechnicalValue
+# KeltnerChannelTechnicalValue
 
 ### Properties
 Name | Type | Description | Notes
@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **lowerBand** | **Number** | The lower band value of the Keltner Channel calculation | [optional] 
 **middleBand** | **Number** | The middle band value of the Keltner Channel calculation | [optional] 
 **upperBand** | **Number** | The upper band value of the Keltner Channel calculation | [optional] 
+
 
 

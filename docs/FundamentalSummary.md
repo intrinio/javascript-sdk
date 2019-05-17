@@ -1,4 +1,4 @@
-# intrinioSDK.FundamentalSummary
+# FundamentalSummary
 
 ### Properties
 Name | Type | Description | Notes
@@ -13,16 +13,15 @@ Name | Type | Description | Notes
 **filingDate** | **Date** | The date and time when the Fundamental was filed with the SEC | [optional] 
 
 
-<a name="TypeEnum"></a>
-### Enum: TypeEnum
+<br/>
 
+**Enum: TypeEnum**
 
-* `reported` (value: `"reported"`)
-
-* `restated` (value: `"restated"`)
-
-* `calculated` (value: `"calculated"`)
-
+Name | Value
+---- | -----
+reported | &quot;reported&quot;
+restated | &quot;restated&quot;
+calculated | &quot;calculated&quot;
 
 
 

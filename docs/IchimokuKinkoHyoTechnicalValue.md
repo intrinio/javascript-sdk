@@ -1,4 +1,4 @@
-# intrinioSDK.IchimokuKinkoHyoTechnicalValue
+# IchimokuKinkoHyoTechnicalValue
 
 ### Properties
 Name | Type | Description | Notes
@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **senkouSpanA** | **Number** | The Senkou Span A (Leading Span A) value of the Ichimoku Kinko Hyo calculation | [optional] 
 **senkouSpanB** | **Number** | The Senkou Span B (Leading Span B) value of the Ichimoku Kinko Hyo calculation | [optional] 
 **tenkanSen** | **Number** | The Tenskan-sen (Conversion Line) value of the Ichimoku Kinko Hyo calculation | [optional] 
+
 
 

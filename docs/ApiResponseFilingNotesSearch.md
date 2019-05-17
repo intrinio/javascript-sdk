@@ -1,8 +1,9 @@
-# intrinioSDK.ApiResponseFilingNotesSearch
+# ApiResponseFilingNotesSearch
 
 ### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **filingNotes** | [**[FilingNoteSummary]**](FilingNoteSummary.md) |  | [optional] 
+
 
 

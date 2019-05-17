@@ -1,4 +1,4 @@
-# intrinioSDK.DataTag
+# DataTag
 
 ### Properties
 Name | Type | Description | Notes
@@ -15,14 +15,14 @@ Name | Type | Description | Notes
 **unit** | **String** | The unit of the Data Tag | [optional] 
 
 
-<a name="StatementTypeEnum"></a>
-### Enum: StatementTypeEnum
+<br/>
 
+**Enum: StatementTypeEnum**
 
-* `financial` (value: `"financial"`)
-
-* `industrial` (value: `"industrial"`)
-
+Name | Value
+---- | -----
+financial | &quot;financial&quot;
+industrial | &quot;industrial&quot;
 
 
 

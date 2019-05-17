@@ -1,4 +1,4 @@
-# intrinioSDK.DataTagSummary
+# DataTagSummary
 
 ### Properties
 Name | Type | Description | Notes
@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **name** | **String** | The readable name of the Data Tag | [optional] 
 **tag** | **String** | The code-name of the Data Tag | [optional] 
 **unit** | **String** | The unit of the Data Tag | [optional] 
+
 
 

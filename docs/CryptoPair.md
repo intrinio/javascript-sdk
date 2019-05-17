@@ -1,4 +1,4 @@
-# intrinioSDK.CryptoPair
+# CryptoPair
 
 ### Properties
 Name | Type | Description | Notes
@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **historyAvailable** | **Boolean** | A boolean, representing whether this pair has historical price data available or not. | [optional] 
 **snapshotAvailable** | **Boolean** | A boolean, representing whether this pair has snapshot data available or not. | [optional] 
 **tradesAvailable** | **Boolean** | A boolean, representing whether this pair has trade data available or not. | [optional] 
+
 
 

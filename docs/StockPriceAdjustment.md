@@ -1,4 +1,4 @@
-# intrinioSDK.StockPriceAdjustment
+# StockPriceAdjustment
 
 ### Properties
 Name | Type | Description | Notes
@@ -9,5 +9,6 @@ Name | Type | Description | Notes
 **dividendCurrency** | **String** | The currency of the dividend, if known. | [optional] 
 **splitRatio** | **Number** | The ratio of the stock split, if a stock split occurred. | [optional] 
 **security** | [**SecuritySummary**](SecuritySummary.md) | The Security of the stock price | [optional] 
+
 
 

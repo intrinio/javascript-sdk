@@ -1,4 +1,4 @@
-# intrinioSDK.ZacksAnalystRatingSnapshot
+# ZacksAnalystRatingSnapshot
 
 ### Properties
 Name | Type | Description | Notes
@@ -14,5 +14,6 @@ Name | Type | Description | Notes
 **sells** | **Number** | The number of analysts recommending Sell. | [optional] 
 **strongSells** | **Number** | The number of analysts recommending Strong Sell. | [optional] 
 **total** | **Number** | The total number of analysts recommendations. | [optional] 
+
 
 

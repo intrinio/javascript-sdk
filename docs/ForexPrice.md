@@ -1,4 +1,4 @@
-# intrinioSDK.ForexPrice
+# ForexPrice
 
 ### Properties
 Name | Type | Description | Notes
@@ -13,5 +13,6 @@ Name | Type | Description | Notes
 **lowAsk** | **Number** | Low ask | [optional] 
 **closeAsk** | **Number** | Close ask | [optional] 
 **totalTicks** | **Number** | Total ticks | [optional] 
+
 
 

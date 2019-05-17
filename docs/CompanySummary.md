@@ -1,4 +1,4 @@
-# intrinioSDK.CompanySummary
+# CompanySummary
 
 ### Properties
 Name | Type | Description | Notes
@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **name** | **String** | The company&#39;s common name | [optional] 
 **lei** | **String** | The Legal Entity Identifier (LEI) assigned to the company | [optional] 
 **cik** | **String** | The Central Index Key (CIK) assigned to the company | [optional] 
+
 
 

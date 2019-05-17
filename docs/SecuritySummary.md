@@ -1,4 +1,4 @@
-# intrinioSDK.SecuritySummary
+# SecuritySummary
 
 ### Properties
 Name | Type | Description | Notes
@@ -13,5 +13,6 @@ Name | Type | Description | Notes
 **figi** | **String** | The OpenFIGI identifier | [optional] 
 **compositeFigi** | **String** | The country-composite OpenFIGI identifier | [optional] 
 **shareClassFigi** | **String** | The global-composite OpenFIGI identifier | [optional] 
+
 
 

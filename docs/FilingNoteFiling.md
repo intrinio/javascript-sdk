@@ -1,4 +1,4 @@
-# intrinioSDK.FilingNoteFiling
+# FilingNoteFiling
 
 ### Properties
 Name | Type | Description | Notes
@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **reportType** | **String** | The type of report (10-Q, 10-K, etc) filed | [optional] 
 **periodEndDate** | **Date** | The ending date of the fiscal period for the filing | [optional] 
 **filingDate** | **Date** | The date the report was filed with the SEC | [optional] 
+
 
 

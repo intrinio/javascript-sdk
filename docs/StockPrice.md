@@ -1,4 +1,4 @@
-# intrinioSDK.StockPrice
+# StockPrice
 
 ### Properties
 Name | Type | Description | Notes
@@ -19,20 +19,17 @@ Name | Type | Description | Notes
 **security** | [**SecuritySummary**](SecuritySummary.md) | The Security of the stock price | [optional] 
 
 
-<a name="FrequencyEnum"></a>
-### Enum: FrequencyEnum
+<br/>
 
+**Enum: FrequencyEnum**
 
-* `daily` (value: `"daily"`)
-
-* `weekly` (value: `"weekly"`)
-
-* `monthly` (value: `"monthly"`)
-
-* `quarterly` (value: `"quarterly"`)
-
-* `yearly` (value: `"yearly"`)
-
+Name | Value
+---- | -----
+daily | &quot;daily&quot;
+weekly | &quot;weekly&quot;
+monthly | &quot;monthly&quot;
+quarterly | &quot;quarterly&quot;
+yearly | &quot;yearly&quot;
 
 
 

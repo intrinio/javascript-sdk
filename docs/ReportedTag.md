@@ -1,4 +1,4 @@
-# intrinioSDK.ReportedTag
+# ReportedTag
 
 ### Properties
 Name | Type | Description | Notes
@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **_abstract** | **Boolean** | If true, the tag is an abstract and does not represent a nominal value | [optional] 
 **sequence** | **Number** | The vertical sequence of the tag when displayed in the financial statement | [optional] 
 **depth** | **Number** | The horizontal depth of the tag when displayed in the financial statement | [optional] 
+
 
 
