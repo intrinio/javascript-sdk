@@ -1,6 +1,6 @@
 # StockMarketIndex
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Intrinio ID for the Index | [optional] 

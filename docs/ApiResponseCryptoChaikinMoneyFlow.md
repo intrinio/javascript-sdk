@@ -1,6 +1,6 @@
 # ApiResponseCryptoChaikinMoneyFlow
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[ChaikinMoneyFlowTechnicalValue]**](ChaikinMoneyFlowTechnicalValue.md) |  | [optional] 

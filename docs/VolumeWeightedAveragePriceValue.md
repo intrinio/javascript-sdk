@@ -1,6 +1,6 @@
 # VolumeWeightedAveragePriceValue
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **dateTime** | **Date** | The date and time of the observation | [optional] 

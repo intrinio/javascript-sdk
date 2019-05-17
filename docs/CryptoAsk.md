@@ -1,6 +1,6 @@
 # CryptoAsk
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **price** | **Number** | The ask price of the book entry. | [optional] 

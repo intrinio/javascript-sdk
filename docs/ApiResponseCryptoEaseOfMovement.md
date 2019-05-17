@@ -1,6 +1,6 @@
 # ApiResponseCryptoEaseOfMovement
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[EaseOfMovementTechnicalValue]**](EaseOfMovementTechnicalValue.md) |  | [optional] 

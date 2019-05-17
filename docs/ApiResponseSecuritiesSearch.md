@@ -1,6 +1,6 @@
 # ApiResponseSecuritiesSearch
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **securities** | [**[SecuritySummary]**](SecuritySummary.md) |  | [optional] 

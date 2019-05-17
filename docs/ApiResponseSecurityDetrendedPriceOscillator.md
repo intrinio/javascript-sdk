@@ -1,6 +1,6 @@
 # ApiResponseSecurityDetrendedPriceOscillator
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[DetrendedPriceOscillatorTechnicalValue]**](DetrendedPriceOscillatorTechnicalValue.md) |  | [optional] 

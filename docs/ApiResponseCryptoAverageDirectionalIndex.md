@@ -1,6 +1,6 @@
 # ApiResponseCryptoAverageDirectionalIndex
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[AverageDirectionalIndexTechnicalValue]**](AverageDirectionalIndexTechnicalValue.md) |  | [optional] 

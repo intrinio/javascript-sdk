@@ -1,6 +1,6 @@
 # FilingNoteFiling
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cik** | **String** | The Central Index Key (CIK) assigned to the company | [optional] 

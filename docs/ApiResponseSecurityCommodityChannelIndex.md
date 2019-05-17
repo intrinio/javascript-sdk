@@ -1,6 +1,6 @@
 # ApiResponseSecurityCommodityChannelIndex
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[CommodityChannelIndexTechnicalValue]**](CommodityChannelIndexTechnicalValue.md) |  | [optional] 

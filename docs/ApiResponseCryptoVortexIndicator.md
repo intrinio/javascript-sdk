@@ -1,6 +1,6 @@
 # ApiResponseCryptoVortexIndicator
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[VortexIndicatorTechnicalValue]**](VortexIndicatorTechnicalValue.md) |  | [optional] 

@@ -1,6 +1,6 @@
 # FundamentalSummary
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The Intrinio ID of the Fundamental | [optional] 
@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 
 <br/>
 
-**Enum: TypeEnum**
+#### Enum: TypeEnum**
 
 Name | Value
 ---- | -----

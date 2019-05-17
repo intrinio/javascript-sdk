@@ -1,6 +1,6 @@
 # EconomicIndex
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The Intrinio ID for the Index | [optional] 

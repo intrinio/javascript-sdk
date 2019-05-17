@@ -1,6 +1,6 @@
 # ApiResponseCryptoIchimokuKinkoHyo
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[IchimokuKinkoHyoTechnicalValue]**](IchimokuKinkoHyoTechnicalValue.md) |  | [optional] 

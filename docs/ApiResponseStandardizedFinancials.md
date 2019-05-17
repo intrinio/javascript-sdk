@@ -1,6 +1,6 @@
 # ApiResponseStandardizedFinancials
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **standardizedFinancials** | [**[StandardizedFinancial]**](StandardizedFinancial.md) |  | [optional] 

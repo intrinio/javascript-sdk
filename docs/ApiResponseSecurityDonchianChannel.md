@@ -1,6 +1,6 @@
 # ApiResponseSecurityDonchianChannel
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[DonchianChannelTechnicalValue]**](DonchianChannelTechnicalValue.md) |  | [optional] 

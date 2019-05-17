@@ -1,6 +1,6 @@
 # ApiResponseSecurityWilliamsR
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[WilliamsRTechnicalValue]**](WilliamsRTechnicalValue.md) |  | [optional] 

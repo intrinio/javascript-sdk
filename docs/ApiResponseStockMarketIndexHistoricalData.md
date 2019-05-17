@@ -1,6 +1,6 @@
 # ApiResponseStockMarketIndexHistoricalData
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **historicalData** | [**[HistoricalData]**](HistoricalData.md) |  | [optional] 

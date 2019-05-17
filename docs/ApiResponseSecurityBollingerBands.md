@@ -1,6 +1,6 @@
 # ApiResponseSecurityBollingerBands
 
-### Properties
+#### Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[BollingerBandsTechnicalValue]**](BollingerBandsTechnicalValue.md) |  | [optional] 
