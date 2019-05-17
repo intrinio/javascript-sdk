@@ -1,4 +1,4 @@
-# RealtimeStockPriceSecurity
+### RealtimeStockPriceSecurity
 
 #### Properties
 Name | Type | Description | Notes

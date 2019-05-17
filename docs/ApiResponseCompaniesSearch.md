@@ -1,4 +1,4 @@
-# ApiResponseCompaniesSearch
+### ApiResponseCompaniesSearch
 
 #### Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ReportedTag
+### ReportedTag
 
 #### Properties
 Name | Type | Description | Notes

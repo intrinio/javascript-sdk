@@ -1,4 +1,4 @@
-# ApiResponseCryptoNegativeVolumeIndex
+### ApiResponseCryptoNegativeVolumeIndex
 
 #### Properties
 Name | Type | Description | Notes

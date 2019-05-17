@@ -1,4 +1,4 @@
-# SecurityScreenResultData
+### SecurityScreenResultData
 
 #### Properties
 Name | Type | Description | Notes

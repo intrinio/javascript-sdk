@@ -1,4 +1,4 @@
-# CryptoPairSummary
+### CryptoPairSummary
 
 #### Properties
 Name | Type | Description | Notes

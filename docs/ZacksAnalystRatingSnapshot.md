@@ -1,4 +1,4 @@
-# ZacksAnalystRatingSnapshot
+### ZacksAnalystRatingSnapshot
 
 #### Properties
 Name | Type | Description | Notes

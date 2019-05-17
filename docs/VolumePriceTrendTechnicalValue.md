@@ -1,4 +1,4 @@
-# VolumePriceTrendTechnicalValue
+### VolumePriceTrendTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

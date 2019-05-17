@@ -1,4 +1,4 @@
-# StockMarketIndexSummary
+### StockMarketIndexSummary
 
 #### Properties
 Name | Type | Description | Notes

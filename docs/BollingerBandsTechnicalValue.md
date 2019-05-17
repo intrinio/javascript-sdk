@@ -1,4 +1,4 @@
-# BollingerBandsTechnicalValue
+### BollingerBandsTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

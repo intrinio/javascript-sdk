@@ -1,4 +1,4 @@
-# ApiResponseCryptoPairs
+### ApiResponseCryptoPairs
 
 #### Properties
 Name | Type | Description | Notes

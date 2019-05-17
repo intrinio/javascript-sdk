@@ -1,4 +1,4 @@
-# ApiResponseStockExchangeStockPriceAdjustments
+### ApiResponseStockExchangeStockPriceAdjustments
 
 #### Properties
 Name | Type | Description | Notes

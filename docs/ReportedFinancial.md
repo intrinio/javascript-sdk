@@ -1,4 +1,4 @@
-# ReportedFinancial
+### ReportedFinancial
 
 #### Properties
 Name | Type | Description | Notes

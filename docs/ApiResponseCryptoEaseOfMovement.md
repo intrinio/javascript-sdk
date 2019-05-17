@@ -1,4 +1,4 @@
-# ApiResponseCryptoEaseOfMovement
+### ApiResponseCryptoEaseOfMovement
 
 #### Properties
 Name | Type | Description | Notes

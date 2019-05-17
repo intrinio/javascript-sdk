@@ -1,4 +1,4 @@
-# CryptoBid
+### CryptoBid
 
 #### Properties
 Name | Type | Description | Notes

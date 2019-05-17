@@ -1,4 +1,4 @@
-# CryptoAsk
+### CryptoAsk
 
 #### Properties
 Name | Type | Description | Notes

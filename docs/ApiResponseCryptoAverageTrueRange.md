@@ -1,4 +1,4 @@
-# ApiResponseCryptoAverageTrueRange
+### ApiResponseCryptoAverageTrueRange
 
 #### Properties
 Name | Type | Description | Notes

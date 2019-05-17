@@ -1,4 +1,4 @@
-# ApiResponseStockMarketIndicesSearch
+### ApiResponseStockMarketIndicesSearch
 
 #### Properties
 Name | Type | Description | Notes

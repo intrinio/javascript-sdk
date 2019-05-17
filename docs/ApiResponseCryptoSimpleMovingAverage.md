@@ -1,4 +1,4 @@
-# ApiResponseCryptoSimpleMovingAverage
+### ApiResponseCryptoSimpleMovingAverage
 
 #### Properties
 Name | Type | Description | Notes

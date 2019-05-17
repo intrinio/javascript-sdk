@@ -1,4 +1,4 @@
-# ApiResponseSecurityIchimokuKinkoHyo
+### ApiResponseSecurityIchimokuKinkoHyo
 
 #### Properties
 Name | Type | Description | Notes

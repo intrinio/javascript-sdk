@@ -1,4 +1,4 @@
-# MoneyFlowIndexTechnicalValue
+### MoneyFlowIndexTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

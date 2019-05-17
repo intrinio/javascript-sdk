@@ -1,4 +1,4 @@
-# ApiResponseSecurityCommodityChannelIndex
+### ApiResponseSecurityCommodityChannelIndex
 
 #### Properties
 Name | Type | Description | Notes

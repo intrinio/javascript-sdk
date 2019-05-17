@@ -1,4 +1,4 @@
-# DividendRecord
+### DividendRecord
 
 #### Properties
 Name | Type | Description | Notes

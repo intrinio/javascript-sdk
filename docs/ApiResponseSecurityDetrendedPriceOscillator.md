@@ -1,4 +1,4 @@
-# ApiResponseSecurityDetrendedPriceOscillator
+### ApiResponseSecurityDetrendedPriceOscillator
 
 #### Properties
 Name | Type | Description | Notes

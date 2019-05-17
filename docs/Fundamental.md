@@ -1,4 +1,4 @@
-# Fundamental
+### Fundamental
 
 #### Properties
 Name | Type | Description | Notes

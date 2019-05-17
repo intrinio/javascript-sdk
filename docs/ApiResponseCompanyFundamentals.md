@@ -1,4 +1,4 @@
-# ApiResponseCompanyFundamentals
+### ApiResponseCompanyFundamentals
 
 #### Properties
 Name | Type | Description | Notes

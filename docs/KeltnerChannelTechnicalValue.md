@@ -1,4 +1,4 @@
-# KeltnerChannelTechnicalValue
+### KeltnerChannelTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

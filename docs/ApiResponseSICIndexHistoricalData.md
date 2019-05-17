@@ -1,4 +1,4 @@
-# ApiResponseSICIndexHistoricalData
+### ApiResponseSICIndexHistoricalData
 
 #### Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# AverageTrueRangeTechnicalValue
+### AverageTrueRangeTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

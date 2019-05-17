@@ -1,4 +1,4 @@
-# ApiResponseSecurityMassIndex
+### ApiResponseSecurityMassIndex
 
 #### Properties
 Name | Type | Description | Notes

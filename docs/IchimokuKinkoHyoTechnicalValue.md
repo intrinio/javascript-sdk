@@ -1,4 +1,4 @@
-# IchimokuKinkoHyoTechnicalValue
+### IchimokuKinkoHyoTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

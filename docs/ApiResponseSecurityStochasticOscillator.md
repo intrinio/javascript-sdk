@@ -1,4 +1,4 @@
-# ApiResponseSecurityStochasticOscillator
+### ApiResponseSecurityStochasticOscillator
 
 #### Properties
 Name | Type | Description | Notes

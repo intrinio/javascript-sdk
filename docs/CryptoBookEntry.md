@@ -1,4 +1,4 @@
-# CryptoBookEntry
+### CryptoBookEntry
 
 #### Properties
 Name | Type | Description | Notes

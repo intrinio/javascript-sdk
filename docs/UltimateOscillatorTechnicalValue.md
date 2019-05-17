@@ -1,4 +1,4 @@
-# UltimateOscillatorTechnicalValue
+### UltimateOscillatorTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

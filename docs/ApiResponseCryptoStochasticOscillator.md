@@ -1,4 +1,4 @@
-# ApiResponseCryptoStochasticOscillator
+### ApiResponseCryptoStochasticOscillator
 
 #### Properties
 Name | Type | Description | Notes

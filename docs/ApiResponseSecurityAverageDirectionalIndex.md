@@ -1,4 +1,4 @@
-# ApiResponseSecurityAverageDirectionalIndex
+### ApiResponseSecurityAverageDirectionalIndex
 
 #### Properties
 Name | Type | Description | Notes

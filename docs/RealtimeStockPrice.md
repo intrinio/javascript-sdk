@@ -1,4 +1,4 @@
-# RealtimeStockPrice
+### RealtimeStockPrice
 
 #### Properties
 Name | Type | Description | Notes

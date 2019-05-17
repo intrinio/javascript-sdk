@@ -1,4 +1,4 @@
-# ApiResponseSecurityAccumulationDistributionIndex
+### ApiResponseSecurityAccumulationDistributionIndex
 
 #### Properties
 Name | Type | Description | Notes

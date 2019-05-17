@@ -1,4 +1,4 @@
-# SimpleMovingAverageTechnicalValue
+### SimpleMovingAverageTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

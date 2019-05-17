@@ -1,4 +1,4 @@
-# DonchianChannelTechnicalValue
+### DonchianChannelTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

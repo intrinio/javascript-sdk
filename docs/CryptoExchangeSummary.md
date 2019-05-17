@@ -1,4 +1,4 @@
-# CryptoExchangeSummary
+### CryptoExchangeSummary
 
 #### Properties
 Name | Type | Description | Notes

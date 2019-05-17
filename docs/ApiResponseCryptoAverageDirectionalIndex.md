@@ -1,4 +1,4 @@
-# ApiResponseCryptoAverageDirectionalIndex
+### ApiResponseCryptoAverageDirectionalIndex
 
 #### Properties
 Name | Type | Description | Notes

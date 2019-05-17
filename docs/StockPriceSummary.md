@@ -1,4 +1,4 @@
-# StockPriceSummary
+### StockPriceSummary
 
 #### Properties
 Name | Type | Description | Notes

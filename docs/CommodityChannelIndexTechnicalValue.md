@@ -1,4 +1,4 @@
-# CommodityChannelIndexTechnicalValue
+### CommodityChannelIndexTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

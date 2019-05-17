@@ -1,4 +1,4 @@
-# ApiResponseSecurityAverageDailyTradingVolume
+### ApiResponseSecurityAverageDailyTradingVolume
 
 #### Properties
 Name | Type | Description | Notes

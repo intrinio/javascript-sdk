@@ -1,4 +1,4 @@
-# CompanyNews
+### CompanyNews
 
 #### Properties
 Name | Type | Description | Notes

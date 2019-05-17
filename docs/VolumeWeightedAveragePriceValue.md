@@ -1,4 +1,4 @@
-# VolumeWeightedAveragePriceValue
+### VolumeWeightedAveragePriceValue
 
 #### Properties
 Name | Type | Description | Notes

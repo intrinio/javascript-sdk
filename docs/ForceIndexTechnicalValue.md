@@ -1,4 +1,4 @@
-# ForceIndexTechnicalValue
+### ForceIndexTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

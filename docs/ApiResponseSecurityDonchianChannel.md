@@ -1,4 +1,4 @@
-# ApiResponseSecurityDonchianChannel
+### ApiResponseSecurityDonchianChannel
 
 #### Properties
 Name | Type | Description | Notes

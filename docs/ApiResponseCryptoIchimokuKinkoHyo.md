@@ -1,4 +1,4 @@
-# ApiResponseCryptoIchimokuKinkoHyo
+### ApiResponseCryptoIchimokuKinkoHyo
 
 #### Properties
 Name | Type | Description | Notes

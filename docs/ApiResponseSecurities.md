@@ -1,4 +1,4 @@
-# ApiResponseSecurities
+### ApiResponseSecurities
 
 #### Properties
 Name | Type | Description | Notes

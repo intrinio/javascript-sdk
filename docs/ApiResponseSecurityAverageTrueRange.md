@@ -1,4 +1,4 @@
-# ApiResponseSecurityAverageTrueRange
+### ApiResponseSecurityAverageTrueRange
 
 #### Properties
 Name | Type | Description | Notes

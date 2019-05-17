@@ -1,4 +1,4 @@
-# ApiResponseCryptoVolumePriceTrend
+### ApiResponseCryptoVolumePriceTrend
 
 #### Properties
 Name | Type | Description | Notes

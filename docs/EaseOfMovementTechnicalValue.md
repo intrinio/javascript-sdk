@@ -1,4 +1,4 @@
-# EaseOfMovementTechnicalValue
+### EaseOfMovementTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

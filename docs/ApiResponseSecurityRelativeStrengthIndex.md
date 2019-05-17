@@ -1,4 +1,4 @@
-# ApiResponseSecurityRelativeStrengthIndex
+### ApiResponseSecurityRelativeStrengthIndex
 
 #### Properties
 Name | Type | Description | Notes

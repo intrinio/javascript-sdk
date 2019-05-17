@@ -1,4 +1,4 @@
-# ApiResponseSecuritySimpleMovingAverage
+### ApiResponseSecuritySimpleMovingAverage
 
 #### Properties
 Name | Type | Description | Notes

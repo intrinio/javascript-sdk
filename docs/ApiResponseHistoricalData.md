@@ -1,4 +1,4 @@
-# ApiResponseHistoricalData
+### ApiResponseHistoricalData
 
 #### Properties
 Name | Type | Description | Notes

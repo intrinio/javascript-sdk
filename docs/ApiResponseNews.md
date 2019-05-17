@@ -1,4 +1,4 @@
-# ApiResponseNews
+### ApiResponseNews
 
 #### Properties
 Name | Type | Description | Notes

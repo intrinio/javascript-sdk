@@ -1,4 +1,4 @@
-# ApiResponseCryptoKeltnerChannel
+### ApiResponseCryptoKeltnerChannel
 
 #### Properties
 Name | Type | Description | Notes

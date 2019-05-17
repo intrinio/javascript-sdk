@@ -1,4 +1,4 @@
-# ForexCurrency
+### ForexCurrency
 
 #### Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ApiResponseCryptoKnowSureThing
+### ApiResponseCryptoKnowSureThing
 
 #### Properties
 Name | Type | Description | Notes

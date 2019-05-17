@@ -1,4 +1,4 @@
-# ApiResponseCryptoRelativeStrengthIndex
+### ApiResponseCryptoRelativeStrengthIndex
 
 #### Properties
 Name | Type | Description | Notes

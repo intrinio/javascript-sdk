@@ -1,4 +1,4 @@
-# ForexPair
+### ForexPair
 
 #### Properties
 Name | Type | Description | Notes

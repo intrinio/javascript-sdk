@@ -1,4 +1,4 @@
-# MunicipalityFinancial
+### MunicipalityFinancial
 
 #### Properties
 Name | Type | Description | Notes

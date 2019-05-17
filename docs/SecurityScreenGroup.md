@@ -1,4 +1,4 @@
-# SecurityScreenGroup
+### SecurityScreenGroup
 
 #### Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ApiResponseCryptoUltimateOscillator
+### ApiResponseCryptoUltimateOscillator
 
 #### Properties
 Name | Type | Description | Notes

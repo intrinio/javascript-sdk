@@ -1,4 +1,4 @@
-# CompanySummary
+### CompanySummary
 
 #### Properties
 Name | Type | Description | Notes

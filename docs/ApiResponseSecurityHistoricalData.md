@@ -1,4 +1,4 @@
-# ApiResponseSecurityHistoricalData
+### ApiResponseSecurityHistoricalData
 
 #### Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# NegativeVolumeIndexTechnicalValue
+### NegativeVolumeIndexTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

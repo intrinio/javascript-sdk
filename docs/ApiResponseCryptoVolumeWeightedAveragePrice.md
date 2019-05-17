@@ -1,4 +1,4 @@
-# ApiResponseCryptoVolumeWeightedAveragePrice
+### ApiResponseCryptoVolumeWeightedAveragePrice
 
 #### Properties
 Name | Type | Description | Notes

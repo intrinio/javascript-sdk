@@ -1,4 +1,4 @@
-# ApiResponseCryptoOnBalanceVolumeMean
+### ApiResponseCryptoOnBalanceVolumeMean
 
 #### Properties
 Name | Type | Description | Notes

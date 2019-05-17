@@ -1,4 +1,4 @@
-# HistoricalData
+### HistoricalData
 
 #### Properties
 Name | Type | Description | Notes

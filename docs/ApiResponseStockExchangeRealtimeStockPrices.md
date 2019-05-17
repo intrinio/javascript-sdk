@@ -1,4 +1,4 @@
-# ApiResponseStockExchangeRealtimeStockPrices
+### ApiResponseStockExchangeRealtimeStockPrices
 
 #### Properties
 Name | Type | Description | Notes

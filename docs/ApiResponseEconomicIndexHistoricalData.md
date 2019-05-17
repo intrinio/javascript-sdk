@@ -1,4 +1,4 @@
-# ApiResponseEconomicIndexHistoricalData
+### ApiResponseEconomicIndexHistoricalData
 
 #### Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# CryptoSnapshot
+### CryptoSnapshot
 
 #### Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ApiResponseZacksSalesSurprises
+### ApiResponseZacksSalesSurprises
 
 #### Properties
 Name | Type | Description | Notes

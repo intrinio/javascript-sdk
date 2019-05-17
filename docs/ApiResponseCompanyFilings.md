@@ -1,4 +1,4 @@
-# ApiResponseCompanyFilings
+### ApiResponseCompanyFilings
 
 #### Properties
 Name | Type | Description | Notes

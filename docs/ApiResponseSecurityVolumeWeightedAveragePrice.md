@@ -1,4 +1,4 @@
-# ApiResponseSecurityVolumeWeightedAveragePrice
+### ApiResponseSecurityVolumeWeightedAveragePrice
 
 #### Properties
 Name | Type | Description | Notes

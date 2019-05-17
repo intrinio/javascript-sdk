@@ -1,4 +1,4 @@
-# ApiResponseCryptoTripleExponentialAverage
+### ApiResponseCryptoTripleExponentialAverage
 
 #### Properties
 Name | Type | Description | Notes

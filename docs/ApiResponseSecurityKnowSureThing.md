@@ -1,4 +1,4 @@
-# ApiResponseSecurityKnowSureThing
+### ApiResponseSecurityKnowSureThing
 
 #### Properties
 Name | Type | Description | Notes

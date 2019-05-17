@@ -1,4 +1,4 @@
-# ApiResponseCryptoBookBids
+### ApiResponseCryptoBookBids
 
 #### Properties
 Name | Type | Description | Notes

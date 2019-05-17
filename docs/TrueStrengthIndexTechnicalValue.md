@@ -1,4 +1,4 @@
-# TrueStrengthIndexTechnicalValue
+### TrueStrengthIndexTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ApiResponseZacksAnalystRatings
+### ApiResponseZacksAnalystRatings
 
 #### Properties
 Name | Type | Description | Notes

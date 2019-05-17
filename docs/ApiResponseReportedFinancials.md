@@ -1,4 +1,4 @@
-# ApiResponseReportedFinancials
+### ApiResponseReportedFinancials
 
 #### Properties
 Name | Type | Description | Notes

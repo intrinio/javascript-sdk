@@ -1,4 +1,4 @@
-# ApiResponseSecurityBollingerBands
+### ApiResponseSecurityBollingerBands
 
 #### Properties
 Name | Type | Description | Notes

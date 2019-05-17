@@ -1,4 +1,4 @@
-# ApiResponseCryptoSnapshot
+### ApiResponseCryptoSnapshot
 
 #### Properties
 Name | Type | Description | Notes

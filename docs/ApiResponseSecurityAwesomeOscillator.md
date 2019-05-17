@@ -1,4 +1,4 @@
-# ApiResponseSecurityAwesomeOscillator
+### ApiResponseSecurityAwesomeOscillator
 
 #### Properties
 Name | Type | Description | Notes

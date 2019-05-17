@@ -1,4 +1,4 @@
-# CryptoStat
+### CryptoStat
 
 #### Properties
 Name | Type | Description | Notes

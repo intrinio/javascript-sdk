@@ -1,4 +1,4 @@
-# AccumulationDistributionIndexTechnicalValue
+### AccumulationDistributionIndexTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

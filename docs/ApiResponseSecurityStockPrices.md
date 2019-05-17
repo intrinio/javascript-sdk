@@ -1,4 +1,4 @@
-# ApiResponseSecurityStockPrices
+### ApiResponseSecurityStockPrices
 
 #### Properties
 Name | Type | Description | Notes

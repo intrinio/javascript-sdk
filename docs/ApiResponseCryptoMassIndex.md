@@ -1,4 +1,4 @@
-# ApiResponseCryptoMassIndex
+### ApiResponseCryptoMassIndex
 
 #### Properties
 Name | Type | Description | Notes

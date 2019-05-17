@@ -1,4 +1,4 @@
-# MovingAverageConvergenceDivergenceTechnicalValue
+### MovingAverageConvergenceDivergenceTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

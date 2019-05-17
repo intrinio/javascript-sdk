@@ -1,4 +1,4 @@
-# ApiResponseCryptoCommodityChannelIndex
+### ApiResponseCryptoCommodityChannelIndex
 
 #### Properties
 Name | Type | Description | Notes

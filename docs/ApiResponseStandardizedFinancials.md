@@ -1,4 +1,4 @@
-# ApiResponseStandardizedFinancials
+### ApiResponseStandardizedFinancials
 
 #### Properties
 Name | Type | Description | Notes

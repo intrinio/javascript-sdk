@@ -1,4 +1,4 @@
-# RelativeStrengthIndexTechnicalValue
+### RelativeStrengthIndexTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

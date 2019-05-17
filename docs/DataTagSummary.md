@@ -1,4 +1,4 @@
-# DataTagSummary
+### DataTagSummary
 
 #### Properties
 Name | Type | Description | Notes

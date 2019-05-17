@@ -1,4 +1,4 @@
-# ApiResponseCryptoVortexIndicator
+### ApiResponseCryptoVortexIndicator
 
 #### Properties
 Name | Type | Description | Notes

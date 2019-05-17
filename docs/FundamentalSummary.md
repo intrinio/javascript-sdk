@@ -1,4 +1,4 @@
-# FundamentalSummary
+### FundamentalSummary
 
 #### Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ApiResponseCryptoAverageDailyTradingVolume
+### ApiResponseCryptoAverageDailyTradingVolume
 
 #### Properties
 Name | Type | Description | Notes

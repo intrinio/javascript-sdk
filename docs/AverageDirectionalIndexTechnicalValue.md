@@ -1,4 +1,4 @@
-# AverageDirectionalIndexTechnicalValue
+### AverageDirectionalIndexTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

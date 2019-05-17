@@ -1,4 +1,4 @@
-# ForexPrice
+### ForexPrice
 
 #### Properties
 Name | Type | Description | Notes

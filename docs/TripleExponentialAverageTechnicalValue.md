@@ -1,4 +1,4 @@
-# TripleExponentialAverageTechnicalValue
+### TripleExponentialAverageTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ApiResponseForexPrices
+### ApiResponseForexPrices
 
 #### Properties
 Name | Type | Description | Notes

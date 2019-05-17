@@ -1,4 +1,4 @@
-# SICIndex
+### SICIndex
 
 #### Properties
 Name | Type | Description | Notes

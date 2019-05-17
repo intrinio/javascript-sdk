@@ -1,4 +1,4 @@
-# ApiResponseSecurityVortexIndicator
+### ApiResponseSecurityVortexIndicator
 
 #### Properties
 Name | Type | Description | Notes

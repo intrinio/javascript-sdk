@@ -1,4 +1,4 @@
-# CryptoPrice
+### CryptoPrice
 
 #### Properties
 Name | Type | Description | Notes

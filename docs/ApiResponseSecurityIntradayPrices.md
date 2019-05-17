@@ -1,4 +1,4 @@
-# ApiResponseSecurityIntradayPrices
+### ApiResponseSecurityIntradayPrices
 
 #### Properties
 Name | Type | Description | Notes

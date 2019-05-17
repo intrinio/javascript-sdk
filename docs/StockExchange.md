@@ -1,4 +1,4 @@
-# StockExchange
+### StockExchange
 
 #### Properties
 Name | Type | Description | Notes

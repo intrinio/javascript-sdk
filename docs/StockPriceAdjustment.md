@@ -1,4 +1,4 @@
-# StockPriceAdjustment
+### StockPriceAdjustment
 
 #### Properties
 Name | Type | Description | Notes

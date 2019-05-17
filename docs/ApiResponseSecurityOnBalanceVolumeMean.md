@@ -1,4 +1,4 @@
-# ApiResponseSecurityOnBalanceVolumeMean
+### ApiResponseSecurityOnBalanceVolumeMean
 
 #### Properties
 Name | Type | Description | Notes

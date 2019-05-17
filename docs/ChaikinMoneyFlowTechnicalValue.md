@@ -1,4 +1,4 @@
-# ChaikinMoneyFlowTechnicalValue
+### ChaikinMoneyFlowTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

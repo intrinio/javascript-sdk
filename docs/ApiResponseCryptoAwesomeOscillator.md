@@ -1,4 +1,4 @@
-# ApiResponseCryptoAwesomeOscillator
+### ApiResponseCryptoAwesomeOscillator
 
 #### Properties
 Name | Type | Description | Notes

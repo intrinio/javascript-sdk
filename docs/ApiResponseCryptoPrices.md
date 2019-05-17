@@ -1,4 +1,4 @@
-# ApiResponseCryptoPrices
+### ApiResponseCryptoPrices
 
 #### Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ApiResponseSecurityUltimateOscillator
+### ApiResponseSecurityUltimateOscillator
 
 #### Properties
 Name | Type | Description | Notes

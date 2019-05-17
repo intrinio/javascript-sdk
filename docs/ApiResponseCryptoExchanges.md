@@ -1,4 +1,4 @@
-# ApiResponseCryptoExchanges
+### ApiResponseCryptoExchanges
 
 #### Properties
 Name | Type | Description | Notes

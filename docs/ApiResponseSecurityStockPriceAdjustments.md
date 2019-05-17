@@ -1,4 +1,4 @@
-# ApiResponseSecurityStockPriceAdjustments
+### ApiResponseSecurityStockPriceAdjustments
 
 #### Properties
 Name | Type | Description | Notes

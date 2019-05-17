@@ -1,4 +1,4 @@
-# AverageDailyTradingVolumeTechnicalValue
+### AverageDailyTradingVolumeTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

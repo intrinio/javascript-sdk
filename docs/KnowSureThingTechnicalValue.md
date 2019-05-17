@@ -1,4 +1,4 @@
-# KnowSureThingTechnicalValue
+### KnowSureThingTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

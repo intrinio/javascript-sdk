@@ -1,4 +1,4 @@
-# ApiResponseStockMarketIndexHistoricalData
+### ApiResponseStockMarketIndexHistoricalData
 
 #### Properties
 Name | Type | Description | Notes

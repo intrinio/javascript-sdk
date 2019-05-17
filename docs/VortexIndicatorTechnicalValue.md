@@ -1,4 +1,4 @@
-# VortexIndicatorTechnicalValue
+### VortexIndicatorTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

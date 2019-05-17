@@ -1,4 +1,4 @@
-# ApiResponseSecurityMovingAverageConvergenceDivergence
+### ApiResponseSecurityMovingAverageConvergenceDivergence
 
 #### Properties
 Name | Type | Description | Notes

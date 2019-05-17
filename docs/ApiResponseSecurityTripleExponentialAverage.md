@@ -1,4 +1,4 @@
-# ApiResponseSecurityTripleExponentialAverage
+### ApiResponseSecurityTripleExponentialAverage
 
 #### Properties
 Name | Type | Description | Notes

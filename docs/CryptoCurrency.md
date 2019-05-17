@@ -1,4 +1,4 @@
-# CryptoCurrency
+### CryptoCurrency
 
 #### Properties
 Name | Type | Description | Notes

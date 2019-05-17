@@ -1,4 +1,4 @@
-# ApiResponseSecurityVolumePriceTrend
+### ApiResponseSecurityVolumePriceTrend
 
 #### Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# StochasticOscillatorTechnicalValue
+### StochasticOscillatorTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

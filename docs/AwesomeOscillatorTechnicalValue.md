@@ -1,4 +1,4 @@
-# AwesomeOscillatorTechnicalValue
+### AwesomeOscillatorTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

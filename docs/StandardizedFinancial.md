@@ -1,4 +1,4 @@
-# StandardizedFinancial
+### StandardizedFinancial
 
 #### Properties
 Name | Type | Description | Notes

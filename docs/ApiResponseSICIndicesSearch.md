@@ -1,4 +1,4 @@
-# ApiResponseSICIndicesSearch
+### ApiResponseSICIndicesSearch
 
 #### Properties
 Name | Type | Description | Notes

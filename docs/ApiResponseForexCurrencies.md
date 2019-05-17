@@ -1,4 +1,4 @@
-# ApiResponseForexCurrencies
+### ApiResponseForexCurrencies
 
 #### Properties
 Name | Type | Description | Notes

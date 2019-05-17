@@ -1,4 +1,4 @@
-# ApiResponseForexPairs
+### ApiResponseForexPairs
 
 #### Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# ApiResponseEconomicIndicesSearch
+### ApiResponseEconomicIndicesSearch
 
 #### Properties
 Name | Type | Description | Notes

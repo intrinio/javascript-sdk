@@ -1,4 +1,4 @@
-# ApiResponseCryptoBollingerBands
+### ApiResponseCryptoBollingerBands
 
 #### Properties
 Name | Type | Description | Notes

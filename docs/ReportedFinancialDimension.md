@@ -1,4 +1,4 @@
-# ReportedFinancialDimension
+### ReportedFinancialDimension
 
 #### Properties
 Name | Type | Description | Notes

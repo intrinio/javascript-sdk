@@ -1,4 +1,4 @@
-# EarningsRecord
+### EarningsRecord
 
 #### Properties
 Name | Type | Description | Notes

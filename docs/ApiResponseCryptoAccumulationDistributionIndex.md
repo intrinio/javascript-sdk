@@ -1,4 +1,4 @@
-# ApiResponseCryptoAccumulationDistributionIndex
+### ApiResponseCryptoAccumulationDistributionIndex
 
 #### Properties
 Name | Type | Description | Notes

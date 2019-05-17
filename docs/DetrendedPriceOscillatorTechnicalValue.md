@@ -1,4 +1,4 @@
-# DetrendedPriceOscillatorTechnicalValue
+### DetrendedPriceOscillatorTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes

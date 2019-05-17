@@ -1,4 +1,4 @@
-# EconomicIndex
+### EconomicIndex
 
 #### Properties
 Name | Type | Description | Notes

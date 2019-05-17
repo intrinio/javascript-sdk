@@ -1,4 +1,4 @@
-# MassIndexTechnicalValue
+### MassIndexTechnicalValue
 
 #### Properties
 Name | Type | Description | Notes
