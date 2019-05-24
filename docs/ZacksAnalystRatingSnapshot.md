@@ -1,6 +1,6 @@
-### ZacksAnalystRatingSnapshot
+# intrinioSDK.ZacksAnalystRatingSnapshot
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **String** | The snapshot type, signifying the age of the ratings data from the snapshot date. | [optional] 
@@ -14,6 +14,5 @@ Name | Type | Description | Notes
 **sells** | **Number** | The number of analysts recommending Sell. | [optional] 
 **strongSells** | **Number** | The number of analysts recommending Strong Sell. | [optional] 
 **total** | **Number** | The total number of analysts recommendations. | [optional] 
-
 
 

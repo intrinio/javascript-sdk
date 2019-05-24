@@ -18,45 +18,15 @@ Method | HTTP request | Description
 [**searchCompanies**](CompanyApi.md#searchCompanies) | **GET** /companies/search | Search Companies
 
 
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:CompanyApi)
-
-[//]: # (METHOD:getAllCompanies)
-
-[//]: # (RETURN_TYPE:ApiResponseCompanies)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCompanies.md)
-
-[//]: # (OPERATION:getAllCompanies_v2)
-
-[//]: # (ENDPOINT:/companies)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#getAllCompanies)
-
 <a name="getAllCompanies"></a>
-## **getAllCompanies**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllCompanies_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getAllCompanies**
 > ApiResponseCompanies getAllCompanies(opts)
 
-#### All Companies
-
+All Companies
 
 Returns all Companies. When parameters are specified, returns matching companies.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -81,74 +51,32 @@ companyAPI.getAllCompanies(opts).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **latestFilingDate** | **Date**| Last filing date | [optional]  &nbsp;
- **sic** | **String**| Standard Industrial Classification code | [optional]  &nbsp;
- **template** | **String**| Template | [optional]  &nbsp;
- **sector** | **String**| Industry sector | [optional]  &nbsp;
- **industryCategory** | **String**| Industry category | [optional]  &nbsp;
- **industryGroup** | **String**| Industry group | [optional]  &nbsp;
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **latestFilingDate** | **Date**| Last filing date | [optional] 
+ **sic** | **String**| Standard Industrial Classification code | [optional] 
+ **template** | **String**| Template | [optional] 
+ **sector** | **String**| Industry sector | [optional] 
+ **industryCategory** | **String**| Industry category | [optional] 
+ **industryGroup** | **String**| Industry group | [optional] 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCompanies**](ApiResponseCompanies.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:CompanyApi)
-
-[//]: # (METHOD:getAllCompanyNews)
-
-[//]: # (RETURN_TYPE:ApiResponseNews)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseNews.md)
-
-[//]: # (OPERATION:getAllCompanyNews_v2)
-
-[//]: # (ENDPOINT:/companies/news)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#getAllCompanyNews)
-
 <a name="getAllCompanyNews"></a>
-## **getAllCompanyNews**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllCompanyNews_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getAllCompanyNews**
 > ApiResponseNews getAllCompanyNews(opts)
 
-#### All News
-
+All News
 
 Returns all News for all Companies
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -167,68 +95,26 @@ companyAPI.getAllCompanyNews(opts).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseNews**](ApiResponseNews.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:CompanyApi)
-
-[//]: # (METHOD:getCompany)
-
-[//]: # (RETURN_TYPE:Company)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:Company.md)
-
-[//]: # (OPERATION:getCompany_v2)
-
-[//]: # (ENDPOINT:/companies/{identifier})
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#getCompany)
-
 <a name="getCompany"></a>
-## **getCompany**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompany_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getCompany**
 > Company getCompany(identifier)
 
-#### Lookup Company
-
+Lookup Company
 
 Returns the Company with the given &#x60;identifier&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -245,67 +131,25 @@ companyAPI.getCompany(identifier).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
 
 ### Return type
 
 [**Company**](Company.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:CompanyApi)
-
-[//]: # (METHOD:getCompanyDataPointNumber)
-
-[//]: # (RETURN_TYPE:'Number')
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:getCompanyDataPointNumber_v2)
-
-[//]: # (ENDPOINT:/companies/{identifier}/data_point/{tag}/number)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#getCompanyDataPointNumber)
-
 <a name="getCompanyDataPointNumber"></a>
-## **getCompanyDataPointNumber**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanyDataPointNumber_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getCompanyDataPointNumber**
 > &#39;Number&#39; getCompanyDataPointNumber(identifier, tag)
 
-#### Data Point (Number) for Company
-
+Data Point (Number) for Company
 
 Returns a numeric value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -324,68 +168,26 @@ companyAPI.getCompanyDataPointNumber(identifier, tag).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
 
 ### Return type
 
 **&#39;Number&#39;**
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:CompanyApi)
-
-[//]: # (METHOD:getCompanyDataPointText)
-
-[//]: # (RETURN_TYPE:'String')
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:getCompanyDataPointText_v2)
-
-[//]: # (ENDPOINT:/companies/{identifier}/data_point/{tag}/text)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#getCompanyDataPointText)
-
 <a name="getCompanyDataPointText"></a>
-## **getCompanyDataPointText**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanyDataPointText_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getCompanyDataPointText**
 > &#39;String&#39; getCompanyDataPointText(identifier, tag)
 
-#### Data Point (Text) for Company
-
+Data Point (Text) for Company
 
 Returns a text value for the given &#x60;tag&#x60; for the Company with the given &#x60;identifier&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -404,68 +206,26 @@ companyAPI.getCompanyDataPointText(identifier, tag).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
 
 ### Return type
 
 **&#39;String&#39;**
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:CompanyApi)
-
-[//]: # (METHOD:getCompanyFilings)
-
-[//]: # (RETURN_TYPE:ApiResponseCompanyFilings)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyFilings.md)
-
-[//]: # (OPERATION:getCompanyFilings_v2)
-
-[//]: # (ENDPOINT:/companies/{identifier}/filings)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#getCompanyFilings)
-
 <a name="getCompanyFilings"></a>
-## **getCompanyFilings**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanyFilings_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getCompanyFilings**
 > ApiResponseCompanyFilings getCompanyFilings(identifier, opts)
 
-#### All Filings by Company
-
+All Filings by Company
 
 Returns a complete list of SEC filings for the Company with the given &#x60;identifier&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -475,6 +235,9 @@ var companyAPI = new intrinioSDK.CompanyApi();
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
+  'reportType': null, // String | Filter by report type. Separate values with commas to return multiple report types.
+  'startDate': new Date("2015-01-01"), // Date | Filed on or after the given date
+  'endDate': null, // Date | Filed before or after the given date
   'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
@@ -486,69 +249,30 @@ companyAPI.getCompanyFilings(identifier, opts).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **reportType** | **String**| Filter by report type. Separate values with commas to return multiple report types. | [optional] 
+ **startDate** | **Date**| Filed on or after the given date | [optional] 
+ **endDate** | **Date**| Filed before or after the given date | [optional] 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCompanyFilings**](ApiResponseCompanyFilings.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:CompanyApi)
-
-[//]: # (METHOD:getCompanyFundamentals)
-
-[//]: # (RETURN_TYPE:ApiResponseCompanyFundamentals)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyFundamentals.md)
-
-[//]: # (OPERATION:getCompanyFundamentals_v2)
-
-[//]: # (ENDPOINT:/companies/{identifier}/fundamentals)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#getCompanyFundamentals)
-
 <a name="getCompanyFundamentals"></a>
-## **getCompanyFundamentals**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanyFundamentals_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getCompanyFundamentals**
 > ApiResponseCompanyFundamentals getCompanyFundamentals(identifier, opts)
 
-#### All Fundamentals by Company
-
+All Fundamentals by Company
 
 Returns all Fundamentals for the Company with the given &#x60;identifier&#x60;. Returns Fundamentals matching parameters when supplied.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -577,77 +301,35 @@ companyAPI.getCompanyFundamentals(identifier, opts).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **filedAfter** | **Date**| Filed on or after this date | [optional]  &nbsp;
- **filedBefore** | **Date**| Filed on or before this date | [optional]  &nbsp;
- **reportedOnly** | **Boolean**| Only as-reported fundamentals | [optional]  &nbsp;
- **fiscalYear** | **Number**| Only for the given fiscal year | [optional]  &nbsp;
- **statementCode** | **String**| Only of the given statement code | [optional]  &nbsp;
- **type** | **String**| Only of the given type | [optional]  &nbsp;
- **startDate** | **Date**| Only on or after the given date | [optional]  &nbsp;
- **endDate** | **Date**| Only on or before the given date | [optional]  &nbsp;
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **filedAfter** | **Date**| Filed on or after this date | [optional] 
+ **filedBefore** | **Date**| Filed on or before this date | [optional] 
+ **reportedOnly** | **Boolean**| Only as-reported fundamentals | [optional] 
+ **fiscalYear** | **Number**| Only for the given fiscal year | [optional] 
+ **statementCode** | **String**| Only of the given statement code | [optional] 
+ **type** | **String**| Only of the given type | [optional] 
+ **startDate** | **Date**| Only on or after the given date | [optional] 
+ **endDate** | **Date**| Only on or before the given date | [optional] 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCompanyFundamentals**](ApiResponseCompanyFundamentals.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:CompanyApi)
-
-[//]: # (METHOD:getCompanyHistoricalData)
-
-[//]: # (RETURN_TYPE:ApiResponseCompanyHistoricalData)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyHistoricalData.md)
-
-[//]: # (OPERATION:getCompanyHistoricalData_v2)
-
-[//]: # (ENDPOINT:/companies/{identifier}/historical_data/{tag})
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#getCompanyHistoricalData)
-
 <a name="getCompanyHistoricalData"></a>
-## **getCompanyHistoricalData**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanyHistoricalData_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getCompanyHistoricalData**
 > ApiResponseCompanyHistoricalData getCompanyHistoricalData(identifier, tag, opts)
 
-#### Historical Data for Company
-
+Historical Data for Company
 
 Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -675,75 +357,33 @@ companyAPI.getCompanyHistoricalData(identifier, tag, opts).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
- **frequency** | **String**| Return historical data in the given frequency | [optional] [default to daily] &nbsp;
- **type** | **String**| Filter by type, when applicable | [optional]  &nbsp;
- **startDate** | **Date**| Get historical data on or after this date | [optional]  &nbsp;
- **endDate** | **Date**| Get historical data on or before this date | [optional]  &nbsp;
- **sortOrder** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) | 
+ **frequency** | **String**| Return historical data in the given frequency | [optional] [default to daily]
+ **type** | **String**| Filter by type, when applicable | [optional] 
+ **startDate** | **Date**| Get historical data on or after this date | [optional] 
+ **endDate** | **Date**| Get historical data on or before this date | [optional] 
+ **sortOrder** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCompanyHistoricalData**](ApiResponseCompanyHistoricalData.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:CompanyApi)
-
-[//]: # (METHOD:getCompanyNews)
-
-[//]: # (RETURN_TYPE:ApiResponseCompanyNews)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyNews.md)
-
-[//]: # (OPERATION:getCompanyNews_v2)
-
-[//]: # (ENDPOINT:/companies/{identifier}/news)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#getCompanyNews)
-
 <a name="getCompanyNews"></a>
-## **getCompanyNews**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanyNews_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getCompanyNews**
 > ApiResponseCompanyNews getCompanyNews(identifier, opts)
 
-#### All News by Company
-
+All News by Company
 
 Returns news for the Company with the given &#x60;identifier&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -764,69 +404,27 @@ companyAPI.getCompanyNews(identifier, opts).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCompanyNews**](ApiResponseCompanyNews.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:CompanyApi)
-
-[//]: # (METHOD:getCompanySecurities)
-
-[//]: # (RETURN_TYPE:ApiResponseCompanySecurities)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCompanySecurities.md)
-
-[//]: # (OPERATION:getCompanySecurities_v2)
-
-[//]: # (ENDPOINT:/companies/{identifier}/securities)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#getCompanySecurities)
-
 <a name="getCompanySecurities"></a>
-## **getCompanySecurities**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanySecurities_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getCompanySecurities**
 > ApiResponseCompanySecurities getCompanySecurities(identifier, opts)
 
-#### All Securities by Company
-
+All Securities by Company
 
 Returns Securities for the Company with the given &#x60;identifier&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -846,68 +444,26 @@ companyAPI.getCompanySecurities(identifier, opts).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseCompanySecurities**](ApiResponseCompanySecurities.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:CompanyApi)
-
-[//]: # (METHOD:lookupCompanyFundamental)
-
-[//]: # (RETURN_TYPE:Fundamental)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:Fundamental.md)
-
-[//]: # (OPERATION:lookupCompanyFundamental_v2)
-
-[//]: # (ENDPOINT:/companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period})
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#lookupCompanyFundamental)
-
 <a name="lookupCompanyFundamental"></a>
-## **lookupCompanyFundamental**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/lookupCompanyFundamental_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **lookupCompanyFundamental**
 > Fundamental lookupCompanyFundamental(identifier, statementCode, fiscalPeriod, fiscalYear)
 
-#### Lookup Fundamental by Company
-
+Lookup Fundamental by Company
 
 Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -930,70 +486,28 @@ companyAPI.lookupCompanyFundamental(identifier, statementCode, fiscalPeriod, fis
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **statementCode** | **String**| The statement code |  &nbsp;
- **fiscalPeriod** | **String**| The fiscal period |  &nbsp;
- **fiscalYear** | **Number**| The fiscal year |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | 
+ **statementCode** | **String**| The statement code | 
+ **fiscalPeriod** | **String**| The fiscal period | 
+ **fiscalYear** | **Number**| The fiscal year | 
 
 ### Return type
 
 [**Fundamental**](Fundamental.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:CompanyApi)
-
-[//]: # (METHOD:searchCompanies)
-
-[//]: # (RETURN_TYPE:ApiResponseCompaniesSearch)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseCompaniesSearch.md)
-
-[//]: # (OPERATION:searchCompanies_v2)
-
-[//]: # (ENDPOINT:/companies/search)
-
-[//]: # (DOCUMENT_LINK:CompanyApi.md#searchCompanies)
-
 <a name="searchCompanies"></a>
-## **searchCompanies**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/searchCompanies_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **searchCompanies**
 > ApiResponseCompaniesSearch searchCompanies(query, opts)
 
-#### Search Companies
-
+Search Companies
 
 Searches for Companies matching the text &#x60;query&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1013,26 +527,14 @@ companyAPI.searchCompanies(query, opts).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **String**| Search parameters |  &nbsp;
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **query** | **String**| Search parameters | 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseCompaniesSearch**](ApiResponseCompaniesSearch.md)
-
-
-
-[//]: # (END_OPERATION)
 

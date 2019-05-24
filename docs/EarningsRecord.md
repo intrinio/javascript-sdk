@@ -1,6 +1,6 @@
-### EarningsRecord
+# intrinioSDK.EarningsRecord
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **quarter** | **String** | The letter “Q” followed by the quarter number the earnings information applies to | [optional] 
@@ -28,37 +28,42 @@ Name | Type | Description | Notes
 **security** | [**SecuritySummary**](SecuritySummary.md) |  | [optional] 
 
 
-<br/>
-
-#### Enum: TimeOfDayEnum**
-
-Name | Value
----- | -----
-Before Market | &quot;Before Market&quot;
-During Market | &quot;During Market&quot;
-After Market | &quot;After Market&quot;
-Unspecified | &quot;Unspecified&quot;
+<a name="TimeOfDayEnum"></a>
+## Enum: TimeOfDayEnum
 
 
-<br/>
+* `Before Market` (value: `"Before Market"`)
 
-#### Enum: BoardOfDirectorsMeetingTypeEnum**
+* `During Market` (value: `"During Market"`)
 
-Name | Value
----- | -----
-B | &quot;B&quot;
-S | &quot;S&quot;
+* `After Market` (value: `"After Market"`)
+
+* `Unspecified` (value: `"Unspecified"`)
 
 
-<br/>
 
-#### Enum: TypeEnum**
 
-Name | Value
----- | -----
-V | &quot;V&quot;
-T | &quot;T&quot;
-I | &quot;I&quot;
+<a name="BoardOfDirectorsMeetingTypeEnum"></a>
+## Enum: BoardOfDirectorsMeetingTypeEnum
+
+
+* `B` (value: `"B"`)
+
+* `S` (value: `"S"`)
+
+
+
+
+<a name="TypeEnum"></a>
+## Enum: TypeEnum
+
+
+* `V` (value: `"V"`)
+
+* `T` (value: `"T"`)
+
+* `I` (value: `"I"`)
+
 
 
 

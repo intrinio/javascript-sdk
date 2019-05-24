@@ -1,6 +1,6 @@
-### ZacksEPSSurprise
+# intrinioSDK.ZacksEPSSurprise
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The Intrinio ID for the record | [optional] 
@@ -20,6 +20,5 @@ Name | Type | Description | Notes
 **epsCountEstimate** | **Number** | The pre-earnings release number of estimates by analysts | [optional] 
 **epsStdDevEstimate** | **Number** | The pre-earnings release standard deviation of EPS estimates | [optional] 
 **security** | [**SecuritySummary**](SecuritySummary.md) | The Security of the Zacks EPS Surprise | [optional] 
-
 
 

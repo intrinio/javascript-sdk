@@ -1,6 +1,6 @@
-### Fundamental
+# intrinioSDK.Fundamental
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The Intrinio ID of the Fundamental | [optional] 
@@ -14,15 +14,16 @@ Name | Type | Description | Notes
 **company** | [**CompanySummary**](CompanySummary.md) | The Company that the Fundamental was belongs to | [optional] 
 
 
-<br/>
+<a name="TypeEnum"></a>
+## Enum: TypeEnum
 
-#### Enum: TypeEnum**
 
-Name | Value
----- | -----
-reported | &quot;reported&quot;
-restated | &quot;restated&quot;
-calculated | &quot;calculated&quot;
+* `reported` (value: `"reported"`)
+
+* `restated` (value: `"restated"`)
+
+* `calculated` (value: `"calculated"`)
+
 
 
 

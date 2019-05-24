@@ -1,6 +1,6 @@
-### ZacksSalesSurprise
+# intrinioSDK.ZacksSalesSurprise
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The Intrinio ID for the record | [optional] 
@@ -20,6 +20,5 @@ Name | Type | Description | Notes
 **salesAmountDiff** | **Number** | The sales surprise amount difference | [optional] 
 **salesPercentDiff** | **Number** | The sales surprise percent difference | [optional] 
 **salesStdDevEstimate** | **Number** | The pre-earnings release standard deviation of sales estimates | [optional] 
-
 
 

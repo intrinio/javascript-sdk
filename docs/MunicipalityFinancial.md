@@ -1,6 +1,6 @@
-### MunicipalityFinancial
+# intrinioSDK.MunicipalityFinancial
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fiscalYear** | **Number** | The fiscal year from which the financial data came from | [optional] 
@@ -45,6 +45,5 @@ Name | Type | Description | Notes
 **governmentalFundRevenues** | **Number** | Increases in financial resources attributable to any governmental fund. Governmental funds are used to account for general government activities that are financed primarily through taxes, intergovernmental revenues, and other nonexchange revenues. | [optional] 
 **governmentalFundExpenditures** | **Number** | Decreases in financial resources attributable to any governmental fund. Governmental funds are used to account for general government activities that are financed primarily through taxes, intergovernmental revenues, and other nonexchange revenues. | [optional] 
 **governmentalFundRevenuesOverUnderExpenditure** | **Number** | Difference between revenues and expenditures attributable to all governmental funds.  If positive, this amount is called a surplus.  If negative, it represents a deficit. Governmental funds are used to account for general government activities that are financed primarily through taxes, intergovernmental revenues, and other nonexchange revenues. | [optional] 
-
 
 

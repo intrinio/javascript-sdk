@@ -1,6 +1,6 @@
-### EconomicIndexSummary
+# intrinioSDK.EconomicIndexSummary
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The Intrinio ID for the Index | [optional] 
@@ -14,6 +14,5 @@ Name | Type | Description | Notes
 **observationEnd** | **Date** | The latest date for which data is available | [optional] 
 **seasonalAdjustment** | **String** | Whether the data is adjusted to account for seasonality | [optional] 
 **units** | **String** | The units of the data | [optional] 
-
 
 

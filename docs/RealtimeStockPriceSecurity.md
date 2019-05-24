@@ -1,6 +1,6 @@
-### RealtimeStockPriceSecurity
+# intrinioSDK.RealtimeStockPriceSecurity
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The Intrinio ID for Security | [optional] 
@@ -8,6 +8,5 @@ Name | Type | Description | Notes
 **exchangeTicker** | **String** | The exchange-level ticker | [optional] 
 **figi** | **String** | The OpenFIGI identifier | [optional] 
 **compositeFigi** | **String** | The country-composite OpenFIGI identifier | [optional] 
-
 
 

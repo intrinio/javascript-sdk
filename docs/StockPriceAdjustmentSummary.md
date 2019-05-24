@@ -1,6 +1,6 @@
-### StockPriceAdjustmentSummary
+# intrinioSDK.StockPriceAdjustmentSummary
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **_date** | **Date** | The date on which the adjustment occurred. The adjustment should be applied to all stock prices before this date. | [optional] 
@@ -8,6 +8,5 @@ Name | Type | Description | Notes
 **dividend** | **Number** | The dividend amount, if a dividend was paid. | [optional] 
 **dividendCurrency** | **String** | The currency of the dividend, if known. | [optional] 
 **splitRatio** | **Number** | The ratio of the stock split, if a stock split occurred. | [optional] 
-
 
 

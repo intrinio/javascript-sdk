@@ -9,45 +9,15 @@ Method | HTTP request | Description
 [**getZacksSalesSurprises**](ZacksApi.md#getZacksSalesSurprises) | **GET** /zacks/sales_surprises | Zacks Sales Surprises
 
 
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:ZacksApi)
-
-[//]: # (METHOD:getZacksAnalystRatings)
-
-[//]: # (RETURN_TYPE:ApiResponseZacksAnalystRatings)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseZacksAnalystRatings.md)
-
-[//]: # (OPERATION:getZacksAnalystRatings_v2)
-
-[//]: # (ENDPOINT:/zacks/analyst_ratings)
-
-[//]: # (DOCUMENT_LINK:ZacksApi.md#getZacksAnalystRatings)
-
 <a name="getZacksAnalystRatings"></a>
-## **getZacksAnalystRatings**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getZacksAnalystRatings_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getZacksAnalystRatings**
 > ApiResponseZacksAnalystRatings getZacksAnalystRatings(opts)
 
-#### Zacks Analyst Ratings
-
+Zacks Analyst Ratings
 
 Returns buy, sell, and hold recommendations from analysts at brokerages for all companies in the Zacks universe. Zack’s storied research team aggregates and validates the ratings from professional analysts.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -83,85 +53,43 @@ zacksAPI.getZacksAnalystRatings(opts).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | [optional]  &nbsp;
- **startDate** | **String**| Limit ratings to those on or after this date | [optional]  &nbsp;
- **endDate** | **String**| Limit ratings to those on or before this date | [optional]  &nbsp;
- **meanGreater** | **Number**| Return only records with a mean (average) higher than this value | [optional]  &nbsp;
- **meanLess** | **Number**| Return only records with a mean (average) lower than this value | [optional]  &nbsp;
- **strongBuysGreater** | **Number**| Return only records with more than this many Strong Buy recommendations | [optional]  &nbsp;
- **strongBuysLess** | **Number**| Return only records with fewer than this many Strong Buy recommendations | [optional]  &nbsp;
- **buysGreater** | **Number**| Return only records with more than this many Buy recommendations | [optional]  &nbsp;
- **buysLess** | **Number**| Return only records with fewer than this many Buy recommendations | [optional]  &nbsp;
- **holdsGreater** | **Number**| Return only records with more than this many Hold recommendations | [optional]  &nbsp;
- **holdsLess** | **Number**| Return only records with fewer than this many Hold recommendations | [optional]  &nbsp;
- **sellsGreater** | **Number**| Return only records with more than this many Sell recommendations | [optional]  &nbsp;
- **sellsLess** | **Number**| Return only records with fewer than this many Sell recommendations | [optional]  &nbsp;
- **strongSellsGreater** | **Number**| Return only records with more than this many Strong Sell recommendations | [optional]  &nbsp;
- **strongSellsLess** | **Number**| Return only records with fewer than this many Strong Sell recommendations | [optional]  &nbsp;
- **totalGreater** | **Number**| Return only records with more than this many recommendations, regardless of type | [optional]  &nbsp;
- **totalLess** | **Number**| Return only records with fewer than this many recommendations, regardless of type | [optional]  &nbsp;
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | [optional] 
+ **startDate** | **String**| Limit ratings to those on or after this date | [optional] 
+ **endDate** | **String**| Limit ratings to those on or before this date | [optional] 
+ **meanGreater** | **Number**| Return only records with a mean (average) higher than this value | [optional] 
+ **meanLess** | **Number**| Return only records with a mean (average) lower than this value | [optional] 
+ **strongBuysGreater** | **Number**| Return only records with more than this many Strong Buy recommendations | [optional] 
+ **strongBuysLess** | **Number**| Return only records with fewer than this many Strong Buy recommendations | [optional] 
+ **buysGreater** | **Number**| Return only records with more than this many Buy recommendations | [optional] 
+ **buysLess** | **Number**| Return only records with fewer than this many Buy recommendations | [optional] 
+ **holdsGreater** | **Number**| Return only records with more than this many Hold recommendations | [optional] 
+ **holdsLess** | **Number**| Return only records with fewer than this many Hold recommendations | [optional] 
+ **sellsGreater** | **Number**| Return only records with more than this many Sell recommendations | [optional] 
+ **sellsLess** | **Number**| Return only records with fewer than this many Sell recommendations | [optional] 
+ **strongSellsGreater** | **Number**| Return only records with more than this many Strong Sell recommendations | [optional] 
+ **strongSellsLess** | **Number**| Return only records with fewer than this many Strong Sell recommendations | [optional] 
+ **totalGreater** | **Number**| Return only records with more than this many recommendations, regardless of type | [optional] 
+ **totalLess** | **Number**| Return only records with fewer than this many recommendations, regardless of type | [optional] 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseZacksAnalystRatings**](ApiResponseZacksAnalystRatings.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:ZacksApi)
-
-[//]: # (METHOD:getZacksEpsSurprises)
-
-[//]: # (RETURN_TYPE:ApiResponseZacksEPSSurprises)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseZacksEPSSurprises.md)
-
-[//]: # (OPERATION:getZacksEpsSurprises_v2)
-
-[//]: # (ENDPOINT:/zacks/eps_surprises)
-
-[//]: # (DOCUMENT_LINK:ZacksApi.md#getZacksEpsSurprises)
-
 <a name="getZacksEpsSurprises"></a>
-## **getZacksEpsSurprises**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getZacksEpsSurprises_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getZacksEpsSurprises**
 > ApiResponseZacksEPSSurprises getZacksEpsSurprises(opts)
 
-#### Zacks EPS Surprises
-
+Zacks EPS Surprises
 
 Returns Zacks eps surprise data for all Securities.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -194,82 +122,40 @@ zacksAPI.getZacksEpsSurprises(opts).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **String**| Limit EPS surprises to those on or after this date | [optional]  &nbsp;
- **endDate** | **String**| Limit EPS surprises to those on or before this date | [optional]  &nbsp;
- **epsActualGreater** | **Number**| Return only records with an actual EPS higher than this value | [optional]  &nbsp;
- **epsActualLess** | **Number**| Return only records with an actual EPS lower than this value | [optional]  &nbsp;
- **epsMeanEstimateGreater** | **Number**| Return only records with an EPS mean estimate greater than this value | [optional]  &nbsp;
- **epsMeanEstimateLess** | **Number**| Return only records with an EPS mean estimate lower than this value | [optional]  &nbsp;
- **epsAmountDiffGreater** | **Number**| Return only records with an EPS amount difference greater than this value | [optional]  &nbsp;
- **epsAmountDiffLess** | **Number**| Return only records with an EPS amount difference less than this value | [optional]  &nbsp;
- **epsPercentDiffGreater** | **Number**| Return only records with an EPS percent difference greater than this value | [optional]  &nbsp;
- **epsPercentDiffLess** | **Number**| Return only records with an EPS percent difference less than this value | [optional]  &nbsp;
- **epsCountEstimateGreater** | **Number**| Return only records with an EPS count estimate greater than this value | [optional]  &nbsp;
- **epsCountEstimateLess** | **Number**| Return only records with an EPS count estimate less than this value | [optional]  &nbsp;
- **epsStdDevEstimateGreater** | **Number**| Return only records with an EPS standard deviation greater than this value | [optional]  &nbsp;
- **epsStdDevEstimateLess** | **Number**| Return only records with an EPS standard deviation less than this value | [optional]  &nbsp;
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **startDate** | **String**| Limit EPS surprises to those on or after this date | [optional] 
+ **endDate** | **String**| Limit EPS surprises to those on or before this date | [optional] 
+ **epsActualGreater** | **Number**| Return only records with an actual EPS higher than this value | [optional] 
+ **epsActualLess** | **Number**| Return only records with an actual EPS lower than this value | [optional] 
+ **epsMeanEstimateGreater** | **Number**| Return only records with an EPS mean estimate greater than this value | [optional] 
+ **epsMeanEstimateLess** | **Number**| Return only records with an EPS mean estimate lower than this value | [optional] 
+ **epsAmountDiffGreater** | **Number**| Return only records with an EPS amount difference greater than this value | [optional] 
+ **epsAmountDiffLess** | **Number**| Return only records with an EPS amount difference less than this value | [optional] 
+ **epsPercentDiffGreater** | **Number**| Return only records with an EPS percent difference greater than this value | [optional] 
+ **epsPercentDiffLess** | **Number**| Return only records with an EPS percent difference less than this value | [optional] 
+ **epsCountEstimateGreater** | **Number**| Return only records with an EPS count estimate greater than this value | [optional] 
+ **epsCountEstimateLess** | **Number**| Return only records with an EPS count estimate less than this value | [optional] 
+ **epsStdDevEstimateGreater** | **Number**| Return only records with an EPS standard deviation greater than this value | [optional] 
+ **epsStdDevEstimateLess** | **Number**| Return only records with an EPS standard deviation less than this value | [optional] 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseZacksEPSSurprises**](ApiResponseZacksEPSSurprises.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:ZacksApi)
-
-[//]: # (METHOD:getZacksSalesSurprises)
-
-[//]: # (RETURN_TYPE:ApiResponseZacksSalesSurprises)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseZacksSalesSurprises.md)
-
-[//]: # (OPERATION:getZacksSalesSurprises_v2)
-
-[//]: # (ENDPOINT:/zacks/sales_surprises)
-
-[//]: # (DOCUMENT_LINK:ZacksApi.md#getZacksSalesSurprises)
-
 <a name="getZacksSalesSurprises"></a>
-## **getZacksSalesSurprises**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getZacksSalesSurprises_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getZacksSalesSurprises**
 > ApiResponseZacksSalesSurprises getZacksSalesSurprises(opts)
 
-#### Zacks Sales Surprises
-
+Zacks Sales Surprises
 
 Returns Zacks sales surprise data for all Securities.
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -302,40 +188,28 @@ zacksAPI.getZacksSalesSurprises(opts).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **String**| Limit sales surprises to those on or after this date | [optional]  &nbsp;
- **endDate** | **String**| Limit sales surprises to those on or before this date | [optional]  &nbsp;
- **salesActualGreater** | **Number**| Return only records with an actual sales higher than this value | [optional]  &nbsp;
- **salesActualLess** | **Number**| Return only records with an actual sales lower than this value | [optional]  &nbsp;
- **salesMeanEstimateGreater** | **Number**| Return only records with a sales mean estimate greater than this value | [optional]  &nbsp;
- **salesMeanEstimateLess** | **Number**| Return only records with a sales mean estimate lower than this value | [optional]  &nbsp;
- **salesAmountDiffGreater** | **Number**| Return only records with a sales amount difference greater than this value | [optional]  &nbsp;
- **salesAmountDiffLess** | **Number**| Return only records with a sales amount difference less than this value | [optional]  &nbsp;
- **salesPercentDiffGreater** | **Number**| Return only records with a sales percent difference greater than this value | [optional]  &nbsp;
- **salesPercentDiffLess** | **Number**| Return only records with a sales percent difference less than this value | [optional]  &nbsp;
- **salesCountEstimateGreater** | **Number**| Return only records with a sales count estimate greater than this value | [optional]  &nbsp;
- **salesCountEstimateLess** | **Number**| Return only records with a sales count estimate less than this value | [optional]  &nbsp;
- **salesStdDevEstimateGreater** | **Number**| Return only records with a sales standard deviation greater than this value | [optional]  &nbsp;
- **salesStdDevEstimateLess** | **Number**| Return only records with a sales standard deviation less than this value | [optional]  &nbsp;
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **startDate** | **String**| Limit sales surprises to those on or after this date | [optional] 
+ **endDate** | **String**| Limit sales surprises to those on or before this date | [optional] 
+ **salesActualGreater** | **Number**| Return only records with an actual sales higher than this value | [optional] 
+ **salesActualLess** | **Number**| Return only records with an actual sales lower than this value | [optional] 
+ **salesMeanEstimateGreater** | **Number**| Return only records with a sales mean estimate greater than this value | [optional] 
+ **salesMeanEstimateLess** | **Number**| Return only records with a sales mean estimate lower than this value | [optional] 
+ **salesAmountDiffGreater** | **Number**| Return only records with a sales amount difference greater than this value | [optional] 
+ **salesAmountDiffLess** | **Number**| Return only records with a sales amount difference less than this value | [optional] 
+ **salesPercentDiffGreater** | **Number**| Return only records with a sales percent difference greater than this value | [optional] 
+ **salesPercentDiffLess** | **Number**| Return only records with a sales percent difference less than this value | [optional] 
+ **salesCountEstimateGreater** | **Number**| Return only records with a sales count estimate greater than this value | [optional] 
+ **salesCountEstimateLess** | **Number**| Return only records with a sales count estimate less than this value | [optional] 
+ **salesStdDevEstimateGreater** | **Number**| Return only records with a sales standard deviation greater than this value | [optional] 
+ **salesStdDevEstimateLess** | **Number**| Return only records with a sales standard deviation less than this value | [optional] 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseZacksSalesSurprises**](ApiResponseZacksSalesSurprises.md)
-
-
-
-[//]: # (END_OPERATION)
 

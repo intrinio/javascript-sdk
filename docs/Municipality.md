@@ -1,6 +1,6 @@
-### Municipality
+# intrinioSDK.Municipality
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The Intrinio ID for Municipality | [optional] 
@@ -22,6 +22,5 @@ Name | Type | Description | Notes
 **areaType** | **String** | The type of area of the Municipality | [optional] 
 **latitude** | **Number** | The latitude of the location of the Municipality | [optional] 
 **longitude** | **Number** | The longitude of the location of the Municipality | [optional] 
-
 
 

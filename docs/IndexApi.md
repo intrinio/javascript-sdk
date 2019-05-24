@@ -24,44 +24,13 @@ Method | HTTP request | Description
 [**searchStockMarketsIndices**](IndexApi.md#searchStockMarketsIndices) | **GET** /indices/stock_market/search | Search Stock Market Indices
 
 
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:IndexApi)
-
-[//]: # (METHOD:getAllEconomicIndices)
-
-[//]: # (RETURN_TYPE:ApiResponseEconomicIndices)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseEconomicIndices.md)
-
-[//]: # (OPERATION:getAllEconomicIndices_v2)
-
-[//]: # (ENDPOINT:/indices/economic)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getAllEconomicIndices)
-
 <a name="getAllEconomicIndices"></a>
-## **getAllEconomicIndices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllEconomicIndices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getAllEconomicIndices**
 > ApiResponseEconomicIndices getAllEconomicIndices(opts)
 
-#### All Economic Indices
-
-
-
-[//]: # (END_OVERVIEW)
+All Economic Indices
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -80,67 +49,24 @@ indexAPI.getAllEconomicIndices(opts).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseEconomicIndices**](ApiResponseEconomicIndices.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:IndexApi)
-
-[//]: # (METHOD:getAllSicIndices)
-
-[//]: # (RETURN_TYPE:ApiResponseSICIndices)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSICIndices.md)
-
-[//]: # (OPERATION:getAllSicIndices_v2)
-
-[//]: # (ENDPOINT:/indices/sic)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getAllSicIndices)
-
 <a name="getAllSicIndices"></a>
-## **getAllSicIndices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllSicIndices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getAllSicIndices**
 > ApiResponseSICIndices getAllSicIndices(opts)
 
-#### All SIC Indices
-
-
-
-[//]: # (END_OVERVIEW)
+All SIC Indices
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -159,67 +85,24 @@ indexAPI.getAllSicIndices(opts).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSICIndices**](ApiResponseSICIndices.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:IndexApi)
-
-[//]: # (METHOD:getAllStockMarketIndices)
-
-[//]: # (RETURN_TYPE:ApiResponseStockMarketIndices)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseStockMarketIndices.md)
-
-[//]: # (OPERATION:getAllStockMarketIndices_v2)
-
-[//]: # (ENDPOINT:/indices/stock_market)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getAllStockMarketIndices)
-
 <a name="getAllStockMarketIndices"></a>
-## **getAllStockMarketIndices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllStockMarketIndices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getAllStockMarketIndices**
 > ApiResponseStockMarketIndices getAllStockMarketIndices(opts)
 
-#### All Stock Market Indices
-
-
-
-[//]: # (END_OVERVIEW)
+All Stock Market Indices
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -238,67 +121,24 @@ indexAPI.getAllStockMarketIndices(opts).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseStockMarketIndices**](ApiResponseStockMarketIndices.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:IndexApi)
-
-[//]: # (METHOD:getEconomicIndexById)
-
-[//]: # (RETURN_TYPE:EconomicIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:EconomicIndex.md)
-
-[//]: # (OPERATION:getEconomicIndexById_v2)
-
-[//]: # (ENDPOINT:/indices/economic/{identifier})
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getEconomicIndexById)
-
 <a name="getEconomicIndexById"></a>
-## **getEconomicIndexById**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getEconomicIndexById_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getEconomicIndexById**
 > EconomicIndex getEconomicIndexById(identifier)
 
-#### Lookup Economic Index
-
-
-
-[//]: # (END_OVERVIEW)
+Lookup Economic Index
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -315,67 +155,25 @@ indexAPI.getEconomicIndexById(identifier).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
 
 ### Return type
 
 [**EconomicIndex**](EconomicIndex.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:IndexApi)
-
-[//]: # (METHOD:getEconomicIndexDataPointNumber)
-
-[//]: # (RETURN_TYPE:'Number')
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:getEconomicIndexDataPointNumber_v2)
-
-[//]: # (ENDPOINT:/indices/economic/{identifier}/data_point/{tag}/number)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getEconomicIndexDataPointNumber)
-
 <a name="getEconomicIndexDataPointNumber"></a>
-## **getEconomicIndexDataPointNumber**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getEconomicIndexDataPointNumber_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getEconomicIndexDataPointNumber**
 > &#39;Number&#39; getEconomicIndexDataPointNumber(identifier, tag)
 
-#### Data Point (Number) for an Economic Index
-
+Data Point (Number) for an Economic Index
 
 Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -394,68 +192,26 @@ indexAPI.getEconomicIndexDataPointNumber(identifier, tag).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag &lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags/economic&#39;&gt;reference&lt;/a&gt; |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag &lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags/economic&#39;&gt;reference&lt;/a&gt; | 
 
 ### Return type
 
 **&#39;Number&#39;**
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:IndexApi)
-
-[//]: # (METHOD:getEconomicIndexDataPointText)
-
-[//]: # (RETURN_TYPE:'String')
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:getEconomicIndexDataPointText_v2)
-
-[//]: # (ENDPOINT:/indices/economic/{identifier}/data_point/{tag}/text)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getEconomicIndexDataPointText)
-
 <a name="getEconomicIndexDataPointText"></a>
-## **getEconomicIndexDataPointText**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getEconomicIndexDataPointText_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getEconomicIndexDataPointText**
 > &#39;String&#39; getEconomicIndexDataPointText(identifier, tag)
 
-#### Data Point (Text) for an Economic Index
-
+Data Point (Text) for an Economic Index
 
 Returns a text value for the given &#x60;tag&#x60; for the Economic Index with the given &#x60;identifier&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -474,68 +230,26 @@ indexAPI.getEconomicIndexDataPointText(identifier, tag).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code-name | 
 
 ### Return type
 
 **&#39;String&#39;**
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:IndexApi)
-
-[//]: # (METHOD:getEconomicIndexHistoricalData)
-
-[//]: # (RETURN_TYPE:ApiResponseEconomicIndexHistoricalData)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseEconomicIndexHistoricalData.md)
-
-[//]: # (OPERATION:getEconomicIndexHistoricalData_v2)
-
-[//]: # (ENDPOINT:/indices/economic/{identifier}/historical_data/{tag})
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getEconomicIndexHistoricalData)
-
 <a name="getEconomicIndexHistoricalData"></a>
-## **getEconomicIndexHistoricalData**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getEconomicIndexHistoricalData_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getEconomicIndexHistoricalData**
 > ApiResponseEconomicIndexHistoricalData getEconomicIndexHistoricalData(identifier, tag, opts)
 
-#### Historical Data for an Economic Index
-
+Historical Data for an Economic Index
 
 Returns historical values for the given &#x60;tag&#x60; and the Economic Index with the given &#x60;identifier&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -562,73 +276,30 @@ indexAPI.getEconomicIndexHistoricalData(identifier, tag, opts).then(function(dat
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag &lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags/economic&#39;&gt;reference&lt;/a&gt; |  &nbsp;
- **type** | **String**| Filter by type, when applicable | [optional]  &nbsp;
- **startDate** | **Date**| Get historical data on or after this date | [optional]  &nbsp;
- **endDate** | **Date**| Get historical data on or before this date | [optional]  &nbsp;
- **sortOrder** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag &lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags/economic&#39;&gt;reference&lt;/a&gt; | 
+ **type** | **String**| Filter by type, when applicable | [optional] 
+ **startDate** | **Date**| Get historical data on or after this date | [optional] 
+ **endDate** | **Date**| Get historical data on or before this date | [optional] 
+ **sortOrder** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseEconomicIndexHistoricalData**](ApiResponseEconomicIndexHistoricalData.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:IndexApi)
-
-[//]: # (METHOD:getSicIndexById)
-
-[//]: # (RETURN_TYPE:SICIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:SICIndex.md)
-
-[//]: # (OPERATION:getSicIndexById_v2)
-
-[//]: # (ENDPOINT:/indices/sic/{identifier})
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getSicIndexById)
-
 <a name="getSicIndexById"></a>
-## **getSicIndexById**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSicIndexById_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getSicIndexById**
 > SICIndex getSicIndexById(identifier)
 
-#### Lookup SIC Index
-
-
-
-[//]: # (END_OVERVIEW)
+Lookup SIC Index
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -645,67 +316,25 @@ indexAPI.getSicIndexById(identifier).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
 
 ### Return type
 
 [**SICIndex**](SICIndex.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:IndexApi)
-
-[//]: # (METHOD:getSicIndexDataPointNumber)
-
-[//]: # (RETURN_TYPE:'Number')
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:getSicIndexDataPointNumber_v2)
-
-[//]: # (ENDPOINT:/indices/sic/{identifier}/data_point/{tag}/number)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getSicIndexDataPointNumber)
-
 <a name="getSicIndexDataPointNumber"></a>
-## **getSicIndexDataPointNumber**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSicIndexDataPointNumber_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getSicIndexDataPointNumber**
 > &#39;Number&#39; getSicIndexDataPointNumber(identifier, tag)
 
-#### Data Point (Number) for an SIC Index
-
+Data Point (Number) for an SIC Index
 
 Returns a numeric value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -724,68 +353,26 @@ indexAPI.getSicIndexDataPointNumber(identifier, tag).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code-name | 
 
 ### Return type
 
 **&#39;Number&#39;**
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:IndexApi)
-
-[//]: # (METHOD:getSicIndexDataPointText)
-
-[//]: # (RETURN_TYPE:'String')
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:getSicIndexDataPointText_v2)
-
-[//]: # (ENDPOINT:/indices/sic/{identifier}/data_point/{tag}/text)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getSicIndexDataPointText)
-
 <a name="getSicIndexDataPointText"></a>
-## **getSicIndexDataPointText**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSicIndexDataPointText_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getSicIndexDataPointText**
 > &#39;String&#39; getSicIndexDataPointText(identifier, tag)
 
-#### Data Point (Text) for an SIC Index
-
+Data Point (Text) for an SIC Index
 
 Returns a text value for the given &#x60;tag&#x60; for the SIC Index with the given &#x60;identifier&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -804,68 +391,26 @@ indexAPI.getSicIndexDataPointText(identifier, tag).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code-name | 
 
 ### Return type
 
 **&#39;String&#39;**
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:IndexApi)
-
-[//]: # (METHOD:getSicIndexHistoricalData)
-
-[//]: # (RETURN_TYPE:ApiResponseSICIndexHistoricalData)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSICIndexHistoricalData.md)
-
-[//]: # (OPERATION:getSicIndexHistoricalData_v2)
-
-[//]: # (ENDPOINT:/indices/sic/{identifier}/historical_data/{tag})
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getSicIndexHistoricalData)
-
 <a name="getSicIndexHistoricalData"></a>
-## **getSicIndexHistoricalData**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSicIndexHistoricalData_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getSicIndexHistoricalData**
 > ApiResponseSICIndexHistoricalData getSicIndexHistoricalData(identifier, tag, opts)
 
-#### Historical Data for an SIC Index
-
+Historical Data for an SIC Index
 
 Returns historical values for the given &#x60;tag&#x60; and the SIC Index with the given &#x60;identifier&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -892,73 +437,30 @@ indexAPI.getSicIndexHistoricalData(identifier, tag, opts).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code-name |  &nbsp;
- **type** | **String**| Filter by type, when applicable | [optional]  &nbsp;
- **startDate** | **Date**| Get historical data on or after this date | [optional]  &nbsp;
- **endDate** | **Date**| Get historical data on or before this date | [optional]  &nbsp;
- **sortOrder** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code-name | 
+ **type** | **String**| Filter by type, when applicable | [optional] 
+ **startDate** | **Date**| Get historical data on or after this date | [optional] 
+ **endDate** | **Date**| Get historical data on or before this date | [optional] 
+ **sortOrder** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseSICIndexHistoricalData**](ApiResponseSICIndexHistoricalData.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:IndexApi)
-
-[//]: # (METHOD:getStockMarketIndexById)
-
-[//]: # (RETURN_TYPE:StockMarketIndex)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:StockMarketIndex.md)
-
-[//]: # (OPERATION:getStockMarketIndexById_v2)
-
-[//]: # (ENDPOINT:/indices/stock_market/{identifier})
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getStockMarketIndexById)
-
 <a name="getStockMarketIndexById"></a>
-## **getStockMarketIndexById**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getStockMarketIndexById_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getStockMarketIndexById**
 > StockMarketIndex getStockMarketIndexById(identifier)
 
-#### Lookup Stock Market Index
-
-
-
-[//]: # (END_OVERVIEW)
+Lookup Stock Market Index
 
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -975,67 +477,25 @@ indexAPI.getStockMarketIndexById(identifier).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
 
 ### Return type
 
 [**StockMarketIndex**](StockMarketIndex.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:IndexApi)
-
-[//]: # (METHOD:getStockMarketIndexDataPointNumber)
-
-[//]: # (RETURN_TYPE:'Number')
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:getStockMarketIndexDataPointNumber_v2)
-
-[//]: # (ENDPOINT:/indices/stock_market/{identifier}/data_point/{tag}/number)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getStockMarketIndexDataPointNumber)
-
 <a name="getStockMarketIndexDataPointNumber"></a>
-## **getStockMarketIndexDataPointNumber**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getStockMarketIndexDataPointNumber_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getStockMarketIndexDataPointNumber**
 > &#39;Number&#39; getStockMarketIndexDataPointNumber(identifier, tag)
 
-#### Data Point (Number) for Stock Market Index
-
+Data Point (Number) for Stock Market Index
 
 Returns a numeric value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1054,68 +514,26 @@ indexAPI.getStockMarketIndexDataPointNumber(identifier, tag).then(function(data)
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code-name | 
 
 ### Return type
 
 **&#39;Number&#39;**
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:IndexApi)
-
-[//]: # (METHOD:getStockMarketIndexDataPointText)
-
-[//]: # (RETURN_TYPE:'String')
-
-[//]: # (RETURN_TYPE_KIND:primitive)
-
-[//]: # (RETURN_TYPE_DOC:)
-
-[//]: # (OPERATION:getStockMarketIndexDataPointText_v2)
-
-[//]: # (ENDPOINT:/indices/stock_market/{identifier}/data_point/{tag}/text)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getStockMarketIndexDataPointText)
-
 <a name="getStockMarketIndexDataPointText"></a>
-## **getStockMarketIndexDataPointText**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getStockMarketIndexDataPointText_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getStockMarketIndexDataPointText**
 > &#39;String&#39; getStockMarketIndexDataPointText(identifier, tag)
 
-#### Data Point (Text) for Stock Market Index
-
+Data Point (Text) for Stock Market Index
 
 Returns a text value for the given &#x60;tag&#x60; for the Stock Market Index with the given &#x60;identifier&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1134,68 +552,26 @@ indexAPI.getStockMarketIndexDataPointText(identifier, tag).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code-name |  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code-name | 
 
 ### Return type
 
 **&#39;String&#39;**
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:IndexApi)
-
-[//]: # (METHOD:getStockMarketIndexHistoricalData)
-
-[//]: # (RETURN_TYPE:ApiResponseStockMarketIndexHistoricalData)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseStockMarketIndexHistoricalData.md)
-
-[//]: # (OPERATION:getStockMarketIndexHistoricalData_v2)
-
-[//]: # (ENDPOINT:/indices/stock_market/{identifier}/historical_data/{tag})
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#getStockMarketIndexHistoricalData)
-
 <a name="getStockMarketIndexHistoricalData"></a>
-## **getStockMarketIndexHistoricalData**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getStockMarketIndexHistoricalData_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **getStockMarketIndexHistoricalData**
 > ApiResponseStockMarketIndexHistoricalData getStockMarketIndexHistoricalData(identifier, tag, opts)
 
-#### Historical Data for Stock Market Index
-
+Historical Data for Stock Market Index
 
 Returns historical values for the given &#x60;tag&#x60; and the Stock Market Index with the given &#x60;identifier&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1222,74 +598,32 @@ indexAPI.getStockMarketIndexHistoricalData(identifier, tag, opts).then(function(
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) |  &nbsp;
- **tag** | **String**| An Intrinio data tag ID or code-name |  &nbsp;
- **type** | **String**| Filter by type, when applicable | [optional]  &nbsp;
- **startDate** | **Date**| Get historical data on or after this date | [optional]  &nbsp;
- **endDate** | **Date**| Get historical data on or before this date | [optional]  &nbsp;
- **sortOrder** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100] &nbsp;
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **identifier** | **String**| An Index Identifier (symbol, Intrinio ID) | 
+ **tag** | **String**| An Intrinio data tag ID or code-name | 
+ **type** | **String**| Filter by type, when applicable | [optional] 
+ **startDate** | **Date**| Get historical data on or after this date | [optional] 
+ **endDate** | **Date**| Get historical data on or before this date | [optional] 
+ **sortOrder** | **String**| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc]
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+ **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
 
 ### Return type
 
 [**ApiResponseStockMarketIndexHistoricalData**](ApiResponseStockMarketIndexHistoricalData.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:IndexApi)
-
-[//]: # (METHOD:searchEconomicIndices)
-
-[//]: # (RETURN_TYPE:ApiResponseEconomicIndicesSearch)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseEconomicIndicesSearch.md)
-
-[//]: # (OPERATION:searchEconomicIndices_v2)
-
-[//]: # (ENDPOINT:/indices/economic/search)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#searchEconomicIndices)
-
 <a name="searchEconomicIndices"></a>
-## **searchEconomicIndices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/searchEconomicIndices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **searchEconomicIndices**
 > ApiResponseEconomicIndicesSearch searchEconomicIndices(query, opts)
 
-#### Search Economic Indices
-
+Search Economic Indices
 
 Searches for indices using the text in &#x60;query&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1309,68 +643,26 @@ indexAPI.searchEconomicIndices(query, opts).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **String**| Search query |  &nbsp;
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **query** | **String**| Search query | 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseEconomicIndicesSearch**](ApiResponseEconomicIndicesSearch.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:IndexApi)
-
-[//]: # (METHOD:searchSicIndices)
-
-[//]: # (RETURN_TYPE:ApiResponseSICIndicesSearch)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseSICIndicesSearch.md)
-
-[//]: # (OPERATION:searchSicIndices_v2)
-
-[//]: # (ENDPOINT:/indices/sic/search)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#searchSicIndices)
-
 <a name="searchSicIndices"></a>
-## **searchSicIndices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/searchSicIndices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **searchSicIndices**
 > ApiResponseSICIndicesSearch searchSicIndices(query, opts)
 
-#### Search SIC Indices
-
+Search SIC Indices
 
 Searches for indices using the text in &#x60;query&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1390,68 +682,26 @@ indexAPI.searchSicIndices(query, opts).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **String**| Search query |  &nbsp;
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **query** | **String**| Search query | 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseSICIndicesSearch**](ApiResponseSICIndicesSearch.md)
 
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:IndexApi)
-
-[//]: # (METHOD:searchStockMarketsIndices)
-
-[//]: # (RETURN_TYPE:ApiResponseStockMarketIndicesSearch)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:ApiResponseStockMarketIndicesSearch.md)
-
-[//]: # (OPERATION:searchStockMarketsIndices_v2)
-
-[//]: # (ENDPOINT:/indices/stock_market/search)
-
-[//]: # (DOCUMENT_LINK:IndexApi.md#searchStockMarketsIndices)
-
 <a name="searchStockMarketsIndices"></a>
-## **searchStockMarketsIndices**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/searchStockMarketsIndices_v2)
-
-[//]: # (START_OVERVIEW)
-
+# **searchStockMarketsIndices**
 > ApiResponseStockMarketIndicesSearch searchStockMarketsIndices(query, opts)
 
-#### Search Stock Market Indices
-
+Search Stock Market Indices
 
 Searches for indices using the text in &#x60;query&#x60;
 
-[//]: # (END_OVERVIEW)
-
 ### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
@@ -1471,26 +721,14 @@ indexAPI.searchStockMarketsIndices(query, opts).then(function(data) {
 });
 ```
 
-[//]: # (END_CODE_EXAMPLE)
-
 ### Parameters
-
-[//]: # (START_PARAMETERS)
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **String**| Search query |  &nbsp;
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100] &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
+ **query** | **String**| Search query | 
+ **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
 
 ### Return type
 
 [**ApiResponseStockMarketIndicesSearch**](ApiResponseStockMarketIndicesSearch.md)
-
-
-
-[//]: # (END_OPERATION)
 

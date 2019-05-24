@@ -1,6 +1,6 @@
-### ApiResponseCryptoDetrendedPriceOscillator
+# intrinioSDK.ApiResponseCryptoDetrendedPriceOscillator
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **technicals** | [**[DetrendedPriceOscillatorTechnicalValue]**](DetrendedPriceOscillatorTechnicalValue.md) |  | [optional] 
@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **exchange** | [**CryptoExchangeSummary**](CryptoExchangeSummary.md) |  | [optional] 
 **timeframe** | **String** | The time interval for the crypto currency prices | [optional] 
 **nextPage** | **String** | The token required to request the next page of the data | [optional] 
-
 
 

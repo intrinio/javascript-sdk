@@ -1,6 +1,6 @@
-### IntradayStockPrice
+# intrinioSDK.IntradayStockPrice
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **time** | **Date** | The timestamp that the &#x60;last_price&#x60; represents. | [optional] 
@@ -11,6 +11,5 @@ Name | Type | Description | Notes
 **bidSize** | **Number** | The size of the top bid order. | [optional] 
 **volume** | **Number** | The number of shares exchanged during the trading day on the exchange. | [optional] 
 **source** | **String** | The source of the data. | [optional] 
-
 
 

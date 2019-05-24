@@ -1,6 +1,6 @@
-### StockExchange
+# intrinioSDK.StockExchange
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The Intrinio ID for the Stock Exchange | [optional] 
@@ -13,6 +13,5 @@ Name | Type | Description | Notes
 **website** | **String** | The website of the exchange | [optional] 
 **firstStockPriceDate** | **Date** | The earliest date for which Intrinio has stock prices for the exchange | [optional] 
 **lastStockPriceDate** | **Date** | The latest date for which Intrinio has stock prices for the exchange | [optional] 
-
 
 

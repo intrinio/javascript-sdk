@@ -1,6 +1,6 @@
-### CryptoStat
+# intrinioSDK.CryptoStat
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | The common name of the crypto currency. | [optional] 
@@ -11,6 +11,5 @@ Name | Type | Description | Notes
 **totalSupply** | **Number** | The total supply of the Crypto Currency. | [optional] 
 **maxSupply** | **Number** | The maxmium supply of coins available to mine. | [optional] 
 **lastUpdated** | **String** | UTC timestamp of when the data was last updated. | [optional] 
-
 
 

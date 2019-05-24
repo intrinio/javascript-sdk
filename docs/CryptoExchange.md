@@ -1,6 +1,6 @@
-### CryptoExchange
+# intrinioSDK.CryptoExchange
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | The Crypto Exchange name. | [optional] 
@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **historyAvailable** | **Boolean** | A boolean, representing whether historical data is provided by this exchange or not. | [optional] 
 **snapshotAvailable** | **Boolean** | A boolean, representing whether snpashot data is provided by this exchange or not. | [optional] 
 **tradesAvailable** | **Boolean** | A boolean, representing whether trade data is provided by this exchange or not. | [optional] 
-
 
 

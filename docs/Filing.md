@@ -1,6 +1,6 @@
-### Filing
+# intrinioSDK.Filing
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The Intrinio ID of the Filing | [optional] 
@@ -13,6 +13,5 @@ Name | Type | Description | Notes
 **reportUrl** | **String** | The URL to the actual report on the SEC site | [optional] 
 **instanceUrl** | **String** | The URL for the XBRL filing for the report | [optional] 
 **company** | [**CompanySummary**](CompanySummary.md) |  | [optional] 
-
 
 

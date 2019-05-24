@@ -1,6 +1,6 @@
-### ZacksAnalystRatingSummary
+# intrinioSDK.ZacksAnalystRatingSummary
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The Intrinio ID for the record | [optional] 
@@ -12,6 +12,5 @@ Name | Type | Description | Notes
 **sells** | **Number** | The number of analysts recommending Sell. | [optional] 
 **strongSells** | **Number** | The number of analysts recommending Strong Sell. | [optional] 
 **total** | **Number** | The total number of analyst recommendations. | [optional] 
-
 
 

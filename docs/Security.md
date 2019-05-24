@@ -1,6 +1,6 @@
-### Security
+# intrinioSDK.Security
 
-#### Properties
+## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The Intrinio ID for the Security | [optional] 
@@ -31,6 +31,5 @@ Name | Type | Description | Notes
 **lastCorporateAction** | **Date** | The date of the last corporate action | [optional] 
 **previousTickers** | **[String]** | Previous tickers used by this security | [optional] 
 **listingExchangeMic** | **String** | The MIC code of the exchange on which this security primarily trades | [optional] 
-
 
 
