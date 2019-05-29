@@ -1,10 +1,29 @@
-# intrinioSDK.ApiResponseSecurityStockPriceAdjustments
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**stockPriceAdjustments** | [**[StockPriceAdjustmentSummary]**](StockPriceAdjustmentSummary.md) | The stock price adjustments for the Security | [optional] 
-**security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier | [optional] 
-**nextPage** | **String** | The token required to request the next page of the data | [optional] 
+[//]: # (CLASS:ApiResponseSecurityStockPriceAdjustments)
+
+[//]: # (KIND:object)
+
+### ApiResponseSecurityStockPriceAdjustments
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**stockPriceAdjustments** | [**[StockPriceAdjustmentSummary]**](StockPriceAdjustmentSummary.md) | The stock price adjustments for the Security &nbsp;
+**security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier &nbsp;
+**nextPage** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:StockPriceAdjustmentSummary)
+
+
+[//]: # (CONTAINED_CLASS:SecuritySummary)
+
+
+
 
 

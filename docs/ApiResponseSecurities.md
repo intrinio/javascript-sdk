@@ -1,9 +1,25 @@
-# intrinioSDK.ApiResponseSecurities
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**securities** | [**[SecuritySummary]**](SecuritySummary.md) |  | [optional] 
-**nextPage** | **String** | The token required to request the next page of the data | [optional] 
+[//]: # (CLASS:ApiResponseSecurities)
+
+[//]: # (KIND:object)
+
+### ApiResponseSecurities
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**securities** | [**[SecuritySummary]**](SecuritySummary.md) |  &nbsp;
+**nextPage** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:SecuritySummary)
+
+
+
 
 

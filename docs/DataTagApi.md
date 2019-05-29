@@ -9,18 +9,48 @@ Method | HTTP request | Description
 [**searchDataTags**](DataTagApi.md#searchDataTags) | **GET** /data_tags/search | Search Data Tags
 
 
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:DataTagApi)
+
+[//]: # (METHOD:getAllDataTags)
+
+[//]: # (RETURN_TYPE:ApiResponseDataTags)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseDataTags.md)
+
+[//]: # (OPERATION:getAllDataTags_v2)
+
+[//]: # (ENDPOINT:/data_tags)
+
+[//]: # (DOCUMENT_LINK:DataTagApi.md#getAllDataTags)
+
 <a name="getAllDataTags"></a>
-# **getAllDataTags**
+## **getAllDataTags**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllDataTags_v2)
+
+[//]: # (START_OVERVIEW)
+
 > ApiResponseDataTags getAllDataTags(opts)
 
-All Data Tags
+#### All Data Tags
+
 
 Returns all Data Tags. Returns Data Tags matching parameters when specified.
 
+[//]: # (END_OVERVIEW)
+
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
-intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
 var dataTagAPI = new intrinioSDK.DataTagApi();
 
@@ -35,40 +65,82 @@ var opts = {
 };
 
 dataTagAPI.getAllDataTags(opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
+  console.log(data);
 }, function(error) {
   console.error(error);
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
+
+[//]: # (START_PARAMETERS)
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tag** | **String**| Tag | [optional] 
- **type** | **String**| Type | [optional] 
- **parent** | **String**| ID of tag parent | [optional] 
- **statementCode** | **String**| Statement Code | [optional] 
- **fsTemplate** | **String**| Template | [optional] [default to industrial]
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
- **nextPage** | **String**| Gets the next page of data from a previous API call | [optional] 
+ **tag** | String| Tag | [optional]  &nbsp;
+ **type** | String| Type | [optional]  &nbsp;
+ **parent** | String| ID of tag parent | [optional]  &nbsp;
+ **statementCode** | String| Statement Code | [optional]  &nbsp;
+ **fsTemplate** | String| Template | [optional] [default to industrial] &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
 [**ApiResponseDataTags**](ApiResponseDataTags.md)
 
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:DataTagApi)
+
+[//]: # (METHOD:getDataTagById)
+
+[//]: # (RETURN_TYPE:DataTag)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:DataTag.md)
+
+[//]: # (OPERATION:getDataTagById_v2)
+
+[//]: # (ENDPOINT:/data_tags/{identifier})
+
+[//]: # (DOCUMENT_LINK:DataTagApi.md#getDataTagById)
+
 <a name="getDataTagById"></a>
-# **getDataTagById**
+## **getDataTagById**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getDataTagById_v2)
+
+[//]: # (START_OVERVIEW)
+
 > DataTag getDataTagById(identifier)
 
-Lookup Data Tag
+#### Lookup Data Tag
+
 
 Returns the Data Tag with the given &#x60;identifier&#x60;
 
+[//]: # (END_OVERVIEW)
+
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
-intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
 var dataTagAPI = new intrinioSDK.DataTagApi();
 
@@ -76,34 +148,76 @@ var identifier = "marketcap"; // String | The Intrinio ID or the code-name of th
 
 
 dataTagAPI.getDataTagById(identifier).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
+  console.log(data);
 }, function(error) {
   console.error(error);
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
+
+[//]: # (START_PARAMETERS)
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | **String**| The Intrinio ID or the code-name of the Data Tag | 
+ **identifier** | String| The Intrinio ID or the code-name of the Data Tag |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
 [**DataTag**](DataTag.md)
 
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:DataTagApi)
+
+[//]: # (METHOD:searchDataTags)
+
+[//]: # (RETURN_TYPE:ApiResponseDataTagsSearch)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseDataTagsSearch.md)
+
+[//]: # (OPERATION:searchDataTags_v2)
+
+[//]: # (ENDPOINT:/data_tags/search)
+
+[//]: # (DOCUMENT_LINK:DataTagApi.md#searchDataTags)
+
 <a name="searchDataTags"></a>
-# **searchDataTags**
+## **searchDataTags**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/searchDataTags_v2)
+
+[//]: # (START_OVERVIEW)
+
 > ApiResponseDataTagsSearch searchDataTags(query, opts)
 
-Search Data Tags
+#### Search Data Tags
+
 
 Searches for Data Tags matching the text &#x60;query&#x60;
 
+[//]: # (END_OVERVIEW)
+
 ### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
-intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
 var dataTagAPI = new intrinioSDK.DataTagApi();
 
@@ -114,20 +228,32 @@ var opts = {
 };
 
 dataTagAPI.searchDataTags(query, opts).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
+  console.log(data);
 }, function(error) {
   console.error(error);
 });
 ```
 
+[//]: # (END_CODE_EXAMPLE)
+
 ### Parameters
+
+[//]: # (START_PARAMETERS)
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | **String**|  | 
- **pageSize** | **Number**| The number of results to return | [optional] [default to 100]
+ **query** | String|  |  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
 
 ### Return type
 
 [**ApiResponseDataTagsSearch**](ApiResponseDataTagsSearch.md)
+
+
+
+[//]: # (END_OPERATION)
 

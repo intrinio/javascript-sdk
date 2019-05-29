@@ -1,9 +1,25 @@
-# intrinioSDK.ApiResponseFilings
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**filings** | [**[Filing]**](Filing.md) |  | [optional] 
-**nextPage** | **String** | The token required to request the next page of the data | [optional] 
+[//]: # (CLASS:ApiResponseFilings)
+
+[//]: # (KIND:object)
+
+### ApiResponseFilings
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**filings** | [**[Filing]**](Filing.md) |  &nbsp;
+**nextPage** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Filing)
+
+
+
 
 

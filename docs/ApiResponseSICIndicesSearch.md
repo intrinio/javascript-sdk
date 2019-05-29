@@ -1,8 +1,24 @@
-# intrinioSDK.ApiResponseSICIndicesSearch
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**indices** | [**[SICIndex]**](SICIndex.md) |  | [optional] 
+[//]: # (CLASS:ApiResponseSICIndicesSearch)
+
+[//]: # (KIND:object)
+
+### ApiResponseSICIndicesSearch
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**indices** | [**[SICIndex]**](SICIndex.md) |  &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:SICIndex)
+
+
+
 
 

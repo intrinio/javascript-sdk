@@ -1,9 +1,25 @@
-# intrinioSDK.StandardizedFinancial
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**dataTag** | [**DataTagSummary**](DataTagSummary.md) |  | [optional] 
-**value** | **Number** | The value for the Data Tag within the scope of the Fundamental | [optional] 
+[//]: # (CLASS:StandardizedFinancial)
+
+[//]: # (KIND:object)
+
+### StandardizedFinancial
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**dataTag** | [**DataTagSummary**](DataTagSummary.md) |  &nbsp;
+**value** | Number | The value for the Data Tag within the scope of the Fundamental &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:DataTagSummary)
+
+
+
 
 

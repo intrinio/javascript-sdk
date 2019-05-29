@@ -1,9 +1,28 @@
-# intrinioSDK.SecurityScreenResult
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**security** | [**SecuritySummary**](SecuritySummary.md) |  | [optional] 
-**data** | [**[SecurityScreenResultData]**](SecurityScreenResultData.md) |  | [optional] 
+[//]: # (CLASS:SecurityScreenResult)
+
+[//]: # (KIND:object)
+
+### SecurityScreenResult
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**security** | [**SecuritySummary**](SecuritySummary.md) |  &nbsp;
+**data** | [**[SecurityScreenResultData]**](SecurityScreenResultData.md) |  &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:SecuritySummary)
+
+
+[//]: # (CONTAINED_CLASS:SecurityScreenResultData)
+
+
+
 
 

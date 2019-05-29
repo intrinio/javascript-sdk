@@ -1,9 +1,22 @@
-# intrinioSDK.CryptoExchangeSummary
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**name** | **String** | The Crypto Exchange name. | [optional] 
-**code** | **String** | The Crypto Exchange code. | [optional] 
+[//]: # (CLASS:CryptoExchangeSummary)
+
+[//]: # (KIND:object)
+
+### CryptoExchangeSummary
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**name** | String | The Crypto Exchange name. &nbsp;
+**code** | String | The Crypto Exchange code. &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+
 
 

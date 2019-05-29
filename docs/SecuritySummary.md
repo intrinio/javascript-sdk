@@ -1,17 +1,30 @@
-# intrinioSDK.SecuritySummary
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**id** | **String** | The Intrinio ID for Security | [optional] 
-**companyId** | **String** | The Intrinio ID for the Company for which the Security is issued | [optional] 
-**name** | **String** | The name of the Security | [optional] 
-**code** | **String** | A 2-3 digit code classifying the Security | [optional] 
-**currency** | **String** | The currency in which the Security is traded on the exchange | [optional] 
-**ticker** | **String** | The common/local ticker of the Security | [optional] 
-**compositeTicker** | **String** | The country-composite ticker of the Security | [optional] 
-**figi** | **String** | The OpenFIGI identifier | [optional] 
-**compositeFigi** | **String** | The country-composite OpenFIGI identifier | [optional] 
-**shareClassFigi** | **String** | The global-composite OpenFIGI identifier | [optional] 
+[//]: # (CLASS:SecuritySummary)
+
+[//]: # (KIND:object)
+
+### SecuritySummary
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**id** | String | The Intrinio ID for Security &nbsp;
+**companyId** | String | The Intrinio ID for the Company for which the Security is issued &nbsp;
+**name** | String | The name of the Security &nbsp;
+**code** | String | A 2-3 digit code classifying the Security (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;) &nbsp;
+**currency** | String | The currency in which the Security is traded on the exchange &nbsp;
+**ticker** | String | The common/local ticker of the Security &nbsp;
+**compositeTicker** | String | The country-composite ticker of the Security &nbsp;
+**figi** | String | The OpenFIGI identifier &nbsp;
+**compositeFigi** | String | The country-composite OpenFIGI identifier &nbsp;
+**shareClassFigi** | String | The global-composite OpenFIGI identifier &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+
 
 

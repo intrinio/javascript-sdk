@@ -1,10 +1,29 @@
-# intrinioSDK.ApiResponseEconomicIndexHistoricalData
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**historicalData** | [**[HistoricalData]**](HistoricalData.md) |  | [optional] 
-**index** | [**EconomicIndexSummary**](EconomicIndexSummary.md) |  | [optional] 
-**nextPage** | **String** | The token required to request the next page of the data | [optional] 
+[//]: # (CLASS:ApiResponseEconomicIndexHistoricalData)
+
+[//]: # (KIND:object)
+
+### ApiResponseEconomicIndexHistoricalData
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**historicalData** | [**[HistoricalData]**](HistoricalData.md) |  &nbsp;
+**index** | [**EconomicIndexSummary**](EconomicIndexSummary.md) |  &nbsp;
+**nextPage** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:HistoricalData)
+
+
+[//]: # (CONTAINED_CLASS:EconomicIndexSummary)
+
+
+
 
 

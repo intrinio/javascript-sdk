@@ -1,10 +1,29 @@
-# intrinioSDK.ApiResponseSICIndexHistoricalData
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**historicalData** | [**[HistoricalData]**](HistoricalData.md) |  | [optional] 
-**index** | [**SICIndex**](SICIndex.md) |  | [optional] 
-**nextPage** | **String** | The token required to request the next page of the data | [optional] 
+[//]: # (CLASS:ApiResponseSICIndexHistoricalData)
+
+[//]: # (KIND:object)
+
+### ApiResponseSICIndexHistoricalData
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**historicalData** | [**[HistoricalData]**](HistoricalData.md) |  &nbsp;
+**index** | [**SICIndex**](SICIndex.md) |  &nbsp;
+**nextPage** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:HistoricalData)
+
+
+[//]: # (CONTAINED_CLASS:SICIndex)
+
+
+
 
 

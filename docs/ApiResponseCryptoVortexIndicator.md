@@ -1,13 +1,38 @@
-# intrinioSDK.ApiResponseCryptoVortexIndicator
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**technicals** | [**[VortexIndicatorTechnicalValue]**](VortexIndicatorTechnicalValue.md) |  | [optional] 
-**indicator** | [**TechnicalIndicator**](TechnicalIndicator.md) | The name and symbol of the technical indicator | [optional] 
-**pair** | [**CryptoPairSummary**](CryptoPairSummary.md) |  | [optional] 
-**exchange** | [**CryptoExchangeSummary**](CryptoExchangeSummary.md) |  | [optional] 
-**timeframe** | **String** | The time interval for the crypto currency prices | [optional] 
-**nextPage** | **String** | The token required to request the next page of the data | [optional] 
+[//]: # (CLASS:ApiResponseCryptoVortexIndicator)
+
+[//]: # (KIND:object)
+
+### ApiResponseCryptoVortexIndicator
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**technicals** | [**[VortexIndicatorTechnicalValue]**](VortexIndicatorTechnicalValue.md) |  &nbsp;
+**indicator** | [**TechnicalIndicator**](TechnicalIndicator.md) | The name and symbol of the technical indicator &nbsp;
+**pair** | [**CryptoPairSummary**](CryptoPairSummary.md) |  &nbsp;
+**exchange** | [**CryptoExchangeSummary**](CryptoExchangeSummary.md) |  &nbsp;
+**timeframe** | String | The time interval for the crypto currency prices &nbsp;
+**nextPage** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:VortexIndicatorTechnicalValue)
+
+
+[//]: # (CONTAINED_CLASS:TechnicalIndicator)
+
+
+[//]: # (CONTAINED_CLASS:CryptoPairSummary)
+
+
+[//]: # (CONTAINED_CLASS:CryptoExchangeSummary)
+
+
+
 
 

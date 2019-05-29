@@ -1,12 +1,25 @@
-# intrinioSDK.CompanyNewsSummary
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**id** | **String** | The Intrinio ID for the news article | [optional] 
-**title** | **String** | The title of the news article | [optional] 
-**publicationDate** | **String** | The publication date of the news article | [optional] 
-**url** | **String** | The url of the news article | [optional] 
-**summary** | **String** | A summary of the news article | [optional] 
+[//]: # (CLASS:CompanyNewsSummary)
+
+[//]: # (KIND:object)
+
+### CompanyNewsSummary
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**id** | String | The Intrinio ID for the news article &nbsp;
+**title** | String | The title of the news article &nbsp;
+**publicationDate** | String | The publication date of the news article &nbsp;
+**url** | String | The url of the news article &nbsp;
+**summary** | String | A summary of the news article &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+
 
 

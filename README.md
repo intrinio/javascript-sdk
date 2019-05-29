@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.6.2
-- Package version: 3.0.0
+- API version: 2.7.0
+- Package version: 3.1.0
 
 
 ## Installation
@@ -61,7 +61,11 @@ companyAPI.getAllCompanies().then(function(data) {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api-v2.intrinio.com*
+Complete documentation for the Intrinio Javascript SDK is available on the Intrinio website.
+
+[View Intrinio Javascript SDK Documentation](https://docs.intrinio.com/documentation/api_v2/javascript)
+
+A listing of classes and methods is also provided below:
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -125,6 +129,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.FilingApi* | [**getAllFilings**](docs/FilingApi.md#getAllFilings) | **GET** /filings | All Filings
 *intrinioSDK.FilingApi* | [**getAllNotes**](docs/FilingApi.md#getAllNotes) | **GET** /filings/notes | All Filing Notes
 *intrinioSDK.FilingApi* | [**getFilingById**](docs/FilingApi.md#getFilingById) | **GET** /filings/{id} | Lookup Filing
+*intrinioSDK.FilingApi* | [**getFilingFundamentals**](docs/FilingApi.md#getFilingFundamentals) | **GET** /filings/{identifier}/fundamentals | All Fundamentals by Filing
 *intrinioSDK.FilingApi* | [**getNote**](docs/FilingApi.md#getNote) | **GET** /filings/notes/{identifier} | Filing Note by ID
 *intrinioSDK.FilingApi* | [**getNoteHtml**](docs/FilingApi.md#getNoteHtml) | **GET** /filings/notes/{identifier}/html | Filing Note HTML
 *intrinioSDK.FilingApi* | [**getNoteText**](docs/FilingApi.md#getNoteText) | **GET** /filings/notes/{identifier}/text | Filing Note Text
@@ -338,6 +343,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseEconomicIndexHistoricalData](docs/ApiResponseEconomicIndexHistoricalData.md)
  - [intrinioSDK.ApiResponseEconomicIndices](docs/ApiResponseEconomicIndices.md)
  - [intrinioSDK.ApiResponseEconomicIndicesSearch](docs/ApiResponseEconomicIndicesSearch.md)
+ - [intrinioSDK.ApiResponseFilingFundamentals](docs/ApiResponseFilingFundamentals.md)
  - [intrinioSDK.ApiResponseFilingNotes](docs/ApiResponseFilingNotes.md)
  - [intrinioSDK.ApiResponseFilingNotesSearch](docs/ApiResponseFilingNotesSearch.md)
  - [intrinioSDK.ApiResponseFilings](docs/ApiResponseFilings.md)

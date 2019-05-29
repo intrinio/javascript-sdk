@@ -1,11 +1,33 @@
-# intrinioSDK.ApiResponseSecurityKnowSureThing
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**technicals** | [**[KnowSureThingTechnicalValue]**](KnowSureThingTechnicalValue.md) |  | [optional] 
-**indicator** | [**TechnicalIndicator**](TechnicalIndicator.md) | The name and symbol of the technical indicator | [optional] 
-**security** | [**SecuritySummary**](SecuritySummary.md) | The Security of the Stock Price | [optional] 
-**nextPage** | **String** | The token required to request the next page of the data | [optional] 
+[//]: # (CLASS:ApiResponseSecurityKnowSureThing)
+
+[//]: # (KIND:object)
+
+### ApiResponseSecurityKnowSureThing
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**technicals** | [**[KnowSureThingTechnicalValue]**](KnowSureThingTechnicalValue.md) |  &nbsp;
+**indicator** | [**TechnicalIndicator**](TechnicalIndicator.md) | The name and symbol of the technical indicator &nbsp;
+**security** | [**SecuritySummary**](SecuritySummary.md) | The Security of the Stock Price &nbsp;
+**nextPage** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:KnowSureThingTechnicalValue)
+
+
+[//]: # (CONTAINED_CLASS:TechnicalIndicator)
+
+
+[//]: # (CONTAINED_CLASS:SecuritySummary)
+
+
+
 
 

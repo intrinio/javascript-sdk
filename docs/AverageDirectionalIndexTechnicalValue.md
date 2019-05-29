@@ -1,11 +1,24 @@
-# intrinioSDK.AverageDirectionalIndexTechnicalValue
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**dateTime** | **Date** | The date_time of the observation | [optional] 
-**adx** | **Number** | The Average Directional Index value | [optional] 
-**diNeg** | **Number** | The Minus Directional Indicator value | [optional] 
-**diPos** | **Number** | The Plus Directional Indicator value | [optional] 
+[//]: # (CLASS:AverageDirectionalIndexTechnicalValue)
+
+[//]: # (KIND:object)
+
+### AverageDirectionalIndexTechnicalValue
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**dateTime** | Date | The date_time of the observation &nbsp;
+**adx** | Number | The Average Directional Index value &nbsp;
+**diNeg** | Number | The Minus Directional Indicator value &nbsp;
+**diPos** | Number | The Plus Directional Indicator value &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+
 
 

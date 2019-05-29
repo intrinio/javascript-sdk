@@ -1,9 +1,22 @@
-# intrinioSDK.HistoricalData
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**_date** | **Date** | The date that the value is present | [optional] 
-**value** | **Number** | The historical value | [optional] 
+[//]: # (CLASS:HistoricalData)
+
+[//]: # (KIND:object)
+
+### HistoricalData
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**_date** | Date | The date that the value is present &nbsp;
+**value** | Number | The historical value &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+
 
 

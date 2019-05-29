@@ -1,9 +1,25 @@
-# intrinioSDK.ApiResponseStockMarketIndices
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**indices** | [**[StockMarketIndexSummary]**](StockMarketIndexSummary.md) |  | [optional] 
-**nextPage** | **String** | The token required to request the next page of the data | [optional] 
+[//]: # (CLASS:ApiResponseStockMarketIndices)
+
+[//]: # (KIND:object)
+
+### ApiResponseStockMarketIndices
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**indices** | [**[StockMarketIndexSummary]**](StockMarketIndexSummary.md) |  &nbsp;
+**nextPage** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:StockMarketIndexSummary)
+
+
+
 
 

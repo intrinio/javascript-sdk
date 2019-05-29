@@ -1,9 +1,25 @@
-# intrinioSDK.ApiResponseNews
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**news** | [**[CompanyNews]**](CompanyNews.md) |  | [optional] 
-**nextPage** | **String** | The token required to request the next page of the data | [optional] 
+[//]: # (CLASS:ApiResponseNews)
+
+[//]: # (KIND:object)
+
+### ApiResponseNews
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**news** | [**[CompanyNews]**](CompanyNews.md) |  &nbsp;
+**nextPage** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:CompanyNews)
+
+
+
 
 

@@ -1,32 +1,44 @@
-# intrinioSDK.DividendRecord
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**exDividend** | **Number** | Amount of dividend in US dollars | [optional] 
-**currency** | **String** | The 3-digit currency code the dividend amount was reported in | [optional] 
-**announcementDate** | **Date** | Date dividend was announced | [optional] 
-**recordDate** | **Date** | Date before which holders-of-record will receive the dividend | [optional] 
-**payDate** | **Date** | Date the divdiend was paid | [optional] 
-**frequency** | **String** | Identifies payment frequency of announced dividend | [optional] 
-**status** | **String** | Status of the dividend | [optional] 
-**forwardYield** | **Number** | The forward dividend yield | [optional] 
-**forwardRate** | **Number** | The forward dividend rate | [optional] 
-**security** | [**SecuritySummary**](SecuritySummary.md) |  | [optional] 
+[//]: # (CLASS:DividendRecord)
+
+[//]: # (KIND:object)
+
+### DividendRecord
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**exDividend** | Number | Amount of dividend in US dollars &nbsp;
+**currency** | String | The 3-digit currency code the dividend amount was reported in &nbsp;
+**announcementDate** | Date | Date dividend was announced &nbsp;
+**recordDate** | Date | Date before which holders-of-record will receive the dividend &nbsp;
+**payDate** | Date | Date the divdiend was paid &nbsp;
+**frequency** | String | Identifies payment frequency of announced dividend &nbsp;
+**status** | String | Status of the dividend &nbsp;
+**forwardYield** | Number | The forward dividend yield &nbsp;
+**forwardRate** | Number | The forward dividend rate &nbsp;
+**security** | [**SecuritySummary**](SecuritySummary.md) |  &nbsp;
+
+[//]: # (END_DEFINITION)
 
 
-<a name="StatusEnum"></a>
-## Enum: StatusEnum
+[//]: # (CONTAINED_CLASS:SecuritySummary)
 
 
-* `P` (value: `"P"`)
 
-* `X` (value: `"X"`)
+<br/>
 
-* `S` (value: `"S"`)
+#### Enum: StatusEnum**
 
-* `R` (value: `"R"`)
-
+Name | Value
+---- | -----
+P | &quot;P&quot;
+X | &quot;X&quot;
+S | &quot;S&quot;
+R | &quot;R&quot;
 
 
 

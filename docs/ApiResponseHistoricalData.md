@@ -1,9 +1,25 @@
-# intrinioSDK.ApiResponseHistoricalData
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**historicalData** | [**[HistoricalData]**](HistoricalData.md) |  | [optional] 
-**nextPage** | **String** | The token required to request the next page of the data | [optional] 
+[//]: # (CLASS:ApiResponseHistoricalData)
+
+[//]: # (KIND:object)
+
+### ApiResponseHistoricalData
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**historicalData** | [**[HistoricalData]**](HistoricalData.md) |  &nbsp;
+**nextPage** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:HistoricalData)
+
+
+
 
 

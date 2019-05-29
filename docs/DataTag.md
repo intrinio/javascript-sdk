@@ -1,29 +1,40 @@
-# intrinioSDK.DataTag
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**id** | **String** | The Intrinio ID for the Data Tag | [optional] 
-**name** | **String** | The readable name of the Data Tag | [optional] 
-**tag** | **String** | The code-name of the Data Tag | [optional] 
-**statementCode** | **String** | The code of the financial statement to which this Data Tag belongs | [optional] 
-**statementType** | **String** | The format of the financial statment to which this Data Tag belongs | [optional] 
-**parent** | **String** | The parent Data Tag forming the statement relationship with the factor | [optional] 
-**sequence** | **Number** | The order in which the Data Tag appears in its logical group (such as a financial statement) | [optional] 
-**factor** | **String** | The operator forming the statement relationship between the child Data Tag (or Data Tags) and the parent Data Tag | [optional] 
-**balance** | **String** | Whether the Data Tag represents a credit or debit | [optional] 
-**type** | **String** | The nature of the Data Tag, operating or nonoperating | [optional] 
-**unit** | **String** | The unit of the Data Tag | [optional] 
+[//]: # (CLASS:DataTag)
+
+[//]: # (KIND:object)
+
+### DataTag
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**id** | String | The Intrinio ID for the Data Tag &nbsp;
+**name** | String | The readable name of the Data Tag &nbsp;
+**tag** | String | The code-name of the Data Tag &nbsp;
+**statementCode** | String | The code of the financial statement to which this Data Tag belongs &nbsp;
+**statementType** | String | The format of the financial statment to which this Data Tag belongs &nbsp;
+**parent** | String | The parent Data Tag forming the statement relationship with the factor &nbsp;
+**sequence** | Number | The order in which the Data Tag appears in its logical group (such as a financial statement) &nbsp;
+**factor** | String | The operator forming the statement relationship between the child Data Tag (or Data Tags) and the parent Data Tag &nbsp;
+**balance** | String | Whether the Data Tag represents a credit or debit &nbsp;
+**type** | String | The nature of the Data Tag, operating or nonoperating &nbsp;
+**unit** | String | The unit of the Data Tag &nbsp;
+
+[//]: # (END_DEFINITION)
 
 
-<a name="StatementTypeEnum"></a>
-## Enum: StatementTypeEnum
 
+<br/>
 
-* `financial` (value: `"financial"`)
+#### Enum: StatementTypeEnum**
 
-* `industrial` (value: `"industrial"`)
-
+Name | Value
+---- | -----
+financial | &quot;financial&quot;
+industrial | &quot;industrial&quot;
 
 
 

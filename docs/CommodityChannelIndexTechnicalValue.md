@@ -1,9 +1,22 @@
-# intrinioSDK.CommodityChannelIndexTechnicalValue
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**dateTime** | **Date** | The date_time of the observation | [optional] 
-**cci** | **Number** | The Commodity Channel Index calculation value | [optional] 
+[//]: # (CLASS:CommodityChannelIndexTechnicalValue)
+
+[//]: # (KIND:object)
+
+### CommodityChannelIndexTechnicalValue
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**dateTime** | Date | The date_time of the observation &nbsp;
+**cci** | Number | The Commodity Channel Index calculation value &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+
 
 

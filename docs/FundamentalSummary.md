@@ -1,28 +1,38 @@
-# intrinioSDK.FundamentalSummary
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**id** | **String** | The Intrinio ID of the Fundamental | [optional] 
-**statementCode** | **String** | The code of the financial statement that the Fundamental represents | [optional] 
-**fiscalYear** | **Number** | The fiscal year | [optional] 
-**fiscalPeriod** | **String** | The fiscal period | [optional] 
-**type** | **String** | The type of Fundamental | [optional] 
-**startDate** | **Date** | The period start date | [optional] 
-**endDate** | **Date** | The period start date | [optional] 
-**filingDate** | **Date** | The date and time when the Fundamental was filed with the SEC | [optional] 
+[//]: # (CLASS:FundamentalSummary)
+
+[//]: # (KIND:object)
+
+### FundamentalSummary
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**id** | String | The Intrinio ID of the Fundamental &nbsp;
+**statementCode** | String | The code of the financial statement that the Fundamental represents &nbsp;
+**fiscalYear** | Number | The fiscal year &nbsp;
+**fiscalPeriod** | String | The fiscal period &nbsp;
+**type** | String | The type of Fundamental &nbsp;
+**startDate** | Date | The period start date &nbsp;
+**endDate** | Date | The period start date &nbsp;
+**filingDate** | Date | The date and time when the Fundamental was filed with the SEC &nbsp;
+
+[//]: # (END_DEFINITION)
 
 
-<a name="TypeEnum"></a>
-## Enum: TypeEnum
 
+<br/>
 
-* `reported` (value: `"reported"`)
+#### Enum: TypeEnum**
 
-* `restated` (value: `"restated"`)
-
-* `calculated` (value: `"calculated"`)
-
+Name | Value
+---- | -----
+reported | &quot;reported&quot;
+restated | &quot;restated&quot;
+calculated | &quot;calculated&quot;
 
 
 

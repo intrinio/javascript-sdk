@@ -1,9 +1,22 @@
-# intrinioSDK.ChaikinMoneyFlowTechnicalValue
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**dateTime** | **Date** | The date_time of the observation | [optional] 
-**cmf** | **Number** | The Chaikin Money Flow calculation value | [optional] 
+[//]: # (CLASS:ChaikinMoneyFlowTechnicalValue)
+
+[//]: # (KIND:object)
+
+### ChaikinMoneyFlowTechnicalValue
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**dateTime** | Date | The date_time of the observation &nbsp;
+**cmf** | Number | The Chaikin Money Flow calculation value &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+
 
 

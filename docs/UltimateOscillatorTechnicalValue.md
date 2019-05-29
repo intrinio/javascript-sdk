@@ -1,9 +1,22 @@
-# intrinioSDK.UltimateOscillatorTechnicalValue
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**dateTime** | **Date** | The date_time of the observation | [optional] 
-**uo** | **Number** | The Ultimate Oscillator calculation value | [optional] 
+[//]: # (CLASS:UltimateOscillatorTechnicalValue)
+
+[//]: # (KIND:object)
+
+### UltimateOscillatorTechnicalValue
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**dateTime** | Date | The date_time of the observation &nbsp;
+**uo** | Number | The Ultimate Oscillator calculation value &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+
 
 

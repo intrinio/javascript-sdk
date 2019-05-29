@@ -1,10 +1,29 @@
-# intrinioSDK.ApiResponseSecurityZacksSalesSurprises
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**salesSurprises** | [**[ZacksSalesSurpriseSummary]**](ZacksSalesSurpriseSummary.md) |  | [optional] 
-**security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier | [optional] 
-**nextPage** | **String** | The token required to request the next page of the data | [optional] 
+[//]: # (CLASS:ApiResponseSecurityZacksSalesSurprises)
+
+[//]: # (KIND:object)
+
+### ApiResponseSecurityZacksSalesSurprises
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**salesSurprises** | [**[ZacksSalesSurpriseSummary]**](ZacksSalesSurpriseSummary.md) |  &nbsp;
+**security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier &nbsp;
+**nextPage** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:ZacksSalesSurpriseSummary)
+
+
+[//]: # (CONTAINED_CLASS:SecuritySummary)
+
+
+
 
 

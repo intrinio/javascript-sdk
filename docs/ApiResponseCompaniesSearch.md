@@ -1,8 +1,24 @@
-# intrinioSDK.ApiResponseCompaniesSearch
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**companies** | [**[CompanySummary]**](CompanySummary.md) |  | [optional] 
+[//]: # (CLASS:ApiResponseCompaniesSearch)
+
+[//]: # (KIND:object)
+
+### ApiResponseCompaniesSearch
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**companies** | [**[CompanySummary]**](CompanySummary.md) |  &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:CompanySummary)
+
+
+
 
 

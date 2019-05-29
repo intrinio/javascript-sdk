@@ -1,8 +1,24 @@
-# intrinioSDK.ApiResponseFilingNotesSearch
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**filingNotes** | [**[FilingNoteSummary]**](FilingNoteSummary.md) |  | [optional] 
+[//]: # (CLASS:ApiResponseFilingNotesSearch)
+
+[//]: # (KIND:object)
+
+### ApiResponseFilingNotesSearch
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**filingNotes** | [**[FilingNoteSummary]**](FilingNoteSummary.md) |  &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:FilingNoteSummary)
+
+
+
 
 

@@ -1,10 +1,29 @@
-# intrinioSDK.ApiResponseStockExchangeSecurities
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**securities** | [**[SecuritySummary]**](SecuritySummary.md) | The securities traded on the Stock Exchange | [optional] 
-**stockExchange** | [**StockExchange**](StockExchange.md) | The Stock Exchange resolved from the given identifier | [optional] 
-**nextPage** | **String** | The token required to request the next page of the data | [optional] 
+[//]: # (CLASS:ApiResponseStockExchangeSecurities)
+
+[//]: # (KIND:object)
+
+### ApiResponseStockExchangeSecurities
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**securities** | [**[SecuritySummary]**](SecuritySummary.md) | The securities traded on the Stock Exchange &nbsp;
+**stockExchange** | [**StockExchange**](StockExchange.md) | The Stock Exchange resolved from the given identifier &nbsp;
+**nextPage** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:SecuritySummary)
+
+
+[//]: # (CONTAINED_CLASS:StockExchange)
+
+
+
 
 

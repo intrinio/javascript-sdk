@@ -1,9 +1,25 @@
-# intrinioSDK.ApiResponseOptions
 
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**options** | [**[Option]**](Option.md) | A list of options contracts with the given symbol | [optional] 
-**nextPage** | **String** | The token required to request the next page of the data | [optional] 
+[//]: # (CLASS:ApiResponseOptions)
+
+[//]: # (KIND:object)
+
+### ApiResponseOptions
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**options** | [**[Option]**](Option.md) | A list of options contracts with the given symbol &nbsp;
+**nextPage** | String | The token required to request the next page of the data &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:Option)
+
+
+
 
 
