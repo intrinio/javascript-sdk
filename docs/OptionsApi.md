@@ -32,7 +32,7 @@ Method | HTTP request | Description
 <a name="getOptions"></a>
 ## **getOptions**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getOptions_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getOptions_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 <a name="getOptionsChain"></a>
 ## **getOptionsChain**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getOptionsChain_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getOptionsChain_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 <a name="getOptionsExpirations"></a>
 ## **getOptionsExpirations**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getOptionsExpirations_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getOptionsExpirations_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -306,7 +306,7 @@ Name | Type | Description  | Notes
 <a name="getOptionsPrices"></a>
 ## **getOptionsPrices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getOptionsPrices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getOptionsPrices_v2)
 
 [//]: # (START_OVERVIEW)
 

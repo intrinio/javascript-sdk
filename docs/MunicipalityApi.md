@@ -31,7 +31,7 @@ Method | HTTP request | Description
 <a name="getAllMunicipalities"></a>
 ## **getAllMunicipalities**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllMunicipalities_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getAllMunicipalities_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 <a name="getMunicipalityById"></a>
 ## **getMunicipalityById**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getMunicipalityById_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getMunicipalityById_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 <a name="getMunicipalityFinancials"></a>
 ## **getMunicipalityFinancials**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getMunicipalityFinancials_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getMunicipalityFinancials_v2)
 
 [//]: # (START_OVERVIEW)
 

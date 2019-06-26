@@ -30,7 +30,7 @@ Method | HTTP request | Description
 <a name="getDataPointNumber"></a>
 ## **getDataPointNumber**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getDataPointNumber_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getDataPointNumber_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 <a name="getDataPointText"></a>
 ## **getDataPointText**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getDataPointText_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getDataPointText_v2)
 
 [//]: # (START_OVERVIEW)
 

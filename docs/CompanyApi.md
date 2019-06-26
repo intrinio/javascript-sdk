@@ -12,6 +12,7 @@ Method | HTTP request | Description
 [**getCompanyFilings**](CompanyApi.md#getCompanyFilings) | **GET** /companies/{identifier}/filings | All Filings by Company
 [**getCompanyFundamentals**](CompanyApi.md#getCompanyFundamentals) | **GET** /companies/{identifier}/fundamentals | All Fundamentals by Company
 [**getCompanyHistoricalData**](CompanyApi.md#getCompanyHistoricalData) | **GET** /companies/{identifier}/historical_data/{tag} | Historical Data for Company
+[**getCompanyIpos**](CompanyApi.md#getCompanyIpos) | **GET** /companies/ipos | IPOs
 [**getCompanyNews**](CompanyApi.md#getCompanyNews) | **GET** /companies/{identifier}/news | All News by Company
 [**getCompanySecurities**](CompanyApi.md#getCompanySecurities) | **GET** /companies/{identifier}/securities | All Securities by Company
 [**lookupCompanyFundamental**](CompanyApi.md#lookupCompanyFundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental by Company
@@ -40,7 +41,7 @@ Method | HTTP request | Description
 <a name="getAllCompanies"></a>
 ## **getAllCompanies**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllCompanies_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getAllCompanies_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -65,11 +66,13 @@ var companyAPI = new intrinioSDK.CompanyApi();
 
 var opts = { 
   'latestFilingDate': null, // Date | Last filing date
-  'sic': null, // String | Standard Industrial Classification code
-  'template': null, // String | Template
-  'sector': null, // String | Industry sector
-  'industryCategory': null, // String | Industry category
-  'industryGroup': null, // String | Industry group
+  'sic': null, // String | Return companies with the given Standard Industrial Classification code
+  'template': null, // String | Return companies with the given financial statement template
+  'sector': null, // String | Return companies in the given industry sector
+  'industryCategory': null, // String | Return companies in the given industry category
+  'industryGroup': null, // String | Return companies in the given industry group
+  'hasFundamentals': true, // Boolean | Return only companies that have fundamentals when true
+  'hasStockPrices': true, // Boolean | Return only companies that have stock prices when true
   'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
@@ -91,11 +94,13 @@ companyAPI.getAllCompanies(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **latestFilingDate** | Date| Last filing date | [optional]  &nbsp;
- **sic** | String| Standard Industrial Classification code | [optional]  &nbsp;
- **template** | String| Template | [optional]  &nbsp;
- **sector** | String| Industry sector | [optional]  &nbsp;
- **industryCategory** | String| Industry category | [optional]  &nbsp;
- **industryGroup** | String| Industry group | [optional]  &nbsp;
+ **sic** | String| Return companies with the given Standard Industrial Classification code | [optional]  &nbsp;
+ **template** | String| Return companies with the given financial statement template | [optional]  &nbsp;
+ **sector** | String| Return companies in the given industry sector | [optional]  &nbsp;
+ **industryCategory** | String| Return companies in the given industry category | [optional]  &nbsp;
+ **industryGroup** | String| Return companies in the given industry group | [optional]  &nbsp;
+ **hasFundamentals** | Boolean| Return only companies that have fundamentals when true | [optional]  &nbsp;
+ **hasStockPrices** | Boolean| Return only companies that have stock prices when true | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
@@ -132,7 +137,7 @@ Name | Type | Description  | Notes
 <a name="getAllCompanyNews"></a>
 ## **getAllCompanyNews**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllCompanyNews_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getAllCompanyNews_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -212,7 +217,7 @@ Name | Type | Description  | Notes
 <a name="getCompany"></a>
 ## **getCompany**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompany_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getCompany_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -289,7 +294,7 @@ Name | Type | Description  | Notes
 <a name="getCompanyDataPointNumber"></a>
 ## **getCompanyDataPointNumber**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanyDataPointNumber_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getCompanyDataPointNumber_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -369,7 +374,7 @@ Name | Type | Description  | Notes
 <a name="getCompanyDataPointText"></a>
 ## **getCompanyDataPointText**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanyDataPointText_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getCompanyDataPointText_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -449,7 +454,7 @@ Name | Type | Description  | Notes
 <a name="getCompanyFilings"></a>
 ## **getCompanyFilings**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanyFilings_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getCompanyFilings_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -538,7 +543,7 @@ Name | Type | Description  | Notes
 <a name="getCompanyFundamentals"></a>
 ## **getCompanyFundamentals**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanyFundamentals_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getCompanyFundamentals_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -637,7 +642,7 @@ Name | Type | Description  | Notes
 <a name="getCompanyHistoricalData"></a>
 ## **getCompanyHistoricalData**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanyHistoricalData_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getCompanyHistoricalData_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -666,9 +671,9 @@ var tag = "marketcap"; // String | An Intrinio data tag ID or code (<a href='htt
 
 var opts = { 
   'frequency': "daily", // String | Return historical data in the given frequency
-  'type': null, // String | Filter by type, when applicable
-  'startDate': new Date("2018-01-01"), // Date | Get historical data on or after this date
-  'endDate': null, // Date | Get historical data on or before this date
+  'type': null, // String | Return historical data for given fiscal period type
+  'startDate': new Date("2018-01-01"), // Date | Return historical data on or after this date
+  'endDate': null, // Date | Return historical data on or before this date
   'sortOrder': "desc", // String | Sort by date `asc` or `desc`
   'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
@@ -693,9 +698,9 @@ Name | Type | Description  | Notes
  **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
  **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
  **frequency** | String| Return historical data in the given frequency | [optional] [default to daily] &nbsp;
- **type** | String| Filter by type, when applicable | [optional]  &nbsp;
- **startDate** | Date| Get historical data on or after this date | [optional]  &nbsp;
- **endDate** | Date| Get historical data on or before this date | [optional]  &nbsp;
+ **type** | String| Return historical data for given fiscal period type | [optional]  &nbsp;
+ **startDate** | Date| Return historical data on or after this date | [optional]  &nbsp;
+ **endDate** | Date| Return historical data on or before this date | [optional]  &nbsp;
  **sortOrder** | String| Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; | [optional] [default to desc] &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
@@ -706,6 +711,86 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseCompanyHistoricalData**](ApiResponseCompanyHistoricalData.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:CompanyApi)
+
+[//]: # (METHOD:getCompanyIpos)
+
+[//]: # (RETURN_TYPE:ApiResponseInitialPublicOfferings)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseInitialPublicOfferings.md)
+
+[//]: # (OPERATION:getCompanyIpos_v2)
+
+[//]: # (ENDPOINT:/companies/ipos)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#getCompanyIpos)
+
+<a name="getCompanyIpos"></a>
+## **getCompanyIpos**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getCompanyIpos_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseInitialPublicOfferings getCompanyIpos(opts)
+
+#### IPOs
+
+
+Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+
+var companyAPI = new intrinioSDK.CompanyApi();
+
+var opts = { 
+  'pageSize': 100, // Number | The number of results to return
+  'nextPage': null // String | Gets the next page of data from a previous API call
+};
+
+companyAPI.getCompanyIpos(opts).then(function(data) {
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseInitialPublicOfferings**](ApiResponseInitialPublicOfferings.md)
 
 
 
@@ -733,7 +818,7 @@ Name | Type | Description  | Notes
 <a name="getCompanyNews"></a>
 ## **getCompanyNews**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanyNews_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getCompanyNews_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -816,7 +901,7 @@ Name | Type | Description  | Notes
 <a name="getCompanySecurities"></a>
 ## **getCompanySecurities**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getCompanySecurities_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getCompanySecurities_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -897,7 +982,7 @@ Name | Type | Description  | Notes
 <a name="lookupCompanyFundamental"></a>
 ## **lookupCompanyFundamental**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/lookupCompanyFundamental_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/lookupCompanyFundamental_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -983,7 +1068,7 @@ Name | Type | Description  | Notes
 <a name="searchCompanies"></a>
 ## **searchCompanies**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/searchCompanies_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/searchCompanies_v2)
 
 [//]: # (START_OVERVIEW)
 

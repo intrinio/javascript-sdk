@@ -29,7 +29,7 @@ Method | HTTP request | Description
 <a name="getHistoricalData"></a>
 ## **getHistoricalData**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getHistoricalData_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getHistoricalData_v2)
 
 [//]: # (START_OVERVIEW)
 

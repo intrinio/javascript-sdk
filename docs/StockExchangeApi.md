@@ -34,7 +34,7 @@ Method | HTTP request | Description
 <a name="getAllStockExchanges"></a>
 ## **getAllStockExchanges**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllStockExchanges_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getAllStockExchanges_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 <a name="getStockExchangeById"></a>
 ## **getStockExchangeById**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getStockExchangeById_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getStockExchangeById_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 <a name="getStockExchangePriceAdjustments"></a>
 ## **getStockExchangePriceAdjustments**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getStockExchangePriceAdjustments_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getStockExchangePriceAdjustments_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -280,7 +280,7 @@ Name | Type | Description  | Notes
 <a name="getStockExchangePrices"></a>
 ## **getStockExchangePrices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getStockExchangePrices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getStockExchangePrices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -365,7 +365,7 @@ Name | Type | Description  | Notes
 <a name="getStockExchangeRealtimePrices"></a>
 ## **getStockExchangeRealtimePrices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getStockExchangeRealtimePrices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getStockExchangeRealtimePrices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -391,7 +391,7 @@ var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
 var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 var opts = { 
-  'source': null, // String | Return realtime prices from the specified data source
+  'source': null, // String | Return realtime prices from the specified data source. If no source is specified, all sources are used.
   'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
@@ -413,7 +413,7 @@ stockExchangeAPI.getStockExchangeRealtimePrices(identifier, opts).then(function(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
- **source** | String| Return realtime prices from the specified data source | [optional]  &nbsp;
+ **source** | String| Return realtime prices from the specified data source. If no source is specified, all sources are used. | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
@@ -450,7 +450,7 @@ Name | Type | Description  | Notes
 <a name="getStockExchangeSecurities"></a>
 ## **getStockExchangeSecurities**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getStockExchangeSecurities_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getStockExchangeSecurities_v2)
 
 [//]: # (START_OVERVIEW)
 

@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.7.0
-- Package version: 3.1.0
+- API version: 2.8.0
+- Package version: 3.2.0
 
 
 ## Installation
@@ -36,10 +36,6 @@ module: {
 }
 ```
 
-## SDK Code Examples
-
-Code examples for Intrinio SDKs are available at https://github.com/intrinio/sdk-code-samples
-
 ## Getting Started
 
 Please follow the [installation](#installation) instructions and execute the following JS code:
@@ -63,7 +59,7 @@ companyAPI.getAllCompanies().then(function(data) {
 
 Complete documentation for the Intrinio Javascript SDK is available on the Intrinio website.
 
-[View Intrinio Javascript SDK Documentation](https://docs.intrinio.com/documentation/api_v2/javascript)
+[View Intrinio Javascript SDK Documentation](https://docs.intrinio.com/documentation/javascript)
 
 A listing of classes and methods is also provided below:
 
@@ -77,6 +73,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.CompanyApi* | [**getCompanyFilings**](docs/CompanyApi.md#getCompanyFilings) | **GET** /companies/{identifier}/filings | All Filings by Company
 *intrinioSDK.CompanyApi* | [**getCompanyFundamentals**](docs/CompanyApi.md#getCompanyFundamentals) | **GET** /companies/{identifier}/fundamentals | All Fundamentals by Company
 *intrinioSDK.CompanyApi* | [**getCompanyHistoricalData**](docs/CompanyApi.md#getCompanyHistoricalData) | **GET** /companies/{identifier}/historical_data/{tag} | Historical Data for Company
+*intrinioSDK.CompanyApi* | [**getCompanyIpos**](docs/CompanyApi.md#getCompanyIpos) | **GET** /companies/ipos | IPOs
 *intrinioSDK.CompanyApi* | [**getCompanyNews**](docs/CompanyApi.md#getCompanyNews) | **GET** /companies/{identifier}/news | All News by Company
 *intrinioSDK.CompanyApi* | [**getCompanySecurities**](docs/CompanyApi.md#getCompanySecurities) | **GET** /companies/{identifier}/securities | All Securities by Company
 *intrinioSDK.CompanyApi* | [**lookupCompanyFundamental**](docs/CompanyApi.md#lookupCompanyFundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental by Company
@@ -351,6 +348,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseForexPairs](docs/ApiResponseForexPairs.md)
  - [intrinioSDK.ApiResponseForexPrices](docs/ApiResponseForexPrices.md)
  - [intrinioSDK.ApiResponseHistoricalData](docs/ApiResponseHistoricalData.md)
+ - [intrinioSDK.ApiResponseInitialPublicOfferings](docs/ApiResponseInitialPublicOfferings.md)
  - [intrinioSDK.ApiResponseMunicipalities](docs/ApiResponseMunicipalities.md)
  - [intrinioSDK.ApiResponseMunicipalitiyFinancials](docs/ApiResponseMunicipalitiyFinancials.md)
  - [intrinioSDK.ApiResponseNews](docs/ApiResponseNews.md)
@@ -424,6 +422,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.CommodityChannelIndexTechnicalValue](docs/CommodityChannelIndexTechnicalValue.md)
  - [intrinioSDK.Company](docs/Company.md)
  - [intrinioSDK.CompanyFiling](docs/CompanyFiling.md)
+ - [intrinioSDK.CompanyInitialPublicOffering](docs/CompanyInitialPublicOffering.md)
  - [intrinioSDK.CompanyNews](docs/CompanyNews.md)
  - [intrinioSDK.CompanyNewsSummary](docs/CompanyNewsSummary.md)
  - [intrinioSDK.CompanySummary](docs/CompanySummary.md)

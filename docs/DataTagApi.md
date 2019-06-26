@@ -31,7 +31,7 @@ Method | HTTP request | Description
 <a name="getAllDataTags"></a>
 ## **getAllDataTags**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllDataTags_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getAllDataTags_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 <a name="getDataTagById"></a>
 ## **getDataTagById**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getDataTagById_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getDataTagById_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 <a name="searchDataTags"></a>
 ## **searchDataTags**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/searchDataTags_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/searchDataTags_v2)
 
 [//]: # (START_OVERVIEW)
 

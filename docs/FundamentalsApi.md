@@ -32,7 +32,7 @@ Method | HTTP request | Description
 <a name="getFundamentalById"></a>
 ## **getFundamentalById**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getFundamentalById_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getFundamentalById_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 <a name="getFundamentalReportedFinancials"></a>
 ## **getFundamentalReportedFinancials**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getFundamentalReportedFinancials_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getFundamentalReportedFinancials_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 <a name="getFundamentalStandardizedFinancials"></a>
 ## **getFundamentalStandardizedFinancials**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getFundamentalStandardizedFinancials_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getFundamentalStandardizedFinancials_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 #### Standardized Financials
 
 
-Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies fundamentals. For example, it is possible to compare total revenues between two companies as of a certain point in time, or within a single company across multiple time periods. This is not possible using the as reported financial statements because of the inherent complexity of reporting standards.
+Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies&#39; fundamentals.
 
 [//]: # (END_OVERVIEW)
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 <a name="lookupFundamental"></a>
 ## **lookupFundamental**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/lookupFundamental_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/lookupFundamental_v2)
 
 [//]: # (START_OVERVIEW)
 

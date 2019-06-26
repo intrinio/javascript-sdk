@@ -76,7 +76,7 @@ Method | HTTP request | Description
 <a name="getAllSecurities"></a>
 ## **getAllSecurities**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getAllSecurities_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getAllSecurities_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -85,7 +85,7 @@ Method | HTTP request | Description
 #### All Securities
 
 
-Returns all Securities to which you have access.
+Returns all Securities to which you have access. When parameters are specified, returns matching Securities.
 
 [//]: # (END_OVERVIEW)
 
@@ -100,6 +100,22 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 var securityAPI = new intrinioSDK.SecurityApi();
 
 var opts = { 
+  'active': true, // Boolean | When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings).
+  'delisted': false, // Boolean | When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted.
+  'code': null, // String | Return securities classified with the given code (<a href=\"/documentation/security_codes\" target=\"_blank\">reference</a>).
+  'currency': null, // String | Return securities traded in the given 3-digit ISO 4217 currency code (<a href=\"https://en.wikipedia.org/wiki/ISO_4217\" target=\"_blank\">reference</a>).
+  'ticker': null, // String | Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity.
+  'name': null, // String | Return securities with the given text in their name (not case sensitive).
+  'compositeMic': null, // String | Return securities classified under the composite exchange with the given Market Identification Code (MIC). A composite exchange may or may not be a real exchange.  For example, the USCOMP exchange (our only composite exchange to date) is a combination of exchanges with the following MICs: ARCX, XASE, XPOR, FINR, XCIS, XNAS, XNYS, BATS.  This composite grouping is done for user convenience.  At this time, all US securities are classified under the composite exchange with MIC USCOMP.  To query for specific US exchanges, use the exchange_mic parameter below. 
+  'exchangeMic': null, // String | The MIC code of the exchange where the security is actually traded.
+  'stockPricesAfter': null, // Date | Return securities with end-of-day stock prices on or after this date.
+  'stockPricesBefore': null, // Date | Return securities with end-of-day stock prices on or before this date.
+  'cik': null, // String | Return securities belonging to the company with the given Central Index Key (CIK).
+  'figi': null, // String | Return securities with the given Exchange Level FIGI (<a href=\"https://www.openfigi.com/about\" target=\"_blank\">reference</a>).
+  'compositeFigi': null, // String | Return securities with the given Country Composite FIGI (<a href=\"https://www.openfigi.com/about\" target=\"_blank\">reference</a>).
+  'shareClassFigi': null, // String | Return securities with the given Global Share Class FIGI (<a href=\"https://www.openfigi.com/about\" target=\"_blank\">reference</a>).
+  'figiUniqueId': null, // String | Return securities with the given FIGI Unique ID (<a href=\"https://www.openfigi.com/about\" target=\"_blank\">reference</a>).
+  'includeNonFigi': false, // Boolean | When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned.
   'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
@@ -120,6 +136,22 @@ securityAPI.getAllSecurities(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **active** | Boolean| When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). | [optional]  &nbsp;
+ **delisted** | Boolean| When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. | [optional]  &nbsp;
+ **code** | String| Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). | [optional]  &nbsp;
+ **currency** | String| Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). | [optional]  &nbsp;
+ **ticker** | String| Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. | [optional]  &nbsp;
+ **name** | String| Return securities with the given text in their name (not case sensitive). | [optional]  &nbsp;
+ **compositeMic** | String| Return securities classified under the composite exchange with the given Market Identification Code (MIC). A composite exchange may or may not be a real exchange.  For example, the USCOMP exchange (our only composite exchange to date) is a combination of exchanges with the following MICs: ARCX, XASE, XPOR, FINR, XCIS, XNAS, XNYS, BATS.  This composite grouping is done for user convenience.  At this time, all US securities are classified under the composite exchange with MIC USCOMP.  To query for specific US exchanges, use the exchange_mic parameter below.  | [optional]  &nbsp;
+ **exchangeMic** | String| The MIC code of the exchange where the security is actually traded. | [optional]  &nbsp;
+ **stockPricesAfter** | Date| Return securities with end-of-day stock prices on or after this date. | [optional]  &nbsp;
+ **stockPricesBefore** | Date| Return securities with end-of-day stock prices on or before this date. | [optional]  &nbsp;
+ **cik** | String| Return securities belonging to the company with the given Central Index Key (CIK). | [optional]  &nbsp;
+ **figi** | String| Return securities with the given Exchange Level FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). | [optional]  &nbsp;
+ **compositeFigi** | String| Return securities with the given Country Composite FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). | [optional]  &nbsp;
+ **shareClassFigi** | String| Return securities with the given Global Share Class FIGI (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). | [optional]  &nbsp;
+ **figiUniqueId** | String| Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). | [optional]  &nbsp;
+ **includeNonFigi** | Boolean| When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. | [optional] [default to false] &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
@@ -156,7 +188,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityById"></a>
 ## **getSecurityById**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityById_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityById_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -233,7 +265,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityDataPointNumber"></a>
 ## **getSecurityDataPointNumber**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityDataPointNumber_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityDataPointNumber_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -313,7 +345,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityDataPointText"></a>
 ## **getSecurityDataPointText**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityDataPointText_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityDataPointText_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -393,7 +425,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityHistoricalData"></a>
 ## **getSecurityHistoricalData**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityHistoricalData_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityHistoricalData_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -489,7 +521,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityIntradayPrices"></a>
 ## **getSecurityIntradayPrices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityIntradayPrices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityIntradayPrices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -578,7 +610,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityLatestDividendRecord"></a>
 ## **getSecurityLatestDividendRecord**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityLatestDividendRecord_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityLatestDividendRecord_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -655,7 +687,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityLatestEarningsRecord"></a>
 ## **getSecurityLatestEarningsRecord**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityLatestEarningsRecord_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityLatestEarningsRecord_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -732,7 +764,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsAdi"></a>
 ## **getSecurityPriceTechnicalsAdi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsAdi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsAdi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -819,7 +851,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsAdtv"></a>
 ## **getSecurityPriceTechnicalsAdtv**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsAdtv_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsAdtv_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -908,7 +940,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsAdx"></a>
 ## **getSecurityPriceTechnicalsAdx**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsAdx_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsAdx_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -997,7 +1029,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsAo"></a>
 ## **getSecurityPriceTechnicalsAo**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsAo_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsAo_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1088,7 +1120,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsAtr"></a>
 ## **getSecurityPriceTechnicalsAtr**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsAtr_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsAtr_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1177,7 +1209,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsBb"></a>
 ## **getSecurityPriceTechnicalsBb**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsBb_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsBb_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1270,7 +1302,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsCci"></a>
 ## **getSecurityPriceTechnicalsCci**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsCci_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsCci_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1361,7 +1393,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsCmf"></a>
 ## **getSecurityPriceTechnicalsCmf**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsCmf_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsCmf_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1450,7 +1482,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsDc"></a>
 ## **getSecurityPriceTechnicalsDc**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsDc_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsDc_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1541,7 +1573,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsDpo"></a>
 ## **getSecurityPriceTechnicalsDpo**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsDpo_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsDpo_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1632,7 +1664,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsEom"></a>
 ## **getSecurityPriceTechnicalsEom**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsEom_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsEom_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1721,7 +1753,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsFi"></a>
 ## **getSecurityPriceTechnicalsFi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsFi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsFi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1808,7 +1840,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsIchimoku"></a>
 ## **getSecurityPriceTechnicalsIchimoku**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsIchimoku_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsIchimoku_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1901,7 +1933,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsKc"></a>
 ## **getSecurityPriceTechnicalsKc**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsKc_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsKc_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -1990,7 +2022,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsKst"></a>
 ## **getSecurityPriceTechnicalsKst**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsKst_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsKst_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2095,7 +2127,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsMacd"></a>
 ## **getSecurityPriceTechnicalsMacd**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsMacd_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsMacd_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2190,7 +2222,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsMfi"></a>
 ## **getSecurityPriceTechnicalsMfi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsMfi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsMfi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2279,7 +2311,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsMi"></a>
 ## **getSecurityPriceTechnicalsMi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsMi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsMi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2370,7 +2402,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsNvi"></a>
 ## **getSecurityPriceTechnicalsNvi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsNvi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsNvi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2457,7 +2489,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsObv"></a>
 ## **getSecurityPriceTechnicalsObv**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsObv_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsObv_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2544,7 +2576,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsObvMean"></a>
 ## **getSecurityPriceTechnicalsObvMean**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsObvMean_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsObvMean_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2633,7 +2665,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsRsi"></a>
 ## **getSecurityPriceTechnicalsRsi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsRsi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsRsi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2724,7 +2756,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsSma"></a>
 ## **getSecurityPriceTechnicalsSma**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsSma_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsSma_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2815,7 +2847,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsSr"></a>
 ## **getSecurityPriceTechnicalsSr**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsSr_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsSr_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2906,7 +2938,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsTrix"></a>
 ## **getSecurityPriceTechnicalsTrix**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsTrix_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsTrix_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -2995,7 +3027,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsTsi"></a>
 ## **getSecurityPriceTechnicalsTsi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsTsi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsTsi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3088,7 +3120,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsUo"></a>
 ## **getSecurityPriceTechnicalsUo**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsUo_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsUo_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3187,7 +3219,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsVi"></a>
 ## **getSecurityPriceTechnicalsVi**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsVi_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsVi_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3276,7 +3308,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsVpt"></a>
 ## **getSecurityPriceTechnicalsVpt**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsVpt_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsVpt_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3363,7 +3395,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsVwap"></a>
 ## **getSecurityPriceTechnicalsVwap**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsVwap_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsVwap_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3450,7 +3482,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityPriceTechnicalsWr"></a>
 ## **getSecurityPriceTechnicalsWr**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityPriceTechnicalsWr_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityPriceTechnicalsWr_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3539,7 +3571,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityRealtimePrice"></a>
 ## **getSecurityRealtimePrice**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityRealtimePrice_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityRealtimePrice_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3565,7 +3597,7 @@ var securityAPI = new intrinioSDK.SecurityApi();
 var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
-  'source': null // String | Return the realtime price from the specified data source
+  'source': null // String | Return the realtime price from the specified data source. If no source is specified, the best source available is used.
 };
 
 securityAPI.getSecurityRealtimePrice(identifier, opts).then(function(data) {
@@ -3585,7 +3617,7 @@ securityAPI.getSecurityRealtimePrice(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **source** | String| Return the realtime price from the specified data source | [optional]  &nbsp;
+ **source** | String| Return the realtime price from the specified data source. If no source is specified, the best source available is used. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -3620,7 +3652,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityStockPriceAdjustments"></a>
 ## **getSecurityStockPriceAdjustments**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityStockPriceAdjustments_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityStockPriceAdjustments_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3707,7 +3739,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityStockPrices"></a>
 ## **getSecurityStockPrices**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityStockPrices_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityStockPrices_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3796,7 +3828,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityZacksAnalystRatings"></a>
 ## **getSecurityZacksAnalystRatings**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityZacksAnalystRatings_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityZacksAnalystRatings_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3909,7 +3941,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityZacksAnalystRatingsSnapshot"></a>
 ## **getSecurityZacksAnalystRatingsSnapshot**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityZacksAnalystRatingsSnapshot_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityZacksAnalystRatingsSnapshot_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -3990,7 +4022,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityZacksEpsSurprises"></a>
 ## **getSecurityZacksEpsSurprises**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityZacksEpsSurprises_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityZacksEpsSurprises_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4073,7 +4105,7 @@ Name | Type | Description  | Notes
 <a name="getSecurityZacksSalesSurprises"></a>
 ## **getSecurityZacksSalesSurprises**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/getSecurityZacksSalesSurprises_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityZacksSalesSurprises_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4156,7 +4188,7 @@ Name | Type | Description  | Notes
 <a name="screenSecurities"></a>
 ## **screenSecurities**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/screenSecurities_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/screenSecurities_v2)
 
 [//]: # (START_OVERVIEW)
 
@@ -4242,7 +4274,7 @@ Name | Type | Description  | Notes
 <a name="searchSecurities"></a>
 ## **searchSecurities**
 
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/api_v2/searchSecurities_v2)
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/searchSecurities_v2)
 
 [//]: # (START_OVERVIEW)
 
