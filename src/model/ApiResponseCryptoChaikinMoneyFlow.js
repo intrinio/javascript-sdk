@@ -36,7 +36,7 @@
   /**
    * The ApiResponseCryptoChaikinMoneyFlow model module.
    * @module model/ApiResponseCryptoChaikinMoneyFlow
-   * @version 3.2.0
+   * @version 3.3.0
    */
 
   /**

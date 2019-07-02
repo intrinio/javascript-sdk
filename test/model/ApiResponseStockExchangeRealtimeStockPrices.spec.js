@@ -68,6 +68,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property nextPage (base name: "next_page")', function() {
+      // uncomment below and update the code to test the property nextPage
+      //var instane = new intrinioSDK.ApiResponseStockExchangeRealtimeStockPrices();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -36,7 +36,7 @@
   /**
    * The ApiResponseCryptoSnapshot model module.
    * @module model/ApiResponseCryptoSnapshot
-   * @version 3.2.0
+   * @version 3.3.0
    */
 
   /**

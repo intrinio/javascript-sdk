@@ -36,7 +36,7 @@
   /**
    * The EconomicIndex model module.
    * @module model/EconomicIndex
-   * @version 3.2.0
+   * @version 3.3.0
    */
 
   /**

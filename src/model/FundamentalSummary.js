@@ -36,7 +36,7 @@
   /**
    * The FundamentalSummary model module.
    * @module model/FundamentalSummary
-   * @version 3.2.0
+   * @version 3.3.0
    */
 
   /**

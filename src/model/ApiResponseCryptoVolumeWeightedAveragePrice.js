@@ -36,7 +36,7 @@
   /**
    * The ApiResponseCryptoVolumeWeightedAveragePrice model module.
    * @module model/ApiResponseCryptoVolumeWeightedAveragePrice
-   * @version 3.2.0
+   * @version 3.3.0
    */
 
   /**

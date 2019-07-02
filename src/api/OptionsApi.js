@@ -33,7 +33,7 @@
   /**
    * Options service.
    * @module api/OptionsApi
-   * @version 3.2.0
+   * @version 3.3.0
    */
 
   /**
@@ -137,6 +137,7 @@
      * @param {String} symbol The option symbol, corresponding to the underlying security.
      * @param {String} expiration The expiration date of the options contract
      * @param {Object} opts Optional parameters
+     * @param {Date} opts._date The date of the option price. Returns option prices on this date.
      * @param {module:model/String} opts.type The option contract type.
      * @param {Number} opts.strike The strike price of the option contract. This will return options contracts with strike price equal to this price.
      * @param {Number} opts.strikeGreaterThan The strike price of the option contract. This will return options contracts with strike prices greater than this price.
@@ -165,6 +166,7 @@
         'expiration': expiration
       };
       var queryParams = {
+        'date': opts['_date'],
         'type': opts['type'],
         'strike': opts['strike'],
         'strike_greater_than': opts['strikeGreaterThan'],
@@ -197,6 +199,7 @@
      * @param {String} symbol The option symbol, corresponding to the underlying security.
      * @param {String} expiration The expiration date of the options contract
      * @param {Object} opts Optional parameters
+     * @param {Date} opts._date The date of the option price. Returns option prices on this date.
      * @param {module:model/String} opts.type The option contract type.
      * @param {Number} opts.strike The strike price of the option contract. This will return options contracts with strike price equal to this price.
      * @param {Number} opts.strikeGreaterThan The strike price of the option contract. This will return options contracts with strike prices greater than this price.

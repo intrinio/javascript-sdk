@@ -13,6 +13,7 @@ Name | Type | Description
 ------------ | ------------- | -------------
 **stockPrices** | [**[RealtimeStockPrice]**](RealtimeStockPrice.md) | The realtime stock prices for all Securities traded on the Stock Exchange &nbsp;
 **stockExchange** | [**StockExchange**](StockExchange.md) | The Stock Exchange resolved from the given identifier &nbsp;
+**nextPage** | String | The token required to request the next page of the data &nbsp;
 
 [//]: # (END_DEFINITION)
 

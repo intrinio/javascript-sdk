@@ -762,6 +762,12 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 var companyAPI = new intrinioSDK.CompanyApi();
 
 var opts = { 
+  'ticker': null, // String | Return IPOs with the given ticker (typically the IPO for the company)
+  'status': null, // String | Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand
+  'startDate': null, // Date | Return IPOs on or after the given date
+  'endDate': null, // Date | Return IPOs on or before the given date
+  'offerAmountGreaterThan': null, // Number | Return IPOs with an offer dollar amount greater than the given amount
+  'offerAmountLessThan': null, // Number | Return IPOs with an offer dollar amount less than the given amount
   'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
@@ -782,6 +788,12 @@ companyAPI.getCompanyIpos(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **ticker** | String| Return IPOs with the given ticker (typically the IPO for the company) | [optional]  &nbsp;
+ **status** | String| Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand | [optional]  &nbsp;
+ **startDate** | Date| Return IPOs on or after the given date | [optional]  &nbsp;
+ **endDate** | Date| Return IPOs on or before the given date | [optional]  &nbsp;
+ **offerAmountGreaterThan** | Number| Return IPOs with an offer dollar amount greater than the given amount | [optional]  &nbsp;
+ **offerAmountLessThan** | Number| Return IPOs with an offer dollar amount less than the given amount | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>

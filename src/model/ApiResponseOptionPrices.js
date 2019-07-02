@@ -36,7 +36,7 @@
   /**
    * The ApiResponseOptionPrices model module.
    * @module model/ApiResponseOptionPrices
-   * @version 3.2.0
+   * @version 3.3.0
    */
 
   /**

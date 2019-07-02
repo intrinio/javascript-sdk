@@ -36,7 +36,7 @@
   /**
    * The ApiResponseCryptoEaseOfMovement model module.
    * @module model/ApiResponseCryptoEaseOfMovement
-   * @version 3.2.0
+   * @version 3.3.0
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The CryptoAsk model module.
    * @module model/CryptoAsk
-   * @version 3.2.0
+   * @version 3.3.0
    */
 
   /**

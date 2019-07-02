@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecuritySimpleMovingAverage model module.
    * @module model/ApiResponseSecuritySimpleMovingAverage
-   * @version 3.2.0
+   * @version 3.3.0
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The ApiResponseStockExchangeRealtimeStockPrices model module.
    * @module model/ApiResponseStockExchangeRealtimeStockPrices
-   * @version 3.2.0
+   * @version 3.3.0
    */
 
   /**
@@ -46,6 +46,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -68,6 +69,9 @@
       if (data.hasOwnProperty('stock_exchange')) {
         obj['stock_exchange'] = StockExchange.constructFromObject(data['stock_exchange']);
       }
+      if (data.hasOwnProperty('next_page')) {
+        obj['next_page'] = ApiClient.convertToType(data['next_page'], 'String');
+      }
     }
     return obj;
   }
@@ -82,6 +86,11 @@
    * @member {module:model/StockExchange} stock_exchange
    */
   exports.prototype['stock_exchange'] = undefined;
+  /**
+   * The token required to request the next page of the data
+   * @member {String} next_page
+   */
+  exports.prototype['next_page'] = undefined;
 
 
 

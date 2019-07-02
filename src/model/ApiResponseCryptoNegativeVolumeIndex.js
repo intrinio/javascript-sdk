@@ -36,7 +36,7 @@
   /**
    * The ApiResponseCryptoNegativeVolumeIndex model module.
    * @module model/ApiResponseCryptoNegativeVolumeIndex
-   * @version 3.2.0
+   * @version 3.3.0
    */
 
   /**

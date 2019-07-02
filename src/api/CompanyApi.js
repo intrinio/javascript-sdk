@@ -33,7 +33,7 @@
   /**
    * Company service.
    * @module api/CompanyApi
-   * @version 3.2.0
+   * @version 3.3.0
    */
 
   /**
@@ -601,6 +601,12 @@
      * IPOs
      * Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
      * @param {Object} opts Optional parameters
+     * @param {String} opts.ticker Return IPOs with the given ticker (typically the IPO for the company)
+     * @param {module:model/String} opts.status Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand
+     * @param {Date} opts.startDate Return IPOs on or after the given date
+     * @param {Date} opts.endDate Return IPOs on or before the given date
+     * @param {Number} opts.offerAmountGreaterThan Return IPOs with an offer dollar amount greater than the given amount
+     * @param {Number} opts.offerAmountLessThan Return IPOs with an offer dollar amount less than the given amount
      * @param {Number} opts.pageSize The number of results to return (default to 100)
      * @param {String} opts.nextPage Gets the next page of data from a previous API call
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ApiResponseInitialPublicOfferings} and HTTP response
@@ -613,6 +619,12 @@
       var pathParams = {
       };
       var queryParams = {
+        'ticker': opts['ticker'],
+        'status': opts['status'],
+        'start_date': opts['startDate'],
+        'end_date': opts['endDate'],
+        'offer_amount_greater_than': opts['offerAmountGreaterThan'],
+        'offer_amount_less_than': opts['offerAmountLessThan'],
         'page_size': opts['pageSize'],
         'next_page': opts['nextPage'],
       };
@@ -639,6 +651,12 @@
      * IPOs
      * Returns initial public offerings (IPOs). An IPO is a public offering of private company stock. The act of \&quot;going public\&quot; is initiated by an IPO, at which point the company&#39;s stock trades on a major stock exchange (such as NYSE or NASDAQ). Intrinio covers all upcoming and recent IPOs for US exchanges.
      * @param {Object} opts Optional parameters
+     * @param {String} opts.ticker Return IPOs with the given ticker (typically the IPO for the company)
+     * @param {module:model/String} opts.status Return IPOs with the given status. Upcoming IPOs are scheduled to occur in the future. Priced IPOs have occured and the company should be trading publicly. Withdrawn IPOs were planned to occurr but were withdrawn beforehand
+     * @param {Date} opts.startDate Return IPOs on or after the given date
+     * @param {Date} opts.endDate Return IPOs on or before the given date
+     * @param {Number} opts.offerAmountGreaterThan Return IPOs with an offer dollar amount greater than the given amount
+     * @param {Number} opts.offerAmountLessThan Return IPOs with an offer dollar amount less than the given amount
      * @param {Number} opts.pageSize The number of results to return (default to 100)
      * @param {String} opts.nextPage Gets the next page of data from a previous API call
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ApiResponseInitialPublicOfferings}

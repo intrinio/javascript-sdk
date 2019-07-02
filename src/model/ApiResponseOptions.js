@@ -36,7 +36,7 @@
   /**
    * The ApiResponseOptions model module.
    * @module model/ApiResponseOptions
-   * @version 3.2.0
+   * @version 3.3.0
    */
 
   /**

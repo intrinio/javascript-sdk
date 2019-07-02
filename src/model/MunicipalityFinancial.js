@@ -36,7 +36,7 @@
   /**
    * The MunicipalityFinancial model module.
    * @module model/MunicipalityFinancial
-   * @version 3.2.0
+   * @version 3.3.0
    */
 
   /**

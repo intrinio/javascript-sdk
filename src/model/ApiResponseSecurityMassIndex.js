@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityMassIndex model module.
    * @module model/ApiResponseSecurityMassIndex
-   * @version 3.2.0
+   * @version 3.3.0
    */
 
   /**

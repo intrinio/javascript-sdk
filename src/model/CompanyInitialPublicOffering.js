@@ -36,7 +36,7 @@
   /**
    * The CompanyInitialPublicOffering model module.
    * @module model/CompanyInitialPublicOffering
-   * @version 3.2.0
+   * @version 3.3.0
    */
 
   /**

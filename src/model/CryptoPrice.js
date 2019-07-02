@@ -36,7 +36,7 @@
   /**
    * The CryptoPrice model module.
    * @module model/CryptoPrice
-   * @version 3.2.0
+   * @version 3.3.0
    */
 
   /**

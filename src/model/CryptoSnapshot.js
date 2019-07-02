@@ -36,7 +36,7 @@
   /**
    * The CryptoSnapshot model module.
    * @module model/CryptoSnapshot
-   * @version 3.2.0
+   * @version 3.3.0
    */
 
   /**
