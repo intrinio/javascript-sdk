@@ -4216,7 +4216,7 @@ var opts = {
   'orderColumn': "orderColumn_example", // String | Results returned sorted by this column
   'orderDirection': "asc", // String | Sort order to use with the order_column
   'primaryOnly': false, // Boolean | Return only primary securities
-  'pageSize': 100 // Number | The number of results to return
+  'pageSize': 100 // Number | The number of results to return. Maximum for this endpoint is 50000.
 };
 
 securityAPI.screenSecurities(opts).then(function(data) {
@@ -4239,7 +4239,7 @@ Name | Type | Description  | Notes
  **orderColumn** | String| Results returned sorted by this column | [optional]  &nbsp;
  **orderDirection** | String| Sort order to use with the order_column | [optional] [default to asc] &nbsp;
  **primaryOnly** | Boolean| Return only primary securities | [optional] [default to false] &nbsp;
- **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **pageSize** | Number| The number of results to return. Maximum for this endpoint is 50000. | [optional] [default to 100] &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

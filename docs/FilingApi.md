@@ -647,8 +647,7 @@ var query = "inflation"; // String | Search for notes that contain all or parts 
 var opts = { 
   'filingStartDate': new Date("2018-07-15"), // Date | Limit search to filings on or after this date
   'filingEndDate': new Date("2018-11-30"), // Date | Limit search to filings on or before this date
-  'pageSize': 100, // Number | The number of results to return
-  'pageSize2': 100 // Number | The number of results to return
+  'pageSize': 100 // Number | The number of results to return
 };
 
 filingAPI.searchNotes(query, opts).then(function(data) {
@@ -671,7 +670,6 @@ Name | Type | Description  | Notes
  **filingStartDate** | Date| Limit search to filings on or after this date | [optional]  &nbsp;
  **filingEndDate** | Date| Limit search to filings on or before this date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
- **pageSize2** | Number| The number of results to return | [optional] [default to 100] &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
