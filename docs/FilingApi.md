@@ -62,7 +62,7 @@ var filingAPI = new intrinioSDK.FilingApi();
 var company = "AAPL"; // String | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
-  'reportType': null, // String | Filter by report type. Separate values with commas to return multiple The filing <a href=\"/documentation/sec_filing_report_types\" target=\"_blank\">report types</a>.
+  'reportType': null, // String | Filter by report type. Separate values with commas to return multiple The filing <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report types</a>.
   'startDate': new Date("2015-01-01"), // Date | Filed on or after the given date
   'endDate': null, // Date | Filed before or after the given date
   'pageSize': 100, // Number | The number of results to return
@@ -86,7 +86,7 @@ filingAPI.getAllFilings(company, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company** | String| Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **reportType** | String| Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. | [optional]  &nbsp;
+ **reportType** | String| Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. | [optional]  &nbsp;
  **startDate** | Date| Filed on or after the given date | [optional]  &nbsp;
  **endDate** | Date| Filed before or after the given date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
@@ -150,11 +150,11 @@ var filingAPI = new intrinioSDK.FilingApi();
 
 var opts = { 
   'company': "AAPL", // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-  'reportType': "10-Q", // String | Notes contained in filings that match the given <a href=\"/documentation/sec_filing_report_types\" target=\"_blank\">report type</a>
-  'filingStartDate': new Date("2018-07-15"), // Date | Limit search to filings on or after this date
-  'filingEndDate': new Date("2018-11-15"), // Date | Limit search to filings on or before this date
-  'periodEndedStartDate': new Date("2018-07-15"), // Date | Limit search to filings with a period end date on or after this date
-  'periodEndedEndDate': new Date("2018-11-15"), // Date | Limit search to filings with a period end date on or before this date
+  'reportType': "10-Q", // String | Notes contained in filings that match the given <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report type</a>
+  'filingStartDate': null, // Date | Limit search to filings on or after this date
+  'filingEndDate': null, // Date | Limit search to filings on or before this date
+  'periodEndedStartDate': null, // Date | Limit search to filings with a period end date on or after this date
+  'periodEndedEndDate': null, // Date | Limit search to filings with a period end date on or before this date
   'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
@@ -176,7 +176,7 @@ filingAPI.getAllNotes(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **company** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
- **reportType** | String| Notes contained in filings that match the given &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; | [optional]  &nbsp;
+ **reportType** | String| Notes contained in filings that match the given &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt; | [optional]  &nbsp;
  **filingStartDate** | Date| Limit search to filings on or after this date | [optional]  &nbsp;
  **filingEndDate** | Date| Limit search to filings on or before this date | [optional]  &nbsp;
  **periodEndedStartDate** | Date| Limit search to filings with a period end date on or after this date | [optional]  &nbsp;
@@ -409,7 +409,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var filingAPI = new intrinioSDK.FilingApi();
 
-var identifier = "xbn_3fghz"; // String | The Intrinio ID of the filing note
+var identifier = "xbn_ydK3QL"; // String | The Intrinio ID of the filing note
 
 var opts = { 
   'contentFormat': "text" // String | Returns content in html (as filed) or plain text
@@ -489,7 +489,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var filingAPI = new intrinioSDK.FilingApi();
 
-var identifier = "xbn_3fghz"; // String | The Intrinio ID of the filing note
+var identifier = "xbn_ydK3QL"; // String | The Intrinio ID of the filing note
 
 
 filingAPI.getNoteHtml(identifier).then(function(data) {
@@ -565,7 +565,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var filingAPI = new intrinioSDK.FilingApi();
 
-var identifier = "xbn_3fghz"; // String | The Intrinio ID of the filing note
+var identifier = "xbn_ydK3QL"; // String | The Intrinio ID of the filing note
 
 
 filingAPI.getNoteText(identifier).then(function(data) {

@@ -14,7 +14,7 @@ Name | Type | Description
 **intradayPrices** | [**[IntradayStockPrice]**](IntradayStockPrice.md) | The intraday stock prices for the Security &nbsp;
 **security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier &nbsp;
 **source** | String | The source of the data &nbsp;
-**nextPage** | String | The token required to request the next page of the data &nbsp;
+**nextPage** | String | The token required to request the next page of the data. If null, no further results are available. &nbsp;
 
 [//]: # (END_DEFINITION)
 

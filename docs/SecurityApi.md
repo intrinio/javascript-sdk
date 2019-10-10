@@ -102,7 +102,7 @@ var securityAPI = new intrinioSDK.SecurityApi();
 var opts = { 
   'active': true, // Boolean | When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings).
   'delisted': false, // Boolean | When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted.
-  'code': null, // String | Return securities classified with the given code (<a href=\"/documentation/security_codes\" target=\"_blank\">reference</a>).
+  'code': null, // String | Return securities classified with the given code (<a href=\"https://docs.intrinio.com/documentation/security_codes\" target=\"_blank\">reference</a>).
   'currency': null, // String | Return securities traded in the given 3-digit ISO 4217 currency code (<a href=\"https://en.wikipedia.org/wiki/ISO_4217\" target=\"_blank\">reference</a>).
   'ticker': null, // String | Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity.
   'name': null, // String | Return securities with the given text in their name (not case sensitive).
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **active** | Boolean| When true, return securities that are active. When false, return securities that are not active. A security is considered active if it has traded or has had a corporate action in the past 30 days, and has not been merged into another security (such as due to ticker changes or corporate restructurings). | [optional]  &nbsp;
  **delisted** | Boolean| When true, return securities that have been delisted from their exchange. Note that there may be a newer security for the same company that has been relisted on a differente exchange. When false, return securities that have not been delisted. | [optional]  &nbsp;
- **code** | String| Return securities classified with the given code (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). | [optional]  &nbsp;
+ **code** | String| Return securities classified with the given code (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). | [optional]  &nbsp;
  **currency** | String| Return securities traded in the given 3-digit ISO 4217 currency code (&lt;a href&#x3D;\&quot;https://en.wikipedia.org/wiki/ISO_4217\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). | [optional]  &nbsp;
  **ticker** | String| Return securities traded with the given ticker. Note that securities across the world (and through time) may trade with the same ticker but represent different companies. Use this in conjuction with other parameters for more specificity. | [optional]  &nbsp;
  **name** | String| Return securities with the given text in their name (not case sensitive). | [optional]  &nbsp;
@@ -548,10 +548,12 @@ var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, 
 
 var opts = { 
   'source': null, // String | Return intraday prices from the specified data source
-  'startDate': new Date("2018-01-01"), // Date | Return intraday prices starting at the specified date
-  'startTime': "4200", // String | Return intraday prices starting at the specified time on the `start_date` (timezone is UTC)
-  'endDate': new Date("2018-01-01"), // Date | Return intraday prices stopping at the specified date
-  'endTime': "4200" // String | Return intraday prices stopping at the specified time on the `end_date` (timezone is UTC)
+  'startDate': null, // Date | Return intraday prices starting at the specified date
+  'startTime': null, // String | Return intraday prices starting at the specified time on the `start_date` (timezone is UTC)
+  'endDate': null, // Date | Return intraday prices stopping at the specified date
+  'endTime': null, // String | Return intraday prices stopping at the specified time on the `end_date` (timezone is UTC)
+  'pageSize': 100, // Number | The number of results to return
+  'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
 securityAPI.getSecurityIntradayPrices(identifier, opts).then(function(data) {
@@ -576,6 +578,8 @@ Name | Type | Description  | Notes
  **startTime** | String| Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) | [optional]  &nbsp;
  **endDate** | Date| Return intraday prices stopping at the specified date | [optional]  &nbsp;
  **endTime** | String| Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -4212,8 +4216,8 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 var securityAPI = new intrinioSDK.SecurityApi();
 
 var opts = { 
-  'logic': new intrinioSDK.SecurityScreenGroup(), // SecurityScreenGroup | The logic to screen with, consisting of operators, clauses, and nested groups.<br/> See <a href=\"/documentation/screener_v2\" target=\"_blank\">screener documentation</a> for details on how to construct conditions.
-  'orderColumn': "orderColumn_example", // String | Results returned sorted by this column
+  'logic': new intrinioSDK.SecurityScreenGroup(), // SecurityScreenGroup | The logic to screen with, consisting of operators, clauses, and nested groups.<br/> See <a href=\"https://docs.intrinio.com/documentation/screener_v2\" target=\"_blank\">screener documentation</a> for details on how to construct conditions.
+  'orderColumn': "marketcap", // String | Results returned sorted by this column
   'orderDirection': "asc", // String | Sort order to use with the order_column
   'primaryOnly': false, // Boolean | Return only primary securities
   'pageSize': 100 // Number | The number of results to return. Maximum for this endpoint is 50000.
@@ -4235,7 +4239,7 @@ securityAPI.screenSecurities(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **logic** | [**SecurityScreenGroup**](SecurityScreenGroup.md)| The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. | [optional]  &nbsp;
+ **logic** | [**SecurityScreenGroup**](SecurityScreenGroup.md)| The logic to screen with, consisting of operators, clauses, and nested groups.&lt;br/&gt; See &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/screener_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;screener documentation&lt;/a&gt; for details on how to construct conditions. | [optional]  &nbsp;
  **orderColumn** | String| Results returned sorted by this column | [optional]  &nbsp;
  **orderDirection** | String| Sort order to use with the order_column | [optional] [default to asc] &nbsp;
  **primaryOnly** | Boolean| Return only primary securities | [optional] [default to false] &nbsp;

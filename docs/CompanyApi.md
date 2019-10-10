@@ -480,7 +480,7 @@ var companyAPI = new intrinioSDK.CompanyApi();
 var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
 
 var opts = { 
-  'reportType': null, // String | Filter by <a href=\"/documentation/sec_filing_report_types\" target=\"_blank\">report type</a>. Separate values with commas to return multiple report types.
+  'reportType': null, // String | Filter by <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report type</a>. Separate values with commas to return multiple report types.
   'startDate': new Date("2015-01-01"), // Date | Filed on or after the given date
   'endDate': null, // Date | Filed before or after the given date
   'pageSize': 100, // Number | The number of results to return
@@ -504,7 +504,7 @@ companyAPI.getCompanyFilings(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **reportType** | String| Filter by &lt;a href&#x3D;\&quot;/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;. Separate values with commas to return multiple report types. | [optional]  &nbsp;
+ **reportType** | String| Filter by &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;. Separate values with commas to return multiple report types. | [optional]  &nbsp;
  **startDate** | Date| Filed on or after the given date | [optional]  &nbsp;
  **endDate** | Date| Filed before or after the given date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;

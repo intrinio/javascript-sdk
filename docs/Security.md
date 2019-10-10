@@ -15,7 +15,7 @@ Name | Type | Description
 **companyId** | String | The Intrinio ID for the company for which the Security is issued &nbsp;
 **name** | String | The name of the Security &nbsp;
 **type** | String | The Security&#39;s type &nbsp;
-**code** | String | A 2-3 digit code classifying the Security (&lt;a href&#x3D;\&quot;/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;) &nbsp;
+**code** | String | A 2-3 digit code classifying the Security (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/security_codes\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;) &nbsp;
 **shareClass** | String | The Security&#39;s share class (if applicable) &nbsp;
 **currency** | String | The currency in which the Security is traded on the exchange &nbsp;
 **roundLotSize** | Number | The normal unit of trading &nbsp;

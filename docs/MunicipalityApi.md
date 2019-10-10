@@ -55,17 +55,17 @@ var municipalityAPI = new intrinioSDK.MunicipalityApi();
 
 var opts = { 
   'hasFinancials': true, // Boolean | Return municipalities with financials
-  'governmentName': "governmentName_example", // String | Return municipalities with a government name matching the given query
-  'governmentType': "governmentType_example", // String | Return municipalities with the given government type
-  'areaName': "areaName_example", // String | Return municipalities with an area name matching the given query
-  'areaType': "areaType_example", // String | Return municipalities with the given area type
-  'city': "city_example", // String | Return municipalities in the given city
-  'state': "state_example", // String | Return municipalities in the given state
-  'zipcode': 8.14, // Number | Return municipalities in the given zipcode
-  'populationGreaterThan': 8.14, // Number | Return municipalities with a population greater than the given number
-  'populationLessThan': 8.14, // Number | Return municipalities with a population less than the given number
-  'enrollmentGreaterThan': 8.14, // Number | Return municipalities with an enrollment greater than the given number
-  'enrollmentLessThan': 8.14, // Number | Return municipalities with an enrollment less than the given number
+  'governmentName': null, // String | Return municipalities with a government name matching the given query
+  'governmentType': null, // String | Return municipalities with the given government type
+  'areaName': null, // String | Return municipalities with an area name matching the given query
+  'areaType': null, // String | Return municipalities with the given area type
+  'city': null, // String | Return municipalities in the given city
+  'state': null, // String | Return municipalities in the given state
+  'zipcode': null, // Number | Return municipalities in the given zipcode
+  'populationGreaterThan': null, // Number | Return municipalities with a population greater than the given number
+  'populationLessThan': null, // Number | Return municipalities with a population less than the given number
+  'enrollmentGreaterThan': null, // Number | Return municipalities with an enrollment greater than the given number
+  'enrollmentLessThan': null, // Number | Return municipalities with an enrollment less than the given number
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
 
@@ -235,7 +235,7 @@ var municipalityAPI = new intrinioSDK.MunicipalityApi();
 var id = "mun_Xn7x4z"; // String | An Intrinio ID of a Municipality
 
 var opts = { 
-  'fiscalYear': 8.14 // Number | Return financials for the given fiscal year
+  'fiscalYear': 2017 // Number | Return financials for the given fiscal year
 };
 
 municipalityAPI.getMunicipalityFinancials(id, opts).then(function(data) {

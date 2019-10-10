@@ -13,7 +13,7 @@ Name | Type | Description
 ------------ | ------------- | -------------
 **fundamentals** | [**[FundamentalSummary]**](FundamentalSummary.md) |  &nbsp;
 **filing** | [**FilingSummary**](FilingSummary.md) |  &nbsp;
-**nextPage** | String | The token required to request the next page of the data &nbsp;
+**nextPage** | String | The token required to request the next page of the data. If null, no further results are available. &nbsp;
 
 [//]: # (END_DEFINITION)
 

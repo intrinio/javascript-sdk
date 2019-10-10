@@ -58,9 +58,9 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
 
 var opts = { 
-  'city': "city_example", // String | Filter by city
-  'country': "CHINA", // String | Filter by country
-  'countryCode': "countryCode_example", // String | Filter by ISO country code
+  'city': "New York", // String | Filter by city
+  'country': "UNITED STATES OF AMERICA", // String | Filter by country
+  'countryCode': "US", // String | Filter by ISO country code
   'pageSize': 100 // Number | The number of results to return
 };
 
