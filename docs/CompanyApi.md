@@ -65,7 +65,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 var companyAPI = new intrinioSDK.CompanyApi();
 
 var opts = { 
-  'latestFilingDate': null, // Date | Last filing date
+  'latestFilingDate': null, // Date | Return companies whose latest 10-Q or 10-K was filed on or after this date
   'sic': null, // String | Return companies with the given Standard Industrial Classification code
   'template': null, // String | Return companies with the given financial statement template
   'sector': null, // String | Return companies in the given industry sector
@@ -93,7 +93,7 @@ companyAPI.getAllCompanies(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **latestFilingDate** | Date| Last filing date | [optional]  &nbsp;
+ **latestFilingDate** | Date| Return companies whose latest 10-Q or 10-K was filed on or after this date | [optional]  &nbsp;
  **sic** | String| Return companies with the given Standard Industrial Classification code | [optional]  &nbsp;
  **template** | String| Return companies with the given financial statement template | [optional]  &nbsp;
  **sector** | String| Return companies in the given industry sector | [optional]  &nbsp;

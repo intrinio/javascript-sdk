@@ -3971,7 +3971,7 @@ var securityAPI = new intrinioSDK.SecurityApi();
 var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
-  '_date': null // String | Lookup a historical snapshot on the given date
+  'date': null // String | Lookup a historical snapshot on the given date
 };
 
 securityAPI.getSecurityZacksAnalystRatingsSnapshot(identifier, opts).then(function(data) {
@@ -3991,7 +3991,7 @@ securityAPI.getSecurityZacksAnalystRatingsSnapshot(identifier, opts).then(functi
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **_date** | String| Lookup a historical snapshot on the given date | [optional]  &nbsp;
+ **date** | String| Lookup a historical snapshot on the given date | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

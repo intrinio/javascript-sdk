@@ -11,7 +11,7 @@
 
 Name | Type | Description
 ------------ | ------------- | -------------
-**_date** | String | The date of the price, in the format YYYY-MM-DD &nbsp;
+**date** | String | The date of the price, in the format YYYY-MM-DD &nbsp;
 **close** | Number | The closing price of the options contract. &nbsp;
 **closeBid** | Number | The closing bid price of the options contract. &nbsp;
 **closeAsk** | Number | The closing ask price of the options contract. &nbsp;

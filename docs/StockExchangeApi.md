@@ -221,7 +221,7 @@ var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
 var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 var opts = { 
-  '_date': new Date("2018-08-14"), // Date | The date for which to return price adjustments
+  'date': new Date("2018-08-14"), // Date | The date for which to return price adjustments
   'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
@@ -243,7 +243,7 @@ stockExchangeAPI.getStockExchangePriceAdjustments(identifier, opts).then(functio
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
- **_date** | Date| The date for which to return price adjustments | [optional]  &nbsp;
+ **date** | Date| The date for which to return price adjustments | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
@@ -306,7 +306,7 @@ var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
 var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
 
 var opts = { 
-  '_date': new Date("2018-08-14"), // Date | The date for which to return prices
+  'date': new Date("2018-08-14"), // Date | The date for which to return prices
   'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
@@ -328,7 +328,7 @@ stockExchangeAPI.getStockExchangePrices(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
- **_date** | Date| The date for which to return prices | [optional]  &nbsp;
+ **date** | Date| The date for which to return prices | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>

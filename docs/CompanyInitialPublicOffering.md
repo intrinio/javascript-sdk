@@ -13,7 +13,7 @@ Name | Type | Description
 ------------ | ------------- | -------------
 **id** | String | The Intrinio ID for the IPO &nbsp;
 **ticker** | String | The ticker under which the Company will be traded after the IPO takes place &nbsp;
-**_date** | Date | The date of the IPO, when the stock first trades on a major exchange &nbsp;
+**date** | Date | The date of the IPO, when the stock first trades on a major exchange &nbsp;
 **status** | String | The status of the IPO. Upcoming IPOs have not taken place yet but are expected to. Priced IPOs have taken place. Withdrawn IPOs were expected to take place, but were subsequently withdrawn and did not take place &nbsp;
 **exchange** | String | The acronym of the stock exchange that the company is going to trade publicly on. Typically NYSE or NASDAQ &nbsp;
 **offerAmount** | Number | The total dollar amount of shares offered in the IPO. Typically this is share price * share count &nbsp;

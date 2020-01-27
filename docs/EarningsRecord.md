@@ -33,6 +33,7 @@ Name | Type | Description
 **nextEarningsDate** | Date | Next earnings date &nbsp;
 **nextEarningsQuarter** | String | The quarter of the next earnings release &nbsp;
 **nextEarningsFiscalYear** | Number | The fiscal year associated with next earnings date and next earnings quarter &nbsp;
+**preliminaryEarningsDate** | Date | The release date of a preliminary earnings report &nbsp;
 **security** | [**SecuritySummary**](SecuritySummary.md) |  &nbsp;
 
 [//]: # (END_DEFINITION)

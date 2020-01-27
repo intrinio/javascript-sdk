@@ -11,7 +11,7 @@
 
 Name | Type | Description
 ------------ | ------------- | -------------
-**_date** | Date | The date that the value is present &nbsp;
+**date** | Date | The date that the value is present &nbsp;
 **value** | Number | The historical value &nbsp;
 
 [//]: # (END_DEFINITION)

@@ -157,7 +157,7 @@ var symbol = "MSFT"; // String | The option symbol, corresponding to the underly
 var expiration = "2019-04-05"; // String | The expiration date of the options contract
 
 var opts = { 
-  '_date': new Date("2019-04-05"), // Date | The date of the option price. Returns option prices on this date.
+  'date': new Date("2019-04-05"), // Date | The date of the option price. Returns option prices on this date.
   'type': "put", // String | The option contract type.
   'strike': 170.0, // Number | The strike price of the option contract. This will return options contracts with strike price equal to this price.
   'strikeGreaterThan': 190.0, // Number | The strike price of the option contract. This will return options contracts with strike prices greater than this price.
@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | String| The option symbol, corresponding to the underlying security. |  &nbsp;
  **expiration** | String| The expiration date of the options contract |  &nbsp;
- **_date** | Date| The date of the option price. Returns option prices on this date. | [optional]  &nbsp;
+ **date** | Date| The date of the option price. Returns option prices on this date. | [optional]  &nbsp;
  **type** | String| The option contract type. | [optional]  &nbsp;
  **strike** | Number| The strike price of the option contract. This will return options contracts with strike price equal to this price. | [optional]  &nbsp;
  **strikeGreaterThan** | Number| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;
@@ -331,7 +331,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var optionsAPI = new intrinioSDK.OptionsApi();
 
-var identifier = "null"; // String | The Intrinio ID or code of the options contract to request prices for.
+var identifier = "identifier_example"; // String | The Intrinio ID or code of the options contract to request prices for.
 
 var opts = { 
   'startDate': "2019-01-01", // String | Return option contract prices on or after this date.
