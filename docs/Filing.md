@@ -20,6 +20,9 @@ Name | Type | Description
 **filingUrl** | String | The URL to the filing page on the SEC site &nbsp;
 **reportUrl** | String | The URL to the actual report on the SEC site &nbsp;
 **instanceUrl** | String | The URL for the XBRL filing for the report &nbsp;
+**industryCategory** | String | The company&#39;s operating industry category &nbsp;
+**industryGroup** | String | The company&#39;s operating industry group &nbsp;
+**wordCount** | Number | The number of words in the filing &nbsp;
 **company** | [**CompanySummary**](CompanySummary.md) |  &nbsp;
 
 [//]: # (END_DEFINITION)

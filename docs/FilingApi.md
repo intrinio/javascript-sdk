@@ -8,6 +8,8 @@ Method | HTTP request | Description
 [**getAllNotes**](FilingApi.md#getAllNotes) | **GET** /filings/notes | All Filing Notes
 [**getFilingById**](FilingApi.md#getFilingById) | **GET** /filings/{id} | Lookup Filing
 [**getFilingFundamentals**](FilingApi.md#getFilingFundamentals) | **GET** /filings/{identifier}/fundamentals | All Fundamentals by Filing
+[**getFilingHtml**](FilingApi.md#getFilingHtml) | **GET** /filings/{identifier}/html | Filing Html
+[**getFilingText**](FilingApi.md#getFilingText) | **GET** /filings/{identifier}/text | Filing Text
 [**getNote**](FilingApi.md#getNote) | **GET** /filings/notes/{identifier} | Filing Note by ID
 [**getNoteHtml**](FilingApi.md#getNoteHtml) | **GET** /filings/notes/{identifier}/html | Filing Note HTML
 [**getNoteText**](FilingApi.md#getNoteText) | **GET** /filings/notes/{identifier}/text | Filing Note Text
@@ -65,6 +67,8 @@ var opts = {
   'reportType': null, // String | Filter by report type. Separate values with commas to return multiple The filing <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report types</a>.
   'startDate': new Date("2015-01-01"), // Date | Filed on or after the given date
   'endDate': null, // Date | Filed before or after the given date
+  'industryCategory': null, // String | Return companies in the given industry category
+  'industryGroup': null, // String | Return companies in the given industry group
   'pageSize': 100, // Number | The number of results to return
   'nextPage': null // String | Gets the next page of data from a previous API call
 };
@@ -89,6 +93,8 @@ Name | Type | Description  | Notes
  **reportType** | String| Filter by report type. Separate values with commas to return multiple The filing &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report types&lt;/a&gt;. | [optional]  &nbsp;
  **startDate** | Date| Filed on or after the given date | [optional]  &nbsp;
  **endDate** | Date| Filed before or after the given date | [optional]  &nbsp;
+ **industryCategory** | String| Return companies in the given industry category | [optional]  &nbsp;
+ **industryGroup** | String| Return companies in the given industry group | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
@@ -360,6 +366,158 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseFilingFundamentals**](ApiResponseFilingFundamentals.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:FilingApi)
+
+[//]: # (METHOD:getFilingHtml)
+
+[//]: # (RETURN_TYPE:'String')
+
+[//]: # (RETURN_TYPE_KIND:primitive)
+
+[//]: # (RETURN_TYPE_DOC:)
+
+[//]: # (OPERATION:getFilingHtml_v2)
+
+[//]: # (ENDPOINT:/filings/{identifier}/html)
+
+[//]: # (DOCUMENT_LINK:FilingApi.md#getFilingHtml)
+
+<a name="getFilingHtml"></a>
+## **getFilingHtml**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getFilingHtml_v2)
+
+[//]: # (START_OVERVIEW)
+
+> &#39;String&#39; getFilingHtml(identifier)
+
+#### Filing Html
+
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+
+var filingAPI = new intrinioSDK.FilingApi();
+
+var identifier = "fil_B73xBG"; // String | A Filing identifier
+
+
+filingAPI.getFilingHtml(identifier).then(function(data) {
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Filing identifier |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+**&#39;String&#39;**
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:FilingApi)
+
+[//]: # (METHOD:getFilingText)
+
+[//]: # (RETURN_TYPE:'String')
+
+[//]: # (RETURN_TYPE_KIND:primitive)
+
+[//]: # (RETURN_TYPE_DOC:)
+
+[//]: # (OPERATION:getFilingText_v2)
+
+[//]: # (ENDPOINT:/filings/{identifier}/text)
+
+[//]: # (DOCUMENT_LINK:FilingApi.md#getFilingText)
+
+<a name="getFilingText"></a>
+## **getFilingText**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getFilingText_v2)
+
+[//]: # (START_OVERVIEW)
+
+> &#39;String&#39; getFilingText(identifier)
+
+#### Filing Text
+
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+
+var filingAPI = new intrinioSDK.FilingApi();
+
+var identifier = "fil_B73xBG"; // String | A Filing identifier
+
+
+filingAPI.getFilingText(identifier).then(function(data) {
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Filing identifier |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+**&#39;String&#39;**
 
 
 
