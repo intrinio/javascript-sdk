@@ -5,8 +5,12 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getZacksAnalystRatings**](ZacksApi.md#getZacksAnalystRatings) | **GET** /zacks/analyst_ratings | Zacks Analyst Ratings
+[**getZacksEpsEstimates**](ZacksApi.md#getZacksEpsEstimates) | **GET** /zacks/eps_estimates | Zacks EPS Estimates
+[**getZacksEpsGrowthRates**](ZacksApi.md#getZacksEpsGrowthRates) | **GET** /zacks/eps_growth_rates | Zacks EPS Growth Rates
 [**getZacksEpsSurprises**](ZacksApi.md#getZacksEpsSurprises) | **GET** /zacks/eps_surprises | Zacks EPS Surprises
+[**getZacksLongTermGrowthRates**](ZacksApi.md#getZacksLongTermGrowthRates) | **GET** /zacks/long_term_growth_rates | Zacks Long Term Growth Rates
 [**getZacksSalesSurprises**](ZacksApi.md#getZacksSalesSurprises) | **GET** /zacks/sales_surprises | Zacks Sales Surprises
+[**getZacksTargetPriceConsensuses**](ZacksApi.md#getZacksTargetPriceConsensuses) | **GET** /zacks/target_price_consensuses | Zacks Target Price Consensuses
 
 
 
@@ -56,8 +60,8 @@ var zacksAPI = new intrinioSDK.ZacksApi();
 
 var opts = { 
   'identifier': "AAPL", // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-  'startDate': null, // String | Limit ratings to those on or after this date
-  'endDate': null, // String | Limit ratings to those on or before this date
+  'startDate': null, // Date | Limit ratings to those on or after this date
+  'endDate': null, // Date | Limit ratings to those on or before this date
   'meanGreater': null, // Number | Return only records with a mean (average) higher than this value
   'meanLess': null, // Number | Return only records with a mean (average) lower than this value
   'strongBuysGreater': null, // Number | Return only records with more than this many Strong Buy recommendations
@@ -93,8 +97,8 @@ zacksAPI.getZacksAnalystRatings(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | [optional]  &nbsp;
- **startDate** | String| Limit ratings to those on or after this date | [optional]  &nbsp;
- **endDate** | String| Limit ratings to those on or before this date | [optional]  &nbsp;
+ **startDate** | Date| Limit ratings to those on or after this date | [optional]  &nbsp;
+ **endDate** | Date| Limit ratings to those on or before this date | [optional]  &nbsp;
  **meanGreater** | Number| Return only records with a mean (average) higher than this value | [optional]  &nbsp;
  **meanLess** | Number| Return only records with a mean (average) lower than this value | [optional]  &nbsp;
  **strongBuysGreater** | Number| Return only records with more than this many Strong Buy recommendations | [optional]  &nbsp;
@@ -118,6 +122,186 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseZacksAnalystRatings**](ApiResponseZacksAnalystRatings.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:ZacksApi)
+
+[//]: # (METHOD:getZacksEpsEstimates)
+
+[//]: # (RETURN_TYPE:ApiResponseZacksEPSEstimates)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksEPSEstimates.md)
+
+[//]: # (OPERATION:getZacksEpsEstimates_v2)
+
+[//]: # (ENDPOINT:/zacks/eps_estimates)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getZacksEpsEstimates)
+
+<a name="getZacksEpsEstimates"></a>
+## **getZacksEpsEstimates**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getZacksEpsEstimates_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksEPSEstimates getZacksEpsEstimates(opts)
+
+#### Zacks EPS Estimates
+
+
+Returns Zacks consensus earnings-per-share (EPS) data for all Companies.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+
+var zacksAPI = new intrinioSDK.ZacksApi();
+
+var opts = { 
+  'identifier': "AAPL", // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+  'startDate': null, // Date | Limit EPS estimates to those on or after this date
+  'endDate': null, // Date | Limit EPS estimates to those on or before this date
+  'fiscalYear': null, // Number | Only for the given fiscal year
+  'fiscalPeriod': null, // String | The fiscal period
+  'calendarYear': null, // Number | Only for the given calendar year
+  'calendarPeriod': null, // String | The calendar period
+  'pageSize': 100, // Number | The number of results to return
+  'nextPage': null // String | Gets the next page of data from a previous API call
+};
+
+zacksAPI.getZacksEpsEstimates(opts).then(function(data) {
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
+ **startDate** | Date| Limit EPS estimates to those on or after this date | [optional]  &nbsp;
+ **endDate** | Date| Limit EPS estimates to those on or before this date | [optional]  &nbsp;
+ **fiscalYear** | Number| Only for the given fiscal year | [optional]  &nbsp;
+ **fiscalPeriod** | String| The fiscal period | [optional]  &nbsp;
+ **calendarYear** | Number| Only for the given calendar year | [optional]  &nbsp;
+ **calendarPeriod** | String| The calendar period | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksEPSEstimates**](ApiResponseZacksEPSEstimates.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:ZacksApi)
+
+[//]: # (METHOD:getZacksEpsGrowthRates)
+
+[//]: # (RETURN_TYPE:ApiResponseZacksEPSGrowthRates)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksEPSGrowthRates.md)
+
+[//]: # (OPERATION:getZacksEpsGrowthRates_v2)
+
+[//]: # (ENDPOINT:/zacks/eps_growth_rates)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getZacksEpsGrowthRates)
+
+<a name="getZacksEpsGrowthRates"></a>
+## **getZacksEpsGrowthRates**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getZacksEpsGrowthRates_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksEPSGrowthRates getZacksEpsGrowthRates(opts)
+
+#### Zacks EPS Growth Rates
+
+
+Returns the latest Zacks EPS growth rates
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+
+var zacksAPI = new intrinioSDK.ZacksApi();
+
+var opts = { 
+  'company': "AAPL", // String | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
+  'industryGroupName': null, // String | Return only growth rates for companies in the given Zacks industry group name
+  'industryGroupNumber': null, // String | Return only growth rates for companies in the given Zacks industry group number
+  'pageSize': 100, // Number | The number of results to return
+  'nextPage': null // String | Gets the next page of data from a previous API call
+};
+
+zacksAPI.getZacksEpsGrowthRates(opts).then(function(data) {
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **company** | String| Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
+ **industryGroupName** | String| Return only growth rates for companies in the given Zacks industry group name | [optional]  &nbsp;
+ **industryGroupNumber** | String| Return only growth rates for companies in the given Zacks industry group number | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksEPSGrowthRates**](ApiResponseZacksEPSGrowthRates.md)
 
 
 
@@ -169,8 +353,8 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 var zacksAPI = new intrinioSDK.ZacksApi();
 
 var opts = { 
-  'startDate': null, // String | Limit EPS surprises to those on or after this date
-  'endDate': null, // String | Limit EPS surprises to those on or before this date
+  'startDate': null, // Date | Limit EPS surprises to those on or after this date
+  'endDate': null, // Date | Limit EPS surprises to those on or before this date
   'epsActualGreater': null, // Number | Return only records with an actual EPS higher than this value
   'epsActualLess': null, // Number | Return only records with an actual EPS lower than this value
   'epsMeanEstimateGreater': null, // Number | Return only records with an EPS mean estimate greater than this value
@@ -203,8 +387,8 @@ zacksAPI.getZacksEpsSurprises(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | String| Limit EPS surprises to those on or after this date | [optional]  &nbsp;
- **endDate** | String| Limit EPS surprises to those on or before this date | [optional]  &nbsp;
+ **startDate** | Date| Limit EPS surprises to those on or after this date | [optional]  &nbsp;
+ **endDate** | Date| Limit EPS surprises to those on or before this date | [optional]  &nbsp;
  **epsActualGreater** | Number| Return only records with an actual EPS higher than this value | [optional]  &nbsp;
  **epsActualLess** | Number| Return only records with an actual EPS lower than this value | [optional]  &nbsp;
  **epsMeanEstimateGreater** | Number| Return only records with an EPS mean estimate greater than this value | [optional]  &nbsp;
@@ -226,6 +410,88 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseZacksEPSSurprises**](ApiResponseZacksEPSSurprises.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:ZacksApi)
+
+[//]: # (METHOD:getZacksLongTermGrowthRates)
+
+[//]: # (RETURN_TYPE:ApiResponseZacksLongTermGrowthRates)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksLongTermGrowthRates.md)
+
+[//]: # (OPERATION:getZacksLongTermGrowthRates_v2)
+
+[//]: # (ENDPOINT:/zacks/long_term_growth_rates)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getZacksLongTermGrowthRates)
+
+<a name="getZacksLongTermGrowthRates"></a>
+## **getZacksLongTermGrowthRates**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getZacksLongTermGrowthRates_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksLongTermGrowthRates getZacksLongTermGrowthRates(opts)
+
+#### Zacks Long Term Growth Rates
+
+
+Returns the latest Zacks long term growth rates
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+
+var zacksAPI = new intrinioSDK.ZacksApi();
+
+var opts = { 
+  'identifier': "AAPL", // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+  'pageSize': 100, // Number | The number of results to return
+  'nextPage': null // String | Gets the next page of data from a previous API call
+};
+
+zacksAPI.getZacksLongTermGrowthRates(opts).then(function(data) {
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksLongTermGrowthRates**](ApiResponseZacksLongTermGrowthRates.md)
 
 
 
@@ -277,8 +543,8 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 var zacksAPI = new intrinioSDK.ZacksApi();
 
 var opts = { 
-  'startDate': null, // String | Limit sales surprises to those on or after this date
-  'endDate': null, // String | Limit sales surprises to those on or before this date
+  'startDate': null, // Date | Limit sales surprises to those on or after this date
+  'endDate': null, // Date | Limit sales surprises to those on or before this date
   'salesActualGreater': null, // Number | Return only records with an actual sales higher than this value
   'salesActualLess': null, // Number | Return only records with an actual sales lower than this value
   'salesMeanEstimateGreater': null, // Number | Return only records with a sales mean estimate greater than this value
@@ -311,8 +577,8 @@ zacksAPI.getZacksSalesSurprises(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | String| Limit sales surprises to those on or after this date | [optional]  &nbsp;
- **endDate** | String| Limit sales surprises to those on or before this date | [optional]  &nbsp;
+ **startDate** | Date| Limit sales surprises to those on or after this date | [optional]  &nbsp;
+ **endDate** | Date| Limit sales surprises to those on or before this date | [optional]  &nbsp;
  **salesActualGreater** | Number| Return only records with an actual sales higher than this value | [optional]  &nbsp;
  **salesActualLess** | Number| Return only records with an actual sales lower than this value | [optional]  &nbsp;
  **salesMeanEstimateGreater** | Number| Return only records with a sales mean estimate greater than this value | [optional]  &nbsp;
@@ -334,6 +600,90 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseZacksSalesSurprises**](ApiResponseZacksSalesSurprises.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:ZacksApi)
+
+[//]: # (METHOD:getZacksTargetPriceConsensuses)
+
+[//]: # (RETURN_TYPE:ApiResponseZacksTargetPriceConsensuses)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksTargetPriceConsensuses.md)
+
+[//]: # (OPERATION:getZacksTargetPriceConsensuses_v2)
+
+[//]: # (ENDPOINT:/zacks/target_price_consensuses)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getZacksTargetPriceConsensuses)
+
+<a name="getZacksTargetPriceConsensuses"></a>
+## **getZacksTargetPriceConsensuses**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getZacksTargetPriceConsensuses_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksTargetPriceConsensuses getZacksTargetPriceConsensuses(opts)
+
+#### Zacks Target Price Consensuses
+
+
+Returns the latest Zacks target price consensus data
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+
+var zacksAPI = new intrinioSDK.ZacksApi();
+
+var opts = { 
+  'identifier': "AAPL", // String | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
+  'industryGroupNumber': null, // String | Return only growth rates for companies in the given Zacks industry group number
+  'pageSize': 100, // Number | The number of results to return
+  'nextPage': null // String | Gets the next page of data from a previous API call
+};
+
+zacksAPI.getZacksTargetPriceConsensuses(opts).then(function(data) {
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| Filings for the given &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
+ **industryGroupNumber** | String| Return only growth rates for companies in the given Zacks industry group number | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksTargetPriceConsensuses**](ApiResponseZacksTargetPriceConsensuses.md)
 
 
 

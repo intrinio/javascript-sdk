@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.10.0
-- Package version: 5.3.0
+- API version: 2.11.0
+- Package version: 5.4.0
 
 
 ## Installation
@@ -213,8 +213,12 @@ Class | Method | HTTP request | Description
 *intrinioSDK.TechnicalApi* | [**getSecurityPriceTechnicalsVwap**](docs/TechnicalApi.md#getSecurityPriceTechnicalsVwap) | **GET** /securities/{identifier}/prices/technicals/vwap | Volume Weighted Average Price
 *intrinioSDK.TechnicalApi* | [**getSecurityPriceTechnicalsWr**](docs/TechnicalApi.md#getSecurityPriceTechnicalsWr) | **GET** /securities/{identifier}/prices/technicals/wr | Williams %R
 *intrinioSDK.ZacksApi* | [**getZacksAnalystRatings**](docs/ZacksApi.md#getZacksAnalystRatings) | **GET** /zacks/analyst_ratings | Zacks Analyst Ratings
+*intrinioSDK.ZacksApi* | [**getZacksEpsEstimates**](docs/ZacksApi.md#getZacksEpsEstimates) | **GET** /zacks/eps_estimates | Zacks EPS Estimates
+*intrinioSDK.ZacksApi* | [**getZacksEpsGrowthRates**](docs/ZacksApi.md#getZacksEpsGrowthRates) | **GET** /zacks/eps_growth_rates | Zacks EPS Growth Rates
 *intrinioSDK.ZacksApi* | [**getZacksEpsSurprises**](docs/ZacksApi.md#getZacksEpsSurprises) | **GET** /zacks/eps_surprises | Zacks EPS Surprises
+*intrinioSDK.ZacksApi* | [**getZacksLongTermGrowthRates**](docs/ZacksApi.md#getZacksLongTermGrowthRates) | **GET** /zacks/long_term_growth_rates | Zacks Long Term Growth Rates
 *intrinioSDK.ZacksApi* | [**getZacksSalesSurprises**](docs/ZacksApi.md#getZacksSalesSurprises) | **GET** /zacks/sales_surprises | Zacks Sales Surprises
+*intrinioSDK.ZacksApi* | [**getZacksTargetPriceConsensuses**](docs/ZacksApi.md#getZacksTargetPriceConsensuses) | **GET** /zacks/target_price_consensuses | Zacks Target Price Consensuses
 
 
 ## Documentation for Models
@@ -304,8 +308,12 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseStockMarketIndices](docs/ApiResponseStockMarketIndices.md)
  - [intrinioSDK.ApiResponseStockMarketIndicesSearch](docs/ApiResponseStockMarketIndicesSearch.md)
  - [intrinioSDK.ApiResponseZacksAnalystRatings](docs/ApiResponseZacksAnalystRatings.md)
+ - [intrinioSDK.ApiResponseZacksEPSEstimates](docs/ApiResponseZacksEPSEstimates.md)
+ - [intrinioSDK.ApiResponseZacksEPSGrowthRates](docs/ApiResponseZacksEPSGrowthRates.md)
  - [intrinioSDK.ApiResponseZacksEPSSurprises](docs/ApiResponseZacksEPSSurprises.md)
+ - [intrinioSDK.ApiResponseZacksLongTermGrowthRates](docs/ApiResponseZacksLongTermGrowthRates.md)
  - [intrinioSDK.ApiResponseZacksSalesSurprises](docs/ApiResponseZacksSalesSurprises.md)
+ - [intrinioSDK.ApiResponseZacksTargetPriceConsensuses](docs/ApiResponseZacksTargetPriceConsensuses.md)
  - [intrinioSDK.AverageDailyTradingVolumeTechnicalValue](docs/AverageDailyTradingVolumeTechnicalValue.md)
  - [intrinioSDK.AverageDirectionalIndexTechnicalValue](docs/AverageDirectionalIndexTechnicalValue.md)
  - [intrinioSDK.AverageTrueRangeTechnicalValue](docs/AverageTrueRangeTechnicalValue.md)
@@ -391,8 +399,12 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ZacksAnalystRating](docs/ZacksAnalystRating.md)
  - [intrinioSDK.ZacksAnalystRatingSnapshot](docs/ZacksAnalystRatingSnapshot.md)
  - [intrinioSDK.ZacksAnalystRatingSummary](docs/ZacksAnalystRatingSummary.md)
+ - [intrinioSDK.ZacksEPSEstimate](docs/ZacksEPSEstimate.md)
+ - [intrinioSDK.ZacksEPSGrowthRate](docs/ZacksEPSGrowthRate.md)
  - [intrinioSDK.ZacksEPSSurprise](docs/ZacksEPSSurprise.md)
  - [intrinioSDK.ZacksEPSSurpriseSummary](docs/ZacksEPSSurpriseSummary.md)
+ - [intrinioSDK.ZacksLongTermGrowthRate](docs/ZacksLongTermGrowthRate.md)
  - [intrinioSDK.ZacksSalesSurprise](docs/ZacksSalesSurprise.md)
  - [intrinioSDK.ZacksSalesSurpriseSummary](docs/ZacksSalesSurpriseSummary.md)
+ - [intrinioSDK.ZacksTargetPriceConsensus](docs/ZacksTargetPriceConsensus.md)
 
