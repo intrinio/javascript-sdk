@@ -8,6 +8,10 @@ Method | HTTP request | Description
 [**getZacksEpsEstimates**](ZacksApi.md#getZacksEpsEstimates) | **GET** /zacks/eps_estimates | Zacks EPS Estimates
 [**getZacksEpsGrowthRates**](ZacksApi.md#getZacksEpsGrowthRates) | **GET** /zacks/eps_growth_rates | Zacks EPS Growth Rates
 [**getZacksEpsSurprises**](ZacksApi.md#getZacksEpsSurprises) | **GET** /zacks/eps_surprises | Zacks EPS Surprises
+[**getZacksEtfHoldings**](ZacksApi.md#getZacksEtfHoldings) | **GET** /zacks/etf_holdings | Zacks ETF Holdings
+[**getZacksInstitutionalHoldingCompanies**](ZacksApi.md#getZacksInstitutionalHoldingCompanies) | **GET** /zacks/institutional_holdings/companies | Zacks Institutional Holding Companies
+[**getZacksInstitutionalHoldingOwners**](ZacksApi.md#getZacksInstitutionalHoldingOwners) | **GET** /zacks/institutional_holdings/owners | Zacks Institutional Holding Owners
+[**getZacksInstitutionalHoldings**](ZacksApi.md#getZacksInstitutionalHoldings) | **GET** /zacks/institutional_holdings | Zacks Institutional Holdings
 [**getZacksLongTermGrowthRates**](ZacksApi.md#getZacksLongTermGrowthRates) | **GET** /zacks/long_term_growth_rates | Zacks Long Term Growth Rates
 [**getZacksSalesSurprises**](ZacksApi.md#getZacksSalesSurprises) | **GET** /zacks/sales_surprises | Zacks Sales Surprises
 [**getZacksTargetPriceConsensuses**](ZacksApi.md#getZacksTargetPriceConsensuses) | **GET** /zacks/target_price_consensuses | Zacks Target Price Consensuses
@@ -410,6 +414,342 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseZacksEPSSurprises**](ApiResponseZacksEPSSurprises.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:ZacksApi)
+
+[//]: # (METHOD:getZacksEtfHoldings)
+
+[//]: # (RETURN_TYPE:ApiResponseZacksETFHoldings)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksETFHoldings.md)
+
+[//]: # (OPERATION:getZacksEtfHoldings_v2)
+
+[//]: # (ENDPOINT:/zacks/etf_holdings)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getZacksEtfHoldings)
+
+<a name="getZacksEtfHoldings"></a>
+## **getZacksEtfHoldings**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getZacksEtfHoldings_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksETFHoldings getZacksEtfHoldings(opts)
+
+#### Zacks ETF Holdings
+
+
+Returns Zacks ETF holdings data
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+
+var zacksAPI = new intrinioSDK.ZacksApi();
+
+var opts = { 
+  'etfTicker': null, // String | Return holdings of the ETF with the given ticker
+  'holdingSymbol': null, // String | Return holdings where the instrument being held has the given trading symbol
+  'weightGreater': null, // Number | Return on the holdings with a weight greater than
+  'weightLess': null, // Number | Return on the holdings with a weight less than
+  'pageSize': 100, // Number | The number of results to return
+  'nextPage': null // String | Gets the next page of data from a previous API call
+};
+
+zacksAPI.getZacksEtfHoldings(opts).then(function(data) {
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **etfTicker** | String| Return holdings of the ETF with the given ticker | [optional]  &nbsp;
+ **holdingSymbol** | String| Return holdings where the instrument being held has the given trading symbol | [optional]  &nbsp;
+ **weightGreater** | Number| Return on the holdings with a weight greater than | [optional]  &nbsp;
+ **weightLess** | Number| Return on the holdings with a weight less than | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksETFHoldings**](ApiResponseZacksETFHoldings.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:ZacksApi)
+
+[//]: # (METHOD:getZacksInstitutionalHoldingCompanies)
+
+[//]: # (RETURN_TYPE:ApiResponseZacksInstitutionalHoldingCompanies)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksInstitutionalHoldingCompanies.md)
+
+[//]: # (OPERATION:getZacksInstitutionalHoldingCompanies_v2)
+
+[//]: # (ENDPOINT:/zacks/institutional_holdings/companies)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getZacksInstitutionalHoldingCompanies)
+
+<a name="getZacksInstitutionalHoldingCompanies"></a>
+## **getZacksInstitutionalHoldingCompanies**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getZacksInstitutionalHoldingCompanies_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksInstitutionalHoldingCompanies getZacksInstitutionalHoldingCompanies(opts)
+
+#### Zacks Institutional Holding Companies
+
+
+Returns Zacks institutional holding companies data
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+
+var zacksAPI = new intrinioSDK.ZacksApi();
+
+var opts = { 
+  'ticker': null, // String | Return companies with the given ticker
+  'pageSize': 100, // Number | The number of results to return
+  'nextPage': null // String | Gets the next page of data from a previous API call
+};
+
+zacksAPI.getZacksInstitutionalHoldingCompanies(opts).then(function(data) {
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ticker** | String| Return companies with the given ticker | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksInstitutionalHoldingCompanies**](ApiResponseZacksInstitutionalHoldingCompanies.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:ZacksApi)
+
+[//]: # (METHOD:getZacksInstitutionalHoldingOwners)
+
+[//]: # (RETURN_TYPE:ApiResponseZacksInstitutionalHoldingOwners)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksInstitutionalHoldingOwners.md)
+
+[//]: # (OPERATION:getZacksInstitutionalHoldingOwners_v2)
+
+[//]: # (ENDPOINT:/zacks/institutional_holdings/owners)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getZacksInstitutionalHoldingOwners)
+
+<a name="getZacksInstitutionalHoldingOwners"></a>
+## **getZacksInstitutionalHoldingOwners**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getZacksInstitutionalHoldingOwners_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksInstitutionalHoldingOwners getZacksInstitutionalHoldingOwners(opts)
+
+#### Zacks Institutional Holding Owners
+
+
+Returns Zacks institutional holding owners data
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+
+var zacksAPI = new intrinioSDK.ZacksApi();
+
+var opts = { 
+  'cik': null, // String | Return owners with the given Central Index Key (CIK)
+  'pageSize': 100, // Number | The number of results to return
+  'nextPage': null // String | Gets the next page of data from a previous API call
+};
+
+zacksAPI.getZacksInstitutionalHoldingOwners(opts).then(function(data) {
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cik** | String| Return owners with the given Central Index Key (CIK) | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksInstitutionalHoldingOwners**](ApiResponseZacksInstitutionalHoldingOwners.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:ZacksApi)
+
+[//]: # (METHOD:getZacksInstitutionalHoldings)
+
+[//]: # (RETURN_TYPE:ApiResponseZacksInstitutionalHoldings)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksInstitutionalHoldings.md)
+
+[//]: # (OPERATION:getZacksInstitutionalHoldings_v2)
+
+[//]: # (ENDPOINT:/zacks/institutional_holdings)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getZacksInstitutionalHoldings)
+
+<a name="getZacksInstitutionalHoldings"></a>
+## **getZacksInstitutionalHoldings**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getZacksInstitutionalHoldings_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksInstitutionalHoldings getZacksInstitutionalHoldings(opts)
+
+#### Zacks Institutional Holdings
+
+
+Returns Zacks institutional holdings data
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+
+var zacksAPI = new intrinioSDK.ZacksApi();
+
+var opts = { 
+  'ticker': null, // String | Return holdings where the company being held has the given ticker
+  'ownerCik': null, // String | Return holdings where the owner/holder has the given Central Index Key (CIK)
+  'pageSize': 100, // Number | The number of results to return
+  'nextPage': null // String | Gets the next page of data from a previous API call
+};
+
+zacksAPI.getZacksInstitutionalHoldings(opts).then(function(data) {
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ticker** | String| Return holdings where the company being held has the given ticker | [optional]  &nbsp;
+ **ownerCik** | String| Return holdings where the owner/holder has the given Central Index Key (CIK) | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksInstitutionalHoldings**](ApiResponseZacksInstitutionalHoldings.md)
 
 
 
