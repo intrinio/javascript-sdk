@@ -63,7 +63,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 var zacksAPI = new intrinioSDK.ZacksApi();
 
 var opts = { 
-  'identifier': "AAPL", // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+  'identifier': "$$v2_ticker_default$$", // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
   'startDate': null, // Date | Limit ratings to those on or after this date
   'endDate': null, // Date | Limit ratings to those on or before this date
   'meanGreater': null, // Number | Return only records with a mean (average) higher than this value
