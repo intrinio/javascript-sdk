@@ -82,7 +82,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
@@ -169,7 +169,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'period': 22, // Number | The number of observations, per period, to calculate Average Daily Trading Volume
@@ -258,7 +258,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'period': 14, // Number | The number of observations, per period, to calculate Average Directional Index
@@ -347,7 +347,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'shortPeriod': 5, // Number | The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator
@@ -438,7 +438,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'period': 14, // Number | The number of observations, per period, to calculate Average True Range
@@ -527,7 +527,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'period': 20, // Number | The number of observations, per period, to calculate Bollinger Bands
@@ -620,7 +620,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'period': 20, // Number | The number of observations, per period, to calculate Commodity Channel Index
@@ -711,7 +711,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'period': 20, // Number | The number of observations, per period, to calculate Chaikin Money Flow
@@ -800,7 +800,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'period': 20, // Number | The number of observations, per period, to calculate Donchian Channel
@@ -891,7 +891,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'period': 20, // Number | The number of observations, per period, to calculate Detrended Price Oscillator
@@ -982,7 +982,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'period': 20, // Number | The number of observations, per period, to calculate Ease of Movement
@@ -1071,7 +1071,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
@@ -1158,7 +1158,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'lowPeriod': 9, // Number | The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo
@@ -1251,7 +1251,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'period': 10, // Number | The number of observations, per period, to calculate Kelter Channel
@@ -1340,7 +1340,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'roc1': 10, // Number | The number of observations, per period, to calculate the rate-of-change for RCMA1
@@ -1445,7 +1445,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'fastPeriod': 12, // Number | The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence
@@ -1540,7 +1540,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'period': 14, // Number | The number of observations, per period, to calculate Money Flow Index
@@ -1629,7 +1629,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'emaPeriod': 9, // Number | The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index
@@ -1720,7 +1720,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
@@ -1807,7 +1807,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
@@ -1894,7 +1894,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'period': 10, // Number | The number of observations, per period, to calculate On-balance Volume Mean
@@ -1983,7 +1983,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'period': 14, // Number | The number of observations, per period, to calculate Relative Strength Index
@@ -2074,7 +2074,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'period': 20, // Number | The number of observations, per period, to calculate Simple Moving Average
@@ -2165,7 +2165,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'period': 14, // Number | The number of observations, per period, to calculate %K of Stochastic Oscillator
@@ -2256,7 +2256,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'period': 15, // Number | The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average
@@ -2345,7 +2345,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'lowPeriod': 13, // Number | The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index
@@ -2438,7 +2438,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'shortPeriod': 7, // Number | The number of observations, per period, to calculate the short period for Ultimate Oscillator
@@ -2537,7 +2537,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'period': 14, // Number | The number of observations, per period, to calculate Vortex Indicator
@@ -2626,7 +2626,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
@@ -2713,7 +2713,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
@@ -2800,7 +2800,7 @@ intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_
 
 var technicalAPI = new intrinioSDK.TechnicalApi();
 
-var identifier = "$$v2_ticker_default$$"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
 
 var opts = { 
   'period': 14, // Number | The number of observations, per period, to look-back when calculating Williams %R
