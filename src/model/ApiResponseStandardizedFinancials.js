@@ -36,7 +36,7 @@
   /**
    * The ApiResponseStandardizedFinancials model module.
    * @module model/ApiResponseStandardizedFinancials
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

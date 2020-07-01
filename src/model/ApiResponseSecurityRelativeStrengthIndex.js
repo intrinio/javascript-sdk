@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityRelativeStrengthIndex model module.
    * @module model/ApiResponseSecurityRelativeStrengthIndex
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

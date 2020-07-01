@@ -36,7 +36,7 @@
   /**
    * The ZacksTargetPriceConsensus model module.
    * @module model/ZacksTargetPriceConsensus
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

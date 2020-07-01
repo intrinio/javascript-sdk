@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityAverageDirectionalIndex model module.
    * @module model/ApiResponseSecurityAverageDirectionalIndex
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

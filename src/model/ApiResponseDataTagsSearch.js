@@ -36,7 +36,7 @@
   /**
    * The ApiResponseDataTagsSearch model module.
    * @module model/ApiResponseDataTagsSearch
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityNegativeVolumeIndex model module.
    * @module model/ApiResponseSecurityNegativeVolumeIndex
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

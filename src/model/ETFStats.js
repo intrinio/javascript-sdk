@@ -36,7 +36,7 @@
   /**
    * The ETFStats model module.
    * @module model/ETFStats
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

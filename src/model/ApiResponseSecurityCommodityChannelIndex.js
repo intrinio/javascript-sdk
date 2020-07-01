@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityCommodityChannelIndex model module.
    * @module model/ApiResponseSecurityCommodityChannelIndex
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

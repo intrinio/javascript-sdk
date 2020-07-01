@@ -36,7 +36,7 @@
   /**
    * The BulkDownloadLinks model module.
    * @module model/BulkDownloadLinks
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

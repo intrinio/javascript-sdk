@@ -36,7 +36,7 @@
   /**
    * The Option model module.
    * @module model/Option
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

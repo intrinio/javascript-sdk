@@ -36,7 +36,7 @@
   /**
    * The StockPriceSummary model module.
    * @module model/StockPriceSummary
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

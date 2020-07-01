@@ -36,7 +36,7 @@
   /**
    * The ApiResponseForexPrices model module.
    * @module model/ApiResponseForexPrices
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

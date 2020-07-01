@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurities model module.
    * @module model/ApiResponseSecurities
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The ForceIndexTechnicalValue model module.
    * @module model/ForceIndexTechnicalValue
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

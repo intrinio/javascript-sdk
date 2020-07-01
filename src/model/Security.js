@@ -36,7 +36,7 @@
   /**
    * The Security model module.
    * @module model/Security
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

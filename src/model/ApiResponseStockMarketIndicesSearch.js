@@ -36,7 +36,7 @@
   /**
    * The ApiResponseStockMarketIndicesSearch model module.
    * @module model/ApiResponseStockMarketIndicesSearch
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

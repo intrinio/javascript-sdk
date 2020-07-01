@@ -36,7 +36,7 @@
   /**
    * The FilingNoteSummary model module.
    * @module model/FilingNoteSummary
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

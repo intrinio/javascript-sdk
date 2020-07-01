@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityMoneyFlowIndex model module.
    * @module model/ApiResponseSecurityMoneyFlowIndex
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

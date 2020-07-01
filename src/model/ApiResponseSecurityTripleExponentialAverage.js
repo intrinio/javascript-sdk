@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityTripleExponentialAverage model module.
    * @module model/ApiResponseSecurityTripleExponentialAverage
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

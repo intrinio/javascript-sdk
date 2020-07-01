@@ -36,7 +36,7 @@
   /**
    * The ApiResponseZacksSalesSurprises model module.
    * @module model/ApiResponseZacksSalesSurprises
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

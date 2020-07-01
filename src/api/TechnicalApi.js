@@ -33,7 +33,7 @@
   /**
    * Technical service.
    * @module api/TechnicalApi
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

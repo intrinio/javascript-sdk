@@ -36,7 +36,7 @@
   /**
    * The SecurityScreenGroup model module.
    * @module model/SecurityScreenGroup
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

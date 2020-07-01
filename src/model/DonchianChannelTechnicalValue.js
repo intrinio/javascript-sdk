@@ -36,7 +36,7 @@
   /**
    * The DonchianChannelTechnicalValue model module.
    * @module model/DonchianChannelTechnicalValue
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**

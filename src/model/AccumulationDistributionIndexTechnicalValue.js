@@ -36,7 +36,7 @@
   /**
    * The AccumulationDistributionIndexTechnicalValue model module.
    * @module model/AccumulationDistributionIndexTechnicalValue
-   * @version 5.6.0
+   * @version 5.6.1
    */
 
   /**
