@@ -80,18 +80,18 @@ Returns the Accumulation/Distribution Index values of Stock Prices for the Secur
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsAdi(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsAdi(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -167,19 +167,19 @@ Returns the Average Daily Trading Volume values of Stock Prices for the Security
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'period': 22, // Number | The number of observations, per period, to calculate Average Daily Trading Volume
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'period': 22,
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsAdtv(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsAdtv(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -256,19 +256,19 @@ Returns the Average Directional Index values of Stock Prices for the Security wi
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'period': 14, // Number | The number of observations, per period, to calculate Average Directional Index
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'period': 14,
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsAdx(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsAdx(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -345,20 +345,20 @@ Returns the Awesome Oscillator values of Stock Prices for the Security with the 
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'shortPeriod': 5, // Number | The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator
-  'longPeriod': 34, // Number | The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'shortPeriod': 5,
+  'longPeriod': 34,
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsAo(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsAo(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -436,19 +436,19 @@ Returns the Average True Range values of Stock Prices for the Security with the 
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'period': 14, // Number | The number of observations, per period, to calculate Average True Range
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'period': 14,
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsAtr(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsAtr(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -525,21 +525,21 @@ Returns the Bollinger Bands values of Stock Prices for the Security with the giv
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'period': 20, // Number | The number of observations, per period, to calculate Bollinger Bands
-  'standardDeviations': 2.0, // Number | The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands
-  'priceKey': "close", // String | The Stock Price field to use when calculating Bollinger Bands
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'period': 20,
+  'standardDeviations': 2.0,
+  'priceKey': "close",
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsBb(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsBb(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -618,20 +618,20 @@ Returns the Commodity Channel Index values of Stock Prices for the Security with
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'period': 20, // Number | The number of observations, per period, to calculate Commodity Channel Index
-  'constant': 0.015, // Number | The number of observations, per period, to calculate Commodity Channel Index
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'period': 20,
+  'constant': 0.015,
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsCci(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsCci(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -709,19 +709,19 @@ Returns the Chaikin Money Flow values of Stock Prices for the Security with the 
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'period': 20, // Number | The number of observations, per period, to calculate Chaikin Money Flow
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'period': 20,
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsCmf(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsCmf(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -798,20 +798,20 @@ Returns the Donchian Channel values of Stock Prices for the Security with the gi
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'period': 20, // Number | The number of observations, per period, to calculate Donchian Channel
-  'priceKey': "close", // String | The Stock Price field to use when calculating Donchian Channel
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'period': 20,
+  'priceKey': "close",
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsDc(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsDc(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -889,20 +889,20 @@ Returns the Detrended Price Oscillator values of Stock Prices for the Security w
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'period': 20, // Number | The number of observations, per period, to calculate Detrended Price Oscillator
-  'priceKey': "close", // String | The Stock Price field to use when calculating Detrended Price Oscillator
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'period': 20,
+  'priceKey': "close",
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsDpo(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsDpo(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -980,19 +980,19 @@ Returns the Ease of Movement values of Stock Prices for the Security with the gi
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'period': 20, // Number | The number of observations, per period, to calculate Ease of Movement
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'period': 20,
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsEom(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsEom(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1069,18 +1069,18 @@ Returns the Force Index values of Stock Prices for the Security with the given &
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsFi(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsFi(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1156,21 +1156,21 @@ Returns the Ichimoku Kinko Hyo values of Stock Prices for the Security with the 
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'lowPeriod': 9, // Number | The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo
-  'mediumPeriod': 26, // Number | The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo
-  'highPeriod': 52, // Number | The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'lowPeriod': 9,
+  'mediumPeriod': 26,
+  'highPeriod': 52,
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsIchimoku(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsIchimoku(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1249,19 +1249,19 @@ Returns the Keltner Channel values of Stock Prices for the Security with the giv
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'period': 10, // Number | The number of observations, per period, to calculate Kelter Channel
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'period': 10,
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsKc(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsKc(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1338,27 +1338,27 @@ Returns the Know Sure Thing values of Stock Prices for the Security with the giv
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'roc1': 10, // Number | The number of observations, per period, to calculate the rate-of-change for RCMA1
-  'roc2': 15, // Number | The number of observations, per period, to calculate the rate-of-change for RCMA2
-  'roc3': 20, // Number | The number of observations, per period, to calculate the rate-of-change for RCMA3
-  'roc4': 30, // Number | The number of observations, per period, to calculate the rate-of-change for RCMA4
-  'sma1': 10, // Number | The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1
-  'sma2': 10, // Number | The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2
-  'sma3': 10, // Number | The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3
-  'sma4': 15, // Number | The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4
-  'priceKey': "close", // String | The Stock Price field to use when calculating Know Sure Thing
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'roc1': 10,
+  'roc2': 15,
+  'roc3': 20,
+  'roc4': 30,
+  'sma1': 10,
+  'sma2': 10,
+  'sma3': 10,
+  'sma4': 15,
+  'priceKey': "close",
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsKst(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsKst(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1443,22 +1443,22 @@ Returns the Moving Average Convergence Divergence values of Stock Prices for the
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'fastPeriod': 12, // Number | The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence
-  'slowPeriod': 26, // Number | The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence
-  'signalPeriod': 9, // Number | The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence
-  'priceKey': "close", // String | The Stock Price field to use when calculating Moving Average Convergence Divergence
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'fastPeriod': 12,
+  'slowPeriod': 26,
+  'signalPeriod': 9,
+  'priceKey': "close",
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsMacd(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsMacd(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1538,19 +1538,19 @@ Returns the Money Flow Index values of Stock Prices for the Security with the gi
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'period': 14, // Number | The number of observations, per period, to calculate Money Flow Index
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'period': 14,
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsMfi(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsMfi(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1627,20 +1627,20 @@ Returns the Mass Index values of Stock Prices for the Security with the given &#
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'emaPeriod': 9, // Number | The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index
-  'sumPeriod': 25, // Number | The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'emaPeriod': 9,
+  'sumPeriod': 25,
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsMi(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsMi(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1718,18 +1718,18 @@ Returns the Negative Volume Index values of Stock Prices for the Security with t
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsNvi(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsNvi(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1805,18 +1805,18 @@ Returns the On-balance Volume values of Stock Prices for the Security with the g
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsObv(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsObv(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1892,19 +1892,19 @@ Returns the On-balance Volume Mean values of Stock Prices for the Security with 
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'period': 10, // Number | The number of observations, per period, to calculate On-balance Volume Mean
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'period': 10,
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsObvMean(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsObvMean(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1981,20 +1981,20 @@ Returns the Relative Strength Index values of Stock Prices for the Security with
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'period': 14, // Number | The number of observations, per period, to calculate Relative Strength Index
-  'priceKey': "close", // String | The Stock Price field to use when calculating Relative Strength Index
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'period': 14,
+  'priceKey': "close",
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsRsi(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsRsi(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -2072,20 +2072,20 @@ Returns the Simple Moving Average values of Stock Prices for the Security with t
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'period': 20, // Number | The number of observations, per period, to calculate Simple Moving Average
-  'priceKey': "close", // String | The Stock Price field to use when calculating Simple Moving Average
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'period': 20,
+  'priceKey': "close",
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsSma(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsSma(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -2163,20 +2163,20 @@ Returns the Stochastic Oscillator values of Stock Prices for the Security with t
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'period': 14, // Number | The number of observations, per period, to calculate %K of Stochastic Oscillator
-  'signalPeriod': 3, // Number | The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'period': 14,
+  'signalPeriod': 3,
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsSr(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsSr(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -2254,19 +2254,19 @@ Returns the Simple Moving Average values of Stock Prices for the Security with t
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'period': 15, // Number | The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'period': 15,
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsTrix(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsTrix(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -2343,21 +2343,21 @@ Returns the True Strength Index values of Stock Prices for the Security with the
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'lowPeriod': 13, // Number | The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index
-  'highPeriod': 25, // Number | The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index
-  'priceKey': "close", // String | The Stock Price field to use when calculating True Strength Index
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'lowPeriod': 13,
+  'highPeriod': 25,
+  'priceKey': "close",
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsTsi(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsTsi(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -2436,24 +2436,24 @@ Returns the Ultimate Oscillator values of Stock Prices for the Security with the
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'shortPeriod': 7, // Number | The number of observations, per period, to calculate the short period for Ultimate Oscillator
-  'mediumPeriod': 14, // Number | The number of observations, per period, to calculate the medium period for Ultimate Oscillator
-  'longPeriod': 28, // Number | The number of observations, per period, to calculate the long period for Ultimate Oscillator
-  'shortWeight': 4.0, // Number | The weight of short Buying Pressure average for Ultimate Oscillator
-  'mediumWeight': 2.0, // Number | The weight of medium Buying Pressure average for Ultimate Oscillator
-  'longWeight': 1.0, // Number | The weight of long Buying Pressure average for Ultimate Oscillator
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'shortPeriod': 7,
+  'mediumPeriod': 14,
+  'longPeriod': 28,
+  'shortWeight': 4.0,
+  'mediumWeight': 2.0,
+  'longWeight': 1.0,
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsUo(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsUo(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -2535,19 +2535,19 @@ Returns the Vortex Indicator values of Stock Prices for the Security with the gi
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'period': 14, // Number | The number of observations, per period, to calculate Vortex Indicator
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'period': 14,
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsVi(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsVi(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -2624,18 +2624,18 @@ Returns the Volume-price Trend values of Stock Prices for the Security with the 
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsVpt(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsVpt(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -2711,18 +2711,18 @@ Returns the Volume Weighted Average Price values of Stock Prices for the Securit
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsVwap(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsVwap(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -2798,19 +2798,19 @@ Returns the Williams %R values of Stock Prices for the Security with the given &
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var technicalAPI = new intrinioSDK.TechnicalApi();
+var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL"; // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+var identifier = "AAPL";
 
 var opts = { 
-  'period': 14, // Number | The number of observations, per period, to look-back when calculating Williams %R
-  'startDate': "2018-01-01", // String | Return technical indicator values on or after the date
-  'endDate': "2019-01-01", // String | Return technical indicator values on or before the date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'period': 14,
+  'startDate': "2018-01-01",
+  'endDate': "2019-01-01",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-technicalAPI.getSecurityPriceTechnicalsWr(identifier, opts).then(function(data) {
+technical.getSecurityPriceTechnicalsWr(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);

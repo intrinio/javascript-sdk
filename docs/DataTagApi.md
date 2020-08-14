@@ -52,19 +52,20 @@ Returns all Data Tags. Returns Data Tags matching parameters when specified.
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var dataTagAPI = new intrinioSDK.DataTagApi();
+var dataTag = new intrinioSDK.DataTagApi();
+
 
 var opts = { 
-  'tag': null, // String | Tag
-  'type': null, // String | Type
-  'parent': null, // String | ID of tag parent
-  'statementCode': "income_statement", // String | Statement Code
-  'fsTemplate': "industrial", // String | Template
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'tag': null,
+  'type': null,
+  'parent': null,
+  'statementCode': "income_statement",
+  'fsTemplate': "industrial",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-dataTagAPI.getAllDataTags(opts).then(function(data) {
+dataTag.getAllDataTags(opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -142,12 +143,12 @@ Returns the Data Tag with the given &#x60;identifier&#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var dataTagAPI = new intrinioSDK.DataTagApi();
+var dataTag = new intrinioSDK.DataTagApi();
 
-var identifier = "marketcap"; // String | The Intrinio ID or the code-name of the Data Tag
+var identifier = "marketcap";
 
 
-dataTagAPI.getDataTagById(identifier).then(function(data) {
+dataTag.getDataTagById(identifier).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -219,15 +220,15 @@ Searches for Data Tags matching the text &#x60;query&#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var dataTagAPI = new intrinioSDK.DataTagApi();
+var dataTag = new intrinioSDK.DataTagApi();
 
-var query = "revenue"; // String | 
+var query = "revenue";
 
 var opts = { 
-  'pageSize': 100 // Number | The number of results to return
+  'pageSize': 100
 };
 
-dataTagAPI.searchDataTags(query, opts).then(function(data) {
+dataTag.searchDataTags(query, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);

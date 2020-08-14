@@ -66,14 +66,15 @@ Method | HTTP request | Description
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var indexAPI = new intrinioSDK.IndexApi();
+var index = new intrinioSDK.IndexApi();
+
 
 var opts = { 
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'pageSize': 100,
+  'nextPage': null
 };
 
-indexAPI.getAllEconomicIndices(opts).then(function(data) {
+index.getAllEconomicIndices(opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -145,14 +146,15 @@ Name | Type | Description  | Notes
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var indexAPI = new intrinioSDK.IndexApi();
+var index = new intrinioSDK.IndexApi();
+
 
 var opts = { 
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'pageSize': 100,
+  'nextPage': null
 };
 
-indexAPI.getAllSicIndices(opts).then(function(data) {
+index.getAllSicIndices(opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -224,14 +226,15 @@ Name | Type | Description  | Notes
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var indexAPI = new intrinioSDK.IndexApi();
+var index = new intrinioSDK.IndexApi();
+
 
 var opts = { 
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'pageSize': 100,
+  'nextPage': null
 };
 
-indexAPI.getAllStockMarketIndices(opts).then(function(data) {
+index.getAllStockMarketIndices(opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -303,12 +306,12 @@ Name | Type | Description  | Notes
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var indexAPI = new intrinioSDK.IndexApi();
+var index = new intrinioSDK.IndexApi();
 
-var identifier = "$GDP"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$GDP";
 
 
-indexAPI.getEconomicIndexById(identifier).then(function(data) {
+index.getEconomicIndexById(identifier).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -380,14 +383,13 @@ Returns a numeric value for the given &#x60;tag&#x60; for the Economic Index wit
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var indexAPI = new intrinioSDK.IndexApi();
+var index = new intrinioSDK.IndexApi();
 
-var identifier = "$GDP"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$GDP";
+var tag = "level";
 
-var tag = "level"; // String | An Intrinio data tag <a href='https://data.intrinio.com/data-tags/economic'>reference</a>
 
-
-indexAPI.getEconomicIndexDataPointNumber(identifier, tag).then(function(data) {
+index.getEconomicIndexDataPointNumber(identifier, tag).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -460,14 +462,13 @@ Returns a text value for the given &#x60;tag&#x60; for the Economic Index with t
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var indexAPI = new intrinioSDK.IndexApi();
+var index = new intrinioSDK.IndexApi();
 
-var identifier = "$GDP"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$GDP";
+var tag = "level";
 
-var tag = "level"; // String | An Intrinio data tag ID or code-name
 
-
-indexAPI.getEconomicIndexDataPointText(identifier, tag).then(function(data) {
+index.getEconomicIndexDataPointText(identifier, tag).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -540,22 +541,21 @@ Returns historical values for the given &#x60;tag&#x60; and the Economic Index w
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var indexAPI = new intrinioSDK.IndexApi();
+var index = new intrinioSDK.IndexApi();
 
-var identifier = "$GDP"; // String | An Index Identifier (symbol, Intrinio ID)
-
-var tag = "level"; // String | An Intrinio data tag <a href='https://data.intrinio.com/data-tags/economic'>reference</a>
+var identifier = "$GDP";
+var tag = "level";
 
 var opts = { 
-  'type': null, // String | Filter by type, when applicable
-  'startDate': new Date("2018-01-01"), // Date | Get historical data on or after this date
-  'endDate': null, // Date | Get historical data on or before this date
-  'sortOrder': "desc", // String | Sort by date `asc` or `desc`
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'type': null,
+  'startDate': new Date("2018-01-01"),
+  'endDate': null,
+  'sortOrder': "desc",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-indexAPI.getEconomicIndexHistoricalData(identifier, tag, opts).then(function(data) {
+index.getEconomicIndexHistoricalData(identifier, tag, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -633,12 +633,12 @@ Name | Type | Description  | Notes
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var indexAPI = new intrinioSDK.IndexApi();
+var index = new intrinioSDK.IndexApi();
 
-var identifier = "$SIC.1"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$SIC.1";
 
 
-indexAPI.getSicIndexById(identifier).then(function(data) {
+index.getSicIndexById(identifier).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -710,14 +710,13 @@ Returns a numeric value for the given &#x60;tag&#x60; for the SIC Index with the
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var indexAPI = new intrinioSDK.IndexApi();
+var index = new intrinioSDK.IndexApi();
 
-var identifier = "$SIC.1"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$SIC.1";
+var tag = "level";
 
-var tag = "level"; // String | An Intrinio data tag ID or code-name
 
-
-indexAPI.getSicIndexDataPointNumber(identifier, tag).then(function(data) {
+index.getSicIndexDataPointNumber(identifier, tag).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -790,14 +789,13 @@ Returns a text value for the given &#x60;tag&#x60; for the SIC Index with the gi
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var indexAPI = new intrinioSDK.IndexApi();
+var index = new intrinioSDK.IndexApi();
 
-var identifier = "$SIC.1"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$SIC.1";
+var tag = "level";
 
-var tag = "level"; // String | An Intrinio data tag ID or code-name
 
-
-indexAPI.getSicIndexDataPointText(identifier, tag).then(function(data) {
+index.getSicIndexDataPointText(identifier, tag).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -870,22 +868,21 @@ Returns historical values for the given &#x60;tag&#x60; and the SIC Index with t
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var indexAPI = new intrinioSDK.IndexApi();
+var index = new intrinioSDK.IndexApi();
 
-var identifier = "$SIC.1"; // String | An Index Identifier (symbol, Intrinio ID)
-
-var tag = "marketcap"; // String | An Intrinio data tag ID or code-name
+var identifier = "$SIC.1";
+var tag = "marketcap";
 
 var opts = { 
-  'type': null, // String | Filter by type, when applicable
-  'startDate': new Date("2018-01-01"), // Date | Get historical data on or after this date
-  'endDate': null, // Date | Get historical data on or before this date
-  'sortOrder': "desc", // String | Sort by date `asc` or `desc`
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'type': null,
+  'startDate': new Date("2018-01-01"),
+  'endDate': null,
+  'sortOrder': "desc",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-indexAPI.getSicIndexHistoricalData(identifier, tag, opts).then(function(data) {
+index.getSicIndexHistoricalData(identifier, tag, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -963,12 +960,12 @@ Name | Type | Description  | Notes
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var indexAPI = new intrinioSDK.IndexApi();
+var index = new intrinioSDK.IndexApi();
 
-var identifier = "$DJI"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$DJI";
 
 
-indexAPI.getStockMarketIndexById(identifier).then(function(data) {
+index.getStockMarketIndexById(identifier).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1040,14 +1037,13 @@ Returns a numeric value for the given &#x60;tag&#x60; for the Stock Market Index
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var indexAPI = new intrinioSDK.IndexApi();
+var index = new intrinioSDK.IndexApi();
 
-var identifier = "$DJI"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$DJI";
+var tag = "level";
 
-var tag = "level"; // String | An Intrinio data tag ID or code-name
 
-
-indexAPI.getStockMarketIndexDataPointNumber(identifier, tag).then(function(data) {
+index.getStockMarketIndexDataPointNumber(identifier, tag).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1120,14 +1116,13 @@ Returns a text value for the given &#x60;tag&#x60; for the Stock Market Index wi
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var indexAPI = new intrinioSDK.IndexApi();
+var index = new intrinioSDK.IndexApi();
 
-var identifier = "$DJI"; // String | An Index Identifier (symbol, Intrinio ID)
+var identifier = "$DJI";
+var tag = "level";
 
-var tag = "level"; // String | An Intrinio data tag ID or code-name
 
-
-indexAPI.getStockMarketIndexDataPointText(identifier, tag).then(function(data) {
+index.getStockMarketIndexDataPointText(identifier, tag).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1200,22 +1195,21 @@ Returns historical values for the given &#x60;tag&#x60; and the Stock Market Ind
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var indexAPI = new intrinioSDK.IndexApi();
+var index = new intrinioSDK.IndexApi();
 
-var identifier = "$DJI"; // String | An Index Identifier (symbol, Intrinio ID)
-
-var tag = "level"; // String | An Intrinio data tag ID or code-name
+var identifier = "$DJI";
+var tag = "level";
 
 var opts = { 
-  'type': null, // String | Filter by type, when applicable
-  'startDate': new Date("2018-01-01"), // Date | Get historical data on or after this date
-  'endDate': null, // Date | Get historical data on or before this date
-  'sortOrder': "desc", // String | Sort by date `asc` or `desc`
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'type': null,
+  'startDate': new Date("2018-01-01"),
+  'endDate': null,
+  'sortOrder': "desc",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-indexAPI.getStockMarketIndexHistoricalData(identifier, tag, opts).then(function(data) {
+index.getStockMarketIndexHistoricalData(identifier, tag, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1294,15 +1288,15 @@ Searches for indices using the text in &#x60;query&#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var indexAPI = new intrinioSDK.IndexApi();
+var index = new intrinioSDK.IndexApi();
 
-var query = "GDP"; // String | Search query
+var query = "GDP";
 
 var opts = { 
-  'pageSize': 100 // Number | The number of results to return
+  'pageSize': 100
 };
 
-indexAPI.searchEconomicIndices(query, opts).then(function(data) {
+index.searchEconomicIndices(query, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1375,15 +1369,15 @@ Searches for indices using the text in &#x60;query&#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var indexAPI = new intrinioSDK.IndexApi();
+var index = new intrinioSDK.IndexApi();
 
-var query = "agriculture"; // String | Search query
+var query = "agriculture";
 
 var opts = { 
-  'pageSize': 100 // Number | The number of results to return
+  'pageSize': 100
 };
 
-indexAPI.searchSicIndices(query, opts).then(function(data) {
+index.searchSicIndices(query, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1456,15 +1450,15 @@ Searches for indices using the text in &#x60;query&#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var indexAPI = new intrinioSDK.IndexApi();
+var index = new intrinioSDK.IndexApi();
 
-var query = "dow"; // String | Search query
+var query = "dow";
 
 var opts = { 
-  'pageSize': 100 // Number | The number of results to return
+  'pageSize': 100
 };
 
-indexAPI.searchStockMarketsIndices(query, opts).then(function(data) {
+index.searchStockMarketsIndices(query, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);

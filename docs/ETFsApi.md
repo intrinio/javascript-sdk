@@ -55,15 +55,16 @@ Returns a list of Exchange Traded Funds (ETFs) sourced from FirstBridge
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var eTFsAPI = new intrinioSDK.ETFsApi();
+var eTFs = new intrinioSDK.ETFsApi();
+
 
 var opts = { 
-  'exchange': "XNAS", // String | 
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'exchange': "XNAS",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-eTFsAPI.getAllEtfs(opts).then(function(data) {
+eTFs.getAllEtfs(opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -137,12 +138,12 @@ Returns the Exchange Traded Fund (ETF) with the given identifier
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var eTFsAPI = new intrinioSDK.ETFsApi();
+var eTFs = new intrinioSDK.ETFsApi();
 
-var identifier = "SPY"; // String | An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)
+var identifier = "SPY";
 
 
-eTFsAPI.getEtf(identifier).then(function(data) {
+eTFs.getEtf(identifier).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -214,12 +215,12 @@ Returns analytics for the Exchange Traded Fund (ETF) including volume, market ca
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var eTFsAPI = new intrinioSDK.ETFsApi();
+var eTFs = new intrinioSDK.ETFsApi();
 
-var identifier = "SPY"; // String | An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)
+var identifier = "SPY";
 
 
-eTFsAPI.getEtfAnalytics(identifier).then(function(data) {
+eTFs.getEtfAnalytics(identifier).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -291,16 +292,16 @@ Returns the holdings sorted by weight descending and the Exchange Traded Fund (E
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var eTFsAPI = new intrinioSDK.ETFsApi();
+var eTFs = new intrinioSDK.ETFsApi();
 
-var identifier = "SPY"; // String | An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)
+var identifier = "SPY";
 
 var opts = { 
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'pageSize': 100,
+  'nextPage': null
 };
 
-eTFsAPI.getEtfHoldings(identifier, opts).then(function(data) {
+eTFs.getEtfHoldings(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -374,12 +375,12 @@ Returns daily stats for the Exchange Traded Fund (ETF) including net asset value
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var eTFsAPI = new intrinioSDK.ETFsApi();
+var eTFs = new intrinioSDK.ETFsApi();
 
-var identifier = "SPY"; // String | An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID)
+var identifier = "SPY";
 
 
-eTFsAPI.getEtfStats(identifier).then(function(data) {
+eTFs.getEtfStats(identifier).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -451,12 +452,12 @@ Searches for Exchange Traded Funds (ETFs) matching the text &#x60;query&#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var eTFsAPI = new intrinioSDK.ETFsApi();
+var eTFs = new intrinioSDK.ETFsApi();
 
-var query = "iShares"; // String | 
+var query = "iShares";
 
 
-eTFsAPI.searchEtfs(query).then(function(data) {
+eTFs.searchEtfs(query).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);

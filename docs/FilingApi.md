@@ -59,21 +59,21 @@ Returns all Filings. Returns Filings matching parameters when supplied.
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var filingAPI = new intrinioSDK.FilingApi();
+var filing = new intrinioSDK.FilingApi();
 
-var company = "AAPL"; // String | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
+var company = "AAPL";
 
 var opts = { 
-  'reportType': null, // String | Filter by report type. Separate values with commas to return multiple The filing <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report types</a>.
-  'startDate': new Date("2015-01-01"), // Date | Filed on or after the given date
-  'endDate': null, // Date | Filed before or after the given date
-  'industryCategory': null, // String | Return companies in the given industry category
-  'industryGroup': null, // String | Return companies in the given industry group
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'reportType': null,
+  'startDate': new Date("2015-01-01"),
+  'endDate': null,
+  'industryCategory': null,
+  'industryGroup': null,
+  'pageSize': 100,
+  'nextPage': null
 };
 
-filingAPI.getAllFilings(company, opts).then(function(data) {
+filing.getAllFilings(company, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -152,20 +152,21 @@ Return all Notes from all Filings, most-recent first. Returns notes matching par
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var filingAPI = new intrinioSDK.FilingApi();
+var filing = new intrinioSDK.FilingApi();
+
 
 var opts = { 
-  'company': "AAPL", // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-  'reportType': "10-Q", // String | Notes contained in filings that match the given <a href=\"https://docs.intrinio.com/documentation/sec_filing_report_types\" target=\"_blank\">report type</a>
-  'filingStartDate': null, // Date | Limit search to filings on or after this date
-  'filingEndDate': null, // Date | Limit search to filings on or before this date
-  'periodEndedStartDate': null, // Date | Limit search to filings with a period end date on or after this date
-  'periodEndedEndDate': null, // Date | Limit search to filings with a period end date on or before this date
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'company': "AAPL",
+  'reportType': "10-Q",
+  'filingStartDate': null,
+  'filingEndDate': null,
+  'periodEndedStartDate': null,
+  'periodEndedEndDate': null,
+  'pageSize': 100,
+  'nextPage': null
 };
 
-filingAPI.getAllNotes(opts).then(function(data) {
+filing.getAllNotes(opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -244,12 +245,12 @@ Returns the Filing with the given &#x60;identifier&#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var filingAPI = new intrinioSDK.FilingApi();
+var filing = new intrinioSDK.FilingApi();
 
-var id = "fil_7Kn2P6"; // String | The Intrinio ID of the Filing
+var id = "fil_7Kn2P6";
 
 
-filingAPI.getFilingById(id).then(function(data) {
+filing.getFilingById(id).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -321,21 +322,21 @@ Returns all Fundamentals for the SEC Filing with the given &#x60;identifier&#x60
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var filingAPI = new intrinioSDK.FilingApi();
+var filing = new intrinioSDK.FilingApi();
 
-var identifier = "fil_B73xBG"; // String | A Filing identifier
+var identifier = "fil_B73xBG";
 
 var opts = { 
-  'statementCode': null, // String | Filters fundamentals by statement code
-  'type': null, // String | Filters fundamentals by type
-  'fiscalYear': null, // Number | Filters fundamentals by fiscal year
-  'fiscalPeriod': null, // String | Filters fundamentals by fiscal period
-  'startDate': null, // Date | Returns fundamentals on or after the given date
-  'endDate': null, // Date | Returns fundamentals on or before the given date
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'statementCode': null,
+  'type': null,
+  'fiscalYear': null,
+  'fiscalPeriod': null,
+  'startDate': null,
+  'endDate': null,
+  'nextPage': null
 };
 
-filingAPI.getFilingFundamentals(identifier, opts).then(function(data) {
+filing.getFilingFundamentals(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -413,12 +414,12 @@ Name | Type | Description  | Notes
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var filingAPI = new intrinioSDK.FilingApi();
+var filing = new intrinioSDK.FilingApi();
 
-var identifier = "fil_B73xBG"; // String | A Filing identifier
+var identifier = "fil_B73xBG";
 
 
-filingAPI.getFilingHtml(identifier).then(function(data) {
+filing.getFilingHtml(identifier).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -489,12 +490,12 @@ Name | Type | Description  | Notes
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var filingAPI = new intrinioSDK.FilingApi();
+var filing = new intrinioSDK.FilingApi();
 
-var identifier = "fil_B73xBG"; // String | A Filing identifier
+var identifier = "fil_B73xBG";
 
 
-filingAPI.getFilingText(identifier).then(function(data) {
+filing.getFilingText(identifier).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -565,15 +566,15 @@ Name | Type | Description  | Notes
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var filingAPI = new intrinioSDK.FilingApi();
+var filing = new intrinioSDK.FilingApi();
 
-var identifier = "xbn_ydK3QL"; // String | The Intrinio ID of the filing note
+var identifier = "xbn_ydK3QL";
 
 var opts = { 
-  'contentFormat': "text" // String | Returns content in html (as filed) or plain text
+  'contentFormat': "text"
 };
 
-filingAPI.getNote(identifier, opts).then(function(data) {
+filing.getNote(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -645,12 +646,12 @@ Name | Type | Description  | Notes
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var filingAPI = new intrinioSDK.FilingApi();
+var filing = new intrinioSDK.FilingApi();
 
-var identifier = "xbn_ydK3QL"; // String | The Intrinio ID of the filing note
+var identifier = "xbn_ydK3QL";
 
 
-filingAPI.getNoteHtml(identifier).then(function(data) {
+filing.getNoteHtml(identifier).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -721,12 +722,12 @@ Name | Type | Description  | Notes
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var filingAPI = new intrinioSDK.FilingApi();
+var filing = new intrinioSDK.FilingApi();
 
-var identifier = "xbn_ydK3QL"; // String | The Intrinio ID of the filing note
+var identifier = "xbn_ydK3QL";
 
 
-filingAPI.getNoteText(identifier).then(function(data) {
+filing.getNoteText(identifier).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -798,17 +799,17 @@ Searches for Filing Notes using the &#x60;query&#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var filingAPI = new intrinioSDK.FilingApi();
+var filing = new intrinioSDK.FilingApi();
 
-var query = "inflation"; // String | Search for notes that contain all or parts of this text
+var query = "inflation";
 
 var opts = { 
-  'filingStartDate': new Date("2018-07-15"), // Date | Limit search to filings on or after this date
-  'filingEndDate': new Date("2018-11-30"), // Date | Limit search to filings on or before this date
-  'pageSize': 100 // Number | The number of results to return
+  'filingStartDate': new Date("2018-07-15"),
+  'filingEndDate': new Date("2018-11-30"),
+  'pageSize': 100
 };
 
-filingAPI.searchNotes(query, opts).then(function(data) {
+filing.searchNotes(query, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);

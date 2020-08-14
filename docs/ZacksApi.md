@@ -60,31 +60,32 @@ Returns buy, sell, and hold recommendations from analysts at brokerages for all 
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var zacksAPI = new intrinioSDK.ZacksApi();
+var zacks = new intrinioSDK.ZacksApi();
+
 
 var opts = { 
-  'identifier': "AAPL", // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-  'startDate': null, // Date | Limit ratings to those on or after this date
-  'endDate': null, // Date | Limit ratings to those on or before this date
-  'meanGreater': null, // Number | Return only records with a mean (average) higher than this value
-  'meanLess': null, // Number | Return only records with a mean (average) lower than this value
-  'strongBuysGreater': null, // Number | Return only records with more than this many Strong Buy recommendations
-  'strongBuysLess': null, // Number | Return only records with fewer than this many Strong Buy recommendations
-  'buysGreater': null, // Number | Return only records with more than this many Buy recommendations
-  'buysLess': null, // Number | Return only records with fewer than this many Buy recommendations
-  'holdsGreater': null, // Number | Return only records with more than this many Hold recommendations
-  'holdsLess': null, // Number | Return only records with fewer than this many Hold recommendations
-  'sellsGreater': null, // Number | Return only records with more than this many Sell recommendations
-  'sellsLess': null, // Number | Return only records with fewer than this many Sell recommendations
-  'strongSellsGreater': null, // Number | Return only records with more than this many Strong Sell recommendations
-  'strongSellsLess': null, // Number | Return only records with fewer than this many Strong Sell recommendations
-  'totalGreater': null, // Number | Return only records with more than this many recommendations, regardless of type
-  'totalLess': null, // Number | Return only records with fewer than this many recommendations, regardless of type
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'identifier': "AAPL",
+  'startDate': null,
+  'endDate': null,
+  'meanGreater': null,
+  'meanLess': null,
+  'strongBuysGreater': null,
+  'strongBuysLess': null,
+  'buysGreater': null,
+  'buysLess': null,
+  'holdsGreater': null,
+  'holdsLess': null,
+  'sellsGreater': null,
+  'sellsLess': null,
+  'strongSellsGreater': null,
+  'strongSellsLess': null,
+  'totalGreater': null,
+  'totalLess': null,
+  'pageSize': 100,
+  'nextPage': null
 };
 
-zacksAPI.getZacksAnalystRatings(opts).then(function(data) {
+zacks.getZacksAnalystRatings(opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -174,21 +175,22 @@ Returns Zacks consensus earnings-per-share (EPS) data for all Companies.
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var zacksAPI = new intrinioSDK.ZacksApi();
+var zacks = new intrinioSDK.ZacksApi();
+
 
 var opts = { 
-  'identifier': "AAPL", // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-  'startDate': null, // Date | Limit EPS estimates to those on or after this date
-  'endDate': null, // Date | Limit EPS estimates to those on or before this date
-  'fiscalYear': null, // Number | Only for the given fiscal year
-  'fiscalPeriod': null, // String | The fiscal period
-  'calendarYear': null, // Number | Only for the given calendar year
-  'calendarPeriod': null, // String | The calendar period
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'identifier': "AAPL",
+  'startDate': null,
+  'endDate': null,
+  'fiscalYear': null,
+  'fiscalPeriod': null,
+  'calendarYear': null,
+  'calendarPeriod': null,
+  'pageSize': 100,
+  'nextPage': null
 };
 
-zacksAPI.getZacksEpsEstimates(opts).then(function(data) {
+zacks.getZacksEpsEstimates(opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -268,17 +270,18 @@ Returns the latest Zacks EPS growth rates
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var zacksAPI = new intrinioSDK.ZacksApi();
+var zacks = new intrinioSDK.ZacksApi();
+
 
 var opts = { 
-  'company': "AAPL", // String | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
-  'industryGroupName': null, // String | Return only growth rates for companies in the given Zacks industry group name
-  'industryGroupNumber': null, // String | Return only growth rates for companies in the given Zacks industry group number
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'company': "AAPL",
+  'industryGroupName': null,
+  'industryGroupNumber': null,
+  'pageSize': 100,
+  'nextPage': null
 };
 
-zacksAPI.getZacksEpsGrowthRates(opts).then(function(data) {
+zacks.getZacksEpsGrowthRates(opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -354,28 +357,29 @@ Returns Zacks eps surprise data for all Securities.
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var zacksAPI = new intrinioSDK.ZacksApi();
+var zacks = new intrinioSDK.ZacksApi();
+
 
 var opts = { 
-  'startDate': null, // Date | Limit EPS surprises to those on or after this date
-  'endDate': null, // Date | Limit EPS surprises to those on or before this date
-  'epsActualGreater': null, // Number | Return only records with an actual EPS higher than this value
-  'epsActualLess': null, // Number | Return only records with an actual EPS lower than this value
-  'epsMeanEstimateGreater': null, // Number | Return only records with an EPS mean estimate greater than this value
-  'epsMeanEstimateLess': null, // Number | Return only records with an EPS mean estimate lower than this value
-  'epsAmountDiffGreater': null, // Number | Return only records with an EPS amount difference greater than this value
-  'epsAmountDiffLess': null, // Number | Return only records with an EPS amount difference less than this value
-  'epsPercentDiffGreater': null, // Number | Return only records with an EPS percent difference greater than this value
-  'epsPercentDiffLess': null, // Number | Return only records with an EPS percent difference less than this value
-  'epsCountEstimateGreater': null, // Number | Return only records with an EPS count estimate greater than this value
-  'epsCountEstimateLess': null, // Number | Return only records with an EPS count estimate less than this value
-  'epsStdDevEstimateGreater': null, // Number | Return only records with an EPS standard deviation greater than this value
-  'epsStdDevEstimateLess': null, // Number | Return only records with an EPS standard deviation less than this value
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'startDate': null,
+  'endDate': null,
+  'epsActualGreater': null,
+  'epsActualLess': null,
+  'epsMeanEstimateGreater': null,
+  'epsMeanEstimateLess': null,
+  'epsAmountDiffGreater': null,
+  'epsAmountDiffLess': null,
+  'epsPercentDiffGreater': null,
+  'epsPercentDiffLess': null,
+  'epsCountEstimateGreater': null,
+  'epsCountEstimateLess': null,
+  'epsStdDevEstimateGreater': null,
+  'epsStdDevEstimateLess': null,
+  'pageSize': 100,
+  'nextPage': null
 };
 
-zacksAPI.getZacksEpsSurprises(opts).then(function(data) {
+zacks.getZacksEpsSurprises(opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -462,18 +466,19 @@ Returns Zacks ETF holdings data
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var zacksAPI = new intrinioSDK.ZacksApi();
+var zacks = new intrinioSDK.ZacksApi();
+
 
 var opts = { 
-  'etfTicker': null, // String | Return holdings of the ETF with the given ticker
-  'holdingSymbol': null, // String | Return holdings where the instrument being held has the given trading symbol
-  'weightGreater': null, // Number | Return on the holdings with a weight greater than
-  'weightLess': null, // Number | Return on the holdings with a weight less than
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'etfTicker': null,
+  'holdingSymbol': null,
+  'weightGreater': null,
+  'weightLess': null,
+  'pageSize': 100,
+  'nextPage': null
 };
 
-zacksAPI.getZacksEtfHoldings(opts).then(function(data) {
+zacks.getZacksEtfHoldings(opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -550,15 +555,16 @@ Returns Zacks institutional holding companies data
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var zacksAPI = new intrinioSDK.ZacksApi();
+var zacks = new intrinioSDK.ZacksApi();
+
 
 var opts = { 
-  'ticker': null, // String | Return companies with the given ticker
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'ticker': null,
+  'pageSize': 100,
+  'nextPage': null
 };
 
-zacksAPI.getZacksInstitutionalHoldingCompanies(opts).then(function(data) {
+zacks.getZacksInstitutionalHoldingCompanies(opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -632,15 +638,16 @@ Returns Zacks institutional holding owners data
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var zacksAPI = new intrinioSDK.ZacksApi();
+var zacks = new intrinioSDK.ZacksApi();
+
 
 var opts = { 
-  'cik': null, // String | Return owners with the given Central Index Key (CIK)
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'cik': null,
+  'pageSize': 100,
+  'nextPage': null
 };
 
-zacksAPI.getZacksInstitutionalHoldingOwners(opts).then(function(data) {
+zacks.getZacksInstitutionalHoldingOwners(opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -714,16 +721,17 @@ Returns Zacks institutional holdings data
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var zacksAPI = new intrinioSDK.ZacksApi();
+var zacks = new intrinioSDK.ZacksApi();
+
 
 var opts = { 
-  'ticker': null, // String | Return holdings where the company being held has the given ticker
-  'ownerCik': null, // String | Return holdings where the owner/holder has the given Central Index Key (CIK)
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'ticker': null,
+  'ownerCik': null,
+  'pageSize': 100,
+  'nextPage': null
 };
 
-zacksAPI.getZacksInstitutionalHoldings(opts).then(function(data) {
+zacks.getZacksInstitutionalHoldings(opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -798,15 +806,16 @@ Returns the latest Zacks long term growth rates
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var zacksAPI = new intrinioSDK.ZacksApi();
+var zacks = new intrinioSDK.ZacksApi();
+
 
 var opts = { 
-  'identifier': "AAPL", // String | A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'identifier': "AAPL",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-zacksAPI.getZacksLongTermGrowthRates(opts).then(function(data) {
+zacks.getZacksLongTermGrowthRates(opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -880,28 +889,29 @@ Returns Zacks sales surprise data for all Securities.
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var zacksAPI = new intrinioSDK.ZacksApi();
+var zacks = new intrinioSDK.ZacksApi();
+
 
 var opts = { 
-  'startDate': null, // Date | Limit sales surprises to those on or after this date
-  'endDate': null, // Date | Limit sales surprises to those on or before this date
-  'salesActualGreater': null, // Number | Return only records with an actual sales higher than this value
-  'salesActualLess': null, // Number | Return only records with an actual sales lower than this value
-  'salesMeanEstimateGreater': null, // Number | Return only records with a sales mean estimate greater than this value
-  'salesMeanEstimateLess': null, // Number | Return only records with a sales mean estimate lower than this value
-  'salesAmountDiffGreater': null, // Number | Return only records with a sales amount difference greater than this value
-  'salesAmountDiffLess': null, // Number | Return only records with a sales amount difference less than this value
-  'salesPercentDiffGreater': null, // Number | Return only records with a sales percent difference greater than this value
-  'salesPercentDiffLess': null, // Number | Return only records with a sales percent difference less than this value
-  'salesCountEstimateGreater': null, // Number | Return only records with a sales count estimate greater than this value
-  'salesCountEstimateLess': null, // Number | Return only records with a sales count estimate less than this value
-  'salesStdDevEstimateGreater': null, // Number | Return only records with a sales standard deviation greater than this value
-  'salesStdDevEstimateLess': null, // Number | Return only records with a sales standard deviation less than this value
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'startDate': null,
+  'endDate': null,
+  'salesActualGreater': null,
+  'salesActualLess': null,
+  'salesMeanEstimateGreater': null,
+  'salesMeanEstimateLess': null,
+  'salesAmountDiffGreater': null,
+  'salesAmountDiffLess': null,
+  'salesPercentDiffGreater': null,
+  'salesPercentDiffLess': null,
+  'salesCountEstimateGreater': null,
+  'salesCountEstimateLess': null,
+  'salesStdDevEstimateGreater': null,
+  'salesStdDevEstimateLess': null,
+  'pageSize': 100,
+  'nextPage': null
 };
 
-zacksAPI.getZacksSalesSurprises(opts).then(function(data) {
+zacks.getZacksSalesSurprises(opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -988,16 +998,17 @@ Returns the latest Zacks target price consensus data
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var zacksAPI = new intrinioSDK.ZacksApi();
+var zacks = new intrinioSDK.ZacksApi();
+
 
 var opts = { 
-  'identifier': "AAPL", // String | Filings for the given `company` identifier (ticker, CIK, LEI, Intrinio ID)
-  'industryGroupNumber': null, // String | Return only growth rates for companies in the given Zacks industry group number
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'identifier': "AAPL",
+  'industryGroupNumber': null,
+  'pageSize': 100,
+  'nextPage': null
 };
 
-zacksAPI.getZacksTargetPriceConsensuses(opts).then(function(data) {
+zacks.getZacksTargetPriceConsensuses(opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);

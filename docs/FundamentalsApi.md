@@ -53,12 +53,12 @@ Returns detailed fundamental data for the given &#x60;id&#x60;.
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var fundamentalsAPI = new intrinioSDK.FundamentalsApi();
+var fundamentals = new intrinioSDK.FundamentalsApi();
 
-var id = "fun_ge9LlE"; // String | The Intrinio ID for the Fundamental
+var id = "fun_ge9LlE";
 
 
-fundamentalsAPI.getFundamentalById(id).then(function(data) {
+fundamentals.getFundamentalById(id).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -130,12 +130,12 @@ Returns the As-Reported Financials directly from the financial statements of the
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var fundamentalsAPI = new intrinioSDK.FundamentalsApi();
+var fundamentals = new intrinioSDK.FundamentalsApi();
 
-var id = "AAPL-income_statement-2018-Q1"; // String | The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental
+var id = "AAPL-income_statement-2018-Q1";
 
 
-fundamentalsAPI.getFundamentalReportedFinancials(id).then(function(data) {
+fundamentals.getFundamentalReportedFinancials(id).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -207,12 +207,12 @@ Returns professional-grade historical financial data. This data is standardized,
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var fundamentalsAPI = new intrinioSDK.FundamentalsApi();
+var fundamentals = new intrinioSDK.FundamentalsApi();
 
-var id = "AAPL-income_statement-2018-Q1"; // String | The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental
+var id = "AAPL-income_statement-2018-Q1";
 
 
-fundamentalsAPI.getFundamentalStandardizedFinancials(id).then(function(data) {
+fundamentals.getFundamentalStandardizedFinancials(id).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -284,18 +284,15 @@ Returns the Fundamental for the Company with the given &#x60;identifier&#x60; an
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var fundamentalsAPI = new intrinioSDK.FundamentalsApi();
+var fundamentals = new intrinioSDK.FundamentalsApi();
 
-var identifier = "AAPL"; // String | A Company identifier (Ticker, CIK, LEI, Intrinio ID)
-
-var statementCode = "income_statement"; // String | The statement code
-
-var fiscalYear = 2017; // Number | The fiscal year
-
-var fiscalPeriod = "FY"; // String | The fiscal period
+var identifier = "AAPL";
+var statementCode = "income_statement";
+var fiscalYear = 2017;
+var fiscalPeriod = "FY";
 
 
-fundamentalsAPI.lookupFundamental(identifier, statementCode, fiscalYear, fiscalPeriod).then(function(data) {
+fundamentals.lookupFundamental(identifier, statementCode, fiscalYear, fiscalPeriod).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);

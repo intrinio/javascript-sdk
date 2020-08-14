@@ -51,25 +51,26 @@ Method | HTTP request | Description
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var municipalityAPI = new intrinioSDK.MunicipalityApi();
+var municipality = new intrinioSDK.MunicipalityApi();
+
 
 var opts = { 
-  'hasFinancials': true, // Boolean | Return municipalities with financials
-  'governmentName': null, // String | Return municipalities with a government name matching the given query
-  'governmentType': null, // String | Return municipalities with the given government type
-  'areaName': null, // String | Return municipalities with an area name matching the given query
-  'areaType': null, // String | Return municipalities with the given area type
-  'city': null, // String | Return municipalities in the given city
-  'state': null, // String | Return municipalities in the given state
-  'zipcode': null, // Number | Return municipalities in the given zipcode
-  'populationGreaterThan': null, // Number | Return municipalities with a population greater than the given number
-  'populationLessThan': null, // Number | Return municipalities with a population less than the given number
-  'enrollmentGreaterThan': null, // Number | Return municipalities with an enrollment greater than the given number
-  'enrollmentLessThan': null, // Number | Return municipalities with an enrollment less than the given number
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'hasFinancials': true,
+  'governmentName': null,
+  'governmentType': null,
+  'areaName': null,
+  'areaType': null,
+  'city': null,
+  'state': null,
+  'zipcode': null,
+  'populationGreaterThan': null,
+  'populationLessThan': null,
+  'enrollmentGreaterThan': null,
+  'enrollmentLessThan': null,
+  'nextPage': null
 };
 
-municipalityAPI.getAllMunicipalities(opts).then(function(data) {
+municipality.getAllMunicipalities(opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -153,12 +154,12 @@ Returns the Municipality with the given ID
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var municipalityAPI = new intrinioSDK.MunicipalityApi();
+var municipality = new intrinioSDK.MunicipalityApi();
 
-var id = "mun_Xn7x4z"; // String | An Intrinio ID of a Municipality
+var id = "mun_Xn7x4z";
 
 
-municipalityAPI.getMunicipalityById(id).then(function(data) {
+municipality.getMunicipalityById(id).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -230,15 +231,15 @@ Returns financial statement data for the Municipality with the given ID
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var municipalityAPI = new intrinioSDK.MunicipalityApi();
+var municipality = new intrinioSDK.MunicipalityApi();
 
-var id = "mun_Xn7x4z"; // String | An Intrinio ID of a Municipality
+var id = "mun_Xn7x4z";
 
 var opts = { 
-  'fiscalYear': 2017 // Number | Return financials for the given fiscal year
+  'fiscalYear': 2017
 };
 
-municipalityAPI.getMunicipalityFinancials(id, opts).then(function(data) {
+municipality.getMunicipalityFinancials(id, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);

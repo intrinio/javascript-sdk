@@ -55,16 +55,17 @@ Returns all Stock Exchanges matching the specified parameters
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
+var stockExchange = new intrinioSDK.StockExchangeApi();
+
 
 var opts = { 
-  'city': "New York", // String | Filter by city
-  'country': "UNITED STATES OF AMERICA", // String | Filter by country
-  'countryCode': "US", // String | Filter by ISO country code
-  'pageSize': 100 // Number | The number of results to return
+  'city': "New York",
+  'country': "UNITED STATES OF AMERICA",
+  'countryCode': "US",
+  'pageSize': 100
 };
 
-stockExchangeAPI.getAllStockExchanges(opts).then(function(data) {
+stockExchange.getAllStockExchanges(opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -139,12 +140,12 @@ Returns the Stock Exchange with the given &#x60;identifier&#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
+var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
+var identifier = "USCOMP";
 
 
-stockExchangeAPI.getStockExchangeById(identifier).then(function(data) {
+stockExchange.getStockExchangeById(identifier).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -216,17 +217,17 @@ Returns stock price adjustments for the Stock Exchange with the given &#x60;iden
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
+var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
+var identifier = "USCOMP";
 
 var opts = { 
-  'date': new Date("2018-08-14"), // Date | The date for which to return price adjustments
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'date': new Date("2018-08-14"),
+  'pageSize': 100,
+  'nextPage': null
 };
 
-stockExchangeAPI.getStockExchangePriceAdjustments(identifier, opts).then(function(data) {
+stockExchange.getStockExchangePriceAdjustments(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -301,17 +302,17 @@ Returns end-of-day stock prices for Securities on the Stock Exchange with &#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
+var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
+var identifier = "USCOMP";
 
 var opts = { 
-  'date': new Date("2018-08-14"), // Date | The date for which to return prices
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'date': new Date("2018-08-14"),
+  'pageSize': 100,
+  'nextPage': null
 };
 
-stockExchangeAPI.getStockExchangePrices(identifier, opts).then(function(data) {
+stockExchange.getStockExchangePrices(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -386,17 +387,17 @@ Returns realtime stock prices for the Stock Exchange with the given &#x60;identi
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
+var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
+var identifier = "USCOMP";
 
 var opts = { 
-  'source': null, // String | Return realtime prices from the specified data source. If no source is specified, all sources are used.
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'source': null,
+  'pageSize': 100,
+  'nextPage': null
 };
 
-stockExchangeAPI.getStockExchangeRealtimePrices(identifier, opts).then(function(data) {
+stockExchange.getStockExchangeRealtimePrices(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -471,16 +472,16 @@ Returns Securities traded on the Stock Exchange with &#x60;identifier&#x60;
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var stockExchangeAPI = new intrinioSDK.StockExchangeApi();
+var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "USCOMP"; // String | A Stock Exchange identifier (MIC or Intrinio ID)
+var identifier = "USCOMP";
 
 var opts = { 
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'pageSize': 100,
+  'nextPage': null
 };
 
-stockExchangeAPI.getStockExchangeSecurities(identifier, opts).then(function(data) {
+stockExchange.getStockExchangeSecurities(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);

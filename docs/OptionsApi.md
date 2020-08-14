@@ -53,23 +53,23 @@ Returns the master list of option contracts for a given symbol.
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var optionsAPI = new intrinioSDK.OptionsApi();
+var options = new intrinioSDK.OptionsApi();
 
-var symbol = "MSFT"; // String | The option symbol, corresponding to the underlying security.
+var symbol = "MSFT";
 
 var opts = { 
-  'type': "put", // String | The option contract type.
-  'strike': 170.0, // Number | The strike price of the option contract. This will return options contracts with strike price equal to this price.
-  'strikeGreaterThan': 190.0, // Number | The strike price of the option contract. This will return options contracts with strike prices greater than this price.
-  'strikeLessThan': 150.0, // Number | The strike price of the option contract. This will return options contracts with strike prices less than this price.
-  'expiration': "2019-03-01", // String | The expiration date of the option contract. This will return options contracts with expiration dates on this date.
-  'expirationAfter': "2019-01-01", // String | The expiration date of the option contract. This will return options contracts with expiration dates after this date.
-  'expirationBefore': "2019-12-31", // String | The expiration date of the option contract. This will return options contracts with expiration dates before this date.
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'type': "put",
+  'strike': 170.0,
+  'strikeGreaterThan': 190.0,
+  'strikeLessThan': 150.0,
+  'expiration': "2019-03-01",
+  'expirationAfter': "2019-01-01",
+  'expirationBefore': "2019-12-31",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-optionsAPI.getOptions(symbol, opts).then(function(data) {
+options.getOptions(symbol, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -150,23 +150,22 @@ Returns all options contracts and their prices for the given symbol and expirati
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var optionsAPI = new intrinioSDK.OptionsApi();
+var options = new intrinioSDK.OptionsApi();
 
-var symbol = "MSFT"; // String | The option symbol, corresponding to the underlying security.
-
-var expiration = "2019-04-05"; // String | The expiration date of the options contract
+var symbol = "MSFT";
+var expiration = "2019-04-05";
 
 var opts = { 
-  'date': new Date("2019-04-05"), // Date | The date of the option price. Returns option prices on this date.
-  'type': "put", // String | The option contract type.
-  'strike': 170.0, // Number | The strike price of the option contract. This will return options contracts with strike price equal to this price.
-  'strikeGreaterThan': 190.0, // Number | The strike price of the option contract. This will return options contracts with strike prices greater than this price.
-  'strikeLessThan': 150.0, // Number | The strike price of the option contract. This will return options contracts with strike prices less than this price.
-  'moneyness': "in_the_money", // String | The moneyness of the options contracts to return. 'all' will return all options contracts. 'in_the_money' will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). 'out_of_they_money' will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). 'near_the_money' will return options contracts that are $0.50 or less away from being in the money.
-  'pageSize': 100 // Number | The number of results to return
+  'date': new Date("2019-04-05"),
+  'type': "put",
+  'strike': 170.0,
+  'strikeGreaterThan': 190.0,
+  'strikeLessThan': 150.0,
+  'moneyness': "in_the_money",
+  'pageSize': 100
 };
 
-optionsAPI.getOptionsChain(symbol, expiration, opts).then(function(data) {
+options.getOptionsChain(symbol, expiration, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -246,16 +245,16 @@ Returns all option contract expiration dates for a given symbol.
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var optionsAPI = new intrinioSDK.OptionsApi();
+var options = new intrinioSDK.OptionsApi();
 
-var symbol = "MSFT"; // String | The option symbol, corresponding to the underlying security.
+var symbol = "MSFT";
 
 var opts = { 
-  'after': "2019-01-01", // String | Return option contract expiration dates after this date.
-  'before': "2019-12-31" // String | Return option contract expiration dates before this date.
+  'after': "2019-01-01",
+  'before': "2019-12-31"
 };
 
-optionsAPI.getOptionsExpirations(symbol, opts).then(function(data) {
+options.getOptionsExpirations(symbol, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -329,18 +328,18 @@ Returns all option prices for a given option contract identifier.
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var optionsAPI = new intrinioSDK.OptionsApi();
+var options = new intrinioSDK.OptionsApi();
 
-var identifier = "identifier_example"; // String | The Intrinio ID or code of the options contract to request prices for.
+var identifier = "identifier_example";
 
 var opts = { 
-  'startDate': "2019-01-01", // String | Return option contract prices on or after this date.
-  'endDate': "2019-12-31", // String | Return option contract prices on or before this date.
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'startDate': "2019-01-01",
+  'endDate': "2019-12-31",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-optionsAPI.getOptionsPrices(identifier, opts).then(function(data) {
+options.getOptionsPrices(identifier, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);

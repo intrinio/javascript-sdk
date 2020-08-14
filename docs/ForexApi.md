@@ -52,9 +52,11 @@ Returns a list of forex currencies for which prices are available.
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var forexAPI = new intrinioSDK.ForexApi();
+var forex = new intrinioSDK.ForexApi();
 
-forexAPI.getForexCurrencies().then(function(data) {
+
+
+forex.getForexCurrencies().then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -123,9 +125,11 @@ Returns a list of currency pairs used to request foreign exchange (forex) market
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var forexAPI = new intrinioSDK.ForexApi();
+var forex = new intrinioSDK.ForexApi();
 
-forexAPI.getForexPairs().then(function(data) {
+
+
+forex.getForexPairs().then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -194,23 +198,22 @@ Provides a list of forex price quotes for a given forex currency pair and timefr
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var forexAPI = new intrinioSDK.ForexApi();
+var forex = new intrinioSDK.ForexApi();
 
-var pair = "EURUSD"; // String | The Forex Currency Pair code
-
-var timeframe = "D1"; // String | The time interval for the quotes
+var pair = "EURUSD";
+var timeframe = "D1";
 
 var opts = { 
-  'timezone': "UTC", // String | Returns trading times in this timezone
-  'startDate': null, // Date | Return Forex Prices on or after this date
-  'startTime': null, // String | Return Forex Prices at or after this time (24-hour)
-  'endDate': null, // Date | Return Forex Prices on or before this date
-  'endTime': null, // String | Return Forex Prices at or before this time (24-hour)
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'timezone': "UTC",
+  'startDate': null,
+  'startTime': null,
+  'endDate': null,
+  'endTime': null,
+  'pageSize': 100,
+  'nextPage': null
 };
 
-forexAPI.getForexPrices(pair, timeframe, opts).then(function(data) {
+forex.getForexPrices(pair, timeframe, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);

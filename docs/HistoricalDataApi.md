@@ -50,23 +50,22 @@ Returns historical values for the given &#x60;tag&#x60; and the entity represent
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var historicalDataAPI = new intrinioSDK.HistoricalDataApi();
+var historicalData = new intrinioSDK.HistoricalDataApi();
 
-var identifier = "AAPL"; // String | An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
-
-var tag = "marketcap"; // String | An Intrinio data tag ID or code (<a href='https://data.intrinio.com/data-tags'>reference</a>)
+var identifier = "AAPL";
+var tag = "marketcap";
 
 var opts = { 
-  'frequency': "daily", // String | Return historical data in the given frequency
-  'type': null, // String | Filter by type, when applicable
-  'startDate': new Date("2015-01-01"), // Date | Get historical data on or after this date
-  'endDate': null, // Date | Get historical date on or before this date
-  'sortOrder': "desc", // String | Sort by date `asc` or `desc`
-  'pageSize': 100, // Number | The number of results to return
-  'nextPage': null // String | Gets the next page of data from a previous API call
+  'frequency': "daily",
+  'type': null,
+  'startDate': new Date("2015-01-01"),
+  'endDate': null,
+  'sortOrder': "desc",
+  'pageSize': 100,
+  'nextPage': null
 };
 
-historicalDataAPI.getHistoricalData(identifier, tag, opts).then(function(data) {
+historicalData.getHistoricalData(identifier, tag, opts).then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);

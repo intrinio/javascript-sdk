@@ -50,9 +50,11 @@ Returns all active bulk downloads for your account with links to download.
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
 
-var bulkDownloadsAPI = new intrinioSDK.BulkDownloadsApi();
+var bulkDownloads = new intrinioSDK.BulkDownloadsApi();
 
-bulkDownloadsAPI.getBulkDownloadLinks().then(function(data) {
+
+
+bulkDownloads.getBulkDownloadLinks().then(function(data) {
   console.log(data);
 }, function(error) {
   console.error(error);
