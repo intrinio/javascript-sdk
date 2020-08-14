@@ -4232,13 +4232,10 @@ logic.clauses = clauses
 
 var opts = { 
   'logic': logic,
-  'orderColumn': "marketcap", 
-  'logic': logic,
-  'orderDirection': "asc", 
-  'logic': logic,
-  'primaryOnly': false, 
-  'logic': logic,
-  'pageSize': 100 
+  'orderColumn': "marketcap",
+  'orderDirection': "asc",
+  'primaryOnly': false,
+  'pageSize': 100
 };
 
 security.screenSecurities(opts).then(function(data) {
