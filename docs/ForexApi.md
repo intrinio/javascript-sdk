@@ -51,10 +51,9 @@ Returns a list of forex currencies for which prices are available.
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var forex = new intrinioSDK.ForexApi();
-
-
 
 forex.getForexCurrencies().then(function(data) {
   console.log(data);
@@ -124,10 +123,9 @@ Returns a list of currency pairs used to request foreign exchange (forex) market
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var forex = new intrinioSDK.ForexApi();
-
-
 
 forex.getForexPairs().then(function(data) {
   console.log(data);
@@ -197,6 +195,7 @@ Provides a list of forex price quotes for a given forex currency pair and timefr
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var forex = new intrinioSDK.ForexApi();
 
@@ -205,9 +204,9 @@ var timeframe = "D1";
 
 var opts = { 
   'timezone': "UTC",
-  'startDate': null,
+  'startDate': new Date("2018-01-01"),
   'startTime': null,
-  'endDate': null,
+  'endDate': new Date("2019-01-01"),
   'endTime': null,
   'pageSize': 100,
   'nextPage': null
@@ -233,9 +232,9 @@ Name | Type | Description  | Notes
  **timeframe** | String| The time interval for the quotes |  &nbsp;
  **timezone** | String| Returns trading times in this timezone | [optional] [default to UTC] &nbsp;
  **startDate** | Date| Return Forex Prices on or after this date | [optional]  &nbsp;
- **startTime** | String| Return Forex Prices at or after this time (24-hour) | [optional]  &nbsp;
+ **startTime** | String| Return Forex Prices at or after this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) | [optional]  &nbsp;
  **endDate** | Date| Return Forex Prices on or before this date | [optional]  &nbsp;
- **endTime** | String| Return Forex Prices at or before this time (24-hour) | [optional]  &nbsp;
+ **endTime** | String| Return Forex Prices at or before this time (24-hour in &#39;hh:mm&#39; format, UTC timezone) | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>

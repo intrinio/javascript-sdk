@@ -58,13 +58,14 @@ Returns all Filings. Returns Filings matching parameters when supplied.
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var filing = new intrinioSDK.FilingApi();
 
 var company = "AAPL";
 
 var opts = { 
-  'reportType': null,
+  'reportType': "10-Q",
   'startDate': new Date("2015-01-01"),
   'endDate': null,
   'industryCategory': null,
@@ -151,9 +152,9 @@ Return all Notes from all Filings, most-recent first. Returns notes matching par
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var filing = new intrinioSDK.FilingApi();
-
 
 var opts = { 
   'company': "AAPL",
@@ -244,11 +245,11 @@ Returns the Filing with the given &#x60;identifier&#x60;
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var filing = new intrinioSDK.FilingApi();
 
 var id = "fil_7Kn2P6";
-
 
 filing.getFilingById(id).then(function(data) {
   console.log(data);
@@ -321,6 +322,7 @@ Returns all Fundamentals for the SEC Filing with the given &#x60;identifier&#x60
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var filing = new intrinioSDK.FilingApi();
 
@@ -413,11 +415,11 @@ Name | Type | Description  | Notes
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var filing = new intrinioSDK.FilingApi();
 
 var identifier = "fil_B73xBG";
-
 
 filing.getFilingHtml(identifier).then(function(data) {
   console.log(data);
@@ -489,11 +491,11 @@ Name | Type | Description  | Notes
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var filing = new intrinioSDK.FilingApi();
 
 var identifier = "fil_B73xBG";
-
 
 filing.getFilingText(identifier).then(function(data) {
   console.log(data);
@@ -565,6 +567,7 @@ Name | Type | Description  | Notes
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var filing = new intrinioSDK.FilingApi();
 
@@ -645,11 +648,11 @@ Name | Type | Description  | Notes
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var filing = new intrinioSDK.FilingApi();
 
 var identifier = "xbn_ydK3QL";
-
 
 filing.getNoteHtml(identifier).then(function(data) {
   console.log(data);
@@ -721,11 +724,11 @@ Name | Type | Description  | Notes
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var filing = new intrinioSDK.FilingApi();
 
 var identifier = "xbn_ydK3QL";
-
 
 filing.getNoteText(identifier).then(function(data) {
   console.log(data);
@@ -798,6 +801,7 @@ Searches for Filing Notes using the &#x60;query&#x60;
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var filing = new intrinioSDK.FilingApi();
 

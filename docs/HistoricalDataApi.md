@@ -49,6 +49,7 @@ Returns historical values for the given &#x60;tag&#x60; and the entity represent
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var historicalData = new intrinioSDK.HistoricalDataApi();
 

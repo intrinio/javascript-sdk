@@ -40,6 +40,7 @@ Method | HTTP request | Description
 #### All Municipalities
 
 
+Returns all Municipalities. When parameters are specified, returns matching municipalities.
 
 [//]: # (END_OVERVIEW)
 
@@ -50,12 +51,12 @@ Method | HTTP request | Description
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var municipality = new intrinioSDK.MunicipalityApi();
 
-
 var opts = { 
-  'hasFinancials': true,
+  'hasFinancials': null,
   'governmentName': null,
   'governmentType': null,
   'areaName': null,
@@ -153,11 +154,11 @@ Returns the Municipality with the given ID
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var municipality = new intrinioSDK.MunicipalityApi();
 
 var id = "mun_Xn7x4z";
-
 
 municipality.getMunicipalityById(id).then(function(data) {
   console.log(data);
@@ -230,6 +231,7 @@ Returns financial statement data for the Municipality with the given ID
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var municipality = new intrinioSDK.MunicipalityApi();
 

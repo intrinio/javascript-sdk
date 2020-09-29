@@ -51,9 +51,9 @@ Returns all Data Tags. Returns Data Tags matching parameters when specified.
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var dataTag = new intrinioSDK.DataTagApi();
-
 
 var opts = { 
   'tag': null,
@@ -142,11 +142,11 @@ Returns the Data Tag with the given &#x60;identifier&#x60;
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var dataTag = new intrinioSDK.DataTagApi();
 
 var identifier = "marketcap";
-
 
 dataTag.getDataTagById(identifier).then(function(data) {
   console.log(data);
@@ -219,6 +219,7 @@ Searches for Data Tags matching the text &#x60;query&#x60;
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var dataTag = new intrinioSDK.DataTagApi();
 

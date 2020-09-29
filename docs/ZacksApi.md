@@ -59,9 +59,9 @@ Returns buy, sell, and hold recommendations from analysts at brokerages for all 
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var zacks = new intrinioSDK.ZacksApi();
-
 
 var opts = { 
   'identifier': "AAPL",
@@ -174,9 +174,9 @@ Returns Zacks consensus earnings-per-share (EPS) data for all Companies.
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var zacks = new intrinioSDK.ZacksApi();
-
 
 var opts = { 
   'identifier': "AAPL",
@@ -269,9 +269,9 @@ Returns the latest Zacks EPS growth rates
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var zacks = new intrinioSDK.ZacksApi();
-
 
 var opts = { 
   'company': "AAPL",
@@ -356,9 +356,9 @@ Returns Zacks eps surprise data for all Securities.
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var zacks = new intrinioSDK.ZacksApi();
-
 
 var opts = { 
   'startDate': null,
@@ -465,13 +465,13 @@ Returns Zacks ETF holdings data
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var zacks = new intrinioSDK.ZacksApi();
 
-
 var opts = { 
-  'etfTicker': null,
-  'holdingSymbol': null,
+  'etfTicker': "SPY",
+  'holdingSymbol': "AAPL",
   'weightGreater': null,
   'weightLess': null,
   'pageSize': 100,
@@ -554,9 +554,9 @@ Returns Zacks institutional holding companies data
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var zacks = new intrinioSDK.ZacksApi();
-
 
 var opts = { 
   'ticker': null,
@@ -637,9 +637,9 @@ Returns Zacks institutional holding owners data
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var zacks = new intrinioSDK.ZacksApi();
-
 
 var opts = { 
   'cik': null,
@@ -720,9 +720,9 @@ Returns Zacks institutional holdings data
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var zacks = new intrinioSDK.ZacksApi();
-
 
 var opts = { 
   'ticker': null,
@@ -805,9 +805,9 @@ Returns the latest Zacks long term growth rates
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var zacks = new intrinioSDK.ZacksApi();
-
 
 var opts = { 
   'identifier': "AAPL",
@@ -888,9 +888,9 @@ Returns Zacks sales surprise data for all Securities.
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var zacks = new intrinioSDK.ZacksApi();
-
 
 var opts = { 
   'startDate': null,
@@ -997,9 +997,9 @@ Returns the latest Zacks target price consensus data
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var zacks = new intrinioSDK.ZacksApi();
-
 
 var opts = { 
   'identifier': "AAPL",

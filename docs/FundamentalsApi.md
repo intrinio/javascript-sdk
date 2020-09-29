@@ -52,11 +52,11 @@ Returns detailed fundamental data for the given &#x60;id&#x60;.
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var fundamentals = new intrinioSDK.FundamentalsApi();
 
 var id = "fun_ge9LlE";
-
 
 fundamentals.getFundamentalById(id).then(function(data) {
   console.log(data);
@@ -129,11 +129,11 @@ Returns the As-Reported Financials directly from the financial statements of the
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var fundamentals = new intrinioSDK.FundamentalsApi();
 
 var id = "AAPL-income_statement-2018-Q1";
-
 
 fundamentals.getFundamentalReportedFinancials(id).then(function(data) {
   console.log(data);
@@ -206,11 +206,11 @@ Returns professional-grade historical financial data. This data is standardized,
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var fundamentals = new intrinioSDK.FundamentalsApi();
 
 var id = "AAPL-income_statement-2018-Q1";
-
 
 fundamentals.getFundamentalStandardizedFinancials(id).then(function(data) {
   console.log(data);
@@ -283,6 +283,7 @@ Returns the Fundamental for the Company with the given &#x60;identifier&#x60; an
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var fundamentals = new intrinioSDK.FundamentalsApi();
 
@@ -290,7 +291,6 @@ var identifier = "AAPL";
 var statementCode = "income_statement";
 var fiscalYear = 2017;
 var fiscalPeriod = "FY";
-
 
 fundamentals.lookupFundamental(identifier, statementCode, fiscalYear, fiscalPeriod).then(function(data) {
   console.log(data);

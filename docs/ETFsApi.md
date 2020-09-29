@@ -54,9 +54,9 @@ Returns a list of Exchange Traded Funds (ETFs) sourced from FirstBridge
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var eTFs = new intrinioSDK.ETFsApi();
-
 
 var opts = { 
   'exchange': "XNAS",
@@ -137,11 +137,11 @@ Returns the Exchange Traded Fund (ETF) with the given identifier
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var eTFs = new intrinioSDK.ETFsApi();
 
 var identifier = "SPY";
-
 
 eTFs.getEtf(identifier).then(function(data) {
   console.log(data);
@@ -214,11 +214,11 @@ Returns analytics for the Exchange Traded Fund (ETF) including volume, market ca
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var eTFs = new intrinioSDK.ETFsApi();
 
 var identifier = "SPY";
-
 
 eTFs.getEtfAnalytics(identifier).then(function(data) {
   console.log(data);
@@ -291,6 +291,7 @@ Returns the holdings sorted by weight descending and the Exchange Traded Fund (E
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var eTFs = new intrinioSDK.ETFsApi();
 
@@ -374,11 +375,11 @@ Returns daily stats for the Exchange Traded Fund (ETF) including net asset value
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var eTFs = new intrinioSDK.ETFsApi();
 
 var identifier = "SPY";
-
 
 eTFs.getEtfStats(identifier).then(function(data) {
   console.log(data);
@@ -451,11 +452,11 @@ Searches for Exchange Traded Funds (ETFs) matching the text &#x60;query&#x60;
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var eTFs = new intrinioSDK.ETFsApi();
 
 var query = "iShares";
-
 
 eTFs.searchEtfs(query).then(function(data) {
   console.log(data);

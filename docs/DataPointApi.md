@@ -50,12 +50,12 @@ Returns a numeric value for the given &#x60;tag&#x60; and the entity with the gi
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var dataPoint = new intrinioSDK.DataPointApi();
 
 var identifier = "AAPL";
 var tag = "marketcap";
-
 
 dataPoint.getDataPointNumber(identifier, tag).then(function(data) {
   console.log(data);
@@ -129,12 +129,12 @@ Returns a text value for the given &#x60;tag&#x60; for the Security with the giv
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var dataPoint = new intrinioSDK.DataPointApi();
 
 var identifier = "AAPL";
 var tag = "ceo";
-
 
 dataPoint.getDataPointText(identifier, tag).then(function(data) {
   console.log(data);

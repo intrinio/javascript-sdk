@@ -13,6 +13,7 @@ Name | Type | Description
 ------------ | ------------- | -------------
 **lastPrice** | Number | The price of the last trade. &nbsp;
 **lastTime** | Date | The date and time when the last trade occurred. &nbsp;
+**lastSize** | Number | The size of the last trade. &nbsp;
 **bidPrice** | Number | The price of the top bid order. &nbsp;
 **bidSize** | Number | The size of the top bid order. &nbsp;
 **askPrice** | Number | The price of the top ask order. &nbsp;

@@ -52,16 +52,17 @@ Returns the master list of option contracts for a given symbol.
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var symbol = "MSFT";
+var symbol = "AAPL";
 
 var opts = { 
   'type': "put",
-  'strike': 170.0,
-  'strikeGreaterThan': 190.0,
-  'strikeLessThan': 150.0,
+  'strike': 170,
+  'strikeGreaterThan': 150,
+  'strikeLessThan': 190,
   'expiration': "2019-03-01",
   'expirationAfter': "2019-01-01",
   'expirationBefore': "2019-12-31",
@@ -149,6 +150,7 @@ Returns all options contracts and their prices for the given symbol and expirati
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
@@ -156,12 +158,12 @@ var symbol = "MSFT";
 var expiration = "2019-04-05";
 
 var opts = { 
-  'date': new Date("2019-04-05"),
-  'type': "put",
-  'strike': 170.0,
-  'strikeGreaterThan': 190.0,
-  'strikeLessThan': 150.0,
-  'moneyness': "in_the_money",
+  'date': null,
+  'type': null,
+  'strike': null,
+  'strikeGreaterThan': null,
+  'strikeLessThan': null,
+  'moneyness': null,
   'pageSize': 100
 };
 
@@ -244,6 +246,7 @@ Returns all option contract expiration dates for a given symbol.
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
@@ -327,10 +330,11 @@ Returns all option prices for a given option contract identifier.
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var identifier = "identifier_example";
+var identifier = "MSFT190405C00118000";
 
 var opts = { 
   'startDate': "2019-01-01",

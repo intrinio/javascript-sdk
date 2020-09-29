@@ -54,9 +54,9 @@ Returns all Stock Exchanges matching the specified parameters
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
-
 
 var opts = { 
   'city': "New York",
@@ -139,11 +139,11 @@ Returns the Stock Exchange with the given &#x60;identifier&#x60;
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
 var identifier = "USCOMP";
-
 
 stockExchange.getStockExchangeById(identifier).then(function(data) {
   console.log(data);
@@ -216,6 +216,7 @@ Returns stock price adjustments for the Stock Exchange with the given &#x60;iden
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
@@ -301,6 +302,7 @@ Returns end-of-day stock prices for Securities on the Stock Exchange with &#x60;
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
@@ -386,6 +388,7 @@ Returns realtime stock prices for the Stock Exchange with the given &#x60;identi
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
@@ -471,6 +474,7 @@ Returns Securities traded on the Stock Exchange with &#x60;identifier&#x60;
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 

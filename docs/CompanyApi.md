@@ -61,9 +61,9 @@ Returns all Companies. When parameters are specified, returns matching companies
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
-
 
 var opts = { 
   'latestFilingDate': null,
@@ -158,9 +158,9 @@ Returns all News for all Companies
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
-
 
 var opts = { 
   'pageSize': 100,
@@ -239,11 +239,11 @@ Returns the Company with the given &#x60;identifier&#x60;
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL";
-
 
 company.getCompany(identifier).then(function(data) {
   console.log(data);
@@ -316,12 +316,12 @@ Returns a numeric value for the given &#x60;tag&#x60; for the Company with the g
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL";
 var tag = "marketcap";
-
 
 company.getCompanyDataPointNumber(identifier, tag).then(function(data) {
   console.log(data);
@@ -395,12 +395,12 @@ Returns a text value for the given &#x60;tag&#x60; for the Company with the give
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL";
 var tag = "ceo";
-
 
 company.getCompanyDataPointText(identifier, tag).then(function(data) {
   console.log(data);
@@ -474,6 +474,7 @@ Returns a complete list of SEC filings for the Company with the given &#x60;iden
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
@@ -563,6 +564,7 @@ Returns all Fundamentals for the Company with the given &#x60;identifier&#x60;. 
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
@@ -662,6 +664,7 @@ Returns historical values for the given &#x60;tag&#x60; and the Company with the
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
@@ -757,12 +760,12 @@ Returns initial public offerings (IPOs). An IPO is a public offering of private 
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-
 var opts = { 
-  'ticker': null,
+  'ticker': "UBER",
   'status': null,
   'startDate': null,
   'endDate': null,
@@ -850,6 +853,7 @@ Returns news for the Company with the given &#x60;identifier&#x60;
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
@@ -933,6 +937,7 @@ Returns Securities for the Company with the given &#x60;identifier&#x60;
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
@@ -1014,6 +1019,7 @@ Returns the Fundamental for the Company with the given &#x60;identifier&#x60; an
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
@@ -1021,7 +1027,6 @@ var identifier = "AAPL";
 var statementCode = "income_statement";
 var fiscalPeriod = "FY";
 var fiscalYear = 2017;
-
 
 company.lookupCompanyFundamental(identifier, statementCode, fiscalPeriod, fiscalYear).then(function(data) {
   console.log(data);
@@ -1097,6 +1102,7 @@ Searches for Companies matching the text &#x60;query&#x60;
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 

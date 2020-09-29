@@ -10,8 +10,8 @@ Method | HTTP request | Description
 [**getSecurityDataPointText**](SecurityApi.md#getSecurityDataPointText) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
 [**getSecurityHistoricalData**](SecurityApi.md#getSecurityHistoricalData) | **GET** /securities/{identifier}/historical_data/{tag} | Historical Data for Security
 [**getSecurityIntradayPrices**](SecurityApi.md#getSecurityIntradayPrices) | **GET** /securities/{identifier}/prices/intraday | Intraday Stock Prices for Security
-[**getSecurityLatestDividendRecord**](SecurityApi.md#getSecurityLatestDividendRecord) | **GET** /securities/{identifier}/dividends/latest | Lastest Dividend Record for Security
-[**getSecurityLatestEarningsRecord**](SecurityApi.md#getSecurityLatestEarningsRecord) | **GET** /securities/{identifier}/earnings/latest | Lastest Earnings Record for Security
+[**getSecurityLatestDividendRecord**](SecurityApi.md#getSecurityLatestDividendRecord) | **GET** /securities/{identifier}/dividends/latest | Latest Dividend Record for Security
+[**getSecurityLatestEarningsRecord**](SecurityApi.md#getSecurityLatestEarningsRecord) | **GET** /securities/{identifier}/earnings/latest | Latest Earnings Record for Security
 [**getSecurityPriceTechnicalsAdi**](SecurityApi.md#getSecurityPriceTechnicalsAdi) | **GET** /securities/{identifier}/prices/technicals/adi | Accumulation/Distribution Index
 [**getSecurityPriceTechnicalsAdtv**](SecurityApi.md#getSecurityPriceTechnicalsAdtv) | **GET** /securities/{identifier}/prices/technicals/adtv | Average Daily Trading Volume
 [**getSecurityPriceTechnicalsAdx**](SecurityApi.md#getSecurityPriceTechnicalsAdx) | **GET** /securities/{identifier}/prices/technicals/adx | Average Directional Index
@@ -96,9 +96,9 @@ Returns all Securities to which you have access. When parameters are specified, 
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
-
 
 var opts = { 
   'active': true,
@@ -209,11 +209,11 @@ Returns the Security with the given &#x60;identifier&#x60;
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
 var identifier = "AAPL";
-
 
 security.getSecurityById(identifier).then(function(data) {
   console.log(data);
@@ -286,12 +286,12 @@ Returns a numeric value for the given &#x60;tag&#x60; for the Security with the 
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
 var identifier = "AAPL";
 var tag = "close_price";
-
 
 security.getSecurityDataPointNumber(identifier, tag).then(function(data) {
   console.log(data);
@@ -365,12 +365,12 @@ Returns a text value for the given &#x60;tag&#x60; for the Security with the giv
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
 var identifier = "AAPL";
 var tag = "figi";
-
 
 security.getSecurityDataPointText(identifier, tag).then(function(data) {
   console.log(data);
@@ -444,6 +444,7 @@ Returns historical values for the given &#x60;tag&#x60; and the Security with th
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -539,6 +540,7 @@ Return intraday stock prices for the Security with the given &#x60;identifier&#x
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -546,9 +548,9 @@ var identifier = "AAPL";
 
 var opts = { 
   'source': null,
-  'startDate': null,
+  'startDate': new Date("2018-01-01"),
   'startTime': null,
-  'endDate': null,
+  'endDate': new Date("2019-01-01"),
   'endTime': null,
   'pageSize': 100,
   'nextPage': null
@@ -573,9 +575,9 @@ Name | Type | Description  | Notes
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
  **source** | String| Return intraday prices from the specified data source | [optional]  &nbsp;
  **startDate** | Date| Return intraday prices starting at the specified date | [optional]  &nbsp;
- **startTime** | String| Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (timezone is UTC) | [optional]  &nbsp;
+ **startTime** | String| Return intraday prices starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) | [optional]  &nbsp;
  **endDate** | Date| Return intraday prices stopping at the specified date | [optional]  &nbsp;
- **endTime** | String| Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (timezone is UTC) | [optional]  &nbsp;
+ **endTime** | String| Return intraday prices stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
@@ -618,7 +620,7 @@ Name | Type | Description  | Notes
 
 > DividendRecord getSecurityLatestDividendRecord(identifier)
 
-#### Lastest Dividend Record for Security
+#### Latest Dividend Record for Security
 
 
 Returns the latest available dividend information for the Security with the given &#x60;identifier&#x60;
@@ -632,11 +634,11 @@ Returns the latest available dividend information for the Security with the give
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
 var identifier = "AAPL";
-
 
 security.getSecurityLatestDividendRecord(identifier).then(function(data) {
   console.log(data);
@@ -695,7 +697,7 @@ Name | Type | Description  | Notes
 
 > EarningsRecord getSecurityLatestEarningsRecord(identifier)
 
-#### Lastest Earnings Record for Security
+#### Latest Earnings Record for Security
 
 
 Returns latest available earnings information for the Security with the given &#x60;identifier&#x60;
@@ -709,11 +711,11 @@ Returns latest available earnings information for the Security with the given &#
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
 var identifier = "AAPL";
-
 
 security.getSecurityLatestEarningsRecord(identifier).then(function(data) {
   console.log(data);
@@ -786,6 +788,7 @@ Returns the Accumulation/Distribution Index values of Stock Prices for the Secur
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -873,6 +876,7 @@ Returns the Average Daily Trading Volume values of Stock Prices for the Security
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -962,6 +966,7 @@ Returns the Average Directional Index values of Stock Prices for the Security wi
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -1051,6 +1056,7 @@ Returns the Awesome Oscillator values of Stock Prices for the Security with the 
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -1142,6 +1148,7 @@ Returns the Average True Range values of Stock Prices for the Security with the 
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -1231,6 +1238,7 @@ Returns the Bollinger Bands values of Stock Prices for the Security with the giv
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -1324,6 +1332,7 @@ Returns the Commodity Channel Index values of Stock Prices for the Security with
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -1415,6 +1424,7 @@ Returns the Chaikin Money Flow values of Stock Prices for the Security with the 
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -1504,6 +1514,7 @@ Returns the Donchian Channel values of Stock Prices for the Security with the gi
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -1595,6 +1606,7 @@ Returns the Detrended Price Oscillator values of Stock Prices for the Security w
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -1686,6 +1698,7 @@ Returns the Ease of Movement values of Stock Prices for the Security with the gi
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -1775,6 +1788,7 @@ Returns the Force Index values of Stock Prices for the Security with the given &
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -1862,6 +1876,7 @@ Returns the Ichimoku Kinko Hyo values of Stock Prices for the Security with the 
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -1955,6 +1970,7 @@ Returns the Keltner Channel values of Stock Prices for the Security with the giv
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -2044,6 +2060,7 @@ Returns the Know Sure Thing values of Stock Prices for the Security with the giv
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -2149,6 +2166,7 @@ Returns the Moving Average Convergence Divergence values of Stock Prices for the
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -2244,6 +2262,7 @@ Returns the Money Flow Index values of Stock Prices for the Security with the gi
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -2333,6 +2352,7 @@ Returns the Mass Index values of Stock Prices for the Security with the given &#
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -2424,6 +2444,7 @@ Returns the Negative Volume Index values of Stock Prices for the Security with t
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -2511,6 +2532,7 @@ Returns the On-balance Volume values of Stock Prices for the Security with the g
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -2598,6 +2620,7 @@ Returns the On-balance Volume Mean values of Stock Prices for the Security with 
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -2687,6 +2710,7 @@ Returns the Relative Strength Index values of Stock Prices for the Security with
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -2778,6 +2802,7 @@ Returns the Simple Moving Average values of Stock Prices for the Security with t
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -2869,6 +2894,7 @@ Returns the Stochastic Oscillator values of Stock Prices for the Security with t
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -2960,6 +2986,7 @@ Returns the Simple Moving Average values of Stock Prices for the Security with t
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -3049,6 +3076,7 @@ Returns the True Strength Index values of Stock Prices for the Security with the
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -3142,6 +3170,7 @@ Returns the Ultimate Oscillator values of Stock Prices for the Security with the
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -3241,6 +3270,7 @@ Returns the Vortex Indicator values of Stock Prices for the Security with the gi
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -3330,6 +3360,7 @@ Returns the Volume-price Trend values of Stock Prices for the Security with the 
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -3417,6 +3448,7 @@ Returns the Volume Weighted Average Price values of Stock Prices for the Securit
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -3504,6 +3536,7 @@ Returns the Williams %R values of Stock Prices for the Security with the given &
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -3593,6 +3626,7 @@ Return the realtime stock price for the Security with the given &#x60;identifier
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -3674,6 +3708,7 @@ Returns stock price adjustments for the Security with the given &#x60;identifier
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -3761,6 +3796,7 @@ Return end-of-day stock prices for the Security with the given &#x60;identifier&
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -3850,6 +3886,7 @@ Returns buy, sell, and hold recommendations from analysts at brokerages for the 
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -3963,6 +4000,7 @@ Returns a snapshot of ratings data compared with previous timeframes for the Sec
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -4044,6 +4082,7 @@ Return Zacks EPS surprises for the Security with the given &#x60;identifier&#x60
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -4127,6 +4166,7 @@ Return Zacks sales surprises for the Security with the given &#x60;identifier&#x
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -4210,6 +4250,7 @@ Screen Securities using complex logic
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
@@ -4313,6 +4354,7 @@ Searches for Securities matching the text &#x60;query&#x60;
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
