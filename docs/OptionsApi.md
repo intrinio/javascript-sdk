@@ -6,8 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getOptions**](OptionsApi.md#getOptions) | **GET** /options/{symbol} | Options
 [**getOptionsChain**](OptionsApi.md#getOptionsChain) | **GET** /options/chain/{symbol}/{expiration} | Options Chain
+[**getOptionsChainRealtime**](OptionsApi.md#getOptionsChainRealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 [**getOptionsExpirations**](OptionsApi.md#getOptionsExpirations) | **GET** /options/expirations/{symbol} | Options Expirations
 [**getOptionsPrices**](OptionsApi.md#getOptionsPrices) | **GET** /options/prices/{identifier} | Option Prices
+[**getOptionsPricesRealtime**](OptionsApi.md#getOptionsPricesRealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 
 
 
@@ -209,6 +211,108 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:OptionsApi)
 
+[//]: # (METHOD:getOptionsChainRealtime)
+
+[//]: # (RETURN_TYPE:ApiResponseOptionsChainRealtime)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsChainRealtime.md)
+
+[//]: # (OPERATION:getOptionsChainRealtime_v2)
+
+[//]: # (ENDPOINT:/options/chain/{symbol}/{expiration}/realtime)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getOptionsChainRealtime)
+
+<a name="getOptionsChainRealtime"></a>
+## **getOptionsChainRealtime**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getOptionsChainRealtime_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsChainRealtime getOptionsChainRealtime(symbol, expiration, opts)
+
+#### Options Chain Realtime
+
+
+Returns all realtime options contracts and their prices for the given symbol and expiration date.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var options = new intrinioSDK.OptionsApi();
+
+var symbol = "MSFT";
+var expiration = "2021-01-08";
+
+var opts = { 
+  'source': null,
+  'type': null,
+  'strike': null,
+  'strikeGreaterThan': null,
+  'strikeLessThan': null,
+  'volumeGreaterThan': null,
+  'volumeLessThan': null,
+  'openInterestGreaterThan': null,
+  'openInterestLessThan': null,
+  'moneyness': null
+};
+
+options.getOptionsChainRealtime(symbol, expiration, opts).then(function(data) {
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | String| The option symbol, corresponding to the underlying security. |  &nbsp;
+ **expiration** | String| The expiration date of the options contract |  &nbsp;
+ **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **type** | String| The option contract type. | [optional]  &nbsp;
+ **strike** | Number| The strike price of the option contract. This will return options contracts with strike price equal to this price. | [optional]  &nbsp;
+ **strikeGreaterThan** | Number| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;
+ **strikeLessThan** | Number| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
+ **volumeGreaterThan** | Number| The volume of the option contract. This will return options contracts with volumes greater than this amount. | [optional]  &nbsp;
+ **volumeLessThan** | Number| The volume of the option contract. This will return options contracts with volumes less than this amout. | [optional]  &nbsp;
+ **openInterestGreaterThan** | Number| The open interest of the option contract. This will return options contracts with open interest greater than this amount. | [optional]  &nbsp;
+ **openInterestLessThan** | Number| The open interest of the option contract. This will return options contracts with open interest less than this amount. | [optional]  &nbsp;
+ **moneyness** | String| The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money.  Requires subscription to realtime stock price data. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsChainRealtime**](ApiResponseOptionsChainRealtime.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:OptionsApi)
+
 [//]: # (METHOD:getOptionsExpirations)
 
 [//]: # (RETURN_TYPE:ApiResponseOptionsExpirations)
@@ -371,6 +475,88 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptionPrices**](ApiResponseOptionPrices.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:OptionsApi)
+
+[//]: # (METHOD:getOptionsPricesRealtime)
+
+[//]: # (RETURN_TYPE:ApiResponseOptionPricesRealtime)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionPricesRealtime.md)
+
+[//]: # (OPERATION:getOptionsPricesRealtime_v2)
+
+[//]: # (ENDPOINT:/options/prices/{identifier}/realtime)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getOptionsPricesRealtime)
+
+<a name="getOptionsPricesRealtime"></a>
+## **getOptionsPricesRealtime**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getOptionsPricesRealtime_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionPricesRealtime getOptionsPricesRealtime(identifier, opts)
+
+#### Option Prices Realtime
+
+
+Returns all option prices for a given option contract identifier.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var options = new intrinioSDK.OptionsApi();
+
+var identifier = "AAPL230120C00090000";
+
+var opts = { 
+  'source': null
+};
+
+options.getOptionsPricesRealtime(identifier, opts).then(function(data) {
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| The Intrinio ID or code of the options contract to request prices for. |  &nbsp;
+ **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionPricesRealtime**](ApiResponseOptionPricesRealtime.md)
 
 
 

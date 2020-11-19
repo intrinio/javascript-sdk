@@ -1109,6 +1109,7 @@ var company = new intrinioSDK.CompanyApi();
 var query = "Apple";
 
 var opts = { 
+  'active': true,
   'pageSize': 100
 };
 
@@ -1129,6 +1130,7 @@ company.searchCompanies(query, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | String| Search parameters |  &nbsp;
+ **active** | Boolean| When true, return companies that are actively traded (having stock prices within the past 14 days). When false, return companies that are not actively traded or never have been traded. | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
 <br/>
 

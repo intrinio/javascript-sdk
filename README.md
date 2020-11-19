@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.15.3
-- Package version: 5.6.3
+- API version: 2.16.4
+- Package version: 5.6.4
 
 
 ## Installation
@@ -138,8 +138,10 @@ Class | Method | HTTP request | Description
 *intrinioSDK.MunicipalityApi* | [**getMunicipalityFinancials**](docs/MunicipalityApi.md#getMunicipalityFinancials) | **GET** /municipalities/{id}/financials | Financials for a Municipality
 *intrinioSDK.OptionsApi* | [**getOptions**](docs/OptionsApi.md#getOptions) | **GET** /options/{symbol} | Options
 *intrinioSDK.OptionsApi* | [**getOptionsChain**](docs/OptionsApi.md#getOptionsChain) | **GET** /options/chain/{symbol}/{expiration} | Options Chain
+*intrinioSDK.OptionsApi* | [**getOptionsChainRealtime**](docs/OptionsApi.md#getOptionsChainRealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 *intrinioSDK.OptionsApi* | [**getOptionsExpirations**](docs/OptionsApi.md#getOptionsExpirations) | **GET** /options/expirations/{symbol} | Options Expirations
 *intrinioSDK.OptionsApi* | [**getOptionsPrices**](docs/OptionsApi.md#getOptionsPrices) | **GET** /options/prices/{identifier} | Option Prices
+*intrinioSDK.OptionsApi* | [**getOptionsPricesRealtime**](docs/OptionsApi.md#getOptionsPricesRealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 *intrinioSDK.SecurityApi* | [**getAllSecurities**](docs/SecurityApi.md#getAllSecurities) | **GET** /securities | All Securities
 *intrinioSDK.SecurityApi* | [**getSecurityById**](docs/SecurityApi.md#getSecurityById) | **GET** /securities/{identifier} | Lookup Security
 *intrinioSDK.SecurityApi* | [**getSecurityDataPointNumber**](docs/SecurityApi.md#getSecurityDataPointNumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
@@ -269,8 +271,10 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseMunicipalitiyFinancials](docs/ApiResponseMunicipalitiyFinancials.md)
  - [intrinioSDK.ApiResponseNews](docs/ApiResponseNews.md)
  - [intrinioSDK.ApiResponseOptionPrices](docs/ApiResponseOptionPrices.md)
+ - [intrinioSDK.ApiResponseOptionPricesRealtime](docs/ApiResponseOptionPricesRealtime.md)
  - [intrinioSDK.ApiResponseOptions](docs/ApiResponseOptions.md)
  - [intrinioSDK.ApiResponseOptionsChain](docs/ApiResponseOptionsChain.md)
+ - [intrinioSDK.ApiResponseOptionsChainRealtime](docs/ApiResponseOptionsChainRealtime.md)
  - [intrinioSDK.ApiResponseOptionsExpirations](docs/ApiResponseOptionsExpirations.md)
  - [intrinioSDK.ApiResponseReportedFinancials](docs/ApiResponseReportedFinancials.md)
  - [intrinioSDK.ApiResponseSICIndexHistoricalData](docs/ApiResponseSICIndexHistoricalData.md)
@@ -392,7 +396,10 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.OnBalanceVolumeTechnicalValue](docs/OnBalanceVolumeTechnicalValue.md)
  - [intrinioSDK.Option](docs/Option.md)
  - [intrinioSDK.OptionChain](docs/OptionChain.md)
+ - [intrinioSDK.OptionChainRealtime](docs/OptionChainRealtime.md)
  - [intrinioSDK.OptionPrice](docs/OptionPrice.md)
+ - [intrinioSDK.OptionPriceRealtime](docs/OptionPriceRealtime.md)
+ - [intrinioSDK.OptionRealtime](docs/OptionRealtime.md)
  - [intrinioSDK.RealtimeStockPrice](docs/RealtimeStockPrice.md)
  - [intrinioSDK.RealtimeStockPriceSecurity](docs/RealtimeStockPriceSecurity.md)
  - [intrinioSDK.RelativeStrengthIndexTechnicalValue](docs/RelativeStrengthIndexTechnicalValue.md)
