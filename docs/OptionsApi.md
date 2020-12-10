@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**getOptionsExpirations**](OptionsApi.md#getOptionsExpirations) | **GET** /options/expirations/{symbol} | Options Expirations
 [**getOptionsPrices**](OptionsApi.md#getOptionsPrices) | **GET** /options/prices/{identifier} | Option Prices
 [**getOptionsPricesRealtime**](OptionsApi.md#getOptionsPricesRealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
+[**getOptionsStatsRealtime**](OptionsApi.md#getOptionsStatsRealtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
 
 
 
@@ -253,7 +254,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var options = new intrinioSDK.OptionsApi();
 
 var symbol = "MSFT";
-var expiration = "2021-01-08";
+var expiration = "2023-01-20";
 
 var opts = { 
   'source': null,
@@ -487,11 +488,11 @@ Name | Type | Description  | Notes
 
 [//]: # (METHOD:getOptionsPricesRealtime)
 
-[//]: # (RETURN_TYPE:ApiResponseOptionPricesRealtime)
+[//]: # (RETURN_TYPE:ApiResponseOptionsPriceRealtime)
 
 [//]: # (RETURN_TYPE_KIND:object)
 
-[//]: # (RETURN_TYPE_DOC:ApiResponseOptionPricesRealtime.md)
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsPriceRealtime.md)
 
 [//]: # (OPERATION:getOptionsPricesRealtime_v2)
 
@@ -506,7 +507,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionPricesRealtime getOptionsPricesRealtime(identifier, opts)
+> ApiResponseOptionsPriceRealtime getOptionsPricesRealtime(identifier, opts)
 
 #### Option Prices Realtime
 
@@ -556,7 +557,89 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ApiResponseOptionPricesRealtime**](ApiResponseOptionPricesRealtime.md)
+[**ApiResponseOptionsPriceRealtime**](ApiResponseOptionsPriceRealtime.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:OptionsApi)
+
+[//]: # (METHOD:getOptionsStatsRealtime)
+
+[//]: # (RETURN_TYPE:ApiResponseOptionsStatsRealtime)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsStatsRealtime.md)
+
+[//]: # (OPERATION:getOptionsStatsRealtime_v2)
+
+[//]: # (ENDPOINT:/options/prices/{identifier}/realtime/stats)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getOptionsStatsRealtime)
+
+<a name="getOptionsStatsRealtime"></a>
+## **getOptionsStatsRealtime**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getOptionsStatsRealtime_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsStatsRealtime getOptionsStatsRealtime(identifier, opts)
+
+#### Option Stats Realtime
+
+
+Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var options = new intrinioSDK.OptionsApi();
+
+var identifier = "AAPL230120C00090000";
+
+var opts = { 
+  'source': null
+};
+
+options.getOptionsStatsRealtime(identifier, opts).then(function(data) {
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| The Intrinio ID or code of the options contract to request prices for. |  &nbsp;
+ **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsStatsRealtime**](ApiResponseOptionsStatsRealtime.md)
 
 
 

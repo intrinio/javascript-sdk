@@ -118,6 +118,7 @@ var opts = {
   'figiUniqueId': null,
   'includeNonFigi': false,
   'pageSize': 100,
+  'primaryListing': null,
   'nextPage': null
 };
 
@@ -154,6 +155,7 @@ Name | Type | Description  | Notes
  **figiUniqueId** | String| Return securities with the given FIGI Unique ID (&lt;a href&#x3D;\&quot;https://www.openfigi.com/about\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;). | [optional]  &nbsp;
  **includeNonFigi** | Boolean| When true, include securities that do not have a FIGI. By default, this is false. If this parameter is not specified, only securities with a FIGI are returned. | [optional] [default to false] &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **primaryListing** | Boolean| If true, the Security is the primary issue for the company, otherwise it is a secondary issue on a secondary stock exchange | [optional]  &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
@@ -3633,7 +3635,7 @@ var security = new intrinioSDK.SecurityApi();
 var identifier = "AAPL";
 
 var opts = { 
-  'source': null
+  'source': "bats"
 };
 
 security.getSecurityRealtimePrice(identifier, opts).then(function(data) {
