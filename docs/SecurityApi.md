@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**getSecurityDataPointNumber**](SecurityApi.md#getSecurityDataPointNumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
 [**getSecurityDataPointText**](SecurityApi.md#getSecurityDataPointText) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
 [**getSecurityHistoricalData**](SecurityApi.md#getSecurityHistoricalData) | **GET** /securities/{identifier}/historical_data/{tag} | Historical Data for Security
+[**getSecurityInsiderOwnership**](SecurityApi.md#getSecurityInsiderOwnership) | **GET** /securities/{identifier}/institutional_ownership | Institutional Ownership by Security
 [**getSecurityIntervalPrices**](SecurityApi.md#getSecurityIntervalPrices) | **GET** /securities/{identifier}/prices/intervals | Interval Stock Prices for Security
 [**getSecurityIntradayPrices**](SecurityApi.md#getSecurityIntradayPrices) | **GET** /securities/{identifier}/prices/intraday | Intraday Stock Prices for Security
 [**getSecurityLatestDividendRecord**](SecurityApi.md#getSecurityLatestDividendRecord) | **GET** /securities/{identifier}/dividends/latest | Latest Dividend Record for Security
@@ -496,6 +497,83 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseSecurityHistoricalData**](ApiResponseSecurityHistoricalData.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:SecurityApi)
+
+[//]: # (METHOD:getSecurityInsiderOwnership)
+
+[//]: # (RETURN_TYPE:ApiResponseSecurityInstitutionalOwnership)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityInstitutionalOwnership.md)
+
+[//]: # (OPERATION:getSecurityInsiderOwnership_v2)
+
+[//]: # (ENDPOINT:/securities/{identifier}/institutional_ownership)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getSecurityInsiderOwnership)
+
+<a name="getSecurityInsiderOwnership"></a>
+## **getSecurityInsiderOwnership**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityInsiderOwnership_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityInstitutionalOwnership getSecurityInsiderOwnership(identifier)
+
+#### Institutional Ownership by Security
+
+
+Returns a list of all institutional owners of a given security.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var security = new intrinioSDK.SecurityApi();
+
+var identifier = "AAPL";
+
+security.getSecurityInsiderOwnership(identifier).then(function(data) {
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityInstitutionalOwnership**](ApiResponseSecurityInstitutionalOwnership.md)
 
 
 

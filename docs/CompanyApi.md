@@ -15,6 +15,8 @@ Method | HTTP request | Description
 [**getCompanyIpos**](CompanyApi.md#getCompanyIpos) | **GET** /companies/ipos | IPOs
 [**getCompanyNews**](CompanyApi.md#getCompanyNews) | **GET** /companies/{identifier}/news | All News by Company
 [**getCompanySecurities**](CompanyApi.md#getCompanySecurities) | **GET** /companies/{identifier}/securities | All Securities by Company
+[**insiderTransactionFilingsByCompany**](CompanyApi.md#insiderTransactionFilingsByCompany) | **GET** /companies/{identifier}/insider_transaction_filings | Insider Transaction Filings by Company
+[**latestInsiderTransactionFilingByCompany**](CompanyApi.md#latestInsiderTransactionFilingByCompany) | **GET** /companies/{identifier}/insider_transaction_filings/latest | Latest Insider Transaction Filing by Company
 [**lookupCompanyFundamental**](CompanyApi.md#lookupCompanyFundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental by Company
 [**searchCompanies**](CompanyApi.md#searchCompanies) | **GET** /companies/search | Search Companies
 
@@ -972,6 +974,186 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseCompanySecurities**](ApiResponseCompanySecurities.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:CompanyApi)
+
+[//]: # (METHOD:insiderTransactionFilingsByCompany)
+
+[//]: # (RETURN_TYPE:ApiResponseInsiderTransactionFilings)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseInsiderTransactionFilings.md)
+
+[//]: # (OPERATION:insiderTransactionFilingsByCompany_v2)
+
+[//]: # (ENDPOINT:/companies/{identifier}/insider_transaction_filings)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#insiderTransactionFilingsByCompany)
+
+<a name="insiderTransactionFilingsByCompany"></a>
+## **insiderTransactionFilingsByCompany**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/insiderTransactionFilingsByCompany_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseInsiderTransactionFilings insiderTransactionFilingsByCompany(identifier, opts)
+
+#### Insider Transaction Filings by Company
+
+
+Returns a list of all insider transaction filings in a company. Criteria for being an insider include being a director, officer, or 10%+ owner in the company. Transactions are detailed for both non-derivative and derivative transactions by the insider.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var company = new intrinioSDK.CompanyApi();
+
+var identifier = "AAPL";
+
+var opts = { 
+  'startDate': new Date("2018-01-01"),
+  'endDate': new Date("2019-01-01"),
+  'ownershipType': "D",
+  'pageSize': 100,
+  'nextPage': null
+};
+
+company.insiderTransactionFilingsByCompany(identifier, opts).then(function(data) {
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+ **startDate** | Date| Return Company&#39;s insider transaction filings on or after this date | [optional]  &nbsp;
+ **endDate** | Date| Return Company&#39;s insider transaction filings on or before this date | [optional]  &nbsp;
+ **ownershipType** | String| The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseInsiderTransactionFilings**](ApiResponseInsiderTransactionFilings.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:CompanyApi)
+
+[//]: # (METHOD:latestInsiderTransactionFilingByCompany)
+
+[//]: # (RETURN_TYPE:InsiderTransactionFiling)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:InsiderTransactionFiling.md)
+
+[//]: # (OPERATION:latestInsiderTransactionFilingByCompany_v2)
+
+[//]: # (ENDPOINT:/companies/{identifier}/insider_transaction_filings/latest)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#latestInsiderTransactionFilingByCompany)
+
+<a name="latestInsiderTransactionFilingByCompany"></a>
+## **latestInsiderTransactionFilingByCompany**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/latestInsiderTransactionFilingByCompany_v2)
+
+[//]: # (START_OVERVIEW)
+
+> InsiderTransactionFiling latestInsiderTransactionFilingByCompany(identifier, opts)
+
+#### Latest Insider Transaction Filing by Company
+
+
+Returns the latest insider transaction filing for a company.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var company = new intrinioSDK.CompanyApi();
+
+var identifier = "AAPL";
+
+var opts = { 
+  'startDate': new Date("2018-01-01"),
+  'endDate': new Date("2019-01-01"),
+  'ownershipType': "D",
+  'pageSize': 100,
+  'nextPage': null
+};
+
+company.latestInsiderTransactionFilingByCompany(identifier, opts).then(function(data) {
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+ **startDate** | Date| Return Company&#39;s insider transaction filings on or after this date | [optional]  &nbsp;
+ **endDate** | Date| Return Company&#39;s insider transaction filings on or before this date | [optional]  &nbsp;
+ **ownershipType** | String| The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**InsiderTransactionFiling**](InsiderTransactionFiling.md)
 
 
 
