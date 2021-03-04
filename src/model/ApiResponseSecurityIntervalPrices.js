@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityIntervalPrices model module.
    * @module model/ApiResponseSecurityIntervalPrices
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**

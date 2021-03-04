@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecuritiesSearch model module.
    * @module model/ApiResponseSecuritiesSearch
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**

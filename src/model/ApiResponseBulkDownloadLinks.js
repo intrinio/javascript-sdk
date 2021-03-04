@@ -36,7 +36,7 @@
   /**
    * The ApiResponseBulkDownloadLinks model module.
    * @module model/ApiResponseBulkDownloadLinks
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**

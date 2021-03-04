@@ -36,7 +36,7 @@
   /**
    * The ApiResponseZacksEPSEstimates model module.
    * @module model/ApiResponseZacksEPSEstimates
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**

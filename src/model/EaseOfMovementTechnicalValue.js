@@ -36,7 +36,7 @@
   /**
    * The EaseOfMovementTechnicalValue model module.
    * @module model/EaseOfMovementTechnicalValue
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**

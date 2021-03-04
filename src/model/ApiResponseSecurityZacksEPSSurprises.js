@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityZacksEPSSurprises model module.
    * @module model/ApiResponseSecurityZacksEPSSurprises
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**

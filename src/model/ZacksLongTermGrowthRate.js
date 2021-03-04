@@ -36,7 +36,7 @@
   /**
    * The ZacksLongTermGrowthRate model module.
    * @module model/ZacksLongTermGrowthRate
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**

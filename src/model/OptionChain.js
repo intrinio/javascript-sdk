@@ -36,7 +36,7 @@
   /**
    * The OptionChain model module.
    * @module model/OptionChain
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**

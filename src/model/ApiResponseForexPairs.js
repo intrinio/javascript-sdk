@@ -36,7 +36,7 @@
   /**
    * The ApiResponseForexPairs model module.
    * @module model/ApiResponseForexPairs
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**

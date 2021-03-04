@@ -36,7 +36,7 @@
   /**
    * The FilingSummary model module.
    * @module model/FilingSummary
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**

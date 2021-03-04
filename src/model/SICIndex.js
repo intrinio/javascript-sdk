@@ -36,7 +36,7 @@
   /**
    * The SICIndex model module.
    * @module model/SICIndex
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The OptionRealtime model module.
    * @module model/OptionRealtime
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**

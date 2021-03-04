@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityVolumePriceTrend model module.
    * @module model/ApiResponseSecurityVolumePriceTrend
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**

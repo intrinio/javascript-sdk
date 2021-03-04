@@ -36,7 +36,7 @@
   /**
    * The ApiResponseFilingFundamentals model module.
    * @module model/ApiResponseFilingFundamentals
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**

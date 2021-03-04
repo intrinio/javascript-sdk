@@ -36,7 +36,7 @@
   /**
    * The ApiResponseReportedFinancials model module.
    * @module model/ApiResponseReportedFinancials
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The ApiResponseCompanyFundamentals model module.
    * @module model/ApiResponseCompanyFundamentals
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**

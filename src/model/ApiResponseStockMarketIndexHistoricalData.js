@@ -36,7 +36,7 @@
   /**
    * The ApiResponseStockMarketIndexHistoricalData model module.
    * @module model/ApiResponseStockMarketIndexHistoricalData
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The KeltnerChannelTechnicalValue model module.
    * @module model/KeltnerChannelTechnicalValue
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**

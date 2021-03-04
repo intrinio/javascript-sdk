@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityMovingAverageConvergenceDivergence model module.
    * @module model/ApiResponseSecurityMovingAverageConvergenceDivergence
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**

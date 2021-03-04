@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityUltimateOscillator model module.
    * @module model/ApiResponseSecurityUltimateOscillator
-   * @version 5.9.0
+   * @version 5.9.1
    */
 
   /**
