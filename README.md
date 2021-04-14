@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.19.0
-- Package version: 5.9.1
+- API version: 2.20.0
+- Package version: 5.10.0
 
 
 ## Installation
@@ -139,7 +139,9 @@ Class | Method | HTTP request | Description
 *intrinioSDK.MunicipalityApi* | [**getAllMunicipalities**](docs/MunicipalityApi.md#getAllMunicipalities) | **GET** /municipalities | All Municipalities
 *intrinioSDK.MunicipalityApi* | [**getMunicipalityById**](docs/MunicipalityApi.md#getMunicipalityById) | **GET** /municipalities/{id} | Municipality by ID
 *intrinioSDK.MunicipalityApi* | [**getMunicipalityFinancials**](docs/MunicipalityApi.md#getMunicipalityFinancials) | **GET** /municipalities/{id}/financials | Financials for a Municipality
+*intrinioSDK.OptionsApi* | [**getOptionExpirationsRealtime**](docs/OptionsApi.md#getOptionExpirationsRealtime) | **GET** /options/expirations/{symbol}/realtime | Option Expirations Realtime
 *intrinioSDK.OptionsApi* | [**getOptions**](docs/OptionsApi.md#getOptions) | **GET** /options/{symbol} | Options
+*intrinioSDK.OptionsApi* | [**getOptionsBySymbolRealtime**](docs/OptionsApi.md#getOptionsBySymbolRealtime) | **GET** /options/{symbol}/realtime | Options by Symbol Realtime
 *intrinioSDK.OptionsApi* | [**getOptionsChain**](docs/OptionsApi.md#getOptionsChain) | **GET** /options/chain/{symbol}/{expiration} | Options Chain
 *intrinioSDK.OptionsApi* | [**getOptionsChainRealtime**](docs/OptionsApi.md#getOptionsChainRealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 *intrinioSDK.OptionsApi* | [**getOptionsExpirations**](docs/OptionsApi.md#getOptionsExpirations) | **GET** /options/expirations/{symbol} | Options Expirations
@@ -195,7 +197,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.SecurityApi* | [**getSecurityRealtimePrice**](docs/SecurityApi.md#getSecurityRealtimePrice) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
 *intrinioSDK.SecurityApi* | [**getSecurityStockPriceAdjustments**](docs/SecurityApi.md#getSecurityStockPriceAdjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
 *intrinioSDK.SecurityApi* | [**getSecurityStockPrices**](docs/SecurityApi.md#getSecurityStockPrices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
-*intrinioSDK.SecurityApi* | [**getSecurityZacksAnalystRatings**](docs/SecurityApi.md#getSecurityZacksAnalystRatings) | **GET** /securities/{identifier}/zacks/analyst_ratings | Zacks Analyst Ratings
+*intrinioSDK.SecurityApi* | [**getSecurityZacksAnalystRatings**](docs/SecurityApi.md#getSecurityZacksAnalystRatings) | **GET** /securities/{identifier}/zacks/analyst_ratings | Zacks Analyst Ratings for Security
 *intrinioSDK.SecurityApi* | [**getSecurityZacksAnalystRatingsSnapshot**](docs/SecurityApi.md#getSecurityZacksAnalystRatingsSnapshot) | **GET** /securities/{identifier}/zacks/analyst_ratings/snapshot | Zacks Analyst Ratings Snapshot
 *intrinioSDK.SecurityApi* | [**getSecurityZacksEpsSurprises**](docs/SecurityApi.md#getSecurityZacksEpsSurprises) | **GET** /securities/{identifier}/zacks/eps_surprises | Zacks EPS Surprises for Security
 *intrinioSDK.SecurityApi* | [**getSecurityZacksSalesSurprises**](docs/SecurityApi.md#getSecurityZacksSalesSurprises) | **GET** /securities/{identifier}/zacks/sales_surprises | Zacks Sales Surprises for Security
@@ -289,6 +291,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseOptionsChainRealtime](docs/ApiResponseOptionsChainRealtime.md)
  - [intrinioSDK.ApiResponseOptionsExpirations](docs/ApiResponseOptionsExpirations.md)
  - [intrinioSDK.ApiResponseOptionsPriceRealtime](docs/ApiResponseOptionsPriceRealtime.md)
+ - [intrinioSDK.ApiResponseOptionsRealtime](docs/ApiResponseOptionsRealtime.md)
  - [intrinioSDK.ApiResponseOptionsStatsRealtime](docs/ApiResponseOptionsStatsRealtime.md)
  - [intrinioSDK.ApiResponseOwnerInsiderTransactionFilings](docs/ApiResponseOwnerInsiderTransactionFilings.md)
  - [intrinioSDK.ApiResponseOwnerInstitutionalHoldings](docs/ApiResponseOwnerInstitutionalHoldings.md)

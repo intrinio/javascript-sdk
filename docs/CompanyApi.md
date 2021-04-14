@@ -1118,10 +1118,6 @@ var company = new intrinioSDK.CompanyApi();
 var identifier = "AAPL";
 
 var opts = { 
-  'startDate': new Date("2018-01-01"),
-  'endDate': new Date("2019-01-01"),
-  'ownershipType': "D",
-  'pageSize': 100,
   'nextPage': null
 };
 
@@ -1142,10 +1138,6 @@ company.latestInsiderTransactionFilingByCompany(identifier, opts).then(function(
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **startDate** | Date| Return Company&#39;s insider transaction filings on or after this date | [optional]  &nbsp;
- **endDate** | Date| Return Company&#39;s insider transaction filings on or before this date | [optional]  &nbsp;
- **ownershipType** | String| The type of ownership to return transaction filings for. &#39;D&#39; is for direct transactions. &#39;I&#39; is for indirect transactions. Omit for both types. | [optional]  &nbsp;
- **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
