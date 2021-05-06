@@ -19,6 +19,7 @@ Method | HTTP request | Description
 [**latestInsiderTransactionFilingByCompany**](CompanyApi.md#latestInsiderTransactionFilingByCompany) | **GET** /companies/{identifier}/insider_transaction_filings/latest | Latest Insider Transaction Filing by Company
 [**lookupCompanyFundamental**](CompanyApi.md#lookupCompanyFundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental by Company
 [**searchCompanies**](CompanyApi.md#searchCompanies) | **GET** /companies/search | Search Companies
+[**sharesOutstandingByCompany**](CompanyApi.md#sharesOutstandingByCompany) | **GET** /companies/{identifier}/shares_outstanding | Shares Outstanding by Company
 
 
 
@@ -1313,6 +1314,83 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseCompaniesSearch**](ApiResponseCompaniesSearch.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:CompanyApi)
+
+[//]: # (METHOD:sharesOutstandingByCompany)
+
+[//]: # (RETURN_TYPE:ApiResponseCompanySharesOutstanding)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseCompanySharesOutstanding.md)
+
+[//]: # (OPERATION:sharesOutstandingByCompany_v2)
+
+[//]: # (ENDPOINT:/companies/{identifier}/shares_outstanding)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#sharesOutstandingByCompany)
+
+<a name="sharesOutstandingByCompany"></a>
+## **sharesOutstandingByCompany**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/sharesOutstandingByCompany_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseCompanySharesOutstanding sharesOutstandingByCompany(identifier)
+
+#### Shares Outstanding by Company
+
+
+Returns shares outstanding for the Company with the given &#x60;identifier&#x60;
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var company = new intrinioSDK.CompanyApi();
+
+var identifier = "AAPL";
+
+company.sharesOutstandingByCompany(identifier).then(function(data) {
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseCompanySharesOutstanding**](ApiResponseCompanySharesOutstanding.md)
 
 
 

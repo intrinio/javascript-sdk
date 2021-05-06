@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**getOptionsChainRealtime**](OptionsApi.md#getOptionsChainRealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 [**getOptionsExpirations**](OptionsApi.md#getOptionsExpirations) | **GET** /options/expirations/{symbol} | Options Expirations
 [**getOptionsPrices**](OptionsApi.md#getOptionsPrices) | **GET** /options/prices/{identifier} | Option Prices
+[**getOptionsPricesBatchRealtime**](OptionsApi.md#getOptionsPricesBatchRealtime) | **POST** /options/prices/realtime/batch | Option Prices Batch Realtime
 [**getOptionsPricesRealtime**](OptionsApi.md#getOptionsPricesRealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 [**getOptionsStatsRealtime**](OptionsApi.md#getOptionsStatsRealtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
 
@@ -660,6 +661,88 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptionPrices**](ApiResponseOptionPrices.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:OptionsApi)
+
+[//]: # (METHOD:getOptionsPricesBatchRealtime)
+
+[//]: # (RETURN_TYPE:ApiResponseOptionsPricesBatchRealtime)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsPricesBatchRealtime.md)
+
+[//]: # (OPERATION:getOptionsPricesBatchRealtime_v2)
+
+[//]: # (ENDPOINT:/options/prices/realtime/batch)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getOptionsPricesBatchRealtime)
+
+<a name="getOptionsPricesBatchRealtime"></a>
+## **getOptionsPricesBatchRealtime**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getOptionsPricesBatchRealtime_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsPricesBatchRealtime getOptionsPricesBatchRealtime(body, opts)
+
+#### Option Prices Batch Realtime
+
+
+Returns options prices for a supplied list of option symbols.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var options = new intrinioSDK.OptionsApi();
+
+var body = new intrinioSDK.OptionContractsList();
+
+var opts = { 
+  'source': null
+};
+
+options.getOptionsPricesBatchRealtime(body, opts).then(function(data) {
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**OptionContractsList**](OptionContractsList.md)| The contract symbols for which to return options prices for. |  &nbsp;
+ **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsPricesBatchRealtime**](ApiResponseOptionsPricesBatchRealtime.md)
 
 
 
