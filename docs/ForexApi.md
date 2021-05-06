@@ -56,6 +56,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var forex = new intrinioSDK.ForexApi();
 
 forex.getForexCurrencies().then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -128,6 +129,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var forex = new intrinioSDK.ForexApi();
 
 forex.getForexPairs().then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -202,6 +204,7 @@ var forex = new intrinioSDK.ForexApi();
 var pair = "EURUSD";
 var timeframe = "D1";
 
+
 var opts = { 
   'timezone': "UTC",
   'startDate': new Date("2018-01-01"),
@@ -213,6 +216,7 @@ var opts = {
 };
 
 forex.getForexPrices(pair, timeframe, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);

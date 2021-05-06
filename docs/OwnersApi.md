@@ -64,6 +64,7 @@ var opts = {
 };
 
 owners.getAllOwners(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -142,7 +143,9 @@ var owners = new intrinioSDK.OwnersApi();
 
 var identifier = "0000001800";
 
+
 owners.getOwnerById(identifier).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -219,6 +222,7 @@ var owners = new intrinioSDK.OwnersApi();
 
 var identifier = "0001494730";
 
+
 var opts = { 
   'startDate': new Date("2018-01-01"),
   'endDate': new Date("2019-01-01"),
@@ -227,6 +231,7 @@ var opts = {
 };
 
 owners.insiderTransactionFilingsByOwner(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -307,6 +312,7 @@ var owners = new intrinioSDK.OwnersApi();
 
 var identifier = "430692";
 
+
 var opts = { 
   'pageSize': 100,
   'asOfDate': "2021-01-05",
@@ -314,6 +320,7 @@ var opts = {
 };
 
 owners.institutionalHoldingsByOwner(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -393,6 +400,7 @@ var owners = new intrinioSDK.OwnersApi();
 
 var query = "Cook";
 
+
 var opts = { 
   'institutional': null,
   'pageSize': 100,
@@ -400,6 +408,7 @@ var opts = {
 };
 
 owners.searchOwners(query, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);

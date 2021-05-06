@@ -64,6 +64,7 @@ var options = new intrinioSDK.OptionsApi();
 
 var symbol = "MSFT";
 
+
 var opts = { 
   'after': "2022-01-01",
   'before': "2023-04-01",
@@ -71,6 +72,7 @@ var opts = {
 };
 
 options.getOptionExpirationsRealtime(symbol, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -150,6 +152,7 @@ var options = new intrinioSDK.OptionsApi();
 
 var symbol = "AAPL";
 
+
 var opts = { 
   'type': "put",
   'strike': 170,
@@ -163,6 +166,7 @@ var opts = {
 };
 
 options.getOptions(symbol, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -248,6 +252,7 @@ var options = new intrinioSDK.OptionsApi();
 
 var symbol = "AAPL";
 
+
 var opts = { 
   'type': "put",
   'strike': 170,
@@ -260,6 +265,7 @@ var opts = {
 };
 
 options.getOptionsBySymbolRealtime(symbol, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -345,6 +351,7 @@ var options = new intrinioSDK.OptionsApi();
 var symbol = "MSFT";
 var expiration = "2019-04-05";
 
+
 var opts = { 
   'date': null,
   'type': null,
@@ -356,6 +363,7 @@ var opts = {
 };
 
 options.getOptionsChain(symbol, expiration, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -441,6 +449,7 @@ var options = new intrinioSDK.OptionsApi();
 var symbol = "MSFT";
 var expiration = "2023-01-20";
 
+
 var opts = { 
   'source': null,
   'type': null,
@@ -455,6 +464,7 @@ var opts = {
 };
 
 options.getOptionsChainRealtime(symbol, expiration, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -542,12 +552,14 @@ var options = new intrinioSDK.OptionsApi();
 
 var symbol = "MSFT";
 
+
 var opts = { 
   'after': "2019-01-01",
   'before': "2019-12-31"
 };
 
 options.getOptionsExpirations(symbol, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -626,6 +638,7 @@ var options = new intrinioSDK.OptionsApi();
 
 var identifier = "MSFT190405C00118000";
 
+
 var opts = { 
   'startDate': "2019-01-01",
   'endDate': "2019-12-31",
@@ -634,6 +647,7 @@ var opts = {
 };
 
 options.getOptionsPrices(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -712,13 +726,21 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var body = new intrinioSDK.OptionContractsList();
+
+body = {
+  "contracts": [
+    "A220121P00055000",
+    "A220121P00057500",
+    "A220121P00060000"
+  ]
+}
 
 var opts = { 
   'source': null
 };
 
 options.getOptionsPricesBatchRealtime(body, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -796,11 +818,13 @@ var options = new intrinioSDK.OptionsApi();
 
 var identifier = "AAPL230120C00090000";
 
+
 var opts = { 
   'source': null
 };
 
 options.getOptionsPricesRealtime(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -878,11 +902,13 @@ var options = new intrinioSDK.OptionsApi();
 
 var identifier = "AAPL230120C00090000";
 
+
 var opts = { 
   'source': null
 };
 
 options.getOptionsStatsRealtime(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);

@@ -85,6 +85,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'startDate': "2018-01-01",
   'endDate': "2019-01-01",
@@ -93,6 +94,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsAdi(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -173,6 +175,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'period': 22,
   'startDate': "2018-01-01",
@@ -182,6 +185,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsAdtv(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -263,6 +267,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'period': 14,
   'startDate': "2018-01-01",
@@ -272,6 +277,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsAdx(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -353,6 +359,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'shortPeriod': 5,
   'longPeriod': 34,
@@ -363,6 +370,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsAo(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -445,6 +453,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'period': 14,
   'startDate': "2018-01-01",
@@ -454,6 +463,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsAtr(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -535,6 +545,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'period': 20,
   'standardDeviations': 2.0,
@@ -546,6 +557,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsBb(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -629,6 +641,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'period': 20,
   'constant': 0.015,
@@ -639,6 +652,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsCci(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -721,6 +735,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'period': 20,
   'startDate': "2018-01-01",
@@ -730,6 +745,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsCmf(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -811,6 +827,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'period': 20,
   'priceKey': "close",
@@ -821,6 +838,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsDc(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -903,6 +921,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'period': 20,
   'priceKey': "close",
@@ -913,6 +932,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsDpo(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -995,6 +1015,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'period': 20,
   'startDate': "2018-01-01",
@@ -1004,6 +1025,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsEom(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1085,6 +1107,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'startDate': "2018-01-01",
   'endDate': "2019-01-01",
@@ -1093,6 +1116,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsFi(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1173,6 +1197,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'lowPeriod': 9,
   'mediumPeriod': 26,
@@ -1184,6 +1209,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsIchimoku(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1267,6 +1293,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'period': 10,
   'startDate': "2018-01-01",
@@ -1276,6 +1303,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsKc(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1357,6 +1385,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'roc1': 10,
   'roc2': 15,
@@ -1374,6 +1403,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsKst(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1463,6 +1493,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'fastPeriod': 12,
   'slowPeriod': 26,
@@ -1475,6 +1506,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsMacd(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1559,6 +1591,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'period': 14,
   'startDate': "2018-01-01",
@@ -1568,6 +1601,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsMfi(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1649,6 +1683,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'emaPeriod': 9,
   'sumPeriod': 25,
@@ -1659,6 +1694,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsMi(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1741,6 +1777,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'startDate': "2018-01-01",
   'endDate': "2019-01-01",
@@ -1749,6 +1786,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsNvi(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1829,6 +1867,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'startDate': "2018-01-01",
   'endDate': "2019-01-01",
@@ -1837,6 +1876,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsObv(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1917,6 +1957,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'period': 10,
   'startDate': "2018-01-01",
@@ -1926,6 +1967,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsObvMean(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -2007,6 +2049,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'period': 14,
   'priceKey': "close",
@@ -2017,6 +2060,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsRsi(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -2099,6 +2143,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'period': 20,
   'priceKey': "close",
@@ -2109,6 +2154,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsSma(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -2191,6 +2237,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'period': 14,
   'signalPeriod': 3,
@@ -2201,6 +2248,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsSr(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -2283,6 +2331,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'period': 15,
   'startDate': "2018-01-01",
@@ -2292,6 +2341,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsTrix(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -2373,6 +2423,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'lowPeriod': 13,
   'highPeriod': 25,
@@ -2384,6 +2435,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsTsi(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -2467,6 +2519,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'shortPeriod': 7,
   'mediumPeriod': 14,
@@ -2481,6 +2534,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsUo(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -2567,6 +2621,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'period': 14,
   'startDate': "2018-01-01",
@@ -2576,6 +2631,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsVi(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -2657,6 +2713,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'startDate': "2018-01-01",
   'endDate': "2019-01-01",
@@ -2665,6 +2722,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsVpt(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -2745,6 +2803,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'startDate': "2018-01-01",
   'endDate': "2019-01-01",
@@ -2753,6 +2812,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsVwap(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -2833,6 +2893,7 @@ var technical = new intrinioSDK.TechnicalApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'period': 14,
   'startDate': "2018-01-01",
@@ -2842,6 +2903,7 @@ var opts = {
 };
 
 technical.getSecurityPriceTechnicalsWr(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);

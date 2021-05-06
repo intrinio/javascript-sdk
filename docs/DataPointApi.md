@@ -57,7 +57,9 @@ var dataPoint = new intrinioSDK.DataPointApi();
 var identifier = "AAPL";
 var tag = "marketcap";
 
+
 dataPoint.getDataPointNumber(identifier, tag).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -136,7 +138,9 @@ var dataPoint = new intrinioSDK.DataPointApi();
 var identifier = "AAPL";
 var tag = "ceo";
 
+
 dataPoint.getDataPointText(identifier, tag).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);

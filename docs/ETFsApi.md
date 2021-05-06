@@ -65,6 +65,7 @@ var opts = {
 };
 
 eTFs.getAllEtfs(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -143,7 +144,9 @@ var eTFs = new intrinioSDK.ETFsApi();
 
 var identifier = "SPY";
 
+
 eTFs.getEtf(identifier).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -220,7 +223,9 @@ var eTFs = new intrinioSDK.ETFsApi();
 
 var identifier = "SPY";
 
+
 eTFs.getEtfAnalytics(identifier).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -297,12 +302,14 @@ var eTFs = new intrinioSDK.ETFsApi();
 
 var identifier = "SPY";
 
+
 var opts = { 
   'pageSize': 100,
   'nextPage': null
 };
 
 eTFs.getEtfHoldings(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -381,7 +388,9 @@ var eTFs = new intrinioSDK.ETFsApi();
 
 var identifier = "SPY";
 
+
 eTFs.getEtfStats(identifier).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -458,7 +467,9 @@ var eTFs = new intrinioSDK.ETFsApi();
 
 var query = "iShares";
 
+
 eTFs.searchEtfs(query).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);

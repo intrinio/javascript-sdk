@@ -75,6 +75,7 @@ var opts = {
 };
 
 index.getAllEconomicIndices(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -155,6 +156,7 @@ var opts = {
 };
 
 index.getAllSicIndices(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -235,6 +237,7 @@ var opts = {
 };
 
 index.getAllStockMarketIndices(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -311,7 +314,9 @@ var index = new intrinioSDK.IndexApi();
 
 var identifier = "$GDP";
 
+
 index.getEconomicIndexById(identifier).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -389,7 +394,9 @@ var index = new intrinioSDK.IndexApi();
 var identifier = "$GDP";
 var tag = "level";
 
+
 index.getEconomicIndexDataPointNumber(identifier, tag).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -468,7 +475,9 @@ var index = new intrinioSDK.IndexApi();
 var identifier = "$GDP";
 var tag = "level";
 
+
 index.getEconomicIndexDataPointText(identifier, tag).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -547,6 +556,7 @@ var index = new intrinioSDK.IndexApi();
 var identifier = "$GDP";
 var tag = "level";
 
+
 var opts = { 
   'type': null,
   'startDate': new Date("2018-01-01"),
@@ -557,6 +567,7 @@ var opts = {
 };
 
 index.getEconomicIndexHistoricalData(identifier, tag, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -639,7 +650,9 @@ var index = new intrinioSDK.IndexApi();
 
 var identifier = "$SIC.2911";
 
+
 index.getSicIndexById(identifier).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -717,7 +730,9 @@ var index = new intrinioSDK.IndexApi();
 var identifier = "$SIC.2911";
 var tag = "marketcap";
 
+
 index.getSicIndexDataPointNumber(identifier, tag).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -796,7 +811,9 @@ var index = new intrinioSDK.IndexApi();
 var identifier = "$SIC.2911";
 var tag = "marketcap";
 
+
 index.getSicIndexDataPointText(identifier, tag).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -875,6 +892,7 @@ var index = new intrinioSDK.IndexApi();
 var identifier = "$SIC.1";
 var tag = "marketcap";
 
+
 var opts = { 
   'type': null,
   'startDate': new Date("2018-01-01"),
@@ -885,6 +903,7 @@ var opts = {
 };
 
 index.getSicIndexHistoricalData(identifier, tag, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -967,7 +986,9 @@ var index = new intrinioSDK.IndexApi();
 
 var identifier = "$DJI";
 
+
 index.getStockMarketIndexById(identifier).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1045,7 +1066,9 @@ var index = new intrinioSDK.IndexApi();
 var identifier = "$DJI";
 var tag = "level";
 
+
 index.getStockMarketIndexDataPointNumber(identifier, tag).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1124,7 +1147,9 @@ var index = new intrinioSDK.IndexApi();
 var identifier = "$DJI";
 var tag = "level";
 
+
 index.getStockMarketIndexDataPointText(identifier, tag).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1203,6 +1228,7 @@ var index = new intrinioSDK.IndexApi();
 var identifier = "$DJI";
 var tag = "level";
 
+
 var opts = { 
   'type': null,
   'startDate': new Date("2018-01-01"),
@@ -1213,6 +1239,7 @@ var opts = {
 };
 
 index.getStockMarketIndexHistoricalData(identifier, tag, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1296,11 +1323,13 @@ var index = new intrinioSDK.IndexApi();
 
 var query = "GDP";
 
+
 var opts = { 
   'pageSize': 100
 };
 
 index.searchEconomicIndices(query, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1378,11 +1407,13 @@ var index = new intrinioSDK.IndexApi();
 
 var query = "agriculture";
 
+
 var opts = { 
   'pageSize': 100
 };
 
 index.searchSicIndices(query, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1460,11 +1491,13 @@ var index = new intrinioSDK.IndexApi();
 
 var query = "dow";
 
+
 var opts = { 
   'pageSize': 100
 };
 
 index.searchStockMarketsIndices(query, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);

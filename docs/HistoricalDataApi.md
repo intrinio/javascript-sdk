@@ -56,6 +56,7 @@ var historicalData = new intrinioSDK.HistoricalDataApi();
 var identifier = "AAPL";
 var tag = "marketcap";
 
+
 var opts = { 
   'frequency': "daily",
   'type': null,
@@ -67,6 +68,7 @@ var opts = {
 };
 
 historicalData.getHistoricalData(identifier, tag, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);

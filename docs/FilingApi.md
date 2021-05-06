@@ -64,6 +64,7 @@ var filing = new intrinioSDK.FilingApi();
 
 var company = "AAPL";
 
+
 var opts = { 
   'reportType': "10-Q",
   'startDate': new Date("2015-01-01"),
@@ -75,6 +76,7 @@ var opts = {
 };
 
 filing.getAllFilings(company, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -168,6 +170,7 @@ var opts = {
 };
 
 filing.getAllNotes(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -251,7 +254,9 @@ var filing = new intrinioSDK.FilingApi();
 
 var id = "fil_7Kn2P6";
 
+
 filing.getFilingById(id).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -328,6 +333,7 @@ var filing = new intrinioSDK.FilingApi();
 
 var identifier = "fil_B73xBG";
 
+
 var opts = { 
   'statementCode': null,
   'type': null,
@@ -339,6 +345,7 @@ var opts = {
 };
 
 filing.getFilingFundamentals(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -421,7 +428,9 @@ var filing = new intrinioSDK.FilingApi();
 
 var identifier = "fil_B73xBG";
 
+
 filing.getFilingHtml(identifier).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -497,7 +506,9 @@ var filing = new intrinioSDK.FilingApi();
 
 var identifier = "fil_B73xBG";
 
+
 filing.getFilingText(identifier).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -573,11 +584,13 @@ var filing = new intrinioSDK.FilingApi();
 
 var identifier = "xbn_ydK3QL";
 
+
 var opts = { 
   'contentFormat': "text"
 };
 
 filing.getNote(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -654,7 +667,9 @@ var filing = new intrinioSDK.FilingApi();
 
 var identifier = "xbn_ydK3QL";
 
+
 filing.getNoteHtml(identifier).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -730,7 +745,9 @@ var filing = new intrinioSDK.FilingApi();
 
 var identifier = "xbn_ydK3QL";
 
+
 filing.getNoteText(identifier).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -807,6 +824,7 @@ var filing = new intrinioSDK.FilingApi();
 
 var query = "inflation";
 
+
 var opts = { 
   'filingStartDate': new Date("2018-07-15"),
   'filingEndDate': new Date("2018-11-30"),
@@ -814,6 +832,7 @@ var opts = {
 };
 
 filing.searchNotes(query, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);

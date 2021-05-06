@@ -58,7 +58,9 @@ var fundamentals = new intrinioSDK.FundamentalsApi();
 
 var id = "fun_ge9LlE";
 
+
 fundamentals.getFundamentalById(id).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -135,7 +137,9 @@ var fundamentals = new intrinioSDK.FundamentalsApi();
 
 var id = "AAPL-income_statement-2018-Q1";
 
+
 fundamentals.getFundamentalReportedFinancials(id).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -212,7 +216,9 @@ var fundamentals = new intrinioSDK.FundamentalsApi();
 
 var id = "AAPL-income_statement-2018-Q1";
 
+
 fundamentals.getFundamentalStandardizedFinancials(id).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -292,7 +298,9 @@ var statementCode = "income_statement";
 var fiscalYear = 2017;
 var fiscalPeriod = "FY";
 
+
 fundamentals.lookupFundamental(identifier, statementCode, fiscalYear, fiscalPeriod).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);

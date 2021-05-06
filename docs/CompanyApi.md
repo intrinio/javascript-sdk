@@ -82,6 +82,7 @@ var opts = {
 };
 
 company.getAllCompanies(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -171,6 +172,7 @@ var opts = {
 };
 
 company.getAllCompanyNews(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -248,7 +250,9 @@ var company = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL";
 
+
 company.getCompany(identifier).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -326,7 +330,9 @@ var company = new intrinioSDK.CompanyApi();
 var identifier = "AAPL";
 var tag = "marketcap";
 
+
 company.getCompanyDataPointNumber(identifier, tag).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -405,7 +411,9 @@ var company = new intrinioSDK.CompanyApi();
 var identifier = "AAPL";
 var tag = "ceo";
 
+
 company.getCompanyDataPointText(identifier, tag).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -483,6 +491,7 @@ var company = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'reportType': null,
   'startDate': new Date("2015-01-01"),
@@ -492,6 +501,7 @@ var opts = {
 };
 
 company.getCompanyFilings(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -573,6 +583,7 @@ var company = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'filedAfter': null,
   'filedBefore': null,
@@ -587,6 +598,7 @@ var opts = {
 };
 
 company.getCompanyFundamentals(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -674,6 +686,7 @@ var company = new intrinioSDK.CompanyApi();
 var identifier = "AAPL";
 var tag = "marketcap";
 
+
 var opts = { 
   'frequency': "daily",
   'type': null,
@@ -685,6 +698,7 @@ var opts = {
 };
 
 company.getCompanyHistoricalData(identifier, tag, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -779,6 +793,7 @@ var opts = {
 };
 
 company.getCompanyIpos(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -862,12 +877,14 @@ var company = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'pageSize': 100,
   'nextPage': null
 };
 
 company.getCompanyNews(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -946,11 +963,13 @@ var company = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'nextPage': null
 };
 
 company.getCompanySecurities(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1028,6 +1047,7 @@ var company = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'startDate': new Date("2018-01-01"),
   'endDate': new Date("2019-01-01"),
@@ -1037,6 +1057,7 @@ var opts = {
 };
 
 company.insiderTransactionFilingsByCompany(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1118,11 +1139,13 @@ var company = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL";
 
+
 var opts = { 
   'nextPage': null
 };
 
 company.latestInsiderTransactionFilingByCompany(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1203,7 +1226,9 @@ var statementCode = "income_statement";
 var fiscalPeriod = "FY";
 var fiscalYear = 2017;
 
+
 company.lookupCompanyFundamental(identifier, statementCode, fiscalPeriod, fiscalYear).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1283,12 +1308,14 @@ var company = new intrinioSDK.CompanyApi();
 
 var query = "Apple";
 
+
 var opts = { 
   'active': true,
   'pageSize': 100
 };
 
 company.searchCompanies(query, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1367,7 +1394,9 @@ var company = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL";
 
+
 company.sharesOutstandingByCompany(identifier).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);

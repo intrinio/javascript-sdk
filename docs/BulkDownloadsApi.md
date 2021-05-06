@@ -54,6 +54,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var bulkDownloads = new intrinioSDK.BulkDownloadsApi();
 
 bulkDownloads.getBulkDownloadLinks().then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);

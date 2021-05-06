@@ -66,6 +66,7 @@ var opts = {
 };
 
 stockExchange.getAllStockExchanges(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -145,7 +146,9 @@ var stockExchange = new intrinioSDK.StockExchangeApi();
 
 var identifier = "USCOMP";
 
+
 stockExchange.getStockExchangeById(identifier).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -222,6 +225,7 @@ var stockExchange = new intrinioSDK.StockExchangeApi();
 
 var identifier = "USCOMP";
 
+
 var opts = { 
   'date': new Date("2018-08-14"),
   'pageSize': 100,
@@ -229,6 +233,7 @@ var opts = {
 };
 
 stockExchange.getStockExchangePriceAdjustments(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -308,6 +313,7 @@ var stockExchange = new intrinioSDK.StockExchangeApi();
 
 var identifier = "USCOMP";
 
+
 var opts = { 
   'date': new Date("2018-08-14"),
   'pageSize': 100,
@@ -315,6 +321,7 @@ var opts = {
 };
 
 stockExchange.getStockExchangePrices(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -394,6 +401,7 @@ var stockExchange = new intrinioSDK.StockExchangeApi();
 
 var identifier = "USCOMP";
 
+
 var opts = { 
   'source': null,
   'pageSize': 100,
@@ -401,6 +409,7 @@ var opts = {
 };
 
 stockExchange.getStockExchangeRealtimePrices(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -480,12 +489,14 @@ var stockExchange = new intrinioSDK.StockExchangeApi();
 
 var identifier = "USCOMP";
 
+
 var opts = { 
   'pageSize': 100,
   'nextPage': null
 };
 
 stockExchange.getStockExchangeSecurities(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);

@@ -72,6 +72,7 @@ var opts = {
 };
 
 municipality.getAllMunicipalities(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -160,7 +161,9 @@ var municipality = new intrinioSDK.MunicipalityApi();
 
 var id = "mun_Xn7x4z";
 
+
 municipality.getMunicipalityById(id).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -237,11 +240,13 @@ var municipality = new intrinioSDK.MunicipalityApi();
 
 var id = "mun_Xn7x4z";
 
+
 var opts = { 
   'fiscalYear': 2017
 };
 
 municipality.getMunicipalityFinancials(id, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);

@@ -66,6 +66,7 @@ var opts = {
 };
 
 dataTag.getAllDataTags(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -148,7 +149,9 @@ var dataTag = new intrinioSDK.DataTagApi();
 
 var identifier = "marketcap";
 
+
 dataTag.getDataTagById(identifier).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -225,11 +228,13 @@ var dataTag = new intrinioSDK.DataTagApi();
 
 var query = "revenue";
 
+
 var opts = { 
   'pageSize': 100
 };
 
 dataTag.searchDataTags(query, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);

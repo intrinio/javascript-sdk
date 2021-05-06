@@ -61,6 +61,7 @@ var opts = {
 };
 
 insiderTransactionFilings.getAllInsiderTransactionFilings(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);

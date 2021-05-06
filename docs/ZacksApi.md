@@ -86,6 +86,7 @@ var opts = {
 };
 
 zacks.getZacksAnalystRatings(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -191,6 +192,7 @@ var opts = {
 };
 
 zacks.getZacksEpsEstimates(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -282,6 +284,7 @@ var opts = {
 };
 
 zacks.getZacksEpsGrowthRates(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -380,6 +383,7 @@ var opts = {
 };
 
 zacks.getZacksEpsSurprises(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -479,6 +483,7 @@ var opts = {
 };
 
 zacks.getZacksEtfHoldings(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -565,6 +570,7 @@ var opts = {
 };
 
 zacks.getZacksInstitutionalHoldingCompanies(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -648,6 +654,7 @@ var opts = {
 };
 
 zacks.getZacksInstitutionalHoldingOwners(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -732,6 +739,7 @@ var opts = {
 };
 
 zacks.getZacksInstitutionalHoldings(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -816,6 +824,7 @@ var opts = {
 };
 
 zacks.getZacksLongTermGrowthRates(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -912,6 +921,7 @@ var opts = {
 };
 
 zacks.getZacksSalesSurprises(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
@@ -1009,6 +1019,7 @@ var opts = {
 };
 
 zacks.getZacksTargetPriceConsensuses(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
   console.error(error);
