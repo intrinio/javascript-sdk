@@ -33,7 +33,7 @@
   /**
    * Fundamentals service.
    * @module api/FundamentalsApi
-   * @version 5.13.0
+   * @version 5.13.1
    */
 
   /**

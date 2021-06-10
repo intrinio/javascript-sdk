@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityBollingerBands model module.
    * @module model/ApiResponseSecurityBollingerBands
-   * @version 5.13.0
+   * @version 5.13.1
    */
 
   /**

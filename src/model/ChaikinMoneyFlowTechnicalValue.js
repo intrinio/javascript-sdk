@@ -36,7 +36,7 @@
   /**
    * The ChaikinMoneyFlowTechnicalValue model module.
    * @module model/ChaikinMoneyFlowTechnicalValue
-   * @version 5.13.0
+   * @version 5.13.1
    */
 
   /**

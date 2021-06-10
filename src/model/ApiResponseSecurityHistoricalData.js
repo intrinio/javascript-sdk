@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityHistoricalData model module.
    * @module model/ApiResponseSecurityHistoricalData
-   * @version 5.13.0
+   * @version 5.13.1
    */
 
   /**

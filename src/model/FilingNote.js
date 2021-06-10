@@ -36,7 +36,7 @@
   /**
    * The FilingNote model module.
    * @module model/FilingNote
-   * @version 5.13.0
+   * @version 5.13.1
    */
 
   /**

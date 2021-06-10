@@ -36,7 +36,7 @@
   /**
    * The ApiResponseCompaniesSearch model module.
    * @module model/ApiResponseCompaniesSearch
-   * @version 5.13.0
+   * @version 5.13.1
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The DataTag model module.
    * @module model/DataTag
-   * @version 5.13.0
+   * @version 5.13.1
    */
 
   /**

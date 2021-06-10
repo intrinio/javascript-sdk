@@ -36,7 +36,7 @@
   /**
    * The TheaSourceDocumentTags model module.
    * @module model/TheaSourceDocumentTags
-   * @version 5.13.0
+   * @version 5.13.1
    */
 
   /**

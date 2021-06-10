@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityDonchianChannel model module.
    * @module model/ApiResponseSecurityDonchianChannel
-   * @version 5.13.0
+   * @version 5.13.1
    */
 
   /**

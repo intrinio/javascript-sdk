@@ -36,7 +36,7 @@
   /**
    * The DividendRecord model module.
    * @module model/DividendRecord
-   * @version 5.13.0
+   * @version 5.13.1
    */
 
   /**

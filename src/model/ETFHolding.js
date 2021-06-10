@@ -36,7 +36,7 @@
   /**
    * The ETFHolding model module.
    * @module model/ETFHolding
-   * @version 5.13.0
+   * @version 5.13.1
    */
 
   /**
