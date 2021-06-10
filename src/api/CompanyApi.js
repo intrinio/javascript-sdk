@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ApiResponseCompanies', 'model/ApiResponseCompaniesSearch', 'model/ApiResponseCompanyFilings', 'model/ApiResponseCompanyFundamentals', 'model/ApiResponseCompanyHistoricalData', 'model/ApiResponseCompanyNews', 'model/ApiResponseCompanyRecognize', 'model/ApiResponseCompanySecurities', 'model/ApiResponseCompanySharesOutstanding', 'model/ApiResponseInitialPublicOfferings', 'model/ApiResponseInsiderTransactionFilings', 'model/ApiResponseNews', 'model/Company', 'model/Fundamental', 'model/InsiderTransactionFiling'], factory);
+    define(['ApiClient', 'model/ApiResponseCompanies', 'model/ApiResponseCompaniesSearch', 'model/ApiResponseCompanyAnswers', 'model/ApiResponseCompanyFilings', 'model/ApiResponseCompanyFundamentals', 'model/ApiResponseCompanyHistoricalData', 'model/ApiResponseCompanyNews', 'model/ApiResponseCompanyRecognize', 'model/ApiResponseCompanySecurities', 'model/ApiResponseCompanySharesOutstanding', 'model/ApiResponseInitialPublicOfferings', 'model/ApiResponseInsiderTransactionFilings', 'model/ApiResponseNews', 'model/Company', 'model/Fundamental', 'model/InsiderTransactionFiling'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ApiResponseCompanies'), require('../model/ApiResponseCompaniesSearch'), require('../model/ApiResponseCompanyFilings'), require('../model/ApiResponseCompanyFundamentals'), require('../model/ApiResponseCompanyHistoricalData'), require('../model/ApiResponseCompanyNews'), require('../model/ApiResponseCompanyRecognize'), require('../model/ApiResponseCompanySecurities'), require('../model/ApiResponseCompanySharesOutstanding'), require('../model/ApiResponseInitialPublicOfferings'), require('../model/ApiResponseInsiderTransactionFilings'), require('../model/ApiResponseNews'), require('../model/Company'), require('../model/Fundamental'), require('../model/InsiderTransactionFiling'));
+    module.exports = factory(require('../ApiClient'), require('../model/ApiResponseCompanies'), require('../model/ApiResponseCompaniesSearch'), require('../model/ApiResponseCompanyAnswers'), require('../model/ApiResponseCompanyFilings'), require('../model/ApiResponseCompanyFundamentals'), require('../model/ApiResponseCompanyHistoricalData'), require('../model/ApiResponseCompanyNews'), require('../model/ApiResponseCompanyRecognize'), require('../model/ApiResponseCompanySecurities'), require('../model/ApiResponseCompanySharesOutstanding'), require('../model/ApiResponseInitialPublicOfferings'), require('../model/ApiResponseInsiderTransactionFilings'), require('../model/ApiResponseNews'), require('../model/Company'), require('../model/Fundamental'), require('../model/InsiderTransactionFiling'));
   } else {
     // Browser globals (root is window)
     if (!root.intrinioSDK) {
       root.intrinioSDK = {};
     }
-    root.intrinioSDK.CompanyApi = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.ApiResponseCompanies, root.intrinioSDK.ApiResponseCompaniesSearch, root.intrinioSDK.ApiResponseCompanyFilings, root.intrinioSDK.ApiResponseCompanyFundamentals, root.intrinioSDK.ApiResponseCompanyHistoricalData, root.intrinioSDK.ApiResponseCompanyNews, root.intrinioSDK.ApiResponseCompanyRecognize, root.intrinioSDK.ApiResponseCompanySecurities, root.intrinioSDK.ApiResponseCompanySharesOutstanding, root.intrinioSDK.ApiResponseInitialPublicOfferings, root.intrinioSDK.ApiResponseInsiderTransactionFilings, root.intrinioSDK.ApiResponseNews, root.intrinioSDK.Company, root.intrinioSDK.Fundamental, root.intrinioSDK.InsiderTransactionFiling);
+    root.intrinioSDK.CompanyApi = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.ApiResponseCompanies, root.intrinioSDK.ApiResponseCompaniesSearch, root.intrinioSDK.ApiResponseCompanyAnswers, root.intrinioSDK.ApiResponseCompanyFilings, root.intrinioSDK.ApiResponseCompanyFundamentals, root.intrinioSDK.ApiResponseCompanyHistoricalData, root.intrinioSDK.ApiResponseCompanyNews, root.intrinioSDK.ApiResponseCompanyRecognize, root.intrinioSDK.ApiResponseCompanySecurities, root.intrinioSDK.ApiResponseCompanySharesOutstanding, root.intrinioSDK.ApiResponseInitialPublicOfferings, root.intrinioSDK.ApiResponseInsiderTransactionFilings, root.intrinioSDK.ApiResponseNews, root.intrinioSDK.Company, root.intrinioSDK.Fundamental, root.intrinioSDK.InsiderTransactionFiling);
   }
-}(this, function(ApiClient, ApiResponseCompanies, ApiResponseCompaniesSearch, ApiResponseCompanyFilings, ApiResponseCompanyFundamentals, ApiResponseCompanyHistoricalData, ApiResponseCompanyNews, ApiResponseCompanyRecognize, ApiResponseCompanySecurities, ApiResponseCompanySharesOutstanding, ApiResponseInitialPublicOfferings, ApiResponseInsiderTransactionFilings, ApiResponseNews, Company, Fundamental, InsiderTransactionFiling) {
+}(this, function(ApiClient, ApiResponseCompanies, ApiResponseCompaniesSearch, ApiResponseCompanyAnswers, ApiResponseCompanyFilings, ApiResponseCompanyFundamentals, ApiResponseCompanyHistoricalData, ApiResponseCompanyNews, ApiResponseCompanyRecognize, ApiResponseCompanySecurities, ApiResponseCompanySharesOutstanding, ApiResponseInitialPublicOfferings, ApiResponseInsiderTransactionFilings, ApiResponseNews, Company, Fundamental, InsiderTransactionFiling) {
   'use strict';
 
   /**
@@ -230,6 +230,68 @@
      */
     this.getCompany = function(identifier) {
       return this.getCompanyWithHttpInfo(identifier)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+
+    /**
+     * Company Answers
+     * Returns answers for a question about the Company with the given &#x60;identifier&#x60;
+     * @param {String} identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+     * @param {String} query The query to ask the Thea API
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ApiResponseCompanyAnswers} and HTTP response
+     */
+    this.getCompanyAnswersWithHttpInfo = function(identifier, query) {
+      var postBody = null;
+
+      // verify the required parameter 'identifier' is set
+      if (identifier === undefined || identifier === null) {
+        throw new Error("Missing the required parameter 'identifier' when calling getCompanyAnswers");
+      }
+
+      // verify the required parameter 'query' is set
+      if (query === undefined || query === null) {
+        throw new Error("Missing the required parameter 'query' when calling getCompanyAnswers");
+      }
+
+
+      var pathParams = {
+        'identifier': identifier
+      };
+      var queryParams = {
+        'query': query,
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ApiKeyAuth'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = ApiResponseCompanyAnswers;
+      var endpoint = '/companies/{identifier}/answers'
+      var method = 'GET'
+
+      let requestParameters = { endpoint, method, pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType }
+      
+      return this.makeApiCall(requestParameters)
+    }
+
+    /**
+     * Company Answers
+     * Returns answers for a question about the Company with the given &#x60;identifier&#x60;
+     * @param {String} identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+     * @param {String} query The query to ask the Thea API
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ApiResponseCompanyAnswers}
+     */
+    this.getCompanyAnswers = function(identifier, query) {
+      return this.getCompanyAnswersWithHttpInfo(identifier, query)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

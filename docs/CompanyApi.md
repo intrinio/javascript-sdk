@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**getAllCompanies**](CompanyApi.md#getAllCompanies) | **GET** /companies | All Companies
 [**getAllCompanyNews**](CompanyApi.md#getAllCompanyNews) | **GET** /companies/news | All News
 [**getCompany**](CompanyApi.md#getCompany) | **GET** /companies/{identifier} | Lookup Company
+[**getCompanyAnswers**](CompanyApi.md#getCompanyAnswers) | **GET** /companies/{identifier}/answers | Company Answers
 [**getCompanyDataPointNumber**](CompanyApi.md#getCompanyDataPointNumber) | **GET** /companies/{identifier}/data_point/{tag}/number | Data Point (Number) for Company
 [**getCompanyDataPointText**](CompanyApi.md#getCompanyDataPointText) | **GET** /companies/{identifier}/data_point/{tag}/text | Data Point (Text) for Company
 [**getCompanyFilings**](CompanyApi.md#getCompanyFilings) | **GET** /companies/{identifier}/filings | All Filings by Company
@@ -277,6 +278,87 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Company**](Company.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:CompanyApi)
+
+[//]: # (METHOD:getCompanyAnswers)
+
+[//]: # (RETURN_TYPE:ApiResponseCompanyAnswers)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyAnswers.md)
+
+[//]: # (OPERATION:getCompanyAnswers_v2)
+
+[//]: # (ENDPOINT:/companies/{identifier}/answers)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#getCompanyAnswers)
+
+<a name="getCompanyAnswers"></a>
+## **getCompanyAnswers**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getCompanyAnswers_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseCompanyAnswers getCompanyAnswers(identifier, query)
+
+#### Company Answers
+
+
+Returns answers for a question about the Company with the given &#x60;identifier&#x60;
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var company = new intrinioSDK.CompanyApi();
+
+var identifier = "AAPL";
+var query = "Where is the company headquartered?";
+
+
+company.getCompanyAnswers(identifier, query).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+ **query** | String| The query to ask the Thea API |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseCompanyAnswers**](ApiResponseCompanyAnswers.md)
 
 
 

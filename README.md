@@ -76,6 +76,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.CompanyApi* | [**getAllCompanies**](docs/CompanyApi.md#getAllCompanies) | **GET** /companies | All Companies
 *intrinioSDK.CompanyApi* | [**getAllCompanyNews**](docs/CompanyApi.md#getAllCompanyNews) | **GET** /companies/news | All News
 *intrinioSDK.CompanyApi* | [**getCompany**](docs/CompanyApi.md#getCompany) | **GET** /companies/{identifier} | Lookup Company
+*intrinioSDK.CompanyApi* | [**getCompanyAnswers**](docs/CompanyApi.md#getCompanyAnswers) | **GET** /companies/{identifier}/answers | Company Answers
 *intrinioSDK.CompanyApi* | [**getCompanyDataPointNumber**](docs/CompanyApi.md#getCompanyDataPointNumber) | **GET** /companies/{identifier}/data_point/{tag}/number | Data Point (Number) for Company
 *intrinioSDK.CompanyApi* | [**getCompanyDataPointText**](docs/CompanyApi.md#getCompanyDataPointText) | **GET** /companies/{identifier}/data_point/{tag}/text | Data Point (Text) for Company
 *intrinioSDK.CompanyApi* | [**getCompanyFilings**](docs/CompanyApi.md#getCompanyFilings) | **GET** /companies/{identifier}/filings | All Filings by Company
@@ -263,6 +264,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseBulkDownloadLinks](docs/ApiResponseBulkDownloadLinks.md)
  - [intrinioSDK.ApiResponseCompanies](docs/ApiResponseCompanies.md)
  - [intrinioSDK.ApiResponseCompaniesSearch](docs/ApiResponseCompaniesSearch.md)
+ - [intrinioSDK.ApiResponseCompanyAnswers](docs/ApiResponseCompanyAnswers.md)
  - [intrinioSDK.ApiResponseCompanyFilings](docs/ApiResponseCompanyFilings.md)
  - [intrinioSDK.ApiResponseCompanyFundamentals](docs/ApiResponseCompanyFundamentals.md)
  - [intrinioSDK.ApiResponseCompanyHistoricalData](docs/ApiResponseCompanyHistoricalData.md)
@@ -466,6 +468,9 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.StockPriceInterval](docs/StockPriceInterval.md)
  - [intrinioSDK.StockPriceSummary](docs/StockPriceSummary.md)
  - [intrinioSDK.TechnicalIndicator](docs/TechnicalIndicator.md)
+ - [intrinioSDK.TheaEntityAnswer](docs/TheaEntityAnswer.md)
+ - [intrinioSDK.TheaSourceDocument](docs/TheaSourceDocument.md)
+ - [intrinioSDK.TheaSourceDocumentTags](docs/TheaSourceDocumentTags.md)
  - [intrinioSDK.TripleExponentialAverageTechnicalValue](docs/TripleExponentialAverageTechnicalValue.md)
  - [intrinioSDK.TrueStrengthIndexTechnicalValue](docs/TrueStrengthIndexTechnicalValue.md)
  - [intrinioSDK.UltimateOscillatorTechnicalValue](docs/UltimateOscillatorTechnicalValue.md)

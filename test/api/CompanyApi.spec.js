@@ -80,6 +80,16 @@
         done();
       });
     });
+    describe('getCompanyAnswers', function() {
+      it('should call getCompanyAnswers successfully', function(done) {
+        //uncomment below and update the code to test getCompanyAnswers
+        //instance.getCompanyAnswers(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getCompanyDataPointNumber', function() {
       it('should call getCompanyDataPointNumber successfully', function(done) {
         //uncomment below and update the code to test getCompanyDataPointNumber
