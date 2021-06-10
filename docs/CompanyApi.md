@@ -18,6 +18,7 @@ Method | HTTP request | Description
 [**insiderTransactionFilingsByCompany**](CompanyApi.md#insiderTransactionFilingsByCompany) | **GET** /companies/{identifier}/insider_transaction_filings | Insider Transaction Filings by Company
 [**latestInsiderTransactionFilingByCompany**](CompanyApi.md#latestInsiderTransactionFilingByCompany) | **GET** /companies/{identifier}/insider_transaction_filings/latest | Latest Insider Transaction Filing by Company
 [**lookupCompanyFundamental**](CompanyApi.md#lookupCompanyFundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental by Company
+[**recognizeCompany**](CompanyApi.md#recognizeCompany) | **GET** /companies/recognize | Recognize Company
 [**searchCompanies**](CompanyApi.md#searchCompanies) | **GET** /companies/search | Search Companies
 [**sharesOutstandingByCompany**](CompanyApi.md#sharesOutstandingByCompany) | **GET** /companies/{identifier}/shares_outstanding | Shares Outstanding by Company
 
@@ -1255,6 +1256,85 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Fundamental**](Fundamental.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:CompanyApi)
+
+[//]: # (METHOD:recognizeCompany)
+
+[//]: # (RETURN_TYPE:ApiResponseCompanyRecognize)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyRecognize.md)
+
+[//]: # (OPERATION:recognizeCompany_v2)
+
+[//]: # (ENDPOINT:/companies/recognize)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#recognizeCompany)
+
+<a name="recognizeCompany"></a>
+## **recognizeCompany**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/recognizeCompany_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseCompanyRecognize recognizeCompany(text)
+
+#### Recognize Company
+
+
+Returns a list of companies recognized by the Thea API in the given &#x60;text&#x60; query string parameter.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var company = new intrinioSDK.CompanyApi();
+
+var text = "Apple";
+
+
+company.recognizeCompany(text).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **text** | String| The text sent to the Thea API to analyze | [default to Apple] &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseCompanyRecognize**](ApiResponseCompanyRecognize.md)
 
 
 
