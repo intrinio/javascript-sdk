@@ -11,12 +11,12 @@
 
 Name | Type | Description
 ------------ | ------------- | -------------
-**companies** | [**[DefinitionsCompanySummary]**](DefinitionsCompanySummary.md) |  &nbsp;
+**companies** | [**[CompanySummary]**](CompanySummary.md) |  &nbsp;
 
 [//]: # (END_DEFINITION)
 
 
-[//]: # (CONTAINED_CLASS:DefinitionsCompanySummary)
+[//]: # (CONTAINED_CLASS:CompanySummary)
 
 
 

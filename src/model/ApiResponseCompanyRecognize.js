@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/DefinitionsCompanySummary'], factory);
+    define(['ApiClient', 'model/CompanySummary'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./DefinitionsCompanySummary'));
+    module.exports = factory(require('../ApiClient'), require('./CompanySummary'));
   } else {
     // Browser globals (root is window)
     if (!root.intrinioSDK) {
       root.intrinioSDK = {};
     }
-    root.intrinioSDK.ApiResponseCompanyRecognize = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.DefinitionsCompanySummary);
+    root.intrinioSDK.ApiResponseCompanyRecognize = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.CompanySummary);
   }
-}(this, function(ApiClient, DefinitionsCompanySummary) {
+}(this, function(ApiClient, CompanySummary) {
   'use strict';
 
 
@@ -62,14 +62,14 @@
       obj = obj || new exports();
 
       if (data.hasOwnProperty('companies')) {
-        obj['companies'] = ApiClient.convertToType(data['companies'], [DefinitionsCompanySummary]);
+        obj['companies'] = ApiClient.convertToType(data['companies'], [CompanySummary]);
       }
     }
     return obj;
   }
 
   /**
-   * @member {Array.<module:model/DefinitionsCompanySummary>} companies
+   * @member {Array.<module:model/CompanySummary>} companies
    */
   exports.prototype['companies'] = undefined;
 
