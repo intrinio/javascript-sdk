@@ -36,7 +36,7 @@
   /**
    * The ApiResponseETFHoldings model module.
    * @module model/ApiResponseETFHoldings
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

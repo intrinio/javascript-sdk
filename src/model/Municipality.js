@@ -36,7 +36,7 @@
   /**
    * The Municipality model module.
    * @module model/Municipality
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

@@ -33,7 +33,7 @@
   /**
    * DataPoint service.
    * @module api/DataPointApi
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

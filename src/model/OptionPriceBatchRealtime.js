@@ -36,7 +36,7 @@
   /**
    * The OptionPriceBatchRealtime model module.
    * @module model/OptionPriceBatchRealtime
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

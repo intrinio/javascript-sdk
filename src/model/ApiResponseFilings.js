@@ -36,7 +36,7 @@
   /**
    * The ApiResponseFilings model module.
    * @module model/ApiResponseFilings
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

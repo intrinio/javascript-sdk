@@ -36,7 +36,7 @@
   /**
    * The ApiResponseZacksLongTermGrowthRates model module.
    * @module model/ApiResponseZacksLongTermGrowthRates
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

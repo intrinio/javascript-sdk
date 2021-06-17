@@ -36,7 +36,7 @@
   /**
    * The BollingerBandsTechnicalValue model module.
    * @module model/BollingerBandsTechnicalValue
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

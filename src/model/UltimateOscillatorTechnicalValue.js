@@ -36,7 +36,7 @@
   /**
    * The UltimateOscillatorTechnicalValue model module.
    * @module model/UltimateOscillatorTechnicalValue
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

@@ -33,7 +33,7 @@
   /**
    * Index service.
    * @module api/IndexApi
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The ApiResponseZacksInstitutionalHoldings model module.
    * @module model/ApiResponseZacksInstitutionalHoldings
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

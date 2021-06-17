@@ -36,7 +36,7 @@
   /**
    * The ForexPrice model module.
    * @module model/ForexPrice
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

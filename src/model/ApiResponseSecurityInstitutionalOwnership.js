@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityInstitutionalOwnership model module.
    * @module model/ApiResponseSecurityInstitutionalOwnership
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

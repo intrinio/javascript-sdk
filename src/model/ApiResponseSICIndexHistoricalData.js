@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSICIndexHistoricalData model module.
    * @module model/ApiResponseSICIndexHistoricalData
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

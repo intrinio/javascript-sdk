@@ -36,7 +36,7 @@
   /**
    * The RelativeStrengthIndexTechnicalValue model module.
    * @module model/RelativeStrengthIndexTechnicalValue
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

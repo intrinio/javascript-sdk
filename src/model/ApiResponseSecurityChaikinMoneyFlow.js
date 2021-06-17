@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityChaikinMoneyFlow model module.
    * @module model/ApiResponseSecurityChaikinMoneyFlow
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

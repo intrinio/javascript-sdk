@@ -36,7 +36,7 @@
   /**
    * The ApiResponseOwnerInstitutionalHoldings model module.
    * @module model/ApiResponseOwnerInstitutionalHoldings
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

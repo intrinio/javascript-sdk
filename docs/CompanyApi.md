@@ -330,7 +330,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var company = new intrinioSDK.CompanyApi();
 
 var identifier = "AAPL";
-var query = "Where is the company headquartered?";
+var query = "What do they believe in?";
 
 
 company.getCompanyAnswers(identifier, query).then(function(data) {

@@ -36,7 +36,7 @@
   /**
    * The StockPriceInterval model module.
    * @module model/StockPriceInterval
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

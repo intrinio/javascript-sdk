@@ -36,7 +36,7 @@
   /**
    * The ApiResponseMunicipalitiyFinancials model module.
    * @module model/ApiResponseMunicipalitiyFinancials
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

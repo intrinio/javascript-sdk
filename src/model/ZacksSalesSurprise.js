@@ -36,7 +36,7 @@
   /**
    * The ZacksSalesSurprise model module.
    * @module model/ZacksSalesSurprise
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

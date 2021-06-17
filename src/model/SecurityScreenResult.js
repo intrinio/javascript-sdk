@@ -36,7 +36,7 @@
   /**
    * The SecurityScreenResult model module.
    * @module model/SecurityScreenResult
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

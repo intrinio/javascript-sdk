@@ -36,7 +36,7 @@
   /**
    * The OwnerSummary model module.
    * @module model/OwnerSummary
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

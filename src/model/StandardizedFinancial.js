@@ -36,7 +36,7 @@
   /**
    * The StandardizedFinancial model module.
    * @module model/StandardizedFinancial
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

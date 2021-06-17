@@ -36,7 +36,7 @@
   /**
    * The ApiResponseZacksETFHoldings model module.
    * @module model/ApiResponseZacksETFHoldings
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

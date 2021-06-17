@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityVolumeWeightedAveragePrice model module.
    * @module model/ApiResponseSecurityVolumeWeightedAveragePrice
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

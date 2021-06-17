@@ -36,7 +36,7 @@
   /**
    * The InsiderTransactionFiling model module.
    * @module model/InsiderTransactionFiling
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

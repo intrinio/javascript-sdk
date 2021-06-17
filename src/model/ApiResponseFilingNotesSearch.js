@@ -36,7 +36,7 @@
   /**
    * The ApiResponseFilingNotesSearch model module.
    * @module model/ApiResponseFilingNotesSearch
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

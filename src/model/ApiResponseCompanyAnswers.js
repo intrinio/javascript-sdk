@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/TheaEntityAnswer'], factory);
+    define(['ApiClient', 'model/CompanySummary', 'model/TheaEntityAnswer'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./TheaEntityAnswer'));
+    module.exports = factory(require('../ApiClient'), require('./CompanySummary'), require('./TheaEntityAnswer'));
   } else {
     // Browser globals (root is window)
     if (!root.intrinioSDK) {
       root.intrinioSDK = {};
     }
-    root.intrinioSDK.ApiResponseCompanyAnswers = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.TheaEntityAnswer);
+    root.intrinioSDK.ApiResponseCompanyAnswers = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.CompanySummary, root.intrinioSDK.TheaEntityAnswer);
   }
-}(this, function(ApiClient, TheaEntityAnswer) {
+}(this, function(ApiClient, CompanySummary, TheaEntityAnswer) {
   'use strict';
 
 
@@ -36,7 +36,7 @@
   /**
    * The ApiResponseCompanyAnswers model module.
    * @module model/ApiResponseCompanyAnswers
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**
@@ -46,6 +46,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -72,6 +73,9 @@
       if (data.hasOwnProperty('answers')) {
         obj['answers'] = ApiClient.convertToType(data['answers'], [TheaEntityAnswer]);
       }
+      if (data.hasOwnProperty('companies')) {
+        obj['companies'] = ApiClient.convertToType(data['companies'], [CompanySummary]);
+      }
     }
     return obj;
   }
@@ -90,6 +94,10 @@
    * @member {Array.<module:model/TheaEntityAnswer>} answers
    */
   exports.prototype['answers'] = undefined;
+  /**
+   * @member {Array.<module:model/CompanySummary>} companies
+   */
+  exports.prototype['companies'] = undefined;
 
 
 

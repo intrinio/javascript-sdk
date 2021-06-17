@@ -33,7 +33,7 @@
   /**
    * Options service.
    * @module api/OptionsApi
-   * @version 5.13.1
+   * @version 5.13.2
    */
 
   /**

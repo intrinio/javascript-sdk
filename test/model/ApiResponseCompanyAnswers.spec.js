@@ -74,6 +74,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property companies (base name: "companies")', function() {
+      // uncomment below and update the code to test the property companies
+      //var instane = new intrinioSDK.ApiResponseCompanyAnswers();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
