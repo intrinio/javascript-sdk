@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAllFilings**](FilingApi.md#getAllFilings) | **GET** /filings | All Filings
 [**getAllNotes**](FilingApi.md#getAllNotes) | **GET** /filings/notes | All Filing Notes
+[**getFilingAnswers**](FilingApi.md#getFilingAnswers) | **GET** /filings/{identifier}/answers | Filing Answers
 [**getFilingById**](FilingApi.md#getFilingById) | **GET** /filings/{id} | Lookup Filing
 [**getFilingFundamentals**](FilingApi.md#getFilingFundamentals) | **GET** /filings/{identifier}/fundamentals | All Fundamentals by Filing
 [**getFilingHtml**](FilingApi.md#getFilingHtml) | **GET** /filings/{identifier}/html | Filing Html
@@ -71,6 +72,7 @@ var opts = {
   'endDate': null,
   'industryCategory': null,
   'industryGroup': null,
+  'theaEnabled': null,
   'pageSize': 100,
   'nextPage': null
 };
@@ -98,6 +100,7 @@ Name | Type | Description  | Notes
  **endDate** | Date| Filed before or after the given date | [optional]  &nbsp;
  **industryCategory** | String| Return companies in the given industry category | [optional]  &nbsp;
  **industryGroup** | String| Return companies in the given industry group | [optional]  &nbsp;
+ **theaEnabled** | Boolean| Return filings that have been read by our Thea NLP and are ready for our answers endpoint | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
@@ -201,6 +204,86 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseFilingNotes**](ApiResponseFilingNotes.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:FilingApi)
+
+[//]: # (METHOD:getFilingAnswers)
+
+[//]: # (RETURN_TYPE:ApiResponseFilingAnswers)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseFilingAnswers.md)
+
+[//]: # (OPERATION:getFilingAnswers_v2)
+
+[//]: # (ENDPOINT:/filings/{identifier}/answers)
+
+[//]: # (DOCUMENT_LINK:FilingApi.md#getFilingAnswers)
+
+<a name="getFilingAnswers"></a>
+## **getFilingAnswers**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getFilingAnswers_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseFilingAnswers getFilingAnswers(identifier, query)
+
+#### Filing Answers
+
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var filing = new intrinioSDK.FilingApi();
+
+var identifier = "fil_B73xBG";
+var query = "What do they believe in?";
+
+
+filing.getFilingAnswers(identifier, query).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Filing identifier |  &nbsp;
+ **query** | String| The query to ask the Thea API |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseFilingAnswers**](ApiResponseFilingAnswers.md)
 
 
 

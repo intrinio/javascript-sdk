@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**getOptionsPricesBatchRealtime**](OptionsApi.md#getOptionsPricesBatchRealtime) | **POST** /options/prices/realtime/batch | Option Prices Batch Realtime
 [**getOptionsPricesRealtime**](OptionsApi.md#getOptionsPricesRealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 [**getOptionsStatsRealtime**](OptionsApi.md#getOptionsStatsRealtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
+[**getUnusualActivity**](OptionsApi.md#getUnusualActivity) | **GET** /options/unusual_activity/{symbol} | Options Unusual Activity
 
 
 
@@ -1007,6 +1008,90 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptionsStatsRealtime**](ApiResponseOptionsStatsRealtime.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:OptionsApi)
+
+[//]: # (METHOD:getUnusualActivity)
+
+[//]: # (RETURN_TYPE:ApiResponseOptionsUnusualActivity)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsUnusualActivity.md)
+
+[//]: # (OPERATION:getUnusualActivity_v2)
+
+[//]: # (ENDPOINT:/options/unusual_activity/{symbol})
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getUnusualActivity)
+
+<a name="getUnusualActivity"></a>
+## **getUnusualActivity**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getUnusualActivity_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsUnusualActivity getUnusualActivity(symbol, opts)
+
+#### Options Unusual Activity
+
+
+Returns unusual trades for a given identifier.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var options = new intrinioSDK.OptionsApi();
+
+var symbol = "AAPL";
+
+
+var opts = { 
+  'source': null
+};
+
+options.getUnusualActivity(symbol, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | String| The option symbol, corresponding to the underlying security. |  &nbsp;
+ **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsUnusualActivity**](ApiResponseOptionsUnusualActivity.md)
 
 
 

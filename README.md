@@ -2,10 +2,10 @@
 
 To get an API key, [sign up here](https://intrinio.com/).
 
-Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
+Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.23.0
-- Package version: 5.13.2
+- API version: 2.25.0
+- Package version: 5.14.0
 
 
 ## Installation
@@ -104,6 +104,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.ETFsApi* | [**searchEtfs**](docs/ETFsApi.md#searchEtfs) | **GET** /etfs/search | Search ETFs
 *intrinioSDK.FilingApi* | [**getAllFilings**](docs/FilingApi.md#getAllFilings) | **GET** /filings | All Filings
 *intrinioSDK.FilingApi* | [**getAllNotes**](docs/FilingApi.md#getAllNotes) | **GET** /filings/notes | All Filing Notes
+*intrinioSDK.FilingApi* | [**getFilingAnswers**](docs/FilingApi.md#getFilingAnswers) | **GET** /filings/{identifier}/answers | Filing Answers
 *intrinioSDK.FilingApi* | [**getFilingById**](docs/FilingApi.md#getFilingById) | **GET** /filings/{id} | Lookup Filing
 *intrinioSDK.FilingApi* | [**getFilingFundamentals**](docs/FilingApi.md#getFilingFundamentals) | **GET** /filings/{identifier}/fundamentals | All Fundamentals by Filing
 *intrinioSDK.FilingApi* | [**getFilingHtml**](docs/FilingApi.md#getFilingHtml) | **GET** /filings/{identifier}/html | Filing Html
@@ -153,6 +154,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.OptionsApi* | [**getOptionsPricesBatchRealtime**](docs/OptionsApi.md#getOptionsPricesBatchRealtime) | **POST** /options/prices/realtime/batch | Option Prices Batch Realtime
 *intrinioSDK.OptionsApi* | [**getOptionsPricesRealtime**](docs/OptionsApi.md#getOptionsPricesRealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 *intrinioSDK.OptionsApi* | [**getOptionsStatsRealtime**](docs/OptionsApi.md#getOptionsStatsRealtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
+*intrinioSDK.OptionsApi* | [**getUnusualActivity**](docs/OptionsApi.md#getUnusualActivity) | **GET** /options/unusual_activity/{symbol} | Options Unusual Activity
 *intrinioSDK.OwnersApi* | [**getAllOwners**](docs/OwnersApi.md#getAllOwners) | **GET** /owners | All Owners
 *intrinioSDK.OwnersApi* | [**getOwnerById**](docs/OwnersApi.md#getOwnerById) | **GET** /owners/{identifier} | Owner by ID
 *intrinioSDK.OwnersApi* | [**insiderTransactionFilingsByOwner**](docs/OwnersApi.md#insiderTransactionFilingsByOwner) | **GET** /owners/{identifier}/insider_transaction_filings | Insider Transaction Filings by Owner
@@ -280,6 +282,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseEconomicIndexHistoricalData](docs/ApiResponseEconomicIndexHistoricalData.md)
  - [intrinioSDK.ApiResponseEconomicIndices](docs/ApiResponseEconomicIndices.md)
  - [intrinioSDK.ApiResponseEconomicIndicesSearch](docs/ApiResponseEconomicIndicesSearch.md)
+ - [intrinioSDK.ApiResponseFilingAnswers](docs/ApiResponseFilingAnswers.md)
  - [intrinioSDK.ApiResponseFilingFundamentals](docs/ApiResponseFilingFundamentals.md)
  - [intrinioSDK.ApiResponseFilingNotes](docs/ApiResponseFilingNotes.md)
  - [intrinioSDK.ApiResponseFilingNotesSearch](docs/ApiResponseFilingNotesSearch.md)
@@ -303,6 +306,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseOptionsRealtime](docs/ApiResponseOptionsRealtime.md)
  - [intrinioSDK.ApiResponseOptionsStatsRealtime](docs/ApiResponseOptionsStatsRealtime.md)
  - [intrinioSDK.ApiResponseOptionsTickers](docs/ApiResponseOptionsTickers.md)
+ - [intrinioSDK.ApiResponseOptionsUnusualActivity](docs/ApiResponseOptionsUnusualActivity.md)
  - [intrinioSDK.ApiResponseOwnerInsiderTransactionFilings](docs/ApiResponseOwnerInsiderTransactionFilings.md)
  - [intrinioSDK.ApiResponseOwnerInstitutionalHoldings](docs/ApiResponseOwnerInstitutionalHoldings.md)
  - [intrinioSDK.ApiResponseOwners](docs/ApiResponseOwners.md)
@@ -441,6 +445,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.OptionPriceRealtime](docs/OptionPriceRealtime.md)
  - [intrinioSDK.OptionRealtime](docs/OptionRealtime.md)
  - [intrinioSDK.OptionStatsRealtime](docs/OptionStatsRealtime.md)
+ - [intrinioSDK.OptionUnusualTrade](docs/OptionUnusualTrade.md)
  - [intrinioSDK.Owner](docs/Owner.md)
  - [intrinioSDK.OwnerSummary](docs/OwnerSummary.md)
  - [intrinioSDK.RealtimeStockPrice](docs/RealtimeStockPrice.md)
@@ -470,7 +475,6 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.TechnicalIndicator](docs/TechnicalIndicator.md)
  - [intrinioSDK.TheaEntityAnswer](docs/TheaEntityAnswer.md)
  - [intrinioSDK.TheaSourceDocument](docs/TheaSourceDocument.md)
- - [intrinioSDK.TheaSourceDocumentTags](docs/TheaSourceDocumentTags.md)
  - [intrinioSDK.TripleExponentialAverageTechnicalValue](docs/TripleExponentialAverageTechnicalValue.md)
  - [intrinioSDK.TrueStrengthIndexTechnicalValue](docs/TrueStrengthIndexTechnicalValue.md)
  - [intrinioSDK.UltimateOscillatorTechnicalValue](docs/UltimateOscillatorTechnicalValue.md)

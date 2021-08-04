@@ -579,6 +579,7 @@ var opts = {
   'reportType': null,
   'startDate': new Date("2015-01-01"),
   'endDate': null,
+  'theaEnabled': null,
   'pageSize': 100,
   'nextPage': null
 };
@@ -604,6 +605,7 @@ Name | Type | Description  | Notes
  **reportType** | String| Filter by &lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/sec_filing_report_types\&quot; target&#x3D;\&quot;_blank\&quot;&gt;report type&lt;/a&gt;. Separate values with commas to return multiple report types. | [optional]  &nbsp;
  **startDate** | Date| Filed on or after the given date | [optional]  &nbsp;
  **endDate** | Date| Filed before or after the given date | [optional]  &nbsp;
+ **theaEnabled** | Boolean| Return filings that have been read by our Thea NLP and are ready for our answers endpoint | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
