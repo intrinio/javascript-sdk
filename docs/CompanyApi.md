@@ -79,6 +79,7 @@ var opts = {
   'industryGroup': null,
   'hasFundamentals': true,
   'hasStockPrices': true,
+  'theaEnabled': null,
   'pageSize': 100,
   'nextPage': null
 };
@@ -108,6 +109,7 @@ Name | Type | Description  | Notes
  **industryGroup** | String| Return companies in the given industry group | [optional]  &nbsp;
  **hasFundamentals** | Boolean| Return only companies that have fundamentals when true | [optional]  &nbsp;
  **hasStockPrices** | Boolean| Return only companies that have stock prices when true | [optional]  &nbsp;
+ **theaEnabled** | Boolean| Return companies whose have been read by our Thea NLP and are ready for our company answers endpoint | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
