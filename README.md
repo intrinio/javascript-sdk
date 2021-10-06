@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.25.6
-- Package version: 5.15.0
+- API version: 2.26.1
+- Package version: 5.16.0
 
 
 ## Installation
@@ -149,10 +149,12 @@ Class | Method | HTTP request | Description
 *intrinioSDK.OptionsApi* | [**getOptions**](docs/OptionsApi.md#getOptions) | **GET** /options/{symbol} | Options
 *intrinioSDK.OptionsApi* | [**getOptionsBySymbolRealtime**](docs/OptionsApi.md#getOptionsBySymbolRealtime) | **GET** /options/{symbol}/realtime | Options by Symbol Realtime
 *intrinioSDK.OptionsApi* | [**getOptionsChain**](docs/OptionsApi.md#getOptionsChain) | **GET** /options/chain/{symbol}/{expiration} | Options Chain
+*intrinioSDK.OptionsApi* | [**getOptionsChainEod**](docs/OptionsApi.md#getOptionsChainEod) | **GET** /options/chain/{symbol}/{expiration}/eod | Options Chain EOD
 *intrinioSDK.OptionsApi* | [**getOptionsChainRealtime**](docs/OptionsApi.md#getOptionsChainRealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 *intrinioSDK.OptionsApi* | [**getOptionsExpirations**](docs/OptionsApi.md#getOptionsExpirations) | **GET** /options/expirations/{symbol} | Options Expirations
 *intrinioSDK.OptionsApi* | [**getOptionsPrices**](docs/OptionsApi.md#getOptionsPrices) | **GET** /options/prices/{identifier} | Option Prices
 *intrinioSDK.OptionsApi* | [**getOptionsPricesBatchRealtime**](docs/OptionsApi.md#getOptionsPricesBatchRealtime) | **POST** /options/prices/realtime/batch | Option Prices Batch Realtime
+*intrinioSDK.OptionsApi* | [**getOptionsPricesEod**](docs/OptionsApi.md#getOptionsPricesEod) | **GET** /options/prices/{identifier}/eod | Option Prices EOD
 *intrinioSDK.OptionsApi* | [**getOptionsPricesRealtime**](docs/OptionsApi.md#getOptionsPricesRealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 *intrinioSDK.OptionsApi* | [**getOptionsStatsRealtime**](docs/OptionsApi.md#getOptionsStatsRealtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
 *intrinioSDK.OptionsApi* | [**getUnusualActivity**](docs/OptionsApi.md#getUnusualActivity) | **GET** /options/unusual_activity/{symbol} | Options Unusual Activity
@@ -301,10 +303,12 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseOptionPrices](docs/ApiResponseOptionPrices.md)
  - [intrinioSDK.ApiResponseOptions](docs/ApiResponseOptions.md)
  - [intrinioSDK.ApiResponseOptionsChain](docs/ApiResponseOptionsChain.md)
+ - [intrinioSDK.ApiResponseOptionsChainEod](docs/ApiResponseOptionsChainEod.md)
  - [intrinioSDK.ApiResponseOptionsChainRealtime](docs/ApiResponseOptionsChainRealtime.md)
  - [intrinioSDK.ApiResponseOptionsExpirations](docs/ApiResponseOptionsExpirations.md)
  - [intrinioSDK.ApiResponseOptionsPriceRealtime](docs/ApiResponseOptionsPriceRealtime.md)
  - [intrinioSDK.ApiResponseOptionsPricesBatchRealtime](docs/ApiResponseOptionsPricesBatchRealtime.md)
+ - [intrinioSDK.ApiResponseOptionsPricesEod](docs/ApiResponseOptionsPricesEod.md)
  - [intrinioSDK.ApiResponseOptionsRealtime](docs/ApiResponseOptionsRealtime.md)
  - [intrinioSDK.ApiResponseOptionsStatsRealtime](docs/ApiResponseOptionsStatsRealtime.md)
  - [intrinioSDK.ApiResponseOptionsTickers](docs/ApiResponseOptionsTickers.md)
@@ -439,11 +443,14 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.OnBalanceVolumeTechnicalValue](docs/OnBalanceVolumeTechnicalValue.md)
  - [intrinioSDK.Option](docs/Option.md)
  - [intrinioSDK.OptionChain](docs/OptionChain.md)
+ - [intrinioSDK.OptionChainEod](docs/OptionChainEod.md)
  - [intrinioSDK.OptionChainRealtime](docs/OptionChainRealtime.md)
  - [intrinioSDK.OptionContractsList](docs/OptionContractsList.md)
+ - [intrinioSDK.OptionEod](docs/OptionEod.md)
  - [intrinioSDK.OptionFactorsRealtime](docs/OptionFactorsRealtime.md)
  - [intrinioSDK.OptionPrice](docs/OptionPrice.md)
  - [intrinioSDK.OptionPriceBatchRealtime](docs/OptionPriceBatchRealtime.md)
+ - [intrinioSDK.OptionPriceEod](docs/OptionPriceEod.md)
  - [intrinioSDK.OptionPriceRealtime](docs/OptionPriceRealtime.md)
  - [intrinioSDK.OptionRealtime](docs/OptionRealtime.md)
  - [intrinioSDK.OptionStatsRealtime](docs/OptionStatsRealtime.md)
