@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.26.1
-- Package version: 5.16.0
+- API version: 2.26.6
+- Package version: 5.17.0
 
 
 ## Installation
@@ -119,6 +119,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.FundamentalsApi* | [**getFundamentalById**](docs/FundamentalsApi.md#getFundamentalById) | **GET** /fundamentals/{id} | Fundamental by ID
 *intrinioSDK.FundamentalsApi* | [**getFundamentalReportedFinancials**](docs/FundamentalsApi.md#getFundamentalReportedFinancials) | **GET** /fundamentals/{id}/reported_financials | Reported Financials
 *intrinioSDK.FundamentalsApi* | [**getFundamentalStandardizedFinancials**](docs/FundamentalsApi.md#getFundamentalStandardizedFinancials) | **GET** /fundamentals/{id}/standardized_financials | Standardized Financials
+*intrinioSDK.FundamentalsApi* | [**getFundamentalStandardizedFinancialsDimensions**](docs/FundamentalsApi.md#getFundamentalStandardizedFinancialsDimensions) | **GET** /fundamentals/{id}/standardized_financials/dimensions/{tag} | Standardized Financials Dimensions
 *intrinioSDK.FundamentalsApi* | [**lookupFundamental**](docs/FundamentalsApi.md#lookupFundamental) | **GET** /fundamentals/lookup/{identifier}/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental
 *intrinioSDK.HistoricalDataApi* | [**getHistoricalData**](docs/HistoricalDataApi.md#getHistoricalData) | **GET** /historical_data/{identifier}/{tag} | Historical Data
 *intrinioSDK.IndexApi* | [**getAllEconomicIndices**](docs/IndexApi.md#getAllEconomicIndices) | **GET** /indices/economic | All Economic Indices
@@ -364,6 +365,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseSecurityZacksEPSSurprises](docs/ApiResponseSecurityZacksEPSSurprises.md)
  - [intrinioSDK.ApiResponseSecurityZacksSalesSurprises](docs/ApiResponseSecurityZacksSalesSurprises.md)
  - [intrinioSDK.ApiResponseStandardizedFinancials](docs/ApiResponseStandardizedFinancials.md)
+ - [intrinioSDK.ApiResponseStandardizedFinancialsDimensions](docs/ApiResponseStandardizedFinancialsDimensions.md)
  - [intrinioSDK.ApiResponseStockExchangeRealtimeStockPrices](docs/ApiResponseStockExchangeRealtimeStockPrices.md)
  - [intrinioSDK.ApiResponseStockExchangeSecurities](docs/ApiResponseStockExchangeSecurities.md)
  - [intrinioSDK.ApiResponseStockExchangeStockPriceAdjustments](docs/ApiResponseStockExchangeStockPriceAdjustments.md)
@@ -472,6 +474,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.SecuritySummary](docs/SecuritySummary.md)
  - [intrinioSDK.SimpleMovingAverageTechnicalValue](docs/SimpleMovingAverageTechnicalValue.md)
  - [intrinioSDK.StandardizedFinancial](docs/StandardizedFinancial.md)
+ - [intrinioSDK.StandardizedFinancialsDimension](docs/StandardizedFinancialsDimension.md)
  - [intrinioSDK.StochasticOscillatorTechnicalValue](docs/StochasticOscillatorTechnicalValue.md)
  - [intrinioSDK.StockExchange](docs/StockExchange.md)
  - [intrinioSDK.StockMarketIndex](docs/StockMarketIndex.md)
