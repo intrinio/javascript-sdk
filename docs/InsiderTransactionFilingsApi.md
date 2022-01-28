@@ -57,6 +57,7 @@ var opts = {
   'startDate': new Date("2015-01-01"),
   'endDate': null,
   'pageSize': 100,
+  'sortBy': "updated_on",
   'nextPage': null
 };
 
@@ -80,6 +81,7 @@ Name | Type | Description  | Notes
  **startDate** | Date| Filed on or after the given date | [optional]  &nbsp;
  **endDate** | Date| Filed before or after the given date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **sortBy** | String| The field to sort by.  Default is &#39;filing_date&#39;.  Valid values are - &#39;filing_date&#39;, &#39;updated_on&#39;. | [optional]  &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 

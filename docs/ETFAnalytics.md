@@ -11,6 +11,7 @@
 
 Name | Type | Description
 ------------ | ------------- | -------------
+**date** | Date | The calendar date these analytics represent. &nbsp;
 **fiftyTwoWeekHigh** | Number | Highest trading price for the security in the preceding 52 weeks &nbsp;
 **fiftyTwoWeekLow** | Number | Lowest trading price for the security in the preceding 52 weeks &nbsp;
 **volumeTraded** | Number | The total quantity of shares traded on the latest trading day &nbsp;
