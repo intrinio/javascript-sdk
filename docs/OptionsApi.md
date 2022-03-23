@@ -19,7 +19,9 @@ Method | HTTP request | Description
 [**getOptionsPricesRealtime**](OptionsApi.md#getOptionsPricesRealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 [**getOptionsStatsRealtime**](OptionsApi.md#getOptionsStatsRealtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
 [**getUnusualActivity**](OptionsApi.md#getUnusualActivity) | **GET** /options/unusual_activity/{symbol} | Options Unusual Activity
+[**getUnusualActivityIntraday**](OptionsApi.md#getUnusualActivityIntraday) | **GET** /options/unusual_activity/{symbol}/intraday | Options Unusual Activity Intraday
 [**getUnusualActivityUniversal**](OptionsApi.md#getUnusualActivityUniversal) | **GET** /options/unusual_activity | Options Unusual Activity Universal
+[**getUnusualActivityUniversalIntraday**](OptionsApi.md#getUnusualActivityUniversalIntraday) | **GET** /options/unusual_activity/intraday | Options Unusual Activity Universal Intraday
 
 
 
@@ -1358,6 +1360,104 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:OptionsApi)
 
+[//]: # (METHOD:getUnusualActivityIntraday)
+
+[//]: # (RETURN_TYPE:ApiResponseOptionsUnusualActivity)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsUnusualActivity.md)
+
+[//]: # (OPERATION:getUnusualActivityIntraday_v2)
+
+[//]: # (ENDPOINT:/options/unusual_activity/{symbol}/intraday)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getUnusualActivityIntraday)
+
+<a name="getUnusualActivityIntraday"></a>
+## **getUnusualActivityIntraday**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getUnusualActivityIntraday_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsUnusualActivity getUnusualActivityIntraday(symbol, opts)
+
+#### Options Unusual Activity Intraday
+
+
+Returns unusual trades for a given identifier within the query parameters.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var options = new intrinioSDK.OptionsApi();
+
+var symbol = "AAPL";
+
+
+var opts = { 
+  'nextPage': null,
+  'pageSize': 1000,
+  'activityType': null,
+  'sentiment': null,
+  'startDate': new Date("2022-02-01"),
+  'endDate': new Date("2022-02-03"),
+  'minimumTotalValue': 100000.0,
+  'maximumTotalValue': 200000.0
+};
+
+options.getUnusualActivityIntraday(symbol, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | String| The option symbol, corresponding to the underlying security. |  &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 1000] &nbsp;
+ **activityType** | String| The unusual activity type to query for. | [optional]  &nbsp;
+ **sentiment** | String| The sentiment type to query for. | [optional]  &nbsp;
+ **startDate** | Date| Return unusual activity on or after this date. | [optional]  &nbsp;
+ **endDate** | Date| Return unusual activity on or before this date. | [optional]  &nbsp;
+ **minimumTotalValue** | [**Object**](.md)| The inclusive minimum total value for the unusual activity. | [optional]  &nbsp;
+ **maximumTotalValue** | [**Object**](.md)| The inclusive maximum total value for the unusual activity. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsUnusualActivity**](ApiResponseOptionsUnusualActivity.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:OptionsApi)
+
 [//]: # (METHOD:getUnusualActivityUniversal)
 
 [//]: # (RETURN_TYPE:ApiResponseOptionsUnusualActivity)
@@ -1421,6 +1521,100 @@ options.getUnusualActivityUniversal(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsUnusualActivity**](ApiResponseOptionsUnusualActivity.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:OptionsApi)
+
+[//]: # (METHOD:getUnusualActivityUniversalIntraday)
+
+[//]: # (RETURN_TYPE:ApiResponseOptionsUnusualActivity)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsUnusualActivity.md)
+
+[//]: # (OPERATION:getUnusualActivityUniversalIntraday_v2)
+
+[//]: # (ENDPOINT:/options/unusual_activity/intraday)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getUnusualActivityUniversalIntraday)
+
+<a name="getUnusualActivityUniversalIntraday"></a>
+## **getUnusualActivityUniversalIntraday**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getUnusualActivityUniversalIntraday_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsUnusualActivity getUnusualActivityUniversalIntraday(opts)
+
+#### Options Unusual Activity Universal Intraday
+
+
+Returns unusual trades for all underlying security symbols within the query parameters.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var options = new intrinioSDK.OptionsApi();
+
+var opts = { 
+  'nextPage': null,
+  'pageSize': 1000,
+  'activityType': null,
+  'sentiment': null,
+  'startDate': new Date("2022-02-01"),
+  'endDate': new Date("2022-02-03"),
+  'minimumTotalValue': 100000.0,
+  'maximumTotalValue': 200000.0
+};
+
+options.getUnusualActivityUniversalIntraday(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 1000] &nbsp;
+ **activityType** | String| The unusual activity type to query for. | [optional]  &nbsp;
+ **sentiment** | String| The sentiment type to query for. | [optional]  &nbsp;
+ **startDate** | Date| Return unusual activity on or after this date. | [optional]  &nbsp;
+ **endDate** | Date| Return unusual activity on or before this date. | [optional]  &nbsp;
+ **minimumTotalValue** | [**Object**](.md)| The inclusive minimum total value for the unusual activity. | [optional]  &nbsp;
+ **maximumTotalValue** | [**Object**](.md)| The inclusive maximum total value for the unusual activity. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

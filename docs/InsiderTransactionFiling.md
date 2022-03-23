@@ -12,6 +12,9 @@
 Name | Type | Description
 ------------ | ------------- | -------------
 **filingUrl** | String | The URL of the filing with the SEC &nbsp;
+**issuerTicker** | String | The ticker of the issuing company. &nbsp;
+**issuerCik** | String | The Central Index Key (CIK) of the issuing company. &nbsp;
+**issuerCompany** | String | The name of the issuing company. &nbsp;
 **transactions** | [**[InsiderTransaction]**](InsiderTransaction.md) | The insider transactions associated with the filing &nbsp;
 **company** | [**CompanySummary**](CompanySummary.md) | The company associated with the filing &nbsp;
 **owner** | [**OwnerSummary**](OwnerSummary.md) | The owner associated with the filing &nbsp;
