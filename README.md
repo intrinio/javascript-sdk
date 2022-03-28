@@ -43,12 +43,12 @@ Please follow the [installation](#installation) instructions and execute the fol
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 const util = require('util')
- 
+
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
-IntrinioSDK.ApiClient.instance.enableRetries = true;
- 
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
 var companyAPI = new intrinioSDK.CompanyApi()
- 
+
 companyAPI.getAllCompanies().then(function(data) {
   console.log(util.inspect(data, false, null, true));
 }, function(error) {
@@ -514,4 +514,3 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ZacksSalesSurprise](docs/ZacksSalesSurprise.md)
  - [intrinioSDK.ZacksSalesSurpriseSummary](docs/ZacksSalesSurpriseSummary.md)
  - [intrinioSDK.ZacksTargetPriceConsensus](docs/ZacksTargetPriceConsensus.md)
-
