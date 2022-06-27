@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.27.5
-- Package version: 5.20.0
+- API version: 2.28.0
+- Package version: 5.21.0
 
 
 ## Installation
@@ -43,12 +43,12 @@ Please follow the [installation](#installation) instructions and execute the fol
 ```javascript
 var intrinioSDK = require('intrinio-sdk');
 const util = require('util')
-
+ 
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
-intrinioSDK.ApiClient.instance.enableRetries = true;
-
+IntrinioSDK.ApiClient.instance.enableRetries = true;
+ 
 var companyAPI = new intrinioSDK.CompanyApi()
-
+ 
 companyAPI.getAllCompanies().then(function(data) {
   console.log(util.inspect(data, false, null, true));
 }, function(error) {
@@ -96,6 +96,9 @@ Class | Method | HTTP request | Description
 *intrinioSDK.DataTagApi* | [**getAllDataTags**](docs/DataTagApi.md#getAllDataTags) | **GET** /data_tags | All Data Tags
 *intrinioSDK.DataTagApi* | [**getDataTagById**](docs/DataTagApi.md#getDataTagById) | **GET** /data_tags/{identifier} | Lookup Data Tag
 *intrinioSDK.DataTagApi* | [**searchDataTags**](docs/DataTagApi.md#searchDataTags) | **GET** /data_tags/search | Search Data Tags
+*intrinioSDK.ESGApi* | [**getEsgCompanies**](docs/ESGApi.md#getEsgCompanies) | **GET** /esg/companies | ESG Companies
+*intrinioSDK.ESGApi* | [**getEsgCompanyRatings**](docs/ESGApi.md#getEsgCompanyRatings) | **GET** /esg/{identifier} | ESG Company Ratings History
+*intrinioSDK.ESGApi* | [**getEsgLatest**](docs/ESGApi.md#getEsgLatest) | **GET** /esg | ESG Latest
 *intrinioSDK.ETFsApi* | [**getAllEtfs**](docs/ETFsApi.md#getAllEtfs) | **GET** /etfs | All ETFs
 *intrinioSDK.ETFsApi* | [**getEtf**](docs/ETFsApi.md#getEtf) | **GET** /etfs/{identifier} | Lookup ETF
 *intrinioSDK.ETFsApi* | [**getEtfAnalytics**](docs/ETFsApi.md#getEtfAnalytics) | **GET** /etfs/{identifier}/analytics | ETF Analytics
@@ -116,6 +119,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.ForexApi* | [**getForexCurrencies**](docs/ForexApi.md#getForexCurrencies) | **GET** /forex/currencies | Forex Currencies
 *intrinioSDK.ForexApi* | [**getForexPairs**](docs/ForexApi.md#getForexPairs) | **GET** /forex/pairs | Forex Currency Pairs
 *intrinioSDK.ForexApi* | [**getForexPrices**](docs/ForexApi.md#getForexPrices) | **GET** /forex/prices/{pair}/{timeframe} | Forex Currency Prices
+*intrinioSDK.FundamentalsApi* | [**filterFundamental**](docs/FundamentalsApi.md#filterFundamental) | **GET** /fundamentals | Filter Fundamental
 *intrinioSDK.FundamentalsApi* | [**getFundamentalById**](docs/FundamentalsApi.md#getFundamentalById) | **GET** /fundamentals/{id} | Fundamental by ID
 *intrinioSDK.FundamentalsApi* | [**getFundamentalReportedFinancials**](docs/FundamentalsApi.md#getFundamentalReportedFinancials) | **GET** /fundamentals/{id}/reported_financials | Reported Financials
 *intrinioSDK.FundamentalsApi* | [**getFundamentalStandardizedFinancials**](docs/FundamentalsApi.md#getFundamentalStandardizedFinancials) | **GET** /fundamentals/{id}/standardized_financials | Standardized Financials
@@ -284,6 +288,9 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseCompanySharesOutstanding](docs/ApiResponseCompanySharesOutstanding.md)
  - [intrinioSDK.ApiResponseDataTags](docs/ApiResponseDataTags.md)
  - [intrinioSDK.ApiResponseDataTagsSearch](docs/ApiResponseDataTagsSearch.md)
+ - [intrinioSDK.ApiResponseESGCompanies](docs/ApiResponseESGCompanies.md)
+ - [intrinioSDK.ApiResponseESGCompanyRatingHistory](docs/ApiResponseESGCompanyRatingHistory.md)
+ - [intrinioSDK.ApiResponseESGLatest](docs/ApiResponseESGLatest.md)
  - [intrinioSDK.ApiResponseETFHoldings](docs/ApiResponseETFHoldings.md)
  - [intrinioSDK.ApiResponseETFs](docs/ApiResponseETFs.md)
  - [intrinioSDK.ApiResponseEconomicIndexHistoricalData](docs/ApiResponseEconomicIndexHistoricalData.md)
@@ -408,6 +415,9 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.DetrendedPriceOscillatorTechnicalValue](docs/DetrendedPriceOscillatorTechnicalValue.md)
  - [intrinioSDK.DividendRecord](docs/DividendRecord.md)
  - [intrinioSDK.DonchianChannelTechnicalValue](docs/DonchianChannelTechnicalValue.md)
+ - [intrinioSDK.ESGCompanySummary](docs/ESGCompanySummary.md)
+ - [intrinioSDK.ESGRating](docs/ESGRating.md)
+ - [intrinioSDK.ESGRatingWithCompany](docs/ESGRatingWithCompany.md)
  - [intrinioSDK.ETF](docs/ETF.md)
  - [intrinioSDK.ETFAnalytics](docs/ETFAnalytics.md)
  - [intrinioSDK.ETFHolding](docs/ETFHolding.md)
@@ -514,3 +524,4 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ZacksSalesSurprise](docs/ZacksSalesSurprise.md)
  - [intrinioSDK.ZacksSalesSurpriseSummary](docs/ZacksSalesSurpriseSummary.md)
  - [intrinioSDK.ZacksTargetPriceConsensus](docs/ZacksTargetPriceConsensus.md)
+

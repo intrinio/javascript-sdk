@@ -315,7 +315,7 @@ var identifier = "430692";
 
 var opts = { 
   'pageSize': 100,
-  'asOfDate': "2021-01-05",
+  'asOfDate': new Date("2021-01-05"),
   'nextPage': null
 };
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| The Central Index Key issued by the SEC, which is the unique identifier all owner filings are issued under. |  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
- **asOfDate** | [**Object**](.md)| Return only holdings filed before this date. | [optional]  &nbsp;
+ **asOfDate** | Date| Return only holdings filed before this date. | [optional]  &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 

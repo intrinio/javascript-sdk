@@ -128,7 +128,7 @@ This endpoint does not need any parameter.
 #### Option Expirations Realtime
 
 
-Returns all realtime option contract expiration dates for a given symbol.
+Returns a list of all current and upcoming expiration dates for a particular symbol.
 
 [//]: # (END_OVERVIEW)
 
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 #### Option Strikes Realtime
 
 
-Returns all realtime options contracts and their prices for the given symbol and strike.
+Returns a list of the latest top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all call/put contracts that match the strike and symbol specified.
 
 [//]: # (END_OVERVIEW)
 
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
 #### Options
 
 
-Returns the master list of option contracts for a given symbol.
+Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
 
 [//]: # (END_OVERVIEW)
 
@@ -397,7 +397,7 @@ Name | Type | Description  | Notes
 #### Options by Symbol Realtime
 
 
-Returns the master list of realtime option contracts for a given symbol.
+Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
 
 [//]: # (END_OVERVIEW)
 
@@ -495,7 +495,7 @@ Name | Type | Description  | Notes
 #### Options Chain
 
 
-Returns all options contracts and their prices for the given symbol and expiration date.
+Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
 
 [//]: # (END_OVERVIEW)
 
@@ -616,7 +616,8 @@ var opts = {
   'type': null,
   'strike': null,
   'strikeGreaterThan': null,
-  'strikeLessThan': null
+  'strikeLessThan': null,
+  'date': null
 };
 
 options.getOptionsChainEod(symbol, expiration, opts).then(function(data) {
@@ -642,6 +643,7 @@ Name | Type | Description  | Notes
  **strike** | Number| The strike price of the option contract. This will return options contracts with strike price equal to this price. | [optional]  &nbsp;
  **strikeGreaterThan** | Number| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;
  **strikeLessThan** | Number| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
+ **date** | Date| The the date to retrieve prices for | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -685,7 +687,7 @@ Name | Type | Description  | Notes
 #### Options Chain Realtime
 
 
-Returns all realtime options contracts and their prices for the given symbol and expiration date.
+Returns a list of the latest National Best Bid &amp; Offer (NBBO) top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
 
 [//]: # (END_OVERVIEW)
 
@@ -789,7 +791,7 @@ Name | Type | Description  | Notes
 #### Options Expirations
 
 
-Returns all option contract expiration dates for a given symbol.
+Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
 
 [//]: # (END_OVERVIEW)
 
@@ -875,7 +877,7 @@ Name | Type | Description  | Notes
 #### Option Prices
 
 
-Returns all option prices for a given option contract identifier.
+Returns all price data from inception to expiration for a particular contract.
 
 [//]: # (END_OVERVIEW)
 
@@ -965,7 +967,7 @@ Name | Type | Description  | Notes
 #### Option Prices Batch Realtime
 
 
-Returns options prices for a supplied list of option symbols.
+Returns a list of latest price data for up to 250 option contracts per request.
 
 [//]: # (END_OVERVIEW)
 
@@ -1218,7 +1220,7 @@ Name | Type | Description  | Notes
 #### Option Stats Realtime
 
 
-Returns all option stats (greeks and implied volatility) and factors used to calculate them, for a given option contract identifier.
+Returns all option stats (greeks and implied volatility) as well as the underlying factors used to calculate them, for a particular option contract.
 
 [//]: # (END_OVERVIEW)
 
@@ -1302,7 +1304,7 @@ Name | Type | Description  | Notes
 #### Options Unusual Activity
 
 
-Returns unusual trades for a given identifier.
+Returns unusual options activity for a particular company across all option chains. Unusual options activity includes large trades, sweeps, and block trades.
 
 [//]: # (END_OVERVIEW)
 
@@ -1484,7 +1486,7 @@ Name | Type | Description  | Notes
 #### Options Unusual Activity Universal
 
 
-Returns nusual trades for all underlying security symbols.
+Returns the latest unusual options activity across all US companies with across all option chains. Unusual options activity includes large trades, sweeps, and block trades.
 
 [//]: # (END_OVERVIEW)
 

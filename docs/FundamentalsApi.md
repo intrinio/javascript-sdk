@@ -4,12 +4,111 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**filterFundamental**](FundamentalsApi.md#filterFundamental) | **GET** /fundamentals | Filter Fundamental
 [**getFundamentalById**](FundamentalsApi.md#getFundamentalById) | **GET** /fundamentals/{id} | Fundamental by ID
 [**getFundamentalReportedFinancials**](FundamentalsApi.md#getFundamentalReportedFinancials) | **GET** /fundamentals/{id}/reported_financials | Reported Financials
 [**getFundamentalStandardizedFinancials**](FundamentalsApi.md#getFundamentalStandardizedFinancials) | **GET** /fundamentals/{id}/standardized_financials | Standardized Financials
 [**getFundamentalStandardizedFinancialsDimensions**](FundamentalsApi.md#getFundamentalStandardizedFinancialsDimensions) | **GET** /fundamentals/{id}/standardized_financials/dimensions/{tag} | Standardized Financials Dimensions
 [**lookupFundamental**](FundamentalsApi.md#lookupFundamental) | **GET** /fundamentals/lookup/{identifier}/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental
 
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:FundamentalsApi)
+
+[//]: # (METHOD:filterFundamental)
+
+[//]: # (RETURN_TYPE:Fundamental)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:Fundamental.md)
+
+[//]: # (OPERATION:filterFundamental_v2)
+
+[//]: # (ENDPOINT:/fundamentals)
+
+[//]: # (DOCUMENT_LINK:FundamentalsApi.md#filterFundamental)
+
+<a name="filterFundamental"></a>
+## **filterFundamental**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/filterFundamental_v2)
+
+[//]: # (START_OVERVIEW)
+
+> Fundamental filterFundamental(opts)
+
+#### Filter Fundamental
+
+
+Returns fundamentals that meet the set of filters specified in parameters.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var fundamentals = new intrinioSDK.FundamentalsApi();
+
+var opts = { 
+  'filedAfter': new Date("2022-01-01"),
+  'filedBefore': new Date("2022-12-01"),
+  'reportedOnly': false,
+  'fiscalYear': 2017,
+  'statementCode': null,
+  'type': "false",
+  'fiscalPeriod': "FY",
+  'startDate': new Date("2022-01-01"),
+  'endDate': new Date("2022-12-01"),
+  'nextPage': null
+};
+
+fundamentals.filterFundamental(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filedAfter** | Date| Only include fundamentals that were filed on or after this date. | [optional]  &nbsp;
+ **filedBefore** | Date| Only include fundamentals that were filed on or before this date. | [optional]  &nbsp;
+ **reportedOnly** | Boolean| Only as-reported fundamentals | [optional]  &nbsp;
+ **fiscalYear** | Number| Only for the given fiscal year | [optional]  &nbsp;
+ **statementCode** | String| Only of the given statement code | [optional]  &nbsp;
+ **type** | String| Only of the given type | [optional]  &nbsp;
+ **fiscalPeriod** | String| The fiscal period | [optional]  &nbsp;
+ **startDate** | Date| Only include fundamentals where covered period is on or after this date. | [optional]  &nbsp;
+ **endDate** | Date| Only include fundamentals where covered period is on or before this date. | [optional]  &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**Fundamental**](Fundamental.md)
+
+
+
+[//]: # (END_OPERATION)
 
 
 [//]: # (START_OPERATION)
@@ -42,7 +141,7 @@ Method | HTTP request | Description
 #### Fundamental by ID
 
 
-Returns detailed fundamental data for the given &#x60;id&#x60;.
+Returns a specific fundamental associated with a particular unique fundamental ID. Useful for pulling reference data for a specific fundamental.
 
 [//]: # (END_OVERVIEW)
 
@@ -121,7 +220,7 @@ Name | Type | Description  | Notes
 #### Reported Financials
 
 
-Returns the As-Reported Financials directly from the financial statements of the XBRL filings from the company
+Returns as-reported financial statement data for income statement, balance sheet, and cash flow statement. Data for income statement and cash flow statement is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
 
 [//]: # (END_OVERVIEW)
 
@@ -200,7 +299,7 @@ Name | Type | Description  | Notes
 #### Standardized Financials
 
 
-Returns professional-grade historical financial data. This data is standardized, cleansed and verified to ensure the highest quality data sourced directly from the XBRL financial statements. The primary purpose of standardized financials are to facilitate comparability across a single company’s fundamentals and across all companies&#39; fundamentals.
+Returns standardized financial statement data for income statement, balance sheet, cash flow statement and over 100 associated calculations for a given company. Data for income statement, cash flow statement, and calculations is available on a FY, QTR (Q1, Q2, Q3, Q4), TTM (Q1TTM, Q2TTM, Q3TTM), and YTD (Q2YTD, Q3YTD) basis. Data for the balance sheet is available on a FY or QTR (Q1, Q2, Q3, Q4) basis only due its point-in-time nature.
 
 [//]: # (END_OVERVIEW)
 
@@ -360,7 +459,7 @@ Name | Type | Description  | Notes
 #### Lookup Fundamental
 
 
-Returns the Fundamental for the Company with the given &#x60;identifier&#x60; and with the given parameters
+Returns a specific fundamental with unique fundamental ID associated with a particular company, year, period and statement. Useful for pulling the unique fundamental ID and reference data for a specific fundamental.
 
 [//]: # (END_OVERVIEW)
 
