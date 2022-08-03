@@ -46,6 +46,7 @@ Method | HTTP request | Description
 [**getSecurityPriceTechnicalsVwap**](SecurityApi.md#getSecurityPriceTechnicalsVwap) | **GET** /securities/{identifier}/prices/technicals/vwap | Volume Weighted Average Price
 [**getSecurityPriceTechnicalsWr**](SecurityApi.md#getSecurityPriceTechnicalsWr) | **GET** /securities/{identifier}/prices/technicals/wr | Williams %R
 [**getSecurityRealtimePrice**](SecurityApi.md#getSecurityRealtimePrice) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
+[**getSecuritySnapshots**](SecurityApi.md#getSecuritySnapshots) | **GET** /securities/snapshots | Realtime Stock Prices Snapshot
 [**getSecurityStockPriceAdjustments**](SecurityApi.md#getSecurityStockPriceAdjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
 [**getSecurityStockPrices**](SecurityApi.md#getSecurityStockPrices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
 [**getSecurityZacksAnalystRatings**](SecurityApi.md#getSecurityZacksAnalystRatings) | **GET** /securities/{identifier}/zacks/analyst_ratings | Zacks Analyst Ratings for Security
@@ -3923,6 +3924,86 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RealtimeStockPrice**](RealtimeStockPrice.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:SecurityApi)
+
+[//]: # (METHOD:getSecuritySnapshots)
+
+[//]: # (RETURN_TYPE:SecuritySnapshotsResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:SecuritySnapshotsResult.md)
+
+[//]: # (OPERATION:getSecuritySnapshots_v2)
+
+[//]: # (ENDPOINT:/securities/snapshots)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getSecuritySnapshots)
+
+<a name="getSecuritySnapshots"></a>
+## **getSecuritySnapshots**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecuritySnapshots_v2)
+
+[//]: # (START_OVERVIEW)
+
+> SecuritySnapshotsResult getSecuritySnapshots(opts)
+
+#### Realtime Stock Prices Snapshot
+
+
+Returns all security snapshots for the queried interval with links to download.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var security = new intrinioSDK.SecurityApi();
+
+var opts = { 
+  'atDatetime': null
+};
+
+security.getSecuritySnapshots(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **atDatetime** | Date| The UTC date and time (with url-encoded spaces) the snapshot will cover. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**SecuritySnapshotsResult**](SecuritySnapshotsResult.md)
 
 
 
