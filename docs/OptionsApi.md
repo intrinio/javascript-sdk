@@ -17,8 +17,8 @@ Method | HTTP request | Description
 [**getOptionsPricesBatchRealtime**](OptionsApi.md#getOptionsPricesBatchRealtime) | **POST** /options/prices/realtime/batch | Option Prices Batch Realtime
 [**getOptionsPricesEod**](OptionsApi.md#getOptionsPricesEod) | **GET** /options/prices/{identifier}/eod | Option Prices EOD
 [**getOptionsPricesRealtime**](OptionsApi.md#getOptionsPricesRealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
+[**getOptionsSnapshots**](OptionsApi.md#getOptionsSnapshots) | **GET** /options/snapshots | Option Prices Realtime Snapshot
 [**getOptionsStatsRealtime**](OptionsApi.md#getOptionsStatsRealtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
-[**getSecuritySnapshots**](OptionsApi.md#getSecuritySnapshots) | **GET** /options/snapshots | Option Prices Realtime Snapshot
 [**getUnusualActivity**](OptionsApi.md#getUnusualActivity) | **GET** /options/unusual_activity/{symbol} | Options Unusual Activity
 [**getUnusualActivityIntraday**](OptionsApi.md#getUnusualActivityIntraday) | **GET** /options/unusual_activity/{symbol}/intraday | Options Unusual Activity Intraday
 [**getUnusualActivityUniversal**](OptionsApi.md#getUnusualActivityUniversal) | **GET** /options/unusual_activity | Options Unusual Activity Universal
@@ -1195,6 +1195,88 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:OptionsApi)
 
+[//]: # (METHOD:getOptionsSnapshots)
+
+[//]: # (RETURN_TYPE:OptionSnapshotsResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:OptionSnapshotsResult.md)
+
+[//]: # (OPERATION:getOptionsSnapshots_v2)
+
+[//]: # (ENDPOINT:/options/snapshots)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getOptionsSnapshots)
+
+<a name="getOptionsSnapshots"></a>
+## **getOptionsSnapshots**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getOptionsSnapshots_v2)
+
+[//]: # (START_OVERVIEW)
+
+> OptionSnapshotsResult getOptionsSnapshots(opts)
+
+#### Option Prices Realtime Snapshot
+
+
+Returns all options snapshots for the queried interval with links to download.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var options = new intrinioSDK.OptionsApi();
+
+var opts = { 
+  'source': null,
+  'atDatetime': null
+};
+
+options.getOptionsSnapshots(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **atDatetime** | Date| The UTC date and time (with url-encoded spaces) the snapshot will cover. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**OptionSnapshotsResult**](OptionSnapshotsResult.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:OptionsApi)
+
 [//]: # (METHOD:getOptionsStatsRealtime)
 
 [//]: # (RETURN_TYPE:ApiResponseOptionsStatsRealtime)
@@ -1269,88 +1351,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptionsStatsRealtime**](ApiResponseOptionsStatsRealtime.md)
-
-
-
-[//]: # (END_OPERATION)
-
-
-[//]: # (START_OPERATION)
-
-[//]: # (CLASS:OptionsApi)
-
-[//]: # (METHOD:getSecuritySnapshots)
-
-[//]: # (RETURN_TYPE:OptionSnapshotsResult)
-
-[//]: # (RETURN_TYPE_KIND:object)
-
-[//]: # (RETURN_TYPE_DOC:OptionSnapshotsResult.md)
-
-[//]: # (OPERATION:getSecuritySnapshots_v2)
-
-[//]: # (ENDPOINT:/options/snapshots)
-
-[//]: # (DOCUMENT_LINK:OptionsApi.md#getSecuritySnapshots)
-
-<a name="getSecuritySnapshots"></a>
-## **getSecuritySnapshots**
-
-[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecuritySnapshots_v2)
-
-[//]: # (START_OVERVIEW)
-
-> OptionSnapshotsResult getSecuritySnapshots(opts)
-
-#### Option Prices Realtime Snapshot
-
-
-Returns all options snapshots for the queried interval with links to download.
-
-[//]: # (END_OVERVIEW)
-
-### Example
-
-[//]: # (START_CODE_EXAMPLE)
-
-```javascript
-var intrinioSDK = require('intrinio-sdk');
-intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
-intrinioSDK.ApiClient.instance.enableRetries = true;
-
-var options = new intrinioSDK.OptionsApi();
-
-var opts = { 
-  'source': null,
-  'atDatetime': null
-};
-
-options.getSecuritySnapshots(opts).then(function(data) {
-  data = JSON.stringify(data, null, 2)
-  console.log(data);
-}, function(error) {
-  console.error(error);
-});
-```
-
-[//]: # (END_CODE_EXAMPLE)
-
-### Parameters
-
-[//]: # (START_PARAMETERS)
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
- **atDatetime** | Date| The UTC date and time (with url-encoded spaces) the snapshot will cover. | [optional]  &nbsp;
-<br/>
-
-[//]: # (END_PARAMETERS)
-
-### Return type
-
-[**OptionSnapshotsResult**](OptionSnapshotsResult.md)
 
 
 

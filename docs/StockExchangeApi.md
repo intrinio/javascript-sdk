@@ -404,6 +404,7 @@ var identifier = "USCOMP";
 
 var opts = { 
   'source': null,
+  'activeOnly': null,
   'pageSize': 100,
   'nextPage': null
 };
@@ -427,6 +428,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
  **source** | String| Return realtime prices from the specified data source. If no source is specified, all sources are used. | [optional]  &nbsp;
+ **activeOnly** | Boolean| Returns prices only from the most recent trading day. | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
