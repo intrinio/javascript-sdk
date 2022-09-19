@@ -36,7 +36,7 @@
   /**
    * The TripleExponentialAverageTechnicalValue model module.
    * @module model/TripleExponentialAverageTechnicalValue
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

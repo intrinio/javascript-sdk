@@ -36,7 +36,7 @@
   /**
    * The ApiResponseETFs model module.
    * @module model/ApiResponseETFs
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

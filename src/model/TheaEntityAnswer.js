@@ -36,7 +36,7 @@
   /**
    * The TheaEntityAnswer model module.
    * @module model/TheaEntityAnswer
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

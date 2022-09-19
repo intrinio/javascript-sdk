@@ -36,7 +36,7 @@
   /**
    * The ApiResponseOptionsUnusualActivity model module.
    * @module model/ApiResponseOptionsUnusualActivity
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The ForexCurrency model module.
    * @module model/ForexCurrency
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

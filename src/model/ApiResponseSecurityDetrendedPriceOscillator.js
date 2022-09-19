@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityDetrendedPriceOscillator model module.
    * @module model/ApiResponseSecurityDetrendedPriceOscillator
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

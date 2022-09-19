@@ -36,7 +36,7 @@
   /**
    * The ZacksEPSEstimate model module.
    * @module model/ZacksEPSEstimate
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

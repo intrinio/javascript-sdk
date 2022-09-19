@@ -33,7 +33,7 @@
   /**
    * Municipality service.
    * @module api/MunicipalityApi
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

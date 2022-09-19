@@ -36,7 +36,7 @@
   /**
    * The TheaSourceDocument model module.
    * @module model/TheaSourceDocument
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The StochasticOscillatorTechnicalValue model module.
    * @module model/StochasticOscillatorTechnicalValue
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

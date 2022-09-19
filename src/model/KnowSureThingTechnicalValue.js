@@ -36,7 +36,7 @@
   /**
    * The KnowSureThingTechnicalValue model module.
    * @module model/KnowSureThingTechnicalValue
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

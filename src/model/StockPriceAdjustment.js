@@ -36,7 +36,7 @@
   /**
    * The StockPriceAdjustment model module.
    * @module model/StockPriceAdjustment
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

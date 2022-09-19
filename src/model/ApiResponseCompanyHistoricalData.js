@@ -36,7 +36,7 @@
   /**
    * The ApiResponseCompanyHistoricalData model module.
    * @module model/ApiResponseCompanyHistoricalData
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

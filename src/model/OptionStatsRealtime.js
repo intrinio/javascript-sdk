@@ -36,7 +36,7 @@
   /**
    * The OptionStatsRealtime model module.
    * @module model/OptionStatsRealtime
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

@@ -33,7 +33,7 @@
   /**
    * DataTag service.
    * @module api/DataTagApi
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

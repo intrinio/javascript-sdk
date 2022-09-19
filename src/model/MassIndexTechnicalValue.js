@@ -36,7 +36,7 @@
   /**
    * The MassIndexTechnicalValue model module.
    * @module model/MassIndexTechnicalValue
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

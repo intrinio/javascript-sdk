@@ -36,7 +36,7 @@
   /**
    * The TechnicalIndicator model module.
    * @module model/TechnicalIndicator
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

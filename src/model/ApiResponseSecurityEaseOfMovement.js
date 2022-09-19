@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityEaseOfMovement model module.
    * @module model/ApiResponseSecurityEaseOfMovement
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

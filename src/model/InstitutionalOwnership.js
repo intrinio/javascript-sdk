@@ -36,7 +36,7 @@
   /**
    * The InstitutionalOwnership model module.
    * @module model/InstitutionalOwnership
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The ApiResponseOptionsChainEod model module.
    * @module model/ApiResponseOptionsChainEod
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The CompanySummary model module.
    * @module model/CompanySummary
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

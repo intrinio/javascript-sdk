@@ -36,7 +36,7 @@
   /**
    * The StockMarketIndex model module.
    * @module model/StockMarketIndex
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

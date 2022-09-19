@@ -36,7 +36,7 @@
   /**
    * The OptionSnapshotsResult model module.
    * @module model/OptionSnapshotsResult
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

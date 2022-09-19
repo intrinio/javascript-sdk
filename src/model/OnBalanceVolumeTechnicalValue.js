@@ -36,7 +36,7 @@
   /**
    * The OnBalanceVolumeTechnicalValue model module.
    * @module model/OnBalanceVolumeTechnicalValue
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**

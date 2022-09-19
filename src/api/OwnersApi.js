@@ -33,7 +33,7 @@
   /**
    * Owners service.
    * @module api/OwnersApi
-   * @version 6.21.2
+   * @version 6.22.2
    */
 
   /**
