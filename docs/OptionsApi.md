@@ -13,6 +13,10 @@ Method | HTTP request | Description
 [**getOptionsChainEod**](OptionsApi.md#getOptionsChainEod) | **GET** /options/chain/{symbol}/{expiration}/eod | Options Chain EOD
 [**getOptionsChainRealtime**](OptionsApi.md#getOptionsChainRealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 [**getOptionsExpirations**](OptionsApi.md#getOptionsExpirations) | **GET** /options/expirations/{symbol} | Options Expirations
+[**getOptionsIntervalByContract**](OptionsApi.md#getOptionsIntervalByContract) | **GET** /options/interval/{identifier} | Options intervals by contract
+[**getOptionsIntervalMovers**](OptionsApi.md#getOptionsIntervalMovers) | **GET** /options/interval/movers | Options Intervals Movers
+[**getOptionsIntervalMoversChange**](OptionsApi.md#getOptionsIntervalMoversChange) | **GET** /options/interval/movers/change | Options Intervals Movers By Change
+[**getOptionsIntervalMoversVolume**](OptionsApi.md#getOptionsIntervalMoversVolume) | **GET** /options/interval/movers/volume | Options Intervals Movers By Volume
 [**getOptionsPrices**](OptionsApi.md#getOptionsPrices) | **GET** /options/prices/{identifier} | Option Prices
 [**getOptionsPricesBatchRealtime**](OptionsApi.md#getOptionsPricesBatchRealtime) | **POST** /options/prices/realtime/batch | Option Prices Batch Realtime
 [**getOptionsPricesEod**](OptionsApi.md#getOptionsPricesEod) | **GET** /options/prices/{identifier}/eod | Option Prices EOD
@@ -842,6 +846,342 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptionsExpirations**](ApiResponseOptionsExpirations.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:OptionsApi)
+
+[//]: # (METHOD:getOptionsIntervalByContract)
+
+[//]: # (RETURN_TYPE:OptionIntervalsResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:OptionIntervalsResult.md)
+
+[//]: # (OPERATION:getOptionsIntervalByContract_v2)
+
+[//]: # (ENDPOINT:/options/interval/{identifier})
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getOptionsIntervalByContract)
+
+<a name="getOptionsIntervalByContract"></a>
+## **getOptionsIntervalByContract**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getOptionsIntervalByContract_v2)
+
+[//]: # (START_OVERVIEW)
+
+> OptionIntervalsResult getOptionsIntervalByContract(identifier, intervalSize, opts)
+
+#### Options intervals by contract
+
+
+Returns a list of interval data points for a contract.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var options = new intrinioSDK.OptionsApi();
+
+var identifier = "SPY___230103P00380000";
+var intervalSize = "5m";
+
+
+var opts = { 
+  'source': null,
+  'pageSize': 100,
+  'endTime': null
+};
+
+options.getOptionsIntervalByContract(identifier, intervalSize, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| The Intrinio ID or code of the options contract to request intervals for. |  &nbsp;
+ **intervalSize** | String| The time length of the interval. |  &nbsp;
+ **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **endTime** | Date| The inclusive UTC date and time the intervals end at. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**OptionIntervalsResult**](OptionIntervalsResult.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:OptionsApi)
+
+[//]: # (METHOD:getOptionsIntervalMovers)
+
+[//]: # (RETURN_TYPE:OptionIntervalsMoversResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:OptionIntervalsMoversResult.md)
+
+[//]: # (OPERATION:getOptionsIntervalMovers_v2)
+
+[//]: # (ENDPOINT:/options/interval/movers)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getOptionsIntervalMovers)
+
+<a name="getOptionsIntervalMovers"></a>
+## **getOptionsIntervalMovers**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getOptionsIntervalMovers_v2)
+
+[//]: # (START_OVERVIEW)
+
+> OptionIntervalsMoversResult getOptionsIntervalMovers(opts)
+
+#### Options Intervals Movers
+
+
+Returns a list of intervals for the biggest movers over the last hour interval.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var options = new intrinioSDK.OptionsApi();
+
+var opts = { 
+  'source': null,
+  'openTime': null
+};
+
+options.getOptionsIntervalMovers(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **openTime** | Date| The inclusive UTC date and time the interval opens at. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**OptionIntervalsMoversResult**](OptionIntervalsMoversResult.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:OptionsApi)
+
+[//]: # (METHOD:getOptionsIntervalMoversChange)
+
+[//]: # (RETURN_TYPE:OptionIntervalsMoversResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:OptionIntervalsMoversResult.md)
+
+[//]: # (OPERATION:getOptionsIntervalMoversChange_v2)
+
+[//]: # (ENDPOINT:/options/interval/movers/change)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getOptionsIntervalMoversChange)
+
+<a name="getOptionsIntervalMoversChange"></a>
+## **getOptionsIntervalMoversChange**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getOptionsIntervalMoversChange_v2)
+
+[//]: # (START_OVERVIEW)
+
+> OptionIntervalsMoversResult getOptionsIntervalMoversChange(opts)
+
+#### Options Intervals Movers By Change
+
+
+Returns a list of intervals for the biggest movers by change over the last hour interval.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var options = new intrinioSDK.OptionsApi();
+
+var opts = { 
+  'source': null,
+  'openTime': null
+};
+
+options.getOptionsIntervalMoversChange(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **openTime** | Date| The inclusive UTC date and time the interval opens at. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**OptionIntervalsMoversResult**](OptionIntervalsMoversResult.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:OptionsApi)
+
+[//]: # (METHOD:getOptionsIntervalMoversVolume)
+
+[//]: # (RETURN_TYPE:OptionIntervalsMoversResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:OptionIntervalsMoversResult.md)
+
+[//]: # (OPERATION:getOptionsIntervalMoversVolume_v2)
+
+[//]: # (ENDPOINT:/options/interval/movers/volume)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getOptionsIntervalMoversVolume)
+
+<a name="getOptionsIntervalMoversVolume"></a>
+## **getOptionsIntervalMoversVolume**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getOptionsIntervalMoversVolume_v2)
+
+[//]: # (START_OVERVIEW)
+
+> OptionIntervalsMoversResult getOptionsIntervalMoversVolume(opts)
+
+#### Options Intervals Movers By Volume
+
+
+Returns a list of intervals for the biggest movers by volume over the last hour interval.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var options = new intrinioSDK.OptionsApi();
+
+var opts = { 
+  'source': null,
+  'openTime': null
+};
+
+options.getOptionsIntervalMoversVolume(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **openTime** | Date| The inclusive UTC date and time the interval opens at. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**OptionIntervalsMoversResult**](OptionIntervalsMoversResult.md)
 
 
 

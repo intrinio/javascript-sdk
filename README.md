@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.30.0
-- Package version: 6.22.2
+- API version: 2.34.0
+- Package version: 6.22.3
 
 
 ## Installation
@@ -159,6 +159,10 @@ Class | Method | HTTP request | Description
 *intrinioSDK.OptionsApi* | [**getOptionsChainEod**](docs/OptionsApi.md#getOptionsChainEod) | **GET** /options/chain/{symbol}/{expiration}/eod | Options Chain EOD
 *intrinioSDK.OptionsApi* | [**getOptionsChainRealtime**](docs/OptionsApi.md#getOptionsChainRealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 *intrinioSDK.OptionsApi* | [**getOptionsExpirations**](docs/OptionsApi.md#getOptionsExpirations) | **GET** /options/expirations/{symbol} | Options Expirations
+*intrinioSDK.OptionsApi* | [**getOptionsIntervalByContract**](docs/OptionsApi.md#getOptionsIntervalByContract) | **GET** /options/interval/{identifier} | Options intervals by contract
+*intrinioSDK.OptionsApi* | [**getOptionsIntervalMovers**](docs/OptionsApi.md#getOptionsIntervalMovers) | **GET** /options/interval/movers | Options Intervals Movers
+*intrinioSDK.OptionsApi* | [**getOptionsIntervalMoversChange**](docs/OptionsApi.md#getOptionsIntervalMoversChange) | **GET** /options/interval/movers/change | Options Intervals Movers By Change
+*intrinioSDK.OptionsApi* | [**getOptionsIntervalMoversVolume**](docs/OptionsApi.md#getOptionsIntervalMoversVolume) | **GET** /options/interval/movers/volume | Options Intervals Movers By Volume
 *intrinioSDK.OptionsApi* | [**getOptionsPrices**](docs/OptionsApi.md#getOptionsPrices) | **GET** /options/prices/{identifier} | Option Prices
 *intrinioSDK.OptionsApi* | [**getOptionsPricesBatchRealtime**](docs/OptionsApi.md#getOptionsPricesBatchRealtime) | **POST** /options/prices/realtime/batch | Option Prices Batch Realtime
 *intrinioSDK.OptionsApi* | [**getOptionsPricesEod**](docs/OptionsApi.md#getOptionsPricesEod) | **GET** /options/prices/{identifier}/eod | Option Prices EOD
@@ -470,6 +474,10 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.OptionContractsList](docs/OptionContractsList.md)
  - [intrinioSDK.OptionEod](docs/OptionEod.md)
  - [intrinioSDK.OptionFactorsRealtime](docs/OptionFactorsRealtime.md)
+ - [intrinioSDK.OptionInterval](docs/OptionInterval.md)
+ - [intrinioSDK.OptionIntervalMover](docs/OptionIntervalMover.md)
+ - [intrinioSDK.OptionIntervalsMoversResult](docs/OptionIntervalsMoversResult.md)
+ - [intrinioSDK.OptionIntervalsResult](docs/OptionIntervalsResult.md)
  - [intrinioSDK.OptionPrice](docs/OptionPrice.md)
  - [intrinioSDK.OptionPriceBatchRealtime](docs/OptionPriceBatchRealtime.md)
  - [intrinioSDK.OptionPriceEod](docs/OptionPriceEod.md)
