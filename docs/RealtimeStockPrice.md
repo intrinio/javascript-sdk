@@ -26,6 +26,11 @@ Name | Type | Description
 **marketVolume** | Number | The number of shares exchanged during the trading day for the whole market. &nbsp;
 **updatedOn** | Date | The date and time when the data was last updated. &nbsp;
 **source** | String | The source of the data. &nbsp;
+**listingVenue** | String | The venue the price came from. &nbsp;
+**salesConditions** | String | The condition for the sale. &nbsp;
+**quoteConditions** | String | The condition for the quote. &nbsp;
+**marketCenterCode** | String | The market center character code. &nbsp;
+**isDarkpool** | Boolean | Whether or not the current trade is from a darkpool or not. &nbsp;
 **security** | [**RealtimeStockPriceSecurity**](RealtimeStockPriceSecurity.md) |  &nbsp;
 
 [//]: # (END_DEFINITION)

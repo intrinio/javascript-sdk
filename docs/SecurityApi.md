@@ -10,6 +10,9 @@ Method | HTTP request | Description
 [**getSecurityDataPointText**](SecurityApi.md#getSecurityDataPointText) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
 [**getSecurityHistoricalData**](SecurityApi.md#getSecurityHistoricalData) | **GET** /securities/{identifier}/historical_data/{tag} | Historical Data for Security
 [**getSecurityInsiderOwnership**](SecurityApi.md#getSecurityInsiderOwnership) | **GET** /securities/{identifier}/institutional_ownership | Institutional Ownership by Security
+[**getSecurityIntervalMovers**](SecurityApi.md#getSecurityIntervalMovers) | **GET** /securities/market_movers | Security Intervals Movers
+[**getSecurityIntervalMoversChange**](SecurityApi.md#getSecurityIntervalMoversChange) | **GET** /securities/market_movers/change | Security Intervals Movers By Change
+[**getSecurityIntervalMoversVolume**](SecurityApi.md#getSecurityIntervalMoversVolume) | **GET** /securities/market_movers/volume | Security Intervals Movers By Volume
 [**getSecurityIntervalPrices**](SecurityApi.md#getSecurityIntervalPrices) | **GET** /securities/{identifier}/prices/intervals | Interval Stock Prices for Security
 [**getSecurityIntradayPrices**](SecurityApi.md#getSecurityIntradayPrices) | **GET** /securities/{identifier}/prices/intraday | Intraday Stock Prices for Security
 [**getSecurityLatestDividendRecord**](SecurityApi.md#getSecurityLatestDividendRecord) | **GET** /securities/{identifier}/dividends/latest | Latest Dividend Record for Security
@@ -596,6 +599,252 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:SecurityApi)
 
+[//]: # (METHOD:getSecurityIntervalMovers)
+
+[//]: # (RETURN_TYPE:SecurityIntervalsMoversResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:SecurityIntervalsMoversResult.md)
+
+[//]: # (OPERATION:getSecurityIntervalMovers_v2)
+
+[//]: # (ENDPOINT:/securities/market_movers)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getSecurityIntervalMovers)
+
+<a name="getSecurityIntervalMovers"></a>
+## **getSecurityIntervalMovers**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityIntervalMovers_v2)
+
+[//]: # (START_OVERVIEW)
+
+> SecurityIntervalsMoversResult getSecurityIntervalMovers(opts)
+
+#### Security Intervals Movers
+
+
+Returns a list of intervals for the biggest movers over the last hour interval.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var security = new intrinioSDK.SecurityApi();
+
+var opts = { 
+  'source': null,
+  'openTime': null
+};
+
+security.getSecurityIntervalMovers(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **openTime** | Date| The inclusive UTC date and time the interval opens at. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**SecurityIntervalsMoversResult**](SecurityIntervalsMoversResult.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:SecurityApi)
+
+[//]: # (METHOD:getSecurityIntervalMoversChange)
+
+[//]: # (RETURN_TYPE:SecurityIntervalsMoversResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:SecurityIntervalsMoversResult.md)
+
+[//]: # (OPERATION:getSecurityIntervalMoversChange_v2)
+
+[//]: # (ENDPOINT:/securities/market_movers/change)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getSecurityIntervalMoversChange)
+
+<a name="getSecurityIntervalMoversChange"></a>
+## **getSecurityIntervalMoversChange**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityIntervalMoversChange_v2)
+
+[//]: # (START_OVERVIEW)
+
+> SecurityIntervalsMoversResult getSecurityIntervalMoversChange(opts)
+
+#### Security Intervals Movers By Change
+
+
+Returns a list of intervals for the biggest movers by change over the last hour interval.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var security = new intrinioSDK.SecurityApi();
+
+var opts = { 
+  'source': null,
+  'openTime': null
+};
+
+security.getSecurityIntervalMoversChange(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **openTime** | Date| The inclusive UTC date and time the interval opens at. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**SecurityIntervalsMoversResult**](SecurityIntervalsMoversResult.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:SecurityApi)
+
+[//]: # (METHOD:getSecurityIntervalMoversVolume)
+
+[//]: # (RETURN_TYPE:SecurityIntervalsMoversResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:SecurityIntervalsMoversResult.md)
+
+[//]: # (OPERATION:getSecurityIntervalMoversVolume_v2)
+
+[//]: # (ENDPOINT:/securities/market_movers/volume)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getSecurityIntervalMoversVolume)
+
+<a name="getSecurityIntervalMoversVolume"></a>
+## **getSecurityIntervalMoversVolume**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityIntervalMoversVolume_v2)
+
+[//]: # (START_OVERVIEW)
+
+> SecurityIntervalsMoversResult getSecurityIntervalMoversVolume(opts)
+
+#### Security Intervals Movers By Volume
+
+
+Returns a list of intervals for the biggest movers by volume over the last hour interval.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var security = new intrinioSDK.SecurityApi();
+
+var opts = { 
+  'source': null,
+  'openTime': null
+};
+
+security.getSecurityIntervalMoversVolume(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **openTime** | Date| The inclusive UTC date and time the interval opens at. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**SecurityIntervalsMoversResult**](SecurityIntervalsMoversResult.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:SecurityApi)
+
 [//]: # (METHOD:getSecurityIntervalPrices)
 
 [//]: # (RETURN_TYPE:ApiResponseSecurityIntervalPrices)
@@ -617,12 +866,12 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseSecurityIntervalPrices getSecurityIntervalPrices(identifier, opts)
+> ApiResponseSecurityIntervalPrices getSecurityIntervalPrices(identifier, intervalSize, opts)
 
 #### Interval Stock Prices for Security
 
 
-Return Open, High, Low, Close, and Volume for a particular interval for the Security with the given &#x60;identifier&#x60;
+Return open, close, high, low, volume, average price, and change ratio for a particular interval for the Security with the given &#x60;identifier&#x60;
 
 [//]: # (END_OVERVIEW)
 
@@ -638,6 +887,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var security = new intrinioSDK.SecurityApi();
 
 var identifier = "AAPL";
+var intervalSize = "15m";
 
 
 var opts = { 
@@ -647,12 +897,11 @@ var opts = {
   'endDate': new Date("2019-01-01"),
   'endTime': null,
   'timezone': "UTC",
-  'intervalSize': "1d",
   'pageSize': 100,
   'nextPage': null
 };
 
-security.getSecurityIntervalPrices(identifier, opts).then(function(data) {
+security.getSecurityIntervalPrices(identifier, intervalSize, opts).then(function(data) {
   data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
@@ -670,13 +919,13 @@ security.getSecurityIntervalPrices(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **intervalSize** | String| The interval for which to return stock prices | [default to 15m] &nbsp;
  **source** | String| Return intervals from the specified data source | [optional]  &nbsp;
  **startDate** | Date| Return intervals starting at the specified date | [optional]  &nbsp;
- **startTime** | String| Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) | [optional]  &nbsp;
+ **startTime** | String| Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) | [optional]  &nbsp;
  **endDate** | Date| Return intervals stopping at the specified date | [optional]  &nbsp;
- **endTime** | String| Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm&#39; format, UTC timezone) | [optional]  &nbsp;
+ **endTime** | String| Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) | [optional]  &nbsp;
  **timezone** | String| Returns trading times in this timezone | [optional] [default to UTC] &nbsp;
- **intervalSize** | String| The interval for which to return stock prices | [optional] [default to 1d] &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>

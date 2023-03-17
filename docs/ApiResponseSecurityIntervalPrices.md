@@ -11,7 +11,7 @@
 
 Name | Type | Description
 ------------ | ------------- | -------------
-**intervals** | [**[StockPriceInterval]**](StockPriceInterval.md) | Open, High, Low, Close, and Volume for a particular interval &nbsp;
+**intervals** | [**[StockPriceInterval]**](StockPriceInterval.md) | Open, close, high, low, volume, average price, and change ratio for a particular interval &nbsp;
 **security** | [**SecuritySummary**](SecuritySummary.md) | The Security resolved from the given identifier &nbsp;
 **source** | String | The source of the data &nbsp;
 **nextPage** | String | The token required to request the next page of the data. If null, no further results are available. &nbsp;
@@ -32,8 +32,8 @@ Name | Type | Description
 
 Name | Value
 ---- | -----
-iex | &quot;iex&quot;
-bats | &quot;bats&quot;
+realtime | &quot;realtime&quot;
+delayed | &quot;delayed&quot;
 
 
 
