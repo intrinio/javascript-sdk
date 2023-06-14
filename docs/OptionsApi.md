@@ -5,7 +5,7 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAllOptionsTickers**](OptionsApi.md#getAllOptionsTickers) | **GET** /options/tickers | Options Tickers
-[**getOptionExpirationsRealtime**](OptionsApi.md#getOptionExpirationsRealtime) | **GET** /options/expirations/{symbol}/realtime | Option Expirations Realtime
+[**getOptionExpirationsRealtime**](OptionsApi.md#getOptionExpirationsRealtime) | **GET** /options/expirations/{symbol}/realtime | Options Expirations
 [**getOptionStrikesRealtime**](OptionsApi.md#getOptionStrikesRealtime) | **GET** /options/strikes/{symbol}/{strike}/realtime | Option Strikes Realtime
 [**getOptions**](OptionsApi.md#getOptions) | **GET** /options/{symbol} | Options
 [**getOptionsBySymbolRealtime**](OptionsApi.md#getOptionsBySymbolRealtime) | **GET** /options/{symbol}/realtime | Options by Symbol Realtime
@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**getOptionsChainEod**](OptionsApi.md#getOptionsChainEod) | **GET** /options/chain/{symbol}/{expiration}/eod | Options Chain EOD
 [**getOptionsChainRealtime**](OptionsApi.md#getOptionsChainRealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 [**getOptionsExpirations**](OptionsApi.md#getOptionsExpirations) | **GET** /options/expirations/{symbol} | Options Expirations
+[**getOptionsExpirationsEod**](OptionsApi.md#getOptionsExpirationsEod) | **GET** /options/expirations/{symbol}/eod | Options Expirations
 [**getOptionsIntervalByContract**](OptionsApi.md#getOptionsIntervalByContract) | **GET** /options/interval/{identifier} | Options Intervals By Contract
 [**getOptionsIntervalMovers**](OptionsApi.md#getOptionsIntervalMovers) | **GET** /options/interval/movers | Options Intervals Movers
 [**getOptionsIntervalMoversChange**](OptionsApi.md#getOptionsIntervalMoversChange) | **GET** /options/interval/movers/change | Options Intervals Movers By Change
@@ -130,10 +131,10 @@ This endpoint does not need any parameter.
 
 > ApiResponseOptionsExpirations getOptionExpirationsRealtime(symbol, opts)
 
-#### Option Expirations Realtime
+#### Options Expirations
 
 
-Returns a list of all current and upcoming expiration dates for a particular symbol.
+Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
 
 [//]: # (END_OVERVIEW)
 
@@ -302,7 +303,7 @@ Name | Type | Description  | Notes
 #### Options
 
 
-Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.
+Returns a list of all securities that have options listed and are tradable on a US market exchange. Useful to retrieve the entire universe.  Available via a 3rd party, contact sales for a trial.
 
 [//]: # (END_OVERVIEW)
 
@@ -500,7 +501,7 @@ Name | Type | Description  | Notes
 #### Options Chain
 
 
-Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.
+Returns a list of the historical end-of-day top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the option chain.  Available via a 3rd party, contact sales for a trial.
 
 [//]: # (END_OVERVIEW)
 
@@ -796,7 +797,7 @@ Name | Type | Description  | Notes
 #### Options Expirations
 
 
-Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+Returns a list of all current and upcoming option contract expiration dates for a particular symbol.  Available via a 3rd party, contact sales for a trial.
 
 [//]: # (END_OVERVIEW)
 
@@ -820,6 +821,92 @@ var opts = {
 };
 
 options.getOptionsExpirations(symbol, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | String| The option symbol, corresponding to the underlying security. |  &nbsp;
+ **after** | String| Return option contract expiration dates after this date. | [optional]  &nbsp;
+ **before** | String| Return option contract expiration dates before this date. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsExpirations**](ApiResponseOptionsExpirations.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:OptionsApi)
+
+[//]: # (METHOD:getOptionsExpirationsEod)
+
+[//]: # (RETURN_TYPE:ApiResponseOptionsExpirations)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsExpirations.md)
+
+[//]: # (OPERATION:getOptionsExpirationsEod_v2)
+
+[//]: # (ENDPOINT:/options/expirations/{symbol}/eod)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getOptionsExpirationsEod)
+
+<a name="getOptionsExpirationsEod"></a>
+## **getOptionsExpirationsEod**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getOptionsExpirationsEod_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsExpirations getOptionsExpirationsEod(symbol, opts)
+
+#### Options Expirations
+
+
+Returns a list of all current and upcoming option contract expiration dates for a particular symbol.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var options = new intrinioSDK.OptionsApi();
+
+var symbol = "MSFT";
+
+
+var opts = { 
+  'after': "2019-01-01",
+  'before': "2019-12-31"
+};
+
+options.getOptionsExpirationsEod(symbol, opts).then(function(data) {
   data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
