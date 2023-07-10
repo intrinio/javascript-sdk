@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.42.0
-- Package version: 6.24.0
+- API version: 2.43.6
+- Package version: 6.24.1
 
 
 ## Installation
@@ -224,9 +224,12 @@ Class | Method | HTTP request | Description
 *intrinioSDK.SecurityApi* | [**getSecurityPriceTechnicalsVwap**](docs/SecurityApi.md#getSecurityPriceTechnicalsVwap) | **GET** /securities/{identifier}/prices/technicals/vwap | Volume Weighted Average Price
 *intrinioSDK.SecurityApi* | [**getSecurityPriceTechnicalsWr**](docs/SecurityApi.md#getSecurityPriceTechnicalsWr) | **GET** /securities/{identifier}/prices/technicals/wr | Williams %R
 *intrinioSDK.SecurityApi* | [**getSecurityRealtimePrice**](docs/SecurityApi.md#getSecurityRealtimePrice) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
+*intrinioSDK.SecurityApi* | [**getSecurityReplayFile**](docs/SecurityApi.md#getSecurityReplayFile) | **GET** /securities/replay | Security Replay File
 *intrinioSDK.SecurityApi* | [**getSecuritySnapshots**](docs/SecurityApi.md#getSecuritySnapshots) | **GET** /securities/snapshots | Realtime Stock Prices Snapshot
 *intrinioSDK.SecurityApi* | [**getSecurityStockPriceAdjustments**](docs/SecurityApi.md#getSecurityStockPriceAdjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
 *intrinioSDK.SecurityApi* | [**getSecurityStockPrices**](docs/SecurityApi.md#getSecurityStockPrices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
+*intrinioSDK.SecurityApi* | [**getSecurityTrades**](docs/SecurityApi.md#getSecurityTrades) | **GET** /securities/trades | Security Trades
+*intrinioSDK.SecurityApi* | [**getSecurityTradesBySymbol**](docs/SecurityApi.md#getSecurityTradesBySymbol) | **GET** /securities/{identifier}/trades | Security Trades By Symbol
 *intrinioSDK.SecurityApi* | [**getSecurityZacksAnalystRatings**](docs/SecurityApi.md#getSecurityZacksAnalystRatings) | **GET** /securities/{identifier}/zacks/analyst_ratings | Zacks Analyst Ratings for Security
 *intrinioSDK.SecurityApi* | [**getSecurityZacksAnalystRatingsSnapshot**](docs/SecurityApi.md#getSecurityZacksAnalystRatingsSnapshot) | **GET** /securities/{identifier}/zacks/analyst_ratings/snapshot | Zacks Analyst Ratings Snapshot
 *intrinioSDK.SecurityApi* | [**getSecurityZacksEpsSurprises**](docs/SecurityApi.md#getSecurityZacksEpsSurprises) | **GET** /securities/{identifier}/zacks/eps_surprises | Zacks EPS Surprises for Security
@@ -503,6 +506,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.Security](docs/Security.md)
  - [intrinioSDK.SecurityIntervalMover](docs/SecurityIntervalMover.md)
  - [intrinioSDK.SecurityIntervalsMoversResult](docs/SecurityIntervalsMoversResult.md)
+ - [intrinioSDK.SecurityReplayFileResult](docs/SecurityReplayFileResult.md)
  - [intrinioSDK.SecurityScreenClause](docs/SecurityScreenClause.md)
  - [intrinioSDK.SecurityScreenGroup](docs/SecurityScreenGroup.md)
  - [intrinioSDK.SecurityScreenResult](docs/SecurityScreenResult.md)
@@ -510,6 +514,8 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.SecuritySnapshotGroup](docs/SecuritySnapshotGroup.md)
  - [intrinioSDK.SecuritySnapshotsResult](docs/SecuritySnapshotsResult.md)
  - [intrinioSDK.SecuritySummary](docs/SecuritySummary.md)
+ - [intrinioSDK.SecurityTrades](docs/SecurityTrades.md)
+ - [intrinioSDK.SecurityTradesResult](docs/SecurityTradesResult.md)
  - [intrinioSDK.SimpleMovingAverageTechnicalValue](docs/SimpleMovingAverageTechnicalValue.md)
  - [intrinioSDK.StandardizedFinancial](docs/StandardizedFinancial.md)
  - [intrinioSDK.StandardizedFinancialsDimension](docs/StandardizedFinancialsDimension.md)

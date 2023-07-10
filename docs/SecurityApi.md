@@ -49,9 +49,12 @@ Method | HTTP request | Description
 [**getSecurityPriceTechnicalsVwap**](SecurityApi.md#getSecurityPriceTechnicalsVwap) | **GET** /securities/{identifier}/prices/technicals/vwap | Volume Weighted Average Price
 [**getSecurityPriceTechnicalsWr**](SecurityApi.md#getSecurityPriceTechnicalsWr) | **GET** /securities/{identifier}/prices/technicals/wr | Williams %R
 [**getSecurityRealtimePrice**](SecurityApi.md#getSecurityRealtimePrice) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
+[**getSecurityReplayFile**](SecurityApi.md#getSecurityReplayFile) | **GET** /securities/replay | Security Replay File
 [**getSecuritySnapshots**](SecurityApi.md#getSecuritySnapshots) | **GET** /securities/snapshots | Realtime Stock Prices Snapshot
 [**getSecurityStockPriceAdjustments**](SecurityApi.md#getSecurityStockPriceAdjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
 [**getSecurityStockPrices**](SecurityApi.md#getSecurityStockPrices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
+[**getSecurityTrades**](SecurityApi.md#getSecurityTrades) | **GET** /securities/trades | Security Trades
+[**getSecurityTradesBySymbol**](SecurityApi.md#getSecurityTradesBySymbol) | **GET** /securities/{identifier}/trades | Security Trades By Symbol
 [**getSecurityZacksAnalystRatings**](SecurityApi.md#getSecurityZacksAnalystRatings) | **GET** /securities/{identifier}/zacks/analyst_ratings | Zacks Analyst Ratings for Security
 [**getSecurityZacksAnalystRatingsSnapshot**](SecurityApi.md#getSecurityZacksAnalystRatingsSnapshot) | **GET** /securities/{identifier}/zacks/analyst_ratings/snapshot | Zacks Analyst Ratings Snapshot
 [**getSecurityZacksEpsSurprises**](SecurityApi.md#getSecurityZacksEpsSurprises) | **GET** /securities/{identifier}/zacks/eps_surprises | Zacks EPS Surprises for Security
@@ -4183,6 +4186,87 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:SecurityApi)
 
+[//]: # (METHOD:getSecurityReplayFile)
+
+[//]: # (RETURN_TYPE:SecurityReplayFileResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:SecurityReplayFileResult.md)
+
+[//]: # (OPERATION:getSecurityReplayFile_v2)
+
+[//]: # (ENDPOINT:/securities/replay)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getSecurityReplayFile)
+
+<a name="getSecurityReplayFile"></a>
+## **getSecurityReplayFile**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityReplayFile_v2)
+
+[//]: # (START_OVERVIEW)
+
+> SecurityReplayFileResult getSecurityReplayFile(subsource, date)
+
+#### Security Replay File
+
+
+Returns a url where the requested replay file may be downloaded from.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var security = new intrinioSDK.SecurityApi();
+
+var subsource = null;
+var date = null;
+
+
+security.getSecurityReplayFile(subsource, date).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subsource** | String| The specific source of the data being requested. |  &nbsp;
+ **date** | Date| The date for the data being requested. |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**SecurityReplayFileResult**](SecurityReplayFileResult.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:SecurityApi)
+
 [//]: # (METHOD:getSecuritySnapshots)
 
 [//]: # (RETURN_TYPE:SecuritySnapshotsResult)
@@ -4435,6 +4519,198 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseSecurityStockPrices**](ApiResponseSecurityStockPrices.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:SecurityApi)
+
+[//]: # (METHOD:getSecurityTrades)
+
+[//]: # (RETURN_TYPE:SecurityTradesResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:SecurityTradesResult.md)
+
+[//]: # (OPERATION:getSecurityTrades_v2)
+
+[//]: # (ENDPOINT:/securities/trades)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getSecurityTrades)
+
+<a name="getSecurityTrades"></a>
+## **getSecurityTrades**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityTrades_v2)
+
+[//]: # (START_OVERVIEW)
+
+> SecurityTradesResult getSecurityTrades(source, opts)
+
+#### Security Trades
+
+
+Returns all trades between start time and end time, up to seven days ago for the specified source.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var security = new intrinioSDK.SecurityApi();
+
+var source = null;
+
+
+var opts = { 
+  'startDate': null,
+  'startTime': null,
+  'endDate': null,
+  'endTime': null,
+  'timezone': "UTC",
+  'pageSize': 100,
+  'nextPage': null
+};
+
+security.getSecurityTrades(source, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | String| The specific source of the data being requested. |  &nbsp;
+ **startDate** | Date| The start date for the data being requested. | [optional]  &nbsp;
+ **startTime** | String| The start time for the data being requested. | [optional]  &nbsp;
+ **endDate** | Date| The end date for the data being requested. | [optional]  &nbsp;
+ **endTime** | String| The end time for the data being requested. | [optional]  &nbsp;
+ **timezone** | String| The timezone the start and end date/times use. | [optional] [default to UTC] &nbsp;
+ **pageSize** | Number| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**SecurityTradesResult**](SecurityTradesResult.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:SecurityApi)
+
+[//]: # (METHOD:getSecurityTradesBySymbol)
+
+[//]: # (RETURN_TYPE:SecurityTradesResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:SecurityTradesResult.md)
+
+[//]: # (OPERATION:getSecurityTradesBySymbol_v2)
+
+[//]: # (ENDPOINT:/securities/{identifier}/trades)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getSecurityTradesBySymbol)
+
+<a name="getSecurityTradesBySymbol"></a>
+## **getSecurityTradesBySymbol**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityTradesBySymbol_v2)
+
+[//]: # (START_OVERVIEW)
+
+> SecurityTradesResult getSecurityTradesBySymbol(source, opts)
+
+#### Security Trades By Symbol
+
+
+Returns all trades for a symbol between start time and end time, up to seven days ago for the specified source.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var security = new intrinioSDK.SecurityApi();
+
+var source = null;
+
+
+var opts = { 
+  'startDate': null,
+  'startTime': null,
+  'endDate': null,
+  'endTime': null,
+  'timezone': "UTC",
+  'pageSize': 100,
+  'nextPage': null
+};
+
+security.getSecurityTradesBySymbol(source, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | String| The specific source of the data being requested. |  &nbsp;
+ **startDate** | Date| The start date for the data being requested. | [optional]  &nbsp;
+ **startTime** | String| The start time for the data being requested. | [optional]  &nbsp;
+ **endDate** | Date| The end date for the data being requested. | [optional]  &nbsp;
+ **endTime** | String| The end time for the data being requested. | [optional]  &nbsp;
+ **timezone** | String| The timezone the start and end date/times use. | [optional] [default to UTC] &nbsp;
+ **pageSize** | Number| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**SecurityTradesResult**](SecurityTradesResult.md)
 
 
 
