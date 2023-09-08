@@ -544,7 +544,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseSecurityInstitutionalOwnership getSecurityInsiderOwnership(identifier)
+> ApiResponseSecurityInstitutionalOwnership getSecurityInsiderOwnership(identifier, opts)
 
 #### Institutional Ownership by Security
 
@@ -567,7 +567,11 @@ var security = new intrinioSDK.SecurityApi();
 var identifier = "AAPL";
 
 
-security.getSecurityInsiderOwnership(identifier).then(function(data) {
+var opts = { 
+  'nextPage': null
+};
+
+security.getSecurityInsiderOwnership(identifier, opts).then(function(data) {
   data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
@@ -585,6 +589,7 @@ security.getSecurityInsiderOwnership(identifier).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

@@ -1542,7 +1542,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseCompanySharesOutstanding sharesOutstandingByCompany(identifier)
+> ApiResponseCompanySharesOutstanding sharesOutstandingByCompany(identifier, opts)
 
 #### Shares Outstanding by Company
 
@@ -1565,7 +1565,12 @@ var company = new intrinioSDK.CompanyApi();
 var identifier = "AAPL";
 
 
-company.sharesOutstandingByCompany(identifier).then(function(data) {
+var opts = { 
+  'endDateGreaterThan': null,
+  'endDateLessThan': null
+};
+
+company.sharesOutstandingByCompany(identifier, opts).then(function(data) {
   data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
@@ -1583,6 +1588,8 @@ company.sharesOutstandingByCompany(identifier).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+ **endDateGreaterThan** | Date| Returns shares outstanding after this date. | [optional]  &nbsp;
+ **endDateLessThan** | Date| Returns shares outstanding before this date. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
