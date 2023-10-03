@@ -242,6 +242,7 @@ var strike = 95;
 
 
 var opts = { 
+  'source': null,
   'stockPriceSource': null,
   'model': null
 };
@@ -265,6 +266,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **symbol** | String| The option symbol, corresponding to the underlying security. |  &nbsp;
  **strike** | Number| The strike price of the option contract. This will return options contracts with strike price equal to this price. |  &nbsp;
+ **source** | String| Realtime or delayed. | [optional]  &nbsp;
  **stockPriceSource** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
 <br/>
@@ -656,7 +658,7 @@ Name | Type | Description  | Notes
  **strike** | Number| The strike price of the option contract. This will return options contracts with strike price equal to this price. | [optional]  &nbsp;
  **strikeGreaterThan** | Number| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;
  **strikeLessThan** | Number| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
- **date** | Date| The the date to retrieve prices for | [optional]  &nbsp;
+ **date** | Date| The date to retrieve prices for | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -1432,6 +1434,7 @@ body = {
 
 var opts = { 
   'source': null,
+  'showStats': null,
   'stockPriceSource': null,
   'model': null
 };
@@ -1455,6 +1458,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**OptionContractsList**](OptionContractsList.md)| The contract symbols for which to return options prices for. |  &nbsp;
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **showStats** | Boolean| Whether to include Greek calculations or not. | [optional]  &nbsp;
  **stockPriceSource** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
 <br/>
@@ -1495,7 +1499,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsPricesEod getOptionsPricesEod(identifier)
+> ApiResponseOptionsPricesEod getOptionsPricesEod(identifier, opts)
 
 #### Option Prices EOD
 
@@ -1518,7 +1522,13 @@ var options = new intrinioSDK.OptionsApi();
 var identifier = "AAPL230616P00190000";
 
 
-options.getOptionsPricesEod(identifier).then(function(data) {
+var opts = { 
+  'nextPage': null,
+  'startDate': null,
+  'endDate': null
+};
+
+options.getOptionsPricesEod(identifier, opts).then(function(data) {
   data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
@@ -1536,6 +1546,9 @@ options.getOptionsPricesEod(identifier).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| The Intrinio ID or code of the options contract to request prices for. |  &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **startDate** | Date| The start date to retrieve prices for | [optional]  &nbsp;
+ **endDate** | Date| The end date to retrieve prices for | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
