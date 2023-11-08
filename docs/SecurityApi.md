@@ -900,9 +900,9 @@ var intervalSize = "15m";
 
 var opts = { 
   'source': null,
-  'startDate': new Date("2018-01-01"),
+  'startDate': new Date("2023-01-01"),
   'startTime': null,
-  'endDate': new Date("2019-01-01"),
+  'endDate': new Date("2023-02-01"),
   'endTime': null,
   'timezone': "UTC",
   'pageSize': 100,
@@ -4651,7 +4651,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> SecurityTradesResult getSecurityTradesBySymbol(source, opts)
+> SecurityTradesResult getSecurityTradesBySymbol(identifier, source, opts)
 
 #### Security Trades By Symbol
 
@@ -4671,6 +4671,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
+var identifier = "AAPL";
 var source = null;
 
 
@@ -4684,7 +4685,7 @@ var opts = {
   'nextPage': null
 };
 
-security.getSecurityTradesBySymbol(source, opts).then(function(data) {
+security.getSecurityTradesBySymbol(identifier, source, opts).then(function(data) {
   data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
@@ -4701,6 +4702,7 @@ security.getSecurityTradesBySymbol(source, opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **identifier** | String| The ticker symbol for which trades are being requested. |  &nbsp;
  **source** | String| The specific source of the data being requested. |  &nbsp;
  **startDate** | Date| The start date for the data being requested. | [optional]  &nbsp;
  **startTime** | String| The start time for the data being requested. | [optional]  &nbsp;

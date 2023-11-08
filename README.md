@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.47.3
-- Package version: 6.26.1
+- API version: 2.47.7
+- Package version: 6.26.2
 
 
 ## Installation
@@ -84,6 +84,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.CompanyApi* | [**getCompanyHistoricalData**](docs/CompanyApi.md#getCompanyHistoricalData) | **GET** /companies/{identifier}/historical_data/{tag} | Historical Data for Company
 *intrinioSDK.CompanyApi* | [**getCompanyIpos**](docs/CompanyApi.md#getCompanyIpos) | **GET** /companies/ipos | IPOs
 *intrinioSDK.CompanyApi* | [**getCompanyNews**](docs/CompanyApi.md#getCompanyNews) | **GET** /companies/{identifier}/news | All News by Company
+*intrinioSDK.CompanyApi* | [**getCompanyPublicFloat**](docs/CompanyApi.md#getCompanyPublicFloat) | **GET** /companies/{identifier}/public_float | Get Company&#39;s public float
 *intrinioSDK.CompanyApi* | [**getCompanySecurities**](docs/CompanyApi.md#getCompanySecurities) | **GET** /companies/{identifier}/securities | All Securities by Company
 *intrinioSDK.CompanyApi* | [**insiderTransactionFilingsByCompany**](docs/CompanyApi.md#insiderTransactionFilingsByCompany) | **GET** /companies/{identifier}/insider_transaction_filings | Insider Transaction Filings by Company
 *intrinioSDK.CompanyApi* | [**latestInsiderTransactionFilingByCompany**](docs/CompanyApi.md#latestInsiderTransactionFilingByCompany) | **GET** /companies/{identifier}/insider_transaction_filings/latest | Latest Insider Transaction Filing by Company
@@ -135,6 +136,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.IndexApi* | [**getEconomicIndexDataPointNumber**](docs/IndexApi.md#getEconomicIndexDataPointNumber) | **GET** /indices/economic/{identifier}/data_point/{tag}/number | Data Point (Number) for an Economic Index
 *intrinioSDK.IndexApi* | [**getEconomicIndexDataPointText**](docs/IndexApi.md#getEconomicIndexDataPointText) | **GET** /indices/economic/{identifier}/data_point/{tag}/text | Data Point (Text) for an Economic Index
 *intrinioSDK.IndexApi* | [**getEconomicIndexHistoricalData**](docs/IndexApi.md#getEconomicIndexHistoricalData) | **GET** /indices/economic/{identifier}/historical_data/{tag} | Historical Data for an Economic Index
+*intrinioSDK.IndexApi* | [**getRealtimeIndexPriceById**](docs/IndexApi.md#getRealtimeIndexPriceById) | **GET** /indices/{identifier}/realtime | Realtime Index Price
 *intrinioSDK.IndexApi* | [**getSicIndexById**](docs/IndexApi.md#getSicIndexById) | **GET** /indices/sic/{identifier} | Lookup SIC Index
 *intrinioSDK.IndexApi* | [**getSicIndexDataPointNumber**](docs/IndexApi.md#getSicIndexDataPointNumber) | **GET** /indices/sic/{identifier}/data_point/{tag}/number | Data Point (Number) for an SIC Index
 *intrinioSDK.IndexApi* | [**getSicIndexDataPointText**](docs/IndexApi.md#getSicIndexDataPointText) | **GET** /indices/sic/{identifier}/data_point/{tag}/text | Data Point (Text) for an SIC Index
@@ -299,6 +301,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseCompanyHistoricalData](docs/ApiResponseCompanyHistoricalData.md)
  - [intrinioSDK.ApiResponseCompanyInsiderTransactionFilings](docs/ApiResponseCompanyInsiderTransactionFilings.md)
  - [intrinioSDK.ApiResponseCompanyNews](docs/ApiResponseCompanyNews.md)
+ - [intrinioSDK.ApiResponseCompanyPublicFloatResult](docs/ApiResponseCompanyPublicFloatResult.md)
  - [intrinioSDK.ApiResponseCompanyRecognize](docs/ApiResponseCompanyRecognize.md)
  - [intrinioSDK.ApiResponseCompanySecurities](docs/ApiResponseCompanySecurities.md)
  - [intrinioSDK.ApiResponseCompanySharesOutstanding](docs/ApiResponseCompanySharesOutstanding.md)
@@ -426,6 +429,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.CompanyInitialPublicOffering](docs/CompanyInitialPublicOffering.md)
  - [intrinioSDK.CompanyNews](docs/CompanyNews.md)
  - [intrinioSDK.CompanyNewsSummary](docs/CompanyNewsSummary.md)
+ - [intrinioSDK.CompanyPublicFloat](docs/CompanyPublicFloat.md)
  - [intrinioSDK.CompanySharesOutstanding](docs/CompanySharesOutstanding.md)
  - [intrinioSDK.CompanySummary](docs/CompanySummary.md)
  - [intrinioSDK.DataTag](docs/DataTag.md)
@@ -498,6 +502,8 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.OptionUnusualTrade](docs/OptionUnusualTrade.md)
  - [intrinioSDK.Owner](docs/Owner.md)
  - [intrinioSDK.OwnerSummary](docs/OwnerSummary.md)
+ - [intrinioSDK.RealtimeIndexPrice](docs/RealtimeIndexPrice.md)
+ - [intrinioSDK.RealtimeIndexPriceIndex](docs/RealtimeIndexPriceIndex.md)
  - [intrinioSDK.RealtimeStockPrice](docs/RealtimeStockPrice.md)
  - [intrinioSDK.RealtimeStockPriceSecurity](docs/RealtimeStockPriceSecurity.md)
  - [intrinioSDK.RelativeStrengthIndexTechnicalValue](docs/RelativeStrengthIndexTechnicalValue.md)

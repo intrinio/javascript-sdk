@@ -13,6 +13,7 @@ Name | Type | Description
 ------------ | ------------- | -------------
 **ownerCik** | String | The Central Index Key issued by the SEC, which is the unique identifier all owner filings &nbsp;
 **ownerName** | String | The name of the institutional owner &nbsp;
+**periodEnded** | Date | The date of the latest 13-F filing on record with the SEC. &nbsp;
 **value** | Number | The market value in amount of dollars of the holding in the listed security &nbsp;
 **amount** | Number | The number of shares held in the listed security &nbsp;
 **soleVotingAuthority** | Number | The number of shares where the insitutional holder has sole voting authority &nbsp;

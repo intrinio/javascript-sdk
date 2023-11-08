@@ -11,6 +11,7 @@
 
 Name | Type | Description
 ------------ | ------------- | -------------
+**filingDate** | Date | The date of the filing with the SEC made by the owner &nbsp;
 **filingUrl** | String | The URL of the filing with the SEC &nbsp;
 **issuerTicker** | String | The ticker of the issuing company. &nbsp;
 **issuerCik** | String | The Central Index Key (CIK) of the issuing company. &nbsp;

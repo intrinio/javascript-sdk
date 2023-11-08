@@ -20,9 +20,13 @@ Name | Type | Description
 **ticker** | String | The ticker symbol for the company’s common stock &nbsp;
 **securityTitle** | String | The name of the derivative security transacted &nbsp;
 **conversionExercisePrice** | Number | The conversion or exercise price of the derivative security transacted &nbsp;
+**transactionDate** | Date | The date of the transaction &nbsp;
+**deemedExecutionDate** | Date | The date of the transaction had it not a directly identifiable date &nbsp;
 **transactionTypeCode** | String | A symbol representing the transaction type; P &#x3D; Purchase | S &#x3D; Sale | A  &#x3D; Award | M &#x3D; Conversion to Common | C &#x3D; Conversion | X &#x3D; Exercise of Derivative More Transaction Codes &nbsp;
 **acquisitionDispositionCode** | String | A symbol representing whether or not the derivative securities are Acquired or Disposed; A &#x3D; Acquisition | D &#x3D; Disposition &nbsp;
 **amountOfShares** | Number | The number of derivative securities involved in the subject transaction &nbsp;
+**exerciseDate** | Date | The exercise date of the derivative securities &nbsp;
+**expirationDate** | Date | The expiration date of the derivative securities &nbsp;
 **underlyingSecurityTitle** | String | The name of the underlying non-derivative security related to this derivative transaction &nbsp;
 **underlyingShares** | Number | The number of non-derivative shares involved in the subject transaction &nbsp;
 **transactionPrice** | Number | The price of the derivative securities &nbsp;

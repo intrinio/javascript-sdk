@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**getEconomicIndexDataPointNumber**](IndexApi.md#getEconomicIndexDataPointNumber) | **GET** /indices/economic/{identifier}/data_point/{tag}/number | Data Point (Number) for an Economic Index
 [**getEconomicIndexDataPointText**](IndexApi.md#getEconomicIndexDataPointText) | **GET** /indices/economic/{identifier}/data_point/{tag}/text | Data Point (Text) for an Economic Index
 [**getEconomicIndexHistoricalData**](IndexApi.md#getEconomicIndexHistoricalData) | **GET** /indices/economic/{identifier}/historical_data/{tag} | Historical Data for an Economic Index
+[**getRealtimeIndexPriceById**](IndexApi.md#getRealtimeIndexPriceById) | **GET** /indices/{identifier}/realtime | Realtime Index Price
 [**getSicIndexById**](IndexApi.md#getSicIndexById) | **GET** /indices/sic/{identifier} | Lookup SIC Index
 [**getSicIndexDataPointNumber**](IndexApi.md#getSicIndexDataPointNumber) | **GET** /indices/sic/{identifier}/data_point/{tag}/number | Data Point (Number) for an SIC Index
 [**getSicIndexDataPointText**](IndexApi.md#getSicIndexDataPointText) | **GET** /indices/sic/{identifier}/data_point/{tag}/text | Data Point (Text) for an SIC Index
@@ -600,6 +601,84 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseEconomicIndexHistoricalData**](ApiResponseEconomicIndexHistoricalData.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:IndexApi)
+
+[//]: # (METHOD:getRealtimeIndexPriceById)
+
+[//]: # (RETURN_TYPE:RealtimeIndexPrice)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:RealtimeIndexPrice.md)
+
+[//]: # (OPERATION:getRealtimeIndexPriceById_v2)
+
+[//]: # (ENDPOINT:/indices/{identifier}/realtime)
+
+[//]: # (DOCUMENT_LINK:IndexApi.md#getRealtimeIndexPriceById)
+
+<a name="getRealtimeIndexPriceById"></a>
+## **getRealtimeIndexPriceById**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getRealtimeIndexPriceById_v2)
+
+[//]: # (START_OVERVIEW)
+
+> RealtimeIndexPrice getRealtimeIndexPriceById(identifier)
+
+#### Realtime Index Price
+
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var index = new intrinioSDK.IndexApi();
+
+var identifier = "SPX";
+
+
+index.getRealtimeIndexPriceById(identifier).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| The ticker symbol of the currently trading index |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**RealtimeIndexPrice**](RealtimeIndexPrice.md)
 
 
 
