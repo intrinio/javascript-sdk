@@ -244,7 +244,8 @@ var strike = 95;
 var opts = { 
   'source': null,
   'stockPriceSource': null,
-  'model': null
+  'model': null,
+  'showExtendedPrice': null
 };
 
 options.getOptionStrikesRealtime(symbol, strike, opts).then(function(data) {
@@ -269,6 +270,7 @@ Name | Type | Description  | Notes
  **source** | String| Realtime or delayed. | [optional]  &nbsp;
  **stockPriceSource** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
+ **showExtendedPrice** | Boolean| Whether to include open close high low type fields. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -733,7 +735,8 @@ var opts = {
   'openInterestLessThan': null,
   'moneyness': null,
   'stockPriceSource': null,
-  'model': null
+  'model': null,
+  'showExtendedPrice': null
 };
 
 options.getOptionsChainRealtime(symbol, expiration, opts).then(function(data) {
@@ -767,6 +770,7 @@ Name | Type | Description  | Notes
  **moneyness** | String| The moneyness of the options contracts to return. &#39;all&#39; will return all options contracts. &#39;in_the_money&#39; will return options contracts that are in the money (call options with strike prices below the current price, put options with strike prices above the current price). &#39;out_of_they_money&#39; will return options contracts that are out of the money (call options with strike prices above the current price, put options with strike prices below the current price). &#39;near_the_money&#39; will return options contracts that are $0.50 or less away from being in the money.  Requires subscription to realtime stock price data. | [optional]  &nbsp;
  **stockPriceSource** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
+ **showExtendedPrice** | Boolean| Whether to include open close high low type fields. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -1434,9 +1438,10 @@ body = {
 
 var opts = { 
   'source': null,
-  'showStats': null,
+  'showExtendedPrice': null,
   'stockPriceSource': null,
-  'model': null
+  'model': null,
+  'showExtendedPrice2': null
 };
 
 options.getOptionsPricesBatchRealtime(body, opts).then(function(data) {
@@ -1458,9 +1463,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**OptionContractsList**](OptionContractsList.md)| The contract symbols for which to return options prices for. |  &nbsp;
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
- **showStats** | Boolean| Whether to include Greek calculations or not. | [optional]  &nbsp;
+ **showExtendedPrice** | Boolean| Whether to include open close high low type fields. | [optional]  &nbsp;
  **stockPriceSource** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
+ **showExtendedPrice2** | Boolean| Whether to include open close high low type fields. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -1613,7 +1619,8 @@ var identifier = "AAPL230120C00090000";
 var opts = { 
   'source': null,
   'stockPriceSource': null,
-  'model': null
+  'model': null,
+  'showExtendedPrice': null
 };
 
 options.getOptionsPricesRealtime(identifier, opts).then(function(data) {
@@ -1637,6 +1644,7 @@ Name | Type | Description  | Notes
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
  **stockPriceSource** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
+ **showExtendedPrice** | Boolean| Whether to include open close high low type fields. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -1781,7 +1789,8 @@ var identifier = "AAPL230120C00090000";
 
 
 var opts = { 
-  'source': null
+  'source': null,
+  'showExtendedPrice': null
 };
 
 options.getOptionsStatsRealtime(identifier, opts).then(function(data) {
@@ -1803,6 +1812,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| The Intrinio ID or code of the options contract to request prices for. |  &nbsp;
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **showExtendedPrice** | Boolean| Whether to include open close high low type fields. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
