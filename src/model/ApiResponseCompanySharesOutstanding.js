@@ -36,7 +36,7 @@
   /**
    * The ApiResponseCompanySharesOutstanding model module.
    * @module model/ApiResponseCompanySharesOutstanding
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

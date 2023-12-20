@@ -36,7 +36,7 @@
   /**
    * The HistoricalData model module.
    * @module model/HistoricalData
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

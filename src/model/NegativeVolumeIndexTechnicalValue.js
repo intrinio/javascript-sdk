@@ -36,7 +36,7 @@
   /**
    * The NegativeVolumeIndexTechnicalValue model module.
    * @module model/NegativeVolumeIndexTechnicalValue
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

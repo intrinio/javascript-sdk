@@ -33,7 +33,7 @@
   /**
    * Forex service.
    * @module api/ForexApi
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

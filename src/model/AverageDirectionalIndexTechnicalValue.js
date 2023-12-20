@@ -36,7 +36,7 @@
   /**
    * The AverageDirectionalIndexTechnicalValue model module.
    * @module model/AverageDirectionalIndexTechnicalValue
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

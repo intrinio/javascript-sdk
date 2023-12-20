@@ -36,7 +36,7 @@
   /**
    * The ApiResponseInitialPublicOfferings model module.
    * @module model/ApiResponseInitialPublicOfferings
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

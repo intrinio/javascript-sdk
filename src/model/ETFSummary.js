@@ -36,7 +36,7 @@
   /**
    * The ETFSummary model module.
    * @module model/ETFSummary
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

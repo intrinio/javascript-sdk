@@ -36,7 +36,7 @@
   /**
    * The ApiResponseInsiderTransactionFilings model module.
    * @module model/ApiResponseInsiderTransactionFilings
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

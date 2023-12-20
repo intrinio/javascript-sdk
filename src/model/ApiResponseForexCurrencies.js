@@ -36,7 +36,7 @@
   /**
    * The ApiResponseForexCurrencies model module.
    * @module model/ApiResponseForexCurrencies
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The CommodityChannelIndexTechnicalValue model module.
    * @module model/CommodityChannelIndexTechnicalValue
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

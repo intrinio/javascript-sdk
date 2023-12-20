@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityAwesomeOscillator model module.
    * @module model/ApiResponseSecurityAwesomeOscillator
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

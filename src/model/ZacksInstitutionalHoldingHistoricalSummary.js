@@ -36,7 +36,7 @@
   /**
    * The ZacksInstitutionalHoldingHistoricalSummary model module.
    * @module model/ZacksInstitutionalHoldingHistoricalSummary
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

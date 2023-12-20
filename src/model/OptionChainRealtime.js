@@ -36,7 +36,7 @@
   /**
    * The OptionChainRealtime model module.
    * @module model/OptionChainRealtime
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

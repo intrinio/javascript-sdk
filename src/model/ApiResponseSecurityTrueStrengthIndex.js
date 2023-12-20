@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityTrueStrengthIndex model module.
    * @module model/ApiResponseSecurityTrueStrengthIndex
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

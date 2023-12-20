@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityOnBalanceVolume model module.
    * @module model/ApiResponseSecurityOnBalanceVolume
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

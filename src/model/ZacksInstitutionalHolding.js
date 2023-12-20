@@ -36,7 +36,7 @@
   /**
    * The ZacksInstitutionalHolding model module.
    * @module model/ZacksInstitutionalHolding
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

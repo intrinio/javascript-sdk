@@ -36,7 +36,7 @@
   /**
    * The ApiResponseOptionsTickers model module.
    * @module model/ApiResponseOptionsTickers
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

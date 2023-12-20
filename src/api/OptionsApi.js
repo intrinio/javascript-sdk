@@ -33,7 +33,7 @@
   /**
    * Options service.
    * @module api/OptionsApi
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**
@@ -1113,10 +1113,10 @@
      * @param {module:model/OptionContractsList} body The contract symbols for which to return options prices for.
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.source Realtime or 15-minute delayed contracts.
-     * @param {Boolean} opts.showExtendedPrice Whether to include open close high low type fields.
+     * @param {Boolean} opts.showStats Whether to include Greek calculations or not.
      * @param {module:model/String} opts.stockPriceSource Source for underlying price for calculating Greeks.
      * @param {module:model/String} opts.model Model for calculating Greek values. Default is black_scholes.
-     * @param {Boolean} opts.showExtendedPrice2 Whether to include open close high low type fields.
+     * @param {Boolean} opts.showExtendedPrice Whether to include open close high low type fields.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ApiResponseOptionsPricesBatchRealtime} and HTTP response
      */
     this.getOptionsPricesBatchRealtimeWithHttpInfo = function(body, opts) {
@@ -1133,10 +1133,10 @@
       };
       var queryParams = {
         'source': opts['source'],
-        'show_extended_price': opts['showExtendedPrice'],
+        'show_stats': opts['showStats'],
         'stock_price_source': opts['stockPriceSource'],
         'model': opts['model'],
-        'show_extended_price': opts['showExtendedPrice2'],
+        'show_extended_price': opts['showExtendedPrice'],
       };
       var collectionQueryParams = {
       };
@@ -1163,10 +1163,10 @@
      * @param {module:model/OptionContractsList} body The contract symbols for which to return options prices for.
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.source Realtime or 15-minute delayed contracts.
-     * @param {Boolean} opts.showExtendedPrice Whether to include open close high low type fields.
+     * @param {Boolean} opts.showStats Whether to include Greek calculations or not.
      * @param {module:model/String} opts.stockPriceSource Source for underlying price for calculating Greeks.
      * @param {module:model/String} opts.model Model for calculating Greek values. Default is black_scholes.
-     * @param {Boolean} opts.showExtendedPrice2 Whether to include open close high low type fields.
+     * @param {Boolean} opts.showExtendedPrice Whether to include open close high low type fields.
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ApiResponseOptionsPricesBatchRealtime}
      */
     this.getOptionsPricesBatchRealtime = function(body, opts) {

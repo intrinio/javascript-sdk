@@ -36,7 +36,7 @@
   /**
    * The ApiResponseStockExchangeSecurities model module.
    * @module model/ApiResponseStockExchangeSecurities
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

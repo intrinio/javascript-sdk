@@ -36,7 +36,7 @@
   /**
    * The SecurityIntervalMover model module.
    * @module model/SecurityIntervalMover
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

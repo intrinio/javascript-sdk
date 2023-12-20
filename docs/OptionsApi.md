@@ -1438,10 +1438,10 @@ body = {
 
 var opts = { 
   'source': null,
-  'showExtendedPrice': null,
+  'showStats': null,
   'stockPriceSource': null,
   'model': null,
-  'showExtendedPrice2': null
+  'showExtendedPrice': null
 };
 
 options.getOptionsPricesBatchRealtime(body, opts).then(function(data) {
@@ -1463,10 +1463,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**OptionContractsList**](OptionContractsList.md)| The contract symbols for which to return options prices for. |  &nbsp;
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
- **showExtendedPrice** | Boolean| Whether to include open close high low type fields. | [optional]  &nbsp;
+ **showStats** | Boolean| Whether to include Greek calculations or not. | [optional]  &nbsp;
  **stockPriceSource** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
- **showExtendedPrice2** | Boolean| Whether to include open close high low type fields. | [optional]  &nbsp;
+ **showExtendedPrice** | Boolean| Whether to include open close high low type fields. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

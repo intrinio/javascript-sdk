@@ -36,7 +36,7 @@
   /**
    * The ApiResponseESGCompanies model module.
    * @module model/ApiResponseESGCompanies
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

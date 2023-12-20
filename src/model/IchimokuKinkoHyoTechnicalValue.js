@@ -36,7 +36,7 @@
   /**
    * The IchimokuKinkoHyoTechnicalValue model module.
    * @module model/IchimokuKinkoHyoTechnicalValue
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

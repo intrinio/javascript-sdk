@@ -36,7 +36,7 @@
   /**
    * The ApiResponseEconomicIndicesSearch model module.
    * @module model/ApiResponseEconomicIndicesSearch
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The OptionChainEod model module.
    * @module model/OptionChainEod
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The ApiResponseESGCompanyComprehensiveRatingHistory model module.
    * @module model/ApiResponseESGCompanyComprehensiveRatingHistory
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

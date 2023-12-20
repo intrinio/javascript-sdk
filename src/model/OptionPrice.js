@@ -36,7 +36,7 @@
   /**
    * The OptionPrice model module.
    * @module model/OptionPrice
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**

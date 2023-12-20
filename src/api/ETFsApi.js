@@ -33,7 +33,7 @@
   /**
    * ETFs service.
    * @module api/ETFsApi
-   * @version 6.26.4
+   * @version 6.26.5
    */
 
   /**
