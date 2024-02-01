@@ -18,6 +18,7 @@ Name | Type | Description
 **totalVolume** | Number | The total volume of the symbol for the day up to the timestamp point in time. &nbsp;
 **marketCenter** | String | The market center for the trade. &nbsp;
 **condition** | String | The condition of the trade. &nbsp;
+**isDarkpool** | Boolean | If the trade was darkpool or not. &nbsp;
 
 [//]: # (END_DEFINITION)
 

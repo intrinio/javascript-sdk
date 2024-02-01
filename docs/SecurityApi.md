@@ -4841,6 +4841,7 @@ var opts = {
   'endDate': null,
   'endTime': null,
   'timezone': "UTC",
+  'darkpoolOnly': false,
   'pageSize': 100,
   'nextPage': null
 };
@@ -4863,12 +4864,13 @@ security.getSecurityTradesBySymbol(identifier, source, opts).then(function(data)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| The ticker symbol for which trades are being requested. |  &nbsp;
- **source** | String| The specific source of the data being requested. |  &nbsp;
+ **source** | String| The specific source of the data being requested.  Specifying delayed sip will result in the system automatically determining which delayed sip source (cta_delayed, cta_b_delayed, utp_delayed) to use. |  &nbsp;
  **startDate** | Date| The start date for the data being requested. | [optional]  &nbsp;
  **startTime** | String| The start time for the data being requested. | [optional]  &nbsp;
  **endDate** | Date| The end date for the data being requested. | [optional]  &nbsp;
  **endTime** | String| The end time for the data being requested. | [optional]  &nbsp;
  **timezone** | String| The timezone the start and end date/times use. | [optional] [default to UTC] &nbsp;
+ **darkpoolOnly** | Boolean| Set to true to show only darkpool trades | [optional] [default to false] &nbsp;
  **pageSize** | Number| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>

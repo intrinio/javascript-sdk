@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.48.1
-- Package version: 6.26.5
+- API version: 2.52.0
+- Package version: 6.26.6
 
 
 ## Installation
@@ -77,6 +77,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.CompanyApi* | [**getAllCompanyNews**](docs/CompanyApi.md#getAllCompanyNews) | **GET** /companies/news | All News
 *intrinioSDK.CompanyApi* | [**getCompany**](docs/CompanyApi.md#getCompany) | **GET** /companies/{identifier} | Lookup Company
 *intrinioSDK.CompanyApi* | [**getCompanyAnswers**](docs/CompanyApi.md#getCompanyAnswers) | **GET** /companies/{identifier}/answers | Company Answers
+*intrinioSDK.CompanyApi* | [**getCompanyDailyMetrics**](docs/CompanyApi.md#getCompanyDailyMetrics) | **GET** /companies/{identifier}/daily_metrics | Company metrics by Company
 *intrinioSDK.CompanyApi* | [**getCompanyDataPointNumber**](docs/CompanyApi.md#getCompanyDataPointNumber) | **GET** /companies/{identifier}/data_point/{tag}/number | Data Point (Number) for Company
 *intrinioSDK.CompanyApi* | [**getCompanyDataPointText**](docs/CompanyApi.md#getCompanyDataPointText) | **GET** /companies/{identifier}/data_point/{tag}/text | Data Point (Text) for Company
 *intrinioSDK.CompanyApi* | [**getCompanyFilings**](docs/CompanyApi.md#getCompanyFilings) | **GET** /companies/{identifier}/filings | All Filings by Company
@@ -298,6 +299,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseCompanies](docs/ApiResponseCompanies.md)
  - [intrinioSDK.ApiResponseCompaniesSearch](docs/ApiResponseCompaniesSearch.md)
  - [intrinioSDK.ApiResponseCompanyAnswers](docs/ApiResponseCompanyAnswers.md)
+ - [intrinioSDK.ApiResponseCompanyDailyMetrics](docs/ApiResponseCompanyDailyMetrics.md)
  - [intrinioSDK.ApiResponseCompanyFilings](docs/ApiResponseCompanyFilings.md)
  - [intrinioSDK.ApiResponseCompanyFundamentals](docs/ApiResponseCompanyFundamentals.md)
  - [intrinioSDK.ApiResponseCompanyHistoricalData](docs/ApiResponseCompanyHistoricalData.md)
@@ -427,6 +429,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ChaikinMoneyFlowTechnicalValue](docs/ChaikinMoneyFlowTechnicalValue.md)
  - [intrinioSDK.CommodityChannelIndexTechnicalValue](docs/CommodityChannelIndexTechnicalValue.md)
  - [intrinioSDK.Company](docs/Company.md)
+ - [intrinioSDK.CompanyDailyMetric](docs/CompanyDailyMetric.md)
  - [intrinioSDK.CompanyFiling](docs/CompanyFiling.md)
  - [intrinioSDK.CompanyInitialPublicOffering](docs/CompanyInitialPublicOffering.md)
  - [intrinioSDK.CompanyNews](docs/CompanyNews.md)
