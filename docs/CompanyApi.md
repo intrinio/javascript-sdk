@@ -5,6 +5,7 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAllCompanies**](CompanyApi.md#getAllCompanies) | **GET** /companies | All Companies
+[**getAllCompaniesDailyMetrics**](CompanyApi.md#getAllCompaniesDailyMetrics) | **GET** /companies/daily_metrics | All Companies daily metrics
 [**getAllCompanyNews**](CompanyApi.md#getAllCompanyNews) | **GET** /companies/news | All News
 [**getCompany**](CompanyApi.md#getCompany) | **GET** /companies/{identifier} | Lookup Company
 [**getCompanyAnswers**](CompanyApi.md#getCompanyAnswers) | **GET** /companies/{identifier}/answers | Company Answers
@@ -121,6 +122,92 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseCompanies**](ApiResponseCompanies.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:CompanyApi)
+
+[//]: # (METHOD:getAllCompaniesDailyMetrics)
+
+[//]: # (RETURN_TYPE:ApiResponseCompanyDailyMetrics)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyDailyMetrics.md)
+
+[//]: # (OPERATION:getAllCompaniesDailyMetrics_v2)
+
+[//]: # (ENDPOINT:/companies/daily_metrics)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#getAllCompaniesDailyMetrics)
+
+<a name="getAllCompaniesDailyMetrics"></a>
+## **getAllCompaniesDailyMetrics**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getAllCompaniesDailyMetrics_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseCompanyDailyMetrics getAllCompaniesDailyMetrics(opts)
+
+#### All Companies daily metrics
+
+
+Returns the company metrics for a date.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var company = new intrinioSDK.CompanyApi();
+
+var opts = { 
+  'onDate': new Date("2013-10-20"),
+  'pageSize': 100,
+  'nextPage': null,
+  'nextPage2': null
+};
+
+company.getAllCompaniesDailyMetrics(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **onDate** | Date| Date of the metric | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **nextPage2** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseCompanyDailyMetrics**](ApiResponseCompanyDailyMetrics.md)
 
 
 
@@ -418,6 +505,7 @@ var identifier = "AAPL";
 
 
 var opts = { 
+  'onDate': new Date("2013-10-20"),
   'pageSize': 100,
   'nextPage': null,
   'nextPage2': null
@@ -441,6 +529,7 @@ company.getCompanyDailyMetrics(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+ **onDate** | Date| Date of the metric | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
  **nextPage2** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;

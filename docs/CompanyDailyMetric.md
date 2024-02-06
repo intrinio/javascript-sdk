@@ -27,8 +27,12 @@ Name | Type | Description
 **evToNopat** | Number | The enterprise value to normalized operating profit after tax ratio. &nbsp;
 **evToOcf** | Number | The enterprise value to operating cash flow ratio. &nbsp;
 **evToFcff** | Number | The enterprise value to free cash flow to the firm ratio. &nbsp;
+**company** | [**CompanySummary**](CompanySummary.md) |  &nbsp;
 
 [//]: # (END_DEFINITION)
+
+
+[//]: # (CONTAINED_CLASS:CompanySummary)
 
 
 
