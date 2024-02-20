@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.52.1
-- Package version: 6.26.7
+- API version: 2.52.5
+- Package version: 6.26.8
 
 
 ## Installation
@@ -289,6 +289,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.ZacksApi* | [**getZacksInstitutionalHoldingOwners**](docs/ZacksApi.md#getZacksInstitutionalHoldingOwners) | **GET** /zacks/institutional_holdings/owners | Zacks Institutional Holding Owners
 *intrinioSDK.ZacksApi* | [**getZacksInstitutionalHoldings**](docs/ZacksApi.md#getZacksInstitutionalHoldings) | **GET** /zacks/institutional_holdings | Zacks Institutional Holdings
 *intrinioSDK.ZacksApi* | [**getZacksLongTermGrowthRates**](docs/ZacksApi.md#getZacksLongTermGrowthRates) | **GET** /zacks/long_term_growth_rates | Zacks Long Term Growth Rates
+*intrinioSDK.ZacksApi* | [**getZacksSalesEstimates**](docs/ZacksApi.md#getZacksSalesEstimates) | **GET** /zacks/sales_estimates | Zacks Sales Estimates
 *intrinioSDK.ZacksApi* | [**getZacksSalesSurprises**](docs/ZacksApi.md#getZacksSalesSurprises) | **GET** /zacks/sales_surprises | Zacks Sales Surprises
 *intrinioSDK.ZacksApi* | [**getZacksTargetPriceConsensuses**](docs/ZacksApi.md#getZacksTargetPriceConsensuses) | **GET** /zacks/target_price_consensuses | Zacks Target Price Consensuses
 
@@ -418,6 +419,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseZacksInstitutionalHoldingOwners](docs/ApiResponseZacksInstitutionalHoldingOwners.md)
  - [intrinioSDK.ApiResponseZacksInstitutionalHoldings](docs/ApiResponseZacksInstitutionalHoldings.md)
  - [intrinioSDK.ApiResponseZacksLongTermGrowthRates](docs/ApiResponseZacksLongTermGrowthRates.md)
+ - [intrinioSDK.ApiResponseZacksSalesEstimates](docs/ApiResponseZacksSalesEstimates.md)
  - [intrinioSDK.ApiResponseZacksSalesSurprises](docs/ApiResponseZacksSalesSurprises.md)
  - [intrinioSDK.ApiResponseZacksTargetPriceConsensuses](docs/ApiResponseZacksTargetPriceConsensuses.md)
  - [intrinioSDK.AverageDailyTradingVolumeTechnicalValue](docs/AverageDailyTradingVolumeTechnicalValue.md)
@@ -570,6 +572,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ZacksInstitutionalHoldingOwnerDetail](docs/ZacksInstitutionalHoldingOwnerDetail.md)
  - [intrinioSDK.ZacksInstitutionalHoldingOwnerSummary](docs/ZacksInstitutionalHoldingOwnerSummary.md)
  - [intrinioSDK.ZacksLongTermGrowthRate](docs/ZacksLongTermGrowthRate.md)
+ - [intrinioSDK.ZacksSalesEstimate](docs/ZacksSalesEstimate.md)
  - [intrinioSDK.ZacksSalesSurprise](docs/ZacksSalesSurprise.md)
  - [intrinioSDK.ZacksSalesSurpriseSummary](docs/ZacksSalesSurpriseSummary.md)
  - [intrinioSDK.ZacksTargetPriceConsensus](docs/ZacksTargetPriceConsensus.md)
