@@ -859,6 +859,8 @@ var opts = {
   'type': null,
   'startDate': null,
   'endDate': null,
+  'updatedAfter': new Date("2022-12-01"),
+  'updatedBefore': new Date("2022-12-01"),
   'pageSize': 100,
   'nextPage': null
 };
@@ -889,6 +891,8 @@ Name | Type | Description  | Notes
  **type** | String| Only of the given type | [optional]  &nbsp;
  **startDate** | Date| Only on or after the given date | [optional]  &nbsp;
  **endDate** | Date| Only on or before the given date | [optional]  &nbsp;
+ **updatedAfter** | Date| Only include fundamentals where it was updated after this date. | [optional]  &nbsp;
+ **updatedBefore** | Date| Only include fundamentals where it was updated before this date. | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>

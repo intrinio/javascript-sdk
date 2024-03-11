@@ -68,6 +68,8 @@ var opts = {
   'fiscalPeriod': "FY",
   'startDate': new Date("2022-01-01"),
   'endDate': new Date("2022-12-01"),
+  'updatedAfter': new Date("2022-12-01"),
+  'updatedBefore': new Date("2022-12-01"),
   'nextPage': null
 };
 
@@ -97,6 +99,8 @@ Name | Type | Description  | Notes
  **fiscalPeriod** | String| The fiscal period | [optional]  &nbsp;
  **startDate** | Date| Only include fundamentals where covered period is on or after this date. | [optional]  &nbsp;
  **endDate** | Date| Only include fundamentals where covered period is on or before this date. | [optional]  &nbsp;
+ **updatedAfter** | Date| Only include fundamentals where it was updated after this date. | [optional]  &nbsp;
+ **updatedBefore** | Date| Only include fundamentals where it was updated before this date. | [optional]  &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
