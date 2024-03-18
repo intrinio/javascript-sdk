@@ -45,7 +45,7 @@ var intrinioSDK = require('intrinio-sdk');
 const util = require('util')
  
 intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR API KEY";
-IntrinioSDK.ApiClient.instance.enableRetries = true;
+intrinioSDK.ApiClient.instance.enableRetries = true;
  
 var companyAPI = new intrinioSDK.CompanyApi()
  
