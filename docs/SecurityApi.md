@@ -4745,6 +4745,8 @@ var opts = {
   'endTime': null,
   'timezone': "UTC",
   'pageSize': 100,
+  'darkpoolOnly': false,
+  'minSize': 100,
   'nextPage': null
 };
 
@@ -4772,6 +4774,8 @@ Name | Type | Description  | Notes
  **endTime** | String| The end time for the data being requested. | [optional]  &nbsp;
  **timezone** | String| The timezone the start and end date/times use. | [optional] [default to UTC] &nbsp;
  **pageSize** | Number| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **darkpoolOnly** | Boolean| Set to true to show only darkpool trades | [optional] [default to false] &nbsp;
+ **minSize** | Number| Trades must be larger or equal to this size. | [optional]  &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
@@ -4843,6 +4847,7 @@ var opts = {
   'timezone': "UTC",
   'darkpoolOnly': false,
   'pageSize': 100,
+  'minSize': 100,
   'nextPage': null
 };
 
@@ -4872,6 +4877,7 @@ Name | Type | Description  | Notes
  **timezone** | String| The timezone the start and end date/times use. | [optional] [default to UTC] &nbsp;
  **darkpoolOnly** | Boolean| Set to true to show only darkpool trades | [optional] [default to false] &nbsp;
  **pageSize** | Number| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **minSize** | Number| Trades must be larger or equal to this size. | [optional]  &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 

@@ -155,7 +155,8 @@ var symbol = "MSFT";
 var opts = { 
   'after': "2022-01-01",
   'before': "2023-04-01",
-  'source': null
+  'source': null,
+  'includeRelatedSymbols': false
 };
 
 options.getOptionExpirationsRealtime(symbol, opts).then(function(data) {
@@ -179,6 +180,7 @@ Name | Type | Description  | Notes
  **after** | String| Return option contract expiration dates after this date. | [optional]  &nbsp;
  **before** | String| Return option contract expiration dates before this date. | [optional]  &nbsp;
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **includeRelatedSymbols** | Boolean| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -245,7 +247,8 @@ var opts = {
   'source': null,
   'stockPriceSource': null,
   'model': null,
-  'showExtendedPrice': null
+  'showExtendedPrice': null,
+  'includeRelatedSymbols': false
 };
 
 options.getOptionStrikesRealtime(symbol, strike, opts).then(function(data) {
@@ -271,6 +274,7 @@ Name | Type | Description  | Notes
  **stockPriceSource** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
  **showExtendedPrice** | Boolean| Whether to include open close high low type fields. | [optional]  &nbsp;
+ **includeRelatedSymbols** | Boolean| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -440,7 +444,8 @@ var opts = {
   'expiration': "2022-04-16",
   'expirationAfter': "2022-01-01",
   'expirationBefore': "2023-12-31",
-  'source': null
+  'source': null,
+  'includeRelatedSymbols': false
 };
 
 options.getOptionsBySymbolRealtime(symbol, opts).then(function(data) {
@@ -469,6 +474,7 @@ Name | Type | Description  | Notes
  **expirationAfter** | String| The expiration date of the option contract. This will return options contracts with expiration dates after this date. | [optional]  &nbsp;
  **expirationBefore** | String| The expiration date of the option contract. This will return options contracts with expiration dates before this date. | [optional]  &nbsp;
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **includeRelatedSymbols** | Boolean| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -634,7 +640,8 @@ var opts = {
   'strike': null,
   'strikeGreaterThan': null,
   'strikeLessThan': null,
-  'date': null
+  'date': null,
+  'includeRelatedSymbols': false
 };
 
 options.getOptionsChainEod(symbol, expiration, opts).then(function(data) {
@@ -661,6 +668,7 @@ Name | Type | Description  | Notes
  **strikeGreaterThan** | Number| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;
  **strikeLessThan** | Number| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
  **date** | Date| The date to retrieve prices for | [optional]  &nbsp;
+ **includeRelatedSymbols** | Boolean| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -736,7 +744,8 @@ var opts = {
   'moneyness': null,
   'stockPriceSource': null,
   'model': null,
-  'showExtendedPrice': null
+  'showExtendedPrice': null,
+  'includeRelatedSymbols': false
 };
 
 options.getOptionsChainRealtime(symbol, expiration, opts).then(function(data) {
@@ -771,6 +780,7 @@ Name | Type | Description  | Notes
  **stockPriceSource** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
  **showExtendedPrice** | Boolean| Whether to include open close high low type fields. | [optional]  &nbsp;
+ **includeRelatedSymbols** | Boolean| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -920,7 +930,8 @@ var symbol = "MSFT";
 
 var opts = { 
   'after': "2019-01-01",
-  'before': "2019-12-31"
+  'before': "2019-12-31",
+  'includeRelatedSymbols': false
 };
 
 options.getOptionsExpirationsEod(symbol, opts).then(function(data) {
@@ -943,6 +954,7 @@ Name | Type | Description  | Notes
  **symbol** | String| The option symbol, corresponding to the underlying security. |  &nbsp;
  **after** | String| Return option contract expiration dates after this date. | [optional]  &nbsp;
  **before** | String| Return option contract expiration dates before this date. | [optional]  &nbsp;
+ **includeRelatedSymbols** | Boolean| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

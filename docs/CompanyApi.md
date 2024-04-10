@@ -260,7 +260,20 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var company = new intrinioSDK.CompanyApi();
 
 var opts = { 
+  'specificSource': null,
   'pageSize': 100,
+  'sentiment': null,
+  'topic': null,
+  'company': "AAPL",
+  'security': "AAPL",
+  'startDate': null,
+  'endDate': null,
+  'language': null,
+  'wordCountGreaterThan': null,
+  'wordCountLessThan': null,
+  'isSpam': null,
+  'businessRelevanceGreaterThan': null,
+  'businessRelevanceLessThan': null,
   'nextPage': null
 };
 
@@ -281,7 +294,20 @@ company.getAllCompanyNews(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **specificSource** | String| Only news from this source. | [optional]  &nbsp;
+ **pageSize** | Number| The maximum number of results to return. | [optional] [default to 100] &nbsp;
+ **sentiment** | String| Filter by sentiment.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **topic** | String| Filter by topic.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **company** | String| Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
+ **security** | String| Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. | [optional]  &nbsp;
+ **startDate** | Date| Limit news stories to those on or after this date. | [optional]  &nbsp;
+ **endDate** | Date| Limit news stories to those on or before this date. | [optional]  &nbsp;
+ **language** | String| Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **wordCountGreaterThan** | Number| News stories will have a word count greater than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **wordCountLessThan** | Number| News stories will have a word count less than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **isSpam** | Boolean| Filter whether it is marked as spam or not.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **businessRelevanceGreaterThan** | Number| News stories will have a business relevance score more than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **businessRelevanceLessThan** | Number| News stories will have a business relevance score less than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
@@ -1149,7 +1175,19 @@ var identifier = "AAPL";
 
 
 var opts = { 
+  'specificSource': null,
   'pageSize': 100,
+  'sentiment': null,
+  'topic': null,
+  'security': "AAPL",
+  'startDate': null,
+  'endDate': null,
+  'language': null,
+  'wordCountGreaterThan': null,
+  'wordCountLessThan': null,
+  'isSpam': null,
+  'businessRelevanceGreaterThan': null,
+  'businessRelevanceLessThan': null,
   'nextPage': null
 };
 
@@ -1171,7 +1209,19 @@ company.getCompanyNews(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **specificSource** | String| Only news from this source | [optional]  &nbsp;
+ **pageSize** | Number| The maximum number of results to return | [optional] [default to 100] &nbsp;
+ **sentiment** | String| Filter by sentiment.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **topic** | String| Filter by topic.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **security** | String| Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. | [optional]  &nbsp;
+ **startDate** | Date| Limit news stories to those on or after this date | [optional]  &nbsp;
+ **endDate** | Date| Limit news stories to those on or before this date | [optional]  &nbsp;
+ **language** | String| Filter by language.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **wordCountGreaterThan** | Number| News stories will have a word count greater than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **wordCountLessThan** | Number| News stories will have a word count less than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **isSpam** | Boolean| Filter whether it is marked as spam or not.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **businessRelevanceGreaterThan** | Number| News stories will have a business relevance score more than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **businessRelevanceLessThan** | Number| News stories will have a business relevance score less than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
