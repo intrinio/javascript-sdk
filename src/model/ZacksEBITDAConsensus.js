@@ -36,7 +36,7 @@
   /**
    * The ZacksEBITDAConsensus model module.
    * @module model/ZacksEBITDAConsensus
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

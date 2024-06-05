@@ -36,7 +36,7 @@
   /**
    * The ApiResponseOptionsExpirations model module.
    * @module model/ApiResponseOptionsExpirations
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

@@ -33,7 +33,7 @@
   /**
    * Company service.
    * @module api/CompanyApi
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

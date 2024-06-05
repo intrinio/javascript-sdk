@@ -36,7 +36,7 @@
   /**
    * The ZacksForwardPE model module.
    * @module model/ZacksForwardPE
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

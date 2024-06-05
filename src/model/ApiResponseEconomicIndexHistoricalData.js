@@ -36,7 +36,7 @@
   /**
    * The ApiResponseEconomicIndexHistoricalData model module.
    * @module model/ApiResponseEconomicIndexHistoricalData
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

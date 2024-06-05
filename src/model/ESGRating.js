@@ -36,7 +36,7 @@
   /**
    * The ESGRating model module.
    * @module model/ESGRating
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

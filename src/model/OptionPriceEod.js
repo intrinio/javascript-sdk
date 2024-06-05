@@ -36,7 +36,7 @@
   /**
    * The OptionPriceEod model module.
    * @module model/OptionPriceEod
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

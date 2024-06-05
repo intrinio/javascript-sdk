@@ -36,7 +36,7 @@
   /**
    * The SecuritySnapshotsResult model module.
    * @module model/SecuritySnapshotsResult
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

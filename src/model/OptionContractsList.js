@@ -36,7 +36,7 @@
   /**
    * The OptionContractsList model module.
    * @module model/OptionContractsList
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

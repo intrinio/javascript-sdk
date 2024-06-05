@@ -36,7 +36,7 @@
   /**
    * The CompanyNews model module.
    * @module model/CompanyNews
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

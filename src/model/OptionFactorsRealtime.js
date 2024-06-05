@@ -36,7 +36,7 @@
   /**
    * The OptionFactorsRealtime model module.
    * @module model/OptionFactorsRealtime
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

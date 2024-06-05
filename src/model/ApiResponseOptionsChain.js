@@ -36,7 +36,7 @@
   /**
    * The ApiResponseOptionsChain model module.
    * @module model/ApiResponseOptionsChain
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

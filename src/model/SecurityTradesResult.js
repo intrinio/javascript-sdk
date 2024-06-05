@@ -36,7 +36,7 @@
   /**
    * The SecurityTradesResult model module.
    * @module model/SecurityTradesResult
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

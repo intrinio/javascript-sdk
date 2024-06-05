@@ -36,7 +36,7 @@
   /**
    * The CompanyDailyMetric model module.
    * @module model/CompanyDailyMetric
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

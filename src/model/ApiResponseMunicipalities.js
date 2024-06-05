@@ -36,7 +36,7 @@
   /**
    * The ApiResponseMunicipalities model module.
    * @module model/ApiResponseMunicipalities
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

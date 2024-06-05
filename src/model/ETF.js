@@ -36,7 +36,7 @@
   /**
    * The ETF model module.
    * @module model/ETF
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

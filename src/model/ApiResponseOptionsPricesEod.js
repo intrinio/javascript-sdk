@@ -36,7 +36,7 @@
   /**
    * The ApiResponseOptionsPricesEod model module.
    * @module model/ApiResponseOptionsPricesEod
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

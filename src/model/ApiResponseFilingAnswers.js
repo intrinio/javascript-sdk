@@ -36,7 +36,7 @@
   /**
    * The ApiResponseFilingAnswers model module.
    * @module model/ApiResponseFilingAnswers
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

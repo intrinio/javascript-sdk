@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityZacksAnalystRatings model module.
    * @module model/ApiResponseSecurityZacksAnalystRatings
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

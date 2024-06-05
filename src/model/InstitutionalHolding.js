@@ -36,7 +36,7 @@
   /**
    * The InstitutionalHolding model module.
    * @module model/InstitutionalHolding
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

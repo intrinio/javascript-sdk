@@ -36,7 +36,7 @@
   /**
    * The ApiResponseZacksEPSGrowthRates model module.
    * @module model/ApiResponseZacksEPSGrowthRates
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

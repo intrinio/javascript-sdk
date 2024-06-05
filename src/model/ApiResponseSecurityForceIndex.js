@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityForceIndex model module.
    * @module model/ApiResponseSecurityForceIndex
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

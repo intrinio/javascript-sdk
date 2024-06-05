@@ -36,7 +36,7 @@
   /**
    * The ZacksInstitutionalHoldingOwnerDetail model module.
    * @module model/ZacksInstitutionalHoldingOwnerDetail
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

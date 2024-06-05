@@ -36,7 +36,7 @@
   /**
    * The RealtimeStockPrice model module.
    * @module model/RealtimeStockPrice
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

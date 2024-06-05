@@ -36,7 +36,7 @@
   /**
    * The ESGComprehensiveRatingWithCompany model module.
    * @module model/ESGComprehensiveRatingWithCompany
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

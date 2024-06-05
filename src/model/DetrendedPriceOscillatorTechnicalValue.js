@@ -36,7 +36,7 @@
   /**
    * The DetrendedPriceOscillatorTechnicalValue model module.
    * @module model/DetrendedPriceOscillatorTechnicalValue
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The IntradayStockPrice model module.
    * @module model/IntradayStockPrice
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

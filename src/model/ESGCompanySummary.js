@@ -36,7 +36,7 @@
   /**
    * The ESGCompanySummary model module.
    * @module model/ESGCompanySummary
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

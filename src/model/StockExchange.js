@@ -36,7 +36,7 @@
   /**
    * The StockExchange model module.
    * @module model/StockExchange
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

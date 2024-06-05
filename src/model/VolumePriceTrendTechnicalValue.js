@@ -36,7 +36,7 @@
   /**
    * The VolumePriceTrendTechnicalValue model module.
    * @module model/VolumePriceTrendTechnicalValue
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

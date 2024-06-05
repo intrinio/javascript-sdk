@@ -36,7 +36,7 @@
   /**
    * The OptionPriceRealtimeExtended model module.
    * @module model/OptionPriceRealtimeExtended
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

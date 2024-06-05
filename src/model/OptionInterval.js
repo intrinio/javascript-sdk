@@ -36,7 +36,7 @@
   /**
    * The OptionInterval model module.
    * @module model/OptionInterval
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

@@ -33,7 +33,7 @@
   /**
    * HistoricalData service.
    * @module api/HistoricalDataApi
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The InsiderTransaction model module.
    * @module model/InsiderTransaction
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

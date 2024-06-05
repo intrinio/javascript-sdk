@@ -36,7 +36,7 @@
   /**
    * The ApiResponseOptionsPricesBatchRealtime model module.
    * @module model/ApiResponseOptionsPricesBatchRealtime
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

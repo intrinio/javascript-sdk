@@ -36,7 +36,7 @@
   /**
    * The MoneyFlowIndexTechnicalValue model module.
    * @module model/MoneyFlowIndexTechnicalValue
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

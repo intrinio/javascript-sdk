@@ -36,7 +36,7 @@
   /**
    * The SecurityTrades model module.
    * @module model/SecurityTrades
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

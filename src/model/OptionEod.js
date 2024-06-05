@@ -36,7 +36,7 @@
   /**
    * The OptionEod model module.
    * @module model/OptionEod
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

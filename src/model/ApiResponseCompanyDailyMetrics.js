@@ -36,7 +36,7 @@
   /**
    * The ApiResponseCompanyDailyMetrics model module.
    * @module model/ApiResponseCompanyDailyMetrics
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

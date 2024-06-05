@@ -36,7 +36,7 @@
   /**
    * The OptionsAggregate model module.
    * @module model/OptionsAggregate
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

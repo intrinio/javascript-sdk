@@ -36,7 +36,7 @@
   /**
    * The ApiResponseESGLatest model module.
    * @module model/ApiResponseESGLatest
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

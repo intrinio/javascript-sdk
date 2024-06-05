@@ -36,7 +36,7 @@
   /**
    * The MovingAverageConvergenceDivergenceTechnicalValue model module.
    * @module model/MovingAverageConvergenceDivergenceTechnicalValue
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The OptionUnusualTrade model module.
    * @module model/OptionUnusualTrade
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

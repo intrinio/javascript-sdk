@@ -36,7 +36,7 @@
   /**
    * The ApiResponseOptionsAggregates model module.
    * @module model/ApiResponseOptionsAggregates
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

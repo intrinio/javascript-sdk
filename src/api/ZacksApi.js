@@ -33,7 +33,7 @@
   /**
    * Zacks service.
    * @module api/ZacksApi
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

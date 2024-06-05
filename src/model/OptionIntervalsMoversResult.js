@@ -36,7 +36,7 @@
   /**
    * The OptionIntervalsMoversResult model module.
    * @module model/OptionIntervalsMoversResult
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

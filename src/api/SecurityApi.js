@@ -33,7 +33,7 @@
   /**
    * Security service.
    * @module api/SecurityApi
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

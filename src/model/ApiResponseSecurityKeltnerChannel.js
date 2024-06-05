@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityKeltnerChannel model module.
    * @module model/ApiResponseSecurityKeltnerChannel
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

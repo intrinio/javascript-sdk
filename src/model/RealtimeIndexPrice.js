@@ -36,7 +36,7 @@
   /**
    * The RealtimeIndexPrice model module.
    * @module model/RealtimeIndexPrice
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

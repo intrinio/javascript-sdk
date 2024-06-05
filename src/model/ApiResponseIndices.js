@@ -36,7 +36,7 @@
   /**
    * The ApiResponseIndices model module.
    * @module model/ApiResponseIndices
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

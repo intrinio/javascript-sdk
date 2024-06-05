@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityIchimokuKinkoHyo model module.
    * @module model/ApiResponseSecurityIchimokuKinkoHyo
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The WilliamsRTechnicalValue model module.
    * @module model/WilliamsRTechnicalValue
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

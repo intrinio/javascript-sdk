@@ -36,7 +36,7 @@
   /**
    * The SecuritySnapshotGroup model module.
    * @module model/SecuritySnapshotGroup
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityAccumulationDistributionIndex model module.
    * @module model/ApiResponseSecurityAccumulationDistributionIndex
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

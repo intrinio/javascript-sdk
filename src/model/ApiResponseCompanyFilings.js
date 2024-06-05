@@ -36,7 +36,7 @@
   /**
    * The ApiResponseCompanyFilings model module.
    * @module model/ApiResponseCompanyFilings
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityStockPrices model module.
    * @module model/ApiResponseSecurityStockPrices
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

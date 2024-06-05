@@ -36,7 +36,7 @@
   /**
    * The ApiResponseCompanyAnswers model module.
    * @module model/ApiResponseCompanyAnswers
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**

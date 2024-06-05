@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityOnBalanceVolumeMean model module.
    * @module model/ApiResponseSecurityOnBalanceVolumeMean
-   * @version 6.27.2
+   * @version 6.27.3
    */
 
   /**
