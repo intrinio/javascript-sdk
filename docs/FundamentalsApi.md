@@ -70,6 +70,7 @@ var opts = {
   'endDate': new Date("2022-12-01"),
   'updatedAfter': new Date("2022-12-01"),
   'updatedBefore': new Date("2022-12-01"),
+  'template': "indu",
   'nextPage': null
 };
 
@@ -101,6 +102,7 @@ Name | Type | Description  | Notes
  **endDate** | Date| Only include fundamentals where covered period is on or before this date. | [optional]  &nbsp;
  **updatedAfter** | Date| Only include fundamentals where it was updated after this date. | [optional]  &nbsp;
  **updatedBefore** | Date| Only include fundamentals where it was updated before this date. | [optional]  &nbsp;
+ **template** | String| The financial statement template used by Intrinio to standardize the as reported data | [optional]  &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 

@@ -5,10 +5,13 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getZacksAnalystRatings**](ZacksApi.md#getZacksAnalystRatings) | **GET** /zacks/analyst_ratings | Zacks Analyst Ratings
+[**getZacksEbitdaConsensus**](ZacksApi.md#getZacksEbitdaConsensus) | **GET** /zacks/ebitda_consensus | Zacks EBITDA Consensus
 [**getZacksEpsEstimates**](ZacksApi.md#getZacksEpsEstimates) | **GET** /zacks/eps_estimates | Zacks EPS Estimates
 [**getZacksEpsGrowthRates**](ZacksApi.md#getZacksEpsGrowthRates) | **GET** /zacks/eps_growth_rates | Zacks EPS Growth Rates
 [**getZacksEpsSurprises**](ZacksApi.md#getZacksEpsSurprises) | **GET** /zacks/eps_surprises | Zacks EPS Surprises
 [**getZacksEtfHoldings**](ZacksApi.md#getZacksEtfHoldings) | **GET** /zacks/etf_holdings | Zacks ETF Holdings
+[**getZacksForwardPe**](ZacksApi.md#getZacksForwardPe) | **GET** /zacks/forward_pe | Zacks Forward PE Estimates
+[**getZacksForwardPeByIdentifier**](ZacksApi.md#getZacksForwardPeByIdentifier) | **GET** /zacks/forward_pe/{identifier} | Zacks Forward PE by identifer
 [**getZacksInstitutionalHoldingCompanies**](ZacksApi.md#getZacksInstitutionalHoldingCompanies) | **GET** /zacks/institutional_holdings/companies | Zacks Institutional Holding Companies
 [**getZacksInstitutionalHoldingOwners**](ZacksApi.md#getZacksInstitutionalHoldingOwners) | **GET** /zacks/institutional_holdings/owners | Zacks Institutional Holding Owners
 [**getZacksInstitutionalHoldings**](ZacksApi.md#getZacksInstitutionalHoldings) | **GET** /zacks/institutional_holdings | Zacks Institutional Holdings
@@ -129,6 +132,90 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseZacksAnalystRatings**](ApiResponseZacksAnalystRatings.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:ZacksApi)
+
+[//]: # (METHOD:getZacksEbitdaConsensus)
+
+[//]: # (RETURN_TYPE:ApiResponseZacksEBITDAConsensus)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksEBITDAConsensus.md)
+
+[//]: # (OPERATION:getZacksEbitdaConsensus_v2)
+
+[//]: # (ENDPOINT:/zacks/ebitda_consensus)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getZacksEbitdaConsensus)
+
+<a name="getZacksEbitdaConsensus"></a>
+## **getZacksEbitdaConsensus**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getZacksEbitdaConsensus_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksEBITDAConsensus getZacksEbitdaConsensus(opts)
+
+#### Zacks EBITDA Consensus
+
+
+This database offers consensus EBITDA-related estimates for over 4,000 US and Canadian listed companies.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var zacks = new intrinioSDK.ZacksApi();
+
+var opts = { 
+  'identifier': "AAPL",
+  'type': null,
+  'nextPage': null
+};
+
+zacks.getZacksEbitdaConsensus(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
+ **type** | String| Limit EBITDA estimates to this type | [optional]  &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksEBITDAConsensus**](ApiResponseZacksEBITDAConsensus.md)
 
 
 
@@ -513,6 +600,165 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseZacksETFHoldings**](ApiResponseZacksETFHoldings.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:ZacksApi)
+
+[//]: # (METHOD:getZacksForwardPe)
+
+[//]: # (RETURN_TYPE:ApiResponseZacksForwardPEs)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseZacksForwardPEs.md)
+
+[//]: # (OPERATION:getZacksForwardPe_v2)
+
+[//]: # (ENDPOINT:/zacks/forward_pe)
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getZacksForwardPe)
+
+<a name="getZacksForwardPe"></a>
+## **getZacksForwardPe**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getZacksForwardPe_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseZacksForwardPEs getZacksForwardPe(opts)
+
+#### Zacks Forward PE Estimates
+
+
+This database offers price-to-earning ratio estimates for over 4,000 US and Canadian listed companies.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var zacks = new intrinioSDK.ZacksApi();
+
+var opts = { 
+  'nextPage': null
+};
+
+zacks.getZacksForwardPe(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseZacksForwardPEs**](ApiResponseZacksForwardPEs.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:ZacksApi)
+
+[//]: # (METHOD:getZacksForwardPeByIdentifier)
+
+[//]: # (RETURN_TYPE:ZacksForwardPE)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ZacksForwardPE.md)
+
+[//]: # (OPERATION:getZacksForwardPeByIdentifier_v2)
+
+[//]: # (ENDPOINT:/zacks/forward_pe/{identifier})
+
+[//]: # (DOCUMENT_LINK:ZacksApi.md#getZacksForwardPeByIdentifier)
+
+<a name="getZacksForwardPeByIdentifier"></a>
+## **getZacksForwardPeByIdentifier**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getZacksForwardPeByIdentifier_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ZacksForwardPE getZacksForwardPeByIdentifier(identifier)
+
+#### Zacks Forward PE by identifer
+
+
+Returns the forward PE estimates for the identifier
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var zacks = new intrinioSDK.ZacksApi();
+
+var identifier = "MSFT";
+
+
+zacks.getZacksForwardPeByIdentifier(identifier).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| An Intrinio ID or ticker for a Security |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ZacksForwardPE**](ZacksForwardPE.md)
 
 
 

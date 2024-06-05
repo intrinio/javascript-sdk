@@ -445,7 +445,7 @@ Name | Type | Description  | Notes
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseETFs searchEtfs(query)
+> ApiResponseETFs searchEtfs(query, opts)
 
 #### Search ETFs
 
@@ -468,7 +468,11 @@ var eTFs = new intrinioSDK.ETFsApi();
 var query = "iShares";
 
 
-eTFs.searchEtfs(query).then(function(data) {
+var opts = { 
+  'mode': null
+};
+
+eTFs.searchEtfs(query, opts).then(function(data) {
   data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
@@ -486,6 +490,7 @@ eTFs.searchEtfs(query).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | String|  |  &nbsp;
+ **mode** | String| When set, changes search mode to the specified mode. Paging is not available in rank_order. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

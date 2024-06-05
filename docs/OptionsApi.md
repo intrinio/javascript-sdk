@@ -5,6 +5,7 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAllOptionsTickers**](OptionsApi.md#getAllOptionsTickers) | **GET** /options/tickers | Options Tickers
+[**getOptionAggregates**](OptionsApi.md#getOptionAggregates) | **GET** /options/aggregates | Total open interest and volume aggregated by ticker
 [**getOptionExpirationsRealtime**](OptionsApi.md#getOptionExpirationsRealtime) | **GET** /options/expirations/{symbol}/realtime | Options Expirations
 [**getOptionStrikesRealtime**](OptionsApi.md#getOptionStrikesRealtime) | **GET** /options/strikes/{symbol}/{strike}/realtime | Option Strikes Realtime
 [**getOptions**](OptionsApi.md#getOptions) | **GET** /options/{symbol} | Options
@@ -98,6 +99,86 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**ApiResponseOptionsTickers**](ApiResponseOptionsTickers.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:OptionsApi)
+
+[//]: # (METHOD:getOptionAggregates)
+
+[//]: # (RETURN_TYPE:ApiResponseOptionsAggregates)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsAggregates.md)
+
+[//]: # (OPERATION:getOptionAggregates_v2)
+
+[//]: # (ENDPOINT:/options/aggregates)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getOptionAggregates)
+
+<a name="getOptionAggregates"></a>
+## **getOptionAggregates**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getOptionAggregates_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsAggregates getOptionAggregates(opts)
+
+#### Total open interest and volume aggregated by ticker
+
+
+Returns total open interest and volume by ticker
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var options = new intrinioSDK.OptionsApi();
+
+var opts = { 
+  'date': "2024-04-24"
+};
+
+options.getOptionAggregates(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **date** | [**Object**](.md)| Return aggregated data for this date | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsAggregates**](ApiResponseOptionsAggregates.md)
 
 
 

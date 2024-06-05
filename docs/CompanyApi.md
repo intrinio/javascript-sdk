@@ -294,7 +294,7 @@ company.getAllCompanyNews(opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **specificSource** | String| Only news from this source. | [optional]  &nbsp;
+ **specificSource** | String| Only news from this source. Defaults to highest available if not present. | [optional]  &nbsp;
  **pageSize** | Number| The maximum number of results to return. | [optional] [default to 100] &nbsp;
  **sentiment** | String| Filter by sentiment.  Unsupported for yahoo source. | [optional]  &nbsp;
  **topic** | String| Filter by topic.  Unsupported for yahoo source. | [optional]  &nbsp;
@@ -1209,7 +1209,7 @@ company.getCompanyNews(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **specificSource** | String| Only news from this source | [optional]  &nbsp;
+ **specificSource** | String| Only news from this source. Defaults to highest available if not present. | [optional]  &nbsp;
  **pageSize** | Number| The maximum number of results to return | [optional] [default to 100] &nbsp;
  **sentiment** | String| Filter by sentiment.  Unsupported for yahoo source. | [optional]  &nbsp;
  **topic** | String| Filter by topic.  Unsupported for yahoo source. | [optional]  &nbsp;
@@ -1804,6 +1804,7 @@ var query = "Apple";
 
 var opts = { 
   'active': true,
+  'mode': null,
   'pageSize': 100
 };
 
@@ -1825,7 +1826,8 @@ company.searchCompanies(query, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **query** | String| Search parameters |  &nbsp;
- **active** | Boolean| When true, return companies that are actively traded (having stock prices within the past 14 days). When false, return companies that are not actively traded or never have been traded. | [optional]  &nbsp;
+ **active** | Boolean| When true, return companies that are actively traded (having stock prices within the past 14 days). When false, return companies that are not actively traded or never have been traded. Not setting this value returns all. Not used when mode is set. | [optional]  &nbsp;
+ **mode** | String| When set, changes search mode to the specified mode. | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
 <br/>
 
