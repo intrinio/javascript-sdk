@@ -304,6 +304,7 @@
      * @param {module:model/String} opts.source Return realtime prices from the specified data source. If no source is specified, all sources are used.
      * @param {Boolean} opts.activeOnly Returns prices only from the most recent trading day.
      * @param {Number} opts.pageSize The number of results to return (default to 100)
+     * @param {Array.<String>} opts.tickers The list of ticker symbols to filter to.
      * @param {String} opts.nextPage Gets the next page of data from a previous API call
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ApiResponseStockExchangeRealtimeStockPrices} and HTTP response
      */
@@ -327,6 +328,10 @@
         'next_page': opts['nextPage'],
       };
       var collectionQueryParams = {
+        'tickers': {
+          value: opts['tickers'],
+          collectionFormat: 'csv'
+        },
       };
       var headerParams = {
       };
@@ -353,6 +358,7 @@
      * @param {module:model/String} opts.source Return realtime prices from the specified data source. If no source is specified, all sources are used.
      * @param {Boolean} opts.activeOnly Returns prices only from the most recent trading day.
      * @param {Number} opts.pageSize The number of results to return (default to 100)
+     * @param {Array.<String>} opts.tickers The list of ticker symbols to filter to.
      * @param {String} opts.nextPage Gets the next page of data from a previous API call
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ApiResponseStockExchangeRealtimeStockPrices}
      */

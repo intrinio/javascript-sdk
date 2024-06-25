@@ -1066,6 +1066,7 @@ var opts = {
   'endTime': null,
   'timezone': "UTC",
   'pageSize': 100,
+  'splitAdjusted': false,
   'nextPage': null
 };
 
@@ -1095,6 +1096,7 @@ Name | Type | Description  | Notes
  **endTime** | String| Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) | [optional]  &nbsp;
  **timezone** | String| Returns trading times in this timezone | [optional] [default to UTC] &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **splitAdjusted** | Boolean| Whether to return the values adjusted for splits or not. Default is false. | [optional] [default to false] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 

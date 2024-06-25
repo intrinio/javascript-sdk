@@ -765,6 +765,7 @@
      * @param {String} opts.endTime Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format)
      * @param {module:model/String} opts.timezone Returns trading times in this timezone (default to UTC)
      * @param {Number} opts.pageSize The number of results to return (default to 100)
+     * @param {Boolean} opts.splitAdjusted Whether to return the values adjusted for splits or not. Default is false. (default to false)
      * @param {String} opts.nextPage Gets the next page of data from a previous API call
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ApiResponseSecurityIntervalPrices} and HTTP response
      */
@@ -795,6 +796,7 @@
         'timezone': opts['timezone'],
         'interval_size': intervalSize,
         'page_size': opts['pageSize'],
+        'split_adjusted': opts['splitAdjusted'],
         'next_page': opts['nextPage'],
       };
       var collectionQueryParams = {
@@ -829,6 +831,7 @@
      * @param {String} opts.endTime Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format)
      * @param {module:model/String} opts.timezone Returns trading times in this timezone (default to UTC)
      * @param {Number} opts.pageSize The number of results to return (default to 100)
+     * @param {Boolean} opts.splitAdjusted Whether to return the values adjusted for splits or not. Default is false. (default to false)
      * @param {String} opts.nextPage Gets the next page of data from a previous API call
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ApiResponseSecurityIntervalPrices}
      */

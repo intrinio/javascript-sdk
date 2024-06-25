@@ -406,6 +406,7 @@ var opts = {
   'source': null,
   'activeOnly': null,
   'pageSize': 100,
+  'tickers': [null],
   'nextPage': null
 };
 
@@ -430,6 +431,7 @@ Name | Type | Description  | Notes
  **source** | String| Return realtime prices from the specified data source. If no source is specified, all sources are used. | [optional]  &nbsp;
  **activeOnly** | Boolean| Returns prices only from the most recent trading day. | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **tickers** | [**[String]**](String.md)| The list of ticker symbols to filter to. | [optional]  &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
