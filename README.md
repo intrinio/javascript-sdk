@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.61.1
-- Package version: 6.27.3
+- API version: 2.62.1
+- Package version: 6.27.4
 
 
 ## Installation
@@ -86,6 +86,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.CompanyApi* | [**getCompanyHistoricalData**](docs/CompanyApi.md#getCompanyHistoricalData) | **GET** /companies/{identifier}/historical_data/{tag} | Historical Data for Company
 *intrinioSDK.CompanyApi* | [**getCompanyIpos**](docs/CompanyApi.md#getCompanyIpos) | **GET** /companies/ipos | IPOs
 *intrinioSDK.CompanyApi* | [**getCompanyNews**](docs/CompanyApi.md#getCompanyNews) | **GET** /companies/{identifier}/news | All News by Company
+*intrinioSDK.CompanyApi* | [**getCompanyNewsBody**](docs/CompanyApi.md#getCompanyNewsBody) | **GET** /companies/news/body | The body of a news article
 *intrinioSDK.CompanyApi* | [**getCompanyPublicFloat**](docs/CompanyApi.md#getCompanyPublicFloat) | **GET** /companies/{identifier}/public_float | Get Company&#39;s public float
 *intrinioSDK.CompanyApi* | [**getCompanySecurities**](docs/CompanyApi.md#getCompanySecurities) | **GET** /companies/{identifier}/securities | All Securities by Company
 *intrinioSDK.CompanyApi* | [**insiderTransactionFilingsByCompany**](docs/CompanyApi.md#insiderTransactionFilingsByCompany) | **GET** /companies/{identifier}/insider_transaction_filings | Insider Transaction Filings by Company
@@ -316,6 +317,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseCompanyHistoricalData](docs/ApiResponseCompanyHistoricalData.md)
  - [intrinioSDK.ApiResponseCompanyInsiderTransactionFilings](docs/ApiResponseCompanyInsiderTransactionFilings.md)
  - [intrinioSDK.ApiResponseCompanyNews](docs/ApiResponseCompanyNews.md)
+ - [intrinioSDK.ApiResponseCompanyNewsBody](docs/ApiResponseCompanyNewsBody.md)
  - [intrinioSDK.ApiResponseCompanyPublicFloatResult](docs/ApiResponseCompanyPublicFloatResult.md)
  - [intrinioSDK.ApiResponseCompanyRecognize](docs/ApiResponseCompanyRecognize.md)
  - [intrinioSDK.ApiResponseCompanySecurities](docs/ApiResponseCompanySecurities.md)

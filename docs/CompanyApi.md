@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**getCompanyHistoricalData**](CompanyApi.md#getCompanyHistoricalData) | **GET** /companies/{identifier}/historical_data/{tag} | Historical Data for Company
 [**getCompanyIpos**](CompanyApi.md#getCompanyIpos) | **GET** /companies/ipos | IPOs
 [**getCompanyNews**](CompanyApi.md#getCompanyNews) | **GET** /companies/{identifier}/news | All News by Company
+[**getCompanyNewsBody**](CompanyApi.md#getCompanyNewsBody) | **GET** /companies/news/body | The body of a news article
 [**getCompanyPublicFloat**](CompanyApi.md#getCompanyPublicFloat) | **GET** /companies/{identifier}/public_float | Get Company&#39;s public float
 [**getCompanySecurities**](CompanyApi.md#getCompanySecurities) | **GET** /companies/{identifier}/securities | All Securities by Company
 [**insiderTransactionFilingsByCompany**](CompanyApi.md#insiderTransactionFilingsByCompany) | **GET** /companies/{identifier}/insider_transaction_filings | Insider Transaction Filings by Company
@@ -1230,6 +1231,94 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseCompanyNews**](ApiResponseCompanyNews.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:CompanyApi)
+
+[//]: # (METHOD:getCompanyNewsBody)
+
+[//]: # (RETURN_TYPE:ApiResponseCompanyNewsBody)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyNewsBody.md)
+
+[//]: # (OPERATION:getCompanyNewsBody_v2)
+
+[//]: # (ENDPOINT:/companies/news/body)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#getCompanyNewsBody)
+
+<a name="getCompanyNewsBody"></a>
+## **getCompanyNewsBody**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getCompanyNewsBody_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseCompanyNewsBody getCompanyNewsBody(newsStoryId, publicationDate, opts)
+
+#### The body of a news article
+
+
+Returns the news article body.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var company = new intrinioSDK.CompanyApi();
+
+var newsStoryId = "new_aBcDef";
+var publicationDate = null;
+
+
+var opts = { 
+  'specificSource': null,
+  'nextPage': null
+};
+
+company.getCompanyNewsBody(newsStoryId, publicationDate, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **newsStoryId** | String| The identifier of the news story. |  &nbsp;
+ **publicationDate** | Date| The DateTime of the story. |  &nbsp;
+ **specificSource** | String| Only news from this source. Defaults to highest available if not present. | [optional]  &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseCompanyNewsBody**](ApiResponseCompanyNewsBody.md)
 
 
 
