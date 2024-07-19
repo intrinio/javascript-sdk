@@ -68,25 +68,25 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var zacks = new intrinioSDK.ZacksApi();
 
 var opts = { 
-  'identifier': "\"AAPL\"",
-  'startDate': new Date("\"~null\""),
-  'endDate': new Date("\"~null\""),
-  'meanGreater': "~null",
-  'meanLess': "~null",
-  'strongBuysGreater': "~null",
-  'strongBuysLess': "~null",
-  'buysGreater': "~null",
-  'buysLess': "~null",
-  'holdsGreater': "~null",
-  'holdsLess': "~null",
-  'sellsGreater': "~null",
-  'sellsLess': "~null",
-  'strongSellsGreater': "~null",
-  'strongSellsLess': "~null",
-  'totalGreater': "~null",
-  'totalLess': "~null",
+  'identifier': "AAPL",
+  'startDate': null,
+  'endDate': null,
+  'meanGreater': null,
+  'meanLess': null,
+  'strongBuysGreater': null,
+  'strongBuysLess': null,
+  'buysGreater': null,
+  'buysLess': null,
+  'holdsGreater': null,
+  'holdsLess': null,
+  'sellsGreater': null,
+  'sellsLess': null,
+  'strongSellsGreater': null,
+  'strongSellsLess': null,
+  'totalGreater': null,
+  'totalLess': null,
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 zacks.getZacksAnalystRatings(opts).then(function(data) {
@@ -184,9 +184,9 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var zacks = new intrinioSDK.ZacksApi();
 
 var opts = { 
-  'identifier': "\"AAPL\"",
-  'type': "\"~null\"",
-  'nextPage': "\"~null\""
+  'identifier': "AAPL",
+  'type': null,
+  'nextPage': null
 };
 
 zacks.getZacksEbitdaConsensus(opts).then(function(data) {
@@ -268,15 +268,15 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var zacks = new intrinioSDK.ZacksApi();
 
 var opts = { 
-  'identifier': "\"AAPL\"",
-  'startDate': new Date("\"~null\""),
-  'endDate': new Date("\"~null\""),
-  'fiscalYear': "~null",
-  'fiscalPeriod': "\"~null\"",
-  'calendarYear': "~null",
-  'calendarPeriod': "\"~null\"",
+  'identifier': "AAPL",
+  'startDate': null,
+  'endDate': null,
+  'fiscalYear': null,
+  'fiscalPeriod': null,
+  'calendarYear': null,
+  'calendarPeriod': null,
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 zacks.getZacksEpsEstimates(opts).then(function(data) {
@@ -364,11 +364,11 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var zacks = new intrinioSDK.ZacksApi();
 
 var opts = { 
-  'company': "\"AAPL\"",
-  'industryGroupName': "\"~null\"",
-  'industryGroupNumber': "\"~null\"",
+  'company': "AAPL",
+  'industryGroupName': null,
+  'industryGroupNumber': null,
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 zacks.getZacksEpsGrowthRates(opts).then(function(data) {
@@ -452,22 +452,22 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var zacks = new intrinioSDK.ZacksApi();
 
 var opts = { 
-  'startDate': new Date("\"~null\""),
-  'endDate': new Date("\"~null\""),
-  'epsActualGreater': "~null",
-  'epsActualLess': "~null",
-  'epsMeanEstimateGreater': "~null",
-  'epsMeanEstimateLess': "~null",
-  'epsAmountDiffGreater': "~null",
-  'epsAmountDiffLess': "~null",
-  'epsPercentDiffGreater': "~null",
-  'epsPercentDiffLess': "~null",
-  'epsCountEstimateGreater': "~null",
-  'epsCountEstimateLess': "~null",
-  'epsStdDevEstimateGreater': "~null",
-  'epsStdDevEstimateLess': "~null",
+  'startDate': null,
+  'endDate': null,
+  'epsActualGreater': null,
+  'epsActualLess': null,
+  'epsMeanEstimateGreater': null,
+  'epsMeanEstimateLess': null,
+  'epsAmountDiffGreater': null,
+  'epsAmountDiffLess': null,
+  'epsPercentDiffGreater': null,
+  'epsPercentDiffLess': null,
+  'epsCountEstimateGreater': null,
+  'epsCountEstimateLess': null,
+  'epsStdDevEstimateGreater': null,
+  'epsStdDevEstimateLess': null,
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 zacks.getZacksEpsSurprises(opts).then(function(data) {
@@ -562,12 +562,12 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var zacks = new intrinioSDK.ZacksApi();
 
 var opts = { 
-  'etfTicker': "\"SPY\"",
-  'holdingSymbol': "\"AAPL\"",
-  'weightGreater': "~null",
-  'weightLess': "~null",
+  'etfTicker': "SPY",
+  'holdingSymbol': "AAPL",
+  'weightGreater': null,
+  'weightLess': null,
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 zacks.getZacksEtfHoldings(opts).then(function(data) {
@@ -652,7 +652,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var zacks = new intrinioSDK.ZacksApi();
 
 var opts = { 
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 zacks.getZacksForwardPe(opts).then(function(data) {
@@ -731,7 +731,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var zacks = new intrinioSDK.ZacksApi();
 
-var identifier = "\"MSFT\"";
+var identifier = "MSFT";
 
 
 zacks.getZacksForwardPeByIdentifier(identifier).then(function(data) {
@@ -811,9 +811,9 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var zacks = new intrinioSDK.ZacksApi();
 
 var opts = { 
-  'ticker': "\"~null\"",
+  'ticker': null,
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 zacks.getZacksInstitutionalHoldingCompanies(opts).then(function(data) {
@@ -895,9 +895,9 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var zacks = new intrinioSDK.ZacksApi();
 
 var opts = { 
-  'cik': "\"~null\"",
+  'cik': null,
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 zacks.getZacksInstitutionalHoldingOwners(opts).then(function(data) {
@@ -979,10 +979,10 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var zacks = new intrinioSDK.ZacksApi();
 
 var opts = { 
-  'ticker': "\"~null\"",
-  'ownerCik': "\"~null\"",
+  'ticker': null,
+  'ownerCik': null,
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 zacks.getZacksInstitutionalHoldings(opts).then(function(data) {
@@ -1065,9 +1065,9 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var zacks = new intrinioSDK.ZacksApi();
 
 var opts = { 
-  'identifier': "\"AAPL\"",
+  'identifier': "AAPL",
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 zacks.getZacksLongTermGrowthRates(opts).then(function(data) {
@@ -1149,16 +1149,16 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var zacks = new intrinioSDK.ZacksApi();
 
 var opts = { 
-  'identifier': "\"AAPL\"",
-  'startDate': new Date("\"~null\""),
-  'endDate': new Date("\"~null\""),
-  'fiscalYear': "~null",
-  'fiscalPeriod': "\"~null\"",
-  'calendarYear': "~null",
-  'calendarPeriod': "\"~null\"",
-  'nextPage': "\"~null\"",
+  'identifier': "AAPL",
+  'startDate': null,
+  'endDate': null,
+  'fiscalYear': null,
+  'fiscalPeriod': null,
+  'calendarYear': null,
+  'calendarPeriod': null,
+  'nextPage': null,
   'pageSize': 100,
-  'nextPage2': "\"~null\""
+  'nextPage2': null
 };
 
 zacks.getZacksSalesEstimates(opts).then(function(data) {
@@ -1247,22 +1247,22 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var zacks = new intrinioSDK.ZacksApi();
 
 var opts = { 
-  'startDate': new Date("\"~null\""),
-  'endDate': new Date("\"~null\""),
-  'salesActualGreater': "~null",
-  'salesActualLess': "~null",
-  'salesMeanEstimateGreater': "~null",
-  'salesMeanEstimateLess': "~null",
-  'salesAmountDiffGreater': "~null",
-  'salesAmountDiffLess': "~null",
-  'salesPercentDiffGreater': "~null",
-  'salesPercentDiffLess': "~null",
-  'salesCountEstimateGreater': "~null",
-  'salesCountEstimateLess': "~null",
-  'salesStdDevEstimateGreater': "~null",
-  'salesStdDevEstimateLess': "~null",
+  'startDate': null,
+  'endDate': null,
+  'salesActualGreater': null,
+  'salesActualLess': null,
+  'salesMeanEstimateGreater': null,
+  'salesMeanEstimateLess': null,
+  'salesAmountDiffGreater': null,
+  'salesAmountDiffLess': null,
+  'salesPercentDiffGreater': null,
+  'salesPercentDiffLess': null,
+  'salesCountEstimateGreater': null,
+  'salesCountEstimateLess': null,
+  'salesStdDevEstimateGreater': null,
+  'salesStdDevEstimateLess': null,
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 zacks.getZacksSalesSurprises(opts).then(function(data) {
@@ -1357,10 +1357,10 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var zacks = new intrinioSDK.ZacksApi();
 
 var opts = { 
-  'identifier': "\"AAPL\"",
-  'industryGroupNumber': "\"~null\"",
+  'identifier': "AAPL",
+  'industryGroupNumber': null,
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 zacks.getZacksTargetPriceConsensuses(opts).then(function(data) {

@@ -59,9 +59,9 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
 var opts = { 
-  'city': "\"New York\"",
-  'country': "\"UNITED STATES OF AMERICA\"",
-  'countryCode': "\"US\"",
+  'city': "New York",
+  'country': "UNITED STATES OF AMERICA",
+  'countryCode': "US",
   'pageSize': 100
 };
 
@@ -144,7 +144,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "\"USCOMP\"";
+var identifier = "USCOMP";
 
 
 stockExchange.getStockExchangeById(identifier).then(function(data) {
@@ -223,13 +223,13 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "\"USCOMP\"";
+var identifier = "USCOMP";
 
 
 var opts = { 
-  'date': new Date("\"2018-08-14\""),
+  'date': new Date("2018-08-14"),
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 stockExchange.getStockExchangePriceAdjustments(identifier, opts).then(function(data) {
@@ -311,13 +311,13 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "\"USCOMP\"";
+var identifier = "USCOMP";
 
 
 var opts = { 
-  'date': new Date("\"2018-08-14\""),
+  'date': new Date("2018-08-14"),
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 stockExchange.getStockExchangePrices(identifier, opts).then(function(data) {
@@ -399,15 +399,15 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "\"USCOMP\"";
+var identifier = "USCOMP";
 
 
 var opts = { 
-  'source': ["\"~null\""],
-  'activeOnly': "~null",
+  'source': [null],
+  'activeOnly': null,
   'pageSize': 100,
-  'tickers': ["\"~null\""],
-  'nextPage': "\"~null\""
+  'tickers': [null],
+  'nextPage': null
 };
 
 stockExchange.getStockExchangeRealtimePrices(identifier, opts).then(function(data) {
@@ -491,12 +491,12 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "\"USCOMP\"";
+var identifier = "USCOMP";
 
 
 var opts = { 
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 stockExchange.getStockExchangeSecurities(identifier, opts).then(function(data) {

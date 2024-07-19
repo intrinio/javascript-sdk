@@ -59,9 +59,9 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var eTFs = new intrinioSDK.ETFsApi();
 
 var opts = { 
-  'exchange': "\"XNAS\"",
+  'exchange': "XNAS",
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 eTFs.getAllEtfs(opts).then(function(data) {
@@ -142,7 +142,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var eTFs = new intrinioSDK.ETFsApi();
 
-var identifier = "\"SPY\"";
+var identifier = "SPY";
 
 
 eTFs.getEtf(identifier).then(function(data) {
@@ -221,7 +221,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var eTFs = new intrinioSDK.ETFsApi();
 
-var identifier = "\"SPY\"";
+var identifier = "SPY";
 
 
 eTFs.getEtfAnalytics(identifier).then(function(data) {
@@ -300,12 +300,12 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var eTFs = new intrinioSDK.ETFsApi();
 
-var identifier = "\"SPY\"";
+var identifier = "SPY";
 
 
 var opts = { 
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 eTFs.getEtfHoldings(identifier, opts).then(function(data) {
@@ -386,7 +386,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var eTFs = new intrinioSDK.ETFsApi();
 
-var identifier = "\"SPY\"";
+var identifier = "SPY";
 
 
 eTFs.getEtfStats(identifier).then(function(data) {
@@ -465,11 +465,11 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var eTFs = new intrinioSDK.ETFsApi();
 
-var query = "\"iShares\"";
+var query = "iShares";
 
 
 var opts = { 
-  'mode': "\"~null\""
+  'mode': null
 };
 
 eTFs.searchEtfs(query, opts).then(function(data) {

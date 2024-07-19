@@ -56,19 +56,19 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var municipality = new intrinioSDK.MunicipalityApi();
 
 var opts = { 
-  'hasFinancials': "~null",
-  'governmentName': "\"~null\"",
-  'governmentType': "\"~null\"",
-  'areaName': "\"~null\"",
-  'areaType': "\"~null\"",
-  'city': "\"~null\"",
-  'state': "\"~null\"",
-  'zipcode': "~null",
-  'populationGreaterThan': "~null",
-  'populationLessThan': "~null",
-  'enrollmentGreaterThan': "~null",
-  'enrollmentLessThan': "~null",
-  'nextPage': "\"~null\""
+  'hasFinancials': null,
+  'governmentName': null,
+  'governmentType': null,
+  'areaName': null,
+  'areaType': null,
+  'city': null,
+  'state': null,
+  'zipcode': null,
+  'populationGreaterThan': null,
+  'populationLessThan': null,
+  'enrollmentGreaterThan': null,
+  'enrollmentLessThan': null,
+  'nextPage': null
 };
 
 municipality.getAllMunicipalities(opts).then(function(data) {
@@ -159,7 +159,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var municipality = new intrinioSDK.MunicipalityApi();
 
-var id = "\"mun_Xn7x4z\"";
+var id = "mun_Xn7x4z";
 
 
 municipality.getMunicipalityById(id).then(function(data) {
@@ -238,7 +238,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var municipality = new intrinioSDK.MunicipalityApi();
 
-var id = "\"mun_Xn7x4z\"";
+var id = "mun_Xn7x4z";
 
 
 var opts = { 

@@ -59,19 +59,19 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var fundamentals = new intrinioSDK.FundamentalsApi();
 
 var opts = { 
-  'filedAfter': new Date("\"2022-01-01\""),
-  'filedBefore': new Date("\"2022-12-01\""),
+  'filedAfter': new Date("2022-01-01"),
+  'filedBefore': new Date("2022-12-01"),
   'reportedOnly': false,
   'fiscalYear': 2017,
-  'statementCode': "\"~null\"",
+  'statementCode': null,
   'type': "false",
-  'fiscalPeriod': "\"FY\"",
-  'startDate': new Date("\"2022-01-01\""),
-  'endDate': new Date("\"2022-12-01\""),
-  'updatedAfter': new Date("\"2022-12-01\""),
-  'updatedBefore': new Date("\"2022-12-01\""),
-  'template': "\"indu\"",
-  'nextPage': "\"~null\""
+  'fiscalPeriod': "FY",
+  'startDate': new Date("2022-01-01"),
+  'endDate': new Date("2022-12-01"),
+  'updatedAfter': new Date("2022-12-01"),
+  'updatedBefore': new Date("2022-12-01"),
+  'template': "indu",
+  'nextPage': null
 };
 
 fundamentals.filterFundamental(opts).then(function(data) {
@@ -162,7 +162,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var fundamentals = new intrinioSDK.FundamentalsApi();
 
-var id = "\"fun_ge9LlE\"";
+var id = "fun_ge9LlE";
 
 
 fundamentals.getFundamentalById(id).then(function(data) {
@@ -241,7 +241,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var fundamentals = new intrinioSDK.FundamentalsApi();
 
-var id = "\"AAPL-income_statement-2018-Q1\"";
+var id = "AAPL-income_statement-2018-Q1";
 
 
 fundamentals.getFundamentalReportedFinancials(id).then(function(data) {
@@ -320,7 +320,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var fundamentals = new intrinioSDK.FundamentalsApi();
 
-var id = "\"AAPL-income_statement-2018-Q1\"";
+var id = "AAPL-income_statement-2018-Q1";
 
 
 fundamentals.getFundamentalStandardizedFinancials(id).then(function(data) {
@@ -399,8 +399,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var fundamentals = new intrinioSDK.FundamentalsApi();
 
-var id = "\"AAPL-income_statement-2020-FY\"";
-var tag = "\"ceo\"";
+var id = "AAPL-income_statement-2020-FY";
+var tag = "ceo";
 
 
 fundamentals.getFundamentalStandardizedFinancialsDimensions(id, tag).then(function(data) {
@@ -480,10 +480,10 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var fundamentals = new intrinioSDK.FundamentalsApi();
 
-var identifier = "\"AAPL\"";
-var statementCode = "\"income_statement\"";
+var identifier = "AAPL";
+var statementCode = "income_statement";
 var fiscalYear = 2017;
-var fiscalPeriod = "\"FY\"";
+var fiscalPeriod = "FY";
 
 
 fundamentals.lookupFundamental(identifier, statementCode, fiscalYear, fiscalPeriod).then(function(data) {

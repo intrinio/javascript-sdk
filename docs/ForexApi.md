@@ -201,18 +201,18 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var forex = new intrinioSDK.ForexApi();
 
-var pair = "\"EURUSD\"";
-var timeframe = "\"D1\"";
+var pair = "EURUSD";
+var timeframe = "D1";
 
 
 var opts = { 
   'timezone': "UTC",
-  'startDate': new Date("\"2018-01-01\""),
-  'startTime': "\"~null\"",
-  'endDate': new Date("\"2019-01-01\""),
-  'endTime': "\"~null\"",
+  'startDate': new Date("2018-01-01"),
+  'startTime': null,
+  'endDate': new Date("2019-01-01"),
+  'endTime': null,
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 forex.getForexPrices(pair, timeframe, opts).then(function(data) {

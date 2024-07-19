@@ -78,7 +78,7 @@ var index = new intrinioSDK.IndexApi();
 
 var opts = { 
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 index.getAllEconomicIndices(opts).then(function(data) {
@@ -159,8 +159,8 @@ var index = new intrinioSDK.IndexApi();
 
 var opts = { 
   'pageSize': 100,
-  'startDate': new Date("\"~null\""),
-  'endDate': new Date("\"~null\"")
+  'startDate': null,
+  'endDate': null
 };
 
 index.getAllEodIndexPrices(opts).then(function(data) {
@@ -400,7 +400,7 @@ var index = new intrinioSDK.IndexApi();
 
 var opts = { 
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 index.getAllSicIndices(opts).then(function(data) {
@@ -481,7 +481,7 @@ var index = new intrinioSDK.IndexApi();
 
 var opts = { 
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 index.getAllStockMarketIndices(opts).then(function(data) {
@@ -561,7 +561,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var index = new intrinioSDK.IndexApi();
 
-var identifier = "\"$GDP\"";
+var identifier = "$GDP";
 
 
 index.getEconomicIndexById(identifier).then(function(data) {
@@ -640,8 +640,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var index = new intrinioSDK.IndexApi();
 
-var identifier = "\"$GDP\"";
-var tag = "\"level\"";
+var identifier = "$GDP";
+var tag = "level";
 
 
 index.getEconomicIndexDataPointNumber(identifier, tag).then(function(data) {
@@ -721,8 +721,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var index = new intrinioSDK.IndexApi();
 
-var identifier = "\"$GDP\"";
-var tag = "\"level\"";
+var identifier = "$GDP";
+var tag = "level";
 
 
 index.getEconomicIndexDataPointText(identifier, tag).then(function(data) {
@@ -802,17 +802,17 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var index = new intrinioSDK.IndexApi();
 
-var identifier = "\"$GDP\"";
-var tag = "\"level\"";
+var identifier = "$GDP";
+var tag = "level";
 
 
 var opts = { 
-  'type': "\"~null\"",
-  'startDate': new Date("\"2018-01-01\""),
-  'endDate': new Date("\"~null\""),
+  'type': null,
+  'startDate': new Date("2018-01-01"),
+  'endDate': null,
   'sortOrder': "desc",
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 index.getEconomicIndexHistoricalData(identifier, tag, opts).then(function(data) {
@@ -897,13 +897,13 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var index = new intrinioSDK.IndexApi();
 
-var identifier = "\"SPX\"";
+var identifier = "SPX";
 
 
 var opts = { 
   'pageSize': 100,
-  'startDate': new Date("\"~null\""),
-  'endDate': new Date("\"~null\"")
+  'startDate': null,
+  'endDate': null
 };
 
 index.getEodIndexPriceById(identifier, opts).then(function(data) {
@@ -984,7 +984,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var index = new intrinioSDK.IndexApi();
 
-var identifier = "\"SPX\"";
+var identifier = "SPX";
 
 
 index.getIndexSummaryById(identifier).then(function(data) {
@@ -1062,7 +1062,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var index = new intrinioSDK.IndexApi();
 
-var identifier = "\"SPX\"";
+var identifier = "SPX";
 
 
 index.getRealtimeIndexPriceById(identifier).then(function(data) {
@@ -1140,7 +1140,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var index = new intrinioSDK.IndexApi();
 
-var identifier = "\"$SIC.2911\"";
+var identifier = "$SIC.2911";
 
 
 index.getSicIndexById(identifier).then(function(data) {
@@ -1219,8 +1219,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var index = new intrinioSDK.IndexApi();
 
-var identifier = "\"$SIC.2911\"";
-var tag = "\"marketcap\"";
+var identifier = "$SIC.2911";
+var tag = "marketcap";
 
 
 index.getSicIndexDataPointNumber(identifier, tag).then(function(data) {
@@ -1300,8 +1300,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var index = new intrinioSDK.IndexApi();
 
-var identifier = "\"$SIC.2911\"";
-var tag = "\"marketcap\"";
+var identifier = "$SIC.2911";
+var tag = "marketcap";
 
 
 index.getSicIndexDataPointText(identifier, tag).then(function(data) {
@@ -1381,17 +1381,17 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var index = new intrinioSDK.IndexApi();
 
-var identifier = "\"$SIC.1\"";
-var tag = "\"marketcap\"";
+var identifier = "$SIC.1";
+var tag = "marketcap";
 
 
 var opts = { 
-  'type': "\"~null\"",
-  'startDate': new Date("\"2018-01-01\""),
-  'endDate': new Date("\"~null\""),
+  'type': null,
+  'startDate': new Date("2018-01-01"),
+  'endDate': null,
   'sortOrder': "desc",
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 index.getSicIndexHistoricalData(identifier, tag, opts).then(function(data) {
@@ -1476,7 +1476,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var index = new intrinioSDK.IndexApi();
 
-var identifier = "\"$DJI\"";
+var identifier = "$DJI";
 
 
 index.getStockMarketIndexById(identifier).then(function(data) {
@@ -1555,8 +1555,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var index = new intrinioSDK.IndexApi();
 
-var identifier = "\"$DJI\"";
-var tag = "\"level\"";
+var identifier = "$DJI";
+var tag = "level";
 
 
 index.getStockMarketIndexDataPointNumber(identifier, tag).then(function(data) {
@@ -1636,8 +1636,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var index = new intrinioSDK.IndexApi();
 
-var identifier = "\"$DJI\"";
-var tag = "\"level\"";
+var identifier = "$DJI";
+var tag = "level";
 
 
 index.getStockMarketIndexDataPointText(identifier, tag).then(function(data) {
@@ -1717,17 +1717,17 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var index = new intrinioSDK.IndexApi();
 
-var identifier = "\"$DJI\"";
-var tag = "\"level\"";
+var identifier = "$DJI";
+var tag = "level";
 
 
 var opts = { 
-  'type': "\"~null\"",
-  'startDate': new Date("\"2018-01-01\""),
-  'endDate': new Date("\"~null\""),
+  'type': null,
+  'startDate': new Date("2018-01-01"),
+  'endDate': null,
   'sortOrder': "desc",
   'pageSize': 100,
-  'nextPage': "\"~null\""
+  'nextPage': null
 };
 
 index.getStockMarketIndexHistoricalData(identifier, tag, opts).then(function(data) {
@@ -1813,7 +1813,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var index = new intrinioSDK.IndexApi();
 
-var query = "\"GDP\"";
+var query = "GDP";
 
 
 var opts = { 
@@ -1897,7 +1897,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var index = new intrinioSDK.IndexApi();
 
-var query = "\"agriculture\"";
+var query = "agriculture";
 
 
 var opts = { 
@@ -1981,7 +1981,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var index = new intrinioSDK.IndexApi();
 
-var query = "\"dow\"";
+var query = "dow";
 
 
 var opts = { 

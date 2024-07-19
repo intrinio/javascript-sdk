@@ -54,8 +54,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var dataPoint = new intrinioSDK.DataPointApi();
 
-var identifier = "\"AAPL\"";
-var tag = "\"marketcap\"";
+var identifier = "AAPL";
+var tag = "marketcap";
 
 
 dataPoint.getDataPointNumber(identifier, tag).then(function(data) {
@@ -135,8 +135,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var dataPoint = new intrinioSDK.DataPointApi();
 
-var identifier = "\"AAPL\"";
-var tag = "\"ceo\"";
+var identifier = "AAPL";
+var tag = "ceo";
 
 
 dataPoint.getDataPointText(identifier, tag).then(function(data) {
