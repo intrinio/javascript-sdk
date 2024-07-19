@@ -53,18 +53,18 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var historicalData = new intrinioSDK.HistoricalDataApi();
 
-var identifier = "AAPL";
-var tag = "marketcap";
+var identifier = "\"AAPL\"";
+var tag = "\"marketcap\"";
 
 
 var opts = { 
   'frequency': "daily",
-  'type': null,
-  'startDate': new Date("2015-01-01"),
-  'endDate': null,
+  'type': "\"~null\"",
+  'startDate': new Date("\"2015-01-01\""),
+  'endDate': new Date("\"~null\""),
   'sortOrder': "desc",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 historicalData.getHistoricalData(identifier, tag, opts).then(function(data) {

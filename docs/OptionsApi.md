@@ -23,6 +23,7 @@ Method | HTTP request | Description
 [**getOptionsPricesBatchRealtime**](OptionsApi.md#getOptionsPricesBatchRealtime) | **POST** /options/prices/realtime/batch | Option Prices Batch Realtime
 [**getOptionsPricesEod**](OptionsApi.md#getOptionsPricesEod) | **GET** /options/prices/{identifier}/eod | Option Prices EOD
 [**getOptionsPricesRealtime**](OptionsApi.md#getOptionsPricesRealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
+[**getOptionsPricesRealtimeByTicker**](OptionsApi.md#getOptionsPricesRealtimeByTicker) | **GET** /options/prices/by_ticker/{symbol}/realtime | Option Prices Realtime By Ticker
 [**getOptionsSnapshots**](OptionsApi.md#getOptionsSnapshots) | **GET** /options/snapshots | Option Prices Realtime Snapshot
 [**getOptionsStatsRealtime**](OptionsApi.md#getOptionsStatsRealtime) | **GET** /options/prices/{identifier}/realtime/stats | Option Stats Realtime
 [**getUnusualActivity**](OptionsApi.md#getUnusualActivity) | **GET** /options/unusual_activity/{symbol} | Options Unusual Activity
@@ -230,13 +231,13 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var symbol = "MSFT";
+var symbol = "\"MSFT\"";
 
 
 var opts = { 
-  'after': "2022-01-01",
-  'before': "2023-04-01",
-  'source': null,
+  'after': "\"2022-01-01\"",
+  'before': "\"2023-04-01\"",
+  'source': "\"~null\"",
   'includeRelatedSymbols': false
 };
 
@@ -320,15 +321,15 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var symbol = "MSFT";
+var symbol = "\"MSFT\"";
 var strike = 95;
 
 
 var opts = { 
-  'source': null,
-  'stockPriceSource': null,
-  'model': null,
-  'showExtendedPrice': null,
+  'source': "\"~null\"",
+  'stockPriceSource': "\"~null\"",
+  'model': "\"~null\"",
+  'showExtendedPrice': "~null",
   'includeRelatedSymbols': false
 };
 
@@ -414,19 +415,19 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var symbol = "AAPL";
+var symbol = "\"AAPL\"";
 
 
 var opts = { 
-  'type': "put",
+  'type': "\"put\"",
   'strike': 170,
   'strikeGreaterThan': 150,
   'strikeLessThan': 190,
-  'expiration': "2019-03-01",
-  'expirationAfter': "2019-01-01",
-  'expirationBefore': "2019-12-31",
+  'expiration': "\"2019-03-01\"",
+  'expirationAfter': "\"2019-01-01\"",
+  'expirationBefore': "\"2019-12-31\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 options.getOptions(symbol, opts).then(function(data) {
@@ -514,18 +515,18 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var symbol = "AAPL";
+var symbol = "\"AAPL\"";
 
 
 var opts = { 
-  'type': "put",
+  'type': "\"put\"",
   'strike': 170,
   'strikeGreaterThan': 150,
   'strikeLessThan': 190,
-  'expiration': "2022-04-16",
-  'expirationAfter': "2022-01-01",
-  'expirationBefore': "2023-12-31",
-  'source': null,
+  'expiration': "\"2022-04-16\"",
+  'expirationAfter': "\"2022-01-01\"",
+  'expirationBefore': "\"2023-12-31\"",
+  'source': "\"~null\"",
   'includeRelatedSymbols': false
 };
 
@@ -614,17 +615,17 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var symbol = "MSFT";
-var expiration = "2019-04-05";
+var symbol = "\"MSFT\"";
+var expiration = "\"2019-04-05\"";
 
 
 var opts = { 
-  'date': null,
-  'type': null,
-  'strike': null,
-  'strikeGreaterThan': null,
-  'strikeLessThan': null,
-  'moneyness': null,
+  'date': new Date("\"~null\""),
+  'type': "\"~null\"",
+  'strike': "~null",
+  'strikeGreaterThan': "~null",
+  'strikeLessThan': "~null",
+  'moneyness': "\"~null\"",
   'pageSize': 100
 };
 
@@ -712,16 +713,16 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var symbol = "AAPL";
-var expiration = "2023-01-20";
+var symbol = "\"AAPL\"";
+var expiration = "\"2023-01-20\"";
 
 
 var opts = { 
-  'type': null,
-  'strike': null,
-  'strikeGreaterThan': null,
-  'strikeLessThan': null,
-  'date': null,
+  'type': "\"~null\"",
+  'strike': "~null",
+  'strikeGreaterThan': "~null",
+  'strikeLessThan': "~null",
+  'date': new Date("\"~null\""),
   'includeRelatedSymbols': false
 };
 
@@ -808,24 +809,24 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var symbol = "MSFT";
-var expiration = "2023-01-20";
+var symbol = "\"MSFT\"";
+var expiration = "\"2023-01-20\"";
 
 
 var opts = { 
-  'source': null,
-  'type': null,
-  'strike': null,
-  'strikeGreaterThan': null,
-  'strikeLessThan': null,
-  'volumeGreaterThan': null,
-  'volumeLessThan': null,
-  'openInterestGreaterThan': null,
-  'openInterestLessThan': null,
-  'moneyness': null,
-  'stockPriceSource': null,
-  'model': null,
-  'showExtendedPrice': null,
+  'source': "\"~null\"",
+  'type': "\"~null\"",
+  'strike': "~null",
+  'strikeGreaterThan': "~null",
+  'strikeLessThan': "~null",
+  'volumeGreaterThan': "~null",
+  'volumeLessThan': "~null",
+  'openInterestGreaterThan': "~null",
+  'openInterestLessThan': "~null",
+  'moneyness': "\"~null\"",
+  'stockPriceSource': "\"~null\"",
+  'model': "\"~null\"",
+  'showExtendedPrice': "~null",
   'includeRelatedSymbols': false
 };
 
@@ -920,12 +921,12 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var symbol = "MSFT";
+var symbol = "\"MSFT\"";
 
 
 var opts = { 
-  'after': "2019-01-01",
-  'before': "2019-12-31"
+  'after': "\"2019-01-01\"",
+  'before': "\"2019-12-31\""
 };
 
 options.getOptionsExpirations(symbol, opts).then(function(data) {
@@ -1006,12 +1007,12 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var symbol = "MSFT";
+var symbol = "\"MSFT\"";
 
 
 var opts = { 
-  'after': "2019-01-01",
-  'before': "2019-12-31",
+  'after': "\"2019-01-01\"",
+  'before': "\"2019-12-31\"",
   'includeRelatedSymbols': false
 };
 
@@ -1094,14 +1095,14 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var identifier = "SPY___230103P00380000";
-var intervalSize = "5m";
+var identifier = "\"SPY___230103P00380000\"";
+var intervalSize = "\"5m\"";
 
 
 var opts = { 
-  'source': null,
+  'source': "\"~null\"",
   'pageSize': 100,
-  'endTime': null
+  'endTime': new Date("\"~null\"")
 };
 
 options.getOptionsIntervalByContract(identifier, intervalSize, opts).then(function(data) {
@@ -1185,8 +1186,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var options = new intrinioSDK.OptionsApi();
 
 var opts = { 
-  'source': null,
-  'openTime': null
+  'source': "\"~null\"",
+  'openTime': new Date("\"~null\"")
 };
 
 options.getOptionsIntervalMovers(opts).then(function(data) {
@@ -1267,8 +1268,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var options = new intrinioSDK.OptionsApi();
 
 var opts = { 
-  'source': null,
-  'openTime': null
+  'source': "\"~null\"",
+  'openTime': new Date("\"~null\"")
 };
 
 options.getOptionsIntervalMoversChange(opts).then(function(data) {
@@ -1349,8 +1350,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var options = new intrinioSDK.OptionsApi();
 
 var opts = { 
-  'source': null,
-  'openTime': null
+  'source': "\"~null\"",
+  'openTime': new Date("\"~null\"")
 };
 
 options.getOptionsIntervalMoversVolume(opts).then(function(data) {
@@ -1430,14 +1431,14 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var identifier = "MSFT190405C00118000";
+var identifier = "\"MSFT190405C00118000\"";
 
 
 var opts = { 
-  'startDate': "2019-01-01",
-  'endDate': "2019-12-31",
+  'startDate': "\"2019-01-01\"",
+  'endDate': "\"2019-12-31\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 options.getOptionsPrices(identifier, opts).then(function(data) {
@@ -1530,11 +1531,11 @@ body = {
 }
 
 var opts = { 
-  'source': null,
-  'showStats': null,
-  'stockPriceSource': null,
-  'model': null,
-  'showExtendedPrice': null
+  'source': "\"~null\"",
+  'showStats': "~null",
+  'stockPriceSource': "\"~null\"",
+  'model': "\"~null\"",
+  'showExtendedPrice': "~null"
 };
 
 options.getOptionsPricesBatchRealtime(body, opts).then(function(data) {
@@ -1618,13 +1619,13 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var identifier = "AAPL230616P00190000";
+var identifier = "\"AAPL230616P00190000\"";
 
 
 var opts = { 
-  'nextPage': null,
-  'startDate': null,
-  'endDate': null
+  'nextPage': "\"~null\"",
+  'startDate': new Date("\"~null\""),
+  'endDate': new Date("\"~null\"")
 };
 
 options.getOptionsPricesEod(identifier, opts).then(function(data) {
@@ -1706,14 +1707,14 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var identifier = "AAPL230120C00090000";
+var identifier = "\"AAPL230120C00090000\"";
 
 
 var opts = { 
-  'source': null,
-  'stockPriceSource': null,
-  'model': null,
-  'showExtendedPrice': null
+  'source': "\"~null\"",
+  'stockPriceSource': "\"~null\"",
+  'model': "\"~null\"",
+  'showExtendedPrice': "~null"
 };
 
 options.getOptionsPricesRealtime(identifier, opts).then(function(data) {
@@ -1745,6 +1746,102 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptionsPriceRealtime**](ApiResponseOptionsPriceRealtime.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:OptionsApi)
+
+[//]: # (METHOD:getOptionsPricesRealtimeByTicker)
+
+[//]: # (RETURN_TYPE:ApiResponseOptionsPricesByTickerRealtime)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsPricesByTickerRealtime.md)
+
+[//]: # (OPERATION:getOptionsPricesRealtimeByTicker_v2)
+
+[//]: # (ENDPOINT:/options/prices/by_ticker/{symbol}/realtime)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getOptionsPricesRealtimeByTicker)
+
+<a name="getOptionsPricesRealtimeByTicker"></a>
+## **getOptionsPricesRealtimeByTicker**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getOptionsPricesRealtimeByTicker_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsPricesByTickerRealtime getOptionsPricesRealtimeByTicker(symbol, opts)
+
+#### Option Prices Realtime By Ticker
+
+
+Returns a list of the latest National Best Bid &amp; Offer (NBBO) top of the order book size and premium (bid / ask), the latest trade size and premium as well as the greeks and implied volatility for all option contracts currently associated with the ticker.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var options = new intrinioSDK.OptionsApi();
+
+var symbol = "\"MSFT\"";
+
+
+var opts = { 
+  'source': "\"~null\"",
+  'ivMode': "\"~null\"",
+  'nextPage': "\"~null\"",
+  'pageSize': 250,
+  'stockPriceSource': "\"~null\"",
+  'model': "\"~null\"",
+  'showExtendedPrice': "~null"
+};
+
+options.getOptionsPricesRealtimeByTicker(symbol, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | String| The equities ticker symbol, corresponding to the underlying security. |  &nbsp;
+ **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
+ **ivMode** | String| Change the mode for the implied volatility calculation to out of the money. | [optional]  &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 250] &nbsp;
+ **stockPriceSource** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
+ **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
+ **showExtendedPrice** | Boolean| Whether to include open close high low type fields. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsPricesByTickerRealtime**](ApiResponseOptionsPricesByTickerRealtime.md)
 
 
 
@@ -1797,8 +1894,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var options = new intrinioSDK.OptionsApi();
 
 var opts = { 
-  'source': null,
-  'atDatetime': null
+  'source': "\"~null\"",
+  'atDatetime': new Date("\"~null\"")
 };
 
 options.getOptionsSnapshots(opts).then(function(data) {
@@ -1878,12 +1975,12 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var identifier = "AAPL230120C00090000";
+var identifier = "\"AAPL230120C00090000\"";
 
 
 var opts = { 
-  'source': null,
-  'showExtendedPrice': null
+  'source': "\"~null\"",
+  'showExtendedPrice': "~null"
 };
 
 options.getOptionsStatsRealtime(identifier, opts).then(function(data) {
@@ -1964,11 +2061,11 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var symbol = "AAPL";
+var symbol = "\"AAPL\"";
 
 
 var opts = { 
-  'source': null
+  'source': "\"~null\""
 };
 
 options.getUnusualActivity(symbol, opts).then(function(data) {
@@ -2048,16 +2145,16 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var symbol = "AAPL";
+var symbol = "\"AAPL\"";
 
 
 var opts = { 
-  'nextPage': null,
+  'nextPage': "\"~null\"",
   'pageSize': 1000,
-  'activityType': null,
-  'sentiment': null,
-  'startDate': new Date("2022-02-01"),
-  'endDate': new Date("2022-02-03"),
+  'activityType': "\"~null\"",
+  'sentiment': "\"~null\"",
+  'startDate': new Date("\"2022-02-01\""),
+  'endDate': new Date("\"2022-02-03\""),
   'minimumTotalValue': 100000.0,
   'maximumTotalValue': 200000.0
 };
@@ -2147,7 +2244,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var options = new intrinioSDK.OptionsApi();
 
 var opts = { 
-  'source': null
+  'source': "\"~null\""
 };
 
 options.getUnusualActivityUniversal(opts).then(function(data) {
@@ -2227,12 +2324,12 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var options = new intrinioSDK.OptionsApi();
 
 var opts = { 
-  'nextPage': null,
+  'nextPage': "\"~null\"",
   'pageSize': 1000,
-  'activityType': null,
-  'sentiment': null,
-  'startDate': new Date("2022-02-01"),
-  'endDate': new Date("2022-02-03"),
+  'activityType': "\"~null\"",
+  'sentiment': "\"~null\"",
+  'startDate': new Date("\"2022-02-01\""),
+  'endDate': new Date("\"2022-02-03\""),
   'minimumTotalValue': 100000.0,
   'maximumTotalValue': 200000.0
 };

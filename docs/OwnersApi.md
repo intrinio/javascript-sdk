@@ -58,9 +58,9 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var owners = new intrinioSDK.OwnersApi();
 
 var opts = { 
-  'institutional': null,
+  'institutional': "~null",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 owners.getAllOwners(opts).then(function(data) {
@@ -141,7 +141,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var owners = new intrinioSDK.OwnersApi();
 
-var identifier = "0000001800";
+var identifier = "\"0000001800\"";
 
 
 owners.getOwnerById(identifier).then(function(data) {
@@ -220,14 +220,14 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var owners = new intrinioSDK.OwnersApi();
 
-var identifier = "0001494730";
+var identifier = "\"0001494730\"";
 
 
 var opts = { 
-  'startDate': new Date("2018-01-01"),
-  'endDate': new Date("2019-01-01"),
+  'startDate': new Date("\"2018-01-01\""),
+  'endDate': new Date("\"2019-01-01\""),
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 owners.insiderTransactionFilingsByOwner(identifier, opts).then(function(data) {
@@ -315,8 +315,8 @@ var identifier = "430692";
 
 var opts = { 
   'pageSize': 100,
-  'asOfDate': new Date("2021-01-05"),
-  'nextPage': null
+  'asOfDate': new Date("\"2021-01-05\""),
+  'nextPage': "\"~null\""
 };
 
 owners.institutionalHoldingsByOwner(identifier, opts).then(function(data) {
@@ -398,13 +398,13 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var owners = new intrinioSDK.OwnersApi();
 
-var query = "Cook";
+var query = "\"Cook\"";
 
 
 var opts = { 
-  'institutional': null,
+  'institutional': "~null",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 owners.searchOwners(query, opts).then(function(data) {

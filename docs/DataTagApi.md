@@ -56,13 +56,13 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var dataTag = new intrinioSDK.DataTagApi();
 
 var opts = { 
-  'tag': null,
-  'type': null,
-  'parent': null,
-  'statementCode': "income_statement",
+  'tag': "\"~null\"",
+  'type': "\"~null\"",
+  'parent': "\"~null\"",
+  'statementCode': "\"income_statement\"",
   'fsTemplate': "industrial",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 dataTag.getAllDataTags(opts).then(function(data) {
@@ -147,7 +147,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var dataTag = new intrinioSDK.DataTagApi();
 
-var identifier = "marketcap";
+var identifier = "\"marketcap\"";
 
 
 dataTag.getDataTagById(identifier).then(function(data) {
@@ -226,7 +226,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var dataTag = new intrinioSDK.DataTagApi();
 
-var query = "revenue";
+var query = "\"revenue\"";
 
 
 var opts = { 

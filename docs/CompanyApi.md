@@ -75,17 +75,17 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var company = new intrinioSDK.CompanyApi();
 
 var opts = { 
-  'latestFilingDate': null,
-  'sic': null,
-  'template': null,
-  'sector': null,
-  'industryCategory': null,
-  'industryGroup': null,
+  'latestFilingDate': new Date("\"~null\""),
+  'sic': "\"~null\"",
+  'template': "\"~null\"",
+  'sector': "\"~null\"",
+  'industryCategory': "\"~null\"",
+  'industryGroup': "\"~null\"",
   'hasFundamentals': true,
   'hasStockPrices': true,
-  'theaEnabled': null,
+  'theaEnabled': "~null",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 company.getAllCompanies(opts).then(function(data) {
@@ -177,8 +177,8 @@ var company = new intrinioSDK.CompanyApi();
 var opts = { 
   'onDate': new Date("2013-10-20"),
   'pageSize': 100,
-  'nextPage': null,
-  'nextPage2': null
+  'nextPage': "\"~null\"",
+  'nextPage2': "\"~null\""
 };
 
 company.getAllCompaniesDailyMetrics(opts).then(function(data) {
@@ -261,21 +261,21 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var company = new intrinioSDK.CompanyApi();
 
 var opts = { 
-  'specificSource': null,
+  'specificSource': "\"~null\"",
   'pageSize': 100,
-  'sentiment': null,
-  'topic': null,
-  'company': "AAPL",
-  'security': "AAPL",
-  'startDate': null,
-  'endDate': null,
-  'language': null,
-  'wordCountGreaterThan': null,
-  'wordCountLessThan': null,
-  'isSpam': null,
-  'businessRelevanceGreaterThan': null,
-  'businessRelevanceLessThan': null,
-  'nextPage': null
+  'sentiment': "\"~null\"",
+  'topic': "\"~null\"",
+  'company': "\"AAPL\"",
+  'security': "\"AAPL\"",
+  'startDate': new Date("\"~null\""),
+  'endDate': new Date("\"~null\""),
+  'language': "\"~null\"",
+  'wordCountGreaterThan': "~null",
+  'wordCountLessThan': "~null",
+  'isSpam': "~null",
+  'businessRelevanceGreaterThan': "~null",
+  'businessRelevanceLessThan': "~null",
+  'nextPage': "\"~null\""
 };
 
 company.getAllCompanyNews(opts).then(function(data) {
@@ -301,9 +301,9 @@ Name | Type | Description  | Notes
  **topic** | String| Filter by topic.  Unsupported for yahoo source. | [optional]  &nbsp;
  **company** | String| Filter by &#x60;company&#x60; identifier (ticker, CIK, LEI, Intrinio ID) | [optional]  &nbsp;
  **security** | String| Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. | [optional]  &nbsp;
- **startDate** | Date| Limit news stories to those on or after this date. | [optional]  &nbsp;
+ **startDate** | Date| Limit news stories to those on or after this date. Defaults to yesterday if unspecified. | [optional]  &nbsp;
  **endDate** | Date| Limit news stories to those on or before this date. | [optional]  &nbsp;
- **language** | String| Filter by language.  Unsupported for yahoo source.  Unsupported for yahoo source. | [optional]  &nbsp;
+ **language** | String| Filter by language.  Unsupported for yahoo source. | [optional]  &nbsp;
  **wordCountGreaterThan** | Number| News stories will have a word count greater than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
  **wordCountLessThan** | Number| News stories will have a word count less than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
  **isSpam** | Boolean| Filter whether it is marked as spam or not.  Unsupported for yahoo source. | [optional]  &nbsp;
@@ -368,7 +368,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 company.getCompany(identifier).then(function(data) {
@@ -447,8 +447,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var identifier = "AAPL";
-var query = "What do they believe in?";
+var identifier = "\"AAPL\"";
+var query = "\"What do they believe in?\"";
 
 
 company.getCompanyAnswers(identifier, query).then(function(data) {
@@ -528,14 +528,14 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'onDate': new Date("2013-10-20"),
   'pageSize': 100,
-  'nextPage': null,
-  'nextPage2': null
+  'nextPage': "\"~null\"",
+  'nextPage2': "\"~null\""
 };
 
 company.getCompanyDailyMetrics(identifier, opts).then(function(data) {
@@ -618,8 +618,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var identifier = "AAPL";
-var tag = "marketcap";
+var identifier = "\"AAPL\"";
+var tag = "\"marketcap\"";
 
 
 company.getCompanyDataPointNumber(identifier, tag).then(function(data) {
@@ -699,8 +699,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var identifier = "AAPL";
-var tag = "ceo";
+var identifier = "\"AAPL\"";
+var tag = "\"ceo\"";
 
 
 company.getCompanyDataPointText(identifier, tag).then(function(data) {
@@ -780,16 +780,16 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
-  'reportType': null,
-  'startDate': new Date("2015-01-01"),
-  'endDate': null,
-  'theaEnabled': null,
+  'reportType': "\"~null\"",
+  'startDate': new Date("\"2015-01-01\""),
+  'endDate': new Date("\"~null\""),
+  'theaEnabled': "~null",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 company.getCompanyFilings(identifier, opts).then(function(data) {
@@ -874,22 +874,22 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
-  'filedAfter': null,
-  'filedBefore': null,
+  'filedAfter': new Date("\"~null\""),
+  'filedBefore': new Date("\"~null\""),
   'reportedOnly': false,
-  'fiscalYear': null,
-  'statementCode': null,
-  'type': null,
-  'startDate': null,
-  'endDate': null,
-  'updatedAfter': new Date("2022-12-01"),
-  'updatedBefore': new Date("2022-12-01"),
+  'fiscalYear': "~null",
+  'statementCode': "\"~null\"",
+  'type': "\"~null\"",
+  'startDate': new Date("\"~null\""),
+  'endDate': new Date("\"~null\""),
+  'updatedAfter': new Date("\"2022-12-01\""),
+  'updatedBefore': new Date("\"2022-12-01\""),
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 company.getCompanyFundamentals(identifier, opts).then(function(data) {
@@ -980,18 +980,18 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var identifier = "AAPL";
-var tag = "marketcap";
+var identifier = "\"AAPL\"";
+var tag = "\"marketcap\"";
 
 
 var opts = { 
   'frequency': "daily",
-  'type': null,
-  'startDate': new Date("2018-01-01"),
-  'endDate': null,
+  'type': "\"~null\"",
+  'startDate': new Date("\"2018-01-01\""),
+  'endDate': new Date("\"~null\""),
   'sortOrder': "desc",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 company.getCompanyHistoricalData(identifier, tag, opts).then(function(data) {
@@ -1079,14 +1079,14 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var company = new intrinioSDK.CompanyApi();
 
 var opts = { 
-  'ticker': "UBER",
-  'status': null,
-  'startDate': null,
-  'endDate': null,
-  'offerAmountGreaterThan': null,
-  'offerAmountLessThan': null,
+  'ticker': "\"UBER\"",
+  'status': "\"~null\"",
+  'startDate': new Date("\"~null\""),
+  'endDate': new Date("\"~null\""),
+  'offerAmountGreaterThan': "~null",
+  'offerAmountLessThan': "~null",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 company.getCompanyIpos(opts).then(function(data) {
@@ -1172,24 +1172,24 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
-  'specificSource': null,
+  'specificSource': "\"~null\"",
   'pageSize': 100,
-  'sentiment': null,
-  'topic': null,
-  'security': "AAPL",
-  'startDate': null,
-  'endDate': null,
-  'language': null,
-  'wordCountGreaterThan': null,
-  'wordCountLessThan': null,
-  'isSpam': null,
-  'businessRelevanceGreaterThan': null,
-  'businessRelevanceLessThan': null,
-  'nextPage': null
+  'sentiment': "\"~null\"",
+  'topic': "\"~null\"",
+  'security': "\"AAPL\"",
+  'startDate': new Date("\"~null\""),
+  'endDate': new Date("\"~null\""),
+  'language': "\"~null\"",
+  'wordCountGreaterThan': "~null",
+  'wordCountLessThan': "~null",
+  'isSpam': "~null",
+  'businessRelevanceGreaterThan': "~null",
+  'businessRelevanceLessThan': "~null",
+  'nextPage': "\"~null\""
 };
 
 company.getCompanyNews(identifier, opts).then(function(data) {
@@ -1215,7 +1215,7 @@ Name | Type | Description  | Notes
  **sentiment** | String| Filter by sentiment.  Unsupported for yahoo source. | [optional]  &nbsp;
  **topic** | String| Filter by topic.  Unsupported for yahoo source. | [optional]  &nbsp;
  **security** | String| Filter by &#x60;security&#x60; identifier (ticker, figi, isin, cusip, Intrinio ID).  Unsupported for yahoo source. | [optional]  &nbsp;
- **startDate** | Date| Limit news stories to those on or after this date | [optional]  &nbsp;
+ **startDate** | Date| Limit news stories to those on or after this date. Defaults to yesterday if unspecified. | [optional]  &nbsp;
  **endDate** | Date| Limit news stories to those on or before this date | [optional]  &nbsp;
  **language** | String| Filter by language.  Unsupported for yahoo source. | [optional]  &nbsp;
  **wordCountGreaterThan** | Number| News stories will have a word count greater than this value.  Unsupported for yahoo source. | [optional]  &nbsp;
@@ -1282,13 +1282,13 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var newsStoryId = "new_aBcDef";
-var publicationDate = null;
+var newsStoryId = "\"new_aBcDef\"";
+var publicationDate = new Date("\"~null\"");
 
 
 var opts = { 
-  'specificSource': null,
-  'nextPage': null
+  'specificSource': "\"~null\"",
+  'nextPage': "\"~null\""
 };
 
 company.getCompanyNewsBody(newsStoryId, publicationDate, opts).then(function(data) {
@@ -1370,14 +1370,14 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
-  'floatDateGreaterThan': null,
-  'floatDateLessThan': null,
-  'nextPage': null,
-  'nextPage2': null
+  'floatDateGreaterThan': new Date("\"~null\""),
+  'floatDateLessThan': new Date("\"~null\""),
+  'nextPage': "\"~null\"",
+  'nextPage2': "\"~null\""
 };
 
 company.getCompanyPublicFloat(identifier, opts).then(function(data) {
@@ -1460,11 +1460,11 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 company.getCompanySecurities(identifier, opts).then(function(data) {
@@ -1544,17 +1544,17 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
-  'startDate': new Date("2018-01-01"),
-  'endDate': new Date("2019-01-01"),
-  'ownershipType': "D",
-  'nextPage': null,
+  'startDate': new Date("\"2018-01-01\""),
+  'endDate': new Date("\"2019-01-01\""),
+  'ownershipType': "\"D\"",
+  'nextPage': "\"~null\"",
   'pageSize': 1000,
-  'sortBy': "updated_on",
-  'nextPage2': null
+  'sortBy': "\"updated_on\"",
+  'nextPage2': "\"~null\""
 };
 
 company.insiderTransactionFilingsByCompany(identifier, opts).then(function(data) {
@@ -1640,11 +1640,11 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 company.latestInsiderTransactionFilingByCompany(identifier, opts).then(function(data) {
@@ -1724,9 +1724,9 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var identifier = "AAPL";
-var statementCode = "income_statement";
-var fiscalPeriod = "FY";
+var identifier = "\"AAPL\"";
+var statementCode = "\"income_statement\"";
+var fiscalPeriod = "\"FY\"";
 var fiscalYear = 2017;
 
 
@@ -1809,7 +1809,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var text = "Apple";
+var text = "\"Apple\"";
 
 
 company.recognizeCompany(text).then(function(data) {
@@ -1888,12 +1888,12 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var query = "Apple";
+var query = "\"Apple\"";
 
 
 var opts = { 
   'active': true,
-  'mode': null,
+  'mode': "\"~null\"",
   'pageSize': 100
 };
 
@@ -1976,12 +1976,12 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
-  'endDateGreaterThan': null,
-  'endDateLessThan': null
+  'endDateGreaterThan': new Date("\"~null\""),
+  'endDateLessThan': new Date("\"~null\"")
 };
 
 company.sharesOutstandingByCompany(identifier, opts).then(function(data) {

@@ -83,14 +83,14 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsAdi(identifier, opts).then(function(data) {
@@ -173,15 +173,15 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'period': 22,
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsAdtv(identifier, opts).then(function(data) {
@@ -265,15 +265,15 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'period': 14,
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsAdx(identifier, opts).then(function(data) {
@@ -357,16 +357,16 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'shortPeriod': 5,
   'longPeriod': 34,
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsAo(identifier, opts).then(function(data) {
@@ -451,15 +451,15 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'period': 14,
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsAtr(identifier, opts).then(function(data) {
@@ -543,17 +543,17 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'period': 20,
   'standardDeviations': 2.0,
   'priceKey': "close",
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsBb(identifier, opts).then(function(data) {
@@ -639,16 +639,16 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'period': 20,
   'constant': 0.015,
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsCci(identifier, opts).then(function(data) {
@@ -733,15 +733,15 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'period': 20,
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsCmf(identifier, opts).then(function(data) {
@@ -825,16 +825,16 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'period': 20,
   'priceKey': "close",
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsDc(identifier, opts).then(function(data) {
@@ -919,16 +919,16 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'period': 20,
   'priceKey': "close",
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsDpo(identifier, opts).then(function(data) {
@@ -1013,15 +1013,15 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'period': 20,
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsEom(identifier, opts).then(function(data) {
@@ -1105,14 +1105,14 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsFi(identifier, opts).then(function(data) {
@@ -1195,17 +1195,17 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'lowPeriod': 9,
   'mediumPeriod': 26,
   'highPeriod': 52,
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsIchimoku(identifier, opts).then(function(data) {
@@ -1291,15 +1291,15 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'period': 10,
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsKc(identifier, opts).then(function(data) {
@@ -1383,7 +1383,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
@@ -1396,10 +1396,10 @@ var opts = {
   'sma3': 10,
   'sma4': 15,
   'priceKey': "close",
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsKst(identifier, opts).then(function(data) {
@@ -1491,7 +1491,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
@@ -1499,10 +1499,10 @@ var opts = {
   'slowPeriod': 26,
   'signalPeriod': 9,
   'priceKey': "close",
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsMacd(identifier, opts).then(function(data) {
@@ -1589,15 +1589,15 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'period': 14,
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsMfi(identifier, opts).then(function(data) {
@@ -1681,16 +1681,16 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'emaPeriod': 9,
   'sumPeriod': 25,
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsMi(identifier, opts).then(function(data) {
@@ -1775,14 +1775,14 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsNvi(identifier, opts).then(function(data) {
@@ -1865,14 +1865,14 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsObv(identifier, opts).then(function(data) {
@@ -1955,15 +1955,15 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'period': 10,
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsObvMean(identifier, opts).then(function(data) {
@@ -2047,16 +2047,16 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'period': 14,
   'priceKey': "close",
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsRsi(identifier, opts).then(function(data) {
@@ -2141,16 +2141,16 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'period': 20,
   'priceKey': "close",
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsSma(identifier, opts).then(function(data) {
@@ -2235,16 +2235,16 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'period': 14,
   'signalPeriod': 3,
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsSr(identifier, opts).then(function(data) {
@@ -2329,15 +2329,15 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'period': 15,
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsTrix(identifier, opts).then(function(data) {
@@ -2421,17 +2421,17 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'lowPeriod': 13,
   'highPeriod': 25,
   'priceKey': "close",
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsTsi(identifier, opts).then(function(data) {
@@ -2517,7 +2517,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
@@ -2527,10 +2527,10 @@ var opts = {
   'shortWeight': 4.0,
   'mediumWeight': 2.0,
   'longWeight': 1.0,
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsUo(identifier, opts).then(function(data) {
@@ -2619,15 +2619,15 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'period': 14,
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsVi(identifier, opts).then(function(data) {
@@ -2711,14 +2711,14 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsVpt(identifier, opts).then(function(data) {
@@ -2801,14 +2801,14 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsVwap(identifier, opts).then(function(data) {
@@ -2891,15 +2891,15 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var technical = new intrinioSDK.TechnicalApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'period': 14,
-  'startDate': "2018-01-01",
-  'endDate': "2019-01-01",
+  'startDate': "\"2018-01-01\"",
+  'endDate': "\"2019-01-01\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 technical.getSecurityPriceTechnicalsWr(identifier, opts).then(function(data) {

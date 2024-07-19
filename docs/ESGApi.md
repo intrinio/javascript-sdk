@@ -57,11 +57,11 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var eSG = new intrinioSDK.ESGApi();
 
 var opts = { 
-  'country': "Canada",
-  'industry': "Retail",
-  'ticker': "SHOP",
+  'country': "\"Canada\"",
+  'industry': "\"Retail\"",
+  'ticker': "\"SHOP\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 eSG.getEsgCompanies(opts).then(function(data) {
@@ -143,12 +143,12 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var eSG = new intrinioSDK.ESGApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 eSG.getEsgCompanyComprehensiveRatings(identifier, opts).then(function(data) {
@@ -228,12 +228,12 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var eSG = new intrinioSDK.ESGApi();
 
-var identifier = "AAPL";
+var identifier = "\"AAPL\"";
 
 
 var opts = { 
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 eSG.getEsgCompanyRatings(identifier, opts).then(function(data) {
@@ -314,9 +314,9 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var eSG = new intrinioSDK.ESGApi();
 
 var opts = { 
-  'country': "USA",
+  'country': "\"USA\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 eSG.getEsgLatest(opts).then(function(data) {
@@ -397,9 +397,9 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var eSG = new intrinioSDK.ESGApi();
 
 var opts = { 
-  'country': "USA",
+  'country': "\"USA\"",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 eSG.getEsgLatestComprehensive(opts).then(function(data) {

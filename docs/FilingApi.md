@@ -64,15 +64,15 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var filing = new intrinioSDK.FilingApi();
 
 var opts = { 
-  'company': "AAPL",
-  'reportType': "10-Q",
-  'startDate': new Date("2015-01-01"),
-  'endDate': null,
-  'industryCategory': null,
-  'industryGroup': null,
-  'theaEnabled': null,
+  'company': "\"AAPL\"",
+  'reportType': "\"10-Q\"",
+  'startDate': new Date("\"2015-01-01\""),
+  'endDate': new Date("\"~null\""),
+  'industryCategory': "\"~null\"",
+  'industryGroup': "\"~null\"",
+  'theaEnabled': "~null",
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 filing.getAllFilings(opts).then(function(data) {
@@ -160,14 +160,14 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var filing = new intrinioSDK.FilingApi();
 
 var opts = { 
-  'company': "AAPL",
-  'reportType': "10-Q",
-  'filingStartDate': null,
-  'filingEndDate': null,
-  'periodEndedStartDate': null,
-  'periodEndedEndDate': null,
+  'company': "\"AAPL\"",
+  'reportType': "\"10-Q\"",
+  'filingStartDate': new Date("\"~null\""),
+  'filingEndDate': new Date("\"~null\""),
+  'periodEndedStartDate': new Date("\"~null\""),
+  'periodEndedEndDate': new Date("\"~null\""),
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': "\"~null\""
 };
 
 filing.getAllNotes(opts).then(function(data) {
@@ -252,8 +252,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var filing = new intrinioSDK.FilingApi();
 
-var identifier = "fil_B73xBG";
-var query = "What do they believe in?";
+var identifier = "\"fil_B73xBG\"";
+var query = "\"What do they believe in?\"";
 
 
 filing.getFilingAnswers(identifier, query).then(function(data) {
@@ -333,7 +333,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var filing = new intrinioSDK.FilingApi();
 
-var id = "fil_7Kn2P6";
+var id = "\"fil_7Kn2P6\"";
 
 
 filing.getFilingById(id).then(function(data) {
@@ -412,17 +412,17 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var filing = new intrinioSDK.FilingApi();
 
-var identifier = "fil_B73xBG";
+var identifier = "\"fil_B73xBG\"";
 
 
 var opts = { 
-  'statementCode': null,
-  'type': null,
-  'fiscalYear': null,
-  'fiscalPeriod': null,
-  'startDate': null,
-  'endDate': null,
-  'nextPage': null
+  'statementCode': "\"~null\"",
+  'type': "\"~null\"",
+  'fiscalYear': "~null",
+  'fiscalPeriod': "\"~null\"",
+  'startDate': new Date("\"~null\""),
+  'endDate': new Date("\"~null\""),
+  'nextPage': "\"~null\""
 };
 
 filing.getFilingFundamentals(identifier, opts).then(function(data) {
@@ -508,7 +508,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var filing = new intrinioSDK.FilingApi();
 
-var identifier = "fil_B73xBG";
+var identifier = "\"fil_B73xBG\"";
 
 
 filing.getFilingHtml(identifier).then(function(data) {
@@ -586,7 +586,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var filing = new intrinioSDK.FilingApi();
 
-var identifier = "fil_B73xBG";
+var identifier = "\"fil_B73xBG\"";
 
 
 filing.getFilingText(identifier).then(function(data) {
@@ -665,7 +665,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var filing = new intrinioSDK.FilingApi();
 
-var identifier = "xbn_ydK3QL";
+var identifier = "\"xbn_ydK3QL\"";
 
 
 var opts = { 
@@ -748,7 +748,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var filing = new intrinioSDK.FilingApi();
 
-var identifier = "xbn_ydK3QL";
+var identifier = "\"xbn_ydK3QL\"";
 
 
 filing.getNoteHtml(identifier).then(function(data) {
@@ -826,7 +826,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var filing = new intrinioSDK.FilingApi();
 
-var identifier = "xbn_ydK3QL";
+var identifier = "\"xbn_ydK3QL\"";
 
 
 filing.getNoteText(identifier).then(function(data) {
@@ -905,12 +905,12 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var filing = new intrinioSDK.FilingApi();
 
-var query = "inflation";
+var query = "\"inflation\"";
 
 
 var opts = { 
-  'filingStartDate': new Date("2018-07-15"),
-  'filingEndDate': new Date("2018-11-30"),
+  'filingStartDate': new Date("\"2018-07-15\""),
+  'filingEndDate': new Date("\"2018-11-30\""),
   'pageSize': 100
 };
 

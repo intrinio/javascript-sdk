@@ -54,11 +54,11 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var insiderTransactionFilings = new intrinioSDK.InsiderTransactionFilingsApi();
 
 var opts = { 
-  'startDate': new Date("2015-01-01"),
-  'endDate': null,
+  'startDate': new Date("\"2015-01-01\""),
+  'endDate': new Date("\"~null\""),
   'pageSize': 100,
-  'sortBy': "updated_on",
-  'nextPage': null
+  'sortBy': "\"updated_on\"",
+  'nextPage': "\"~null\""
 };
 
 insiderTransactionFilings.getAllInsiderTransactionFilings(opts).then(function(data) {
