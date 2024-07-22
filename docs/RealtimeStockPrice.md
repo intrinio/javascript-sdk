@@ -16,8 +16,10 @@ Name | Type | Description
 **lastSize** | Number | The size of the last trade. &nbsp;
 **bidPrice** | Number | The price of the top bid order. &nbsp;
 **bidSize** | Number | The size of the top bid order. &nbsp;
+**bidTime** | Date | The date and time when the last bid occurred. &nbsp;
 **askPrice** | Number | The price of the top ask order. &nbsp;
 **askSize** | Number | The size of the top ask order. &nbsp;
+**askTime** | Date | The date and time when the last ask occurred. &nbsp;
 **openPrice** | Number | The price at the open of the trading day. &nbsp;
 **closePrice** | Number | The price at the close of the trading day. (IEX only) &nbsp;
 **highPrice** | Number | The high price for the trading day. &nbsp;
