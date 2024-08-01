@@ -316,8 +316,12 @@ var identifier = "USCOMP";
 
 var opts = { 
   'date': new Date("2018-08-14"),
+  'startDate': new Date("2020-08-14"),
+  'endDate': new Date("2022-08-14"),
   'pageSize': 100,
-  'nextPage': null
+  'nextPage': null,
+  'tickers': [null],
+  'nextPage2': null
 };
 
 stockExchange.getStockExchangePrices(identifier, opts).then(function(data) {
@@ -338,9 +342,13 @@ stockExchange.getStockExchangePrices(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
- **date** | Date| The date for which to return prices | [optional]  &nbsp;
+ **date** | Date| The date for which to return prices. May not be used with the start_date and end_date parameters. | [optional]  &nbsp;
+ **startDate** | Date| The start of the date range you&#39;re querying. May not be used with date parameter. | [optional]  &nbsp;
+ **endDate** | Date| The end of the date range you&#39;re querying. May not be used with date parameter. | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **tickers** | [**[String]**](String.md)| The list of ticker symbols to filter to. | [optional]  &nbsp;
+ **nextPage2** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
