@@ -36,7 +36,7 @@
   /**
    * The ApiResponseCompanyPublicFloatResult model module.
    * @module model/ApiResponseCompanyPublicFloatResult
-   * @version 6.28.1
+   * @version 6.29.0
    */
 
   /**

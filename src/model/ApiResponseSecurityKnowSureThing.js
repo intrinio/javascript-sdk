@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityKnowSureThing model module.
    * @module model/ApiResponseSecurityKnowSureThing
-   * @version 6.28.1
+   * @version 6.29.0
    */
 
   /**

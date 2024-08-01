@@ -36,7 +36,7 @@
   /**
    * The ETFAnalytics model module.
    * @module model/ETFAnalytics
-   * @version 6.28.1
+   * @version 6.29.0
    */
 
   /**

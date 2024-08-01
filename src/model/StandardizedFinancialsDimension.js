@@ -36,7 +36,7 @@
   /**
    * The StandardizedFinancialsDimension model module.
    * @module model/StandardizedFinancialsDimension
-   * @version 6.28.1
+   * @version 6.29.0
    */
 
   /**

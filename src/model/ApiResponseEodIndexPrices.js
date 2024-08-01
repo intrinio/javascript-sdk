@@ -36,7 +36,7 @@
   /**
    * The ApiResponseEodIndexPrices model module.
    * @module model/ApiResponseEodIndexPrices
-   * @version 6.28.1
+   * @version 6.29.0
    */
 
   /**

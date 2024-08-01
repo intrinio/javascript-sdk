@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityVortexIndicator model module.
    * @module model/ApiResponseSecurityVortexIndicator
-   * @version 6.28.1
+   * @version 6.29.0
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityIntradayPrices model module.
    * @module model/ApiResponseSecurityIntradayPrices
-   * @version 6.28.1
+   * @version 6.29.0
    */
 
   /**

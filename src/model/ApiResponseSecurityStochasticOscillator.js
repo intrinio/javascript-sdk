@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityStochasticOscillator model module.
    * @module model/ApiResponseSecurityStochasticOscillator
-   * @version 6.28.1
+   * @version 6.29.0
    */
 
   /**

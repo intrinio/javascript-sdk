@@ -36,7 +36,7 @@
   /**
    * The ApiResponseNews model module.
    * @module model/ApiResponseNews
-   * @version 6.28.1
+   * @version 6.29.0
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The ESGRatingWithCompany model module.
    * @module model/ESGRatingWithCompany
-   * @version 6.28.1
+   * @version 6.29.0
    */
 
   /**
