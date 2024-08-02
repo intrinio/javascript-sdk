@@ -1,0 +1,22 @@
+
+[//]: # (CLASS:AverageTrueRangeTechnicalValue)
+
+[//]: # (KIND:object)
+
+### AverageTrueRangeTechnicalValue
+
+#### Properties
+
+[//]: # (START_DEFINITION)
+
+Name | Type | Description
+------------ | ------------- | -------------
+**dateTime** | Date | The date_time of the observation &nbsp;
+**atr** | Number | The Average True Range calculation value &nbsp;
+
+[//]: # (END_DEFINITION)
+
+
+
+
+
