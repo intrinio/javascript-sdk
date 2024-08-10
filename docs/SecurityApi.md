@@ -4401,7 +4401,7 @@ var identifier = "AAPL";
 
 
 var opts = { 
-  'source': ["iex"]
+  'source': ["iex,delayed_sip"]
 };
 
 security.getSecurityRealtimePrice(identifier, opts).then(function(data) {
@@ -4422,7 +4422,7 @@ security.getSecurityRealtimePrice(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **source** | [**[String]**](String.md)| Return the realtime price from the specified data source. If no source is specified, the best source available is used. | [optional]  &nbsp;
+ **source** | [**[String]**](String.md)| Return the realtime price from the specified comma-delimited data sources. If no source is specified, the best source available is used. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

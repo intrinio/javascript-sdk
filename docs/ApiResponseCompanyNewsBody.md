@@ -11,7 +11,7 @@
 
 Name | Type | Description
 ------------ | ------------- | -------------
-**body** | String | The article body. Requires additional access. &nbsp;
+**body** | String | The article body. &nbsp;
 
 [//]: # (END_DEFINITION)
 

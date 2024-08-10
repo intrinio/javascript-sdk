@@ -320,7 +320,7 @@ var opts = {
   'endDate': new Date("2022-08-14"),
   'pageSize': 100,
   'nextPage': null,
-  'tickers': [null],
+  'tickers': ["AAPL,MSFT,NVDA"],
   'nextPage2': null
 };
 
@@ -347,7 +347,7 @@ Name | Type | Description  | Notes
  **endDate** | Date| The end of the date range you&#39;re querying. May not be used with date parameter. | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
- **tickers** | [**[String]**](String.md)| The list of ticker symbols to filter to. | [optional]  &nbsp;
+ **tickers** | [**[String]**](String.md)| The comma-delimited list of ticker symbols to filter down to. If not provided, the entire stock exchange is returned. | [optional]  &nbsp;
  **nextPage2** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
@@ -411,10 +411,10 @@ var identifier = "USCOMP";
 
 
 var opts = { 
-  'source': [null],
+  'source': ["iex,delayed_sip"],
   'activeOnly': null,
   'pageSize': 100,
-  'tickers': [null],
+  'tickers': ["AAPL,MSFT,NVDA"],
   'nextPage': null
 };
 
@@ -436,10 +436,10 @@ stockExchange.getStockExchangeRealtimePrices(identifier, opts).then(function(dat
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
- **source** | [**[String]**](String.md)| Return realtime prices from the specified data source. If no source is specified, all sources are used. | [optional]  &nbsp;
+ **source** | [**[String]**](String.md)| Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. | [optional]  &nbsp;
  **activeOnly** | Boolean| Returns prices only from the most recent trading day. | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
- **tickers** | [**[String]**](String.md)| The list of ticker symbols to filter to. | [optional]  &nbsp;
+ **tickers** | [**[String]**](String.md)| The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. | [optional]  &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
