@@ -1062,12 +1062,13 @@ var intervalSize = "15m";
 var opts = { 
   'source': null,
   'startDate': new Date("2023-01-01"),
-  'startTime': null,
+  'startTime': "33300",
   'endDate': new Date("2023-02-01"),
-  'endTime': null,
+  'endTime': "33300",
   'timezone': "UTC",
   'pageSize': 100,
   'splitAdjusted': false,
+  'includeQuoteOnlyBars': false,
   'nextPage': null
 };
 
@@ -1098,6 +1099,7 @@ Name | Type | Description  | Notes
  **timezone** | String| Returns trading times in this timezone | [optional] [default to UTC] &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **splitAdjusted** | Boolean| Whether to return the values adjusted for splits or not. Default is false. | [optional] [default to false] &nbsp;
+ **includeQuoteOnlyBars** | Boolean| If true, also include bars where no trades occurred but quotes did. | [optional] [default to false] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
@@ -1142,7 +1144,7 @@ Name | Type | Description  | Notes
 #### Intraday Stock Prices for Security
 
 
-Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
+Deprecated.  Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
 
 [//]: # (END_OVERVIEW)
 
@@ -4316,6 +4318,7 @@ var identifier = "AAPL";
 
 var opts = { 
   'activeOnly': false,
+  'source': "delayed_sip",
   'nextPage': null
 };
 
@@ -4338,6 +4341,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
  **activeOnly** | Boolean| Whether to return only realtime prices from today. | [optional] [default to false] &nbsp;
+ **source** | String| Return the realtime price from the specified source instead of the most recent. | [optional]  &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
