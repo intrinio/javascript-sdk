@@ -131,7 +131,7 @@
         obj['previous_close'] = ApiClient.convertToType(data['previous_close'], 'Number');
       }
       if (data.hasOwnProperty('previous_close_date')) {
-        obj['previous_close_date'] = ApiClient.convertToType(data['previous_close_date'], 'Number');
+        obj['previous_close_date'] = ApiClient.convertToType(data['previous_close_date'], 'Date');
       }
       if (data.hasOwnProperty('change')) {
         obj['change'] = ApiClient.convertToType(data['change'], 'Number');
@@ -245,7 +245,7 @@
   exports.prototype['previous_close'] = undefined;
   /**
    * The date of the previous close.
-   * @member {Number} previous_close_date
+   * @member {Date} previous_close_date
    */
   exports.prototype['previous_close_date'] = undefined;
   /**

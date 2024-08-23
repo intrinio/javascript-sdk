@@ -25,7 +25,7 @@ Name | Type | Description
 **marketcap** | Number | The current market cap. &nbsp;
 **pricetoearnings** | Number | The current price to earnings. &nbsp;
 **previousClose** | Number | The previous close price. &nbsp;
-**previousCloseDate** | Number | The date of the previous close. &nbsp;
+**previousCloseDate** | Date | The date of the previous close. &nbsp;
 **change** | Number | The difference in last price from the last close price &nbsp;
 **changePercent** | Number | The percent difference in last price from the last close price &nbsp;
 **adjClose5DaysAgo** | Number | The adjusted close price 5 days ago. &nbsp;
