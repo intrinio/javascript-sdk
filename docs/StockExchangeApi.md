@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**getStockExchangeById**](StockExchangeApi.md#getStockExchangeById) | **GET** /stock_exchanges/{identifier} | Lookup Stock Exchange
 [**getStockExchangePriceAdjustments**](StockExchangeApi.md#getStockExchangePriceAdjustments) | **GET** /stock_exchanges/{identifier}/prices/adjustments | Stock Price Adjustments by Exchange
 [**getStockExchangePrices**](StockExchangeApi.md#getStockExchangePrices) | **GET** /stock_exchanges/{identifier}/prices | Stock Prices by Exchange
+[**getStockExchangeQuote**](StockExchangeApi.md#getStockExchangeQuote) | **GET** /stock_exchanges/{identifier}/quote | Realtime Quote Prices by Exchange
 [**getStockExchangeRealtimePrices**](StockExchangeApi.md#getStockExchangeRealtimePrices) | **GET** /stock_exchanges/{identifier}/prices/realtime | Realtime Stock Prices by Exchange
 [**getStockExchangeSecurities**](StockExchangeApi.md#getStockExchangeSecurities) | **GET** /stock_exchanges/{identifier}/securities | Securities by Exchange
 
@@ -366,6 +367,94 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:StockExchangeApi)
 
+[//]: # (METHOD:getStockExchangeQuote)
+
+[//]: # (RETURN_TYPE:ApiResponseStockExchangeQuote)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseStockExchangeQuote.md)
+
+[//]: # (OPERATION:getStockExchangeQuote_v2)
+
+[//]: # (ENDPOINT:/stock_exchanges/{identifier}/quote)
+
+[//]: # (DOCUMENT_LINK:StockExchangeApi.md#getStockExchangeQuote)
+
+<a name="getStockExchangeQuote"></a>
+## **getStockExchangeQuote**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getStockExchangeQuote_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseStockExchangeQuote getStockExchangeQuote(identifier, tickers, opts)
+
+#### Realtime Quote Prices by Exchange
+
+
+Returns quote prices for the Stock Exchange with the given &#x60;identifier&#x60;
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var stockExchange = new intrinioSDK.StockExchangeApi();
+
+var identifier = "USCOMP";
+var tickers = ["AAPL,MSFT,NVDA"];
+
+
+var opts = { 
+  'source': "delayed_sip",
+  'activeOnly': null
+};
+
+stockExchange.getStockExchangeQuote(identifier, tickers, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
+ **tickers** | [**[String]**](String.md)| The comma-delimited list of ticker symbols to return quotes for. |  &nbsp;
+ **source** | String| Return the realtime price from the specified source instead of the most recent. | [optional]  &nbsp;
+ **activeOnly** | Boolean| Returns prices only from the most recent trading day. | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseStockExchangeQuote**](ApiResponseStockExchangeQuote.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:StockExchangeApi)
+
 [//]: # (METHOD:getStockExchangeRealtimePrices)
 
 [//]: # (RETURN_TYPE:ApiResponseStockExchangeRealtimeStockPrices)
@@ -413,6 +502,7 @@ var identifier = "USCOMP";
 var opts = { 
   'source': ["iex,delayed_sip"],
   'activeOnly': null,
+  'tradedToday': null,
   'pageSize': 100,
   'tickers': ["AAPL,MSFT,NVDA"],
   'nextPage': null
@@ -438,6 +528,7 @@ Name | Type | Description  | Notes
  **identifier** | String| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
  **source** | [**[String]**](String.md)| Return realtime prices from the specified comma-delimited data sources. If no source is specified, all sources available to user are used. | [optional]  &nbsp;
  **activeOnly** | Boolean| Returns prices only from the most recent trading day. | [optional]  &nbsp;
+ **tradedToday** | Boolean| Returns prices only from securities which have traded on the most recent trading day. | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **tickers** | [**[String]**](String.md)| The comma-delimited list of ticker symbols to filter to. If not provided, the entire stock exchange is returned. | [optional]  &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;

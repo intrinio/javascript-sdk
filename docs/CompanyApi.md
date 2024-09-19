@@ -17,7 +17,7 @@ Method | HTTP request | Description
 [**getCompanyHistoricalData**](CompanyApi.md#getCompanyHistoricalData) | **GET** /companies/{identifier}/historical_data/{tag} | Historical Data for Company
 [**getCompanyIpos**](CompanyApi.md#getCompanyIpos) | **GET** /companies/ipos | IPOs
 [**getCompanyNews**](CompanyApi.md#getCompanyNews) | **GET** /companies/{identifier}/news | All News by Company
-[**getCompanyNewsBody**](CompanyApi.md#getCompanyNewsBody) | **GET** /companies/news/body | The body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details.
+[**getCompanyNewsBody**](CompanyApi.md#getCompanyNewsBody) | **GET** /companies/news/body | News Article Body
 [**getCompanyPublicFloat**](CompanyApi.md#getCompanyPublicFloat) | **GET** /companies/{identifier}/public_float | Get Company&#39;s public float
 [**getCompanySecurities**](CompanyApi.md#getCompanySecurities) | **GET** /companies/{identifier}/securities | All Securities by Company
 [**insiderTransactionFilingsByCompany**](CompanyApi.md#insiderTransactionFilingsByCompany) | **GET** /companies/{identifier}/insider_transaction_filings | Insider Transaction Filings by Company
@@ -1264,10 +1264,10 @@ Name | Type | Description  | Notes
 
 > ApiResponseCompanyNewsBody getCompanyNewsBody(newsStoryId, publicationDate, opts)
 
-#### The body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details.
+#### News Article Body
 
 
-Returns the news article body.
+Returns the body of a news article.  This endpoint requires additional authorization beyond basic news access. Please see a representative for details.
 
 [//]: # (END_OVERVIEW)
 

@@ -152,7 +152,9 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var options = new intrinioSDK.OptionsApi();
 
 var opts = { 
-  'date': "2024-04-24"
+  'date': "2024-04-24",
+  'pageSize': 100,
+  'nextPage': null
 };
 
 options.getOptionAggregates(opts).then(function(data) {
@@ -173,6 +175,8 @@ options.getOptionAggregates(opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **date** | [**Object**](.md)| Return aggregated data for this date | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
