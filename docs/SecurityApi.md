@@ -1096,7 +1096,7 @@ Name | Type | Description  | Notes
  **startTime** | String| Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) | [optional]  &nbsp;
  **endDate** | Date| Return intervals stopping at the specified date | [optional]  &nbsp;
  **endTime** | String| Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) | [optional]  &nbsp;
- **timezone** | String| Returns trading times in this timezone | [optional] [default to UTC] &nbsp;
+ **timezone** | String| Interprets the input times in this time zone, as well as returns times in this timezone. | [optional] [default to UTC] &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **splitAdjusted** | Boolean| Whether to return the values adjusted for splits or not. Default is false. | [optional] [default to false] &nbsp;
  **includeQuoteOnlyBars** | Boolean| If true, also include bars where no trades occurred but quotes did. | [optional] [default to false] &nbsp;
@@ -4298,7 +4298,7 @@ Name | Type | Description  | Notes
 #### Quote for a Security
 
 
-Return a current pricing quote for a security across multiple sources.
+Returns many popular metrics for a security from multiple products conveniently in one API. Realtime stock price data requires at least one realtime product subscription (IEX, NASDAQ Basic, and/or Delayed SIP).  If you are subscribed to multiple realtime stock price products, the api will return the most recent realtime stock price. Previous close price and percent change fields require both an EoD US Stock Price subscription and a realtime stock price subscription. Market_cap, price_to_earnings, and dividendyield data fields require a fundamentals subscription.
 
 [//]: # (END_OVERVIEW)
 

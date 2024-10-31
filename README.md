@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.70.0
-- Package version: 6.31.0
+- API version: 2.72.2
+- Package version: 6.32.0
 
 
 ## Installation
@@ -254,6 +254,8 @@ Class | Method | HTTP request | Description
 *intrinioSDK.SecurityApi* | [**searchSecurities**](docs/SecurityApi.md#searchSecurities) | **GET** /securities/search | Search Securities
 *intrinioSDK.StockExchangeApi* | [**getAllStockExchanges**](docs/StockExchangeApi.md#getAllStockExchanges) | **GET** /stock_exchanges | All Stock Exchanges
 *intrinioSDK.StockExchangeApi* | [**getStockExchangeById**](docs/StockExchangeApi.md#getStockExchangeById) | **GET** /stock_exchanges/{identifier} | Lookup Stock Exchange
+*intrinioSDK.StockExchangeApi* | [**getStockExchangeGainers**](docs/StockExchangeApi.md#getStockExchangeGainers) | **GET** /stock_exchanges/{identifier}/gainers | Top Gainers by Exchange
+*intrinioSDK.StockExchangeApi* | [**getStockExchangeLosers**](docs/StockExchangeApi.md#getStockExchangeLosers) | **GET** /stock_exchanges/{identifier}/losers | Top Losers by Exchange
 *intrinioSDK.StockExchangeApi* | [**getStockExchangePriceAdjustments**](docs/StockExchangeApi.md#getStockExchangePriceAdjustments) | **GET** /stock_exchanges/{identifier}/prices/adjustments | Stock Price Adjustments by Exchange
 *intrinioSDK.StockExchangeApi* | [**getStockExchangePrices**](docs/StockExchangeApi.md#getStockExchangePrices) | **GET** /stock_exchanges/{identifier}/prices | Stock Prices by Exchange
 *intrinioSDK.StockExchangeApi* | [**getStockExchangeQuote**](docs/StockExchangeApi.md#getStockExchangeQuote) | **GET** /stock_exchanges/{identifier}/quote | Realtime Quote Prices by Exchange
@@ -424,6 +426,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseSecurityZacksSalesSurprises](docs/ApiResponseSecurityZacksSalesSurprises.md)
  - [intrinioSDK.ApiResponseStandardizedFinancials](docs/ApiResponseStandardizedFinancials.md)
  - [intrinioSDK.ApiResponseStandardizedFinancialsDimensions](docs/ApiResponseStandardizedFinancialsDimensions.md)
+ - [intrinioSDK.ApiResponseStockExchangeMovers](docs/ApiResponseStockExchangeMovers.md)
  - [intrinioSDK.ApiResponseStockExchangeQuote](docs/ApiResponseStockExchangeQuote.md)
  - [intrinioSDK.ApiResponseStockExchangeRealtimeStockPrices](docs/ApiResponseStockExchangeRealtimeStockPrices.md)
  - [intrinioSDK.ApiResponseStockExchangeSecurities](docs/ApiResponseStockExchangeSecurities.md)
@@ -569,6 +572,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.StandardizedFinancialsDimension](docs/StandardizedFinancialsDimension.md)
  - [intrinioSDK.StochasticOscillatorTechnicalValue](docs/StochasticOscillatorTechnicalValue.md)
  - [intrinioSDK.StockExchange](docs/StockExchange.md)
+ - [intrinioSDK.StockExchangeMover](docs/StockExchangeMover.md)
  - [intrinioSDK.StockMarketIndex](docs/StockMarketIndex.md)
  - [intrinioSDK.StockMarketIndexSummary](docs/StockMarketIndexSummary.md)
  - [intrinioSDK.StockPrice](docs/StockPrice.md)

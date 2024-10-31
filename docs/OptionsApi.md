@@ -1811,7 +1811,9 @@ var opts = {
   'pageSize': 250,
   'stockPriceSource': null,
   'model': null,
-  'showExtendedPrice': null
+  'showExtendedPrice': null,
+  'expirationStartDate': "2024-01-01",
+  'expirationEndDate': "2024-02-02"
 };
 
 options.getOptionsPricesRealtimeByTicker(symbol, opts).then(function(data) {
@@ -1839,6 +1841,8 @@ Name | Type | Description  | Notes
  **stockPriceSource** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
  **model** | String| Model for calculating Greek values. Default is black_scholes. | [optional]  &nbsp;
  **showExtendedPrice** | Boolean| Whether to include open close high low type fields. | [optional]  &nbsp;
+ **expirationStartDate** | [**Object**](.md)| Filter out contracts that expire before this date. | [optional]  &nbsp;
+ **expirationEndDate** | [**Object**](.md)| Filter out contracts that expire after this date. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
