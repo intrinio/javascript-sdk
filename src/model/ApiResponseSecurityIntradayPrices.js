@@ -109,10 +109,15 @@
    */
   exports.SourceEnum = {
     /**
-     * value: "$$v2_stock_price_intraday_sources_enum$$"
+     * value: "iex"
      * @const
      */
-    "$$v2_stock_price_intraday_sources_enum$$": "$$v2_stock_price_intraday_sources_enum$$"  };
+    "iex": "iex",
+    /**
+     * value: "bats"
+     * @const
+     */
+    "bats": "bats"  };
 
 
   return exports;

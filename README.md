@@ -508,7 +508,6 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.FundamentalSummary](docs/FundamentalSummary.md)
  - [intrinioSDK.HistoricalData](docs/HistoricalData.md)
  - [intrinioSDK.IchimokuKinkoHyoTechnicalValue](docs/IchimokuKinkoHyoTechnicalValue.md)
- - [intrinioSDK.IndexConstituents](docs/IndexConstituents.md)
  - [intrinioSDK.InsiderTransaction](docs/InsiderTransaction.md)
  - [intrinioSDK.InsiderTransactionFiling](docs/InsiderTransactionFiling.md)
  - [intrinioSDK.InstitutionalHolding](docs/InstitutionalHolding.md)

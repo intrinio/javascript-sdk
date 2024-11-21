@@ -211,9 +211,9 @@
 
     /**
      * Data Point (Number) for Security
-     * $$v2_security_data_point_number_description$$
-     * @param {String} identifier $$v2_security_data_point_identifier_description$$
-     * @param {String} tag $$v2_security_data_point_item_description$$
+     * Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+     * @param {String} identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
      */
     this.getSecurityDataPointNumberWithHttpInfo = function(identifier, tag) {
@@ -257,9 +257,9 @@
 
     /**
      * Data Point (Number) for Security
-     * $$v2_security_data_point_number_description$$
-     * @param {String} identifier $$v2_security_data_point_identifier_description$$
-     * @param {String} tag $$v2_security_data_point_item_description$$
+     * Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+     * @param {String} identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
     this.getSecurityDataPointNumber = function(identifier, tag) {
@@ -273,8 +273,8 @@
 
     /**
      * Data Point (Text) for Security
-     * $$v2_security_data_point_text_description$$
-     * @param {String} identifier $$v2_security_data_point_identifier_description$$
+     * Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+     * @param {String} identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
@@ -319,8 +319,8 @@
 
     /**
      * Data Point (Text) for Security
-     * $$v2_security_data_point_text_description$$
-     * @param {String} identifier $$v2_security_data_point_identifier_description$$
+     * Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+     * @param {String} identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
      * @param {String} tag An Intrinio data tag ID or code-name
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
@@ -335,9 +335,9 @@
 
     /**
      * Historical Data for Security
-     * $$v2_security_historical_data_description$$
-     * @param {String} identifier $$v2_security_historical_data_identifier_description$$
-     * @param {String} tag $$v2_security_data_point_item_description$$
+     * Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
+     * @param {String} identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.frequency Return historical data in the given frequency (default to daily)
      * @param {String} opts.type Filter by type, when applicable
@@ -397,9 +397,9 @@
 
     /**
      * Historical Data for Security
-     * $$v2_security_historical_data_description$$
-     * @param {String} identifier $$v2_security_historical_data_identifier_description$$
-     * @param {String} tag $$v2_security_data_point_item_description$$
+     * Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
+     * @param {String} identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
+     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.frequency Return historical data in the given frequency (default to daily)
      * @param {String} opts.type Filter by type, when applicable
@@ -849,7 +849,7 @@
 
     /**
      * Intraday Stock Prices for Security
-     * Deprecated.  $$v2_security_intraday_prices_description$$
+     * Deprecated.  Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
      * @param {String} identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.source Return intraday prices from the specified data source
@@ -904,7 +904,7 @@
 
     /**
      * Intraday Stock Prices for Security
-     * Deprecated.  $$v2_security_intraday_prices_description$$
+     * Deprecated.  Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
      * @param {String} identifier A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID)
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.source Return intraday prices from the specified data source

@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ApiResponseIndex', 'model/IndexConstituents'], factory);
+    define(['ApiClient', 'model/ApiResponseIndex', 'model/SecuritySummary'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./ApiResponseIndex'), require('./IndexConstituents'));
+    module.exports = factory(require('../ApiClient'), require('./ApiResponseIndex'), require('./SecuritySummary'));
   } else {
     // Browser globals (root is window)
     if (!root.intrinioSDK) {
       root.intrinioSDK = {};
     }
-    root.intrinioSDK.ApiResponseIndexConstituents = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.ApiResponseIndex, root.intrinioSDK.IndexConstituents);
+    root.intrinioSDK.ApiResponseIndexConstituents = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.ApiResponseIndex, root.intrinioSDK.SecuritySummary);
   }
-}(this, function(ApiClient, ApiResponseIndex, IndexConstituents) {
+}(this, function(ApiClient, ApiResponseIndex, SecuritySummary) {
   'use strict';
 
 
@@ -70,7 +70,7 @@
         obj['date'] = ApiClient.convertToType(data['date'], 'Date');
       }
       if (data.hasOwnProperty('constituents')) {
-        obj['constituents'] = IndexConstituents.constructFromObject(data['constituents']);
+        obj['constituents'] = ApiClient.convertToType(data['constituents'], [SecuritySummary]);
       }
     }
     return obj;
@@ -87,7 +87,7 @@
    */
   exports.prototype['date'] = undefined;
   /**
-   * @member {module:model/IndexConstituents} constituents
+   * @member {Array.<module:model/SecuritySummary>} constituents
    */
   exports.prototype['constituents'] = undefined;
 
