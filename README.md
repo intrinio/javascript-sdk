@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.72.2
-- Package version: 6.32.0
+- API version: 2.75.0
+- Package version: 6.33.0
 
 
 ## Installation
@@ -143,6 +143,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.IndexApi* | [**getEconomicIndexDataPointText**](docs/IndexApi.md#getEconomicIndexDataPointText) | **GET** /indices/economic/{identifier}/data_point/{tag}/text | Data Point (Text) for an Economic Index
 *intrinioSDK.IndexApi* | [**getEconomicIndexHistoricalData**](docs/IndexApi.md#getEconomicIndexHistoricalData) | **GET** /indices/economic/{identifier}/historical_data/{tag} | Historical Data for an Economic Index
 *intrinioSDK.IndexApi* | [**getEodIndexPriceById**](docs/IndexApi.md#getEodIndexPriceById) | **GET** /indices/{identifier}/eod | End of Day Index Prices By Identifier
+*intrinioSDK.IndexApi* | [**getIndexConstituentsById**](docs/IndexApi.md#getIndexConstituentsById) | **GET** /indices/{identifier}/constituents | Index Constituents By Index Identifier
 *intrinioSDK.IndexApi* | [**getIndexSummaryById**](docs/IndexApi.md#getIndexSummaryById) | **GET** /indices/{identifier} | Index Summary By Identifier
 *intrinioSDK.IndexApi* | [**getRealtimeIndexPriceById**](docs/IndexApi.md#getRealtimeIndexPriceById) | **GET** /indices/{identifier}/realtime | Realtime Index Price By Identifier
 *intrinioSDK.IndexApi* | [**getSicIndexById**](docs/IndexApi.md#getSicIndexById) | **GET** /indices/sic/{identifier} | Lookup SIC Index
@@ -165,6 +166,8 @@ Class | Method | HTTP request | Description
 *intrinioSDK.OptionsApi* | [**getOptionAggregates**](docs/OptionsApi.md#getOptionAggregates) | **GET** /options/aggregates | Total open interest and volume aggregated by ticker
 *intrinioSDK.OptionsApi* | [**getOptionExpirationsRealtime**](docs/OptionsApi.md#getOptionExpirationsRealtime) | **GET** /options/expirations/{symbol}/realtime | Options Expirations
 *intrinioSDK.OptionsApi* | [**getOptionStrikesRealtime**](docs/OptionsApi.md#getOptionStrikesRealtime) | **GET** /options/strikes/{symbol}/{strike}/realtime | Option Strikes Realtime
+*intrinioSDK.OptionsApi* | [**getOptionTrades**](docs/OptionsApi.md#getOptionTrades) | **GET** /options/trades | Option Trades
+*intrinioSDK.OptionsApi* | [**getOptionTradesByContract**](docs/OptionsApi.md#getOptionTradesByContract) | **GET** /options/{identifier}/trades | Option Trades By Contract
 *intrinioSDK.OptionsApi* | [**getOptions**](docs/OptionsApi.md#getOptions) | **GET** /options/{symbol} | Options
 *intrinioSDK.OptionsApi* | [**getOptionsBySymbolRealtime**](docs/OptionsApi.md#getOptionsBySymbolRealtime) | **GET** /options/{symbol}/realtime | Options by Symbol Realtime
 *intrinioSDK.OptionsApi* | [**getOptionsChain**](docs/OptionsApi.md#getOptionsChain) | **GET** /options/chain/{symbol}/{expiration} | Options Chain
@@ -179,6 +182,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.OptionsApi* | [**getOptionsPrices**](docs/OptionsApi.md#getOptionsPrices) | **GET** /options/prices/{identifier} | Option Prices
 *intrinioSDK.OptionsApi* | [**getOptionsPricesBatchRealtime**](docs/OptionsApi.md#getOptionsPricesBatchRealtime) | **POST** /options/prices/realtime/batch | Option Prices Batch Realtime
 *intrinioSDK.OptionsApi* | [**getOptionsPricesEod**](docs/OptionsApi.md#getOptionsPricesEod) | **GET** /options/prices/{identifier}/eod | Option Prices EOD
+*intrinioSDK.OptionsApi* | [**getOptionsPricesEodByTicker**](docs/OptionsApi.md#getOptionsPricesEodByTicker) | **GET** /options/prices/by_ticker/{symbol}/eod | Option Prices End of Day By Ticker
 *intrinioSDK.OptionsApi* | [**getOptionsPricesRealtime**](docs/OptionsApi.md#getOptionsPricesRealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 *intrinioSDK.OptionsApi* | [**getOptionsPricesRealtimeByTicker**](docs/OptionsApi.md#getOptionsPricesRealtimeByTicker) | **GET** /options/prices/by_ticker/{symbol}/realtime | Option Prices Realtime By Ticker
 *intrinioSDK.OptionsApi* | [**getOptionsSnapshots**](docs/OptionsApi.md#getOptionsSnapshots) | **GET** /options/snapshots | Option Prices Realtime Snapshot
@@ -351,6 +355,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseForexPrices](docs/ApiResponseForexPrices.md)
  - [intrinioSDK.ApiResponseHistoricalData](docs/ApiResponseHistoricalData.md)
  - [intrinioSDK.ApiResponseIndex](docs/ApiResponseIndex.md)
+ - [intrinioSDK.ApiResponseIndexConstituents](docs/ApiResponseIndexConstituents.md)
  - [intrinioSDK.ApiResponseIndices](docs/ApiResponseIndices.md)
  - [intrinioSDK.ApiResponseInitialPublicOfferings](docs/ApiResponseInitialPublicOfferings.md)
  - [intrinioSDK.ApiResponseInsiderTransactionFilings](docs/ApiResponseInsiderTransactionFilings.md)
@@ -366,6 +371,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseOptionsExpirations](docs/ApiResponseOptionsExpirations.md)
  - [intrinioSDK.ApiResponseOptionsPriceRealtime](docs/ApiResponseOptionsPriceRealtime.md)
  - [intrinioSDK.ApiResponseOptionsPricesBatchRealtime](docs/ApiResponseOptionsPricesBatchRealtime.md)
+ - [intrinioSDK.ApiResponseOptionsPricesByTickerEod](docs/ApiResponseOptionsPricesByTickerEod.md)
  - [intrinioSDK.ApiResponseOptionsPricesByTickerRealtime](docs/ApiResponseOptionsPricesByTickerRealtime.md)
  - [intrinioSDK.ApiResponseOptionsPricesEod](docs/ApiResponseOptionsPricesEod.md)
  - [intrinioSDK.ApiResponseOptionsRealtime](docs/ApiResponseOptionsRealtime.md)
@@ -502,6 +508,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.FundamentalSummary](docs/FundamentalSummary.md)
  - [intrinioSDK.HistoricalData](docs/HistoricalData.md)
  - [intrinioSDK.IchimokuKinkoHyoTechnicalValue](docs/IchimokuKinkoHyoTechnicalValue.md)
+ - [intrinioSDK.IndexConstituents](docs/IndexConstituents.md)
  - [intrinioSDK.InsiderTransaction](docs/InsiderTransaction.md)
  - [intrinioSDK.InsiderTransactionFiling](docs/InsiderTransactionFiling.md)
  - [intrinioSDK.InstitutionalHolding](docs/InstitutionalHolding.md)
@@ -539,8 +546,11 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.OptionSnapshotGroup](docs/OptionSnapshotGroup.md)
  - [intrinioSDK.OptionSnapshotsResult](docs/OptionSnapshotsResult.md)
  - [intrinioSDK.OptionStatsRealtime](docs/OptionStatsRealtime.md)
+ - [intrinioSDK.OptionTrades](docs/OptionTrades.md)
+ - [intrinioSDK.OptionTradesResult](docs/OptionTradesResult.md)
  - [intrinioSDK.OptionUnusualTrade](docs/OptionUnusualTrade.md)
  - [intrinioSDK.OptionsAggregate](docs/OptionsAggregate.md)
+ - [intrinioSDK.OptionsPriceEod](docs/OptionsPriceEod.md)
  - [intrinioSDK.Owner](docs/Owner.md)
  - [intrinioSDK.OwnerSummary](docs/OwnerSummary.md)
  - [intrinioSDK.RealtimeIndexPrice](docs/RealtimeIndexPrice.md)

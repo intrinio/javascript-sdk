@@ -8,6 +8,8 @@ Method | HTTP request | Description
 [**getOptionAggregates**](OptionsApi.md#getOptionAggregates) | **GET** /options/aggregates | Total open interest and volume aggregated by ticker
 [**getOptionExpirationsRealtime**](OptionsApi.md#getOptionExpirationsRealtime) | **GET** /options/expirations/{symbol}/realtime | Options Expirations
 [**getOptionStrikesRealtime**](OptionsApi.md#getOptionStrikesRealtime) | **GET** /options/strikes/{symbol}/{strike}/realtime | Option Strikes Realtime
+[**getOptionTrades**](OptionsApi.md#getOptionTrades) | **GET** /options/trades | Option Trades
+[**getOptionTradesByContract**](OptionsApi.md#getOptionTradesByContract) | **GET** /options/{identifier}/trades | Option Trades By Contract
 [**getOptions**](OptionsApi.md#getOptions) | **GET** /options/{symbol} | Options
 [**getOptionsBySymbolRealtime**](OptionsApi.md#getOptionsBySymbolRealtime) | **GET** /options/{symbol}/realtime | Options by Symbol Realtime
 [**getOptionsChain**](OptionsApi.md#getOptionsChain) | **GET** /options/chain/{symbol}/{expiration} | Options Chain
@@ -22,6 +24,7 @@ Method | HTTP request | Description
 [**getOptionsPrices**](OptionsApi.md#getOptionsPrices) | **GET** /options/prices/{identifier} | Option Prices
 [**getOptionsPricesBatchRealtime**](OptionsApi.md#getOptionsPricesBatchRealtime) | **POST** /options/prices/realtime/batch | Option Prices Batch Realtime
 [**getOptionsPricesEod**](OptionsApi.md#getOptionsPricesEod) | **GET** /options/prices/{identifier}/eod | Option Prices EOD
+[**getOptionsPricesEodByTicker**](OptionsApi.md#getOptionsPricesEodByTicker) | **GET** /options/prices/by_ticker/{symbol}/eod | Option Prices End of Day By Ticker
 [**getOptionsPricesRealtime**](OptionsApi.md#getOptionsPricesRealtime) | **GET** /options/prices/{identifier}/realtime | Option Prices Realtime
 [**getOptionsPricesRealtimeByTicker**](OptionsApi.md#getOptionsPricesRealtimeByTicker) | **GET** /options/prices/by_ticker/{symbol}/realtime | Option Prices Realtime By Ticker
 [**getOptionsSnapshots**](OptionsApi.md#getOptionsSnapshots) | **GET** /options/snapshots | Option Prices Realtime Snapshot
@@ -368,6 +371,204 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseOptionsChainRealtime**](ApiResponseOptionsChainRealtime.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:OptionsApi)
+
+[//]: # (METHOD:getOptionTrades)
+
+[//]: # (RETURN_TYPE:OptionTradesResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:OptionTradesResult.md)
+
+[//]: # (OPERATION:getOptionTrades_v2)
+
+[//]: # (ENDPOINT:/options/trades)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getOptionTrades)
+
+<a name="getOptionTrades"></a>
+## **getOptionTrades**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getOptionTrades_v2)
+
+[//]: # (START_OVERVIEW)
+
+> OptionTradesResult getOptionTrades(opts)
+
+#### Option Trades
+
+
+Returns all trades between start time and end time, up to seven days ago for the specified source.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var options = new intrinioSDK.OptionsApi();
+
+var opts = { 
+  'source': null,
+  'startDate': null,
+  'startTime': null,
+  'endDate': null,
+  'endTime': null,
+  'timezone': "UTC",
+  'pageSize': 100,
+  'minSize': 100,
+  'security': "AAPL",
+  'nextPage': null
+};
+
+options.getOptionTrades(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | String| The specific source of the data being requested. | [optional]  &nbsp;
+ **startDate** | Date| The start date for the data being requested. | [optional]  &nbsp;
+ **startTime** | String| The start time for the data being requested. | [optional]  &nbsp;
+ **endDate** | Date| The end date for the data being requested. | [optional]  &nbsp;
+ **endTime** | String| The end time for the data being requested. | [optional]  &nbsp;
+ **timezone** | String| The timezone the start and end date/times use. | [optional] [default to UTC] &nbsp;
+ **pageSize** | Number| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **minSize** | Number| Trades must be larger or equal to this size. | [optional]  &nbsp;
+ **security** | String| The ticker symbol for which trades are being requested. | [optional]  &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**OptionTradesResult**](OptionTradesResult.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:OptionsApi)
+
+[//]: # (METHOD:getOptionTradesByContract)
+
+[//]: # (RETURN_TYPE:OptionTradesResult)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:OptionTradesResult.md)
+
+[//]: # (OPERATION:getOptionTradesByContract_v2)
+
+[//]: # (ENDPOINT:/options/{identifier}/trades)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getOptionTradesByContract)
+
+<a name="getOptionTradesByContract"></a>
+## **getOptionTradesByContract**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getOptionTradesByContract_v2)
+
+[//]: # (START_OVERVIEW)
+
+> OptionTradesResult getOptionTradesByContract(identifier, opts)
+
+#### Option Trades By Contract
+
+
+Returns all trades for a contract between start time and end time, up to seven days ago for the specified source.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var options = new intrinioSDK.OptionsApi();
+
+var identifier = "AAPL__261218C00230000";
+
+
+var opts = { 
+  'source': null,
+  'startDate': null,
+  'startTime': null,
+  'endDate': null,
+  'endTime': null,
+  'timezone': "UTC",
+  'pageSize': 100,
+  'minSize': 100,
+  'nextPage': null
+};
+
+options.getOptionTradesByContract(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| The option contract for which trades are being requested. |  &nbsp;
+ **source** | String| The specific source of the data being requested. | [optional]  &nbsp;
+ **startDate** | Date| The start date for the data being requested. | [optional]  &nbsp;
+ **startTime** | String| The start time for the data being requested. | [optional]  &nbsp;
+ **endDate** | Date| The end date for the data being requested. | [optional]  &nbsp;
+ **endTime** | String| The end time for the data being requested. | [optional]  &nbsp;
+ **timezone** | String| The timezone the start and end date/times use. | [optional] [default to UTC] &nbsp;
+ **pageSize** | Number| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **minSize** | Number| Trades must be larger or equal to this size. | [optional]  &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**OptionTradesResult**](OptionTradesResult.md)
 
 
 
@@ -1670,6 +1871,104 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:OptionsApi)
 
+[//]: # (METHOD:getOptionsPricesEodByTicker)
+
+[//]: # (RETURN_TYPE:ApiResponseOptionsPricesByTickerEod)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseOptionsPricesByTickerEod.md)
+
+[//]: # (OPERATION:getOptionsPricesEodByTicker_v2)
+
+[//]: # (ENDPOINT:/options/prices/by_ticker/{symbol}/eod)
+
+[//]: # (DOCUMENT_LINK:OptionsApi.md#getOptionsPricesEodByTicker)
+
+<a name="getOptionsPricesEodByTicker"></a>
+## **getOptionsPricesEodByTicker**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getOptionsPricesEodByTicker_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseOptionsPricesByTickerEod getOptionsPricesEodByTicker(symbol, opts)
+
+#### Option Prices End of Day By Ticker
+
+
+Returns a list of end of day pricing information for all option contracts currently associated with the ticker.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var options = new intrinioSDK.OptionsApi();
+
+var symbol = "MSFT";
+
+
+var opts = { 
+  'pageSize': 250,
+  'date': "2024-01-01",
+  'type': null,
+  'strike': null,
+  'strikeGreaterThan': null,
+  'strikeLessThan': null,
+  'includeRelatedSymbols': false,
+  'nextPage': null
+};
+
+options.getOptionsPricesEodByTicker(symbol, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | String| The equities ticker symbol, corresponding to the underlying security. |  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 250] &nbsp;
+ **date** | [**Object**](.md)| The date to get pricing data for. Defaults to today in Eastern time zone. | [optional]  &nbsp;
+ **type** | String| The option contract type. | [optional]  &nbsp;
+ **strike** | Number| The strike price of the option contract. This will return options contracts with strike price equal to this price. | [optional]  &nbsp;
+ **strikeGreaterThan** | Number| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;
+ **strikeLessThan** | Number| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
+ **includeRelatedSymbols** | Boolean| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseOptionsPricesByTickerEod**](ApiResponseOptionsPricesByTickerEod.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:OptionsApi)
+
 [//]: # (METHOD:getOptionsPricesRealtime)
 
 [//]: # (RETURN_TYPE:ApiResponseOptionsPriceRealtime)
@@ -1711,7 +2010,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-var identifier = "AAPL230120C00090000";
+var identifier = "AAPL__261218C00230000";
 
 
 var opts = { 

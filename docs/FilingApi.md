@@ -71,6 +71,7 @@ var opts = {
   'industryCategory': null,
   'industryGroup': null,
   'theaEnabled': null,
+  'earningsRelease': null,
   'pageSize': 100,
   'nextPage': null
 };
@@ -99,6 +100,7 @@ Name | Type | Description  | Notes
  **industryCategory** | String| Return companies in the given industry category | [optional]  &nbsp;
  **industryGroup** | String| Return companies in the given industry group | [optional]  &nbsp;
  **theaEnabled** | Boolean| Return filings that have been read by our Thea NLP and are ready for our answers endpoint | [optional]  &nbsp;
+ **earningsRelease** | Boolean| Return filings that have been tagged as having Results of Operations and Financial Conditions | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>

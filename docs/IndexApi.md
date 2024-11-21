@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**getEconomicIndexDataPointText**](IndexApi.md#getEconomicIndexDataPointText) | **GET** /indices/economic/{identifier}/data_point/{tag}/text | Data Point (Text) for an Economic Index
 [**getEconomicIndexHistoricalData**](IndexApi.md#getEconomicIndexHistoricalData) | **GET** /indices/economic/{identifier}/historical_data/{tag} | Historical Data for an Economic Index
 [**getEodIndexPriceById**](IndexApi.md#getEodIndexPriceById) | **GET** /indices/{identifier}/eod | End of Day Index Prices By Identifier
+[**getIndexConstituentsById**](IndexApi.md#getIndexConstituentsById) | **GET** /indices/{identifier}/constituents | Index Constituents By Index Identifier
 [**getIndexSummaryById**](IndexApi.md#getIndexSummaryById) | **GET** /indices/{identifier} | Index Summary By Identifier
 [**getRealtimeIndexPriceById**](IndexApi.md#getRealtimeIndexPriceById) | **GET** /indices/{identifier}/realtime | Realtime Index Price By Identifier
 [**getSicIndexById**](IndexApi.md#getSicIndexById) | **GET** /indices/sic/{identifier} | Lookup SIC Index
@@ -934,6 +935,84 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseEodIndexPrices**](ApiResponseEodIndexPrices.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:IndexApi)
+
+[//]: # (METHOD:getIndexConstituentsById)
+
+[//]: # (RETURN_TYPE:ApiResponseIndexConstituents)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseIndexConstituents.md)
+
+[//]: # (OPERATION:getIndexConstituentsById_v2)
+
+[//]: # (ENDPOINT:/indices/{identifier}/constituents)
+
+[//]: # (DOCUMENT_LINK:IndexApi.md#getIndexConstituentsById)
+
+<a name="getIndexConstituentsById"></a>
+## **getIndexConstituentsById**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getIndexConstituentsById_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseIndexConstituents getIndexConstituentsById(identifier)
+
+#### Index Constituents By Index Identifier
+
+
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var index = new intrinioSDK.IndexApi();
+
+var identifier = "DJI";
+
+
+index.getIndexConstituentsById(identifier).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| The index symbol |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseIndexConstituents**](ApiResponseIndexConstituents.md)
 
 
 
