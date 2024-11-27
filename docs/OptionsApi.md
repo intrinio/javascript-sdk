@@ -61,7 +61,7 @@ Method | HTTP request | Description
 
 [//]: # (START_OVERVIEW)
 
-> ApiResponseOptionsTickers getAllOptionsTickers()
+> ApiResponseOptionsTickers getAllOptionsTickers(opts)
 
 #### Options Tickers
 
@@ -81,7 +81,11 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var options = new intrinioSDK.OptionsApi();
 
-options.getAllOptionsTickers().then(function(data) {
+var opts = { 
+  'useUnderlyingSymbols': false
+};
+
+options.getAllOptionsTickers(opts).then(function(data) {
   data = JSON.stringify(data, null, 2)
   console.log(data);
 }, function(error) {
@@ -95,7 +99,10 @@ options.getAllOptionsTickers().then(function(data) {
 
 [//]: # (START_PARAMETERS)
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **useUnderlyingSymbols** | Boolean| Use underlying symbol vs contract symbol | [optional] [default to false] &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

@@ -17,9 +17,10 @@ Name | Type | Description
 **high** | Number | The highest traded contract price in this interval. &nbsp;
 **low** | Number | The lowest traded contract price in this interval. &nbsp;
 **close** | Number | The last traded contract price in this interval. &nbsp;
-**volume** | Number | The volume of contract trades in this interval. &nbsp;
+**volume** | Number | The volume of contracts traded in this interval. &nbsp;
 **average** | Number | The volume weighted average price of contract trades in this interval. &nbsp;
 **change** | Number | The ratio of Close minus Open to Open. &nbsp;
+**tradeCount** | Number | The number of qualified trades executed during the period &nbsp;
 
 [//]: # (END_DEFINITION)
 

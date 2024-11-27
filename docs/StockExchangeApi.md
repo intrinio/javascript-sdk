@@ -5,6 +5,7 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAllStockExchanges**](StockExchangeApi.md#getAllStockExchanges) | **GET** /stock_exchanges | All Stock Exchanges
+[**getStockExchangeBetas**](StockExchangeApi.md#getStockExchangeBetas) | **GET** /stock_exchanges/{identifier}/betas | Security Betas
 [**getStockExchangeById**](StockExchangeApi.md#getStockExchangeById) | **GET** /stock_exchanges/{identifier} | Lookup Stock Exchange
 [**getStockExchangeGainers**](StockExchangeApi.md#getStockExchangeGainers) | **GET** /stock_exchanges/{identifier}/gainers | Top Gainers by Exchange
 [**getStockExchangeLosers**](StockExchangeApi.md#getStockExchangeLosers) | **GET** /stock_exchanges/{identifier}/losers | Top Losers by Exchange
@@ -96,6 +97,96 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseStockExchanges**](ApiResponseStockExchanges.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:StockExchangeApi)
+
+[//]: # (METHOD:getStockExchangeBetas)
+
+[//]: # (RETURN_TYPE:ApiResponseStockExchangeBetas)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseStockExchangeBetas.md)
+
+[//]: # (OPERATION:getStockExchangeBetas_v2)
+
+[//]: # (ENDPOINT:/stock_exchanges/{identifier}/betas)
+
+[//]: # (DOCUMENT_LINK:StockExchangeApi.md#getStockExchangeBetas)
+
+<a name="getStockExchangeBetas"></a>
+## **getStockExchangeBetas**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getStockExchangeBetas_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseStockExchangeBetas getStockExchangeBetas(identifier, opts)
+
+#### Security Betas
+
+
+Returns security beta data in the Stock Exchange with the given &#x60;identifier&#x60;
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var stockExchange = new intrinioSDK.StockExchangeApi();
+
+var identifier = "USCOMP";
+
+
+var opts = { 
+  'type': "weekly",
+  'date': "2024-04-24",
+  'pageSize': 100,
+  'nextPage': null
+};
+
+stockExchange.getStockExchangeBetas(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Stock Exchange identifier (MIC or Intrinio ID) |  &nbsp;
+ **type** | String| Only of the given type | [optional] [default to weekly] &nbsp;
+ **date** | [**Object**](.md)| Return data for this period end date. | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseStockExchangeBetas**](ApiResponseStockExchangeBetas.md)
 
 
 
