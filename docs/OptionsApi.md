@@ -2209,7 +2209,10 @@ var options = new intrinioSDK.OptionsApi();
 
 var opts = { 
   'source': null,
-  'atDatetime': null
+  'atDatetime': null,
+  'withGreeks': null,
+  'stockPriceSource': null,
+  'withUnderlyingPrice': null
 };
 
 options.getOptionsSnapshots(opts).then(function(data) {
@@ -2231,6 +2234,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **source** | String| Realtime or 15-minute delayed contracts. | [optional]  &nbsp;
  **atDatetime** | Date| The UTC date and time (with url-encoded spaces) the snapshot will cover. | [optional]  &nbsp;
+ **withGreeks** | Boolean| Whether to include Greek calculations fields when available. | [optional]  &nbsp;
+ **stockPriceSource** | String| Source for underlying price for calculating Greeks. | [optional]  &nbsp;
+ **withUnderlyingPrice** | Boolean| Whether to include the underlying price of the security in the file. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
