@@ -36,6 +36,7 @@ realtime | &quot;realtime&quot;
 delayed | &quot;delayed&quot;
 nasdaq_basic | &quot;nasdaq_basic&quot;
 nasdaq_basic_filtered | &quot;nasdaq_basic_filtered&quot;
+nasdaq_basic_last_sale | &quot;nasdaq_basic_last_sale&quot;
 
 
 
