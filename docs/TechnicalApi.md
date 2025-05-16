@@ -202,7 +202,7 @@ technical.getSecurityPriceTechnicalsAdtv(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | Number| The number of observations, per period, to calculate Average Daily Trading Volume | [optional] [default to 22] &nbsp;
+ **period** | Number| The number of observations to calculate Average Daily Trading Volume | [optional] [default to 22] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
@@ -294,7 +294,7 @@ technical.getSecurityPriceTechnicalsAdx(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | Number| The number of observations, per period, to calculate Average Directional Index | [optional] [default to 14] &nbsp;
+ **period** | Number| The number of observations to calculate Average Directional Index | [optional] [default to 14] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
@@ -387,8 +387,8 @@ technical.getSecurityPriceTechnicalsAo(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **shortPeriod** | Number| The number of observations, per period, to calculate short period Simple Moving Average of the Awesome Oscillator | [optional] [default to 5] &nbsp;
- **longPeriod** | Number| The number of observations, per period, to calculate long period Simple Moving Average of the Awesome Oscillator | [optional] [default to 34] &nbsp;
+ **shortPeriod** | Number| The number of observations to calculate short period Simple Moving Average of the Awesome Oscillator | [optional] [default to 5] &nbsp;
+ **longPeriod** | Number| The number of observations to calculate long period Simple Moving Average of the Awesome Oscillator | [optional] [default to 34] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
@@ -480,7 +480,7 @@ technical.getSecurityPriceTechnicalsAtr(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | Number| The number of observations, per period, to calculate Average True Range | [optional] [default to 14] &nbsp;
+ **period** | Number| The number of observations to calculate Average True Range | [optional] [default to 14] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
@@ -574,7 +574,7 @@ technical.getSecurityPriceTechnicalsBb(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | Number| The number of observations, per period, to calculate Bollinger Bands | [optional] [default to 20] &nbsp;
+ **period** | Number| The number of observations to calculate Bollinger Bands | [optional] [default to 20] &nbsp;
  **standardDeviations** | Number| The number of standard deviations to calculate the upper and lower bands of the Bollinger Bands | [optional] [default to 2.0] &nbsp;
  **priceKey** | String| The Stock Price field to use when calculating Bollinger Bands | [optional] [default to close] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
@@ -669,8 +669,8 @@ technical.getSecurityPriceTechnicalsCci(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | Number| The number of observations, per period, to calculate Commodity Channel Index | [optional] [default to 20] &nbsp;
- **constant** | Number| The number of observations, per period, to calculate Commodity Channel Index | [optional] [default to 0.015] &nbsp;
+ **period** | Number| The number of observations to calculate Commodity Channel Index | [optional] [default to 20] &nbsp;
+ **constant** | Number| The number of observations to calculate Commodity Channel Index | [optional] [default to 0.015] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
@@ -762,7 +762,7 @@ technical.getSecurityPriceTechnicalsCmf(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | Number| The number of observations, per period, to calculate Chaikin Money Flow | [optional] [default to 20] &nbsp;
+ **period** | Number| The number of observations to calculate Chaikin Money Flow | [optional] [default to 20] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
@@ -855,7 +855,7 @@ technical.getSecurityPriceTechnicalsDc(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | Number| The number of observations, per period, to calculate Donchian Channel | [optional] [default to 20] &nbsp;
+ **period** | Number| The number of observations to calculate Donchian Channel | [optional] [default to 20] &nbsp;
  **priceKey** | String| The Stock Price field to use when calculating Donchian Channel | [optional] [default to close] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
@@ -949,7 +949,7 @@ technical.getSecurityPriceTechnicalsDpo(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | Number| The number of observations, per period, to calculate Detrended Price Oscillator | [optional] [default to 20] &nbsp;
+ **period** | Number| The number of observations to calculate Detrended Price Oscillator | [optional] [default to 20] &nbsp;
  **priceKey** | String| The Stock Price field to use when calculating Detrended Price Oscillator | [optional] [default to close] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
@@ -1042,7 +1042,7 @@ technical.getSecurityPriceTechnicalsEom(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | Number| The number of observations, per period, to calculate Ease of Movement | [optional] [default to 20] &nbsp;
+ **period** | Number| The number of observations to calculate Ease of Movement | [optional] [default to 20] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
@@ -1226,9 +1226,9 @@ technical.getSecurityPriceTechnicalsIchimoku(identifier, opts).then(function(dat
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **lowPeriod** | Number| The number of observations, per period, to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo | [optional] [default to 9] &nbsp;
- **mediumPeriod** | Number| The number of observations, per period, to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo | [optional] [default to 26] &nbsp;
- **highPeriod** | Number| The number of observations, per period, to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo | [optional] [default to 52] &nbsp;
+ **lowPeriod** | Number| The number of observations to calculate Tenkan Sen (Conversion Line) of Ichimoku Kinko Hyo | [optional] [default to 9] &nbsp;
+ **mediumPeriod** | Number| The number of observations to calculate Kijun Sen (Base Line), Senkou Span A (Leading Span A), and Chikou Span (Lagging Span) of Ichimoku Kinko Hyo | [optional] [default to 26] &nbsp;
+ **highPeriod** | Number| The number of observations to calculate Senkou Span B (Leading Span B) of Ichimoku Kinko Hyo | [optional] [default to 52] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
@@ -1320,7 +1320,7 @@ technical.getSecurityPriceTechnicalsKc(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | Number| The number of observations, per period, to calculate Kelter Channel | [optional] [default to 10] &nbsp;
+ **period** | Number| The number of observations to calculate Kelter Channel | [optional] [default to 10] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
@@ -1420,14 +1420,14 @@ technical.getSecurityPriceTechnicalsKst(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **roc1** | Number| The number of observations, per period, to calculate the rate-of-change for RCMA1 | [optional] [default to 10] &nbsp;
- **roc2** | Number| The number of observations, per period, to calculate the rate-of-change for RCMA2 | [optional] [default to 15] &nbsp;
- **roc3** | Number| The number of observations, per period, to calculate the rate-of-change for RCMA3 | [optional] [default to 20] &nbsp;
- **roc4** | Number| The number of observations, per period, to calculate the rate-of-change for RCMA4 | [optional] [default to 30] &nbsp;
- **sma1** | Number| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA1 | [optional] [default to 10] &nbsp;
- **sma2** | Number| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA2 | [optional] [default to 10] &nbsp;
- **sma3** | Number| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA3 | [optional] [default to 10] &nbsp;
- **sma4** | Number| The number of observations, per period, to calculate the Simple Moving Average of the rate-of-change for RCMA4 | [optional] [default to 15] &nbsp;
+ **roc1** | Number| The number of observations to calculate the rate-of-change for RCMA1 | [optional] [default to 10] &nbsp;
+ **roc2** | Number| The number of observations to calculate the rate-of-change for RCMA2 | [optional] [default to 15] &nbsp;
+ **roc3** | Number| The number of observations to calculate the rate-of-change for RCMA3 | [optional] [default to 20] &nbsp;
+ **roc4** | Number| The number of observations to calculate the rate-of-change for RCMA4 | [optional] [default to 30] &nbsp;
+ **sma1** | Number| The number of observations to calculate the Simple Moving Average of the rate-of-change for RCMA1 | [optional] [default to 10] &nbsp;
+ **sma2** | Number| The number of observations to calculate the Simple Moving Average of the rate-of-change for RCMA2 | [optional] [default to 10] &nbsp;
+ **sma3** | Number| The number of observations to calculate the Simple Moving Average of the rate-of-change for RCMA3 | [optional] [default to 10] &nbsp;
+ **sma4** | Number| The number of observations to calculate the Simple Moving Average of the rate-of-change for RCMA4 | [optional] [default to 15] &nbsp;
  **priceKey** | String| The Stock Price field to use when calculating Know Sure Thing | [optional] [default to close] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
@@ -1523,9 +1523,9 @@ technical.getSecurityPriceTechnicalsMacd(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **fastPeriod** | Number| The number of observations, per period, to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence | [optional] [default to 12] &nbsp;
- **slowPeriod** | Number| The number of observations, per period, to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence | [optional] [default to 26] &nbsp;
- **signalPeriod** | Number| The number of observations, per period, to calculate the signal line for Moving Average Convergence Divergence | [optional] [default to 9] &nbsp;
+ **fastPeriod** | Number| The number of observations to calculate the fast moving Exponential Moving Average for Moving Average Convergence Divergence | [optional] [default to 12] &nbsp;
+ **slowPeriod** | Number| The number of observations to calculate the slow moving Exponential Moving Average for Moving Average Convergence Divergence | [optional] [default to 26] &nbsp;
+ **signalPeriod** | Number| The number of observations to calculate the signal line for Moving Average Convergence Divergence | [optional] [default to 9] &nbsp;
  **priceKey** | String| The Stock Price field to use when calculating Moving Average Convergence Divergence | [optional] [default to close] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
@@ -1618,7 +1618,7 @@ technical.getSecurityPriceTechnicalsMfi(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | Number| The number of observations, per period, to calculate Money Flow Index | [optional] [default to 14] &nbsp;
+ **period** | Number| The number of observations to calculate Money Flow Index | [optional] [default to 14] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
@@ -1711,8 +1711,8 @@ technical.getSecurityPriceTechnicalsMi(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **emaPeriod** | Number| The number of observations, per period, to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index | [optional] [default to 9] &nbsp;
- **sumPeriod** | Number| The number of observations, per period, to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index | [optional] [default to 25] &nbsp;
+ **emaPeriod** | Number| The number of observations to calculate the single Exponential Moving Average and the Double Exponential Moving Average for Mass Index | [optional] [default to 9] &nbsp;
+ **sumPeriod** | Number| The number of observations to calculate the sum of the Exponetinal Moving Average Ratios for Mass Index | [optional] [default to 25] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
@@ -1984,7 +1984,7 @@ technical.getSecurityPriceTechnicalsObvMean(identifier, opts).then(function(data
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | Number| The number of observations, per period, to calculate On-balance Volume Mean | [optional] [default to 10] &nbsp;
+ **period** | Number| The number of observations to calculate On-balance Volume Mean | [optional] [default to 10] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
@@ -2077,7 +2077,7 @@ technical.getSecurityPriceTechnicalsRsi(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | Number| The number of observations, per period, to calculate Relative Strength Index | [optional] [default to 14] &nbsp;
+ **period** | Number| The number of observations to calculate Relative Strength Index | [optional] [default to 14] &nbsp;
  **priceKey** | String| The Stock Price field to use when calculating Relative Strength Index | [optional] [default to close] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
@@ -2171,7 +2171,7 @@ technical.getSecurityPriceTechnicalsSma(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | Number| The number of observations, per period, to calculate Simple Moving Average | [optional] [default to 20] &nbsp;
+ **period** | Number| The number of observations to calculate Simple Moving Average | [optional] [default to 20] &nbsp;
  **priceKey** | String| The Stock Price field to use when calculating Simple Moving Average | [optional] [default to close] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
@@ -2265,8 +2265,8 @@ technical.getSecurityPriceTechnicalsSr(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | Number| The number of observations, per period, to calculate %K of Stochastic Oscillator | [optional] [default to 14] &nbsp;
- **signalPeriod** | Number| The number of observations, per period, to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator | [optional] [default to 3] &nbsp;
+ **period** | Number| The number of observations to calculate %K of Stochastic Oscillator | [optional] [default to 14] &nbsp;
+ **signalPeriod** | Number| The number of observations to calculate the %D (the Simple Moving Average of %K) as a signal line for Stochastic Oscillator | [optional] [default to 3] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
@@ -2358,7 +2358,7 @@ technical.getSecurityPriceTechnicalsTrix(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | Number| The number of observations, per period, to calculate Exponential Moving Average for Triple Exponential Average | [optional] [default to 15] &nbsp;
+ **period** | Number| The number of observations to calculate Exponential Moving Average for Triple Exponential Average | [optional] [default to 15] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
@@ -2452,8 +2452,8 @@ technical.getSecurityPriceTechnicalsTsi(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **lowPeriod** | Number| The number of observations, per period, to calculate low period Exponential Moving Average for smoothing in True Strength Index | [optional] [default to 13] &nbsp;
- **highPeriod** | Number| The number of observations, per period, to calculate high period Exponential Moving Average for smoothing in True Strength Index | [optional] [default to 25] &nbsp;
+ **lowPeriod** | Number| The number of observations to calculate low period Exponential Moving Average for smoothing in True Strength Index | [optional] [default to 13] &nbsp;
+ **highPeriod** | Number| The number of observations to calculate high period Exponential Moving Average for smoothing in True Strength Index | [optional] [default to 25] &nbsp;
  **priceKey** | String| The Stock Price field to use when calculating True Strength Index | [optional] [default to close] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
@@ -2551,9 +2551,9 @@ technical.getSecurityPriceTechnicalsUo(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **shortPeriod** | Number| The number of observations, per period, to calculate the short period for Ultimate Oscillator | [optional] [default to 7] &nbsp;
- **mediumPeriod** | Number| The number of observations, per period, to calculate the medium period for Ultimate Oscillator | [optional] [default to 14] &nbsp;
- **longPeriod** | Number| The number of observations, per period, to calculate the long period for Ultimate Oscillator | [optional] [default to 28] &nbsp;
+ **shortPeriod** | Number| The number of observations to calculate the short period for Ultimate Oscillator | [optional] [default to 7] &nbsp;
+ **mediumPeriod** | Number| The number of observations to calculate the medium period for Ultimate Oscillator | [optional] [default to 14] &nbsp;
+ **longPeriod** | Number| The number of observations to calculate the long period for Ultimate Oscillator | [optional] [default to 28] &nbsp;
  **shortWeight** | Number| The weight of short Buying Pressure average for Ultimate Oscillator | [optional] [default to 4.0] &nbsp;
  **mediumWeight** | Number| The weight of medium Buying Pressure average for Ultimate Oscillator | [optional] [default to 2.0] &nbsp;
  **longWeight** | Number| The weight of long Buying Pressure average for Ultimate Oscillator | [optional] [default to 1.0] &nbsp;
@@ -2648,7 +2648,7 @@ technical.getSecurityPriceTechnicalsVi(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | Number| The number of observations, per period, to calculate Vortex Indicator | [optional] [default to 14] &nbsp;
+ **period** | Number| The number of observations to calculate Vortex Indicator | [optional] [default to 14] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
@@ -2920,7 +2920,7 @@ technical.getSecurityPriceTechnicalsWr(identifier, opts).then(function(data) {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **period** | Number| The number of observations, per period, to look-back when calculating Williams %R | [optional] [default to 14] &nbsp;
+ **period** | Number| The number of observations to look-back when calculating Williams %R | [optional] [default to 14] &nbsp;
  **startDate** | String| Return technical indicator values on or after the date | [optional]  &nbsp;
  **endDate** | String| Return technical indicator values on or before the date | [optional]  &nbsp;
  **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;

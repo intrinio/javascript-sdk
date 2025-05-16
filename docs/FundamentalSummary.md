@@ -19,6 +19,8 @@ Name | Type | Description
 **startDate** | Date | The period start date &nbsp;
 **endDate** | Date | The period start date &nbsp;
 **filingDate** | Date | The date and time when the Fundamental was filed with the SEC &nbsp;
+**isLatest** | Boolean | Is this the latest fundamental available based on the company&#39;s most recent filings? Use the Lookup Fundamental endpoint to find the latest fundamental (&lt;a href&#x3D;\&quot;https://docs.intrinio.com/documentation/web_api/lookup_fundamental_v2\&quot; target&#x3D;\&quot;_blank\&quot;&gt;reference&lt;/a&gt;) &nbsp;
+**updatedDate** | Date | The date and time when the data related to the fundamental was last updated &nbsp;
 
 [//]: # (END_DEFINITION)
 
