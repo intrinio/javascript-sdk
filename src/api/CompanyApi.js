@@ -474,8 +474,8 @@
     /**
      * Data Point (Number) for Company
      * Returns latest value for calculations, metrics, and financial data points for a company.
-     * @param {String} identifier $$v2_company_data_point_identifier_description$$
-     * @param {String} tag $$v2_company_data_point_item_description$$
+     * @param {String} identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
      */
     this.getCompanyDataPointNumberWithHttpInfo = function(identifier, tag) {
@@ -520,8 +520,8 @@
     /**
      * Data Point (Number) for Company
      * Returns latest value for calculations, metrics, and financial data points for a company.
-     * @param {String} identifier $$v2_company_data_point_identifier_description$$
-     * @param {String} tag $$v2_company_data_point_item_description$$
+     * @param {String} identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
     this.getCompanyDataPointNumber = function(identifier, tag) {
@@ -536,8 +536,8 @@
     /**
      * Data Point (Text) for Company
      * Returns latest value for metadata items for a company.
-     * @param {String} identifier $$v2_company_data_point_identifier_description$$
-     * @param {String} tag $$v2_company_data_point_item_description$$
+     * @param {String} identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     this.getCompanyDataPointTextWithHttpInfo = function(identifier, tag) {
@@ -582,8 +582,8 @@
     /**
      * Data Point (Text) for Company
      * Returns latest value for metadata items for a company.
-     * @param {String} identifier $$v2_company_data_point_identifier_description$$
-     * @param {String} tag $$v2_company_data_point_item_description$$
+     * @param {String} identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     this.getCompanyDataPointText = function(identifier, tag) {
@@ -771,9 +771,9 @@
 
     /**
      * Historical Data for Company
-     * $$v2_company_historical_data_description$$
-     * @param {String} identifier $$v2_company_historical_data_identifier_description$$
-     * @param {String} tag $$v2_company_historical_data_item_description$$
+     * Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+     * @param {String} identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.frequency Return historical data in the given frequency (default to daily)
      * @param {module:model/String} opts.type Return historical data for given fiscal period type
@@ -833,9 +833,9 @@
 
     /**
      * Historical Data for Company
-     * $$v2_company_historical_data_description$$
-     * @param {String} identifier $$v2_company_historical_data_identifier_description$$
-     * @param {String} tag $$v2_company_historical_data_item_description$$
+     * Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+     * @param {String} identifier A Company identifier (Ticker, CIK, LEI, Intrinio ID)
+     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.frequency Return historical data in the given frequency (default to daily)
      * @param {module:model/String} opts.type Return historical data for given fiscal period type

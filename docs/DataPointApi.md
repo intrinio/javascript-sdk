@@ -39,7 +39,7 @@ Method | HTTP request | Description
 #### Data Point (Number)
 
 
-$$v2_data_point_number_description$$
+Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
 
 [//]: # (END_OVERVIEW)
 
@@ -54,8 +54,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var dataPoint = new intrinioSDK.DataPointApi();
 
-var identifier = "$$v2_data_point_identifier_default$$";
-var tag = "$$v2_data_point_item_number_default$$";
+var identifier = "AAPL";
+var tag = "marketcap";
 
 
 dataPoint.getDataPointNumber(identifier, tag).then(function(data) {
@@ -75,8 +75,8 @@ dataPoint.getDataPointNumber(identifier, tag).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | String| $$v2_data_point_identifier_description$$ |  &nbsp;
- **tag** | String| $$v2_data_point_item_description$$ |  &nbsp;
+ **identifier** | String| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) |  &nbsp;
+ **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 #### Data Point (Text)
 
 
-$$v2_data_point_text_description$$
+Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
 
 [//]: # (END_OVERVIEW)
 
@@ -135,8 +135,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var dataPoint = new intrinioSDK.DataPointApi();
 
-var identifier = "$$v2_data_point_identifier_default$$";
-var tag = "$$v2_data_point_item_text_default$$";
+var identifier = "AAPL";
+var tag = "ceo";
 
 
 dataPoint.getDataPointText(identifier, tag).then(function(data) {
@@ -156,8 +156,8 @@ dataPoint.getDataPointText(identifier, tag).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | String| $$v2_data_point_identifier_description$$ |  &nbsp;
- **tag** | String| $$v2_data_point_item_description$$ |  &nbsp;
+ **identifier** | String| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) |  &nbsp;
+ **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)

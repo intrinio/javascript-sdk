@@ -157,6 +157,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.IndexApi* | [**searchEconomicIndices**](docs/IndexApi.md#searchEconomicIndices) | **GET** /indices/economic/search | Search Economic Indices
 *intrinioSDK.IndexApi* | [**searchSicIndices**](docs/IndexApi.md#searchSicIndices) | **GET** /indices/sic/search | Search SIC Indices
 *intrinioSDK.IndexApi* | [**searchStockMarketsIndices**](docs/IndexApi.md#searchStockMarketsIndices) | **GET** /indices/stock_market/search | Search Stock Market Indices
+*intrinioSDK.IndicesApi* | [**getIndexIntervals**](docs/IndicesApi.md#getIndexIntervals) | **GET** /indices/{identifier}/intervals | Index Intervals
 *intrinioSDK.InsiderTransactionFilingsApi* | [**getAllInsiderTransactionFilings**](docs/InsiderTransactionFilingsApi.md#getAllInsiderTransactionFilings) | **GET** /insider_transaction_filings | All Insider Transactions Filings
 *intrinioSDK.MarketApi* | [**getMarketStatus**](docs/MarketApi.md#getMarketStatus) | **GET** /market/status | Market Status
 *intrinioSDK.MunicipalityApi* | [**getAllMunicipalities**](docs/MunicipalityApi.md#getAllMunicipalities) | **GET** /municipalities | All Municipalities

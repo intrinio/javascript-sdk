@@ -109,10 +109,30 @@
    */
   exports.SourceEnum = {
     /**
-     * value: "$$v2_stock_price_interval_sources_enum$$"
+     * value: "realtime"
      * @const
      */
-    "$$v2_stock_price_interval_sources_enum$$": "$$v2_stock_price_interval_sources_enum$$"  };
+    "realtime": "realtime",
+    /**
+     * value: "delayed"
+     * @const
+     */
+    "delayed": "delayed",
+    /**
+     * value: "nasdaq_basic"
+     * @const
+     */
+    "nasdaq_basic": "nasdaq_basic",
+    /**
+     * value: "nasdaq_basic_filtered"
+     * @const
+     */
+    "nasdaq_basic_filtered": "nasdaq_basic_filtered",
+    /**
+     * value: "nasdaq_basic_last_sale"
+     * @const
+     */
+    "nasdaq_basic_last_sale": "nasdaq_basic_last_sale"  };
 
 
   return exports;

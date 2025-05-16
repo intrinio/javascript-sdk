@@ -68,7 +68,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var zacks = new intrinioSDK.ZacksApi();
 
 var opts = { 
-  'identifier': "$$v2_ticker_default$$",
+  'identifier': "AAPL",
   'startDate': null,
   'endDate': null,
   'meanGreater': null,

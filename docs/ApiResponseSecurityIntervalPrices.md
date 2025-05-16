@@ -32,7 +32,11 @@ Name | Type | Description
 
 Name | Value
 ---- | -----
-$$v2_stock_price_interval_sources_enum$$ | &quot;$$v2_stock_price_interval_sources_enum$$&quot;
+realtime | &quot;realtime&quot;
+delayed | &quot;delayed&quot;
+nasdaq_basic | &quot;nasdaq_basic&quot;
+nasdaq_basic_filtered | &quot;nasdaq_basic_filtered&quot;
+nasdaq_basic_last_sale | &quot;nasdaq_basic_last_sale&quot;
 
 
 

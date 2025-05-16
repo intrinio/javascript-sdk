@@ -16,29 +16,29 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ApiResponseHistoricalData'], factory);
+    define(['ApiClient', 'model/ApiResponseIndexIntervals'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ApiResponseHistoricalData'));
+    module.exports = factory(require('../ApiClient'), require('../model/ApiResponseIndexIntervals'));
   } else {
     // Browser globals (root is window)
     if (!root.intrinioSDK) {
       root.intrinioSDK = {};
     }
-    root.intrinioSDK.HistoricalDataApi = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.ApiResponseHistoricalData);
+    root.intrinioSDK.IndicesApi = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.ApiResponseIndexIntervals);
   }
-}(this, function(ApiClient, ApiResponseHistoricalData) {
+}(this, function(ApiClient, ApiResponseIndexIntervals) {
   'use strict';
 
   /**
-   * HistoricalData service.
-   * @module api/HistoricalDataApi
+   * Indices service.
+   * @module api/IndicesApi
    * @version 6.36.0
    */
 
   /**
-   * Constructs a new HistoricalDataApi. 
-   * @alias module:api/HistoricalDataApi
+   * Constructs a new IndicesApi. 
+   * @alias module:api/IndicesApi
    * @class
    * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -50,47 +50,45 @@
 
 
     /**
-     * Historical Data
-     * Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
-     * @param {String} identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
-     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
+     * Index Intervals
+     * Returns a list of interval data points for a specified index, including open, close, high, low, volume, and average price. Intervals are available in 60-minute, 30-minute, 15-minute, 10-minute, 5-minute, and 1-minute increments.
+     * @param {String} identifier The index identifier
+     * @param {module:model/String} intervalSize The interval size to return in minutes (m) or hour (h).
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.frequency Return historical data in the given frequency (default to daily)
-     * @param {String} opts.type Filter by type, when applicable
-     * @param {Date} opts.startDate Get historical data on or after this date
-     * @param {Date} opts.endDate Get historical date on or before this date
-     * @param {module:model/String} opts.sortOrder Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (default to desc)
-     * @param {Number} opts.pageSize The number of results to return (default to 100)
-     * @param {String} opts.nextPage Gets the next page of data from a previous API call
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ApiResponseHistoricalData} and HTTP response
+     * @param {Date} opts.startDate Return intervals starting at the specified date
+     * @param {String} opts.startTime Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format)
+     * @param {Date} opts.endDate Return intervals stopping at the specified date
+     * @param {String} opts.endTime Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format)
+     * @param {module:model/String} opts.timezone Interprets the input times in this time zone, as well as returns times in this timezone. (default to UTC)
+     * @param {Number} opts.pageSize The number of results to return per page. (default to 100)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ApiResponseIndexIntervals} and HTTP response
      */
-    this.getHistoricalDataWithHttpInfo = function(identifier, tag, opts) {
+    this.getIndexIntervalsWithHttpInfo = function(identifier, intervalSize, opts) {
       opts = opts || {};
       var postBody = null;
 
       // verify the required parameter 'identifier' is set
       if (identifier === undefined || identifier === null) {
-        throw new Error("Missing the required parameter 'identifier' when calling getHistoricalData");
+        throw new Error("Missing the required parameter 'identifier' when calling getIndexIntervals");
       }
 
-      // verify the required parameter 'tag' is set
-      if (tag === undefined || tag === null) {
-        throw new Error("Missing the required parameter 'tag' when calling getHistoricalData");
+      // verify the required parameter 'intervalSize' is set
+      if (intervalSize === undefined || intervalSize === null) {
+        throw new Error("Missing the required parameter 'intervalSize' when calling getIndexIntervals");
       }
 
 
       var pathParams = {
-        'identifier': identifier,
-        'tag': tag
+        'identifier': identifier
       };
       var queryParams = {
-        'frequency': opts['frequency'],
-        'type': opts['type'],
+        'interval_size': intervalSize,
         'start_date': opts['startDate'],
+        'start_time': opts['startTime'],
         'end_date': opts['endDate'],
-        'sort_order': opts['sortOrder'],
+        'end_time': opts['endTime'],
+        'timezone': opts['timezone'],
         'page_size': opts['pageSize'],
-        'next_page': opts['nextPage'],
       };
       var collectionQueryParams = {
       };
@@ -102,8 +100,8 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = ApiResponseHistoricalData;
-      var endpoint = '/historical_data/{identifier}/{tag}'
+      var returnType = ApiResponseIndexIntervals;
+      var endpoint = '/indices/{identifier}/intervals'
       var method = 'GET'
 
       let requestParameters = { endpoint, method, pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType }
@@ -112,22 +110,21 @@
     }
 
     /**
-     * Historical Data
-     * Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
-     * @param {String} identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
-     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
+     * Index Intervals
+     * Returns a list of interval data points for a specified index, including open, close, high, low, volume, and average price. Intervals are available in 60-minute, 30-minute, 15-minute, 10-minute, 5-minute, and 1-minute increments.
+     * @param {String} identifier The index identifier
+     * @param {module:model/String} intervalSize The interval size to return in minutes (m) or hour (h).
      * @param {Object} opts Optional parameters
-     * @param {module:model/String} opts.frequency Return historical data in the given frequency (default to daily)
-     * @param {String} opts.type Filter by type, when applicable
-     * @param {Date} opts.startDate Get historical data on or after this date
-     * @param {Date} opts.endDate Get historical date on or before this date
-     * @param {module:model/String} opts.sortOrder Sort by date &#x60;asc&#x60; or &#x60;desc&#x60; (default to desc)
-     * @param {Number} opts.pageSize The number of results to return (default to 100)
-     * @param {String} opts.nextPage Gets the next page of data from a previous API call
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ApiResponseHistoricalData}
+     * @param {Date} opts.startDate Return intervals starting at the specified date
+     * @param {String} opts.startTime Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format)
+     * @param {Date} opts.endDate Return intervals stopping at the specified date
+     * @param {String} opts.endTime Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format)
+     * @param {module:model/String} opts.timezone Interprets the input times in this time zone, as well as returns times in this timezone. (default to UTC)
+     * @param {Number} opts.pageSize The number of results to return per page. (default to 100)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ApiResponseIndexIntervals}
      */
-    this.getHistoricalData = function(identifier, tag, opts) {
-      return this.getHistoricalDataWithHttpInfo(identifier, tag, opts)
+    this.getIndexIntervals = function(identifier, intervalSize, opts) {
+      return this.getIndexIntervalsWithHttpInfo(identifier, intervalSize, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
