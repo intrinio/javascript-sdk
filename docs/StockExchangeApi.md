@@ -148,7 +148,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "USCOMP";
+var identifier = "$$v2_mic_default$$";
 
 
 var opts = { 
@@ -238,7 +238,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "USCOMP";
+var identifier = "$$v2_mic_default$$";
 
 
 stockExchange.getStockExchangeById(identifier).then(function(data) {
@@ -317,7 +317,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "USCOMP";
+var identifier = "$$v2_mic_default$$";
 
 
 var opts = { 
@@ -405,7 +405,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "USCOMP";
+var identifier = "$$v2_mic_default$$";
 
 
 var opts = { 
@@ -493,7 +493,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "USCOMP";
+var identifier = "$$v2_mic_default$$";
 
 
 var opts = { 
@@ -581,7 +581,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "USCOMP";
+var identifier = "$$v2_mic_default$$";
 
 
 var opts = { 
@@ -677,7 +677,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "USCOMP";
+var identifier = "$$v2_mic_default$$";
 var tickers = ["AAPL,MSFT,NVDA"];
 
 
@@ -765,7 +765,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "USCOMP";
+var identifier = "$$v2_mic_default$$";
 
 
 var opts = { 
@@ -859,7 +859,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "USCOMP";
+var identifier = "$$v2_mic_default$$";
 
 
 var opts = { 

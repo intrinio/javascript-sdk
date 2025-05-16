@@ -32,8 +32,7 @@ Name | Type | Description
 
 Name | Value
 ---- | -----
-iex | &quot;iex&quot;
-bats | &quot;bats&quot;
+$$v2_stock_price_intraday_sources_enum$$ | &quot;$$v2_stock_price_intraday_sources_enum$$&quot;
 
 
 

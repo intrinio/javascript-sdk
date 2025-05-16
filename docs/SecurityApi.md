@@ -228,7 +228,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 security.getSecurityById(identifier).then(function(data) {
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 #### Data Point (Number) for Security
 
 
-Returns a numeric value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+$$v2_security_data_point_number_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -307,8 +307,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
-var tag = "close_price";
+var identifier = "$$v2_security_data_point_identifier_default$$";
+var tag = "$$v2_security_data_point_item_number_default$$";
 
 
 security.getSecurityDataPointNumber(identifier, tag).then(function(data) {
@@ -328,8 +328,8 @@ security.getSecurityDataPointNumber(identifier, tag).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | String| $$v2_security_data_point_identifier_description$$ |  &nbsp;
+ **tag** | String| $$v2_security_data_point_item_description$$ |  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -373,7 +373,7 @@ Name | Type | Description  | Notes
 #### Data Point (Text) for Security
 
 
-Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+$$v2_security_data_point_text_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -388,8 +388,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
-var tag = "figi";
+var identifier = "$$v2_security_data_point_identifier_default$$";
+var tag = "$$v2_security_data_point_item_text_default$$";
 
 
 security.getSecurityDataPointText(identifier, tag).then(function(data) {
@@ -409,7 +409,7 @@ security.getSecurityDataPointText(identifier, tag).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **identifier** | String| $$v2_security_data_point_identifier_description$$ |  &nbsp;
  **tag** | String| An Intrinio data tag ID or code-name |  &nbsp;
 <br/>
 
@@ -454,7 +454,7 @@ Name | Type | Description  | Notes
 #### Historical Data for Security
 
 
-Returns historical values for the given &#x60;tag&#x60; and the Security with the given &#x60;identifier&#x60;
+$$v2_security_historical_data_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -469,8 +469,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
-var tag = "adj_close_price";
+var identifier = "$$v2_security_historical_data_identifier_default$$";
+var tag = "$$v2_security_historical_data_item_default$$";
 
 
 var opts = { 
@@ -500,8 +500,8 @@ security.getSecurityHistoricalData(identifier, tag, opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | String| $$v2_security_historical_data_identifier_description$$ |  &nbsp;
+ **tag** | String| $$v2_security_data_point_item_description$$ |  &nbsp;
  **frequency** | String| Return historical data in the given frequency | [optional] [default to daily] &nbsp;
  **type** | String| Filter by type, when applicable | [optional]  &nbsp;
  **startDate** | Date| Get historical data on or after this date | [optional]  &nbsp;
@@ -725,7 +725,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -1055,8 +1055,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
-var intervalSize = "15m";
+var identifier = "$$v2_ticker_default$$";
+var intervalSize = "5m";
 
 
 var opts = { 
@@ -1090,14 +1090,14 @@ security.getSecurityIntervalPrices(identifier, intervalSize, opts).then(function
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
- **intervalSize** | String| The interval for which to return stock prices | [default to 15m] &nbsp;
+ **intervalSize** | String| The interval size to return in minutes (m) or hour (h). | [default to 5m] &nbsp;
  **source** | String| Return intervals from the specified data source | [optional]  &nbsp;
  **startDate** | Date| Return intervals starting at the specified date | [optional]  &nbsp;
  **startTime** | String| Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) | [optional]  &nbsp;
  **endDate** | Date| Return intervals stopping at the specified date | [optional]  &nbsp;
  **endTime** | String| Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format) | [optional]  &nbsp;
  **timezone** | String| Interprets the input times in this time zone, as well as returns times in this timezone. | [optional] [default to UTC] &nbsp;
- **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **pageSize** | Number| The number of results to return per page. | [optional] [default to 100] &nbsp;
  **splitAdjusted** | Boolean| Whether to return the values adjusted for splits or not. Default is false. | [optional] [default to false] &nbsp;
  **includeQuoteOnlyBars** | Boolean| If true, also include bars where no trades occurred but quotes did. | [optional] [default to false] &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
@@ -1144,7 +1144,7 @@ Name | Type | Description  | Notes
 #### Intraday Stock Prices for Security
 
 
-Deprecated.  Return intraday stock prices for the Security with the given &#x60;identifier&#x60;
+Deprecated.  $$v2_security_intraday_prices_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -1159,7 +1159,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -1255,7 +1255,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 security.getSecurityLatestDividendRecord(identifier).then(function(data) {
@@ -1334,7 +1334,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 security.getSecurityLatestEarningsRecord(identifier).then(function(data) {
@@ -1413,7 +1413,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -1503,7 +1503,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -1595,7 +1595,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -1687,7 +1687,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -1781,7 +1781,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -1873,7 +1873,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -1969,7 +1969,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -2063,7 +2063,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -2155,7 +2155,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -2249,7 +2249,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -2343,7 +2343,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -2435,7 +2435,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -2525,7 +2525,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -2621,7 +2621,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -2713,7 +2713,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -2821,7 +2821,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -2919,7 +2919,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -3011,7 +3011,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -3105,7 +3105,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -3195,7 +3195,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -3285,7 +3285,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -3377,7 +3377,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -3471,7 +3471,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -3565,7 +3565,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -3659,7 +3659,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -3751,7 +3751,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -3847,7 +3847,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -3949,7 +3949,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -4041,7 +4041,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -4131,7 +4131,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -4221,7 +4221,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -4313,7 +4313,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -4401,7 +4401,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -4646,7 +4646,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -4736,7 +4736,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -5030,7 +5030,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -5146,7 +5146,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -5230,7 +5230,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
@@ -5316,7 +5316,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var security = new intrinioSDK.SecurityApi();
 
-var identifier = "AAPL";
+var identifier = "$$v2_ticker_default$$";
 
 
 var opts = { 
