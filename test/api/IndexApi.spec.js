@@ -170,6 +170,16 @@
         done();
       });
     });
+    describe('getIndexIntervals', function() {
+      it('should call getIndexIntervals successfully', function(done) {
+        //uncomment below and update the code to test getIndexIntervals
+        //instance.getIndexIntervals(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('getIndexSummaryById', function() {
       it('should call getIndexSummaryById successfully', function(done) {
         //uncomment below and update the code to test getIndexSummaryById

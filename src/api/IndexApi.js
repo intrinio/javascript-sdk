@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ApiResponseEconomicIndexHistoricalData', 'model/ApiResponseEconomicIndices', 'model/ApiResponseEconomicIndicesSearch', 'model/ApiResponseEodIndexPrices', 'model/ApiResponseEodIndexPricesAll', 'model/ApiResponseIndex', 'model/ApiResponseIndexConstituents', 'model/ApiResponseIndices', 'model/ApiResponseRealtimeIndexPrices', 'model/ApiResponseSICIndexHistoricalData', 'model/ApiResponseSICIndices', 'model/ApiResponseSICIndicesSearch', 'model/ApiResponseStockMarketIndexHistoricalData', 'model/ApiResponseStockMarketIndices', 'model/ApiResponseStockMarketIndicesSearch', 'model/EconomicIndex', 'model/RealtimeIndexPrice', 'model/SICIndex', 'model/StockMarketIndex'], factory);
+    define(['ApiClient', 'model/ApiResponseEconomicIndexHistoricalData', 'model/ApiResponseEconomicIndices', 'model/ApiResponseEconomicIndicesSearch', 'model/ApiResponseEodIndexPrices', 'model/ApiResponseEodIndexPricesAll', 'model/ApiResponseIndex', 'model/ApiResponseIndexConstituents', 'model/ApiResponseIndexIntervals', 'model/ApiResponseIndices', 'model/ApiResponseRealtimeIndexPrices', 'model/ApiResponseSICIndexHistoricalData', 'model/ApiResponseSICIndices', 'model/ApiResponseSICIndicesSearch', 'model/ApiResponseStockMarketIndexHistoricalData', 'model/ApiResponseStockMarketIndices', 'model/ApiResponseStockMarketIndicesSearch', 'model/EconomicIndex', 'model/RealtimeIndexPrice', 'model/SICIndex', 'model/StockMarketIndex'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ApiResponseEconomicIndexHistoricalData'), require('../model/ApiResponseEconomicIndices'), require('../model/ApiResponseEconomicIndicesSearch'), require('../model/ApiResponseEodIndexPrices'), require('../model/ApiResponseEodIndexPricesAll'), require('../model/ApiResponseIndex'), require('../model/ApiResponseIndexConstituents'), require('../model/ApiResponseIndices'), require('../model/ApiResponseRealtimeIndexPrices'), require('../model/ApiResponseSICIndexHistoricalData'), require('../model/ApiResponseSICIndices'), require('../model/ApiResponseSICIndicesSearch'), require('../model/ApiResponseStockMarketIndexHistoricalData'), require('../model/ApiResponseStockMarketIndices'), require('../model/ApiResponseStockMarketIndicesSearch'), require('../model/EconomicIndex'), require('../model/RealtimeIndexPrice'), require('../model/SICIndex'), require('../model/StockMarketIndex'));
+    module.exports = factory(require('../ApiClient'), require('../model/ApiResponseEconomicIndexHistoricalData'), require('../model/ApiResponseEconomicIndices'), require('../model/ApiResponseEconomicIndicesSearch'), require('../model/ApiResponseEodIndexPrices'), require('../model/ApiResponseEodIndexPricesAll'), require('../model/ApiResponseIndex'), require('../model/ApiResponseIndexConstituents'), require('../model/ApiResponseIndexIntervals'), require('../model/ApiResponseIndices'), require('../model/ApiResponseRealtimeIndexPrices'), require('../model/ApiResponseSICIndexHistoricalData'), require('../model/ApiResponseSICIndices'), require('../model/ApiResponseSICIndicesSearch'), require('../model/ApiResponseStockMarketIndexHistoricalData'), require('../model/ApiResponseStockMarketIndices'), require('../model/ApiResponseStockMarketIndicesSearch'), require('../model/EconomicIndex'), require('../model/RealtimeIndexPrice'), require('../model/SICIndex'), require('../model/StockMarketIndex'));
   } else {
     // Browser globals (root is window)
     if (!root.intrinioSDK) {
       root.intrinioSDK = {};
     }
-    root.intrinioSDK.IndexApi = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.ApiResponseEconomicIndexHistoricalData, root.intrinioSDK.ApiResponseEconomicIndices, root.intrinioSDK.ApiResponseEconomicIndicesSearch, root.intrinioSDK.ApiResponseEodIndexPrices, root.intrinioSDK.ApiResponseEodIndexPricesAll, root.intrinioSDK.ApiResponseIndex, root.intrinioSDK.ApiResponseIndexConstituents, root.intrinioSDK.ApiResponseIndices, root.intrinioSDK.ApiResponseRealtimeIndexPrices, root.intrinioSDK.ApiResponseSICIndexHistoricalData, root.intrinioSDK.ApiResponseSICIndices, root.intrinioSDK.ApiResponseSICIndicesSearch, root.intrinioSDK.ApiResponseStockMarketIndexHistoricalData, root.intrinioSDK.ApiResponseStockMarketIndices, root.intrinioSDK.ApiResponseStockMarketIndicesSearch, root.intrinioSDK.EconomicIndex, root.intrinioSDK.RealtimeIndexPrice, root.intrinioSDK.SICIndex, root.intrinioSDK.StockMarketIndex);
+    root.intrinioSDK.IndexApi = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.ApiResponseEconomicIndexHistoricalData, root.intrinioSDK.ApiResponseEconomicIndices, root.intrinioSDK.ApiResponseEconomicIndicesSearch, root.intrinioSDK.ApiResponseEodIndexPrices, root.intrinioSDK.ApiResponseEodIndexPricesAll, root.intrinioSDK.ApiResponseIndex, root.intrinioSDK.ApiResponseIndexConstituents, root.intrinioSDK.ApiResponseIndexIntervals, root.intrinioSDK.ApiResponseIndices, root.intrinioSDK.ApiResponseRealtimeIndexPrices, root.intrinioSDK.ApiResponseSICIndexHistoricalData, root.intrinioSDK.ApiResponseSICIndices, root.intrinioSDK.ApiResponseSICIndicesSearch, root.intrinioSDK.ApiResponseStockMarketIndexHistoricalData, root.intrinioSDK.ApiResponseStockMarketIndices, root.intrinioSDK.ApiResponseStockMarketIndicesSearch, root.intrinioSDK.EconomicIndex, root.intrinioSDK.RealtimeIndexPrice, root.intrinioSDK.SICIndex, root.intrinioSDK.StockMarketIndex);
   }
-}(this, function(ApiClient, ApiResponseEconomicIndexHistoricalData, ApiResponseEconomicIndices, ApiResponseEconomicIndicesSearch, ApiResponseEodIndexPrices, ApiResponseEodIndexPricesAll, ApiResponseIndex, ApiResponseIndexConstituents, ApiResponseIndices, ApiResponseRealtimeIndexPrices, ApiResponseSICIndexHistoricalData, ApiResponseSICIndices, ApiResponseSICIndicesSearch, ApiResponseStockMarketIndexHistoricalData, ApiResponseStockMarketIndices, ApiResponseStockMarketIndicesSearch, EconomicIndex, RealtimeIndexPrice, SICIndex, StockMarketIndex) {
+}(this, function(ApiClient, ApiResponseEconomicIndexHistoricalData, ApiResponseEconomicIndices, ApiResponseEconomicIndicesSearch, ApiResponseEodIndexPrices, ApiResponseEodIndexPricesAll, ApiResponseIndex, ApiResponseIndexConstituents, ApiResponseIndexIntervals, ApiResponseIndices, ApiResponseRealtimeIndexPrices, ApiResponseSICIndexHistoricalData, ApiResponseSICIndices, ApiResponseSICIndicesSearch, ApiResponseStockMarketIndexHistoricalData, ApiResponseStockMarketIndices, ApiResponseStockMarketIndicesSearch, EconomicIndex, RealtimeIndexPrice, SICIndex, StockMarketIndex) {
   'use strict';
 
   /**
@@ -744,6 +744,89 @@
 
 
     /**
+     * Index Intervals
+     * Returns a list of interval data points for a specified index, including open, close, high, low, volume, and average price. Intervals are available in 60-minute, 30-minute, 15-minute, 10-minute, 5-minute, and 1-minute increments.
+     * @param {String} identifier The index identifier
+     * @param {module:model/String} intervalSize The interval size to return in minutes (m) or hour (h).
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.startDate Return intervals starting at the specified date
+     * @param {String} opts.startTime Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format)
+     * @param {Date} opts.endDate Return intervals stopping at the specified date
+     * @param {String} opts.endTime Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format)
+     * @param {module:model/String} opts.timezone Interprets the input times in this time zone, as well as returns times in this timezone. (default to UTC)
+     * @param {Number} opts.pageSize The number of results to return per page. (default to 100)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ApiResponseIndexIntervals} and HTTP response
+     */
+    this.getIndexIntervalsWithHttpInfo = function(identifier, intervalSize, opts) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'identifier' is set
+      if (identifier === undefined || identifier === null) {
+        throw new Error("Missing the required parameter 'identifier' when calling getIndexIntervals");
+      }
+
+      // verify the required parameter 'intervalSize' is set
+      if (intervalSize === undefined || intervalSize === null) {
+        throw new Error("Missing the required parameter 'intervalSize' when calling getIndexIntervals");
+      }
+
+
+      var pathParams = {
+        'identifier': identifier
+      };
+      var queryParams = {
+        'interval_size': intervalSize,
+        'start_date': opts['startDate'],
+        'start_time': opts['startTime'],
+        'end_date': opts['endDate'],
+        'end_time': opts['endTime'],
+        'timezone': opts['timezone'],
+        'page_size': opts['pageSize'],
+      };
+      var collectionQueryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = ['ApiKeyAuth'];
+      var contentTypes = [];
+      var accepts = ['application/json', 'application/json'];
+      var returnType = ApiResponseIndexIntervals;
+      var endpoint = '/indices/{identifier}/intervals'
+      var method = 'GET'
+
+      let requestParameters = { endpoint, method, pathParams, queryParams, collectionQueryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType }
+      
+      return this.makeApiCall(requestParameters)
+    }
+
+    /**
+     * Index Intervals
+     * Returns a list of interval data points for a specified index, including open, close, high, low, volume, and average price. Intervals are available in 60-minute, 30-minute, 15-minute, 10-minute, 5-minute, and 1-minute increments.
+     * @param {String} identifier The index identifier
+     * @param {module:model/String} intervalSize The interval size to return in minutes (m) or hour (h).
+     * @param {Object} opts Optional parameters
+     * @param {Date} opts.startDate Return intervals starting at the specified date
+     * @param {String} opts.startTime Return intervals starting at the specified time on the &#x60;start_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format)
+     * @param {Date} opts.endDate Return intervals stopping at the specified date
+     * @param {String} opts.endTime Return intervals stopping at the specified time on the &#x60;end_date&#x60; (24-hour in &#39;hh:mm:ss&#39; format)
+     * @param {module:model/String} opts.timezone Interprets the input times in this time zone, as well as returns times in this timezone. (default to UTC)
+     * @param {Number} opts.pageSize The number of results to return per page. (default to 100)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ApiResponseIndexIntervals}
+     */
+    this.getIndexIntervals = function(identifier, intervalSize, opts) {
+      return this.getIndexIntervalsWithHttpInfo(identifier, intervalSize, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+
+    /**
      * Index Summary By Identifier
      * @param {String} identifier The index symbol
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ApiResponseIndex} and HTTP response
@@ -797,6 +880,7 @@
 
     /**
      * Realtime Index Price By Identifier
+     * Returns the realtime price for an index.
      * @param {String} identifier The index symbol
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/RealtimeIndexPrice} and HTTP response
      */
@@ -835,6 +919,7 @@
 
     /**
      * Realtime Index Price By Identifier
+     * Returns the realtime price for an index.
      * @param {String} identifier The index symbol
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/RealtimeIndexPrice}
      */
