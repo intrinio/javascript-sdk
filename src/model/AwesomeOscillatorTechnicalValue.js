@@ -36,7 +36,7 @@
   /**
    * The AwesomeOscillatorTechnicalValue model module.
    * @module model/AwesomeOscillatorTechnicalValue
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

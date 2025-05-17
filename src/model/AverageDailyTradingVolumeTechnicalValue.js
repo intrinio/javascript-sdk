@@ -36,7 +36,7 @@
   /**
    * The AverageDailyTradingVolumeTechnicalValue model module.
    * @module model/AverageDailyTradingVolumeTechnicalValue
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

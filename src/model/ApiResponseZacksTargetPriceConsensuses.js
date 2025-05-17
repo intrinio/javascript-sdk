@@ -36,7 +36,7 @@
   /**
    * The ApiResponseZacksTargetPriceConsensuses model module.
    * @module model/ApiResponseZacksTargetPriceConsensuses
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

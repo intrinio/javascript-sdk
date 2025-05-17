@@ -36,7 +36,7 @@
   /**
    * The ApiResponseZacksEBITDAConsensus model module.
    * @module model/ApiResponseZacksEBITDAConsensus
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

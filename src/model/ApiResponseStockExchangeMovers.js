@@ -36,7 +36,7 @@
   /**
    * The ApiResponseStockExchangeMovers model module.
    * @module model/ApiResponseStockExchangeMovers
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

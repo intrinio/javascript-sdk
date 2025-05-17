@@ -36,7 +36,7 @@
   /**
    * The ApiResponseSecurityWilliamsR model module.
    * @module model/ApiResponseSecurityWilliamsR
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

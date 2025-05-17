@@ -36,7 +36,7 @@
   /**
    * The ApiResponseStockExchangeBetas model module.
    * @module model/ApiResponseStockExchangeBetas
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

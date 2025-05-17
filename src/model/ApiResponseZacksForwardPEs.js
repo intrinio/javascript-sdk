@@ -36,7 +36,7 @@
   /**
    * The ApiResponseZacksForwardPEs model module.
    * @module model/ApiResponseZacksForwardPEs
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

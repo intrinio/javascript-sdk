@@ -36,7 +36,7 @@
   /**
    * The Owner model module.
    * @module model/Owner
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

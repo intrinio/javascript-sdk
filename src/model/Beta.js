@@ -36,7 +36,7 @@
   /**
    * The Beta model module.
    * @module model/Beta
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

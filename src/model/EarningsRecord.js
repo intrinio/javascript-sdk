@@ -36,7 +36,7 @@
   /**
    * The EarningsRecord model module.
    * @module model/EarningsRecord
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

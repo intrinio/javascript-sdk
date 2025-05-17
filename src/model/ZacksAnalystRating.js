@@ -36,7 +36,7 @@
   /**
    * The ZacksAnalystRating model module.
    * @module model/ZacksAnalystRating
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

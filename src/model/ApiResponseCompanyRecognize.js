@@ -36,7 +36,7 @@
   /**
    * The ApiResponseCompanyRecognize model module.
    * @module model/ApiResponseCompanyRecognize
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

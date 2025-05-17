@@ -36,7 +36,7 @@
   /**
    * The ApiResponseStockExchangeStockPrices model module.
    * @module model/ApiResponseStockExchangeStockPrices
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

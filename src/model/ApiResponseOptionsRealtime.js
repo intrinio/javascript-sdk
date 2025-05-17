@@ -36,7 +36,7 @@
   /**
    * The ApiResponseOptionsRealtime model module.
    * @module model/ApiResponseOptionsRealtime
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

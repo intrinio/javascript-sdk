@@ -36,7 +36,7 @@
   /**
    * The VolumeWeightedAveragePriceValue model module.
    * @module model/VolumeWeightedAveragePriceValue
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The ZacksEPSGrowthRate model module.
    * @module model/ZacksEPSGrowthRate
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

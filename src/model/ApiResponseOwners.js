@@ -36,7 +36,7 @@
   /**
    * The ApiResponseOwners model module.
    * @module model/ApiResponseOwners
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

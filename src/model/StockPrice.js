@@ -36,7 +36,7 @@
   /**
    * The StockPrice model module.
    * @module model/StockPrice
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

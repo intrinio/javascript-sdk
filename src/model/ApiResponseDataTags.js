@@ -36,7 +36,7 @@
   /**
    * The ApiResponseDataTags model module.
    * @module model/ApiResponseDataTags
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

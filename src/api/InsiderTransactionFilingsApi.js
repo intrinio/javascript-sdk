@@ -33,7 +33,7 @@
   /**
    * InsiderTransactionFilings service.
    * @module api/InsiderTransactionFilingsApi
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

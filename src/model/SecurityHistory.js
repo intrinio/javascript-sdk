@@ -36,7 +36,7 @@
   /**
    * The SecurityHistory model module.
    * @module model/SecurityHistory
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

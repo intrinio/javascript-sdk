@@ -36,7 +36,7 @@
   /**
    * The ZacksEPSSurprise model module.
    * @module model/ZacksEPSSurprise
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

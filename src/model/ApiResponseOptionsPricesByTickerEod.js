@@ -36,7 +36,7 @@
   /**
    * The ApiResponseOptionsPricesByTickerEod model module.
    * @module model/ApiResponseOptionsPricesByTickerEod
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The ZacksETFHolding model module.
    * @module model/ZacksETFHolding
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

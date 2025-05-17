@@ -36,7 +36,7 @@
   /**
    * The VortexIndicatorTechnicalValue model module.
    * @module model/VortexIndicatorTechnicalValue
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

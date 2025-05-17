@@ -36,7 +36,7 @@
   /**
    * The ApiResponseZacksSalesEstimates model module.
    * @module model/ApiResponseZacksSalesEstimates
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

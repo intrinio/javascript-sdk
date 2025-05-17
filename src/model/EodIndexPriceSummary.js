@@ -36,7 +36,7 @@
   /**
    * The EodIndexPriceSummary model module.
    * @module model/EodIndexPriceSummary
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

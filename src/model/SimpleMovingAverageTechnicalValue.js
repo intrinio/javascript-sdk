@@ -36,7 +36,7 @@
   /**
    * The SimpleMovingAverageTechnicalValue model module.
    * @module model/SimpleMovingAverageTechnicalValue
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**

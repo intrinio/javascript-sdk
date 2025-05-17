@@ -36,7 +36,7 @@
   /**
    * The ReportedFinancialDimension model module.
    * @module model/ReportedFinancialDimension
-   * @version 6.36.0
+   * @version 6.37.0
    */
 
   /**
