@@ -17,8 +17,8 @@ Method | HTTP request | Description
 [**getOptionsChainRealtime**](OptionsApi.md#getOptionsChainRealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 [**getOptionsExpirations**](OptionsApi.md#getOptionsExpirations) | **GET** /options/expirations/{symbol} | Options Expirations
 [**getOptionsExpirationsEod**](OptionsApi.md#getOptionsExpirationsEod) | **GET** /options/expirations/{symbol}/eod | Options Expirations
-[**getOptionsGreeksByContract**](OptionsApi.md#getOptionsGreeksByContract) | **GET** /options/greeks/{contract}/realtime | Get realtime options greeks for a specific contract
-[**getOptionsGreeksByTicker**](OptionsApi.md#getOptionsGreeksByTicker) | **GET** /options/greeks/by_ticker/{identifier}/realtime | Get realtime options greeks by ticker
+[**getOptionsGreeksByContract**](OptionsApi.md#getOptionsGreeksByContract) | **GET** /options/greeks/{contract}/realtime | Option Greeks &amp; Derived Price by Contract
+[**getOptionsGreeksByTicker**](OptionsApi.md#getOptionsGreeksByTicker) | **GET** /options/greeks/by_ticker/{identifier}/realtime | Options Realtime Greeks &amp; Derived Price by Ticker
 [**getOptionsImpliedMoveBySymbol**](OptionsApi.md#getOptionsImpliedMoveBySymbol) | **GET** /options/implied_move/{symbol}/{expiration_date} | Options Implied Move By Symbol
 [**getOptionsIntervalByContract**](OptionsApi.md#getOptionsIntervalByContract) | **GET** /options/interval/{identifier} | Options Intervals By Contract
 [**getOptionsIntervalMovers**](OptionsApi.md#getOptionsIntervalMovers) | **GET** /options/interval/movers | Options Intervals Movers
@@ -1292,7 +1292,7 @@ Name | Type | Description  | Notes
 
 > ApiResponseOptionsGreekContractRealtime getOptionsGreeksByContract(contract, opts)
 
-#### Get realtime options greeks for a specific contract
+#### Option Greeks &amp; Derived Price by Contract
 
 
 Retrieves realtime options greeks data for a specific options contract
@@ -1382,7 +1382,7 @@ Name | Type | Description  | Notes
 
 > ApiResponseOptionsGreeksByTickerRealtime getOptionsGreeksByTicker(identifier, opts)
 
-#### Get realtime options greeks by ticker
+#### Options Realtime Greeks &amp; Derived Price by Ticker
 
 
 Retrieves realtime options greeks data for all contracts of a given ticker symbol
