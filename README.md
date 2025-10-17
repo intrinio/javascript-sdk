@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.107.0
-- Package version: 6.40.0
+- API version: 2.108.0
+- Package version: 6.41.0
 
 
 ## Installation
@@ -108,9 +108,9 @@ Class | Method | HTTP request | Description
 *intrinioSDK.ETFsApi* | [**getAllEtfs**](docs/ETFsApi.md#getAllEtfs) | **GET** /etfs | All ETFs
 *intrinioSDK.ETFsApi* | [**getEtf**](docs/ETFsApi.md#getEtf) | **GET** /etfs/{identifier} | Lookup ETF
 *intrinioSDK.ETFsApi* | [**getEtfAnalytics**](docs/ETFsApi.md#getEtfAnalytics) | **GET** /etfs/{identifier}/analytics | ETF Analytics
-*intrinioSDK.ETFsApi* | [**getEtfHistoricalStats**](docs/ETFsApi.md#getEtfHistoricalStats) | **GET** /etfs/{identifier}/historical_stats | Exchange Traded Fund (ETF) stats
+*intrinioSDK.ETFsApi* | [**getEtfHistoricalStats**](docs/ETFsApi.md#getEtfHistoricalStats) | **GET** /etfs/{identifier}/historical_stats | Exchange Traded Fund (ETF) Historical Stats
 *intrinioSDK.ETFsApi* | [**getEtfHoldings**](docs/ETFsApi.md#getEtfHoldings) | **GET** /etfs/{identifier}/holdings | ETF Holdings
-*intrinioSDK.ETFsApi* | [**getEtfStats**](docs/ETFsApi.md#getEtfStats) | **GET** /etfs/{identifier}/stats | Exchange Traded Fund (ETF) stats
+*intrinioSDK.ETFsApi* | [**getEtfStats**](docs/ETFsApi.md#getEtfStats) | **GET** /etfs/{identifier}/stats | Exchange Traded Fund (ETF) Stats
 *intrinioSDK.ETFsApi* | [**searchEtfs**](docs/ETFsApi.md#searchEtfs) | **GET** /etfs/search | Search ETFs
 *intrinioSDK.FilingApi* | [**getAllFilings**](docs/FilingApi.md#getAllFilings) | **GET** /filings | All Filings
 *intrinioSDK.FilingApi* | [**getAllNotes**](docs/FilingApi.md#getAllNotes) | **GET** /filings/notes | All Filing Notes
@@ -202,6 +202,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.OwnersApi* | [**institutionalHoldingsByOwner**](docs/OwnersApi.md#institutionalHoldingsByOwner) | **GET** /owners/{identifier}/institutional_holdings | Institutional Holdings by Owner
 *intrinioSDK.OwnersApi* | [**searchOwners**](docs/OwnersApi.md#searchOwners) | **GET** /owners/search | Search Owners
 *intrinioSDK.SecurityApi* | [**getAllSecurities**](docs/SecurityApi.md#getAllSecurities) | **GET** /securities | All Securities
+*intrinioSDK.SecurityApi* | [**getSecuritiesShortInterest**](docs/SecurityApi.md#getSecuritiesShortInterest) | **GET** /securities/short_interest | Latest Short Interest
 *intrinioSDK.SecurityApi* | [**getSecurityById**](docs/SecurityApi.md#getSecurityById) | **GET** /securities/{identifier} | Lookup Security
 *intrinioSDK.SecurityApi* | [**getSecurityDataPointNumber**](docs/SecurityApi.md#getSecurityDataPointNumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
 *intrinioSDK.SecurityApi* | [**getSecurityDataPointText**](docs/SecurityApi.md#getSecurityDataPointText) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
@@ -249,6 +250,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.SecurityApi* | [**getSecurityQuote**](docs/SecurityApi.md#getSecurityQuote) | **GET** /securities/{identifier}/quote | Quote for a Security
 *intrinioSDK.SecurityApi* | [**getSecurityRealtimePrice**](docs/SecurityApi.md#getSecurityRealtimePrice) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
 *intrinioSDK.SecurityApi* | [**getSecurityReplayFile**](docs/SecurityApi.md#getSecurityReplayFile) | **GET** /securities/replay | Security Replay File
+*intrinioSDK.SecurityApi* | [**getSecurityShortInterest**](docs/SecurityApi.md#getSecurityShortInterest) | **GET** /securities/{identifier}/short_interest | Short Interest by Security
 *intrinioSDK.SecurityApi* | [**getSecuritySnapshots**](docs/SecurityApi.md#getSecuritySnapshots) | **GET** /securities/snapshots | Realtime Stock Prices Snapshot
 *intrinioSDK.SecurityApi* | [**getSecurityStockPriceAdjustments**](docs/SecurityApi.md#getSecurityStockPriceAdjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
 *intrinioSDK.SecurityApi* | [**getSecurityStockPriceAdjustmentsDividends**](docs/SecurityApi.md#getSecurityStockPriceAdjustmentsDividends) | **GET** /securities/{identifier}/prices/adjustments/dividends | Dividends by Security
@@ -401,6 +403,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseSICIndicesSearch](docs/ApiResponseSICIndicesSearch.md)
  - [intrinioSDK.ApiResponseSecurities](docs/ApiResponseSecurities.md)
  - [intrinioSDK.ApiResponseSecuritiesSearch](docs/ApiResponseSecuritiesSearch.md)
+ - [intrinioSDK.ApiResponseSecuritiesShortInterest](docs/ApiResponseSecuritiesShortInterest.md)
  - [intrinioSDK.ApiResponseSecurityAccumulationDistributionIndex](docs/ApiResponseSecurityAccumulationDistributionIndex.md)
  - [intrinioSDK.ApiResponseSecurityAverageDailyTradingVolume](docs/ApiResponseSecurityAverageDailyTradingVolume.md)
  - [intrinioSDK.ApiResponseSecurityAverageDirectionalIndex](docs/ApiResponseSecurityAverageDirectionalIndex.md)
@@ -427,6 +430,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseSecurityOnBalanceVolumeMean](docs/ApiResponseSecurityOnBalanceVolumeMean.md)
  - [intrinioSDK.ApiResponseSecurityQuote](docs/ApiResponseSecurityQuote.md)
  - [intrinioSDK.ApiResponseSecurityRelativeStrengthIndex](docs/ApiResponseSecurityRelativeStrengthIndex.md)
+ - [intrinioSDK.ApiResponseSecurityShortInterest](docs/ApiResponseSecurityShortInterest.md)
  - [intrinioSDK.ApiResponseSecuritySimpleMovingAverage](docs/ApiResponseSecuritySimpleMovingAverage.md)
  - [intrinioSDK.ApiResponseSecurityStochasticOscillator](docs/ApiResponseSecurityStochasticOscillator.md)
  - [intrinioSDK.ApiResponseSecurityStockPriceAdjustments](docs/ApiResponseSecurityStockPriceAdjustments.md)
@@ -593,6 +597,8 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.SecuritySummary](docs/SecuritySummary.md)
  - [intrinioSDK.SecurityTrades](docs/SecurityTrades.md)
  - [intrinioSDK.SecurityTradesResult](docs/SecurityTradesResult.md)
+ - [intrinioSDK.ShortInterest](docs/ShortInterest.md)
+ - [intrinioSDK.ShortInterestWithSecurity](docs/ShortInterestWithSecurity.md)
  - [intrinioSDK.SimpleMovingAverageTechnicalValue](docs/SimpleMovingAverageTechnicalValue.md)
  - [intrinioSDK.StandardizedFinancial](docs/StandardizedFinancial.md)
  - [intrinioSDK.StandardizedFinancialsDimension](docs/StandardizedFinancialsDimension.md)

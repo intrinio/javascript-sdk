@@ -14,6 +14,8 @@ Name | Type | Description
 **id** | String | The Intrinio ID for the news article &nbsp;
 **title** | String | The title of the news article &nbsp;
 **publicationDate** | Date | The publication date of the news article &nbsp;
+**companies** | [**[CompanySummary]**](CompanySummary.md) | The Companies to which the new article pertains &nbsp;
+**securities** | [**[SecuritySummary]**](SecuritySummary.md) | The Securities to which the new article pertains &nbsp;
 **url** | String | The url of the news article &nbsp;
 **summary** | String | A summary of the news article &nbsp;
 **source** | String | The news source. &nbsp;
@@ -25,11 +27,27 @@ Name | Type | Description
 **businessRelevance** | Number | How strongly correlated the news article is to the business &nbsp;
 **articleSentiment** | String | The news sentiment. &nbsp;
 **articleSentimentConfidence** | Number | The confidence score of the sentiment rating &nbsp;
+**issuer** | String | The issuer of the story. &nbsp;
+**issuerName** | String | The issuer of the story. &nbsp;
+**issuerCompany** | [**CompanySummary**](CompanySummary.md) | The company that issued the story. &nbsp;
+**issuerSecurity** | [**SecuritySummary**](SecuritySummary.md) | The security that issued the story. &nbsp;
 
 [//]: # (END_DEFINITION)
 
 
+[//]: # (CONTAINED_CLASS:CompanySummary)
+
+
+[//]: # (CONTAINED_CLASS:SecuritySummary)
+
+
 [//]: # (CONTAINED_CLASS:NewsTopic)
+
+
+[//]: # (CONTAINED_CLASS:CompanySummary)
+
+
+[//]: # (CONTAINED_CLASS:SecuritySummary)
 
 
 

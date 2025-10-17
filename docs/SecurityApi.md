@@ -5,6 +5,7 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAllSecurities**](SecurityApi.md#getAllSecurities) | **GET** /securities | All Securities
+[**getSecuritiesShortInterest**](SecurityApi.md#getSecuritiesShortInterest) | **GET** /securities/short_interest | Latest Short Interest
 [**getSecurityById**](SecurityApi.md#getSecurityById) | **GET** /securities/{identifier} | Lookup Security
 [**getSecurityDataPointNumber**](SecurityApi.md#getSecurityDataPointNumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
 [**getSecurityDataPointText**](SecurityApi.md#getSecurityDataPointText) | **GET** /securities/{identifier}/data_point/{tag}/text | Data Point (Text) for Security
@@ -52,6 +53,7 @@ Method | HTTP request | Description
 [**getSecurityQuote**](SecurityApi.md#getSecurityQuote) | **GET** /securities/{identifier}/quote | Quote for a Security
 [**getSecurityRealtimePrice**](SecurityApi.md#getSecurityRealtimePrice) | **GET** /securities/{identifier}/prices/realtime | Realtime Stock Price for Security
 [**getSecurityReplayFile**](SecurityApi.md#getSecurityReplayFile) | **GET** /securities/replay | Security Replay File
+[**getSecurityShortInterest**](SecurityApi.md#getSecurityShortInterest) | **GET** /securities/{identifier}/short_interest | Short Interest by Security
 [**getSecuritySnapshots**](SecurityApi.md#getSecuritySnapshots) | **GET** /securities/snapshots | Realtime Stock Prices Snapshot
 [**getSecurityStockPriceAdjustments**](SecurityApi.md#getSecurityStockPriceAdjustments) | **GET** /securities/{identifier}/prices/adjustments | Stock Price Adjustments by Security
 [**getSecurityStockPriceAdjustmentsDividends**](SecurityApi.md#getSecurityStockPriceAdjustmentsDividends) | **GET** /securities/{identifier}/prices/adjustments/dividends | Dividends by Security
@@ -178,6 +180,86 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseSecurities**](ApiResponseSecurities.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:SecurityApi)
+
+[//]: # (METHOD:getSecuritiesShortInterest)
+
+[//]: # (RETURN_TYPE:ApiResponseSecuritiesShortInterest)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecuritiesShortInterest.md)
+
+[//]: # (OPERATION:getSecuritiesShortInterest_v2)
+
+[//]: # (ENDPOINT:/securities/short_interest)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getSecuritiesShortInterest)
+
+<a name="getSecuritiesShortInterest"></a>
+## **getSecuritiesShortInterest**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecuritiesShortInterest_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecuritiesShortInterest getSecuritiesShortInterest(opts)
+
+#### Latest Short Interest
+
+
+Returns the latest short interest data for all securities. The data covers the most recent settlement date and up to 13 days prior, sorted by percentage change in descending order. Each short interest record includes the associated security information.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var security = new intrinioSDK.SecurityApi();
+
+var opts = { 
+  'nextPage': null
+};
+
+security.getSecuritiesShortInterest(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecuritiesShortInterest**](ApiResponseSecuritiesShortInterest.md)
 
 
 
@@ -4420,6 +4502,90 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SecurityReplayFileResult**](SecurityReplayFileResult.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:SecurityApi)
+
+[//]: # (METHOD:getSecurityShortInterest)
+
+[//]: # (RETURN_TYPE:ApiResponseSecurityShortInterest)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityShortInterest.md)
+
+[//]: # (OPERATION:getSecurityShortInterest_v2)
+
+[//]: # (ENDPOINT:/securities/{identifier}/short_interest)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getSecurityShortInterest)
+
+<a name="getSecurityShortInterest"></a>
+## **getSecurityShortInterest**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityShortInterest_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityShortInterest getSecurityShortInterest(identifier, opts)
+
+#### Short Interest by Security
+
+
+Returns historical short interest data for a given security. Short interest data includes settlement date, current and previous short positions, percentage change, days to cover, and average daily volume.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var security = new intrinioSDK.SecurityApi();
+
+var identifier = "AAPL";
+
+
+var opts = { 
+  'nextPage': null
+};
+
+security.getSecurityShortInterest(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityShortInterest**](ApiResponseSecurityShortInterest.md)
 
 
 
