@@ -5,6 +5,8 @@ All URIs are relative to *https://api-v2.intrinio.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAllSecurities**](SecurityApi.md#getAllSecurities) | **GET** /securities | All Securities
+[**getSecuritiesLatestDividendRecords**](SecurityApi.md#getSecuritiesLatestDividendRecords) | **GET** /securities/dividends/latest | Latest Dividend Records for All Securities
+[**getSecuritiesLatestEarningsRecords**](SecurityApi.md#getSecuritiesLatestEarningsRecords) | **GET** /securities/earnings/latest | Latest Earnings Records for All Securities
 [**getSecuritiesShortInterest**](SecurityApi.md#getSecuritiesShortInterest) | **GET** /securities/short_interest | Latest Short Interest
 [**getSecurityById**](SecurityApi.md#getSecurityById) | **GET** /securities/{identifier} | Lookup Security
 [**getSecurityDataPointNumber**](SecurityApi.md#getSecurityDataPointNumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
@@ -180,6 +182,182 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseSecurities**](ApiResponseSecurities.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:SecurityApi)
+
+[//]: # (METHOD:getSecuritiesLatestDividendRecords)
+
+[//]: # (RETURN_TYPE:ApiResponseSecuritiesDividendLatest)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecuritiesDividendLatest.md)
+
+[//]: # (OPERATION:getSecuritiesLatestDividendRecords_v2)
+
+[//]: # (ENDPOINT:/securities/dividends/latest)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getSecuritiesLatestDividendRecords)
+
+<a name="getSecuritiesLatestDividendRecords"></a>
+## **getSecuritiesLatestDividendRecords**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecuritiesLatestDividendRecords_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecuritiesDividendLatest getSecuritiesLatestDividendRecords(opts)
+
+#### Latest Dividend Records for All Securities
+
+
+Returns the latest available dividend information for all securities. Returns one dividend record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var security = new intrinioSDK.SecurityApi();
+
+var opts = { 
+  'pageSize': 100,
+  'nextPage': null,
+  'date': new Date("2013-10-20"),
+  'identifiers': "AAPL,MSFT",
+  'nextPage2': null
+};
+
+security.getSecuritiesLatestDividendRecords(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **date** | Date| Return dividend records on or before this date. Format YYYY-MM-DD | [optional]  &nbsp;
+ **identifiers** | String| A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) | [optional]  &nbsp;
+ **nextPage2** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecuritiesDividendLatest**](ApiResponseSecuritiesDividendLatest.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:SecurityApi)
+
+[//]: # (METHOD:getSecuritiesLatestEarningsRecords)
+
+[//]: # (RETURN_TYPE:ApiResponseSecuritiesEarningsLatest)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecuritiesEarningsLatest.md)
+
+[//]: # (OPERATION:getSecuritiesLatestEarningsRecords_v2)
+
+[//]: # (ENDPOINT:/securities/earnings/latest)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getSecuritiesLatestEarningsRecords)
+
+<a name="getSecuritiesLatestEarningsRecords"></a>
+## **getSecuritiesLatestEarningsRecords**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecuritiesLatestEarningsRecords_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecuritiesEarningsLatest getSecuritiesLatestEarningsRecords(opts)
+
+#### Latest Earnings Records for All Securities
+
+
+Returns the latest available earnings information for all securities. Returns one earnings record per security, limited to records from the last 90 days, sorted by date_loaded in descending order.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var security = new intrinioSDK.SecurityApi();
+
+var opts = { 
+  'pageSize': 100,
+  'nextPage': null,
+  'date': new Date("2013-10-20"),
+  'identifiers': "AAPL,MSFT",
+  'nextPage2': null
+};
+
+security.getSecuritiesLatestEarningsRecords(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+ **date** | Date| Return earnings records on or before this date. Format YYYY-MM-DD | [optional]  &nbsp;
+ **identifiers** | String| A comma-delimited list of security identifiers (tickers, CUSIPs, ISINs, etc.) | [optional]  &nbsp;
+ **nextPage2** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecuritiesEarningsLatest**](ApiResponseSecuritiesEarningsLatest.md)
 
 
 

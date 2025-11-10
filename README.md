@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.108.0
-- Package version: 6.41.0
+- API version: 2.112.0
+- Package version: 6.42.0
 
 
 ## Installation
@@ -202,6 +202,8 @@ Class | Method | HTTP request | Description
 *intrinioSDK.OwnersApi* | [**institutionalHoldingsByOwner**](docs/OwnersApi.md#institutionalHoldingsByOwner) | **GET** /owners/{identifier}/institutional_holdings | Institutional Holdings by Owner
 *intrinioSDK.OwnersApi* | [**searchOwners**](docs/OwnersApi.md#searchOwners) | **GET** /owners/search | Search Owners
 *intrinioSDK.SecurityApi* | [**getAllSecurities**](docs/SecurityApi.md#getAllSecurities) | **GET** /securities | All Securities
+*intrinioSDK.SecurityApi* | [**getSecuritiesLatestDividendRecords**](docs/SecurityApi.md#getSecuritiesLatestDividendRecords) | **GET** /securities/dividends/latest | Latest Dividend Records for All Securities
+*intrinioSDK.SecurityApi* | [**getSecuritiesLatestEarningsRecords**](docs/SecurityApi.md#getSecuritiesLatestEarningsRecords) | **GET** /securities/earnings/latest | Latest Earnings Records for All Securities
 *intrinioSDK.SecurityApi* | [**getSecuritiesShortInterest**](docs/SecurityApi.md#getSecuritiesShortInterest) | **GET** /securities/short_interest | Latest Short Interest
 *intrinioSDK.SecurityApi* | [**getSecurityById**](docs/SecurityApi.md#getSecurityById) | **GET** /securities/{identifier} | Lookup Security
 *intrinioSDK.SecurityApi* | [**getSecurityDataPointNumber**](docs/SecurityApi.md#getSecurityDataPointNumber) | **GET** /securities/{identifier}/data_point/{tag}/number | Data Point (Number) for Security
@@ -402,6 +404,8 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseSICIndices](docs/ApiResponseSICIndices.md)
  - [intrinioSDK.ApiResponseSICIndicesSearch](docs/ApiResponseSICIndicesSearch.md)
  - [intrinioSDK.ApiResponseSecurities](docs/ApiResponseSecurities.md)
+ - [intrinioSDK.ApiResponseSecuritiesDividendLatest](docs/ApiResponseSecuritiesDividendLatest.md)
+ - [intrinioSDK.ApiResponseSecuritiesEarningsLatest](docs/ApiResponseSecuritiesEarningsLatest.md)
  - [intrinioSDK.ApiResponseSecuritiesSearch](docs/ApiResponseSecuritiesSearch.md)
  - [intrinioSDK.ApiResponseSecuritiesShortInterest](docs/ApiResponseSecuritiesShortInterest.md)
  - [intrinioSDK.ApiResponseSecurityAccumulationDistributionIndex](docs/ApiResponseSecurityAccumulationDistributionIndex.md)
