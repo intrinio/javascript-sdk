@@ -7,9 +7,12 @@ Method | HTTP request | Description
 [**getAllEtfs**](ETFsApi.md#getAllEtfs) | **GET** /etfs | All ETFs
 [**getEtf**](ETFsApi.md#getEtf) | **GET** /etfs/{identifier} | Lookup ETF
 [**getEtfAnalytics**](ETFsApi.md#getEtfAnalytics) | **GET** /etfs/{identifier}/analytics | ETF Analytics
+[**getEtfHistoricalNavFlows**](ETFsApi.md#getEtfHistoricalNavFlows) | **GET** /etfs/{identifier}/nav_flows/historical | Exchange Traded Fund (ETF) Historical NAV Flows
 [**getEtfHistoricalStats**](ETFsApi.md#getEtfHistoricalStats) | **GET** /etfs/{identifier}/historical_stats | Exchange Traded Fund (ETF) Historical Stats
 [**getEtfHoldings**](ETFsApi.md#getEtfHoldings) | **GET** /etfs/{identifier}/holdings | ETF Holdings
+[**getEtfNavFlows**](ETFsApi.md#getEtfNavFlows) | **GET** /etfs/{identifier}/nav_flows | Exchange Traded Fund (ETF) NAV Flows
 [**getEtfStats**](ETFsApi.md#getEtfStats) | **GET** /etfs/{identifier}/stats | Exchange Traded Fund (ETF) Stats
+[**getEtfsNavFlows**](ETFsApi.md#getEtfsNavFlows) | **GET** /etfs/nav_flows | Exchange Traded Funds (ETFs) Latest NAV Flows
 [**searchEtfs**](ETFsApi.md#searchEtfs) | **GET** /etfs/search | Search ETFs
 
 
@@ -260,6 +263,96 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:ETFsApi)
 
+[//]: # (METHOD:getEtfHistoricalNavFlows)
+
+[//]: # (RETURN_TYPE:ETFNavFlowsHistorical)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ETFNavFlowsHistorical.md)
+
+[//]: # (OPERATION:getEtfHistoricalNavFlows_v2)
+
+[//]: # (ENDPOINT:/etfs/{identifier}/nav_flows/historical)
+
+[//]: # (DOCUMENT_LINK:ETFsApi.md#getEtfHistoricalNavFlows)
+
+<a name="getEtfHistoricalNavFlows"></a>
+## **getEtfHistoricalNavFlows**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getEtfHistoricalNavFlows_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ETFNavFlowsHistorical getEtfHistoricalNavFlows(identifier, opts)
+
+#### Exchange Traded Fund (ETF) Historical NAV Flows
+
+
+Returns a list of historical NAV (Net Asset Value) and flows data for Exchange Traded Funds. Includes NAV returns, NAV values, net flows data, share outstanding counts, and total net assets across multiple dates with pagination support.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var eTFs = new intrinioSDK.ETFsApi();
+
+var identifier = "SPY";
+
+
+var opts = { 
+  'startDate': new Date("2013-10-20"),
+  'endDate': new Date("2013-10-20"),
+  'pageSize': 100,
+  'nextPage': "nextPage_example"
+};
+
+eTFs.getEtfHistoricalNavFlows(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID) |  &nbsp;
+ **startDate** | Date| Return NAV flows on or after this date | [optional]  &nbsp;
+ **endDate** | Date| Return NAV flows on or before this date | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ETFNavFlowsHistorical**](ETFNavFlowsHistorical.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:ETFsApi)
+
 [//]: # (METHOD:getEtfHistoricalStats)
 
 [//]: # (RETURN_TYPE:ETFHistoricalStats)
@@ -434,6 +527,96 @@ Name | Type | Description  | Notes
 
 [//]: # (CLASS:ETFsApi)
 
+[//]: # (METHOD:getEtfNavFlows)
+
+[//]: # (RETURN_TYPE:ETFNavFlows)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ETFNavFlows.md)
+
+[//]: # (OPERATION:getEtfNavFlows_v2)
+
+[//]: # (ENDPOINT:/etfs/{identifier}/nav_flows)
+
+[//]: # (DOCUMENT_LINK:ETFsApi.md#getEtfNavFlows)
+
+<a name="getEtfNavFlows"></a>
+## **getEtfNavFlows**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getEtfNavFlows_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ETFNavFlows getEtfNavFlows(identifier, opts)
+
+#### Exchange Traded Fund (ETF) NAV Flows
+
+
+Returns NAV (Net Asset Value) and flows data for Exchange Traded Funds. Includes NAV returns (daily, monthly, quarterly, yearly, annualized), NAV values (unadjusted and adjusted for splits/dividends), net flows data, share outstanding counts, and total net assets.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var eTFs = new intrinioSDK.ETFsApi();
+
+var identifier = "SPY";
+
+
+var opts = { 
+  'startDate': new Date("2013-10-20"),
+  'endDate': new Date("2013-10-20"),
+  'pageSize': 100,
+  'nextPage': "nextPage_example"
+};
+
+eTFs.getEtfNavFlows(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| An ETF identifier (Ticker, Figi Ticker, ISIN, RIC, Intrinio ID) |  &nbsp;
+ **startDate** | Date| Return NAV flows on or after this date | [optional]  &nbsp;
+ **endDate** | Date| Return NAV flows on or before this date | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ETFNavFlows**](ETFNavFlows.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:ETFsApi)
+
 [//]: # (METHOD:getEtfStats)
 
 [//]: # (RETURN_TYPE:ETFStats)
@@ -503,6 +686,90 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ETFStats**](ETFStats.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:ETFsApi)
+
+[//]: # (METHOD:getEtfsNavFlows)
+
+[//]: # (RETURN_TYPE:ETFNavFlowsAll)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ETFNavFlowsAll.md)
+
+[//]: # (OPERATION:getEtfsNavFlows_v2)
+
+[//]: # (ENDPOINT:/etfs/nav_flows)
+
+[//]: # (DOCUMENT_LINK:ETFsApi.md#getEtfsNavFlows)
+
+<a name="getEtfsNavFlows"></a>
+## **getEtfsNavFlows**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getEtfsNavFlows_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ETFNavFlowsAll getEtfsNavFlows(opts)
+
+#### Exchange Traded Funds (ETFs) Latest NAV Flows
+
+
+Returns the latest NAV (Net Asset Value) and flows data for all Exchange Traded Funds in the specified country, sorted by month-end assets in descending order. Each ETF appears only once with its most recent NAV flows data.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var eTFs = new intrinioSDK.ETFsApi();
+
+var opts = { 
+  'countryCode': "US",
+  'pageSize': 100,
+  'nextPage': "nextPage_example"
+};
+
+eTFs.getEtfsNavFlows(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **countryCode** | String| The ISO country code to filter ETFs by (e.g., US, CA, GB). Defaults to US. | [optional] [default to US] &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ETFNavFlowsAll**](ETFNavFlowsAll.md)
 
 
 

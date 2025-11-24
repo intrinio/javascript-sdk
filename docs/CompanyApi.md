@@ -4,6 +4,8 @@ All URIs are relative to *https://api-v2.intrinio.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**allExpectedEarningsDates**](CompanyApi.md#allExpectedEarningsDates) | **GET** /companies/upcoming_earnings | All Expected Earnings Dates
+[**expectedEarningsDatesByCompany**](CompanyApi.md#expectedEarningsDatesByCompany) | **GET** /companies/{identifier}/upcoming_earnings | Expected Earnings Dates by Company
 [**getAllCompanies**](CompanyApi.md#getAllCompanies) | **GET** /companies | All Companies
 [**getAllCompaniesDailyMetrics**](CompanyApi.md#getAllCompaniesDailyMetrics) | **GET** /companies/daily_metrics | All Companies daily metrics
 [**getAllCompanyNews**](CompanyApi.md#getAllCompanyNews) | **GET** /companies/news | All News
@@ -27,6 +29,192 @@ Method | HTTP request | Description
 [**searchCompanies**](CompanyApi.md#searchCompanies) | **GET** /companies/search | Search Companies
 [**sharesOutstandingByCompany**](CompanyApi.md#sharesOutstandingByCompany) | **GET** /companies/{identifier}/shares_outstanding | Shares Outstanding by Company
 
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:CompanyApi)
+
+[//]: # (METHOD:allExpectedEarningsDates)
+
+[//]: # (RETURN_TYPE:ApiResponseAllExpectedEarningsDates)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseAllExpectedEarningsDates.md)
+
+[//]: # (OPERATION:allExpectedEarningsDates_v2)
+
+[//]: # (ENDPOINT:/companies/upcoming_earnings)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#allExpectedEarningsDates)
+
+<a name="allExpectedEarningsDates"></a>
+## **allExpectedEarningsDates**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/allExpectedEarningsDates_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseAllExpectedEarningsDates allExpectedEarningsDates(opts)
+
+#### All Expected Earnings Dates
+
+
+Returns expected earnings announcement dates for all companies, optionally filtered by tickers. Results are always sorted by expected date ascending and include company identification.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var company = new intrinioSDK.CompanyApi();
+
+var opts = { 
+  'tickers': null,
+  'fiscalYear': null,
+  'fiscalPeriod': null,
+  'expectedDateAfter': new Date("today"),
+  'expectedDateBefore': null,
+  'pageSize': 100,
+  'nextPage': null
+};
+
+company.allExpectedEarningsDates(opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tickers** | String| Comma-delimited list of tickers to filter results | [optional]  &nbsp;
+ **fiscalYear** | Number| Filter by fiscal year | [optional]  &nbsp;
+ **fiscalPeriod** | String| Filter by fiscal period (Q1, Q2, Q3, FY) | [optional]  &nbsp;
+ **expectedDateAfter** | Date| Returns expected dates on or after this date. Defaults to today if not provided. | [optional] [default to today] &nbsp;
+ **expectedDateBefore** | Date| Returns expected dates before this date. | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseAllExpectedEarningsDates**](ApiResponseAllExpectedEarningsDates.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:CompanyApi)
+
+[//]: # (METHOD:expectedEarningsDatesByCompany)
+
+[//]: # (RETURN_TYPE:ApiResponseCompanyExpectedEarningsDates)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseCompanyExpectedEarningsDates.md)
+
+[//]: # (OPERATION:expectedEarningsDatesByCompany_v2)
+
+[//]: # (ENDPOINT:/companies/{identifier}/upcoming_earnings)
+
+[//]: # (DOCUMENT_LINK:CompanyApi.md#expectedEarningsDatesByCompany)
+
+<a name="expectedEarningsDatesByCompany"></a>
+## **expectedEarningsDatesByCompany**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/expectedEarningsDatesByCompany_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseCompanyExpectedEarningsDates expectedEarningsDatesByCompany(identifier, opts)
+
+#### Expected Earnings Dates by Company
+
+
+Returns expected earnings announcement dates for a company&#39;s fiscal periods with confidence intervals and historical filing date ranges.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var company = new intrinioSDK.CompanyApi();
+
+var identifier = "AAPL";
+
+
+var opts = { 
+  'fiscalYear': null,
+  'fiscalPeriod': null,
+  'expectedDateAfter': new Date("today"),
+  'expectedDateBefore': null,
+  'pageSize': 100,
+  'nextPage': null
+};
+
+company.expectedEarningsDatesByCompany(identifier, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
+ **fiscalYear** | Number| Filter by fiscal year | [optional]  &nbsp;
+ **fiscalPeriod** | String| Filter by fiscal period (Q1, Q2, Q3, FY) | [optional]  &nbsp;
+ **expectedDateAfter** | Date| Returns expected dates on or after this date. Defaults to today if not provided. | [optional] [default to today] &nbsp;
+ **expectedDateBefore** | Date| Returns expected dates before this date. | [optional]  &nbsp;
+ **pageSize** | Number| The number of results to return | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseCompanyExpectedEarningsDates**](ApiResponseCompanyExpectedEarningsDates.md)
+
+
+
+[//]: # (END_OPERATION)
 
 
 [//]: # (START_OPERATION)
@@ -618,8 +806,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var identifier = "AAPL";
-var tag = "marketcap";
+var identifier = "$$v2_company_data_point_identifier_default$$";
+var tag = "$$v2_company_data_point_item_number_default$$";
 
 
 company.getCompanyDataPointNumber(identifier, tag).then(function(data) {
@@ -639,8 +827,8 @@ company.getCompanyDataPointNumber(identifier, tag).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | String| $$v2_company_data_point_identifier_description$$ |  &nbsp;
+ **tag** | String| $$v2_company_data_point_item_description$$ |  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -699,8 +887,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var identifier = "AAPL";
-var tag = "ceo";
+var identifier = "$$v2_company_data_point_identifier_default$$";
+var tag = "$$v2_company_data_point_item_text_default$$";
 
 
 company.getCompanyDataPointText(identifier, tag).then(function(data) {
@@ -720,8 +908,8 @@ company.getCompanyDataPointText(identifier, tag).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | String| $$v2_company_data_point_identifier_description$$ |  &nbsp;
+ **tag** | String| $$v2_company_data_point_item_description$$ |  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -969,7 +1157,7 @@ Name | Type | Description  | Notes
 #### Historical Data for Company
 
 
-Returns historical values for the given &#x60;tag&#x60; and the Company with the given &#x60;identifier&#x60;
+$$v2_company_historical_data_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -984,8 +1172,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var company = new intrinioSDK.CompanyApi();
 
-var identifier = "AAPL";
-var tag = "marketcap";
+var identifier = "$$v2_company_historical_data_identifier_default$$";
+var tag = "$$v2_company_historical_data_item_default$$";
 
 
 var opts = { 
@@ -1015,8 +1203,8 @@ company.getCompanyHistoricalData(identifier, tag, opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | String| A Company identifier (Ticker, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | String| $$v2_company_historical_data_identifier_description$$ |  &nbsp;
+ **tag** | String| $$v2_company_historical_data_item_description$$ |  &nbsp;
  **frequency** | String| Return historical data in the given frequency | [optional] [default to daily] &nbsp;
  **type** | String| Return historical data for given fiscal period type | [optional]  &nbsp;
  **startDate** | Date| Return historical data on or after this date | [optional]  &nbsp;

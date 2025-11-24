@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.112.0
-- Package version: 6.42.0
+- API version: 2.115.0
+- Package version: 6.43.0
 
 
 ## Installation
@@ -73,6 +73,8 @@ A listing of classes and methods is also provided below:
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *intrinioSDK.BulkDownloadsApi* | [**getBulkDownloadLinks**](docs/BulkDownloadsApi.md#getBulkDownloadLinks) | **GET** /bulk_downloads/links | All Links
+*intrinioSDK.CompanyApi* | [**allExpectedEarningsDates**](docs/CompanyApi.md#allExpectedEarningsDates) | **GET** /companies/upcoming_earnings | All Expected Earnings Dates
+*intrinioSDK.CompanyApi* | [**expectedEarningsDatesByCompany**](docs/CompanyApi.md#expectedEarningsDatesByCompany) | **GET** /companies/{identifier}/upcoming_earnings | Expected Earnings Dates by Company
 *intrinioSDK.CompanyApi* | [**getAllCompanies**](docs/CompanyApi.md#getAllCompanies) | **GET** /companies | All Companies
 *intrinioSDK.CompanyApi* | [**getAllCompaniesDailyMetrics**](docs/CompanyApi.md#getAllCompaniesDailyMetrics) | **GET** /companies/daily_metrics | All Companies daily metrics
 *intrinioSDK.CompanyApi* | [**getAllCompanyNews**](docs/CompanyApi.md#getAllCompanyNews) | **GET** /companies/news | All News
@@ -108,9 +110,12 @@ Class | Method | HTTP request | Description
 *intrinioSDK.ETFsApi* | [**getAllEtfs**](docs/ETFsApi.md#getAllEtfs) | **GET** /etfs | All ETFs
 *intrinioSDK.ETFsApi* | [**getEtf**](docs/ETFsApi.md#getEtf) | **GET** /etfs/{identifier} | Lookup ETF
 *intrinioSDK.ETFsApi* | [**getEtfAnalytics**](docs/ETFsApi.md#getEtfAnalytics) | **GET** /etfs/{identifier}/analytics | ETF Analytics
+*intrinioSDK.ETFsApi* | [**getEtfHistoricalNavFlows**](docs/ETFsApi.md#getEtfHistoricalNavFlows) | **GET** /etfs/{identifier}/nav_flows/historical | Exchange Traded Fund (ETF) Historical NAV Flows
 *intrinioSDK.ETFsApi* | [**getEtfHistoricalStats**](docs/ETFsApi.md#getEtfHistoricalStats) | **GET** /etfs/{identifier}/historical_stats | Exchange Traded Fund (ETF) Historical Stats
 *intrinioSDK.ETFsApi* | [**getEtfHoldings**](docs/ETFsApi.md#getEtfHoldings) | **GET** /etfs/{identifier}/holdings | ETF Holdings
+*intrinioSDK.ETFsApi* | [**getEtfNavFlows**](docs/ETFsApi.md#getEtfNavFlows) | **GET** /etfs/{identifier}/nav_flows | Exchange Traded Fund (ETF) NAV Flows
 *intrinioSDK.ETFsApi* | [**getEtfStats**](docs/ETFsApi.md#getEtfStats) | **GET** /etfs/{identifier}/stats | Exchange Traded Fund (ETF) Stats
+*intrinioSDK.ETFsApi* | [**getEtfsNavFlows**](docs/ETFsApi.md#getEtfsNavFlows) | **GET** /etfs/nav_flows | Exchange Traded Funds (ETFs) Latest NAV Flows
 *intrinioSDK.ETFsApi* | [**searchEtfs**](docs/ETFsApi.md#searchEtfs) | **GET** /etfs/search | Search ETFs
 *intrinioSDK.FilingApi* | [**getAllFilings**](docs/FilingApi.md#getAllFilings) | **GET** /filings | All Filings
 *intrinioSDK.FilingApi* | [**getAllNotes**](docs/FilingApi.md#getAllNotes) | **GET** /filings/notes | All Filing Notes
@@ -329,11 +334,13 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [intrinioSDK.AccumulationDistributionIndexTechnicalValue](docs/AccumulationDistributionIndexTechnicalValue.md)
+ - [intrinioSDK.ApiResponseAllExpectedEarningsDates](docs/ApiResponseAllExpectedEarningsDates.md)
  - [intrinioSDK.ApiResponseBulkDownloadLinks](docs/ApiResponseBulkDownloadLinks.md)
  - [intrinioSDK.ApiResponseCompanies](docs/ApiResponseCompanies.md)
  - [intrinioSDK.ApiResponseCompaniesSearch](docs/ApiResponseCompaniesSearch.md)
  - [intrinioSDK.ApiResponseCompanyAnswers](docs/ApiResponseCompanyAnswers.md)
  - [intrinioSDK.ApiResponseCompanyDailyMetrics](docs/ApiResponseCompanyDailyMetrics.md)
+ - [intrinioSDK.ApiResponseCompanyExpectedEarningsDates](docs/ApiResponseCompanyExpectedEarningsDates.md)
  - [intrinioSDK.ApiResponseCompanyFilings](docs/ApiResponseCompanyFilings.md)
  - [intrinioSDK.ApiResponseCompanyFundamentals](docs/ApiResponseCompanyFundamentals.md)
  - [intrinioSDK.ApiResponseCompanyHistoricalData](docs/ApiResponseCompanyHistoricalData.md)
@@ -510,8 +517,13 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ETFAnalytics](docs/ETFAnalytics.md)
  - [intrinioSDK.ETFHistoricalStats](docs/ETFHistoricalStats.md)
  - [intrinioSDK.ETFHolding](docs/ETFHolding.md)
+ - [intrinioSDK.ETFNavFlow](docs/ETFNavFlow.md)
+ - [intrinioSDK.ETFNavFlowsAll](docs/ETFNavFlowsAll.md)
+ - [intrinioSDK.ETFNavFlowsHistorical](docs/ETFNavFlowsHistorical.md)
  - [intrinioSDK.ETFStats](docs/ETFStats.md)
  - [intrinioSDK.ETFSummary](docs/ETFSummary.md)
+ - [intrinioSDK.EarningsDateEstimate](docs/EarningsDateEstimate.md)
+ - [intrinioSDK.EarningsDateEstimateConfidenceIntervals](docs/EarningsDateEstimateConfidenceIntervals.md)
  - [intrinioSDK.EarningsRecord](docs/EarningsRecord.md)
  - [intrinioSDK.EaseOfMovementTechnicalValue](docs/EaseOfMovementTechnicalValue.md)
  - [intrinioSDK.EconomicIndex](docs/EconomicIndex.md)
@@ -647,4 +659,6 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ZacksSalesSurprise](docs/ZacksSalesSurprise.md)
  - [intrinioSDK.ZacksSalesSurpriseSummary](docs/ZacksSalesSurpriseSummary.md)
  - [intrinioSDK.ZacksTargetPriceConsensus](docs/ZacksTargetPriceConsensus.md)
+ - [intrinioSDK.ETFNavFlows](docs/ETFNavFlows.md)
+ - [intrinioSDK.EarningsDateEstimateWithCompany](docs/EarningsDateEstimateWithCompany.md)
 

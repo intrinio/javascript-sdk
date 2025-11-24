@@ -38,7 +38,7 @@ Method | HTTP request | Description
 #### Historical Data
 
 
-Returns historical values for the given &#x60;tag&#x60; and the entity represented by the given &#x60;identifier&#x60;
+$$v2_historical_data_description$$
 
 [//]: # (END_OVERVIEW)
 
@@ -53,8 +53,8 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var historicalData = new intrinioSDK.HistoricalDataApi();
 
-var identifier = "AAPL";
-var tag = "marketcap";
+var identifier = "$$v2_historical_data_identifier_default$$";
+var tag = "$$v2_historical_data_item_default$$";
 
 
 var opts = { 
@@ -84,8 +84,8 @@ historicalData.getHistoricalData(identifier, tag, opts).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identifier** | String| An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID) |  &nbsp;
- **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **identifier** | String| $$v2_historical_data_identifier_description$$ |  &nbsp;
+ **tag** | String| $$v2_historical_data_item_description$$ |  &nbsp;
  **frequency** | String| Return historical data in the given frequency | [optional] [default to daily] &nbsp;
  **type** | String| Filter by type, when applicable | [optional]  &nbsp;
  **startDate** | Date| Get historical data on or after this date | [optional]  &nbsp;

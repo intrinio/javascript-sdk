@@ -400,7 +400,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 var fundamentals = new intrinioSDK.FundamentalsApi();
 
 var id = "AAPL-income_statement-2020-FY";
-var tag = "ceo";
+var tag = "$$v2_data_point_item_text_default$$";
 
 
 fundamentals.getFundamentalStandardizedFinancialsDimensions(id, tag).then(function(data) {
@@ -421,7 +421,7 @@ fundamentals.getFundamentalStandardizedFinancialsDimensions(id, tag).then(functi
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | String| The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental |  &nbsp;
- **tag** | String| An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;) |  &nbsp;
+ **tag** | String| $$v2_data_point_item_description$$ |  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
