@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.115.0
-- Package version: 6.43.0
+- API version: 2.122.0
+- Package version: 6.44.0
 
 
 ## Installation
@@ -72,6 +72,7 @@ A listing of classes and methods is also provided below:
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*intrinioSDK.AccountApi* | [**getAccountCurrentUsage**](docs/AccountApi.md#getAccountCurrentUsage) | **GET** /account | Account Current Usage
 *intrinioSDK.BulkDownloadsApi* | [**getBulkDownloadLinks**](docs/BulkDownloadsApi.md#getBulkDownloadLinks) | **GET** /bulk_downloads/links | All Links
 *intrinioSDK.CompanyApi* | [**allExpectedEarningsDates**](docs/CompanyApi.md#allExpectedEarningsDates) | **GET** /companies/upcoming_earnings | All Expected Earnings Dates
 *intrinioSDK.CompanyApi* | [**expectedEarningsDatesByCompany**](docs/CompanyApi.md#expectedEarningsDatesByCompany) | **GET** /companies/{identifier}/upcoming_earnings | Expected Earnings Dates by Company
@@ -333,7 +334,10 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [intrinioSDK.AccountCurrentUsage](docs/AccountCurrentUsage.md)
  - [intrinioSDK.AccumulationDistributionIndexTechnicalValue](docs/AccumulationDistributionIndexTechnicalValue.md)
+ - [intrinioSDK.ApiResponseAccountCurrentUsages](docs/ApiResponseAccountCurrentUsages.md)
+ - [intrinioSDK.ApiResponseAccountCurrentUsagesAccount](docs/ApiResponseAccountCurrentUsagesAccount.md)
  - [intrinioSDK.ApiResponseAllExpectedEarningsDates](docs/ApiResponseAllExpectedEarningsDates.md)
  - [intrinioSDK.ApiResponseBulkDownloadLinks](docs/ApiResponseBulkDownloadLinks.md)
  - [intrinioSDK.ApiResponseCompanies](docs/ApiResponseCompanies.md)
