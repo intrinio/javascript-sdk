@@ -36,7 +36,7 @@
   /**
    * The BulkDownloadSummary model module.
    * @module model/BulkDownloadSummary
-   * @version 6.44.0
+   * @version 6.45.0
    */
 
   /**

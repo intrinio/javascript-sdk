@@ -36,7 +36,7 @@
   /**
    * The MarketStatusResult model module.
    * @module model/MarketStatusResult
-   * @version 6.44.0
+   * @version 6.45.0
    */
 
   /**

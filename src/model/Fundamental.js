@@ -36,7 +36,7 @@
   /**
    * The Fundamental model module.
    * @module model/Fundamental
-   * @version 6.44.0
+   * @version 6.45.0
    */
 
   /**

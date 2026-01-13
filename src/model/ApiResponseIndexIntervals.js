@@ -36,7 +36,7 @@
   /**
    * The ApiResponseIndexIntervals model module.
    * @module model/ApiResponseIndexIntervals
-   * @version 6.44.0
+   * @version 6.45.0
    */
 
   /**

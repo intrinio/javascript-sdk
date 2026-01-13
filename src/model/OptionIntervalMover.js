@@ -36,7 +36,7 @@
   /**
    * The OptionIntervalMover model module.
    * @module model/OptionIntervalMover
-   * @version 6.44.0
+   * @version 6.45.0
    */
 
   /**

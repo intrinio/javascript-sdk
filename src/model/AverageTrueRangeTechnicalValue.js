@@ -36,7 +36,7 @@
   /**
    * The AverageTrueRangeTechnicalValue model module.
    * @module model/AverageTrueRangeTechnicalValue
-   * @version 6.44.0
+   * @version 6.45.0
    */
 
   /**

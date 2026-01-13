@@ -36,7 +36,7 @@
   /**
    * The ApiResponseIndexConstituents model module.
    * @module model/ApiResponseIndexConstituents
-   * @version 6.44.0
+   * @version 6.45.0
    */
 
   /**

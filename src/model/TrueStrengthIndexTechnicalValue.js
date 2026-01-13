@@ -36,7 +36,7 @@
   /**
    * The TrueStrengthIndexTechnicalValue model module.
    * @module model/TrueStrengthIndexTechnicalValue
-   * @version 6.44.0
+   * @version 6.45.0
    */
 
   /**
