@@ -41,6 +41,7 @@
 
   /**
    * Constructs a new <code>ApiResponseAccountCurrentUsagesAccount</code>.
+   * The account.
    * @alias module:model/ApiResponseAccountCurrentUsagesAccount
    * @class
    */
