@@ -303,7 +303,7 @@
      * Standardized Financials Dimensions
      * Returns as reported dimensionality of a data tag
      * @param {String} id The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental
-     * @param {String} tag $$v2_data_point_item_description$$
+     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ApiResponseStandardizedFinancialsDimensions} and HTTP response
      */
     this.getFundamentalStandardizedFinancialsDimensionsWithHttpInfo = function(id, tag) {
@@ -349,7 +349,7 @@
      * Standardized Financials Dimensions
      * Returns as reported dimensionality of a data tag
      * @param {String} id The Intrinio ID or lookup code (ticker-statement-year-period) for the Fundamental
-     * @param {String} tag $$v2_data_point_item_description$$
+     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ApiResponseStandardizedFinancialsDimensions}
      */
     this.getFundamentalStandardizedFinancialsDimensions = function(id, tag) {

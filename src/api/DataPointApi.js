@@ -51,9 +51,9 @@
 
     /**
      * Data Point (Number)
-     * $$v2_data_point_number_description$$
-     * @param {String} identifier $$v2_data_point_identifier_description$$
-     * @param {String} tag $$v2_data_point_item_description$$
+     * Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
+     * @param {String} identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'Number'} and HTTP response
      */
     this.getDataPointNumberWithHttpInfo = function(identifier, tag) {
@@ -97,9 +97,9 @@
 
     /**
      * Data Point (Number)
-     * $$v2_data_point_number_description$$
-     * @param {String} identifier $$v2_data_point_identifier_description$$
-     * @param {String} tag $$v2_data_point_item_description$$
+     * Returns a numeric value for the given &#x60;tag&#x60; and the entity with the given &#x60;identifier&#x60;
+     * @param {String} identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'Number'}
      */
     this.getDataPointNumber = function(identifier, tag) {
@@ -113,9 +113,9 @@
 
     /**
      * Data Point (Text)
-     * $$v2_data_point_text_description$$
-     * @param {String} identifier $$v2_data_point_identifier_description$$
-     * @param {String} tag $$v2_data_point_item_description$$
+     * Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+     * @param {String} identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link 'String'} and HTTP response
      */
     this.getDataPointTextWithHttpInfo = function(identifier, tag) {
@@ -159,9 +159,9 @@
 
     /**
      * Data Point (Text)
-     * $$v2_data_point_text_description$$
-     * @param {String} identifier $$v2_data_point_identifier_description$$
-     * @param {String} tag $$v2_data_point_item_description$$
+     * Returns a text value for the given &#x60;tag&#x60; for the Security with the given &#x60;identifier&#x60;
+     * @param {String} identifier An identifier for an entity such as a Company, Security, Index, etc (Ticker, FIGI, ISIN, CUSIP, CIK, LEI, Intrinio ID)
+     * @param {String} tag An Intrinio data tag ID or code (&lt;a href&#x3D;&#39;https://data.intrinio.com/data-tags&#39;&gt;reference&lt;/a&gt;)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link 'String'}
      */
     this.getDataPointText = function(identifier, tag) {

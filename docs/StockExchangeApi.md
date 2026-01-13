@@ -150,7 +150,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "$$v2_mic_default$$";
+var identifier = "USCOMP";
 
 
 var opts = { 
@@ -240,7 +240,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "$$v2_mic_default$$";
+var identifier = "USCOMP";
 
 
 stockExchange.getStockExchangeById(identifier).then(function(data) {
@@ -319,7 +319,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "$$v2_mic_default$$";
+var identifier = "USCOMP";
 
 
 var opts = { 
@@ -407,7 +407,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "$$v2_mic_default$$";
+var identifier = "USCOMP";
 
 
 var opts = { 
@@ -495,7 +495,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "$$v2_mic_default$$";
+var identifier = "USCOMP";
 
 
 var opts = { 
@@ -583,7 +583,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "$$v2_mic_default$$";
+var identifier = "USCOMP";
 
 
 var opts = { 
@@ -671,7 +671,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "$$v2_mic_default$$";
+var identifier = "USCOMP";
 
 
 var opts = { 
@@ -759,7 +759,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "$$v2_mic_default$$";
+var identifier = "USCOMP";
 
 
 var opts = { 
@@ -855,7 +855,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "$$v2_mic_default$$";
+var identifier = "USCOMP";
 var tickers = ["AAPL,MSFT,NVDA"];
 
 
@@ -943,7 +943,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "$$v2_mic_default$$";
+var identifier = "USCOMP";
 
 
 var opts = { 
@@ -1037,7 +1037,7 @@ intrinioSDK.ApiClient.instance.enableRetries = true;
 
 var stockExchange = new intrinioSDK.StockExchangeApi();
 
-var identifier = "$$v2_mic_default$$";
+var identifier = "USCOMP";
 
 
 var opts = { 
