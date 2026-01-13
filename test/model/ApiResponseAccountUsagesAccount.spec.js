@@ -30,7 +30,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new intrinioSDK.ApiResponseAccountCurrentUsages();
+    instance = new intrinioSDK.ApiResponseAccountUsagesAccount();
   });
 
   var getProperty = function(object, getter, property) {
@@ -49,22 +49,16 @@
       object[property] = value;
   }
 
-  describe('ApiResponseAccountCurrentUsages', function() {
-    it('should create an instance of ApiResponseAccountCurrentUsages', function() {
-      // uncomment below and update the code to test ApiResponseAccountCurrentUsages
-      //var instane = new intrinioSDK.ApiResponseAccountCurrentUsages();
-      //expect(instance).to.be.a(intrinioSDK.ApiResponseAccountCurrentUsages);
+  describe('ApiResponseAccountUsagesAccount', function() {
+    it('should create an instance of ApiResponseAccountUsagesAccount', function() {
+      // uncomment below and update the code to test ApiResponseAccountUsagesAccount
+      //var instane = new intrinioSDK.ApiResponseAccountUsagesAccount();
+      //expect(instance).to.be.a(intrinioSDK.ApiResponseAccountUsagesAccount);
     });
 
-    it('should have the property usage (base name: "usage")', function() {
-      // uncomment below and update the code to test the property usage
-      //var instane = new intrinioSDK.ApiResponseAccountCurrentUsages();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property account (base name: "account")', function() {
-      // uncomment below and update the code to test the property account
-      //var instane = new intrinioSDK.ApiResponseAccountCurrentUsages();
+    it('should have the property email (base name: "email")', function() {
+      // uncomment below and update the code to test the property email
+      //var instane = new intrinioSDK.ApiResponseAccountUsagesAccount();
       //expect(instance).to.be();
     });
 

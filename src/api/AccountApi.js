@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/ApiResponseAccountCurrentUsages'], factory);
+    define(['ApiClient', 'model/ApiResponseAccountUsages'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/ApiResponseAccountCurrentUsages'));
+    module.exports = factory(require('../ApiClient'), require('../model/ApiResponseAccountUsages'));
   } else {
     // Browser globals (root is window)
     if (!root.intrinioSDK) {
       root.intrinioSDK = {};
     }
-    root.intrinioSDK.AccountApi = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.ApiResponseAccountCurrentUsages);
+    root.intrinioSDK.AccountApi = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.ApiResponseAccountUsages);
   }
-}(this, function(ApiClient, ApiResponseAccountCurrentUsages) {
+}(this, function(ApiClient, ApiResponseAccountUsages) {
   'use strict';
 
   /**
@@ -52,7 +52,7 @@
     /**
      * Account Current Usage
      * Returns a list of all access codes available with their current usage.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ApiResponseAccountCurrentUsages} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/ApiResponseAccountUsages} and HTTP response
      */
     this.getAccountCurrentUsageWithHttpInfo = function() {
       var postBody = null;
@@ -72,7 +72,7 @@
       var authNames = ['ApiKeyAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = ApiResponseAccountCurrentUsages;
+      var returnType = ApiResponseAccountUsages;
       var endpoint = '/account'
       var method = 'GET'
 
@@ -84,7 +84,7 @@
     /**
      * Account Current Usage
      * Returns a list of all access codes available with their current usage.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ApiResponseAccountCurrentUsages}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/ApiResponseAccountUsages}
      */
     this.getAccountCurrentUsage = function() {
       return this.getAccountCurrentUsageWithHttpInfo()

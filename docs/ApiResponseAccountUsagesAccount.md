@@ -1,9 +1,9 @@
 
-[//]: # (CLASS:ApiResponseAccountCurrentUsagesAccount)
+[//]: # (CLASS:ApiResponseAccountUsagesAccount)
 
 [//]: # (KIND:object)
 
-### ApiResponseAccountCurrentUsagesAccount
+### ApiResponseAccountUsagesAccount
 
 #### Properties
 

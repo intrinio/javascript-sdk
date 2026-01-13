@@ -16,70 +16,64 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AccountCurrentUsage', 'model/ApiResponseAccountCurrentUsagesAccount'], factory);
+    define(['ApiClient'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./AccountCurrentUsage'), require('./ApiResponseAccountCurrentUsagesAccount'));
+    module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
     if (!root.intrinioSDK) {
       root.intrinioSDK = {};
     }
-    root.intrinioSDK.ApiResponseAccountCurrentUsages = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.AccountCurrentUsage, root.intrinioSDK.ApiResponseAccountCurrentUsagesAccount);
+    root.intrinioSDK.ApiResponseAccountUsagesAccount = factory(root.intrinioSDK.ApiClient);
   }
-}(this, function(ApiClient, AccountCurrentUsage, ApiResponseAccountCurrentUsagesAccount) {
+}(this, function(ApiClient) {
   'use strict';
 
 
 
 
   /**
-   * The ApiResponseAccountCurrentUsages model module.
-   * @module model/ApiResponseAccountCurrentUsages
+   * The ApiResponseAccountUsagesAccount model module.
+   * @module model/ApiResponseAccountUsagesAccount
    * @version 6.44.0
    */
 
   /**
-   * Constructs a new <code>ApiResponseAccountCurrentUsages</code>.
-   * @alias module:model/ApiResponseAccountCurrentUsages
+   * Constructs a new <code>ApiResponseAccountUsagesAccount</code>.
+   * The account.
+   * @alias module:model/ApiResponseAccountUsagesAccount
    * @class
    */
   var exports = function() {
     var _this = this;
 
 
-
   };
 
   /**
-   * Constructs a <code>ApiResponseAccountCurrentUsages</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ApiResponseAccountUsagesAccount</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ApiResponseAccountCurrentUsages} obj Optional instance to populate.
-   * @return {module:model/ApiResponseAccountCurrentUsages} The populated <code>ApiResponseAccountCurrentUsages</code> instance.
+   * @param {module:model/ApiResponseAccountUsagesAccount} obj Optional instance to populate.
+   * @return {module:model/ApiResponseAccountUsagesAccount} The populated <code>ApiResponseAccountUsagesAccount</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('usage')) {
-        obj['usage'] = ApiClient.convertToType(data['usage'], [AccountCurrentUsage]);
-      }
-      if (data.hasOwnProperty('account')) {
-        obj['account'] = ApiResponseAccountCurrentUsagesAccount.constructFromObject(data['account']);
+      if (data.hasOwnProperty('email')) {
+        obj['email'] = ApiClient.convertToType(data['email'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {Array.<module:model/AccountCurrentUsage>} usage
+   * The email address for the account.
+   * @member {String} email
    */
-  exports.prototype['usage'] = undefined;
-  /**
-   * @member {module:model/ApiResponseAccountCurrentUsagesAccount} account
-   */
-  exports.prototype['account'] = undefined;
+  exports.prototype['email'] = undefined;
 
 
 
