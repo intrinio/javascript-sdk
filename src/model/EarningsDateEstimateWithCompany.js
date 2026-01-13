@@ -16,18 +16,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/EarningsDateEstimate', 'model/EarningsDateEstimateConfidenceIntervals'], factory);
+    define(['ApiClient', 'model/EarningsDateEstimateConfidenceIntervals'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./EarningsDateEstimate'), require('./EarningsDateEstimateConfidenceIntervals'));
+    module.exports = factory(require('../ApiClient'), require('./EarningsDateEstimateConfidenceIntervals'));
   } else {
     // Browser globals (root is window)
     if (!root.intrinioSDK) {
       root.intrinioSDK = {};
     }
-    root.intrinioSDK.EarningsDateEstimateWithCompany = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.EarningsDateEstimate, root.intrinioSDK.EarningsDateEstimateConfidenceIntervals);
+    root.intrinioSDK.EarningsDateEstimateWithCompany = factory(root.intrinioSDK.ApiClient, root.intrinioSDK.EarningsDateEstimateConfidenceIntervals);
   }
-}(this, function(ApiClient, EarningsDateEstimate, EarningsDateEstimateConfidenceIntervals) {
+}(this, function(ApiClient, EarningsDateEstimateConfidenceIntervals) {
   'use strict';
 
 
@@ -41,14 +41,20 @@
 
   /**
    * Constructs a new <code>EarningsDateEstimateWithCompany</code>.
+   * An estimated earnings announcement date for a company&#39;s fiscal period
    * @alias module:model/EarningsDateEstimateWithCompany
    * @class
-   * @implements module:model/EarningsDateEstimate
    */
   var exports = function() {
     var _this = this;
 
-    EarningsDateEstimate.call(_this);
+
+
+
+
+
+
+
 
 
   };
@@ -64,12 +70,32 @@
     if (data) {
       obj = obj || new exports();
 
-      EarningsDateEstimate.constructFromObject(data, obj);
       if (data.hasOwnProperty('company_id')) {
         obj['company_id'] = ApiClient.convertToType(data['company_id'], 'String');
       }
       if (data.hasOwnProperty('ticker')) {
         obj['ticker'] = ApiClient.convertToType(data['ticker'], 'String');
+      }
+      if (data.hasOwnProperty('fiscal_year')) {
+        obj['fiscal_year'] = ApiClient.convertToType(data['fiscal_year'], 'Number');
+      }
+      if (data.hasOwnProperty('fiscal_period')) {
+        obj['fiscal_period'] = ApiClient.convertToType(data['fiscal_period'], 'String');
+      }
+      if (data.hasOwnProperty('expected_date')) {
+        obj['expected_date'] = ApiClient.convertToType(data['expected_date'], 'Date');
+      }
+      if (data.hasOwnProperty('expected_8k_at')) {
+        obj['expected_8k_at'] = ApiClient.convertToType(data['expected_8k_at'], 'Date');
+      }
+      if (data.hasOwnProperty('historically_earliest')) {
+        obj['historically_earliest'] = ApiClient.convertToType(data['historically_earliest'], 'String');
+      }
+      if (data.hasOwnProperty('historically_latest')) {
+        obj['historically_latest'] = ApiClient.convertToType(data['historically_latest'], 'String');
+      }
+      if (data.hasOwnProperty('confidence_intervals')) {
+        obj['confidence_intervals'] = ApiClient.convertToType(data['confidence_intervals'], {'String': EarningsDateEstimateConfidenceIntervals});
       }
     }
     return obj;
@@ -85,49 +111,41 @@
    * @member {String} ticker
    */
   exports.prototype['ticker'] = undefined;
-
-  // Implement EarningsDateEstimate interface:
   /**
    * The fiscal year for the earnings report
    * @member {Number} fiscal_year
    */
-exports.prototype['fiscal_year'] = undefined;
-
+  exports.prototype['fiscal_year'] = undefined;
   /**
    * The fiscal period for the earnings report (Q1, Q2, Q3, Q4, or FY)
    * @member {String} fiscal_period
    */
-exports.prototype['fiscal_period'] = undefined;
-
+  exports.prototype['fiscal_period'] = undefined;
   /**
    * The expected date of the earnings announcement
    * @member {Date} expected_date
    */
-exports.prototype['expected_date'] = undefined;
-
+  exports.prototype['expected_date'] = undefined;
   /**
    * The expected timestamp when the 8-K filing will be available
    * @member {Date} expected_8k_at
    */
-exports.prototype['expected_8k_at'] = undefined;
-
+  exports.prototype['expected_8k_at'] = undefined;
   /**
    * The earliest date (MM-DD format) this company has historically announced earnings for this fiscal period
    * @member {String} historically_earliest
    */
-exports.prototype['historically_earliest'] = undefined;
-
+  exports.prototype['historically_earliest'] = undefined;
   /**
    * The latest date (MM-DD format) this company has historically announced earnings for this fiscal period
    * @member {String} historically_latest
    */
-exports.prototype['historically_latest'] = undefined;
-
+  exports.prototype['historically_latest'] = undefined;
   /**
    * Confidence intervals for the expected date, sorted by confidence level (descending)
    * @member {Object.<String, module:model/EarningsDateEstimateConfidenceIntervals>} confidence_intervals
    */
-exports.prototype['confidence_intervals'] = undefined;
+  exports.prototype['confidence_intervals'] = undefined;
 
 
 

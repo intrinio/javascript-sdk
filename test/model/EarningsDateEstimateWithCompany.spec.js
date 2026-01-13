@@ -68,6 +68,48 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property fiscalYear (base name: "fiscal_year")', function() {
+      // uncomment below and update the code to test the property fiscalYear
+      //var instane = new intrinioSDK.EarningsDateEstimateWithCompany();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property fiscalPeriod (base name: "fiscal_period")', function() {
+      // uncomment below and update the code to test the property fiscalPeriod
+      //var instane = new intrinioSDK.EarningsDateEstimateWithCompany();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property expectedDate (base name: "expected_date")', function() {
+      // uncomment below and update the code to test the property expectedDate
+      //var instane = new intrinioSDK.EarningsDateEstimateWithCompany();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property expected8kAt (base name: "expected_8k_at")', function() {
+      // uncomment below and update the code to test the property expected8kAt
+      //var instane = new intrinioSDK.EarningsDateEstimateWithCompany();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property historicallyEarliest (base name: "historically_earliest")', function() {
+      // uncomment below and update the code to test the property historicallyEarliest
+      //var instane = new intrinioSDK.EarningsDateEstimateWithCompany();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property historicallyLatest (base name: "historically_latest")', function() {
+      // uncomment below and update the code to test the property historicallyLatest
+      //var instane = new intrinioSDK.EarningsDateEstimateWithCompany();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property confidenceIntervals (base name: "confidence_intervals")', function() {
+      // uncomment below and update the code to test the property confidenceIntervals
+      //var instane = new intrinioSDK.EarningsDateEstimateWithCompany();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

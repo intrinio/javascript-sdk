@@ -528,6 +528,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ETFSummary](docs/ETFSummary.md)
  - [intrinioSDK.EarningsDateEstimate](docs/EarningsDateEstimate.md)
  - [intrinioSDK.EarningsDateEstimateConfidenceIntervals](docs/EarningsDateEstimateConfidenceIntervals.md)
+ - [intrinioSDK.EarningsDateEstimateWithCompany](docs/EarningsDateEstimateWithCompany.md)
  - [intrinioSDK.EarningsRecord](docs/EarningsRecord.md)
  - [intrinioSDK.EaseOfMovementTechnicalValue](docs/EaseOfMovementTechnicalValue.md)
  - [intrinioSDK.EconomicIndex](docs/EconomicIndex.md)
@@ -664,5 +665,4 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ZacksSalesSurpriseSummary](docs/ZacksSalesSurpriseSummary.md)
  - [intrinioSDK.ZacksTargetPriceConsensus](docs/ZacksTargetPriceConsensus.md)
  - [intrinioSDK.ETFNavFlows](docs/ETFNavFlows.md)
- - [intrinioSDK.EarningsDateEstimateWithCompany](docs/EarningsDateEstimateWithCompany.md)
 

@@ -77,6 +77,7 @@
   }
 
   /**
+   * Expected earnings dates.
    * @member {Array.<module:model/EarningsDateEstimate>} expected_earnings_dates
    */
   exports.prototype['expected_earnings_dates'] = undefined;

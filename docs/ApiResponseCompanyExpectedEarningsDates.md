@@ -11,7 +11,7 @@
 
 Name | Type | Description
 ------------ | ------------- | -------------
-**expectedEarningsDates** | [**[EarningsDateEstimate]**](EarningsDateEstimate.md) |  &nbsp;
+**expectedEarningsDates** | [**[EarningsDateEstimate]**](EarningsDateEstimate.md) | Expected earnings dates. &nbsp;
 **company** | [**CompanySummary**](CompanySummary.md) |  &nbsp;
 **nextPage** | String | The token required to request the next page of the data. If null, no further data is available. &nbsp;
 
