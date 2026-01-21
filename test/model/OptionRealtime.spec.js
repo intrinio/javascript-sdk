@@ -74,6 +74,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property expirationTime (base name: "expiration_time")', function() {
+      // uncomment below and update the code to test the property expirationTime
+      //var instane = new intrinioSDK.OptionRealtime();
+      //expect(instance).to.be();
+    });
+
     it('should have the property strike (base name: "strike")', function() {
       // uncomment below and update the code to test the property strike
       //var instane = new intrinioSDK.OptionRealtime();

@@ -53,6 +53,7 @@
 
 
 
+
   };
 
   /**
@@ -74,6 +75,9 @@
       }
       if (data.hasOwnProperty('expiration')) {
         obj['expiration'] = ApiClient.convertToType(data['expiration'], 'Date');
+      }
+      if (data.hasOwnProperty('expiration_time')) {
+        obj['expiration_time'] = ApiClient.convertToType(data['expiration_time'], 'Date');
       }
       if (data.hasOwnProperty('strike')) {
         obj['strike'] = ApiClient.convertToType(data['strike'], 'Number');
@@ -100,6 +104,11 @@
    * @member {Date} expiration
    */
   exports.prototype['expiration'] = undefined;
+  /**
+   * The date on which the Option expires. The Option becomes invalid after this date and cannot be exercised.
+   * @member {Date} expiration_time
+   */
+  exports.prototype['expiration_time'] = undefined;
   /**
    * The strike price is the fixed price at which a derivative can be exercised, and refers to the price of the derivative’s underlying asset.  In a call option, the strike price is the price at which the option holder can purchase the underlying security.  For a put option, the strike price is the price at which the option holder can sell the underlying security.
    * @member {Number} strike
