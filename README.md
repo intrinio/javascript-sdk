@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.123.0
-- Package version: 6.46.0
+- API version: 2.124.0
+- Package version: 6.47.0
 
 
 ## Installation
@@ -183,6 +183,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.OptionsApi* | [**getOptionsChainRealtime**](docs/OptionsApi.md#getOptionsChainRealtime) | **GET** /options/chain/{symbol}/{expiration}/realtime | Options Chain Realtime
 *intrinioSDK.OptionsApi* | [**getOptionsExpirations**](docs/OptionsApi.md#getOptionsExpirations) | **GET** /options/expirations/{symbol} | Options Expirations
 *intrinioSDK.OptionsApi* | [**getOptionsExpirationsEod**](docs/OptionsApi.md#getOptionsExpirationsEod) | **GET** /options/expirations/{symbol}/eod | Options Expirations
+*intrinioSDK.OptionsApi* | [**getOptionsGainers**](docs/OptionsApi.md#getOptionsGainers) | **GET** /options/gainers | Options Top Gainers
 *intrinioSDK.OptionsApi* | [**getOptionsGreeksByContract**](docs/OptionsApi.md#getOptionsGreeksByContract) | **GET** /options/greeks/{contract}/realtime | Option Greeks &amp; Derived Price by Contract
 *intrinioSDK.OptionsApi* | [**getOptionsGreeksByTicker**](docs/OptionsApi.md#getOptionsGreeksByTicker) | **GET** /options/greeks/by_ticker/{identifier}/realtime | Options Realtime Greeks &amp; Derived Price by Ticker
 *intrinioSDK.OptionsApi* | [**getOptionsImpliedMoveBySymbol**](docs/OptionsApi.md#getOptionsImpliedMoveBySymbol) | **GET** /options/implied_move/{symbol}/{expiration_date} | Options Implied Move By Symbol
@@ -190,6 +191,7 @@ Class | Method | HTTP request | Description
 *intrinioSDK.OptionsApi* | [**getOptionsIntervalMovers**](docs/OptionsApi.md#getOptionsIntervalMovers) | **GET** /options/interval/movers | Options Intervals Movers
 *intrinioSDK.OptionsApi* | [**getOptionsIntervalMoversChange**](docs/OptionsApi.md#getOptionsIntervalMoversChange) | **GET** /options/interval/movers/change | Options Intervals Movers By Change
 *intrinioSDK.OptionsApi* | [**getOptionsIntervalMoversVolume**](docs/OptionsApi.md#getOptionsIntervalMoversVolume) | **GET** /options/interval/movers/volume | Options Intervals Movers By Volume
+*intrinioSDK.OptionsApi* | [**getOptionsLosers**](docs/OptionsApi.md#getOptionsLosers) | **GET** /options/losers | Options Top Losers
 *intrinioSDK.OptionsApi* | [**getOptionsPrices**](docs/OptionsApi.md#getOptionsPrices) | **GET** /options/prices/{identifier} | Option Prices
 *intrinioSDK.OptionsApi* | [**getOptionsPricesBatchRealtime**](docs/OptionsApi.md#getOptionsPricesBatchRealtime) | **POST** /options/prices/realtime/batch | Option Prices Batch Realtime
 *intrinioSDK.OptionsApi* | [**getOptionsPricesEod**](docs/OptionsApi.md#getOptionsPricesEod) | **GET** /options/prices/{identifier}/eod | Option Prices EOD
@@ -387,6 +389,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseMunicipalities](docs/ApiResponseMunicipalities.md)
  - [intrinioSDK.ApiResponseMunicipalitiyFinancials](docs/ApiResponseMunicipalitiyFinancials.md)
  - [intrinioSDK.ApiResponseNews](docs/ApiResponseNews.md)
+ - [intrinioSDK.ApiResponseOptionMovers](docs/ApiResponseOptionMovers.md)
  - [intrinioSDK.ApiResponseOptionPrices](docs/ApiResponseOptionPrices.md)
  - [intrinioSDK.ApiResponseOptions](docs/ApiResponseOptions.md)
  - [intrinioSDK.ApiResponseOptionsAggregates](docs/ApiResponseOptionsAggregates.md)
@@ -576,6 +579,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.OptionIntervalMover](docs/OptionIntervalMover.md)
  - [intrinioSDK.OptionIntervalsMoversResult](docs/OptionIntervalsMoversResult.md)
  - [intrinioSDK.OptionIntervalsResult](docs/OptionIntervalsResult.md)
+ - [intrinioSDK.OptionMover](docs/OptionMover.md)
  - [intrinioSDK.OptionPrice](docs/OptionPrice.md)
  - [intrinioSDK.OptionPriceBatchRealtime](docs/OptionPriceBatchRealtime.md)
  - [intrinioSDK.OptionPriceEod](docs/OptionPriceEod.md)
