@@ -63,6 +63,10 @@ Method | HTTP request | Description
 [**getSecurityStockPrices**](SecurityApi.md#getSecurityStockPrices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
 [**getSecurityTrades**](SecurityApi.md#getSecurityTrades) | **GET** /securities/trades | Security Trades
 [**getSecurityTradesBySymbol**](SecurityApi.md#getSecurityTradesBySymbol) | **GET** /securities/{identifier}/trades | Security Trades By Symbol
+[**getSecurityTradingStatus**](SecurityApi.md#getSecurityTradingStatus) | **GET** /securities/{identifier}/trading_status | Security Trading Status By Security
+[**getSecurityTradingStatusQuotesOnly**](SecurityApi.md#getSecurityTradingStatusQuotesOnly) | **GET** /securities/trading_status/quotes_only | Security Trading Status Quotes Only
+[**getSecurityTradingStatusStopped**](SecurityApi.md#getSecurityTradingStatusStopped) | **GET** /securities/trading_status/stopped | Security Trading Status Stopped
+[**getSecurityTradingStatusTrading**](SecurityApi.md#getSecurityTradingStatusTrading) | **GET** /securities/trading_status/trading | Security Trading Status Trading
 [**getSecurityZacksAnalystRatings**](SecurityApi.md#getSecurityZacksAnalystRatings) | **GET** /securities/{identifier}/zacks/analyst_ratings | Zacks Analyst Ratings for Security
 [**getSecurityZacksAnalystRatingsSnapshot**](SecurityApi.md#getSecurityZacksAnalystRatingsSnapshot) | **GET** /securities/{identifier}/zacks/analyst_ratings/snapshot | Zacks Analyst Ratings Snapshot
 [**getSecurityZacksEpsSurprises**](SecurityApi.md#getSecurityZacksEpsSurprises) | **GET** /securities/{identifier}/zacks/eps_surprises | Zacks EPS Surprises for Security
@@ -5408,6 +5412,345 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SecurityTradesResult**](SecurityTradesResult.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:SecurityApi)
+
+[//]: # (METHOD:getSecurityTradingStatus)
+
+[//]: # (RETURN_TYPE:ApiResponseSecurityTradingStatus)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityTradingStatus.md)
+
+[//]: # (OPERATION:getSecurityTradingStatus_v2)
+
+[//]: # (ENDPOINT:/securities/{identifier}/trading_status)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getSecurityTradingStatus)
+
+<a name="getSecurityTradingStatus"></a>
+## **getSecurityTradingStatus**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityTradingStatus_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityTradingStatus getSecurityTradingStatus(identifier, source)
+
+#### Security Trading Status By Security
+
+
+Returns trading status for the specified security.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var security = new intrinioSDK.SecurityApi();
+
+var identifier = "AAPL";
+var source = null;
+
+
+security.getSecurityTradingStatus(identifier, source).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **identifier** | String| A Security identifier (Ticker, FIGI, ISIN, CUSIP, Intrinio ID) |  &nbsp;
+ **source** | String| The specific source of the data being requested. |  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityTradingStatus**](ApiResponseSecurityTradingStatus.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:SecurityApi)
+
+[//]: # (METHOD:getSecurityTradingStatusQuotesOnly)
+
+[//]: # (RETURN_TYPE:ApiResponseSecurityTradingStatuses)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityTradingStatuses.md)
+
+[//]: # (OPERATION:getSecurityTradingStatusQuotesOnly_v2)
+
+[//]: # (ENDPOINT:/securities/trading_status/quotes_only)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getSecurityTradingStatusQuotesOnly)
+
+<a name="getSecurityTradingStatusQuotesOnly"></a>
+## **getSecurityTradingStatusQuotesOnly**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityTradingStatusQuotesOnly_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityTradingStatuses getSecurityTradingStatusQuotesOnly(source, opts)
+
+#### Security Trading Status Quotes Only
+
+
+Returns all securities where the current trading status is quotes_only for the specified source.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var security = new intrinioSDK.SecurityApi();
+
+var source = null;
+
+
+var opts = { 
+  'pageSize': 100,
+  'nextPage': null
+};
+
+security.getSecurityTradingStatusQuotesOnly(source, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | String| The specific source of the data being requested. |  &nbsp;
+ **pageSize** | Number| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityTradingStatuses**](ApiResponseSecurityTradingStatuses.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:SecurityApi)
+
+[//]: # (METHOD:getSecurityTradingStatusStopped)
+
+[//]: # (RETURN_TYPE:ApiResponseSecurityTradingStatuses)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityTradingStatuses.md)
+
+[//]: # (OPERATION:getSecurityTradingStatusStopped_v2)
+
+[//]: # (ENDPOINT:/securities/trading_status/stopped)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getSecurityTradingStatusStopped)
+
+<a name="getSecurityTradingStatusStopped"></a>
+## **getSecurityTradingStatusStopped**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityTradingStatusStopped_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityTradingStatuses getSecurityTradingStatusStopped(source, opts)
+
+#### Security Trading Status Stopped
+
+
+Returns all securities where the current trading status is stopped for the specified source.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var security = new intrinioSDK.SecurityApi();
+
+var source = null;
+
+
+var opts = { 
+  'pageSize': 100,
+  'nextPage': null
+};
+
+security.getSecurityTradingStatusStopped(source, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | String| The specific source of the data being requested. |  &nbsp;
+ **pageSize** | Number| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityTradingStatuses**](ApiResponseSecurityTradingStatuses.md)
+
+
+
+[//]: # (END_OPERATION)
+
+
+[//]: # (START_OPERATION)
+
+[//]: # (CLASS:SecurityApi)
+
+[//]: # (METHOD:getSecurityTradingStatusTrading)
+
+[//]: # (RETURN_TYPE:ApiResponseSecurityTradingStatuses)
+
+[//]: # (RETURN_TYPE_KIND:object)
+
+[//]: # (RETURN_TYPE_DOC:ApiResponseSecurityTradingStatuses.md)
+
+[//]: # (OPERATION:getSecurityTradingStatusTrading_v2)
+
+[//]: # (ENDPOINT:/securities/trading_status/trading)
+
+[//]: # (DOCUMENT_LINK:SecurityApi.md#getSecurityTradingStatusTrading)
+
+<a name="getSecurityTradingStatusTrading"></a>
+## **getSecurityTradingStatusTrading**
+
+[**View Intrinio API Documentation**](https://docs.intrinio.com/documentation/javascript/getSecurityTradingStatusTrading_v2)
+
+[//]: # (START_OVERVIEW)
+
+> ApiResponseSecurityTradingStatuses getSecurityTradingStatusTrading(source, opts)
+
+#### Security Trading Status Trading
+
+
+Returns all securities where the current trading status is trading for the specified source.
+
+[//]: # (END_OVERVIEW)
+
+### Example
+
+[//]: # (START_CODE_EXAMPLE)
+
+```javascript
+var intrinioSDK = require('intrinio-sdk');
+intrinioSDK.ApiClient.instance.authentications['ApiKeyAuth'].apiKey = "YOUR_API_KEY";
+intrinioSDK.ApiClient.instance.enableRetries = true;
+
+var security = new intrinioSDK.SecurityApi();
+
+var source = null;
+
+
+var opts = { 
+  'pageSize': 100,
+  'nextPage': null
+};
+
+security.getSecurityTradingStatusTrading(source, opts).then(function(data) {
+  data = JSON.stringify(data, null, 2)
+  console.log(data);
+}, function(error) {
+  console.error(error);
+});
+```
+
+[//]: # (END_CODE_EXAMPLE)
+
+### Parameters
+
+[//]: # (START_PARAMETERS)
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **source** | String| The specific source of the data being requested. |  &nbsp;
+ **pageSize** | Number| The maximum number of results to return per page. | [optional] [default to 100] &nbsp;
+ **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
+<br/>
+
+[//]: # (END_PARAMETERS)
+
+### Return type
+
+[**ApiResponseSecurityTradingStatuses**](ApiResponseSecurityTradingStatuses.md)
 
 
 

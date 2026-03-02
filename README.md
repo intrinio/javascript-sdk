@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.124.0
-- Package version: 6.47.0
+- API version: 2.127.0
+- Package version: 7.0.0
 
 
 ## Installation
@@ -80,7 +80,6 @@ Class | Method | HTTP request | Description
 *intrinioSDK.CompanyApi* | [**getAllCompaniesDailyMetrics**](docs/CompanyApi.md#getAllCompaniesDailyMetrics) | **GET** /companies/daily_metrics | All Companies daily metrics
 *intrinioSDK.CompanyApi* | [**getAllCompanyNews**](docs/CompanyApi.md#getAllCompanyNews) | **GET** /companies/news | All News
 *intrinioSDK.CompanyApi* | [**getCompany**](docs/CompanyApi.md#getCompany) | **GET** /companies/{identifier} | Lookup Company
-*intrinioSDK.CompanyApi* | [**getCompanyAnswers**](docs/CompanyApi.md#getCompanyAnswers) | **GET** /companies/{identifier}/answers | Company Answers
 *intrinioSDK.CompanyApi* | [**getCompanyDailyMetrics**](docs/CompanyApi.md#getCompanyDailyMetrics) | **GET** /companies/{identifier}/daily_metrics | Company metrics by Company
 *intrinioSDK.CompanyApi* | [**getCompanyDataPointNumber**](docs/CompanyApi.md#getCompanyDataPointNumber) | **GET** /companies/{identifier}/data_point/{tag}/number | Data Point (Number) for Company
 *intrinioSDK.CompanyApi* | [**getCompanyDataPointText**](docs/CompanyApi.md#getCompanyDataPointText) | **GET** /companies/{identifier}/data_point/{tag}/text | Data Point (Text) for Company
@@ -95,7 +94,6 @@ Class | Method | HTTP request | Description
 *intrinioSDK.CompanyApi* | [**insiderTransactionFilingsByCompany**](docs/CompanyApi.md#insiderTransactionFilingsByCompany) | **GET** /companies/{identifier}/insider_transaction_filings | Insider Transaction Filings by Company
 *intrinioSDK.CompanyApi* | [**latestInsiderTransactionFilingByCompany**](docs/CompanyApi.md#latestInsiderTransactionFilingByCompany) | **GET** /companies/{identifier}/insider_transaction_filings/latest | Latest Insider Transaction Filing by Company
 *intrinioSDK.CompanyApi* | [**lookupCompanyFundamental**](docs/CompanyApi.md#lookupCompanyFundamental) | **GET** /companies/{identifier}/fundamentals/lookup/{statement_code}/{fiscal_year}/{fiscal_period} | Lookup Fundamental by Company
-*intrinioSDK.CompanyApi* | [**recognizeCompany**](docs/CompanyApi.md#recognizeCompany) | **GET** /companies/recognize | Recognize Company
 *intrinioSDK.CompanyApi* | [**searchCompanies**](docs/CompanyApi.md#searchCompanies) | **GET** /companies/search | Search Companies
 *intrinioSDK.CompanyApi* | [**sharesOutstandingByCompany**](docs/CompanyApi.md#sharesOutstandingByCompany) | **GET** /companies/{identifier}/shares_outstanding | Shares Outstanding by Company
 *intrinioSDK.DataPointApi* | [**getDataPointNumber**](docs/DataPointApi.md#getDataPointNumber) | **GET** /data_point/{identifier}/{tag}/number | Data Point (Number)
@@ -120,7 +118,6 @@ Class | Method | HTTP request | Description
 *intrinioSDK.ETFsApi* | [**searchEtfs**](docs/ETFsApi.md#searchEtfs) | **GET** /etfs/search | Search ETFs
 *intrinioSDK.FilingApi* | [**getAllFilings**](docs/FilingApi.md#getAllFilings) | **GET** /filings | All Filings
 *intrinioSDK.FilingApi* | [**getAllNotes**](docs/FilingApi.md#getAllNotes) | **GET** /filings/notes | All Filing Notes
-*intrinioSDK.FilingApi* | [**getFilingAnswers**](docs/FilingApi.md#getFilingAnswers) | **GET** /filings/{identifier}/answers | Filing Answers
 *intrinioSDK.FilingApi* | [**getFilingById**](docs/FilingApi.md#getFilingById) | **GET** /filings/{id} | Lookup Filing
 *intrinioSDK.FilingApi* | [**getFilingFundamentals**](docs/FilingApi.md#getFilingFundamentals) | **GET** /filings/{identifier}/fundamentals | All Fundamentals by Filing
 *intrinioSDK.FilingApi* | [**getFilingHtml**](docs/FilingApi.md#getFilingHtml) | **GET** /filings/{identifier}/html | Filing Html
@@ -268,6 +265,10 @@ Class | Method | HTTP request | Description
 *intrinioSDK.SecurityApi* | [**getSecurityStockPrices**](docs/SecurityApi.md#getSecurityStockPrices) | **GET** /securities/{identifier}/prices | Stock Prices by Security
 *intrinioSDK.SecurityApi* | [**getSecurityTrades**](docs/SecurityApi.md#getSecurityTrades) | **GET** /securities/trades | Security Trades
 *intrinioSDK.SecurityApi* | [**getSecurityTradesBySymbol**](docs/SecurityApi.md#getSecurityTradesBySymbol) | **GET** /securities/{identifier}/trades | Security Trades By Symbol
+*intrinioSDK.SecurityApi* | [**getSecurityTradingStatus**](docs/SecurityApi.md#getSecurityTradingStatus) | **GET** /securities/{identifier}/trading_status | Security Trading Status By Security
+*intrinioSDK.SecurityApi* | [**getSecurityTradingStatusQuotesOnly**](docs/SecurityApi.md#getSecurityTradingStatusQuotesOnly) | **GET** /securities/trading_status/quotes_only | Security Trading Status Quotes Only
+*intrinioSDK.SecurityApi* | [**getSecurityTradingStatusStopped**](docs/SecurityApi.md#getSecurityTradingStatusStopped) | **GET** /securities/trading_status/stopped | Security Trading Status Stopped
+*intrinioSDK.SecurityApi* | [**getSecurityTradingStatusTrading**](docs/SecurityApi.md#getSecurityTradingStatusTrading) | **GET** /securities/trading_status/trading | Security Trading Status Trading
 *intrinioSDK.SecurityApi* | [**getSecurityZacksAnalystRatings**](docs/SecurityApi.md#getSecurityZacksAnalystRatings) | **GET** /securities/{identifier}/zacks/analyst_ratings | Zacks Analyst Ratings for Security
 *intrinioSDK.SecurityApi* | [**getSecurityZacksAnalystRatingsSnapshot**](docs/SecurityApi.md#getSecurityZacksAnalystRatingsSnapshot) | **GET** /securities/{identifier}/zacks/analyst_ratings/snapshot | Zacks Analyst Ratings Snapshot
 *intrinioSDK.SecurityApi* | [**getSecurityZacksEpsSurprises**](docs/SecurityApi.md#getSecurityZacksEpsSurprises) | **GET** /securities/{identifier}/zacks/eps_surprises | Zacks EPS Surprises for Security
@@ -344,7 +345,6 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseBulkDownloadLinks](docs/ApiResponseBulkDownloadLinks.md)
  - [intrinioSDK.ApiResponseCompanies](docs/ApiResponseCompanies.md)
  - [intrinioSDK.ApiResponseCompaniesSearch](docs/ApiResponseCompaniesSearch.md)
- - [intrinioSDK.ApiResponseCompanyAnswers](docs/ApiResponseCompanyAnswers.md)
  - [intrinioSDK.ApiResponseCompanyDailyMetrics](docs/ApiResponseCompanyDailyMetrics.md)
  - [intrinioSDK.ApiResponseCompanyExpectedEarningsDates](docs/ApiResponseCompanyExpectedEarningsDates.md)
  - [intrinioSDK.ApiResponseCompanyFilings](docs/ApiResponseCompanyFilings.md)
@@ -371,7 +371,6 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseEconomicIndicesSearch](docs/ApiResponseEconomicIndicesSearch.md)
  - [intrinioSDK.ApiResponseEodIndexPrices](docs/ApiResponseEodIndexPrices.md)
  - [intrinioSDK.ApiResponseEodIndexPricesAll](docs/ApiResponseEodIndexPricesAll.md)
- - [intrinioSDK.ApiResponseFilingAnswers](docs/ApiResponseFilingAnswers.md)
  - [intrinioSDK.ApiResponseFilingFundamentals](docs/ApiResponseFilingFundamentals.md)
  - [intrinioSDK.ApiResponseFilingNotes](docs/ApiResponseFilingNotes.md)
  - [intrinioSDK.ApiResponseFilingNotesSearch](docs/ApiResponseFilingNotesSearch.md)
@@ -453,6 +452,8 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseSecurityStochasticOscillator](docs/ApiResponseSecurityStochasticOscillator.md)
  - [intrinioSDK.ApiResponseSecurityStockPriceAdjustments](docs/ApiResponseSecurityStockPriceAdjustments.md)
  - [intrinioSDK.ApiResponseSecurityStockPrices](docs/ApiResponseSecurityStockPrices.md)
+ - [intrinioSDK.ApiResponseSecurityTradingStatus](docs/ApiResponseSecurityTradingStatus.md)
+ - [intrinioSDK.ApiResponseSecurityTradingStatuses](docs/ApiResponseSecurityTradingStatuses.md)
  - [intrinioSDK.ApiResponseSecurityTripleExponentialAverage](docs/ApiResponseSecurityTripleExponentialAverage.md)
  - [intrinioSDK.ApiResponseSecurityTrueStrengthIndex](docs/ApiResponseSecurityTrueStrengthIndex.md)
  - [intrinioSDK.ApiResponseSecurityUltimateOscillator](docs/ApiResponseSecurityUltimateOscillator.md)
@@ -621,6 +622,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.SecuritySummary](docs/SecuritySummary.md)
  - [intrinioSDK.SecurityTrades](docs/SecurityTrades.md)
  - [intrinioSDK.SecurityTradesResult](docs/SecurityTradesResult.md)
+ - [intrinioSDK.SecurityTradingStatusSummary](docs/SecurityTradingStatusSummary.md)
  - [intrinioSDK.ShortInterest](docs/ShortInterest.md)
  - [intrinioSDK.ShortInterestWithSecurity](docs/ShortInterestWithSecurity.md)
  - [intrinioSDK.SimpleMovingAverageTechnicalValue](docs/SimpleMovingAverageTechnicalValue.md)
