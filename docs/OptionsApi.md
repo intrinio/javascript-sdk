@@ -940,7 +940,10 @@ var opts = {
   'strikeGreaterThan': null,
   'strikeLessThan': null,
   'date': null,
-  'includeRelatedSymbols': false
+  'includeRelatedSymbols': false,
+  'recalculateStats': false,
+  'model': "black_scholes",
+  'ivMode': "ivMode_example"
 };
 
 options.getOptionsChainEod(symbol, expiration, opts).then(function(data) {
@@ -968,6 +971,9 @@ Name | Type | Description  | Notes
  **strikeLessThan** | Number| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
  **date** | Date| The date to retrieve prices for | [optional]  &nbsp;
  **includeRelatedSymbols** | Boolean| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
+ **recalculateStats** | Boolean| Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. | [optional] [default to false] &nbsp;
+ **model** | String| The options pricing model to use when recalculating stats. | [optional] [default to black_scholes] &nbsp;
+ **ivMode** | String| The implied volatility calculation mode to use when recalculating stats. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -2294,7 +2300,10 @@ var identifier = "AAPL230616P00190000";
 var opts = { 
   'nextPage': null,
   'startDate': null,
-  'endDate': null
+  'endDate': null,
+  'recalculateStats': false,
+  'model': "black_scholes",
+  'ivMode': "ivMode_example"
 };
 
 options.getOptionsPricesEod(identifier, opts).then(function(data) {
@@ -2318,6 +2327,9 @@ Name | Type | Description  | Notes
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
  **startDate** | Date| The start date to retrieve prices for | [optional]  &nbsp;
  **endDate** | Date| The end date to retrieve prices for | [optional]  &nbsp;
+ **recalculateStats** | Boolean| Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. | [optional] [default to false] &nbsp;
+ **model** | String| The options pricing model to use when recalculating stats. | [optional] [default to black_scholes] &nbsp;
+ **ivMode** | String| The implied volatility calculation mode to use when recalculating stats. | [optional]  &nbsp;
 <br/>
 
 [//]: # (END_PARAMETERS)
@@ -2387,6 +2399,9 @@ var opts = {
   'strikeGreaterThan': null,
   'strikeLessThan': null,
   'includeRelatedSymbols': false,
+  'recalculateStats': false,
+  'model': "black_scholes",
+  'ivMode': "ivMode_example",
   'nextPage': null
 };
 
@@ -2415,6 +2430,9 @@ Name | Type | Description  | Notes
  **strikeGreaterThan** | Number| The strike price of the option contract. This will return options contracts with strike prices greater than this price. | [optional]  &nbsp;
  **strikeLessThan** | Number| The strike price of the option contract. This will return options contracts with strike prices less than this price. | [optional]  &nbsp;
  **includeRelatedSymbols** | Boolean| Include related symbols that end in a 1 or 2 because of a corporate action. | [optional]  &nbsp;
+ **recalculateStats** | Boolean| Recalculate implied volatility and greeks on the fly using end-of-day underlying prices. | [optional] [default to false] &nbsp;
+ **model** | String| The options pricing model to use when recalculating stats. | [optional] [default to black_scholes] &nbsp;
+ **ivMode** | String| The implied volatility calculation mode to use when recalculating stats. | [optional]  &nbsp;
  **nextPage** | String| Gets the next page of data from a previous API call | [optional]  &nbsp;
 <br/>
 
