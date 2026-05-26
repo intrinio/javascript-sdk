@@ -4,8 +4,8 @@ To get an API key, [sign up here](https://intrinio.com/).
 
 Welcome to the Intrinio API! Through our Financial Data Marketplace, we offer a wide selection of financial data feed APIs sourced by our own proprietary processes as well as from many data vendors. For a complete API request / response reference please view the [Intrinio API documentation](https://docs.intrinio.com/documentation/api_v2). If you need additional help in using the API, please visit the [Intrinio website](https://intrinio.com) and click on the chat icon in the lower right corner.
 
-- API version: 2.129.0
-- Package version: 7.1.0 
+- API version: 2.135.4
+- Package version: 7.2.0
 
 
 ## Installation
@@ -72,7 +72,8 @@ A listing of classes and methods is also provided below:
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*intrinioSDK.AccountApi* | [**getAccountCurrentUsage**](docs/AccountApi.md#getAccountCurrentUsage) | **GET** /account | Account Current Usage
+*intrinioSDK.AccountApi* | [**getAccountCurrentUsage**](docs/AccountApi.md#getAccountCurrentUsage) | **GET** /account/current_usage | Account Current Usage
+*intrinioSDK.AccountApi* | [**getAccountWebsocketStatuses**](docs/AccountApi.md#getAccountWebsocketStatuses) | **GET** /account/websocket_statuses | Account Websocket Statuses
 *intrinioSDK.BulkDownloadsApi* | [**getBulkDownloadLinks**](docs/BulkDownloadsApi.md#getBulkDownloadLinks) | **GET** /bulk_downloads/links | All Links
 *intrinioSDK.CompanyApi* | [**allExpectedEarningsDates**](docs/CompanyApi.md#allExpectedEarningsDates) | **GET** /companies/upcoming_earnings | All Expected Earnings Dates
 *intrinioSDK.CompanyApi* | [**expectedEarningsDatesByCompany**](docs/CompanyApi.md#expectedEarningsDatesByCompany) | **GET** /companies/{identifier}/upcoming_earnings | Expected Earnings Dates by Company
@@ -171,6 +172,8 @@ Class | Method | HTTP request | Description
 *intrinioSDK.OptionsApi* | [**getOptionAggregates**](docs/OptionsApi.md#getOptionAggregates) | **GET** /options/aggregates | Total open interest and volume aggregated by ticker
 *intrinioSDK.OptionsApi* | [**getOptionExpirationsRealtime**](docs/OptionsApi.md#getOptionExpirationsRealtime) | **GET** /options/expirations/{symbol}/realtime | Options Expirations
 *intrinioSDK.OptionsApi* | [**getOptionStrikesRealtime**](docs/OptionsApi.md#getOptionStrikesRealtime) | **GET** /options/strikes/{symbol}/{strike}/realtime | Option Strikes Realtime
+*intrinioSDK.OptionsApi* | [**getOptionSurface**](docs/OptionsApi.md#getOptionSurface) | **GET** /options/surface/{identifier} | Option Surface
+*intrinioSDK.OptionsApi* | [**getOptionSurface_0**](docs/OptionsApi.md#getOptionSurface_0) | **GET** /options/surface/{identifier}/interpolate_iv | Option Surface
 *intrinioSDK.OptionsApi* | [**getOptionTrades**](docs/OptionsApi.md#getOptionTrades) | **GET** /options/trades | Option Trades
 *intrinioSDK.OptionsApi* | [**getOptionTradesByContract**](docs/OptionsApi.md#getOptionTradesByContract) | **GET** /options/{identifier}/trades | Option Trades By Contract
 *intrinioSDK.OptionsApi* | [**getOptions**](docs/OptionsApi.md#getOptions) | **GET** /options/{symbol} | Options
@@ -183,7 +186,8 @@ Class | Method | HTTP request | Description
 *intrinioSDK.OptionsApi* | [**getOptionsGainers**](docs/OptionsApi.md#getOptionsGainers) | **GET** /options/gainers | Options Top Gainers
 *intrinioSDK.OptionsApi* | [**getOptionsGreeksByContract**](docs/OptionsApi.md#getOptionsGreeksByContract) | **GET** /options/greeks/{contract}/realtime | Option Greeks &amp; Derived Price by Contract
 *intrinioSDK.OptionsApi* | [**getOptionsGreeksByTicker**](docs/OptionsApi.md#getOptionsGreeksByTicker) | **GET** /options/greeks/by_ticker/{identifier}/realtime | Options Realtime Greeks &amp; Derived Price by Ticker
-*intrinioSDK.OptionsApi* | [**getOptionsImpliedMoveBySymbol**](docs/OptionsApi.md#getOptionsImpliedMoveBySymbol) | **GET** /options/implied_move/{symbol}/{expiration_date} | Options Implied Move By Symbol
+*intrinioSDK.OptionsApi* | [**getOptionsImpliedMoveBySymbol**](docs/OptionsApi.md#getOptionsImpliedMoveBySymbol) | **GET** /options/implied_move/{symbol}/{expiration_date} | Options Implied Move (Expected) Realtime
+*intrinioSDK.OptionsApi* | [**getOptionsImpliedMoveHistoricalBySymbol**](docs/OptionsApi.md#getOptionsImpliedMoveHistoricalBySymbol) | **GET** /options/implied_move/{symbol}/{expiration_date}/historical/{as_of_date} | Options Implied Move (Expected) Historical
 *intrinioSDK.OptionsApi* | [**getOptionsIntervalByContract**](docs/OptionsApi.md#getOptionsIntervalByContract) | **GET** /options/interval/{identifier} | Options Intervals By Contract
 *intrinioSDK.OptionsApi* | [**getOptionsIntervalMovers**](docs/OptionsApi.md#getOptionsIntervalMovers) | **GET** /options/interval/movers | Options Intervals Movers
 *intrinioSDK.OptionsApi* | [**getOptionsIntervalMoversChange**](docs/OptionsApi.md#getOptionsIntervalMoversChange) | **GET** /options/interval/movers/change | Options Intervals Movers By Change
@@ -207,6 +211,8 @@ Class | Method | HTTP request | Description
 *intrinioSDK.OwnersApi* | [**institutionalHoldingsByOwner**](docs/OwnersApi.md#institutionalHoldingsByOwner) | **GET** /owners/{identifier}/institutional_holdings | Institutional Holdings by Owner
 *intrinioSDK.OwnersApi* | [**searchOwners**](docs/OwnersApi.md#searchOwners) | **GET** /owners/search | Search Owners
 *intrinioSDK.SecurityApi* | [**getAllSecurities**](docs/SecurityApi.md#getAllSecurities) | **GET** /securities | All Securities
+*intrinioSDK.SecurityApi* | [**getSecuritiesDailyShortVolume**](docs/SecurityApi.md#getSecuritiesDailyShortVolume) | **GET** /securities/daily_short_volume | Daily Short Volume
+*intrinioSDK.SecurityApi* | [**getSecuritiesDailyShortVolumeConsolidated**](docs/SecurityApi.md#getSecuritiesDailyShortVolumeConsolidated) | **GET** /securities/daily_short_volume/consolidated | Daily Short Volume Consolidated
 *intrinioSDK.SecurityApi* | [**getSecuritiesLatestDividendRecords**](docs/SecurityApi.md#getSecuritiesLatestDividendRecords) | **GET** /securities/dividends/latest | Latest Dividend Records for All Securities
 *intrinioSDK.SecurityApi* | [**getSecuritiesLatestEarningsRecords**](docs/SecurityApi.md#getSecuritiesLatestEarningsRecords) | **GET** /securities/earnings/latest | Latest Earnings Records for All Securities
 *intrinioSDK.SecurityApi* | [**getSecuritiesShortInterest**](docs/SecurityApi.md#getSecuritiesShortInterest) | **GET** /securities/short_interest | Latest Short Interest
@@ -338,6 +344,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [intrinioSDK.AccountCurrentUsage](docs/AccountCurrentUsage.md)
+ - [intrinioSDK.AccountWebsocketStatus](docs/AccountWebsocketStatus.md)
  - [intrinioSDK.AccumulationDistributionIndexTechnicalValue](docs/AccumulationDistributionIndexTechnicalValue.md)
  - [intrinioSDK.ApiResponseAccountUsages](docs/ApiResponseAccountUsages.md)
  - [intrinioSDK.ApiResponseAccountUsagesAccount](docs/ApiResponseAccountUsagesAccount.md)
@@ -406,6 +413,8 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseOptionsPricesEod](docs/ApiResponseOptionsPricesEod.md)
  - [intrinioSDK.ApiResponseOptionsRealtime](docs/ApiResponseOptionsRealtime.md)
  - [intrinioSDK.ApiResponseOptionsStatsRealtime](docs/ApiResponseOptionsStatsRealtime.md)
+ - [intrinioSDK.ApiResponseOptionsSurface](docs/ApiResponseOptionsSurface.md)
+ - [intrinioSDK.ApiResponseOptionsSurfaceInterpolatedIv](docs/ApiResponseOptionsSurfaceInterpolatedIv.md)
  - [intrinioSDK.ApiResponseOptionsTickers](docs/ApiResponseOptionsTickers.md)
  - [intrinioSDK.ApiResponseOptionsUnusualActivity](docs/ApiResponseOptionsUnusualActivity.md)
  - [intrinioSDK.ApiResponseOwnerInsiderTransactionFilings](docs/ApiResponseOwnerInsiderTransactionFilings.md)
@@ -417,6 +426,8 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseSICIndices](docs/ApiResponseSICIndices.md)
  - [intrinioSDK.ApiResponseSICIndicesSearch](docs/ApiResponseSICIndicesSearch.md)
  - [intrinioSDK.ApiResponseSecurities](docs/ApiResponseSecurities.md)
+ - [intrinioSDK.ApiResponseSecuritiesDailyShortVolume](docs/ApiResponseSecuritiesDailyShortVolume.md)
+ - [intrinioSDK.ApiResponseSecuritiesDailyShortVolumeConsolidated](docs/ApiResponseSecuritiesDailyShortVolumeConsolidated.md)
  - [intrinioSDK.ApiResponseSecuritiesDividendLatest](docs/ApiResponseSecuritiesDividendLatest.md)
  - [intrinioSDK.ApiResponseSecuritiesEarningsLatest](docs/ApiResponseSecuritiesEarningsLatest.md)
  - [intrinioSDK.ApiResponseSecuritiesSearch](docs/ApiResponseSecuritiesSearch.md)
@@ -478,6 +489,7 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.ApiResponseStockMarketIndexHistoricalData](docs/ApiResponseStockMarketIndexHistoricalData.md)
  - [intrinioSDK.ApiResponseStockMarketIndices](docs/ApiResponseStockMarketIndices.md)
  - [intrinioSDK.ApiResponseStockMarketIndicesSearch](docs/ApiResponseStockMarketIndicesSearch.md)
+ - [intrinioSDK.ApiResponseWebsocketStatuses](docs/ApiResponseWebsocketStatuses.md)
  - [intrinioSDK.ApiResponseZacksAnalystRatings](docs/ApiResponseZacksAnalystRatings.md)
  - [intrinioSDK.ApiResponseZacksEBITDAConsensus](docs/ApiResponseZacksEBITDAConsensus.md)
  - [intrinioSDK.ApiResponseZacksEPSEstimates](docs/ApiResponseZacksEPSEstimates.md)
@@ -511,6 +523,8 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.CompanyPublicFloat](docs/CompanyPublicFloat.md)
  - [intrinioSDK.CompanySharesOutstanding](docs/CompanySharesOutstanding.md)
  - [intrinioSDK.CompanySummary](docs/CompanySummary.md)
+ - [intrinioSDK.DailyShortVolume](docs/DailyShortVolume.md)
+ - [intrinioSDK.DailyShortVolumeConsolidated](docs/DailyShortVolumeConsolidated.md)
  - [intrinioSDK.DataTag](docs/DataTag.md)
  - [intrinioSDK.DataTagSummary](docs/DataTagSummary.md)
  - [intrinioSDK.DetrendedPriceOscillatorTechnicalValue](docs/DetrendedPriceOscillatorTechnicalValue.md)
@@ -591,6 +605,8 @@ Class | Method | HTTP request | Description
  - [intrinioSDK.OptionSnapshotGroup](docs/OptionSnapshotGroup.md)
  - [intrinioSDK.OptionSnapshotsResult](docs/OptionSnapshotsResult.md)
  - [intrinioSDK.OptionStatsRealtime](docs/OptionStatsRealtime.md)
+ - [intrinioSDK.OptionSurfaceDatum](docs/OptionSurfaceDatum.md)
+ - [intrinioSDK.OptionSurfaceFace](docs/OptionSurfaceFace.md)
  - [intrinioSDK.OptionSyntheticGreeksRealtime](docs/OptionSyntheticGreeksRealtime.md)
  - [intrinioSDK.OptionTrades](docs/OptionTrades.md)
  - [intrinioSDK.OptionTradesResult](docs/OptionTradesResult.md)
