@@ -1,4 +1,4 @@
-# Intrinio JavaScript SDK
+# Intrinio JavaScript SDK 
 
 To get an API key, [sign up here](https://intrinio.com/).
 
